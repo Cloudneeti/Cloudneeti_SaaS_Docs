@@ -1,0 +1,25 @@
+site_name: Cloudneeti Documentation
+
+theme:
+  name: 'material'
+  palette:
+    primary: 'grey'
+    accent: 'orange'
+  logo:
+    icon: 'cloud'
+  font:
+    text: 'Roboto'
+    code: 'Roboto Mono'  
+  # markdown_extensions:
+  # - admonition
+  markdown_extensions:
+  - codehilite
+nav:
+    - Home: index.md
+    - Get Started: getStarted.md
+    - Installation: installation.md
+    - Configuration: configuration.md
+    - Troubleshooting: troubleshooting.md
+    - Release Summary: releaseSummary.md
+    - FAQs: faqs.md
+    
