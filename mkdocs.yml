@@ -3,7 +3,7 @@ site_name: Cloudneeti Documentation
 theme:
   name: 'material'
   palette:
-    primary: 'grey'
+    primary: 'blue'
     accent: 'orange'
   logo:
     icon: 'cloud'
@@ -22,4 +22,3 @@ nav:
     - Troubleshooting: troubleshooting.md
     - Release Summary: releaseSummary.md
     - FAQs: faqs.md
-    
