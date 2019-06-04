@@ -1,4 +1,4 @@
-# Welcome to CloudNeeti
+# Welcome to Cloudneeti
 
 For full documentation visit [mkdocs.org](https://mkdocs.org).
 
