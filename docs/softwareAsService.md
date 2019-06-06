@@ -17,7 +17,7 @@ from this security baseline.
 deviation notifications and various data-feed integrations with IT and compliance oversight tooling. 
 
 
-![](images/SaaS_page_image.png?raw=true)
+![](images/15.png?raw=true)
 
 
 Cloudneeti product is a multi-tenant Software-as-a-Service (SaaS) application. Cloudneeti application is leveraging cloud-native APIs to continuously discover customer’s workloads and monitor their configurations. 

@@ -1,4 +1,3 @@
-# Welcome to Cloudneeti
 
 ![](images/logo.png?raw=true)
 
