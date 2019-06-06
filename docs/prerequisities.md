@@ -1,0 +1,13 @@
+The following activities need to be done prior to onboarding.
+
+| Activities      | Description    |
+| --------|---------|
+| 1.	Cloudneeti License has been configured for the customer’s Administrator.  | Upon a request, Cloudneeti license(s) will be configured. Email invitation(s) will be auto generated and sent to License Administrator. Additional users within Cloudneeti applications will be provisioned by Customer’s License Administrator.   | 
+| 2.	Customer will engage a user with Global AD administrator rights   | Customer’s Azure administrator must have enough permissions in the Azure AD to create the required Service Principal for Cloudneeti application   | 
+| 3.	**Workstation:** Ensure you have the latest PowerShell version (v5 and above)   | Verify PowerShell version by running $PSVersionTable.PSVersion command on the workstation where you will run the ServicePrinciple creation script. If PowerShell version is lower than 5 then follow link for installation of the later version: [Download Link](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-windows-powershell?view=powershell-6)  | 
+| 4.	**Workstation:** Before executing the script, make sure there is no restrictions in running PowerShell script.    | Use a command: Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass PowerShell contains built-in execution policies that limit its use as an attack vector. By default, the execution policy is set to Restricted, which is the primary policy for script execution. Bypass allows for running scripts and keeps the lowered permissions isolated to just the current running process.|
+| 5.	**Workstation:** Install Azure Modules to execute PowerShell commands within Service Principal automation script  | Install-Module -Name AzureAD -MinimumVersion 2.0.0.131 It is a rollup module for the Azure Resource Manager cmdlets  |
+| 6.	Ensure that customer has a user with owner access permissions to **Azure subscription**.  | To assign ‘Reader’ permission to the service principal created above into the Azure Subscription   | 
+| 7.	Azure Subscription ID  | This is mandatory field for onboarding an Azure subscription to Cloudneeti   | 
+| 8.	Azure Directory/Tenant ID  | This is mandatory field for onboarding an Azure Subscription to Cloudneeti   | 
+| 9.	Download PowerShell script for to creation of the ServicePrincipal  | PowerShell script is used to create a Service Principal in Azure Tenant AD: [Download Link](https://github.com/Cloudneeti/docs_cloudneeti/blob/master/scripts/Create-ServicePrincipal-AzureOnboarding.ps1)   | 

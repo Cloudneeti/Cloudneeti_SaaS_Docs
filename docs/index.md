@@ -1,11 +1,8 @@
-# Welcome to CloudNeeti
 
-For full documentation visit [mkdocs.org](https://mkdocs.org).
+![](images/logo.png?raw=true)
 
-## Commands
+# Azure Onboarding Guide
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs help` - Print this help message.
+### May 2019
 
+![](images/banner.png?raw=true)
