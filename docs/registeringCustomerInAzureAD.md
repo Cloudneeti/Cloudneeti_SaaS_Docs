@@ -8,9 +8,9 @@ Use Create-ServicePrincipal-AzureOnboarding.ps1 script to create Cloudneeti Data
 4.	Script will prompt the login screen; you need to login with Global AD Administrator or Application Administrator user.
 5.	Store service principal information from the output in secure place. This information will be needed while onboarding the Azure Account in Cloudneeti application.
 
-![](images/13.png?raw=true)
+![](images/register_steps.png?raw=true)
 
-![](images/14.png?raw=true)
+![](images/register_console.png?raw=true)
 
 In case user doesn’t want to provide Microsoft Graph permissions given in section Azure Active Directory permissions then you can use the disableADPolicies switch in Create-ServicePrincipal-AzureOnboarding.ps1 command.
 

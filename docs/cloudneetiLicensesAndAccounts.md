@@ -7,4 +7,4 @@ Deciding on using a single license or multiple licenses can be done based on the
 *	Each License can choose their own set of compliance reporting packages. (e.g. BusinessUnit_1 might want PCI DSS, CIS while BusinessUnit_2 might want HIPAA, NIST CSF, ISO27001 etc)
 *	Each License can enforce different baseline policies for their set of cloud accounts.
 
-![](images/9.png?raw=true)
+![](images/cloud_license_&_acc.png?raw=true)

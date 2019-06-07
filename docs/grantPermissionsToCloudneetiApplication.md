@@ -8,9 +8,9 @@ Follow below steps to grant permission,
 3. Click on service principal in 'App Registrations' section
 4. Select Cloudneeti service principal
 
-![](images/11.png?raw=true)
+![](images/grant_Permission_1.png?raw=true)
 
 5. Go to 'API Permissions' and confirm Microsoft Graph permissions
 6. Click on 'Grant admin Consent’ button in Grant Consent section
 
-![](images/12.png?raw=true)
+![](images/grant_Permission_2.png?raw=true)
