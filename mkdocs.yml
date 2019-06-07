@@ -10,15 +10,34 @@ theme:
   font:
     text: 'Roboto'
     code: 'Roboto Mono'  
-  # markdown_extensions:
-  # - admonition
-  markdown_extensions:
-  - codehilite
+
 nav:
-    - Home: index.md
-    - Get Started: getStarted.md
-    - Installation: installation.md
-    - Configuration: configuration.md
-    - Troubleshooting: troubleshooting.md
-    - Release Summary: releaseSummary.md
-    - FAQs: faqs.md
+- Home: 'index.md'
+- Introduction: 'introduction.md'
+- Cloudneeti Product: 
+    - 'Software-as-a-Service (SaaS)': softwareAsService.md
+    - 'Cloudneeti Application': cloudneetiAplication.md
+    - 'Customer Clouds': customerClouds.md
+    - 'Cloudneeti licenses and cloud accounts': cloudneetiLicensesAndAccounts.md
+    - 'Cloudneeti application users': 
+          - 'Authentication': authentication.md
+          - 'Authorization': authorization.md
+    - 'Cloudneeti application permissions':
+          - 'Azure Subscription permissions': azureSubscriptionPermissions.md
+          - 'Azure Active Directory permissions': azureActiveDirectoryPermissions.md
+    - 'Customer data protection': customerDataProtection.md
+- Azure Onboarding Preparation:
+    - 'Customer Team': customerTeam.md
+    - 'Consulting Team': consultingTeam.md
+    - 'Prerequisites': prerequisities.md
+- Azure Onboarding Steps:
+    - 'Registering Cloudneeti application in Customer’s Azure AD': registeringCustomerInAzureAD.md
+    - 'Grant permissions to Cloudneeti application': grantPermissionsToCloudneetiApplication.md
+    - 'Assign Reader role on Customer subscription to Cloudneeti application': assignReaderRoleOnCustomerSubscriptionToCloudneetiApplication.md
+    - 'Activate Cloudneeti license and onboard Azure subscription account': activateCloudneetiLicenseAndOnboardAzureSubscriptionAccount.md
+    - 'Verification of data collection': verificationOfDataCollection.md
+
+extra_css:
+  - 'stylesheets/extra.css'
+
+    
