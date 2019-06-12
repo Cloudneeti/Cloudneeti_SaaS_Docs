@@ -1,8 +1,14 @@
 site_name: Cloudneeti Documentation
+site_description: Cloudneeti Documentation
+site_author: The Cloudneeti Team
+repo_name: GitHub
+copyright: "&copy; 2019 Cloudneeti."
 
 theme:
   name: 'material'
-  custom_dir: 'custom_theme/'
+  custom_dir: "theme"
+  static_templates:
+        - index.html
   palette:
     primary: 'blue'
     accent: 'orange'
@@ -11,9 +17,11 @@ theme:
   font:
     text: 'Roboto'
     code: 'Roboto Mono'  
+extra_css:
+  - 'stylesheets/extra.css'
 
 nav:
-- Home: 'index.md'
+- Home: 'index.html'
 - Introduction: 'introduction.md'
 - Cloudneeti Product: 
     - 'Software-as-a-Service (SaaS)': softwareAsService.md
@@ -37,8 +45,5 @@ nav:
     - 'Assign Reader role on Customer subscription to Cloudneeti application': assignReaderRoleOnCustomerSubscriptionToCloudneetiApplication.md
     - 'Activate Cloudneeti license and onboard Azure subscription account': activateCloudneetiLicenseAndOnboardAzureSubscriptionAccount.md
     - 'Verification of data collection': verificationOfDataCollection.md
-
-extra_css:
-  - 'stylesheets/extra.css'
 
     
