@@ -21,7 +21,6 @@ extra_css:
   - 'stylesheets/extra.css'
 
 nav:
-- Home: 'index.html'
 - Introduction: 'introduction.md'
 - Cloudneeti Product: 
     - 'Software-as-a-Service (SaaS)': softwareAsService.md
