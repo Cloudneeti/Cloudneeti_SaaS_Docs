@@ -22,19 +22,19 @@ script: true # Skip script (Don't use this if one already exists)
 before_deploy:
     - mkdocs build --verbose --clean --strict # Build a local version of the docs
 
-deploy: 
-  - provider: pages # Deploy documentation to Github in the gh_pages branch
+deploy: # Deploy documentation to Github in the gh_pages branch
+  - provider: pages
     skip_cleanup: true
     github_token: $github_token
     local_dir: site
     on:
         branch: staging
-  - provider: s3 # Deploy documentation to s3 bucket
+  - provider: azure_web_apps
+    verbose: true
     skip_cleanup: true
-    access_key_id: $AWS_ACCESS_KEY_ID
-    secret_access_key: $AWS_SECRET_ACCESS_KEY
-    bucket: $S3_BUCKET
-    region: $AWS_DEFAULT_REGION
+    username: $AZURE_DEPLOYMENT_USER       # If AZURE_WA_USERNAME isn't set
+    password: $AZURE_DEPLOYMENT_PASSWORD    # If AZURE_WA_PASSWORD isn't set
+    site: $AZURE_WEBAPP     # If AZURE_WA_SITE isn't set
     local_dir: site
     on:
         branch: master
