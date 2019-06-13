@@ -2,7 +2,17 @@ language: python # Set the build language to Python
 
 python: 3.6 # Set the version of Python to use
 
-branches: master # Set the branch to build from
+# blacklist : Set the branch to restrict build from
+branches:
+  except:
+  - dev
+  - gh-pages
+
+# safelist : Set the branch to build from
+branches:
+  only:
+  - master
+  - staging
 
 install:
     - pip install mkdocs mkdocs-material pymdown-extensions pygments # Install the required dependencies
@@ -13,9 +23,18 @@ before_deploy:
     - mkdocs build --verbose --clean --strict # Build a local version of the docs
 
 deploy: # Deploy documentation to Github in the gh_pages branch
-    provider: pages
+  - provider: pages
     skip_cleanup: true
     github_token: $github_token
+    local_dir: site
+    on:
+        branch: staging
+  - provider: azure_web_apps
+    verbose: true
+    skip_cleanup: true
+    username: $AZURE_DEPLOYMENT_USER       # If AZURE_WA_USERNAME isn't set
+    password: $AZURE_DEPLOYMENT_PASSWORD    # If AZURE_WA_PASSWORD isn't set
+    site: $AZURE_WEBAPP     # If AZURE_WA_SITE isn't set
     local_dir: site
     on:
         branch: master
