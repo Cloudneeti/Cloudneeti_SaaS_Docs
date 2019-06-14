@@ -18,7 +18,7 @@ Cloudneeti is Gartner-recognized and CIS-certified. The product provides:
 3.	Governance capabilities in managing policy exceptions, IT system integrations to adjust posture, 
 4.	Reporting for 11+ compliance frameworks, deviation notifications and various data-feed integrations with IT and compliance oversight tooling 
 
-![Cloudneeti Product](/images/Cloudneeti%20Product.png#thumbnail)
+![Cloudneeti Product](/images/Cloudneeti_Product.png#thumbnail)
 
 The Cloudneeti product is a multi-tenant software-as-a-service (SaaS) application. Cloudneeti application leverages cloud-native APIs to continuously discover customer workloads and monitor their configurations. 
 
@@ -36,7 +36,7 @@ The Cloudneeti application is hosted on the public cloud platforms utilizing Mic
 ### 2.3	Customer Cloud Accounts
 Cloudneeti platform can connect to multiple cloud accounts. The term “cloud account” is used as a standardized name referring to a single Azure subscription, Office 365 subscription, AWS account, or GCP project.
 
-![Customer Cloud Account](/images/Customer%20Cloud%20Account.png#thumbnail)
+![Customer Cloud Account](/images/Customer _Cloud _Account.png#thumbnail)
 
 ### 2.4	Cloudneeti Licenses and Accounts
 A Cloudneeti license is a group of accounts. Multiple Cloudneeti licenses can be provided to the customer under one contract. Each customer’s cloud account is registered with a Cloudneeti account. 
@@ -50,7 +50,7 @@ Consider the following when deciding between using a single license or multiple 
 
 •	Each license can enforce different baseline policies for their set of cloud accounts.
 
-![Cloudneeti License and Accounts](/images/Cloudneeti%20License%20and%20Accounts.png#thumbnail)
+![Cloudneeti License and Accounts](/images/Cloudneeti _License_and_Accounts.png#thumbnail)
 
 ### 2.5	Cloudneeti Application Users
 Cloudneeti allows customers to bring in their identity providers for authentication purposes. For authorization, Cloudneeti allows customer license admins to invite and designate user access to Cloudneeti. 
@@ -195,7 +195,7 @@ Use serverless.yml file to create a role to mark Cloudneeti's account as a trust
     c.	Default output format as "json" only.
 4.	To add Cloudneeti data provisioning resource, execute the command “serverless deploy”
  
-![Serverless Deploy](/images/Serverless%20Deploy.png#thumbnail)
+![Serverless Deploy](/images/Serverless _Deploy.png#thumbnail)
 
 5.	An AWS role will be created in the customer's account to mark Cloudneeti's account as a trusted entity with the SecurityAudit access policy. 
 
@@ -203,15 +203,15 @@ Use serverless.yml file to create a role to mark Cloudneeti's account as a trust
 1.	Log in to the Cloudneeti portal using the license admin user credentials.
 2.	Click on the ‘Activate License’ button to activate the license. This step is needed if this is the first cloud account you are adding to the License.
 
- ![Activate License](/images/4.2%202%20Activate%20License.png#thumbnail)
+ ![Activate License](/images/4.2 _2 _Activate License.png#thumbnail)
  
 3.	Select AWS connector.
   
-![AWS Connector](/images/Connector%20Type.png#thumbnail)
+![AWS Connector](/images/Connector_Type.png#thumbnail)
 
 4.	Enter details Account Name, AWS Account Id
 
-![Add AWS Account](/images/Add%20Account.png#thumbnail)
+![Add AWS Account](/images/Add _Account.png#thumbnail)
  
 5.	Click on ‘Add Account’.
 
@@ -234,7 +234,7 @@ Scan notifications allow a cloud account user to subscribe to changes in securit
 3.	Click on configure button to select “Configure Notifications”
 4.	Enter comma separated email addresses.
 
-![Configure Notifications](/images/Configure%20notifications.png#thumbnail)
+![Configure Notifications](/images/Configure _notifications.png#thumbnail)
 
 5.	Click on save button.
 

@@ -17,8 +17,8 @@ theme:
   logo:
     icon: 'cloud'
   font:
-    text: 'Roboto'
-    code: 'Roboto Mono'  
+    text: 'Helvetica'
+    code: 'Helvetica Mono'  
 extra_css:
   - 'stylesheets/extra.css'
 
