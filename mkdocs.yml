@@ -1,48 +1,78 @@
 site_name: Cloudneeti Documentation
 site_description: Cloudneeti Documentation
 site_author: The Cloudneeti Team
-repo_name: GitHub
+repo_name: Cloudneeti_SaaS_Docs
 copyright: "&copy; 2019 Cloudneeti."
 
 theme:
   name: 'material'
   custom_dir: "theme"
   static_templates:
-        - index.html
+      - index.html
+  feature:
+    tabs: true
   palette:
-    primary: 'blue'
-    accent: 'orange'
+    primary: 'cloudneeti'
+    accent: 'cloudneeti'
   logo:
     icon: 'cloud'
   font:
-    text: 'Roboto'
-    code: 'Roboto Mono'  
+    text: 'Helvetica'
+    code: 'Helvetica Mono'
+  logo: 'images/logo_top.png'
 extra_css:
   - 'stylesheets/extra.css'
-
+extra_javascript:
+  - 'javascripts/custom.js'
+  
 nav:
-- Introduction: 'introduction.md'
-- Cloudneeti Product: 
-    - 'Software-as-a-Service (SaaS)': softwareAsService.md
-    - 'Cloudneeti Application': cloudneetiAplication.md
-    - 'Customer Clouds': customerClouds.md
-    - 'Cloudneeti licenses and cloud accounts': cloudneetiLicensesAndAccounts.md
-    - 'Cloudneeti application users': 
-          - 'Authentication': authentication.md
-          - 'Authorization': authorization.md
-    - 'Cloudneeti application permissions':
-          - 'Azure Subscription permissions': azureSubscriptionPermissions.md
-          - 'Azure Active Directory permissions': azureActiveDirectoryPermissions.md
-    - 'Customer data protection': customerDataProtection.md
-- Azure Onboarding Preparation:
-    - 'Customer Team': customerTeam.md
-    - 'Consulting Team': consultingTeam.md
-    - 'Prerequisites': prerequisities.md
-- Azure Onboarding Steps:
-    - 'Registering Cloudneeti application in Customer’s Azure AD': registeringCustomerInAzureAD.md
-    - 'Grant permissions to Cloudneeti application': grantPermissionsToCloudneetiApplication.md
-    - 'Assign Reader role on Customer subscription to Cloudneeti application': assignReaderRoleOnCustomerSubscriptionToCloudneetiApplication.md
-    - 'Activate Cloudneeti license and onboard Azure subscription account': activateCloudneetiLicenseAndOnboardAzureSubscriptionAccount.md
-    - 'Verification of data collection': verificationOfDataCollection.md
-
+- Getting Started: 
+  - CLOUDNEETI PRODUCT: 
+    - Product Overview: gettingStarted/productOverview.md
+    - Product Capabilities: gettingStarted/productCapabilities.md
+    - Cloud Accounts​: gettingStarted/cloudAccounts.md
+    - Licenses: gettingStarted/licenses.md
+    - User & Roles : gettingStarted/userRoles.md
+  - USER IDENTITY MANAGEMENT:
+    - Authentication: gettingStarted/authentication.md
+    - Authorization: gettingStarted/authorization.md
+  - ACTIVATE LICENSE: gettingStarted/howToActivateLicense​.md
+- Administrator Guide:
+  - ONBOARDING CLOUD ACCOUNTS:
+    - Azure Subscriptions: administratorGuide/azureSubscriptions.md
+    - Amazon Web Service Accounts: administratorGuide/amazonWebServiceAccounts.md
+    - Office 365 Subscriptions: administratorGuide/office365Subscriptions.md
+  - MANAGE CLOUD ACCOUNTS:
+    - Add Cloud Account: administratorGuide/addCloudAccount.md
+    - Configure Security Policies: administratorGuide/configureSecurityPolicies.md
+    - Configure Notifications: administratorGuide/configureNotifications.md
+    - Configure Data Collection: administratorGuide/configureDataCollection.md
+    - Manage Cloud Account Users (goes to CAU): administratorGuide/manageCloudAccountUsers.md
+  - MANAGE USERS:
+    - License Users: administratorGuide/licenseUsers.md
+    - Cloud Account Users (CAU page): administratorGuide/cloudAccountUsers.md
+  - MANAGE REMEDIATIONS:
+    - For Azure Policies: administratorGuide/forAzurePolicies.md
+    - For AWS Policies: administratorGuide/forAWSPolicies.md
+  - MANAGE INTEGRATIONS:
+    - INCIDENT MANAGEMENT (TICKETING):
+      - Service Now: administratorGuide/serviceNow.md
+      - Zen Desk: administratorGuide/zenDesk.md
+    - REPORTING DATA FEEDS:
+      - Bring your blob storage: administratorGuide/bringYourBlobStorage.md
+      - Bring your NoSQL storage: administratorGuide/bringYourNoSQLStorage.md
+  - MANAGE ORGANIZATION:
+    - Manage Licenses: administratorGuide/manageLicenses.md
+- User Guide:
+  - DASHBOARDS: 
+    - CISO: userGuide/CISO.md
+    - SOC​: userGuide/SOC​.md
+    - Assets: userGuide/assets.md
+  - SECURITY POLICIES:
+    - Categories and Policies​ Details (Description, Resources, Audit procedure, Remediation guidance)​: userGuide/categoriesAndPolicies.md
+  - RISK POSTURE:
+    - Risk Dashboard: userGuide/riskDashboard.md
+    - Risk Analysis & Prioritization: userGuide/riskAnalysis&Prioritization.md
+  - REPORTS:
+    - Download and Understand reports: userGuide/downloadAndUnderstandReports.md
     
