@@ -10,8 +10,8 @@ theme:
   static_templates:
       - index.html
   palette:
-    primary: 'blue'
-    accent: 'orange'
+    primary: 'cloudneeti'
+    accent: 'cloudneeti'
   logo:
     icon: 'cloud'
   font:
