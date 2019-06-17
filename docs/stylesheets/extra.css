@@ -70,7 +70,7 @@ p {
     width: 100%;
 }
 
-
+.md-tabs{display: none;}
 /* ===== Testimonials Section ===== */
 
 .tiles_section{margin-top: 2%;margin-bottom: 2%}

@@ -1,7 +1,7 @@
 site_name: Cloudneeti Documentation
 site_description: Cloudneeti Documentation
 site_author: The Cloudneeti Team
-repo_name: GitHub
+repo_name: Cloudneeti_SaaS_Docs
 copyright: "&copy; 2019 Cloudneeti."
 
 theme:
@@ -9,6 +9,8 @@ theme:
   custom_dir: "theme"
   static_templates:
       - index.html
+  feature:
+    tabs: true
   palette:
     primary: 'cloudneeti'
     accent: 'cloudneeti'
@@ -16,7 +18,8 @@ theme:
     icon: 'cloud'
   font:
     text: 'Helvetica'
-    code: 'Helvetica Mono'  
+    code: 'Helvetica Mono'
+  logo: 'images/logo_top.png'
 extra_css:
   - 'stylesheets/extra.css'
 extra_javascript:
