@@ -136,7 +136,7 @@ Follow these steps to onboard the Azure subscription:
 | 5 | Verification of Data Collection          |
 
 
-![Azure Overview](../../image/Azure_Onboarding_Overview.png#thumbnail)
+![Azure Overview](.././images/Azure_Onboarding_Overview.png#thumbnail)
 
 ### 3.1	Registering Cloudneeti in the Customer’s Azure AD
 
@@ -153,7 +153,7 @@ Use the Create-ServicePrincipal-AzureOnboarding.ps1 script to create and registe
 4.	The script will prompt the login screen; you need to log in with **Global AD Administrator** or **Application Administrator** user credentials.
 5.	Store service principal information from the output in a secure place. This information will be needed while onboarding the Azure account in the Cloudneeti application.
  
-![Service Principal Screenshot](../../image/Service_Principal_Screenshot.png#thumbnail)
+![Service Principal Screenshot](.././images/Service_Principal_Screenshot.png#thumbnail)
 
 In case the user doesn’t want to provide the Microsoft Graph permissions given in section Azure Active Directory Permissions, you can use the disableADPolicies switch in the Create-ServicePrincipal-AzureOnboarding.ps1 command:
 
@@ -175,23 +175,23 @@ Follow the steps below to grant permission:
 3. Click on ‘Service principal’ in the ‘App registrations’ section.
 4. Select Cloudneeti service principal.
 
-![Service Principal - Azure Portal](../../image/Grant_Permission.png#thumbnail)
+![Service Principal - Azure Portal](.././images/Grant_Permission.png#thumbnail)
 
 5. Go to 'API permissions' and confirm Microsoft Graph permissions.
 6. Click on the 'Grant admin consent’ button in the ‘Grant consent’ section.
 
-![Grant permission ](../../image/Grant_Permission_2.png#thumbnail)
+![Grant permission ](.././images/Grant_Permission_2.png#thumbnail)
 
 ### 3.3	Assigning Reader Role on Customer Subscription to Cloudneeti
 Follow the steps below to assign reader and backup reader roles to Cloudneeti on the Azure subscription:
 1.	Go to the subscription’s IAM setting.
 2.	Click on the ’Add’ button and select ‘Add role assignment’.
 
-![Add role](../../image/Assign_role.png#thumbnail)
+![Add role](.././images/Assign_role.png#thumbnail)
 
 3.	Select ‘Reader’ role and Cloudneeti service principal.
 
-![Assign role](../../image/Assign_role_2.png#thumbnail)
+![Assign role](.././images/Assign_role_2.png#thumbnail)
 
 4.	Select ‘Save’ to complete the role assignment. 
 
@@ -199,29 +199,29 @@ Follow the steps below to assign reader and backup reader roles to Cloudneeti on
 1.	Log in to the Cloudneeti portal using the license admin user credentials.
 2.	Click on the ‘Activate License’ button to activate the license.
 
-![Activate License](../../image/Activate_License.png#thumbnail)
+![Activate License](.././images/Activate_License.png#thumbnail)
 
 3.	Select Azure connector.
 
-![Azure connector](../../image/Connector.png#thumbnail)
+![Azure connector](.././images/Connector.png#thumbnail)
 
 4.	Fill in the account and service principal information displayed in step 4.5.1 output.
 
-![Add account](../../image/Add_Account.png#thumbnail)
+![Add account](.././images/Add_Account.png#thumbnail)
 
 5.	Click on ‘Get Subscriptions’ to get the list of subscriptions on which Cloudneeti service principal has reader access.
 6.	Select the Azure subscription to onboard and click ‘Save & Continue’.
  
-![Add Account - save and continue](../../image/Add_Account_2.png#thumbnail)
+![Add Account - save and continue](.././images/Add_Account_2.png#thumbnail)
 
 ### 3.5	Verification of Data Collection
 1.	Click on ‘Go To Dashboard’ to see the data.
 
-![Dashborad](../../image/Success.png#thumbnail)
+![Dashborad](.././images/Success.png#thumbnail)
 
 2.	Wait approx. 5 minutes for the data to be collected, processed, and rendered to the Cloudneeti Dashboard.
 
-![Dashboard](../../image/Verify.png#thumbnail)
+![Dashboard](.././images/Verify.png#thumbnail)
 
 Congratulations! You have just on-boarded an Azure subscription to Cloudneeti. Subsequent onboardings will take less time (usually less than 10 minutes).
 
@@ -232,7 +232,7 @@ To receive email notifications from Cloudneeti Bot, please refer following steps
 3.	Click on configure button to select “Configure Notifications”
 4.	Enter comma separated email addresses.
 
-![Configure Notifications](../../image/Configure_notifications.png#thumbnail)
+![Configure Notifications](.././images/Configure_notifications.png#thumbnail)
 
 5.	Click on save button.
 
