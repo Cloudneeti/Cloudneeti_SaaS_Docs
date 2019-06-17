@@ -21,7 +21,9 @@ theme:
     code: 'Helvetica Mono'  
 extra_css:
   - 'stylesheets/extra.css'
-
+extra_javascript:
+  - 'javascripts/custom.js'
+  
 nav:
 - Getting Started: 
   - CLOUDNEETI PRODUCT: 
