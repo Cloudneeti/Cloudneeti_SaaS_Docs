@@ -12,8 +12,6 @@ theme:
   palette:
     primary: 'blue'
     accent: 'orange'
-  feature:
-    tabs: true
   logo:
     icon: 'cloud'
   font:

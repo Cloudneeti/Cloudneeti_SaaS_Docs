@@ -1,6 +1,6 @@
-# **2	Cloudneeti Product**
+# Cloudneeti Product
 
-## **2.1	Software-as-a-Service (SaaS)**
+## **1	Software-as-a-Service (SaaS)**
 Cloud technologies enable a fast-paced digital transformation. However, businesses are struggling to protect their public cloud workloads, which impedes their digital transformation. 
 
 **1.	Not able to prevent data breaches:**
@@ -20,17 +20,17 @@ Cloudneeti is Gartner-recognized and CIS-certified. Our product provides:
 
 The Cloudneeti product is a multi-tenant software-as-a-service (SaaS) application. Cloudneeti application leverages cloud-native APIs to continuously discover customer workloads and monitor their configurations. 
 
-## 2.2	Cloudneeti Application
+## 2	Cloudneeti Application
 The Cloudneeti application is hosted on Azure and consists of a data collection service, data processing service, data visualization service, and external IT systems integrations. 
 •	The data collection service is granted read-only access to the customer’s cloud accounts and collects configuration information of cloud workloads (resources) within the cloud account. 
 •	The data processing service compares this information against cloud security best practices and compliance controls. 
 •	The data visualization service provides dashboards and reports about the comparison of actual configuration to cloud security best practices.
 •	The IT systems integration service enables data sharing with external tools via API integration.
 
-## 2.3	Customer Cloud Accounts
+## 3	Customer Cloud Accounts
 Cloudneeti application can integrate with multiple cloud accounts (Azure subscriptions) associated with a single or multiple Azure Active Directory (AD) tenants. The term “cloud account” is used as a standardized name referring to a single Azure subscription, Office 365 subscription, AWS account, or GCP project.
 
 ![Cloudneeti - Customer Cloud Accounts](.././images/productOverview2.png#thumbnail)
 
-
+ 
 
