@@ -70,7 +70,7 @@ p {
     width: 100%;
 }
 
-
+.md-tabs{display: none;}
 /* ===== Testimonials Section ===== */
 
 .tiles_section{margin-top: 2%;margin-bottom: 2%}
@@ -106,7 +106,9 @@ p {
     margin-top: 25px;
 }
 
-
+table, td {
+    border: solid 1px #d2ccccb8;
+}
 /* ===================================== */
 
 .md-grid {
@@ -125,7 +127,9 @@ p {
     margin-top: 68px;
     padding-bottom: 5px;
     padding-top: 15px;
-    border-bottom: 3px solid  #FF7D2C;
+    border-bottom: 3px solid #FF7D2C;
+    bottom: 0;
+    width: 100%;
 }
 
 #copyright {
@@ -183,3 +187,8 @@ img[src*="#thumbnail"] {
   }
   .md-footer-nav__link{padding-top: .4rem !important}
   .md-footer-nav__inner{padding: .2rem !important}
+
+  [data-md-color-primary=cloudneeti] .md-header, [data-md-color-primary=cloudneeti] .md-hero {
+    background-color: #2f353a;
+    color:#FF8C00;
+}
