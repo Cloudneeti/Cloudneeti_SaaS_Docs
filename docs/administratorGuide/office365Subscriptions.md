@@ -166,13 +166,13 @@ Follow these steps to onboard an Office 365 Subscription to Cloudneeti:
 ### 4.1	Part 1: Onboarding Office 365 account
 #### 4.1.1	Register Cloudneeti Application in the Customer’s Azure AD
 
-Use the ***Create-ServicePrincipal- Office365Onboarding.ps1*** script to create and register a Cloudneeti data collector application. 
+Use the ***Create-ServicePrincipal-Office365Onboarding.ps1*** script to create and register a Cloudneeti data collector application. 
 
 1.	Open PowerShell in administrator mode. An administrative prompt is needed only to install missing Azure PowerShell modules.
 2.	Change directory to where Create-ServicePrincipal- Office365Onboarding.ps1 was downloaded earlier.
 3.	Run the below command to create service principal:
 ```powershell
-.\ Create-ServicePrincipal-Office365Onboarding.ps1 -azureActiveDirectoryId <Active_Directory_Id> `
+.\Create-ServicePrincipal-Office365Onboarding.ps1 -azureActiveDirectoryId <Active_Directory_Id> `
                -servicePrincipalName <data_collector_name> 
                -expirationPeriod 1year
 ```
