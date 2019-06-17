@@ -1,8 +1,8 @@
 # AWS Onboarding Guide
-## 1	Introduction
+## 1.	Introduction
 The purpose of this document is to outline the concept of Cloudneeti application integration with the customer’s Amazon Web Services accounts, the required preparations and prerequisites, and the specific onboarding steps. Onboarding of Micorsoft Azure and Office 365 cloud accounts are described in separate documents.
 
-## 2	Cloudneeti Product 
+## 2.	Cloudneeti Product 
 ### 2.1	Software-as-a-Service (SaaS)
 Cloud technologies enable a fast-paced digital transformation. However, businesses are struggling to protect their public cloud workloads, which impedes their digital transformation. 
 1.	Not able to prevent data breaches:
@@ -23,7 +23,7 @@ Cloudneeti is Gartner-recognized and CIS-certified. The product provides:
 The Cloudneeti product is a multi-tenant software-as-a-service (SaaS) application. Cloudneeti application leverages cloud-native APIs to continuously discover customer workloads and monitor their configurations. 
 
 ### 2.2	Cloudneeti Application
-The Cloudneeti application is hosted on the public cloud platforms utilizing Microsoft Azure, Amazon Web Services and Office 365 service components. The platform consists of a data collection service, data processing service, data visualization service, and external IT systems integrations. 
+The Cloudneeti application is hosted on the public cloud platforms utilizing Microsoft Azure, Amazon Web Services and Office 365 service components. The platform consists of a data collection service, data processing service, data visualization service,and external IT systems integrations. 
 
 •	The data collection service is granted read-only access to the customer’s cloud accounts and collects configuration information of cloud workloads (resources) within the cloud account. 
 
@@ -110,7 +110,7 @@ The collected metadata about configurations of customer cloud accounts (Azure su
 
 •	**Data retention:** Data retention for active contracts is applied at the contract provisioning level. Typically, this will be 30-90 days.
 
-## 3	AWS Onboarding Preparation
+## 3.	AWS Onboarding Preparation
 AWS account onboarding to Cloudneeti is the process of granting Cloudneeti access to the customer’s cloud accounts.
 ### 3.1	Customer Team
 Before onboarding, please ensure that users with the following roles are available:
@@ -123,7 +123,6 @@ Before onboarding, please ensure that users with the following roles are availab
 | ❑ AWS Administrator Access             | Create a role to mark Cloudneeti's account as a trusted entity with the [SecurityAudit access policy.](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_job-functions.html#jf_security-auditor)  |
 | ❑ Agree on an Onboarding Call          | Agree on a timeslot for an onboarding call with our consulting team |
 | ❑ Sign appropriate Agreement documents | Review and sign the following documentation:<br>1. Mutual NDA <br>2. Cloud Services Agreements (necessary for a long-term contract) |
-
 
 1.	Mutual NDA 
 2.	Cloud Services Agreements (necessary for a long-term contract)
@@ -171,7 +170,7 @@ The following activities need to be completed by the customer prior to onboardin
 | 8. Workstation: Install serverless npm module | Serverless Framework is a CLI tool to manage AWS deployments.<br>Execute below command to install serverless module,<br># npm install –g serverless |
 
 
-## 4	AWS Onboarding Steps
+## 4.	AWS Onboarding Steps
 Follow these steps to onboard the AWS account:
 
 
@@ -194,47 +193,34 @@ Use serverless.yml file to create a role to mark Cloudneeti's account as a trust
     b.	Default region name(eg. us-east-1). 
     c.	Default output format as "json" only.
 4.	To add Cloudneeti data provisioning resource, execute the command “serverless deploy”
- 
 ![Serverless Deploy](.././images/Serverless_Deploy.png#thumbnail)
-
 5.	An AWS role will be created in the customer's account to mark Cloudneeti's account as a trusted entity with the SecurityAudit access policy. 
 
 ### 4.2	Add your AWS Account to Cloudneeti
 1.	Log in to the Cloudneeti portal using the license admin user credentials.
 2.	Click on the ‘Activate License’ button to activate the license. This step is needed if this is the first cloud account you are adding to the License.
-
- ![Activate License](.././images/4.2_2_ActivateLicense.png#thumbnail)
- 
-3.	Select AWS connector.
-  
+![Activate License](.././images/4.2_2_ActivateLicense.png#thumbnail)
+3.	Select AWS connector. 
 ![AWS Connector](.././images/Connector_Type.png#thumbnail)
-
 4.	Enter details Account Name, AWS Account Id
-
-![Add AWS Account](.././images/Add_Account.png#thumbnail)
- 
+![Add AWS Account](.././images/Add_Account.png#thumbnail) 
 5.	Click on ‘Add Account’.
 
 ### 4.3	Verify Data Collection
 1.	Click on ‘Go To Dashboard’ to see the data.
- 
 ![Success](.././images/Success.png#thumbnail)
-
-2.	Wait approx. 5 minutes for the data to be collected, processed, and rendered to the Cloudneeti Dashboard.
- 
+2.	Wait approx. 5 minutes for the data to be collected, processed, and rendered to the Cloudneeti Dashboard. 
 ![Dashboard](.././images/Dashborad.png#thumbnail)
 
 Congratulations! You have just on-boarded an AWS account to Cloudneeti. Subsequent onboardings will take less time (usually less than 10 minutes).
 
-## 5	AWS Post-Onboarding Configurations
+## 5.	AWS Post-Onboarding Configurations
 ### 5.1	Configure scan notifications
 Scan notifications allow a cloud account user to subscribe to changes in security posture. To receive email notifications on a scan from Cloudneeti Bot, please refer following steps.
 1.	On Cloudneeti portal, navigate to settings
 2.	Select desired License and Account 
 3.	Click on configure button to select “Configure Notifications”
 4.	Enter comma separated email addresses.
-
 ![Configure Notifications](.././images/Configure_notifications.png#thumbnail)
-
 5.	Click on save button.
 

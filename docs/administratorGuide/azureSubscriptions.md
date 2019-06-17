@@ -1,5 +1,5 @@
 # Azure Onboarding Guide
-## 1	Introduction
+## 1.	Introduction
 The purpose of this document is to outline the concept of Cloudneeti application integration with the customer’s Microsoft Azure subscriptions, the required preparations and prerequisites, and the specific onboarding steps. Onboarding of Amazon Web Services (AWS) and Office 365 cloud accounts are described in separate documents.
 
 ### 1.1	Cloudneeti Application Permissions 
@@ -64,7 +64,7 @@ The collected metadata about configurations of customer cloud accounts (Azure su
 
 •	**Data retention:** Data retention for active contracts is applied at the contract provisioning level. Typically, this will be 30-90 days.
 
-## 2	Azure Onboarding Preparation
+## 2.	Azure Onboarding Preparation
 Azure onboarding to Cloudneeti is the process of granting Cloudneeti access to the customer’s cloud accounts.
 
 ### 2.1	Customer Team
@@ -123,7 +123,7 @@ The following activities need to be completed by the customer prior to onboardin
 
 
  
-## 3	Azure Onboarding Steps
+## 3.	Azure Onboarding Steps
 Follow these steps to onboard the Azure subscription:
 
 
@@ -145,11 +145,9 @@ Use the Create-ServicePrincipal-AzureOnboarding.ps1 script to create and registe
 1.	Open PowerShell in administrator mode. An administrative prompt is needed only to install missing Azure PowerShell modules.
 2.	Go to the directory where Create-ServicePrincipal-AzureOnboarding.ps1 was downloaded earlier.
 3.	Run the below command to create service principal:
-
 ```powershell
 .\Create-ServicePrincipal-AzureOnboarding.ps1 -azureActiveDirectoryId <Active_Directory_Id> -servicePrincipalName <data_collector_name> -expirationPeriod 1year
 ```
-
 4.	The script will prompt the login screen; you need to log in with **Global AD Administrator** or **Application Administrator** user credentials.
 5.	Store service principal information from the output in a secure place. This information will be needed while onboarding the Azure account in the Cloudneeti application.
  
@@ -174,41 +172,29 @@ Follow the steps below to grant permission:
 2. Click on ‘Azure Active Directory’.
 3. Click on ‘Service principal’ in the ‘App registrations’ section.
 4. Select Cloudneeti service principal.
-
 ![Service Principal - Azure Portal](.././images/Grant_Permission.png#thumbnail)
-
 5. Go to 'API permissions' and confirm Microsoft Graph permissions.
 6. Click on the 'Grant admin consent’ button in the ‘Grant consent’ section.
-
 ![Grant permission ](.././images/Grant_Permission_2.png#thumbnail)
 
 ### 3.3	Assigning Reader Role on Customer Subscription to Cloudneeti
 Follow the steps below to assign reader and backup reader roles to Cloudneeti on the Azure subscription:
+
 1.	Go to the subscription’s IAM setting.
 2.	Click on the ’Add’ button and select ‘Add role assignment’.
-
 ![Add role](.././images/Assign_role.png#thumbnail)
-
 3.	Select ‘Reader’ role and Cloudneeti service principal.
-
 ![Assign role](.././images/Assign_role_2.png#thumbnail)
-
 4.	Select ‘Save’ to complete the role assignment. 
 
 ### 3.4	Activating Cloudneeti License and Onboarding Azure Subscription Account
 1.	Log in to the Cloudneeti portal using the license admin user credentials.
 2.	Click on the ‘Activate License’ button to activate the license.
-
 ![Activate License](.././images/Activate_License.png#thumbnail)
-
 3.	Select Azure connector.
-
 ![Azure connector](.././images/Connector.png#thumbnail)
-
 4.	Fill in the account and service principal information displayed in step 4.5.1 output.
-
 ![Add account](.././images/Add_Account.png#thumbnail)
-
 5.	Click on ‘Get Subscriptions’ to get the list of subscriptions on which Cloudneeti service principal has reader access.
 6.	Select the Azure subscription to onboard and click ‘Save & Continue’.
  
@@ -216,24 +202,20 @@ Follow the steps below to assign reader and backup reader roles to Cloudneeti on
 
 ### 3.5	Verification of Data Collection
 1.	Click on ‘Go To Dashboard’ to see the data.
-
 ![Dashborad](.././images/Success.png#thumbnail)
-
 2.	Wait approx. 5 minutes for the data to be collected, processed, and rendered to the Cloudneeti Dashboard.
-
 ![Dashboard](.././images/Verify.png#thumbnail)
 
 Congratulations! You have just on-boarded an Azure subscription to Cloudneeti. Subsequent onboardings will take less time (usually less than 10 minutes).
 
 ### 3.6	Notification Configuration
 To receive email notifications from Cloudneeti Bot, please refer following steps.
+
 1.	On Cloudneeti portal, navigate to settings
 2.	Select desired License and Account 
 3.	Click on configure button to select “Configure Notifications”
 4.	Enter comma separated email addresses.
-
 ![Configure Notifications](.././images/Configure_notifications.png#thumbnail)
-
 5.	Click on save button.
 
 

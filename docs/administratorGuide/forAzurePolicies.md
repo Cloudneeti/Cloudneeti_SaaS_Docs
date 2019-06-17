@@ -1,5 +1,5 @@
 # Azure Policy Remediation
-## 1	Introduction
+## 1.	Introduction
 The purpose of this document is to outline the concept of Cloudneeti application automated policy remediation to the customer’s cloud accounts, the required preparations and prerequisites, and the specific remediation steps. 
 
 ### 1.1	Cloudneeti Policy remediation overview
@@ -17,7 +17,7 @@ The service principal generated while onboarding the Azure Account to Cloudneeti
 | Resource Policy Contributor (Preview)<br>Refer [here](https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#resource-policy-contributor-preview) | The permission lets Cloudneeti create/modify resource policy, create support ticket and read resources/hierarchy. Cloudneeti can read resources of all types, except secrets.<br>At no time will Cloudneeti be able to read/view data stored within the application/databases.<br> | Yes                                      |
 
  
-## 2	Automated policy remediation preparation
+## 2.	Automated policy remediation preparation
 Cloudneeti automated policy remediation to Azure subscription is the process of granting Service Principal access and change the resource configurations in the customer’s cloud account. 
 
 ### 2.1	Customer Team
@@ -54,7 +54,7 @@ The following activities need to be completed by the customer prior to automated
     c.	Click On Add and Select Add role assignment
     d.	Grant Resource Policy Contributor (Preview) role to Azure Application Id
 
-## 3	Automated policy remediation
+## 3.	Automated policy remediation
 Follow these steps for automated policy remediation on the Azure subscription:
 
 
@@ -71,13 +71,9 @@ Follow these steps for automated policy remediation on the Azure subscription:
 3.	Click on configure button to select “Configure security policies”
 4.	Enable policies for remediation.
 a.	A filter to see only the policies which are available for remediation can be used.
-
-![EnablePolicyRemediation](.././images/EnablePolicyRemediation.png#thumbnail)
- 
+![EnablePolicyRemediation](.././images/EnablePolicyRemediation.png#thumbnail) 
 5.	Click on Save and confirm by hitting “Yes Please” on confirmation message box.
-
 ![EnablePolicyRemediationConfirmationBox](.././images/EnablePolicyRemediationConfirmationBox.png#thumbnail)
-
 6.	If Resource Policy Contributor (Preview) role is not assigned as mentioned in prerequisite, enabling policy remediation will fail. Email notification to configured email ids will be sent.
 7.	To enable policy remediation, please follow steps mentioned in prerequisite then enable policies remediation on Cloudneeti portal by following above steps.
 
@@ -85,9 +81,7 @@ a.	A filter to see only the policies which are available for remediation can be 
 1.	Login to Azure portal  
 2.	Switch to Azure active directory where you have a subscription with pre-requisite access
 3.	Open CloudShell, Click on Cloudshell icon on the navigation bar to open Cloudshell and Choose PowerShell from shell drop down
-
 ![AssignRoleAzurePortalCloudshell](.././images/AssignRoleAzurePortalCloudshell.png#thumbnail)
-
 4.	Run below commands on CloudShell:
 a.	Download script 
 ```powershell
@@ -100,17 +94,11 @@ wget https://raw.githubusercontent.com/Cloudneeti/docs_cloudneeti/master/scripts
 ```powershell
 cd $user
 ```
-
-
-
 b.	Run provisioning script with inline parameters
 ```powershell
 ./Assign-RolesToRemediationPolicy.ps1 -azureActiveDirectoryId<Azure active directory Id> `
                             -subscriptionId<Subscription Id > `
 ```
-
-
-
 5.	Azure will start evaluation of resources related to enabled policies.
 
 ### 3.3	Remediate 
@@ -118,17 +106,14 @@ b.	Run provisioning script with inline parameters
 2.	All remediation enabled policies will appear. If the selection checkbox is disabled please check all prerequisites are met.
 3.	Select the policy and click on “Remediate Now” button.
 4.	In case Azure evaluation is not complete a message will appear “Evaluation in progress, please try after some time”.
-
 ![RemediateEvaluationStatus](.././images/RemediateEvaluationStatus.png#thumbnail)
-
 5.	If Azure evaluation is done, the remediation process for selected policies will start. It will take some time to change resource configuration as per policy.
-
 ![Success](.././images/Success.png#thumbnail)
-
 6.	This will change configuration for existing resources and will be effective for new resource deployment too.
 
 ### 3.4	Verification of data
 You can verify data on Cloudneet portal after next scan or below steps can be followed to rescan 
+
 1.	On Cloudneeti portal, navigate to settings
 2.	Select desired License and Account 
 3.	Click on configure button to select “re-scan”.
@@ -138,12 +123,11 @@ You can verify data on Cloudneet portal after next scan or below steps can be fo
 Azure account security policy remediation can be disabled from Cloudneeti portal. It will stop remediation of new resources deployed, However, please note that assignment deletion triggered by disabling remediation of security policies is not immediately effective for new resource deployment. The resource configuration updated during remediation will remain the same.
 
 Please follow below steps to disable the remediation:
+
 1.	On Cloudneeti portal, navigate to settings
 2.	Select desired License and Account 
 3.	Click on configure button to select “Configure security policies”
 4.	Enable policies for remediation.
     a.	A filter to see only the policies which are available for remediation can be used.
-
 ![EnablePolicyRemediation](.././images/EnablePolicyRemediation.png#thumbnail)
-
 5.	Disable the policy remediation and click on Save button.
