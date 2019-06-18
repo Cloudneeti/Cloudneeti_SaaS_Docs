@@ -17,8 +17,8 @@ theme:
   logo:
     icon: 'cloud'
   font:
-    text: 'Helvetica'
-    code: 'Helvetica Mono'
+    text: 'Poppins'
+    # code: 'Helvetica Mono'
   logo: 'images/logo_top.png'
 extra_css:
   - 'stylesheets/extra.css'

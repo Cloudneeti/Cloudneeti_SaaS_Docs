@@ -1,3 +1,4 @@
+/* ===== Generel CSS ===== */
 
 * {
     margin: 0;
@@ -5,33 +6,56 @@
 }
 
 body {
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
 }
 
-p {
-    font-size: 0.7rem;
+/* p {
+    font-size: 0.75rem;
+} */
+
+
+/* ===== Navigation Section ===== */
+
+.navbar-default .navbar-nav > li {
+    font-size: 16px;
 }
-
-
-/* ===== Logo Section ===== */
-
-.logo img  {
-    margin-top: 25px;
-    margin-bottom: 15px;
-    /* display: block;
-    margin-left: auto;
-    margin-right: auto; */
-    max-width: 20%;
+.navbar-default .navbar-nav > li > a:hover {
+    color: #FF7D2C;
+}
+.navbar-default .navbar-nav > li > a:focus {
+    color: rgb(0, 0, 0);
+}
+.navbar-brand img  {
     transition: all 1s;
     -moz-transition: all 1s;
     -o-transition: all 1s;
     -webkit-transition: all 1s;
 }
+.navbar-default .navbar-nav > .active>a, 
+.navbar-default .navbar-nav > .active>a:hover,
+.navbar-default .navbar-nav > .active>a:focus {
+    background-color: transparent;
+    color: #FF7D2C;
+} 
+
+@media (min-width: 768px) {
+    .navbar-nav {
+      width: 100%;
+      text-align: center;
+    }
+    .navbar-nav > li {
+      float: none;
+      display: inline-block;
+    }
+    .navbar-nav > li.navbar-right {
+      float: right !important;
+    }
+}
 
 /* ===== Header Section ===== */
 
-.header {
+/* .header {
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -39,11 +63,12 @@ p {
     -moz-background-size: cover;
     -o-background-size: cover;
     -webkit-background-size: cover;
-}
+} */
 
 .header-text h4 {
     color: rgb(0, 0, 0);
-    font-size: 1.6rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
     font-weight: 400;
     line-height: 27px;
     margin-top: 0px;
@@ -52,17 +77,11 @@ p {
 
 .header-text ul li {
     color: rgb(0, 0, 0);
+    font-family: 'Poppins', sans-serif;
     font-size: 16px;
-    line-height: 28px;
+    line-height: 27px;
     font-weight: 400;
     list-style: none;
-}
-
-.header-text p {
-    color: rgb(0, 0, 0);
-    font-size: 1.6rem;;
-    line-height: 28px;
-    font-weight: 300;
 }
 
 .header-saas img {
@@ -71,7 +90,9 @@ p {
 }
 
 .md-tabs{display: none;}
-/* ===== Testimonials Section ===== */
+
+
+/* ===== Tiles Section ===== */
 
 .tiles_section{margin-top: 2%;margin-bottom: 2%}
 .tiles_section-caption{
@@ -81,7 +102,7 @@ p {
 .tile_item {
     color: 	#475363;
     color: #475363;
-    padding: 20% 0%;
+    padding: 15% 15%;
     border: 1px solid #999999;
     border-radius: 2%;
     box-shadow: 0 5px 15px rgba(0,0,0,0.3)!important;
@@ -106,25 +127,11 @@ p {
     margin-top: 25px;
 }
 
-table, td {
-    border: solid 1px #d2ccccb8;
-}
-/* ===================================== */
-
-.md-grid {
-    max-width: 100rem !important;
-}
-
-.md-sidebar--secondary {
-    margin-left: 100%;
-}
-
-
 /* ===== Footer Section ===== */
 
 .footer {
     background-color: black;
-    margin-top: 68px;
+    margin-top: 67px;
     padding-bottom: 5px;
     padding-top: 15px;
     border-bottom: 3px solid #FF7D2C;
@@ -138,14 +145,15 @@ table, td {
 
 #copyright p {
     color: #8c8b8a;
-    font-weight: 600;
+    font-weight: 400;
     font-size: 1.6rem;;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
 }
 
 #copyright p a {
     text-decoration: none;
-    color: #FF7D2C;
+    /* color: #FF7D2C; */
+    color: #8c8b8a;
 }
 
 .row {
@@ -153,7 +161,7 @@ table, td {
     margin-left: -15px;
 }
 
-/* -------------------------------------------------- MarkDown CSS---------------------------------- */
+/* ------- MarkDown Theme Customization CSS--------- */
 
 img[src*="#thumbnail"] {
     display: block;
@@ -162,7 +170,19 @@ img[src*="#thumbnail"] {
     max-width: 100%;
  }
 
- .md-main__inner{padding-top: 0rem !important}
+table, td {
+    border: solid 1px #d2ccccb8;
+}
+
+.md-grid {
+    max-width: 100rem !important;
+}
+
+.md-sidebar--secondary {
+    margin-left: 100%;
+}
+
+.md-main__inner{padding-top: 0rem !important}
  ul.breadcrumb {
     padding: 5px 10px;
     list-style: none;
@@ -170,7 +190,7 @@ img[src*="#thumbnail"] {
   }
   ul.breadcrumb li {
     display: inline;
-    font-size: 15px;
+    font-size: 16px;
   }
   ul.breadcrumb li+li:before {
     padding: 8px;
@@ -191,4 +211,10 @@ img[src*="#thumbnail"] {
   [data-md-color-primary=cloudneeti] .md-header, [data-md-color-primary=cloudneeti] .md-hero {
     background-color: #2f353a;
     color:#FF8C00;
+}
+
+.md-typeset {
+    font-size: 16px;
+    line-height: 28px;
+
 }
