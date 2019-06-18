@@ -1,0 +1,4 @@
+{#-
+  This file was automatically generated - do not edit
+-#}
+{%- set class = "md-tabs" -%} {%- if page.ancestors | length > 0 -%} {%- set class = "md-tabs md-tabs--active" -%} {%- endif -%}<nav class="{{ class }}" data-md-component="tabs"><div class="md-tabs__inner md-grid"><ul class="md-tabs__list breadcrumb"><li><a href="{{ nav.homepage.url|url }}">Home</a> </li>{% if page %} {% for doc in page.ancestors %} {% if doc.link %} <li><a href="{{ doc.link|e }}">{{ doc.title }}</a> </li> {% else %}<li class="breadcrumb-item">{{ doc.title }} </li> {% endif %} {% endfor %} {% endif %} {% if page %}<li>{{ page.title }}</li>{% endif %}</ul></div></nav>
