@@ -6,7 +6,7 @@
 
 body {
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
 p {
@@ -70,7 +70,6 @@ p {
     width: 100%;
 }
 
-.md-tabs{display: none;}
 /* ===== Testimonials Section ===== */
 
 .tiles_section{margin-top: 2%;margin-bottom: 2%}
@@ -116,7 +115,7 @@ table, td {
 }
 
 .md-sidebar--secondary {
-    margin-left: 100%;
+    margin-left: 99%;
 }
 
 
@@ -166,7 +165,8 @@ img[src*="#thumbnail"] {
  ul.breadcrumb {
     padding: 5px 10px;
     list-style: none;
-    background-color: #eee;
+    background-color: #dedede;
+    color: #060606;
   }
   ul.breadcrumb li {
     display: inline;
