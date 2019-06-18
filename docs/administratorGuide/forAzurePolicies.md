@@ -4,7 +4,6 @@ The purpose of this document is to outline the concept of Cloudneeti application
 
 ### 1.1	Cloudneeti Policy remediation overview
 Resources that are non-compliant to a security policy can be put into a compliant state through Remediation. Remediation is accomplished by instructing Security Policy to update the configuration of your existing resources and is effective for new resource deployment. This article shows the steps needed to understand and accomplish remediation with Cloudneeti Remediation.
-
 ![RemediationOverview](.././images/RemediationOverview.png#thumbnail)
 
 ### 1.2	Cloudneeti Application Permissions 
@@ -43,12 +42,16 @@ The following activities need to be completed by the customer prior to automated
 | 5. **CloudShell** : Execute script to assign roles to MSI generated for Cloudneei Remediation policies. | This script helps Azure subscription 'owner'/'User Access Administrator' to assign the role to MSI generated for Cloudneei Remediation policies. |
 
 #### 2.2.1 Assign ‘Resource Policy Contributor (Preview) role permission to the service principal into the Azure subscription.
+
 1. Get service principal id from Cloudneeti Portal
+
     a.	Login as Cloudneeti Admin
     b.	Go to Settings → Click on Manage Accounts
     c.	Select ‘Update Account’ from ‘Configure Account’
     d.	Copy Azure Application Id
+
 2. Grant Resource Policy Contributor (Preview) role to Azure Application
+
     a.	Go To Azure Portal and Select Azure Subscription
     b.	Click on Access Control(IAM)
     c.	Click On Add and Select Add role assignment

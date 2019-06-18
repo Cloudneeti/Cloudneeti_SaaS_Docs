@@ -139,7 +139,6 @@ Follow these steps to onboard the Azure subscription:
 ![Azure Overview](.././images/Azure_Onboarding_Overview.png#thumbnail)
 
 ### 3.1	Registering Cloudneeti in the Customer’s Azure AD
-
 Use the Create-ServicePrincipal-AzureOnboarding.ps1 script to create and register a Cloudneeti data collector application. 
 
 1.	Open PowerShell in administrator mode. An administrative prompt is needed only to install missing Azure PowerShell modules.
@@ -201,8 +200,9 @@ Follow the steps below to assign reader and backup reader roles to Cloudneeti on
 ![Add Account - save and continue](.././images/Add_Account_2.png#thumbnail)
 
 ### 3.5	Verification of Data Collection
+
 1.	Click on ‘Go To Dashboard’ to see the data.
-![Dashborad](.././images/Success.png#thumbnail)
+![Dashborad](.././images/Azure_Onboard_Success.png#thumbnail)
 2.	Wait approx. 5 minutes for the data to be collected, processed, and rendered to the Cloudneeti Dashboard.
 ![Dashboard](.././images/Verify.png#thumbnail)
 
@@ -210,7 +210,6 @@ Congratulations! You have just on-boarded an Azure subscription to Cloudneeti. S
 
 ### 3.6	Notification Configuration
 To receive email notifications from Cloudneeti Bot, please refer following steps.
-
 1.	On Cloudneeti portal, navigate to settings
 2.	Select desired License and Account 
 3.	Click on configure button to select “Configure Notifications”
