@@ -29,40 +29,40 @@ nav:
 - Getting Started: 
   - CLOUDNEETI PRODUCT: 
     - Product Overview: gettingStarted/productOverview.md
-    - Product Capabilities: gettingStarted/productCapabilities.md
-    - Cloud Accounts​: gettingStarted/cloudAccounts.md
-    - Licenses: gettingStarted/licenses.md
-    - User & Roles : gettingStarted/userRoles.md
-  - USER IDENTITY MANAGEMENT:
-    - Authentication: gettingStarted/authentication.md
-    - Authorization: gettingStarted/authorization.md
-  - ACTIVATE LICENSE: gettingStarted/howToActivateLicense​.md
+    # - Product Capabilities: gettingStarted/productCapabilities.md
+    # - Cloud Accounts​: gettingStarted/cloudAccounts.md
+    # - Licenses: gettingStarted/licenses.md
+    # - User & Roles : gettingStarted/userRoles.md
+  # - USER IDENTITY MANAGEMENT:
+  #   - Authentication: gettingStarted/authentication.md
+  #   - Authorization: gettingStarted/authorization.md
+  # - ACTIVATE LICENSE: gettingStarted/howToActivateLicense​.md
 - Administrator Guide:
   - ONBOARDING CLOUD ACCOUNTS:
     - Azure Subscriptions: administratorGuide/azureSubscriptions.md
     - Amazon Web Service Accounts: administratorGuide/amazonWebServiceAccounts.md
     - Office 365 Subscriptions: administratorGuide/office365Subscriptions.md
-  - MANAGE CLOUD ACCOUNTS:
-    - Add Cloud Account: administratorGuide/addCloudAccount.md
-    - Configure Security Policies: administratorGuide/configureSecurityPolicies.md
-    - Configure Notifications: administratorGuide/configureNotifications.md
-    - Configure Data Collection: administratorGuide/configureDataCollection.md
-    - Manage Cloud Account Users (goes to CAU): administratorGuide/manageCloudAccountUsers.md
-  - MANAGE USERS:
-    - License Users: administratorGuide/licenseUsers.md
-    - Cloud Account Users (CAU page): administratorGuide/cloudAccountUsers.md
+  # - MANAGE CLOUD ACCOUNTS:
+  #   - Add Cloud Account: administratorGuide/addCloudAccount.md
+  #   - Configure Security Policies: administratorGuide/configureSecurityPolicies.md
+  #   - Configure Notifications: administratorGuide/configureNotifications.md
+  #   - Configure Data Collection: administratorGuide/configureDataCollection.md
+  #   - Manage Cloud Account Users (goes to CAU): administratorGuide/manageCloudAccountUsers.md
+  # - MANAGE USERS:
+  #   - License Users: administratorGuide/licenseUsers.md
+  #   - Cloud Account Users (CAU page): administratorGuide/cloudAccountUsers.md
   - MANAGE REMEDIATIONS:
     - For Azure Policies: administratorGuide/forAzurePolicies.md
-    - For AWS Policies: administratorGuide/forAWSPolicies.md
-  - MANAGE INTEGRATIONS:
-    - INCIDENT MANAGEMENT (TICKETING):
-      - Service Now: administratorGuide/serviceNow.md
-      - Zen Desk: administratorGuide/zenDesk.md
-    - REPORTING DATA FEEDS:
-      - Bring your blob storage: administratorGuide/bringYourBlobStorage.md
-      - Bring your NoSQL storage: administratorGuide/bringYourNoSQLStorage.md
-  - MANAGE ORGANIZATION:
-    - Manage Licenses: administratorGuide/manageLicenses.md
+  #   - For AWS Policies: administratorGuide/forAWSPolicies.md
+  # - MANAGE INTEGRATIONS:
+  #   - INCIDENT MANAGEMENT (TICKETING):
+  #     - Service Now: administratorGuide/serviceNow.md
+  #     - Zen Desk: administratorGuide/zenDesk.md
+  #   - REPORTING DATA FEEDS:
+  #     - Bring your blob storage: administratorGuide/bringYourBlobStorage.md
+  #     - Bring your NoSQL storage: administratorGuide/bringYourNoSQLStorage.md
+  # - MANAGE ORGANIZATION:
+  #   - Manage Licenses: administratorGuide/manageLicenses.md
 - User Guide:
   - DASHBOARDS: 
     - CISO: userGuide/CISO.md
