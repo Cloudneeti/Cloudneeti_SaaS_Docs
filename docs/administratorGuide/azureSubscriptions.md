@@ -41,10 +41,11 @@ Use the `Create-ServicePrincipal-AzureOnboarding.ps1` script to create and regis
 
 1.	Open PowerShell in administrator mode. An administrative prompt is needed only to install missing Azure PowerShell modules.
 2.	Go to the directory where `Create-ServicePrincipal-AzureOnboarding.ps1` was downloaded earlier.
-3.	Run the below command to create a service principal:
+3.	Run the below command to create a service principal: 
 ```powershell
 .\Create-ServicePrincipal-AzureOnboarding.ps1 -azureActiveDirectoryId <Active_Directory_Id> -servicePrincipalName <data_collector_name> -expirationPeriod 1year
 ```
+
 4.	The script will prompt the login screen; you need to log in with **Global AD Administrator** or **Application Administrator** user credentials.
 5.	Store service principal information from the output in a secure place. This information will be needed while onboarding the Azure account in the Cloudneeti application.
  
