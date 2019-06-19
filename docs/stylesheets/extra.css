@@ -10,12 +10,37 @@ body {
     overflow-x: hidden;
 }
 
-/* p {
-    font-size: 0.75rem;
-} */
-
-
 /* ===== Navigation Section ===== */
+
+.navbar-brand { position: relative; z-index: 2; }
+
+.navbar-nav.navbar-right .btn { position: relative; z-index: 2; padding: 4px 20px; margin: 10px auto; transition: transform 0.3s; }
+
+.navbar .navbar-collapse { position: relative; overflow: hidden !important; }
+
+.navbar .nav-collapse { position: absolute; z-index: 1; top: 0; left: 0; right: 0; bottom: 0; margin: 0; padding-right: 120px; padding-left: 80px; width: 100%; }
+.navbar.navbar-default .nav-collapse { background-color: #ffffff; }
+.navbar.navbar-inverse .nav-collapse { background-color: #222; }
+.navbar .nav-collapse .navbar-form { border-width: 0; box-shadow: none; }
+.nav-collapse>li { float: right; }
+
+.btn.btn-circle { border-radius: 50px; }
+.btn.btn-outline { background-color: transparent; }
+
+.navbar-nav.navbar-right .btn:not(.collapsed) {
+    color: rgb(255, 255, 255);
+}
+
+.navbar.navbar-default .nav-collapse,
+.navbar.navbar-inverse .nav-collapse {
+    height: auto !important;
+    transition: transform 0.3s;
+    transform: translate(0px,-50px);
+}
+.navbar.navbar-default .nav-collapse.in,
+.navbar.navbar-inverse .nav-collapse.in {
+    transform: translate(0px,0px);
+}
 
 .navbar-default .navbar-nav > li {
     font-size: 16px;
@@ -26,12 +51,7 @@ body {
 .navbar-default .navbar-nav > li > a:focus {
     color: rgb(0, 0, 0);
 }
-.navbar-brand img  {
-    transition: all 1s;
-    -moz-transition: all 1s;
-    -o-transition: all 1s;
-    -webkit-transition: all 1s;
-}
+
 .navbar-default .navbar-nav > .active>a, 
 .navbar-default .navbar-nav > .active>a:hover,
 .navbar-default .navbar-nav > .active>a:focus {
@@ -39,40 +59,37 @@ body {
     color: #FF7D2C;
 } 
 
-@media (min-width: 768px) {
-    .navbar-nav {
-      width: 100%;
-      text-align: center;
+@media screen and (max-width: 767px) {
+    
+    .navbar .nav-collapse { margin: 7.5px auto; padding: 0; }
+    .navbar .nav-collapse .navbar-form { margin: 0; }
+    .nav-collapse>li { float: none; }
+   
+    .navbar.navbar-default .nav-collapse,
+    .navbar.navbar-inverse .nav-collapse {
+        transform: translate(-100%,0px);
     }
-    .navbar-nav > li {
-      float: none;
-      display: inline-block;
+    .navbar.navbar-default .nav-collapse.in,
+    .navbar.navbar-inverse .nav-collapse.in {
+        transform: translate(0px,0px);
     }
-    .navbar-nav > li.navbar-right {
-      float: right !important;
+    
+    .navbar.navbar-default .nav-collapse.slide-down,
+    .navbar.navbar-inverse .nav-collapse.slide-down {
+        transform: translate(0px,-100%);
     }
+    .navbar.navbar-default .nav-collapse.in.slide-down,
+    .navbar.navbar-inverse .nav-collapse.in.slide-down {
+        transform: translate(0px,0px);
+    } 
 }
+
 
 /* ===== Header Section ===== */
 
-/* .header {
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    -webkit-background-size: cover;
-} */
-
-.header-text h4 {
-    color: rgb(0, 0, 0);
-    font-family: 'Poppins', sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 27px;
-    margin-top: 0px;
-    padding-top: 0px;
+.header-text {
+    margin-top: 30px;
+    padding-top: 20px;
 }
 
 .header-text ul li {
@@ -100,9 +117,8 @@ body {
 }
 
 .tile_item {
-    color: 	#475363;
     color: #475363;
-    padding: 15% 15%;
+    padding: 20% 0%;
     border: 1px solid #999999;
     border-radius: 2%;
     box-shadow: 0 5px 15px rgba(0,0,0,0.3)!important;
@@ -147,12 +163,10 @@ body {
     color: #8c8b8a;
     font-weight: 400;
     font-size: 1.6rem;;
-    /* text-transform: uppercase; */
 }
 
 #copyright p a {
     text-decoration: none;
-    /* color: #FF7D2C; */
     color: #8c8b8a;
 }
 
@@ -172,6 +186,14 @@ img[src*="#thumbnail"] {
 
 table, td {
     border: solid 1px #d2ccccb8;
+    font-size: 16px;
+    line-height: 28px;
+}
+
+table, th {
+    border: solid 1px #ffffffb8;
+    font-size: 16px;
+    line-height: 28px;
 }
 
 .md-grid {
@@ -190,7 +212,7 @@ table, td {
   }
   ul.breadcrumb li {
     display: inline;
-    font-size: 16px;
+    font-size: 15px;
   }
   ul.breadcrumb li+li:before {
     padding: 8px;
@@ -216,5 +238,4 @@ table, td {
 .md-typeset {
     font-size: 16px;
     line-height: 28px;
-
 }
