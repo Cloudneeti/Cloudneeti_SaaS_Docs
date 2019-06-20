@@ -161,8 +161,9 @@ body {
 
 #copyright p {
     color: #8c8b8a;
-    font-weight: 400;
-    font-size: 1.6rem;;
+    font-weight: 700;
+    font-size: 1.4rem;;
+    padding-left: 15px;
 }
 
 #copyright p a {
@@ -170,10 +171,10 @@ body {
     color: #8c8b8a;
 }
 
-.row {
+/* .row {
     margin-right: -15px;
     margin-left: -15px;
-}
+} */
 
 /* ------- MarkDown Theme Customization CSS--------- */
 
