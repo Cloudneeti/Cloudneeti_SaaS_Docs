@@ -33,7 +33,8 @@ Follow these steps to onboard the Azure subscription:
 | 5        | Verification of Data Collection          |
 
 
- ![Azure Overview](.././images/Azure_Onboarding_Overview.png#thumbnail)
+ 
+ ![Azure Overview](.././images/azureSubscriptions/Azure_Onboarding_overview.png#thumbnail)
 
 ### 2.1	Register Service Principal in the Azure AD
 
@@ -41,15 +42,14 @@ Use the `Create-ServicePrincipal-AzureOnboarding.ps1` script to create and regis
 
 1.	Open PowerShell in administrator mode. An administrative prompt is needed only to install missing Azure PowerShell modules.
 2.	Go to the directory where `Create-ServicePrincipal-AzureOnboarding.ps1` was downloaded earlier.
-3.	Run the below command to create a service principal: 
+3.	Run the below command to create a service principal:
 ```powershell
 .\Create-ServicePrincipal-AzureOnboarding.ps1 -azureActiveDirectoryId <Active_Directory_Id> -servicePrincipalName <data_collector_name> -expirationPeriod 1year
 ```
-
 4.	The script will prompt the login screen; you need to log in with **Global AD Administrator** or **Application Administrator** user credentials.
 5.	Store service principal information from the output in a secure place. This information will be needed while onboarding the Azure account in the Cloudneeti application.
  
- ![Service Principal Screenshot](.././images/Service_Principal_Screenshot.png#thumbnail)
+     ![Service Principal Screenshot](.././images/azureSubscriptions/Service_Principal_Screenshot.png#thumbnail)
 
 In case the user doesn’t want to provide the Microsoft Graph permissions given in section Azure Active Directory Permissions, you can use the `disableADPolicies` switch in the `Create-ServicePrincipal-AzureOnboarding.ps1` command:
 
@@ -71,21 +71,26 @@ Follow the steps below to grant permission:
 2. Click on `Azure Active Directory`.
 3. Navigate to the App Registrations blade.
 4. Select Cloudneeti service principal.
- ![Service Principal - Azure Portal](.././images/Grant_Permission.png#thumbnail)
+
+     ![Service Principal - Azure Portal](.././images/azureSubscriptions/Grant_Permission.png#thumbnail)
+     
+
 5. Go to 'API permissions' and confirm Microsoft Graph permissions.
+
 6. Click on the 'Grant admin consent’ button in the ‘Grant consent’ section.
- ![Grant permission ](.././images/Grant_Permission_2.png#thumbnail)
+
+     ![Grant permission ](.././images/azureSubscriptions/Grant_Permission_2.png#thumbnail)
 
 ### 2.3	Assigning Reader Role on Customer Subscription to Cloudneeti
 
 Follow the steps below to assign reader and backup reader roles to Cloudneeti on the Azure subscription:
 1.	Go to the subscription’s Access control (IAM) in the menu..
 2.	Click on the ’Add’ button and select ‘Add role assignment’.
- ![Add role](.././images/Assign_role.png#thumbnail)
+     ![Add role](.././images/azureSubscriptions/Assign_role.png#thumbnail)
  
 3.	Select ‘Reader’ role and Cloudneeti service principal.
 
-    ![Assign role](.././images/Assign_role_2.png#thumbnail)
+    ![Assign role](.././images/azureSubscriptions/Assign_role_2.png#thumbnail)
  
 4.	Select ‘Save’ to complete the role assignment. 
 
@@ -93,23 +98,35 @@ Follow the steps below to assign reader and backup reader roles to Cloudneeti on
 
 1.	Log in to the Cloudneeti portal using the license admin user credentials.
 2.	Click on the ‘Activate License’ button to activate the license.
- ![Activate License](.././images/Activate_License.png#thumbnail)
+     ![Activate License](.././images/azureSubscriptions/Activate_License.png#thumbnail)
 3.	Select Azure connector.
- ![Azure connector](.././images/Connector.png#thumbnail)
+ 
+    ![Azure connector](.././images/azureSubscriptions/Connector.png#thumbnail)
+
 4.	Fill in the account and service principal information displayed in step 2.1 output.
- ![Add account](.././images/Add_Account.png#thumbnail)
+ 
+    ![Add account](.././images/azureSubscriptions/Add_Azure_Account.png#thumbnail)
+
 5.	Click on ‘Get Subscriptions’ to get the list of subscriptions on which Cloudneeti service principal has reader access.
+
 6.	Select the Azure subscription to onboard and click ‘Save & Continue’.
  
-![Add Account - save and continue](.././images/Add_Account_2.png#thumbnail)
+    ![Add Account - save and continue](.././images/azureSubscriptions/Add_Azure_Account_2.png#thumbnail)
+
 
 ### 2.5	Verification of Data Collection
+Once account is onboarded to Cloudneeti, it requires few minutes for the data to be collected, processed, and rendered to the Cloudneeti Dashboard. Please permorm steps under section 2.6 for setting up the Cloudneeti account notifications.
 
 1.	Click on ‘Go To Dashboard’ to see the data.
-![Dashborad](.././images/Success.png#thumbnail)
-2.	Wait approx. 5 minutes for the data to be collected, processed, and rendered to the Cloudneeti Dashboard.
-![Dashboard](.././images/Verify.png#thumbnail)
+
+    ![Dashborad](.././images/azureSubscriptions/Success.png#thumbnail)
+
+2.	Verify data on dashboard
+    
+    ![Dashboard](.././images/azureSubscriptions/Verify.png#thumbnail)
+
 Congratulations! You have just on-boarded an Azure subscription to Cloudneeti. Subsequent onboardings will take less time (usually less than 10 minutes).
+
 
 ### 2.6	Notification Configuration
 To receive email notifications from Cloudneeti Bot, please refer following steps.
@@ -118,7 +135,8 @@ To receive email notifications from Cloudneeti Bot, please refer following steps
 2.	Select desired License and Account 
 3.	Click on configure button to select “Configure Notifications”
 4.	Enter comma separated email addresses.
-![Configure Notifications](.././images/Configure_notifications.png#thumbnail)
-5.	Click on save button.
 
+    ![Configure Notifications](.././images/azureSubscriptions/Configure_notifications.png#thumbnail)
+
+5.	Click on save button.
 

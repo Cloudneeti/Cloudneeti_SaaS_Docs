@@ -22,7 +22,7 @@ Cloudneeti is Gartner-recognized and CIS-certified. Our product provides:
 3.	**Governance** with abilities to manage exceptions and adjust posture, 
 4.	**Reporting** for 11+ compliance frameworks, deviation notifications and various data-feed integrations with IT and compliance oversight tooling 
 
-![Cloudneeti Dashboard](.././images/productOverview1.png#thumbnail)
+![Cloudneeti Dashboard](.././images/productOverview/productOverview1.png#thumbnail)
 
 The Cloudneeti product is a multi-tenant software-as-a-service (SaaS) application. Cloudneeti application leverages cloud-native APIs to continuously discover customer workloads and monitor their configurations. 
 
@@ -41,7 +41,7 @@ The Cloudneeti application is hosted on Azure and consists of a data collection 
 ## **3.	Customer Cloud Accounts**
 Cloudneeti application can integrate with multiple cloud accounts (Azure subscriptions) associated with a single or multiple Azure Active Directory (AD) tenants. The term “cloud account” is used as a standardized name referring to a single Azure subscription, Office 365 subscription, AWS account, or GCP project.
 
-![Cloudneeti - Customer Cloud Accounts](.././images/productOverview2.png#thumbnail)
+![Cloudneeti - Customer Cloud Accounts](.././images/productOverview/productOverview2.png#thumbnail)
 
  
 
