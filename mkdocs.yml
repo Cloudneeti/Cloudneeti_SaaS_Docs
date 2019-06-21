@@ -29,10 +29,10 @@ nav:
 - Getting Started: 
   - CLOUDNEETI PRODUCT: 
     - Product Overview: gettingStarted/productOverview.md
-    # - Product Capabilities: gettingStarted/productCapabilities.md
+    - Product Capabilities: gettingStarted/productCapabilities.md
     # - Cloud Accounts​: gettingStarted/cloudAccounts.md
-    # - Licenses: gettingStarted/licenses.md
-    # - User & Roles : gettingStarted/userRoles.md
+    - Licenses: gettingStarted/licenses.md
+    - User & Roles : gettingStarted/userRoles.md
   # - USER IDENTITY MANAGEMENT:
   #   - Authentication: gettingStarted/authentication.md
   #   - Authorization: gettingStarted/authorization.md
