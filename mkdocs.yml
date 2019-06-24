@@ -48,9 +48,9 @@ nav:
   #   - Configure Notifications: administratorGuide/configureNotifications.md
   #   - Configure Data Collection: administratorGuide/configureDataCollection.md
   #   - Manage Cloud Account Users (goes to CAU): administratorGuide/manageCloudAccountUsers.md
-  # - MANAGE USERS:
-  #   - License Users: administratorGuide/licenseUsers.md
-  #   - Cloud Account Users (CAU page): administratorGuide/cloudAccountUsers.md
+  - MANAGE USERS:
+    - License Users: administratorGuide/licenseUsers.md
+    - Cloud Account Users (CAU page): administratorGuide/cloudAccountUsers.md
   - MANAGE REMEDIATIONS:
     - For Azure Policies: administratorGuide/forAzurePolicies.md
   #   - For AWS Policies: administratorGuide/forAWSPolicies.md
