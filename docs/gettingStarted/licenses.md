@@ -6,9 +6,9 @@ Consider the following when deciding between using a single license or multiple 
 
 *   Data aggregation and reporting for cloud accounts will be aggregated at the license level 
 
-*   Each license can be configured to integrate with separate IT systems (reporting destinations, ticketing systems, audit report feed        destinations, etc.) 
+*   Each license can be configured to integrate with separate IT systems (reporting destinations, ticketing systems, audit report feed destinations, etc.) 
 
-*   Each license can be configured to choose a combination of compliance reporting packages (for example, BusinessUnit_1 might want PCI       DSS, CIS, while BusinessUnit_2 might want HIPAA, NIST CSF, ISO27001) 
+*   Each license can be configured to choose a combination of compliance reporting packages (for example, OrganizationUnit_1 might want PCI DSS, CIS, while OrganizationUnit_2 might want HIPAA, NIST CSF, ISO27001) 
 
 *   Each license can enforce different baseline policies for their set of cloud accounts. 
 
