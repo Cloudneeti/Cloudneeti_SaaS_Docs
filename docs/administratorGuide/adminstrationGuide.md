@@ -7,11 +7,11 @@ Cloudneeti application can integrate with multiple cloud accounts (Azure subscri
 
 Please follow links for details:
 
-[1. Microsoft Azure subscription](https://cloudneeti.github.io/Cloudneeti_SaaS_Docs/administratorGuide/azureSubscriptions/)
+[1. Microsoft Azure subscription](../azureSubscriptions/)
 
-[2. Amazon Web Services (AWS) account](https://cloudneeti.github.io/Cloudneeti_SaaS_Docs/administratorGuide/amazonWebServiceAccounts/)
+[2. Amazon Web Services (AWS) account](../amazonWebServiceAccounts/)
 
-[3. Office 365 cloud account](https://cloudneeti.github.io/Cloudneeti_SaaS_Docs/administratorGuide/office365Subscriptions/)
+[3. Office 365 cloud account](../office365Subscriptions/)
 
 
 ## 2. Manage Users
