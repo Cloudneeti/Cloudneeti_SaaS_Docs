@@ -10,12 +10,13 @@ The following activities need to be completed by the customer prior to onboardin
 |------------------------------------------|------------------------------------------|
 | 1. Engage a user with **Global AD administrator** rights  | Azure administrator must have enough permissions in the Azure AD to create the required service principal for Cloudneeti.  |
 | 2. Engage a user with **owner access permissions to the Azure subscription** | Assign ‘Reader’ permission to the service principal into the Azure subscription. |
-| 3. Download and review **PowerShell script** for creation of the service principal | The PowerShell script is used to create a service principal in Azure Tenant AD: [Download Link](https://github.com/Cloudneeti/docs_cloudneeti/blob/master/scripts/Create-ServicePrincipal-AzureOnboarding.ps1). |
-| 4. Have the Azure Subscription ID        | This is a mandatory field for onboarding an Azure subscription to Cloudneeti. |
-| 5. Have the Azure Directory/Tenant ID    | This is a mandatory field for onboarding an Azure subscription to Cloudneeti. |
-| 6. **Workstation**: Ensure you have the latest PowerShell version (v5 and above)  | Verify PowerShell version by running the command `$PSVersionTable.PSVersion` on the workstation where you will run the ServicePrincipal creation script. If PowerShell version is lower than 5, then follow this link for installation of a later version: [Download Link.](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-windows-powershell?view=powershell-6) |
-| 7. **Workstation**: Before executing the script, make sure there are no restrictions in running the PowerShell script   | Use this command: <br>`Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass` <br>PowerShell contains built-in execution policies that limit its use as an attack vector. By default, the execution policy is set to Restricted, which is the primary policy for script execution. The bypass allows for running scripts and keeps the lowered permissions isolated to just the current running process. |
-| 8. **Workstation**: Install Azure Modules to execute PowerShell commands within service principal automation script | `Install-Module -Name AzureAD -MinimumVersion 2.0.0.131`<br>It is a roll-up module for the Azure Resource Manager cmdlets. |
+| 3. Engage a user with **owner access permissions to the Azure subscription** | Assign ‘Website Contributor’ permission to the service principal into the Azure subscription. <br> <br> Service principal needs Website Contributor role access to the Subscription in order to view application settings. **This step is optional**, if the Website Contributor Role is not assigned then 15 policies (Refer Section 3.2.2) will show "No Data" on Cloudneeti portal.|
+| 4. Download and review **PowerShell script** for creation of the service principal | The PowerShell script is used to create a service principal in Azure Tenant AD: [Download Link](https://github.com/Cloudneeti/docs_cloudneeti/blob/master/scripts/Create-ServicePrincipal-AzureOnboarding.ps1). |
+| 5. Have the Azure Subscription ID        | This is a mandatory field for onboarding an Azure subscription to Cloudneeti. |
+| 6. Have the Azure Directory/Tenant ID    | This is a mandatory field for onboarding an Azure subscription to Cloudneeti. |
+| 7. **Workstation**: Ensure you have the latest PowerShell version (v5 and above)  | Verify PowerShell version by running the below command on the workstation where you will run the ServicePrincipal creation script. <br>`$PSVersionTable.PSVersion`<br> If PowerShell version is lower than 5, then follow this link for installation of a later version: [Download Link.](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-windows-powershell?view=powershell-6) |
+| 8. **Workstation**: Before executing the script, make sure there are no restrictions in running the PowerShell script   | Use this command: <br>`Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass` <br>PowerShell contains built-in execution policies that limit its use as an attack vector. By default, the execution policy is set to Restricted, which is the primary policy for script execution. The bypass allows for running scripts and keeps the lowered permissions isolated to just the current running process. |
+| 9. **Workstation**: Install Azure Modules to execute PowerShell commands within service principal automation script | `Install-Module -Name AzureAD -MinimumVersion 2.0.0.131`<br>It is a roll-up module for the Azure Resource Manager cmdlets. |
 
 
 
@@ -28,7 +29,7 @@ Follow these steps to onboard the Azure subscription:
 |----------|------------------------------------------        |
 | 1        | Register Service Principal in the Azure AD       |
 | 2        | Grant admin consent to the Service Principal       |
-| 3        | Assigning Reader Role on Azure Subscription to the Service Principal |
+| 3        | Assigning Role on Azure Subscription to the Service Principal |
 | 4        | Activating Cloudneeti License and Onboarding Azure Account |
 | 5        | Verification of Data Collection          |
 
@@ -81,9 +82,10 @@ Follow the steps below to grant permission:
 
      ![Grant permission ](.././images/azureSubscriptions/Grant_Permission_2.png#thumbnail)
 
-### 2.3	Assigning Reader Role on Customer Subscription to Cloudneeti
+### 2.3	Assigning Role on Customer Subscription to Cloudneeti
 
-Follow the steps below to assign reader and backup reader roles to Cloudneeti on the Azure subscription:
+
+#### 2.3.1 Follow the steps below to assign reader and backup reader roles to Cloudneeti on the Azure subscription:
 1.	Go to the subscription’s Access control (IAM) in the menu..
 2.	Click on the ’Add’ button and select ‘Add role assignment’.
      ![Add role](.././images/azureSubscriptions/Assign_role.png#thumbnail)
@@ -91,6 +93,41 @@ Follow the steps below to assign reader and backup reader roles to Cloudneeti on
 3.	Select ‘Reader’ role and Cloudneeti service principal.
 
     ![Assign role](.././images/azureSubscriptions/Assign_role_2.png#thumbnail)
+ 
+4.	Select ‘Save’ to complete the role assignment. 
+
+#### 2.3.2	Assigning "Website Contributor" Role on Customer Subscription to Cloudneeti 
+ Service principal needs Website Contributor role access to the Subscription in order to view application settings. **This step is optional**, if the Website Contributor Role is not assigned then below 15 policies will show "No Data" on Cloudneeti portal.
+ 
+ 
+| Policy ID | Policy Name                              | Category |
+|-----------|------------------------------------------|----------|
+| 1900.42   | Ensure that 'App Insights' are configured for Azure Web Apps | Azure - Compute (PaaS and Serverless)          |
+| 1900.43   | Ensure that WEBSITE_LOAD_CERTIFICATES parameter is not set to '*' for Mobile Apps |Azure - Compute (PaaS and Serverless)          |
+| 1900.44   | Ensure that WEBSITE_LOAD_CERTIFICATES parameter is not set to '*' for API Apps |Azure - Compute (PaaS and Serverless)          |
+| 1900.51   | Ensure that latest supported Node.js version is used for Web Application |Azure - Compute (PaaS and Serverless)          |
+| 1900.63   | Ensure that WEBSITE_LOAD_CERTIFICATES parameter is not set to '*' for Function Apps |Azure - Compute (PaaS and Serverless)          |
+| 1900.72   | Ensure that 'App Service Authentication' is enabled for Function apps |Azure - Compute (PaaS and Serverless)         |
+| 1900.73   | Ensure that 'App Service Authentication' is enabled for API apps |Azure - Compute (PaaS and Serverless)          |
+| 1900.74   | Ensure that 'App Service Authentication' is enabled for Mobile apps |Azure - Compute (PaaS and Serverless)          |
+| 1900.75   | Ensure that 'App Service Authentication' is enabled for Web apps |Azure - Compute (PaaS and Serverless)          |
+| 1900.78   | Ensure that latest supported Node.js version is used for Function Apps |Azure - Compute (PaaS and Serverless)          |
+| 1900.79   | Ensure that latest supported Node.js version is used for API Apps |Azure - Compute (PaaS and Serverless)          |
+| 1900.80   | Ensure that latest supported Node.js version is used for Mobile Apps |Azure - Compute (PaaS and Serverless)          |
+| 1900.84   | Ensure that 'App Insights' are configured for Azure Mobile Apps |Azure - Compute (PaaS and Serverless)          |
+| 1900.85   | Ensure that 'App Insights' are configured for Azure Function Apps |Azure - Compute (PaaS and Serverless)          |
+| 1900.86   | Ensure that 'App Insights' are configured for Azure API Apps |Azure - Compute (PaaS and Serverless)          |
+
+
+
+ Follow the steps below to assign Website Contributor role to Cloudneeti on the Azure subscription.
+1.	Go to the subscription’s Access control (IAM) in the menu..
+2.	Click on the ’Add’ button and select ‘Add role assignment’.
+ ![Add role](.././images/azureSubscriptions/Assign_role.png#thumbnail)
+ 
+3.	Select ‘Website Contributor’ role and Cloudneeti service principal.
+
+    ![Assign role](.././images/azureSubscriptions/Website_Contributor_Role.png#thumbnail)
  
 4.	Select ‘Save’ to complete the role assignment. 
 
