@@ -1,95 +1,89 @@
 # Cloud Account Users 
 
-### User Roles on Cloudneeti 
-
+## 1. Overview
 Cloudneeti supports “administrator” and “reader” roles under a License and under specific Accounts. In other terms, a Cloudneeti application user can be a License Administrator or License Reader, Account Administrator or Account Reader. Account Administrator and Reader have access only to information about specific cloud accounts (subscriptions) onboarded to Cloudneeti accounts. License Administrator and Reader will have access to information about all Cloudneeti accounts under those Licenses. 
 
- 
+![Cloudneeti_Access](.././images/cloudAccountUsers/Cloudneeti_Access.png#thumbnail)
 
-There are following Cloudneeti License User Roles 
 
-**License Admin:** License Administrator (Admin) has the rights to manage users (create, remove), managed configurations (policies configurations, integrations), view Dashboards and Reports for License/ Licenses and all Cloudneeti accounts under the License/ Licenses. 
 
-**License Reader:** License Reader can only view Dashboards and Reports and information about all Cloudneeti accounts under the License/ Licenses. 
+## 2. Cloud Account User Roles 
+There are following Cloudneeti cloud account User Roles 
 
 **Account Admin:** Account Administrator has the rights to manage users (create, remove), managed configurations (policies configurations, integrations), view Dashboards and Reports for License/ Licenses for one or more Cloudneeti accounts. 
 
 **Account Reader:** Account Reader can only view Dashboards and Reports and information about all Cloudneeti accounts under the License/ Licenses. 
 
 
-![Cloudneeti_Access](.././images/cloudAccountUsers/Cloudneeti_Access.png#thumbnail)
-
 ![Roles_Permissions](.././images/cloudAccountUsers/Roles_Permissions.png#thumbnail)
 
 
-####  **1. Manage Cloud Account Users** 
+
+## 3. Manage Cloud Account Users
+Cloudneeti license administrator and cloud account administrator can add, update and delete cloud account users.
 
 ![Manage CloudAccount Users](.././images/cloudAccountUsers/Manage_CloudAccount_Users.png#thumbnail)
 
 
 
-#### **Create Account User** 
+### 3.1 Create Account User
 
-**Step1:** Go to settings and click on Manage Users 
+1. Go to settings and click on Manage Users 
 
-**Step2:** Select Account Users radio button 
+2. Select Account Users radio button 
 
-**Step3:** Select Account from dropdown for which user is to be added. 
+3. Select Account from dropdown for which user is to be added. 
 
-**Step3:** Click on button “Add Account User” 
+4. Click on button “Add Account User” 
 
-**Step4:** Enter email id and role 
+5. Enter email id and role 
 
-**1. Account Admin:** Account Administrator (Admin) has the rights to manage users (create, remove), managed configurations (policies configurations, integrations), view Dashboards at Cloudneeti Account Level. 
+6. Click on save  
 
-**2. Account Reader:** License Reader can only view Dashboards and Reports. 
+7. Confirm and click on “Yes, Add User!” 
 
-**Step5:** Click on save  
+### 3.2 Add Users from organization to Cloudneeti Account
 
-**Step6:** Confirm and click on “Yes, Add User!” 
+1. Go to settings and click on Manage Users 
 
-#### **Add Users from organization to Cloudneeti Account** 
+2. Select Account Users radio button 
 
-**Step1:** Go to settings and click on Manage Users 
+3. Select Account from dropdown for which user is to be added. 
 
-**Step2:** Select Account Users radio button 
+4. Click on button “Add User from Organization” 
 
-**Step3:** Select Account from dropdown for which user is to be added. 
+5. This will populate the list of your Active Directory Users.  
 
-**Step3:** Click on button “Add User from Organization” 
+6. Enter email id and role for the users you want to add 
 
-**Step4:** This will populate the list of your Active Directory Users.  
+7. Click on save  
 
-**Step5:** Enter email id and role for the users you want to add 
+8. Users will be added to the account with given role. 
 
-**Step6:** Click on save  
+### 3.3 Update Account User
 
-**Step7:** Users will be added to the account with given role. 
+1. Go to settings and click on Manage Users 
 
-#### **Update Account User** 
+2. Select Account Users radio button 
 
-**Step1:** Go to settings and click on Manage Users 
+3. Select Account from dropdown for which user is to be added. 
 
-**Step2:** Select Account Users radio button 
+4. Click on button “Update Account User” 
 
-**Step3:** Select Account from dropdown for which user is to be added. 
+5. Update role 
 
-**Step3:** Click on button “Update Account User” 
+6. Click on save  
 
-**Step4:** Update role 
+### 3.4 Delete Account User
 
-**Step5:** Click on save  
+1. Go to settings and click on Manage Users 
 
-#### **Delete Account User** 
+2. Select Account Users radio button 
 
-**Step1:** Go to settings and click on Manage Users 
+3. Select Account from dropdown for which user is to be added. 
 
-**Step2:** Select Account Users radio button 
+4. Click on button “Delete Account User” 
 
-**Step3:** Select Account from dropdown for which user is to be added. 
-
-**Step3:** Click on button “Delete Account User” 
-
-**Step4:** Confirm and click on “Yes, Add User!” 
+5. Confirm and click on “Yes, Add User!” 
 
  
