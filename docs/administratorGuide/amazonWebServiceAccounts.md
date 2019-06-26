@@ -58,7 +58,7 @@ Use serverless.yml file to create a role to mark Cloudneeti's account as a trust
 1.	Log in to the Cloudneeti portal using the license admin user credentials.
 2.	Click on the ‘Activate License’ button to activate the license. This step is needed if this is the first cloud account you are adding to the License.
 
-    ![Activate License](.././images/amazonWebServiceAccounts/4.2_2_ActivateLicense.png#thumbnail)
+    ![Activate License](.././images/amazonWebServiceAccounts/4.2_2_Activate_License.png#thumbnail)
 3.	Select AWS connector. 
 
     ![AWS Connector](.././images/amazonWebServiceAccounts/Connector_Type.png#thumbnail)
