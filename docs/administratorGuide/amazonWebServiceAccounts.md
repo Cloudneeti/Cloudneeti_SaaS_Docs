@@ -37,7 +37,7 @@ Follow these steps to onboard the AWS account:
 | 4 | Configure scan notifications             |
 
 
- ![AWSOnboardingOverview](.././images/Azure_Onboarding_Overview.png#thumbnail)
+ ![AWSOnboardingOverview](.././images/amazonWebServiceAccounts/AWSOnboardingOverview.png#thumbnail)
 
 ### 2.1	Create an AWS role for Cloudneeti access
 
@@ -51,29 +51,29 @@ Use serverless.yml file to create a role to mark Cloudneeti's account as a trust
     c.	Default output format as "json" only.
 4.	To add Cloudneeti data provisioning resource, execute the command “serverless deploy”
 
-    ![Serverless Deploy](.././images/Serverless_Deploy.png#thumbnail)
+    ![Serverless Deploy](.././images/amazonWebServiceAccounts/Serverless_Deploy.png#thumbnail)
 5.	An AWS role will be created in the customer's account to mark Cloudneeti's account as a trusted entity with the SecurityAudit access policy. 
 
 ### 2.2	Add your AWS Account to Cloudneeti
 1.	Log in to the Cloudneeti portal using the license admin user credentials.
 2.	Click on the ‘Activate License’ button to activate the license. This step is needed if this is the first cloud account you are adding to the License.
 
-    ![Activate License](.././images/4.2_2_ActivateLicense.png#thumbnail)
+    ![Activate License](.././images/amazonWebServiceAccounts/4.2_2_ActivateLicense.png#thumbnail)
 3.	Select AWS connector. 
 
-    ![AWS Connector](.././images/Connector_Type.png#thumbnail)
+    ![AWS Connector](.././images/amazonWebServiceAccounts/Connector_Type.png#thumbnail)
 4.	Enter details Account Name, AWS Account Id
 
-    ![Add AWS Account](.././images/Add_Account.png#thumbnail) 
+    ![Add AWS Account](.././images/amazonWebServiceAccounts/Add_Account.png#thumbnail) 
 5.	Click on ‘Add Account’.
 
 ### 2.3	Verify Data Collection
 1.	Click on ‘Go To Dashboard’ to see the data.
 
-    ![Success](.././images/Success.png#thumbnail)
+    ![Success](.././images/amazonWebServiceAccounts/Success.png#thumbnail)
 2.	Wait approx. 5 minutes for the data to be collected, processed, and rendered to the Cloudneeti Dashboard. 
 
-    ![Dashboard](.././images/Dashborad.png#thumbnail)
+    ![Dashboard](.././images/amazonWebServiceAccounts/Dashborad.png#thumbnail)
 
 Congratulations! You have just on-boarded an AWS account to Cloudneeti. Subsequent onboardings will take less time (usually less than 10 minutes).
 
@@ -85,6 +85,6 @@ Scan notifications allow a cloud account user to subscribe to changes in securit
 3.	Click on configure button to select “Configure Notifications”
 4.	Enter comma separated email addresses.
     
-    ![Configure Notifications](.././images/Configure_notifications.png#thumbnail)
+    ![Configure Notifications](.././images/amazonWebServiceAccounts/Configure_notifications.png#thumbnail)
 5.	Click on save button.
 
