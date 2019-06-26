@@ -1,52 +1,56 @@
 # License Users in Cloudneeti: 
+Cloudneeti supports “administrator” and “reader” roles under a License. In other terms, a Cloudneeti application user can be a License Administrator or License Reader. License Administrator and Reader will have access to information about all Cloudneeti accounts under those Licenses.
+
+
 
 ### Manage License Users 
+License administrator can add, update and delete license users.
 
-![Manage Lciense Users](.././images/licenseUsers/Manage_Lciense_Users.png#thumbnail)
+![Manage License Users](.././images/licenseUsers/Manage_Lciense_Users.png#thumbnail)
 
-#### **A. Create License User** 
+#### **1. Create License User** 
 
-**Step1:** Go to settings and click on Manage Users 
+1. Go to settings and click on Manage Users 
 
-**Step2:** Select License Users radio button 
+2. Select License Users radio button 
 
-**Step3:** Select License from dropdown for which user is to be added. 
+3. Select License from dropdown for which user is to be added. 
 
-**Step4:** Click on button “Add License User” 
+4. Click on button “Add License User” 
 
-**Step5:** Enter Name, email id and role 
+5. Enter Name, email id and role 
 
-**Step6:** Click on save  
+6. Click on save  
 
-**Step7:** Confirm and click on “Yes, Add User!” 
+7. Confirm and click on “Yes, Add User!” 
 
-#### **B. Update License User** 
+#### **2. Update License User** 
 
-**Step1:** Go to settings and click on Manage Users 
+1. Go to settings and click on Manage Users 
 
-**Step2:** Select License Users radio button 
+2. Select License Users radio button 
 
-**Step3:** Select License from dropdown for which user is to be added. 
+3. Select License from dropdown for which user is to be added. 
 
-**Step4:** Click on button “Update License User” 
+4. Click on button “Update License User” 
 
-**Step5:** Update Name and role 
+5. Update Name and role 
 
-**Step6:** Click on save  
+6. Click on save  
 
-**Step7:** Confirm and click on “Yes, Add User!” 
+7. Confirm and click on “Yes, Add User!” 
 
-#### **C. Delete License User** 
+#### **3. Delete License User** 
 
-**Step1:** Go to settings and click on Manage Users 
+1. Go to settings and click on Manage Users 
 
-**Step2:** Select License Users radio button 
+2. Select License Users radio button 
 
-**Step3:** Select License from dropdown for which user is to be added. 
+3. Select License from dropdown for which user is to be added. 
 
-**Step4:** Click on button “Delete License User” 
+4. Click on button “Delete License User” 
 
-**Step5:** Confirm to delete by clicking on “Yes, Delete it!” 
+5. Confirm to delete by clicking on “Yes, Delete it!” 
 
  
 
