@@ -253,13 +253,12 @@ The following is the process outlined to create a secure service account credent
 wget https://raw.githubusercontent.com/Cloudneeti/docs_cloudneeti/master/scripts/Provision-M365DataCollector.ps1 -O Provision-M365DataCollector.ps1
 ```
 
-5. Switch to the User directory
+a: Switch to the User directory
 ```powershell
 cd $User
 ```
+b: Run provisioning script with inline parameters
 
-
-6.	Run provisioning script with inline parameters
 ```powershell
 ./Provision-M365DataCollector.ps1 -CloudneetiLicenseId <Cloudneeti License Id> `
 -CloudneetiAccountId <Cloudneeti Account Id> `
@@ -277,12 +276,17 @@ cd $User
 
 Note: Contact Cloudneeti Team for ArtifactsName, DataCollectorVersion and ArtifactsAccessKey
 
+
 7.	Then script execution will prompt you for below details: (Enter requested information)
 
-    a.	Cloudneeti API key
-    b.	Cloudneeti data collector Service Principal secret
-    c.	Cloudneeti M365 data collector artifacts storage access Key
-    d.	Office 365 App Password
+    a:	Cloudneeti API key
+
+    b:	Cloudneeti data collector Service Principal secret
+
+    c:	Cloudneeti M365 data collector artifacts storage access Key
+
+    d:	Office 365 App Password
+    
 
 #### 6.4	Apply delete lock 
 
