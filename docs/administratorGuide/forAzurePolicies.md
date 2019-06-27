@@ -38,13 +38,13 @@ The following activities need to be completed by the customer prior to automated
 
 ### 2.1. Get service principal, subscription and tenant Id from Cloudneeti portal
 
-a.	Login as Cloudneeti Admin on Cloudneeti portal
+1.	Login as Cloudneeti Admin on Cloudneeti portal
 
-b.	Go to Settings → Click on Manage Accounts
+2.	Go to Settings → Click on Manage Accounts
 
-c.	Select ‘Update Account’ from ‘Configure Account’
+3.	Select ‘Update Account’ from ‘Configure Account’
     
-d.	Copy Azure application and subscription id
+4.	Copy Azure application and subscription id
 
 ### 2.2 Assign ‘Resource Policy Contributor (Preview) role permission to the Cloudneeti data collector service principal on Azure subscription.
 
@@ -83,7 +83,6 @@ Follow these steps for automated policy remediation on the Azure subscription:
     ![EnablePolicyRemediation](.././images/forAzurePolicies/EnablePolicyRemediation.png#thumbnail)
  
 5.	Click on Save and confirm by hitting “Yes Please” on confirmation message box.
-
     ![EnablePolicyRemediationConfirmationBox](.././images/forAzurePolicies/EnablePolicyRemediationConfirmationBox.png#thumbnail)
 6. This will initiate the process of creation of policies in customer's Azure subscription.
 
@@ -109,19 +108,20 @@ Follow below steps to assign required roles to remediation policies configured f
 
 4.	Run below commands on CloudShell:
 
-a.	Download script 
-```powershell
-wget https://raw.githubusercontent.com/Cloudneeti/docs_cloudneeti/master/scripts/Assign-RolesToRemediationPolicy.ps1 -O Assign-RolesToRemediationPolicy.ps1
-```
-b.  Switch to the User directory
-```powershell
-cd $user
-```    
-c.  Run provisioning script with inline parameters
-```powershell
-./Assign-RolesToRemediationPolicy.ps1 -azureActiveDirectoryId<Azure active directory Id> `
-                            -subscriptionId<Subscription Id > `
-```
+    a.	Download script 
+        <pre><code>
+        wget https://raw.githubusercontent.com/Cloudneeti/docs_cloudneeti/master/scripts/Assign-RolesToRemediationPolicy.ps1 -O Assign-RolesToRemediationPolicy.ps1
+        </pre></code>
+    b.  Switch to the User directory
+        <pre><code>
+        cd $user
+        </pre></code>  
+    c.  Run provisioning script with inline parameters
+        <pre><code>
+        ./Assign-RolesToRemediationPolicy.ps1 -azureActiveDirectoryId<Azure active directory Id> `
+                                    -subscriptionId<Subscription Id > `
+        </pre></code>
+
 5.	Azure will start evaluation of resources related to enabled policies.
 
 
