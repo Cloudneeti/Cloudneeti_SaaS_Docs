@@ -1,4 +1,5 @@
-# Administration: 
+# Administration
+
 The products enable user and cloud account administration. Cloudneeti offers two levels of aggregation of cloud account information at an account and at a license level (group of cloud accounts). The product supports multiple licenses to be assigned under one contract, to enable multiple business-units and organizations within a company to operate independently.
 
 ## 1. Cloud Account Onboarding
@@ -19,16 +20,16 @@ Cloudneeti supports “administrator” and “reader” roles under a License a
 
 Please follow links for details:
 
-[License Users](https://cloudneeti.github.io/Cloudneeti_SaaS_Docs/administratorGuide/licenseUsers/)
+[License Users](../licenseUsers/)
 
-[Cloud Account Users](https://cloudneeti.github.io/Cloudneeti_SaaS_Docs/administratorGuide/cloudAccountUsers/)
+[Cloud Account Users]../cloudAccountUsers/)
 
 ## 3. Manage Remediations
 While discovering deviations from a set baseline is important for visibility, it is equally important to enforce compliance with a closed loop remediation process. Cloudneeti provides assessment procedures and remediation guidance for every security policy. Auto-remediations are not possible for all security policies but are a good fit for several categories of remediations such as Identity & Management controls, Core Networking, Logging, Auditing with low impact to application experience. The third category is delegated remediation where Cloudneeti is logging a ticket in a ticketing tool or SIEM product that can be assigned to a proper engineer for remediation action. Preventative policies are a set of policies that are usually enabled at the cloud accounts (CSPs) that prevent/forbid certain configurations as general guardrails.
 
 Please follow link for details:
 
-[For Azure Policies ](https://cloudneeti.github.io/Cloudneeti_SaaS_Docs/administratorGuide/forAzurePolicies/)
+[For Azure Policies ](../forAzurePolicies/)
 
 
 

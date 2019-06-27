@@ -51,9 +51,10 @@ Use the `Create-ServicePrincipal-AzureOnboarding.ps1` script to create and regis
 2.	Go to the directory where `Create-ServicePrincipal-AzureOnboarding.ps1` was downloaded earlier.
 
 3.	Run the below command to create a service principal:
-```powershell
-.\Create-ServicePrincipal-AzureOnboarding.ps1 -azureActiveDirectoryId <Active_Directory_Id> -servicePrincipalName <data_collector_name> -expirationPeriod 1year
-```
+
+    ```powershell
+    .\Create-ServicePrincipal-AzureOnboarding.ps1 -azureActiveDirectoryId <Active_Directory_Id> -servicePrincipalName <data_collector_name> -expirationPeriod 1year
+    ```
 4.	The script will prompt the login screen; you need to log in with **Global AD Administrator** or **Application Administrator** user credentials.
 
 5.	Store service principal information from the output in a secure place. This information will be needed while onboarding the Azure account in the Cloudneeti application.
@@ -77,8 +78,11 @@ Skip this step if the user has created the Cloudneeti service principal without 
 Follow the steps below to grant permission:
 
 1. Sign in to the Azure portal as a global administrator.
+
 2. Click on `Azure Active Directory`.
+
 3. Navigate to the App Registrations blade.
+
 4. Select Cloudneeti service principal.
 
      ![Service Principal - Azure Portal](.././images/azureSubscriptions/Grant_Permission.png#thumbnail)
@@ -95,8 +99,10 @@ Follow the steps below to grant permission:
 
 #### 2.3.1 Follow the steps below to assign reader and backup reader roles to Cloudneeti Service Principal on the Azure subscription:
 1.	Go to the subscription’s Access control (IAM) in the menu..
+
 2.	Click on the ’Add’ button and select ‘Add role assignment’.
-     ![Add role](.././images/azureSubscriptions/Assign_role.png#thumbnail)
+     
+    ![Add role](.././images/azureSubscriptions/Assign_role.png#thumbnail)
  
 3.	Select ‘Reader’ role and Cloudneeti service principal.
 
@@ -147,8 +153,11 @@ Follow the steps below to grant permission:
 ### 2.4	Activating Cloudneeti License and Onboarding Azure Subscription Account
 
 1.	Log in to the Cloudneeti portal using the license admin user credentials.
+
 2.	Click on the ‘Activate License’ button to activate the license.
-     ![Activate License](.././images/azureSubscriptions/Activate_License.png#thumbnail)
+     
+    ![Activate License](.././images/azureSubscriptions/Activate_License.png#thumbnail)
+
 3.	Select Azure connector.
  
     ![Azure connector](.././images/azureSubscriptions/Connector.png#thumbnail)
