@@ -66,12 +66,14 @@ Use the ***`Create-ServicePrincipal-Office365Onboarding.ps1`*** script to create
 3.	Run the below command to create service principal by replacing
     
     a. Active_Directory_Id with Azure directory id of Office 365 Subscription to be onboarded.
-    b. data_collector_name with any friendly name for Cloudneeti data collector.
-```powershell
-.\Create-ServicePrincipal-Office365Onboarding.ps1 -azureActiveDirectoryId <Active_Directory_Id> `
-               -servicePrincipalName <data_collector_name> 
-               -expirationPeriod 1year
-```
+   
+     b. data_collector_name with any friendly name for Cloudneeti data collector.
+        ```powershell
+        .\Create-ServicePrincipal-Office365Onboarding.ps1 -azureActiveDirectoryId <Active_Directory_Id> `
+                       -servicePrincipalName <data_collector_name> 
+                       -expirationPeriod 1year
+        ```
+
 
 4.	The script will prompt the login screen; you need to log in with **Global AD Administrator** or **Application Administrator** user credentials.
 
@@ -249,33 +251,32 @@ The following is the process outlined to create a secure service account credent
     ![Cloudshell](.././images/office365Subscriptions/Cloudshell.png#thumbnail) 
 
 4.	Execute below command in Cloudshell to download the Cloudneeti data collector provisioning script.
-```powershell
-wget https://raw.githubusercontent.com/Cloudneeti/docs_cloudneeti/master/scripts/Provision-M365DataCollector.ps1 -O Provision-M365DataCollector.ps1
-```
+    ```powershell
+    wget https://raw.githubusercontent.com/Cloudneeti/docs_cloudneeti/master/scripts/Provision-M365DataCollector.ps1 -O Provision-M365DataCollector.ps1
+    ```
 
-5.	Switch to the User directory
-```powershell
-cd $User
-```
+5. Switch to the User directory
+    ```powershell
+    cd $User
+    ```
 
 
 6.	Run provisioning script with inline parameters
-```powershell
-./Provision-M365DataCollector.ps1 -CloudneetiLicenseId <Cloudneeti License Id> `
--CloudneetiAccountId <Cloudneeti Account Id> `
--CloudneetiEnvironment <Cloudneeti Environment> `
--ServicePrincipalId <Cloudneeti Data Collector Service Principal Id> `
--ArtifactsName <Cloudneeti office 365 Data Collector Artifact Name> `
--DataCollectorVersion <Cloudneeti Office 365 Data Collector Version> `
--OfficeDomain <Office 365 Domain Name> `
--OfficeTenantId <Office 365 Tenant Id> `
--OfficeAdminId <Office 365 Administator Id> `
--AzureSubscriptionId <Azure Subscription Id where office 365 data collector resouces will be   created> `
--DataCollectorName <Office 365 Data Collector Name> `
-              -Location <Default EastUs2> <Region>
-```
-Note: Contact Cloudneeti Team for ArtifactsName, DataCollectorVersion and ArtifactsAccessKey
-
+    ```powershell
+    ./Provision-M365DataCollector.ps1 -CloudneetiLicenseId <Cloudneeti License Id> `
+    -CloudneetiAccountId <Cloudneeti Account Id> `
+    -CloudneetiEnvironment <Cloudneeti Environment> `
+    -ServicePrincipalId <Cloudneeti Data Collector Service Principal Id> `
+    -ArtifactsName <Cloudneeti office 365 Data Collector Artifact Name> `
+    -DataCollectorVersion <Cloudneeti Office 365 Data Collector Version> `
+    -OfficeDomain <Office 365 Domain Name> `
+    -OfficeTenantId <Office 365 Tenant Id> `
+    -OfficeAdminId <Office 365 Administator Id> `
+    -AzureSubscriptionId <Azure Subscription Id where office 365 data collector resouces will be   created> `
+    -DataCollectorName <Office 365 Data Collector Name> `
+                  -Location <Default EastUs2> <Region>
+    ```
+    Note: Contact Cloudneeti Team for ArtifactsName, DataCollectorVersion and ArtifactsAccessKey
 
 7.	Then script execution will prompt you for below details: (Enter requested information)
 
