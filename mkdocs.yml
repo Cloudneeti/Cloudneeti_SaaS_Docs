@@ -38,6 +38,7 @@ nav:
   #   - Authorization: gettingStarted/authorization.md
   # - ACTIVATE LICENSE: gettingStarted/howToActivateLicense​.md
 - Administrator Guide:
+  - OVERRVIEW : administratorGuide/adminstrationGuide.md
   - ONBOARDING CLOUD ACCOUNTS:
     - Azure Subscriptions: administratorGuide/azureSubscriptions.md
     - Amazon Web Service Accounts: administratorGuide/amazonWebServiceAccounts.md
