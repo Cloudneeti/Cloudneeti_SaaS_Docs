@@ -245,3 +245,5 @@ table, th {
 .md-clipboard::after {content: "copy";}
 .md-clipboard-wrap{background:#e8e7e7;text-align: right;border: 1px solid #b7b7b757;}
 .md-typeset pre>code{border: 1px solid #b7b7b757;background-color: #00000000;}
+.md-typeset table:not([class]) td {padding: .2rem .2rem;}
+.md-typeset table:not([class]) th {padding: .2rem .2rem;}
