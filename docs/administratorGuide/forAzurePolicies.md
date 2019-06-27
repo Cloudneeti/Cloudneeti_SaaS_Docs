@@ -18,7 +18,7 @@ Part 2 : Remediate resources
 Here, the process to put exiting resources that are non-compliant to a security policy into a compliant state is initiated. Azure remediation policy framework by default remediate the newly deployed resources at the time of creation.
 
 
-![RemediationOverview](.././Images/forAzurePolicies/Remediation_Overview.png#thumbnail)
+![RemediationOverview](.././images/forAzurePolicies/Remediation_Overview.png#thumbnail)
 
 
 
@@ -80,14 +80,14 @@ Follow these steps for automated policy remediation on the Azure subscription:
 4.	Enable policies for remediation.
     a.	A filter to see only the policies which are available for remediation can be used.
 
-        ![EnablePolicyRemediation](.././Images/forAzurePolicies/EnablePolicyRemediation.png#thumbnail)
+        ![EnablePolicyRemediation](.././images/forAzurePolicies/EnablePolicyRemediation.png#thumbnail)
  
 5.	Click on Save and confirm by hitting “Yes Please” on confirmation message box.
 
-    ![EnablePolicyRemediationConfirmationBox](.././Images/forAzurePolicies/EnablePolicyRemediationConfirmationBox.png#thumbnail)
+    ![EnablePolicyRemediationConfirmationBox](.././images/forAzurePolicies/EnablePolicyRemediationConfirmationBox.png#thumbnail)
 6. This will initiate the process of creation of policies in customer's Azure subscription.
 
-    ![Remediation_PolicyCreation_Initiated](.././Images/forAzurePolicies/Remediation_PolicyCreation_Initiated.png#thumbnail)
+    ![Remediation_PolicyCreation_Initiated](.././images/forAzurePolicies/Remediation_PolicyCreation_Initiated.png#thumbnail)
 
 6.	If Resource Policy Contributor (Preview) role is not assigned as mentioned in prerequisite, enabling policy remediation will fail. Email notification to configured email ids will be sent.
 7.	To enable policy remediation, please follow steps mentioned in prerequisite then enable policies remediation on Cloudneeti portal by following above steps.
@@ -102,7 +102,7 @@ Follow below steps to assign required roles to remediation policies configured f
 2.	Switch to Azure active directory where you have a subscription with pre-requisite access
 3.	Open Cloudshell, click on Cloudshell icon on the navigation bar to open Cloudshell and choose "PowerShell" from shell drop down
 
-    ![AssignRoleAzurePortalCloudshell](.././Images/forAzurePolicies/AssignRoleAzurePortalCloudshell.png#thumbnail)
+    ![AssignRoleAzurePortalCloudshell](.././images/forAzurePolicies/AssignRoleAzurePortalCloudshell.png#thumbnail)
 
 4.	Run below commands on CloudShell:
     a.	Download script 
@@ -134,10 +134,10 @@ Follow below steps to remeidate non-compliant resources,
 2.	All remediation enabled policies will appear. If the selection checkbox is disabled please check all prerequisites are met.
 3.	Select the policy and click on “Remediate Now” button.
 4.	In case Azure evaluation is not complete a message will appear “Evaluation in progress, please try after some time”.
-![RemediateEvaluationStatus](.././Images/forAzurePolicies/RemediateEvaluationStatus.png#thumbnail)
+![RemediateEvaluationStatus](.././images/forAzurePolicies/RemediateEvaluationStatus.png#thumbnail)
 5.	If Azure evaluation is done, the remediation process for selected policies will start. It will take some time to change resource configuration as per policy. 
 
-    ![Success](.././Images/forAzurePolicies/Success.png#thumbnail)
+    ![Success](.././images/forAzurePolicies/Success.png#thumbnail)
 
 
 Note:
@@ -163,6 +163,6 @@ Please follow below steps to disable the remediation:
 4.	Enable policies for remediation.
     a.	A filter to see only the policies which are available for remediation can be used.
 
-        ![EnablePolicyRemediation](.././Images/forAzurePolicies/EnablePolicyRemediation.png#thumbnail)
+        ![EnablePolicyRemediation](.././images/forAzurePolicies/EnablePolicyRemediation.png#thumbnail)
 
 5.	Disable the policy remediation and click on Save button.
