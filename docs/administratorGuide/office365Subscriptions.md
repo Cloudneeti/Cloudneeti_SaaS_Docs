@@ -68,11 +68,12 @@ Use the ***`Create-ServicePrincipal-Office365Onboarding.ps1`*** script to create
     a. Active_Directory_Id with Azure directory id of Office 365 Subscription to be onboarded.
    
     b. data_collector_name with any friendly name for Cloudneeti data collector.
-        ```powershell
-        .\Create-ServicePrincipal-Office365Onboarding.ps1 -azureActiveDirectoryId <Active_Directory_Id> `
-                        -servicePrincipalName <data_collector_name> 
-                        -expirationPeriod 1year
-        ```
+        <pre>
+        <code> .\Create-ServicePrincipal-Office365Onboarding.ps1 -azureActiveDirectoryId <Active_Directory_Id> `
+                -servicePrincipalName <data_collector_name> 
+                -expirationPeriod 1year
+        </pre>
+        </code>
 
 
 4.	The script will prompt the login screen; you need to log in with **Global AD Administrator** or **Application Administrator** user credentials.
