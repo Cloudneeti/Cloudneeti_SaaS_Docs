@@ -21,9 +21,7 @@ The following activities need to be completed by the customer prior to onboardin
 
 ### 1.1 Getting Azure Tenant ID and Domain name
 1. Login to the Azure Portal, choose your Azure AD tenant by selecting your account in the top right corner of the page
-
     ![Azure Overview](.././images/azureSubscriptions/Getting_TenantID.png#thumbnail)
-
 
 2. Click on Azure Active Directory from left pan of the portal and click on properties to get Tenant ID
     ![Azure Overview](.././images/azureSubscriptions/Domain_Name.png#thumbnail)

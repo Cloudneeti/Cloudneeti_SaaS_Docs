@@ -1,4 +1,4 @@
-﻿# Administration: 
+# Administration: 
 The products enable user and cloud account administration. Cloudneeti offers two levels of aggregation of cloud account information at an account and at a license level (group of cloud accounts). The product supports multiple licenses to be assigned under one contract, to enable multiple business-units and organizations within a company to operate independently.
 
 ## 1. Cloud Account Onboarding
@@ -29,8 +29,6 @@ While discovering deviations from a set baseline is important for visibility, it
 Please follow link for details:
 
 [For Azure Policies ](https://cloudneeti.github.io/Cloudneeti_SaaS_Docs/administratorGuide/forAzurePolicies/)
-
-
 
 
 
