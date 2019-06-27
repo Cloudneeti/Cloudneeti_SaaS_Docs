@@ -80,7 +80,7 @@ Follow these steps for automated policy remediation on the Azure subscription:
 4.	Enable policies for remediation.
     a.	A filter to see only the policies which are available for remediation can be used.
 
-        ![EnablePolicyRemediation](.././images/forAzurePolicies/EnablePolicyRemediation.png#thumbnail)
+    ![EnablePolicyRemediation](.././images/forAzurePolicies/EnablePolicyRemediation.png#thumbnail)
  
 5.	Click on Save and confirm by hitting “Yes Please” on confirmation message box.
 
@@ -108,24 +108,20 @@ Follow below steps to assign required roles to remediation policies configured f
     ![AssignRoleAzurePortalCloudshell](.././images/forAzurePolicies/AssignRoleAzurePortalCloudshell.png#thumbnail)
 
 4.	Run below commands on CloudShell:
-    a.	Download script 
-        ```powershell
-        wget https://raw.githubusercontent.com/Cloudneeti/docs_cloudneeti/master/scripts/Assign-RolesToRemediationPolicy.ps1 -O Assign-RolesToRemediationPolicy.ps1
-        ```
 
-    b.  Switch to the User directory
-        
-            cd $user
-
-
-    c.	Run provisioning script with inline parameters
-        ```powershell
-        ./Assign-RolesToRemediationPolicy.ps1 -azureActiveDirectoryId<Azure active directory Id> `
-                                    -subscriptionId<Subscription Id > `
-        ```
-
-
-
+a.	Download script 
+```powershell
+wget https://raw.githubusercontent.com/Cloudneeti/docs_cloudneeti/master/scripts/Assign-RolesToRemediationPolicy.ps1 -O Assign-RolesToRemediationPolicy.ps1
+```
+b.  Switch to the User directory
+```powershell
+cd $user
+```    
+c.  Run provisioning script with inline parameters
+```powershell
+./Assign-RolesToRemediationPolicy.ps1 -azureActiveDirectoryId<Azure active directory Id> `
+                            -subscriptionId<Subscription Id > `
+```
 5.	Azure will start evaluation of resources related to enabled policies.
 
 
@@ -182,7 +178,7 @@ Please follow below steps to disable the remediation:
 4.	Enable policies for remediation.
     a.	A filter to see only the policies which are available for remediation can be used.
 
-        ![EnablePolicyRemediation](.././images/forAzurePolicies/EnablePolicyRemediation.png#thumbnail)
+    ![EnablePolicyRemediation](.././images/forAzurePolicies/EnablePolicyRemediation.png#thumbnail)
 
 
 5.	Disable the policy remediation and click on Save button.
