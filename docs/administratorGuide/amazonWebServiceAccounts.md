@@ -91,5 +91,10 @@ Scan notifications allow a cloud account user to subscribe to changes in securit
     
     
     ![Configure Notifications](.././images/amazonWebServiceAccounts/Configure_notifications.png#thumbnail)
+<<<<<<< HEAD
+=======
+
+5.	Click on save button.
+>>>>>>> 0d36e35d6cfee7e8d9f4df8665db6191d903b4f9
 
 5.	Click on save button.
