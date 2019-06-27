@@ -29,15 +29,16 @@ nav:
 - Getting Started: 
   - CLOUDNEETI PRODUCT: 
     - Product Overview: gettingStarted/productOverview.md
-    # - Product Capabilities: gettingStarted/productCapabilities.md
+    - Product Capabilities: gettingStarted/productCapabilities.md
     # - Cloud Accounts​: gettingStarted/cloudAccounts.md
-    # - Licenses: gettingStarted/licenses.md
-    # - User & Roles : gettingStarted/userRoles.md
+    - Licenses: gettingStarted/licenses.md
+    - User & Roles : gettingStarted/userRoles.md
   # - USER IDENTITY MANAGEMENT:
   #   - Authentication: gettingStarted/authentication.md
   #   - Authorization: gettingStarted/authorization.md
   # - ACTIVATE LICENSE: gettingStarted/howToActivateLicense​.md
 - Administrator Guide:
+  - OVERRVIEW : administratorGuide/adminstrationGuide.md
   - ONBOARDING CLOUD ACCOUNTS:
     - Azure Subscriptions: administratorGuide/azureSubscriptions.md
     - Amazon Web Service Accounts: administratorGuide/amazonWebServiceAccounts.md
@@ -48,9 +49,9 @@ nav:
   #   - Configure Notifications: administratorGuide/configureNotifications.md
   #   - Configure Data Collection: administratorGuide/configureDataCollection.md
   #   - Manage Cloud Account Users (goes to CAU): administratorGuide/manageCloudAccountUsers.md
-  # - MANAGE USERS:
-  #   - License Users: administratorGuide/licenseUsers.md
-  #   - Cloud Account Users (CAU page): administratorGuide/cloudAccountUsers.md
+  - MANAGE USERS:
+    - License Users: administratorGuide/licenseUsers.md
+    - Cloud Account Users (CAU page): administratorGuide/cloudAccountUsers.md
   - MANAGE REMEDIATIONS:
     - For Azure Policies: administratorGuide/forAzurePolicies.md
   #   - For AWS Policies: administratorGuide/forAWSPolicies.md

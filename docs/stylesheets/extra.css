@@ -1,3 +1,4 @@
+/* ===== Generel CSS ===== */
 
 * {
     margin: 0;
@@ -5,8 +6,8 @@
 }
 
 body {
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-    /* overflow-x: hidden; */
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
 }
 
 /* ===== Navigation Section ===== */
@@ -87,31 +88,28 @@ body {
 /* ===== Header Section ===== */
 
 .header-text {
-    margin-top: 30px;
-    padding-top: 20px;
+    margin-top: 10px;
+    padding-top: 0px;
 }
 
 .header-text ul li {
     color: rgb(0, 0, 0);
+    font-family: 'Poppins', sans-serif;
     font-size: 16px;
-    line-height: 28px;
+    line-height: 27px;
     font-weight: 400;
     list-style: none;
 }
 
-.header-text p {
-    color: rgb(0, 0, 0);
-    font-size: 1.6rem;;
-    line-height: 28px;
-    font-weight: 300;
-}
-
 .header-saas img {
-    margin-top: 30px;
+    margin-top: 20px;
     width: 100%;
 }
 
-/* ===== Testimonials Section ===== */
+.md-tabs{display: none;}
+
+
+/* ===== Tiles Section ===== */
 
 .tiles_section{margin-top: 2%;margin-bottom: 2%}
 .tiles_section-caption{
@@ -145,25 +143,11 @@ body {
     margin-top: 25px;
 }
 
-table, td {
-    border: solid 1px #d2ccccb8;
-}
-/* ===================================== */
-
-.md-grid {
-    max-width: 100rem !important;
-}
-
-.md-sidebar--secondary {
-    margin-left: 99%;
-}
-
-
 /* ===== Footer Section ===== */
 
 .footer {
     background-color: black;
-    margin-top: 68px;
+    margin-top: 0px;
     padding-bottom: 5px;
     padding-top: 15px;
     border-bottom: 3px solid #FF7D2C;
@@ -177,8 +161,9 @@ table, td {
 
 #copyright p {
     color: #8c8b8a;
-    font-weight: 600;
-    font-size: 1.6rem;;
+    font-weight: 700;
+    font-size: 1.4rem;;
+    padding-left: 15px;
 }
 
 #copyright p a {
@@ -186,12 +171,12 @@ table, td {
     color: #8c8b8a;
 }
 
-.row {
+/* .row {
     margin-right: -15px;
     margin-left: -15px;
-}
+} */
 
-/* -------------------------------------------------- MarkDown CSS---------------------------------- */
+/* ------- MarkDown Theme Customization CSS--------- */
 
 img[src*="#thumbnail"] {
     display: block;
@@ -217,27 +202,19 @@ table, th {
 }
 
 .md-sidebar--secondary {
-    margin-left: 100%;
+    margin-left: 99%;
 }
 
 .md-main__inner{padding-top: 0rem !important}
  ul.breadcrumb {
     padding: 5px 10px;
     list-style: none;
-    background-color: #dedede;
-    color: #060606;
+    background-color: #eee;
   }
   ul.breadcrumb li {
     display: inline;
     font-size: 15px;
   }
-  .md-footer-nav__link{padding-top: .4rem !important}
-  .md-footer-nav__inner{padding: .2rem !important}
-
-  [data-md-color-primary=cloudneeti] .md-header, [data-md-color-primary=cloudneeti] .md-hero {
-    background-color: #2f353a;
-    color:#FF8C00;
-}
   ul.breadcrumb li+li:before {
     padding: 8px;
     color: black;
@@ -263,3 +240,10 @@ table, th {
     font-size: 16px;
     line-height: 28px;
 }
+.md-clipboard{position: relative;top: 0rem;right: 1.3rem;}
+.md-clipboard:before {color: rgb(47, 51, 58);}
+.md-clipboard::after {content: "copy";}
+.md-clipboard-wrap{background:#e8e7e7;text-align: right;border: 1px solid #b7b7b757;}
+.md-typeset pre>code{border: 1px solid #b7b7b757;background-color: #00000000;}
+.md-typeset table:not([class]) td {padding: .2rem .2rem;}
+.md-typeset table:not([class]) th {padding: .2rem .2rem;}
