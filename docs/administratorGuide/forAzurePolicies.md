@@ -83,7 +83,6 @@ Follow these steps for automated policy remediation on the Azure subscription:
     ![EnablePolicyRemediation](.././images/forAzurePolicies/EnablePolicyRemediation.png#thumbnail)
  
 5.	Click on Save and confirm by hitting “Yes Please” on confirmation message box.
-
     ![EnablePolicyRemediationConfirmationBox](.././images/forAzurePolicies/EnablePolicyRemediationConfirmationBox.png#thumbnail)
 6. This will initiate the process of creation of policies in customer's Azure subscription.
 
