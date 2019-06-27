@@ -1,6 +1,6 @@
 # Azure Onboarding Guide
 
-### **1.	Prerequisites**
+## 1.	Prerequisites
 Upon customer request, Cloudneeti license(s) will be configured and email invitation(s) will be sent to License Administrator(s). Additional users within Cloudneeti applications will be provisioned by the customer’s License Administrator.
 
 The following activities need to be completed by the customer prior to onboarding.
@@ -19,9 +19,17 @@ The following activities need to be completed by the customer prior to onboardin
 | 9. **Workstation**: Install Azure Modules to execute PowerShell commands within service principal automation script | `Install-Module -Name AzureAD -MinimumVersion 2.0.0.131`<br>It is a roll-up module for the Azure Resource Manager cmdlets. |
 
 
+### 1.1 Getting Azure Tenant ID and Domain name
+1. Login to the Azure Portal, choose your Azure AD tenant by selecting your account in the top right corner of the page
+
+    ![Azure Overview](.././images/azureSubscriptions/Getting_TenantID.png#thumbnail)
+
+
+2. Click on Azure Active Directory from left pan of the portal and click on properties to get Tenant ID
+    ![Azure Overview](.././images/azureSubscriptions/Domain_Name.png#thumbnail)
 
  
-### **2.	Onboarding Steps**
+## 2.	Onboarding Steps
 Follow these steps to onboard the Azure subscription:
 
 

@@ -89,8 +89,6 @@ Scan notifications allow a cloud account user to subscribe to changes in securit
 
 4.	Enter comma separated email addresses.
     
-    
     ![Configure Notifications](.././images/amazonWebServiceAccounts/Configure_notifications.png#thumbnail)
 
 5.	Click on save button.
-
