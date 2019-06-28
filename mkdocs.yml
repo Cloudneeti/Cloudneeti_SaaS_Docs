@@ -37,6 +37,9 @@ nav:
   #   - Authentication: gettingStarted/authentication.md
   #   - Authorization: gettingStarted/authorization.md
   # - ACTIVATE LICENSE: gettingStarted/howToActivateLicense​.md
+  - USER IDENTITY MANAGEMENT:
+    - Authentication: gettingStarted/authentication.md
+    - Authorization: gettingStarted/authorization.md
 - Administrator Guide:
   - OVERRVIEW : administratorGuide/adminstrationGuide.md
   - ONBOARDING CLOUD ACCOUNTS:
