@@ -117,6 +117,9 @@ Follow the steps below to grant permission:
     
     b. Click on "Add Cloud Account" button
         ![Activate License](.././images/azureSubscriptions/Add_Account.png#thumbnail)
+        
+    c. Select License to add cloud account
+        ![Select License](.././images/azureSubscriptions/select_license.png#thumbnail)
 
 3.	Select Office 365 connector.
 

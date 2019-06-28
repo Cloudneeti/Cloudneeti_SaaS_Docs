@@ -70,6 +70,9 @@ Use serverless.yml file to create a role to mark Cloudneeti's account as a trust
     b. Click on "Add Cloud Account" button
         ![Activate License](.././images/azureSubscriptions/Add_Account.png#thumbnail)
 
+    c. Select License to add cloud account
+        ![Select License](.././images/azureSubscriptions/select_license.png#thumbnail)
+
 3.	Select AWS connector. 
 
     ![AWS Connector](.././images/amazonWebServiceAccounts/Connector_Type.png#thumbnail)
@@ -77,7 +80,7 @@ Use serverless.yml file to create a role to mark Cloudneeti's account as a trust
 4.	Enter details Account Name, AWS Account Id
 
     ![Add AWS Account](.././images/amazonWebServiceAccounts/Add_Account.png#thumbnail) 
-    
+
 5.	Click on ‘Add Account’.
 
 ### 2.3	Verify Data Collection
