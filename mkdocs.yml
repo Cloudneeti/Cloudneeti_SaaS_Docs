@@ -36,7 +36,8 @@ nav:
   # - USER IDENTITY MANAGEMENT:
   #   - Authentication: gettingStarted/authentication.md
   #   - Authorization: gettingStarted/authorization.md
-  - ACTIVATE LICENSE: gettingStarted/howToActivateLicense​.md
+  - ACTIVATE LICENSE: 
+    - How To Activate License​: gettingStarted/howToActivateLicense​.md
   - USER IDENTITY MANAGEMENT:
     - Authentication: gettingStarted/authentication.md
     - Authorization: gettingStarted/authorization.md
