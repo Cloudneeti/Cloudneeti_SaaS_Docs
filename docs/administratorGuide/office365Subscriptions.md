@@ -104,9 +104,19 @@ Follow the steps below to grant permission:
 #### 3.3	Add Office 365 Account to Cloudneeti
 
 1.	Log in to the Cloudneeti portal using the license admin user credentials.
-2.	Click on the ‘Activate License’ button to activate the license. This step is needed if this is the first cloud account you are adding to the License.
+2.	If the license is not activated, click on the ‘Activate License’ button to activate the license. This step is needed    if this is the first cloud account you are adding to the License.
 
     ![activateLicense](.././images/office365Subscriptions/activateLicense.png#thumbnail)
+
+    OR
+
+    If the license is already activated, 
+
+    a. Please go to Settings > Manage Accounts on Cloudneeti portal
+        ![Activate License](.././images/azureSubscriptions/Manage_Accounts.png#thumbnail)
+    
+    b. Click on "Add Cloud Account" button
+        ![Activate License](.././images/azureSubscriptions/Add_Account.png#thumbnail)
 
 3.	Select Office 365 connector.
 

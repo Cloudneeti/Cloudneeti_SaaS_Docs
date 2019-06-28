@@ -56,15 +56,28 @@ Use serverless.yml file to create a role to mark Cloudneeti's account as a trust
 
 ### 2.2	Add your AWS Account to Cloudneeti
 1.	Log in to the Cloudneeti portal using the license admin user credentials.
-2.	Click on the ‘Activate License’ button to activate the license. This step is needed if this is the first cloud account you are adding to the License.
+2.	If the license is not activated, click on the ‘Activate License’ button to activate the license. This step is needed if this is the first cloud account you are adding to the License.
 
     ![Activate License](.././images/amazonWebServiceAccounts/4.2_2_Activate_License.png#thumbnail)
+
+    OR
+
+    If the license is already activated, 
+
+    a. Please go to Settings > Manage Accounts on Cloudneeti portal
+        ![Activate License](.././images/azureSubscriptions/Manage_Accounts.png#thumbnail)
+    
+    b. Click on "Add Cloud Account" button
+        ![Activate License](.././images/azureSubscriptions/Add_Account.png#thumbnail)
+
 3.	Select AWS connector. 
 
     ![AWS Connector](.././images/amazonWebServiceAccounts/Connector_Type.png#thumbnail)
+
 4.	Enter details Account Name, AWS Account Id
 
     ![Add AWS Account](.././images/amazonWebServiceAccounts/Add_Account.png#thumbnail) 
+    
 5.	Click on ‘Add Account’.
 
 ### 2.3	Verify Data Collection

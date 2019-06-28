@@ -154,13 +154,23 @@ Follow the steps below to grant permission:
 
 4.	Select ‘Save’ to complete the role assignment. 
 
-### 2.4	Activating Cloudneeti License and Onboarding Azure Subscription Account
+### 2.4	Onboarding Azure Subscription Account
 
 1.	Log in to the Cloudneeti portal using the license admin user credentials.
 
-2.	Click on the ‘Activate License’ button to activate the license.
+2.	If the license is not activated, click on the ‘Activate License’ button to activate the license.
      
     ![Activate License](.././images/azureSubscriptions/Activate_License.png#thumbnail)
+
+    OR
+
+    If the license is already activated, 
+
+    a. Please go to Settings > Manage Accounts on Cloudneeti portal
+    ![Activate License](.././images/azureSubscriptions/Manage_Accounts.png#thumbnail)
+    
+    b. Click on "Add Cloud Account" button
+    ![Activate License](.././images/azureSubscriptions/Add_Account.png#thumbnail)
 
 3.	Select Azure connector.
  
