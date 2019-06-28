@@ -48,14 +48,14 @@ nav:
     - Amazon Web Service Accounts: administratorGuide/amazonWebServiceAccounts.md
     - Office 365 Subscriptions: administratorGuide/office365Subscriptions.md
   - MANAGE CLOUD ACCOUNTS:
-  #   - Add Cloud Account: administratorGuide/addCloudAccount.md
+    - Add Cloud Account: administratorGuide/addCloudAccount.md
   #   - Configure Security Policies: administratorGuide/configureSecurityPolicies.md
   #   - Configure Notifications: administratorGuide/configureNotifications.md
   #   - Configure Data Collection: administratorGuide/configureDataCollection.md
-    - Manage Cloud Account Users (goes to CAU): administratorGuide/manageCloudAccountUsers.md
+    - Manage Cloud Account Users: administratorGuide/manageCloudAccountUsers.md
   - MANAGE USERS:
     - License Users: administratorGuide/licenseUsers.md
-    - Cloud Account Users (CAU page): administratorGuide/cloudAccountUsers.md
+    - Cloud Account Users: administratorGuide/cloudAccountUsers.md
   - MANAGE REMEDIATIONS:
     - For Azure Policies: administratorGuide/forAzurePolicies.md
   #   - For AWS Policies: administratorGuide/forAWSPolicies.md
