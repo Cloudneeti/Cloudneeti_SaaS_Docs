@@ -83,7 +83,6 @@ Follow these steps for automated policy remediation on the Azure subscription:
     ![EnablePolicyRemediation](.././images/forAzurePolicies/EnablePolicyRemediation.png#thumbnail)
  
 5.	Click on Save and confirm by hitting “Yes Please” on confirmation message box.
-
     ![EnablePolicyRemediationConfirmationBox](.././images/forAzurePolicies/EnablePolicyRemediationConfirmationBox.png#thumbnail)
 6. This will initiate the process of creation of policies in customer's Azure subscription.
 
@@ -110,18 +109,18 @@ Follow below steps to assign required roles to remediation policies configured f
 4.	Run below commands on CloudShell:
 
     a.	Download script 
-        ```powershell
+        <pre><code>
         wget https://raw.githubusercontent.com/Cloudneeti/docs_cloudneeti/master/scripts/Assign-RolesToRemediationPolicy.ps1 -O Assign-RolesToRemediationPolicy.ps1
-        ```
+        </pre></code>
     b.  Switch to the User directory
-        ```powershell
+        <pre><code>
         cd $user
-        ```    
+        </pre></code>  
     c.  Run provisioning script with inline parameters
-        ```powershell
+        <pre><code>
         ./Assign-RolesToRemediationPolicy.ps1 -azureActiveDirectoryId<Azure active directory Id> `
                                     -subscriptionId<Subscription Id > `
-        ```
+        </pre></code>
 
 5.	Azure will start evaluation of resources related to enabled policies.
 
