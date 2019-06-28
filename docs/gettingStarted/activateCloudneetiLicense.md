@@ -4,7 +4,7 @@
 Upon customer request, Cloudneeti license(s) will be configured and email invitation(s) will be sent to License Administrator(s). Additional users within Cloudneeti applications will be provisioned by the customer’s License Administrator.
 
 
-Activating Cloudneeti License and Onboarding Azure Subscription Account
+Activating Cloudneeti License and Onboarding Cloud Account
 
 1.	Log in to the Cloudneeti portal using the license admin user credentials.
 
@@ -19,3 +19,5 @@ Activating Cloudneeti License and Onboarding Azure Subscription Account
     [b. Amazon Web Services (AWS) account](../amazonWebServiceAccounts/)
 
     [c. Office 365 cloud account](../office365Subscriptions/)
+    
+
