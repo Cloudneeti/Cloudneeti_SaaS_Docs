@@ -1,5 +1,5 @@
 
-# Activate Cloudneeti License
+#  How to activate License
 
 Upon customer request, Cloudneeti license(s) will be configured and email invitation(s) will be sent to License Administrator(s). Additional users within Cloudneeti applications will be provisioned by the customer’s License Administrator.
 
