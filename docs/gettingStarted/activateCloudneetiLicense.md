@@ -14,10 +14,12 @@ Activating Cloudneeti License and Onboarding Cloud Account
     
 3. Follow link to onboard account as per connector type chosen:
 
-    [a. Microsoft Azure subscription](../azureSubscriptions/)
+    [a. Microsoft Azure subscription](../.././administratorGuide/azureSubscriptions/)
 
-    [b. Amazon Web Services (AWS) account](../amazonWebServiceAccounts/)
+    
+    [b. Amazon Web Services (AWS) account](../.././administratorGuide/amazonWebServiceAccounts/)
 
-    [c. Office 365 cloud account](../office365Subscriptions/)
+    
+    [c. Office 365 cloud account](../.././administratorGuide/office365Subscriptions/)
     
 
