@@ -49,8 +49,8 @@ nav:
     - Office 365 Subscriptions: administratorGuide/office365Subscriptions.md
   - MANAGE CLOUD ACCOUNTS:
     - Add Cloud Account: administratorGuide/addCloudAccount.md
-  #   - Configure Security Policies: administratorGuide/configureSecurityPolicies.md
-  #   - Configure Notifications: administratorGuide/configureNotifications.md
+    - Configure Security Policies: administratorGuide/configureSecurityPolicies.md
+    - Configure Notifications: administratorGuide/configureNotifications.md
   #   - Configure Data Collection: administratorGuide/configureDataCollection.md
     - Manage Cloud Account Users: administratorGuide/manageCloudAccountUsers.md
   - MANAGE USERS:
