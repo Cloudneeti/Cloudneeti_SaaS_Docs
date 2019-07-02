@@ -44,8 +44,10 @@ nav:
 - Administrator Guide:
   - OVERRVIEW : administratorGuide/adminstrationGuide.md
   - ONBOARDING CLOUD ACCOUNTS:
-    - Azure Subscriptions: administratorGuide/azureSubscriptions.md
-    - Amazon Web Service Accounts: administratorGuide/amazonWebServiceAccounts.md
+    - Azure Subscriptions (Automation): administratorGuide/azureSubscriptions.md
+    - Azure Subscriptions: administratorGuide/azureSubscriptionsManual.md
+    - Amazon Web Service Accounts (Automation): administratorGuide/amazonWebServiceAccounts.md
+    - Amazon Web Service Accounts: administratorGuide/amazonWebServiceAccountsManual.md
     - Office 365 Subscriptions: administratorGuide/office365Subscriptions.md
   - MANAGE CLOUD ACCOUNTS:
     - Add Cloud Account: administratorGuide/addCloudAccount.md
