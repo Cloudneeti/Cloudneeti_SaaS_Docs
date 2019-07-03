@@ -18,7 +18,7 @@ The following activities need to be completed prior to onboarding.
 
 | Readiness                                | Description                              |
 |------------------------------------------|------------------------------------------|
-| 1. Workstation: Ensure you have the latest PowerShell version (v5 and above)  | Verify PowerShell version by running the below command on the workstation where you will run the ServicePrincipal creation script.<br> `$PSVersionTable.PSVersion`  <br>If PowerShell version is lower than 5, then follow this link for installation of a later version: [Download Link](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-windows-powershell?view=powershell-6). |
+| 1. Workstation: Ensure you have the latest PowerShell version (v5 and above)  | Verify PowerShell version by running the below command on the workstation where you will run the ServicePrincipal creation script.<br> `$PSVersionTable.PSVersion`  <br>If PowerShell version is lower than 5, then follow this link for installation of a later version: <a href="https://docs.microsoft.com/en-us/powershell/scripting/install/installing-windows-powershell?view=powershell-6" download>Download Link</a>. |
 | 2. Workstation: Ensure there are no restrictions to run the PowerShell script   | Use this command: <br>**Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass** <br><br>PowerShell contains built-in execution policies that limit its use as an attack vector. By default, the execution policy is set to Restricted, which is the primary policy for script execution. The bypass allows for running scripts and keeps the lowered permissions isolated to just the current running process. |
 | 3. Workstation: Ensure latest Azure AD modules to run Powershell commands. | **Install-Module -Name AzureAD -MinimumVersion 2.0.0.131**<br><br>It is a roll-up module for the Azure Resource Manager cmdlets.<br> |
 | 4. Download and review PowerShell script for creation of the service principal | The PowerShell script is used to create a service principal in Azure Tenant AD: <a href="https://raw.githubusercontent.com/Cloudneeti/docs_cloudneeti/master/scripts/Create-ServicePrincipal-Office365Onboarding.ps1" download>Download Link</a>. |
@@ -104,9 +104,22 @@ Follow the steps below to grant permission:
 #### 3.3	Add Office 365 Account to Cloudneeti
 
 1.	Log in to the Cloudneeti portal using the license admin user credentials.
-2.	Click on the ‘Activate License’ button to activate the license. This step is needed if this is the first cloud account you are adding to the License.
+2.	If the license is not activated, click on the ‘Activate License’ button to activate the license. This step is needed    if this is the first cloud account you are adding to the License.
 
     ![activateLicense](.././images/office365Subscriptions/activateLicense.png#thumbnail)
+
+    OR
+
+    If the license is already activated, 
+
+    a. Please go to Settings > Manage Accounts on Cloudneeti portal
+        ![Activate License](.././images/azureSubscriptions/Manage_Accounts.png#thumbnail)
+    
+    b. Click on "Add Cloud Account" button
+        ![Activate License](.././images/azureSubscriptions/Add_Account.png#thumbnail)
+        
+    c. Select License to add cloud account
+        ![Select License](.././images/azureSubscriptions/select_license.png#thumbnail)
 
 3.	Select Office 365 connector.
 
@@ -250,32 +263,32 @@ The following is the process outlined to create a secure service account credent
     ![Cloudshell](.././images/office365Subscriptions/Cloudshell.png#thumbnail) 
 
 4.	Execute below command in Cloudshell to download the Cloudneeti data collector provisioning script.
-```powershell
-wget https://raw.githubusercontent.com/Cloudneeti/docs_cloudneeti/master/scripts/Provision-M365DataCollector.ps1 -O Provision-M365DataCollector.ps1
-```
+    <pre><code>
+    wget https://raw.githubusercontent.com/Cloudneeti/docs_cloudneeti/master/scripts/Provision-M365DataCollector.ps1 -O Provision-M365DataCollector.ps1
+    </pre></code>
 
-a: Switch to the User directory
-```powershell
-cd $User
-```
-b: Run provisioning script with inline parameters
+    a: Switch to the User directory
+    <pre><code>
+    cd $User
+    </pre></code>
+    b: Run provisioning script with inline parameters
 
-```powershell
-./Provision-M365DataCollector.ps1 -CloudneetiLicenseId <Cloudneeti License Id> `
--CloudneetiAccountId <Cloudneeti Account Id> `
--CloudneetiEnvironment <Cloudneeti Environment> `
--ServicePrincipalId <Cloudneeti Data Collector Service Principal Id> `
--ArtifactsName <Cloudneeti office 365 Data Collector Artifact Name> `
--DataCollectorVersion <Cloudneeti Office 365 Data Collector Version> `
--OfficeDomain <Office 365 Domain Name> `
--OfficeTenantId <Office 365 Tenant Id> `
--OfficeAdminId <Office 365 Administator Id> `
--AzureSubscriptionId <Azure Subscription Id where office 365 data collector resouces will be   created> `
--DataCollectorName <Office 365 Data Collector Name> `
-                -Location <Default EastUs2> <Region>
-```
+    <pre><code>
+    ./Provision-M365DataCollector.ps1 -CloudneetiLicenseId <Cloudneeti License Id> `
+    -CloudneetiAccountId <Cloudneeti Account Id> `
+    -CloudneetiEnvironment <Cloudneeti Environment> `
+    -ServicePrincipalId <Cloudneeti Data Collector Service Principal Id> `
+    -ArtifactsName <Cloudneeti office 365 Data Collector Artifact Name> `
+    -DataCollectorVersion <Cloudneeti Office 365 Data Collector Version> `
+    -OfficeDomain <Office 365 Domain Name> `
+    -OfficeTenantId <Office 365 Tenant Id> `
+    -OfficeAdminId <Office 365 Administator Id> `
+    -AzureSubscriptionId <Azure Subscription Id where office 365 data collector resouces will be   created> `
+    -DataCollectorName <Office 365 Data Collector Name> `
+                    -Location <Default EastUs2> <Region>
+    </pre></code>
 
-Note: Contact Cloudneeti Team for ArtifactsName, DataCollectorVersion and ArtifactsAccessKey
+    Note: Contact Cloudneeti Team for ArtifactsName, DataCollectorVersion and ArtifactsAccessKey
 
 
 7.	Then script execution will prompt you for below details: (Enter requested information)

@@ -1,4 +1,4 @@
-# Cloudneeti Licenses and Accounts
+# Cloudneeti License
 
 A Cloudneeti license is a group of accounts. Multiple Cloudneeti licenses can be provided to the customer under one contract. Each customer’s cloud account is registered with a Cloudneeti account.  
 

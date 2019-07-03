@@ -30,28 +30,34 @@ nav:
   - CLOUDNEETI PRODUCT: 
     - Product Overview: gettingStarted/productOverview.md
     - Product Capabilities: gettingStarted/productCapabilities.md
-    # - Cloud Accounts​: gettingStarted/cloudAccounts.md
+    - Cloud Accounts​: gettingStarted/cloudAccounts.md
     - Licenses: gettingStarted/licenses.md
     - User & Roles : gettingStarted/userRoles.md
   # - USER IDENTITY MANAGEMENT:
   #   - Authentication: gettingStarted/authentication.md
   #   - Authorization: gettingStarted/authorization.md
-  # - ACTIVATE LICENSE: gettingStarted/howToActivateLicense​.md
+  - ACTIVATE LICENSE: 
+    - How To Activate License​: gettingStarted/activateCloudneetiLicense.md
+  - USER IDENTITY MANAGEMENT:
+    - Authentication: gettingStarted/authentication.md
+    - Authorization: gettingStarted/authorization.md
 - Administrator Guide:
   - OVERRVIEW : administratorGuide/adminstrationGuide.md
   - ONBOARDING CLOUD ACCOUNTS:
     - Azure Subscriptions: administratorGuide/azureSubscriptions.md
+  #  - Azure Subscriptions (Manual): administratorGuide/azureSubscriptionsManual.md
     - Amazon Web Service Accounts: administratorGuide/amazonWebServiceAccounts.md
+  #  - Amazon Web Service Accounts (Manual): administratorGuide/amazonWebServiceAccountsManual.md
     - Office 365 Subscriptions: administratorGuide/office365Subscriptions.md
-  # - MANAGE CLOUD ACCOUNTS:
-  #   - Add Cloud Account: administratorGuide/addCloudAccount.md
-  #   - Configure Security Policies: administratorGuide/configureSecurityPolicies.md
-  #   - Configure Notifications: administratorGuide/configureNotifications.md
+  - MANAGE CLOUD ACCOUNTS:
+    - Add Cloud Account: administratorGuide/addCloudAccount.md
+    - Configure Security Policies: administratorGuide/configureSecurityPolicies.md
+    - Configure Notifications: administratorGuide/configureNotifications.md
   #   - Configure Data Collection: administratorGuide/configureDataCollection.md
-  #   - Manage Cloud Account Users (goes to CAU): administratorGuide/manageCloudAccountUsers.md
+    - Manage Cloud Account Users: administratorGuide/manageCloudAccountUsers.md
   - MANAGE USERS:
     - License Users: administratorGuide/licenseUsers.md
-    - Cloud Account Users (CAU page): administratorGuide/cloudAccountUsers.md
+    - Cloud Account Users: administratorGuide/cloudAccountUsers.md
   - MANAGE REMEDIATIONS:
     - For Azure Policies: administratorGuide/forAzurePolicies.md
   #   - For AWS Policies: administratorGuide/forAWSPolicies.md
@@ -64,16 +70,18 @@ nav:
   #     - Bring your NoSQL storage: administratorGuide/bringYourNoSQLStorage.md
   # - MANAGE ORGANIZATION:
   #   - Manage Licenses: administratorGuide/manageLicenses.md
-- User Guide:
-  - DASHBOARDS: 
-    - CISO: userGuide/CISO.md
-    - SOC​: userGuide/SOC​.md
-    - Assets: userGuide/assets.md
-  - SECURITY POLICIES:
-    - Categories and Policies​ Details (Description, Resources, Audit procedure, Remediation guidance)​: userGuide/categoriesAndPolicies.md
-  - RISK POSTURE:
-    - Risk Dashboard: userGuide/riskDashboard.md
-    - Risk Analysis & Prioritization: userGuide/riskAnalysis&Prioritization.md
-  - REPORTS:
-    - Download and Understand reports: userGuide/downloadAndUnderstandReports.md
+- Release Notes:
+  - RELEASE NOTES: releaseNotes/releaseNotes.md
+# - User Guide:
+#   - DASHBOARDS: 
+#     - CISO: userGuide/CISO.md
+#     - SOC​: userGuide/SOC​.md
+#     - Assets: userGuide/assets.md
+#   - SECURITY POLICIES:
+#     - Categories and Policies​ Details (Description, Resources, Audit procedure, Remediation guidance)​: userGuide/categoriesAndPolicies.md
+#   - RISK POSTURE:
+#     - Risk Dashboard: userGuide/riskDashboard.md
+#     - Risk Analysis & Prioritization: userGuide/riskAnalysis&Prioritization.md
+#   - REPORTS:
+#     - Download and Understand reports: userGuide/downloadAndUnderstandReports.md
     
