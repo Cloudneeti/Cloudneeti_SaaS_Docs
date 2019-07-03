@@ -70,16 +70,18 @@ nav:
   #     - Bring your NoSQL storage: administratorGuide/bringYourNoSQLStorage.md
   # - MANAGE ORGANIZATION:
   #   - Manage Licenses: administratorGuide/manageLicenses.md
-- User Guide:
-  - DASHBOARDS: 
-    - CISO: userGuide/CISO.md
-    - SOC​: userGuide/SOC​.md
-    - Assets: userGuide/assets.md
-  - SECURITY POLICIES:
-    - Categories and Policies​ Details (Description, Resources, Audit procedure, Remediation guidance)​: userGuide/categoriesAndPolicies.md
-  - RISK POSTURE:
-    - Risk Dashboard: userGuide/riskDashboard.md
-    - Risk Analysis & Prioritization: userGuide/riskAnalysis&Prioritization.md
-  - REPORTS:
-    - Download and Understand reports: userGuide/downloadAndUnderstandReports.md
+- Release Notes:
+  - RELEASE NOTES: releaseNotes/releaseNotes.md
+# - User Guide:
+#   - DASHBOARDS: 
+#     - CISO: userGuide/CISO.md
+#     - SOC​: userGuide/SOC​.md
+#     - Assets: userGuide/assets.md
+#   - SECURITY POLICIES:
+#     - Categories and Policies​ Details (Description, Resources, Audit procedure, Remediation guidance)​: userGuide/categoriesAndPolicies.md
+#   - RISK POSTURE:
+#     - Risk Dashboard: userGuide/riskDashboard.md
+#     - Risk Analysis & Prioritization: userGuide/riskAnalysis&Prioritization.md
+#   - REPORTS:
+#     - Download and Understand reports: userGuide/downloadAndUnderstandReports.md
     
