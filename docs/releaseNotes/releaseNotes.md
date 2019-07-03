@@ -1,20 +1,19 @@
 # **Release Notes**
 
-## July 2019- v2.10.1
+## **July 2019- v2.10.1**
 
-1.  User Experience Improvements
-    *   Risk Dashboard: Cloudneeti introduces Risk dashboard based on “NIST Cyber Security Framework v1.1”. Last month we introduced our Industry leading Risk Posture (a matrix of machine learning infused Risk Likelihood prediction overlaid with Risk Impact). And this month we are topping that by combining it with a NIST CSF v1.1. A continuous risk assurance ensures a solid basis for justifying remediation plans, strategies and resource requests to management.
+1.  **User Experience Improvements**
     *   Enhancements to Asset dashboard for AWS resource location map.
     *   Enhancements to Asset dashboard for Azure for Users count.
 
-2.  Platform & Stability Improvements
+2.  **Platform & Stability Improvements**
     *   Enhancements to “Cloud Security and Risk Posture“.
     *   Performance improvements for AWS data collection with lambda parallelism and orchestration.
     *   NoSQL database automatic scale-out and performance optimizations.
 
-3.  Policies & Benchmarks Additions/Updates
+3.  **Policies & Benchmarks Additions/Updates**
     *   Addition of following compliance benchmark for AWS cloud accounts.
-        *   AWS: FFIEC - Federal Financial Institutions Examination Council (CAT).
+        1.  AWS: FFIEC - Federal Financial Institutions Examination Council (CAT).
     *   Addition of following new Azure security policies
 
 |   Category            |   Policy Title            |
@@ -22,27 +21,27 @@
 |   Azure-Networking    |   Ensure that ingress traffic to SMTP (TCP:25) is restricted for Virtual Machine. |
 |   Azure-Networking    |   Ensure that ingress traffic to 'POP3' (TCP:110) is restricted for Virtual Machine.  |
 
-## June 2019- v2.9.1
+## **June 2019- v2.9.1**
 
-1.  User Experience Improvements
+1.  **User Experience Improvements**
     *   Auto-remediation: Cloudneeti delivers automated remediation for critical Microsoft Azure policies. When a misconfiguration           occurs, organizations need instant remediation to minimize the window of opportunity for malicious intentions. This self-healing     ability enables organizations to ensure their security and compliance policies are always enforced.
     *   Dashboards updated as follows
-        *   CISO Dashboard --> Compliance
-        *   SOC Dashboard --> Security
-        *   Assets Dashboard --> Assets
+        1.   CISO Dashboard --> Compliance
+        2.   SOC Dashboard --> Security
+        3.   Assets Dashboard --> Assets
     *   Enhancements to download PDF report to include Risk Posture.
 
-2.  Platform & Stability Improvements
+2.  **Platform & Stability Improvements**
     *   Performance enhancements to data collection and processing mechanism.
     *   Optimization with high performance AES 256 encryption/decryption
     *   Enhancement to notification systems if failed to connect to customer AWS account.
     *   Scale, stability and performance improvements for AWS data collection (batching and scaling)
 
-3.  Policies & Benchmarks Additions/Updates
+3.  **Policies & Benchmarks Additions/Updates**
     *   Addition of following compliance benchmarks for Azure and AWS cloud accounts
-        *   Azure: SOC2 - AICPA TSC 2017
-        *   AWS: SOC2 - AICPA TSC 2017
-        *   AWS: NIST Cybersecurity Framework (CSF v1.1)
+        1.   Azure: SOC2 - AICPA TSC 2017
+        2.   AWS: SOC2 - AICPA TSC 2017
+        3.   AWS: NIST Cybersecurity Framework (CSF v1.1)
     *   Updated AWS Compliance Mapping for HIPAA, GDPR, and PCI DSS 3.2.1
     *   Addition of following new AWS security policies
 
@@ -80,21 +79,21 @@
 
 *   Addition/Updates to the following Azure security policies
 
-## June 2019- v2.8.1
+## **June 2019- v2.8.1**
 
-1.   User Experience Improvements
+1.   **User Experience Improvements**
     *   Improved navigation from CISO dashboard - Sunburst chart to “Cloud Security and Risk Posture”.
     *   Added navigation from SOC dashboard - category to “Cloud Security and Risk Posture”.
     *   Enhancements to ‘Manage Users’ a menu under settings. This facilitates to manage account & license users (add/update/delete).
     *   Enhancements to ‘Audit log’ a menu under settings.
     *   Updates of mappings for PCI-DSS3.2, ISO/IEC 27001 with existing AWS related controls.
 
-2.   Platform & Stability Improvements
+2.   **Platform & Stability Improvements**
     *   Stability and enhancement to Policy based Risk Posture. Refer blog for more details on: Cloudneeti Introduces Risk Posture.
     *   Performance enhancements to data collection and processing mechanism.
     *   Various stability and bug fixes.
 
-3.    Policies & Benchmarks Additions/Updates
+3.    **Policies & Benchmarks Additions/Updates**
     *   Addition of following new AWS security policies
 
 |   Category            |   Policy Title            |
