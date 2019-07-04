@@ -16,7 +16,7 @@
         1.  AWS: FFIEC - Federal Financial Institutions Examination Council (CAT).
     *   Addition of following new Azure security policies
 
-|   Category            |   Policy Title            |
+|   **Category**            |   **Policy Title**            |
 |-----------------------|---------------------------|
 |   Azure-Networking    |   Ensure that ingress traffic to SMTP (TCP:25) is restricted for Virtual Machine. |
 |   Azure-Networking    |   Ensure that ingress traffic to 'POP3' (TCP:110) is restricted for Virtual Machine.  |
@@ -45,7 +45,7 @@
     *   Updated AWS Compliance Mapping for HIPAA, GDPR, and PCI DSS 3.2.1
     *   Addition of following new AWS security policies
 
-|   Category            |   Policy Title            |
+|   **Category**            |   **Policy Title**            |
 |-----------------------|---------------------------|
 |   AWS - Business Continuity   |	Ensure all CloudFront Distributions require HTTPS between CloudFront and your ELB origin    |
 |   AWS - Business Continuity   |	Configure HTTP to HTTPS redirects with a CloudFront Viewer Protocol Policy  |
@@ -96,7 +96,7 @@
 3.    **Policies & Benchmarks Additions/Updates**
     *   Addition of following new AWS security policies
 
-|   Category            |   Policy Title            |
+|   **Category**            |   **Policy Title**            |
 |-----------------------|---------------------------|
 |   AWS - Data In Transit Encryption    |	Ensure that wildcard certificates issued by Amazon Certificate Manager (ACM) or imported to ACM are not in use    |
 |   AWS - Data In Transit Encryption    |	Ensure there are no failed SSL/TLS certificates in the AWS Certificate Manager (ACM)    |
@@ -121,7 +121,7 @@
 
 *   Addition/Updates to the following Azure security policies
 
-|   Category            |   Policy Title            |
+|   **Category**            |   **Policy Title**            |
 |-----------------------|---------------------------|
 |   Azure - Business continuity and DR  |	Ensure that Backup feature is configured for Function Apps deployed on Standard and above App Service Plan  |
 |   Azure - Business continuity and DR  |	Ensure that Backup feature is configured for Mobile Apps deployed on Standard and above App Service Plan  |
@@ -142,3 +142,312 @@
 |   Azure - Storage and Databases  |	Ensure that Advanced Threat Protection is enabled for Azure Storage  |
 
 
+## **May 2019- v2.7.1**
+
+1.  **User Experience Improvements**
+    *   Availability of Release Notes to the logged in users – These will list new features, updates to existing functionality, security     policies and compliance benchmarks etc.
+    *   ‘Manage Users’ a separate menu under settings. Earlier this was part of managing licensing features. This facilitates to manage      account & license users (add/update/delete).
+
+2.  **Platform & Stability Improvements**
+    *  Introducing Policy based Risk Posture – An ability for customers to understand cloud risks with a matrix view of Risk severity vs    Risk likelihood. This feature allows customers to prioritize top risks for remediations.
+    *  Stability updates and enhancements to ServiceNow ticketing integrations.
+    *  Various stability and bug fixes.
+
+3.  **Policies & Benchmarks Additions/Updates**
+    *  Addition of following new AWS security policies
+
+|   **Category**            |   **Policy Title**            |
+|-----------------------|---------------------------|
+|   Networking  |	Ensure Classic Load Balancer with unencrypted LDAP (TCP:389) is not exposed to the public internet  |
+|   Networking  |	Ensure Classic Load Balancer with service 'Prevalent known internal port' (TCP:3000) is not exposed to the public internet  |
+|   Networking  |	Ensure Classic Load Balancer with service 'NetBIOS Name Service' (TCP:137) is not exposed to the public internet  |
+|   Networking  |	Ensure Classic Load Balancer with service 'NetBios Datagram Service' (TCP:138) is not exposed to the public internet  |
+|   Networking  |	Ensure Classic Load Balancer with service 'NetBios Session Service' (TCP:139) is not exposed to the public internet  |
+|   Networking  |	Ensure Classic Load Balancer with service 'Known internal web port' (TCP:8000) is not exposed to the public internet  |
+|   Networking  |	Ensure Classic Load Balancer with service 'Known internal web port' (TCP:8080) is not exposed to the public internet  |
+|   Networking  |	Ensure Classic Load Balancer with service 'NetBIOS Name Service' (UDP:137) is not exposed to the public internet  |
+|   Networking  |	Ensure Classic Load Balancer with service 'NetBios Datagram Service' (UDP:138) is not exposed to the public internet  |
+|   Networking  |	Ensure Classic Load Balancer with service 'NetBios Session Service' (UDP:139) is not exposed to the public internet  |
+|   Networking  |	Ensure Classic Load Balancer with service 'SNMP' (UDP:161) is not exposed to the public internet  |
+|   Networking  |	Ensure Classic Load Balancer with HTTPS (Port:443) is not exposed to the public internet  |
+|   Networking  |	Ensure Classic Load Balancer with HTTP (Port:80) is not exposed to the public internet  |
+|   Networking  |	Ensure Classic Load Balancer with administrative service: SSH (TCP:22) is not exposed to the public internet  |
+|   Networking  |	Ensure Classic Load Balancer with administrative service: Remote Desktop (TCP:3389) is not exposed to the public internet  |
+|   Networking  |	Ensure Classic Load Balancer with unencrypted Mongo (TCP:27017) is not exposed to the public internet  |
+|   Networking  |	Ensure no Classic Load Balancer allows unrestricted inbound access using Internet Control Message Protocol v6 (ICMPv6).  |
+|   Networking  |	Ensure no Classic Load Balancer allows unrestricted inbound access using Internet Control Message Protocol (ICMP).  |
+|   Networking  |	Ensure no Classic Load Balancer allows unrestricted inbound access to all UDP traffic.  |
+|   Networking  |	Ensure no Classic Load Balancer allows unrestricted inbound access to all TCP traffic.  |
+|   Networking  |	Ensure no Classic Load Balancer allows unrestricted inbound access to all traffic.  |
+|   Networking  |	Ensure no Network Load Balancer allows unrestricted inbound access using Internet Control Message Protocol v6 (ICMPv6).  |
+|   Networking  |	Ensure no Network Load Balancer allows unrestricted inbound access using Internet Control Message Protocol (ICMP).  |
+|   Networking  |	Ensure no Network Load Balancer allows unrestricted inbound access to all UDP traffic.  |
+|   Networking  |	Ensure no Network Load Balancer allows unrestricted inbound access to all TCP traffic.  |
+|   Networking  |	Ensure no Network Load Balancer allows unrestricted inbound access to all traffic.  |
+|   Networking  |	Ensure no Application Load Balancer allows unrestricted inbound access using Internet Control Message Protocol v6 (ICMPv6).
+|   Networking  |	Ensure no Application Load Balancer allows unrestricted inbound access using Internet Control Message Protocol (ICMP).  |
+|   Networking  |	Ensure no Application Load Balancer allows unrestricted inbound access to all UDP traffic.  |
+|   Networking  |	Ensure no Application Load Balancer allows unrestricted inbound access to all TCP traffic.  |
+|   Networking  |	Ensure no Application Load Balancer allows unrestricted inbound access to all traffic.  |
+|   Networking  |	Ensure Elastic IPs for NAT gateways are allocated  |
+|   Networking  |	Ensure that a specific Internet/NAT gateway is attached to a specific VPC  |
+|   Networking  |	Ensure Amazon VPC endpoints are not exposed to everyone  |
+|   Networking  |	Ensure AWS default Virtual Private Cloud (VPC) is not being used  |
+|   Data Protection  |	Ensure S3 buckets do not allow FULL_CONTROL access to AWS authenticated users via S3 ACLs  |
+|   Data Protection  |	Ensure S3 buckets do not allow READ access to AWS authenticated users through ACLs  |
+|   Data Protection  |	Ensure AWS S3 buckets do not allow READ_ACP access to AWS authenticated users using ACLs  |
+|   Data Protection  |	Ensure S3 buckets do not allow WRITE access to AWS authenticated users through S3 ACLs  |
+|   Data Protection  |	Ensure S3 buckets do not allow WRITE_ACP access to AWS authenticated users using S3 ACLs  |
+|   Data Protection  |	Ensure that Amazon S3 buckets are encrypted with customer-provided AWS KMS CMKs  |
+|   Data Protection  |	Ensure that Amazon S3 buckets use Transfer Acceleration feature for faster data transfers  |
+
+*   Addition/Updates to the following Azure security policies
+
+|   **Category**            |   **Policy Title**            |
+|-----------------------|---------------------------|
+|   Networking  |	Ensure that ingress traffic to Memcached (TCP:11211) is restricted for Virtual Machine  |
+|   Networking  |	Ensure that ingress traffic to 'MSSQL Server' (TCP:1433) is restricted for Virtual Machine  |
+|   Networking  |	Ensure that ingress traffic to Oracle DB (TCP:1521) is restricted for Virtual Machine  |
+|   Networking  |	Ensure that ingress traffic to SSH (TCP:22) is restricted for Virtual Machine  |
+|   Networking  |	Ensure that ingress traffic to 'SQL Server Analysis Services' (TCP:2383) is restricted for Virtual Machine  |
+|   Networking  |	Ensure that ingress traffic to Oracle DB (TCP:2483) is restricted for Virtual Machine  |
+|   Networking  |	Ensure that ingress traffic to Mongo (TCP:27017) is restricted for Virtual Machine  |
+|   Networking  |	Ensure that ingress traffic to 'MySQL' (TCP:3306) is restricted for Virtual Machine  |
+|   Networking  |	Ensure that ingress traffic to Remote Desktop (TCP:3389) is restricted for Virtual Machine  |
+|   Networking  |	Ensure that ingress traffic to 'Postgres SQL' (TCP:5432) is restricted for Virtual Machine  |
+|   Networking  |	Ensure that ingress traffic to Cassandra OpsCenter Monitoring (TCP:61620) is restricted for Virtual Machine  |
+|   Networking  |	Ensure that ingress traffic to Redis (TCP:6379) is restricted for Virtual Machine  |
+|   Networking  |	Ensure that ingress traffic to Cassandra Internode Communication (TCP:7000) is restricted for Virtual Machine  |
+|   Networking  |	Ensure that ingress traffic to 'Cassandra' (TCP:7001) is restricted for Virtual Machine  |
+|   Networking  |	Ensure that ingress traffic to Cassandra Monitoring (TCP:7199) is restricted for Virtual Machine  |
+|   Networking  |	Ensure that ingress traffic to 'Known internal web port' (TCP:8000) is restricted for Virtual Machine  |
+|   Networking  |	Ensure that ingress traffic to 'Known internal web port' (TCP:8080) is restricted for Virtual Machine  |
+|   Networking  |	Ensure that ingress traffic to Cassandra OpsCenter Website (TCP:8888) is restricted for Virtual Machine  |
+|   Networking  |	Ensure that ingress traffic to Cassandra Client (TCP:9042) is restricted for Virtual Machine  |
+|   Networking  |	Ensure that ingress traffic to CiscoSecure, websm (TCP:9090) is restricted for Virtual Machine  |
+|   Networking  |	Ensure that ingress traffic to Cassandra Thrift (TCP:9160) is restricted for Virtual Machine  |
+|   Networking  |	Ensure that ingress traffic to Elastic search (TCP:9200) is restricted for Virtual Machine  |
+|   Networking  |	Ensure that ingress traffic to Elastic search (TCP:9300) is restricted for Virtual Machine  |
+|   Networking  |	Ensure that ingress traffic to Memcached (UDP:11211) is restricted for Virtual Machine  |
+|   Networking  |	Ensure that ingress traffic to 'NetBIOS Name Service' (UDP:137) is restricted for Virtual Machine  |
+|   Networking  |	Ensure that ingress traffic to 'NetBios Datagram Service' (UDP:138) is restricted for Virtual Machine  |
+|   Networking  |	Ensure that ingress traffic to 'NetBios Datagram Service' (UDP:139) is restricted for Virtual Machine  |
+|   Networking  |	Ensure that ingress traffic to 'SNMP' (UDP:161) is restricted for Virtual Machine  |
+|   Networking  |	Ensure that ingress traffic to Oracle DB (UDP:2483) is restricted for Virtual Machine  |
+|   Networking  |	Ensure that ingress traffic to LDAP (UDP:389) is restricted for Virtual Machine  |
+|   Compute  |	Ensure that ASC showing healthy state for Virtual Machine  |
+|   Networking  |	Ensure that ingress traffic to management ports is restricted for Virtual Machine  |
+|   Compute  |	Ensure that Log Analytics VM extension is enabled for Linux Virtual Machines  |
+|   Compute  |	Ensure that Log Analytics VM extension is enabled for Windows Virtual Machines  |
+
+
+## **April 2019- v2.6.1**
+
+1.  **User Experience Improvements**
+    *   Look and Feel enhancements to PDF summary reports.
+    *   Enhancements to CISO dashboard for All Accounts aggregation.
+    *   Search and Alphabetical ordering of cloud accounts allowing easy access to 100s of cloud accounts.
+
+2.  **Platform & Stability Improvements**
+    *   Enhancements to system performance related telemetry for backend services.
+    *   Various stability and bug fixes.
+
+3.  **Policies & Benchmarks Additions/Updates**
+    *   Addition of following AWS security policies
+
+|   **Category**            |   **Policy Title**            |
+|-----------------------|---------------------------|
+|   Networking  |	Ensure AWS Application Load Balancers (ALBs) are using the latest predefined security policy
+|   Networking  |	Identify unused Application Load Balancers and delete them in order to reduce AWS costs
+|   Networking  |	Ensure Deletion Protection feature is enabled for your AWS Application load balancers to follow security best practices
+|   Auditing and Logging  |	Ensure access logging is enabled for your AWS ALBs to follow security best practices
+|   Networking  |	Ensure that your Application Load Balancer (ALB) listeners are using a secure protocol such as HTTPS
+|   Networking  |	Ensure that all Application Load Balancers (ALBs) available in your AWS account are associated with valid and secure security groups
+|   Networking  |	Identify and remove any unused Elastic Load Balancers for cost optimization
+|   Networking  |	Ensure there are valid security groups associated with your Elastic Load Balancer
+|   Networking  |	Ensure Connection Draining is enabled for your AWS Classic Load Balancer
+|   Auditing and Logging  |	Ensure access logging is enabled for your AWS Classic Load Balancer to follow security best practices
+|   Encryption and Key Management  |	Ensure that your AWS ELBs listeners are using a secure protocol (HTTPS or SSL)
+|   Encryption and Key Management  |	Ensure SSL/TLS certificates are renewed 45 days before their expiration
+|   Encryption and Key Management  |	Ensure SSL/TLS certificates are renewed 30 days before their expiration
+|   Encryption and Key Management  |	Ensure SSL/TLS certificates are renewed 7 days before their expiration
+|   Networking  |	Ensure AWS Network Load Balancers (NLBs) are using the latest predefined security policy
+|   Networking  |	Identify unused Network Load Balancers and delete them in order to reduce AWS costs
+|   Networking  |	Ensure Deletion Protection feature is enabled for your AWS Network load balancers to follow security best practices
+|   Auditing and Logging  |	Ensure access logging is enabled for your AWS NLBs to follow security best practices
+|   Networking  |	Ensure that your AWS Network Load Balancer listeners are using a secure protocol such as TLS
+|   Networking  |	Ensure that all Network Load Balancers (NLBs) available in your AWS account are associated with valid and secure security groups
+|   Networking  |	Ensure Network Load Balancer with unencrypted LDAP (TCP:389) is not exposed to the public internet
+|   Networking  |	Ensure Network Load Balancer with service 'Prevalent known internal port' (TCP:3000) is not exposed to the public internet
+|   Networking  |	Ensure Network Load Balancer with service 'NetBIOS Name Service' (TCP:137) is not exposed to the public internet
+|   Networking  |	Ensure Network Load Balancer with service 'NetBios Datagram Service' (TCP:138) is not exposed to the public internet
+|   Networking  |	Ensure Network Load Balancer with service 'NetBios Session Service' (TCP:139) is not exposed to the public internet
+|   Networking  |	Ensure Network Load Balancer with service 'Known internal web port' (TCP:8000) is not exposed to the public internet
+|   Networking  |	Ensure Network Load Balancer with service 'Known internal web port' (TCP:8080) is not exposed to the public internet
+|   Networking  |	Ensure Network Load Balancer with service 'NetBIOS Name Service' (UDP:137) is not exposed to the public internet
+|   Networking  |	Ensure Network Load Balancer with service 'NetBios Datagram Service' (UDP:138) is not exposed to the public internet
+|   Networking  |	Ensure Network Load Balancer with service 'NetBios Session Service' (UDP:139) is not exposed to the public internet
+|   Networking  |	Ensure Network Load Balancer with service 'SNMP' (UDP:161) is not exposed to the public internet
+|   Networking  |	Ensure Network Load Balancer with HTTPS (Port:443) is not exposed to the public internet
+|   Networking  |	Ensure Network Load Balancer with HTTP (Port:80) is not exposed to the public internet
+|   Networking  |	Ensure Network Load Balancer with administrative service: SSH (TCP:22) is not exposed to the public internet
+|   Networking  |	Ensure Network Load Balancer with administrative service: Remote Desktop (TCP:3389) is not exposed to the public internet
+|   Networking  |	Ensure Network Load Balancer with unencrypted Mongo (TCP:27017) is not exposed to the public internet
+|   Networking  |	Ensure no security group allows unrestricted inbound access using Internet Control Message Protocol v6 (ICMPv6).
+|   Networking  |	Ensure no security group allows unrestricted inbound access to all UDP traffic.
+|   Networking  |	Ensure no security group allows unrestricted inbound access to all TCP traffic.
+|   Networking  |	Ensure no security group allows unrestricted inbound access to all traffic.
+
+
+## **April 2019- v2.5.1**
+
+1.  **User Experience Improvements**
+    *   Introducing aggregation of all security and compliance benchmarks at a License level (aka Customer/Business Unit). Initial           release for CISO dashboards displaying All Accounts (Aggregated).
+    *   Enhanced navigation of dashboard Separate URLs for CISO/SOC/Assets Dashboards.
+    *   Enhancements to PDF reporting with summarized trend charts.
+    *   Asset dashboard released in preview for AWS and M365 cloud accounts.
+
+2.  **Platform & Stability Improvements**
+    *   Database performance optimizations with re-indexing and re-partitioning.
+
+
+## **April 2019- v2.4.1**
+
+1.  **User Experience Improvements**
+    *   Enhancements to AWS Asset Dashboard
+
+2.  **Policies & Benchmarks**
+    *   Addition of following AWS security policies
+
+|   **Category**            |   **Policy Title**            |
+|-----------------------|---------------------------|
+|   Networking  |	Ensure that your Application Load Balancer (ALB) listeners are using a secure protocol such as HTTPS  |
+|   Networking  |	Ensure Application Load Balancer with unencrypted Mongo (TCP:27017) is not exposed to the public internet  |
+|   Networking  |	Ensure Application Load Balancer with administrative service: Remote Desktop (TCP:3389) is not exposed to the public internet  |
+|   Networking  |	Ensure Application Load Balancer with administrative service: SSH (TCP:22) is not exposed to the public internet  |
+|   Networking  |	Ensure Application Load Balancer with HTTP (Port:80) is not exposed to the public internet  |
+|   Networking  |	Ensure Application Load Balancer with HTTPS (Port:443) is not exposed to the public internet  |
+|   Networking  |	Ensure Application Load Balancer with service 'SNMP' (UDP:161) is not exposed to the public internet  |
+|   Networking  |	Ensure Application Load Balancer with service 'NetBios Session Service' (UDP:139) is not exposed to the public internet  |
+|   Networking  |	Ensure Application Load Balancer with service 'NetBios Datagram Service' (UDP:138) is not exposed to the public internet  |
+|   Networking  |	Ensure Application Load Balancer with service 'NetBIOS Name Service' (UDP:137) is not exposed to the public internet  |
+|   Networking  |	Ensure Application Load Balancer with service 'Known internal web port' (TCP:8080) is not exposed to the public internet  |
+|   Networking  |	Ensure Application Load Balancer with service 'Known internal web port' (TCP:8000) is not exposed to the public internet  |
+|   Networking  |	Ensure Application Load Balancer with service 'NetBios Session Service' (TCP:139) is not exposed to the public internet  |
+|   Networking  |	Ensure Application Load Balancer with service 'NetBios Datagram Service' (TCP:138) is not exposed to the public internet  |
+|   Networking  |	Ensure Application Load Balancer with service 'NetBIOS Name Service' (TCP:137) is not exposed to the public internet  |
+|   Networking  |	Ensure Application Load Balancer with service 'Prevalent known internal port' (TCP:3000) is not exposed to the public internet  |
+|   Networking  |	Ensure Application Load Balancer with unencrypted LDAP (TCP:389) is not exposed to the public internet  |
+|   Compute  |	Ensure Amazon EC2 Reserved Instances (RI) are renewed before expiration. (expiration less than 30 days)  |
+|   Compute  |	Ensure that none of your AWS EC2 Reserved Instance purchases are pending.  |
+|   Compute  |	Ensure that none of your AWS EC2 Reserved Instance purchases have been failed.  |
+|   Compute  |	Ensure no EC2 security group allows inbound traffic from RFC-1918 CIDRs in order to follow AWS security best practices.  |
+|   Compute  |	Use Instance Profiles/IAM Roles to appropriately grant permissions to applications running on amazon EC2 instances  |
+|   Compute  |	Check for running AWS EC2 instances older than 180 days available within your AWS account.  |
+|   Compute  |	Ensure Termination Protection feature is enabled for EC2 instances that are not part of ASGs.  |
+|   Compute  |	Ensure that the security group(s) associated with an EC2 instance does not have an excessive number of rules defined.  |
+|   Compute  |	Identify any AWS EC2 instances that have scheduled events and take action to resolve them.  |
+|   Compute  |	Ensure EC2 instances are launched using the EC2-VPC platform instead of EC2-Classic outdated platform.  |
+|   Compute  |	Ensure every EC2 instance is launched inside an Auto Scaling Group (ASG) in order to follow AWS reliability and security best practices.  |
+|   Compute  |	Ensure no backend EC2 instances are running in public subnets.  |
+|   Compute  |	Ensure that detailed monitoring is enabled for the AWS EC2 instances that you need to monitor closely.  |
+|   Compute  |	Ensure default EC2 security groups are not in use in order to follow AWS security best practices.  |
+|   Compute  |	Ensure an IAM Role for Amazon EC2 is created.  |
+|   Compute  |	Ensure that EC2 instances have no Elastic or Public IP addresses associated.  |
+|   Compute  |	Ensure all AWS EC2 instances are launched from approved AMIs.  |
+|   Compute  |	Ensure your Amazon Machine Images (AMIs) are not accessible to all AWS accounts.  |
+|   Compute  |	Identify and remove any unused Amazon Machine Images (AMIs) to optimize AWS costs.  |
+|   Compute  |	Check for any AMIs older than 180 days available within your AWS account.  |
+|   Networking  |	Ensure your AWS account does not have an excessive number of security groups per region.  |
+|   Networking  |	Ensure your EC2 security groups do not have an excessive number of rules defined.  |
+|   Networking  |	Ensure no AWS EC2 security group allows unrestricted inbound access to TCP port 445 and (CIFS).  |
+|   Networking  |	Ensure no AWS EC2 security group allows unrestricted inbound access to TCP and UDP port 53 (DNS).  |
+|   Networking  |	Ensure no EC2 security group allows unrestricted inbound access to TCP ports 20 and 21 (FTP).  |
+|   Networking  |	Ensure no security group allows unrestricted inbound access using Internet Control Message Protocol (ICMP).  |
+|   Networking  |	Ensure no security group allows unrestricted ingress access to MongoDB port 27017  |
+|   Networking  |	Ensure no security group allows unrestricted inbound access to TCP port 1433 (MSSQL).  |
+|   Networking  |	Ensure no security group allows unrestricted inbound access to TCP port 3306 (MySQL).  |
+|   Networking  |	Ensure no AWS EC2 security group allows unrestricted inbound access to TCP port 139 and UDP ports 137 and 138 (NetBIOS).  |
+|   Networking  |	Ensure no security group allows unrestricted inbound access to TCP port 1521 (Oracle Database).  |
+|   Networking  |	Ensure no security group allows unrestricted inbound access to TCP port 5432 (PostgreSQL Database).  |
+|   Networking  |	Ensure no security group allows unrestricted inbound access to TCP port 135 (RPC).  |
+|   Networking  |	Ensure no AWS EC2 security group allows unrestricted inbound access to TCP port 25 (SMTP).  |
+|   Networking  |	Ensure no AWS EC2 security group allows unrestricted inbound access to TCP port 23 (Telnet).  |
+|   Networking  |	Ensure no security group allows unrestricted inbound access to TCP port 80 (HTTP).  |
+|   Networking  |	Ensure no security group allows unrestricted inbound access to TCP port 443 (HTTPS).  |
+|   Networking  |	Ensure no security group allows unrestricted inbound access to TCP port 9200 (Elasticsearch).  |
+|   Networking  |	Ensure AWS EC2 security group rules have descriptive text for organization and documentation.  |
+|   Networking  |	Ensure no security group allows unrestricted inbound access to TCP port 110 (Pop3 Database).  |
+|   Compute  |	Ensure that your existing AMIs are encrypted to meet security and compliance requirements  |
+
+*   Addition of new Azure security policies
+
+|   **Category**            |   **Policy Title**            |
+|-----------------------|---------------------------|
+|   Kubernetes & Containers |	Ensure that Diagnostics logs must be enabled with a retention period of at least 365 days for Azure Kubernetes Service |
+|   Kubernetes & Containers |	Ensure Azure Kubernetes Service clusters are always running with latest Kubernetes versions |
+|   Kubernetes & Containers |	Ensure that latest system updates are applied to all Azure Kubernetes Cluster nodes |
+|   Storage and Databases |	Ensure that 'Auditing' Retention is 'greater than 90 days' for SQL Database |
+|   Storage and Databases |	Ensure the 'Allow access to Azure services' flag is disabled for SQL Server |
+|   Networking |	Ensure that ingress traffic to Memcached (TCP:11211) is restricted for Virtual Machine |
+|   Networking |	Ensure that ingress traffic to 'MSSQL Server' (TCP:1433) is restricted for Virtual Machine |
+|   Networking |	Ensure that ingress traffic to Oracle DB (TCP:1521) is restricted for Virtual Machine |
+|   Networking |	Ensure that ingress traffic to SSH (TCP:22) is restricted for Virtual Machine |
+|   Networking |	Ensure that ingress traffic to 'SQL Server Analysis Services' (TCP:2383) is restricted for Virtual Machine |
+|   Networking |	Ensure that ingress traffic to Oracle DB (TCP:2483) is restricted for Virtual Machine |
+|   Networking |	Ensure that ingress traffic to Mongo (TCP:27017) is restricted for Virtual Machine |
+|   Networking |	Ensure that ingress traffic to 'MySQL' (TCP:3306) is restricted for Virtual Machine |
+|   Networking |	Ensure that ingress traffic to Remote Desktop (TCP:3389) is restricted for Virtual Machine |
+|   Networking |	Ensure that ingress traffic to 'Postgres SQL' (TCP:5432) is restricted for Virtual Machine |
+|   Networking |	Ensure that ingress traffic to Cassandra OpsCenter Monitoring (TCP:61620) is restricted for Virtual Machine |
+|   Networking |	Ensure that ingress traffic to Redis (TCP:6379) is restricted for Virtual Machine |
+|   Networking |	Ensure that ingress traffic to Cassandra Internode Communication (TCP:7000) is restricted for Virtual Machine |
+|   Networking |	Ensure that ingress traffic to 'Cassandra' (TCP:7001) is restricted for Virtual Machine |
+|   Networking |	Ensure that ingress traffic to Cassandra Monitoring (TCP:7199) is restricted for Virtual Machine |
+|   Networking |	Ensure that ingress traffic to 'Known internal web port' (TCP:8000) is restricted for Virtual Machine |
+|   Networking |	Ensure that ingress traffic to 'Known internal web port' (TCP:8080) is restricted for Virtual Machine |
+|   Networking |	Ensure that ingress traffic to Cassandra OpsCenter Website (TCP:8888) is restricted for Virtual Machine |
+|   Networking |	Ensure that ingress traffic to Cassandra Client (TCP:9042) is restricted for Virtual Machine |
+|   Networking |	Ensure that ingress traffic to CiscoSecure,websm (TCP:9090) is restricted for Virtual Machine |
+|   Networking |	Ensure that ingress traffic to Cassandra Thrift (TCP:9160) is restricted for Virtual Machine |
+|   Networking |	Ensure that ingress traffic to Elastic search (TCP:9200) is restricted for Virtual Machine |
+|   Networking |	Ensure that ingress traffic to Elastic search (TCP:9300) is restricted for Virtual Machine |
+|   Networking |	Ensure that ingress traffic to Memcached (UDP:11211) is restricted for Virtual Machine |
+|   Networking |	Ensure that ingress traffic to 'NetBIOS Name Service' (UDP:137) is restricted for Virtual Machine |
+|   Networking |	Ensure that ingress traffic to 'NetBios Datagram Service' (UDP:138) is restricted for Virtual Machine |
+|   Networking |	Ensure that ingress traffic to 'NetBios Datagram Service' (UDP:139) is restricted for Virtual Machine |
+|   Networking |	Ensure that ingress traffic to 'SNMP' (UDP:161) is restricted for Virtual Machine |
+|   Networking |	Ensure that ingress traffic to Oracle DB (UDP:2483) is restricted for Virtual Machine |
+|   Networking |	Ensure that ingress traffic to LDAP (UDP:389) is restricted for Virtual Machine |
+|   Networking |	Ensure that Virtual Network Gateway(VPN/ExpressRoute) access is restricted for Virtual Network |
+|   Networking |	Ensure that less than 3 Public IP's (i.e. NIC's with Public IP) are used for Virtual Network |
+
+
+## **March 2019- v2.3.1**
+
+1.  **Policies & Benchmarks Additions/Updates**
+    *   Updates of mappings for “ISO/IEC 27001 Information Security Management Standards” with existing Azure, AWS and M365 related controls
+
+
+## **March 2019- v2.2.1**
+
+1.  **User Experience Improvements**
+    *   New option for download PDF summary report is now available, depicting a high-level summary of your current compliance status        with respect to specific benchmark or standard.
+    *   Account management menu is now easily accessible on every account page.
+    *   Added support for multiple version benchmarks.
+
+2.  **Platform & Stability Improvements**
+    *  Added option for on demand data collection (available as a Re-Scan option for Cloud accounts).
+    *  Daylight Savings Bug Patches.
+
+3.  **Policies & Benchmarks Additions/Updates**
+    *   [ CIS Microsoft Azure Foundations v1.1.0 ](https://www.cisecurity.org/partner/cloudneeti/) is now available
+    *   CIS certified Cloudneeti for CIS Azure Foundations Benchmark v1.1 [ (https://www.cisecurity.org/partner/cloudneeti/)    ](https://www.cisecurity.org/partner/cloudneeti/)
+    *   CIS certified Cloudneeti for Amazon Web Services Foundations Benchmark v1.2.0  [    (https://www.cisecurity.org/partner/cloudneeti/)    ](https://www.cisecurity.org/partner/cloudneeti/)
+    *   Addition of new Azure security policies
+
+|   **Category**            |   **Policy Title**            |
+|-----------------------|---------------------------|
+|   Kubernetes & Containers |	Ensure Azure Active Directory RBAC is enabled for Azure Kubernetes Services (AKS) |
+|   Kubernetes & Containers |	Ensure that AAD is enabled in Kubernetes Service |
+|   Kubernetes & Containers |	Ensure that Monitoring is enabled for Azure Kubernetes Service |
