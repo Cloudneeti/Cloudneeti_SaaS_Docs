@@ -67,10 +67,14 @@ Use serverless.yml file to create a role to mark Cloudneeti's account as a trust
 
 1.	Open PowerShell application as an administrator (right click on PowerShell and select run as administrator)
 2.	In PowerShell application, navigate to folder location where you downloaded the file “serverless.yml” (e.g. “cd C:\Downloads”)
-3.	Type “aws configure” and enter 
+3.	Type “aws configure” and enter
+
     a.	Account access key id and secret access key of an AWS IAM User (with **Administrator Access** policy) 
+
     b.	Default region name(eg. us-east-1). 
+
     c.	Default output format as "json" only.
+
 4.	To add Cloudneeti data provisioning resource, execute below command 
     <pre><code>```
     serverless deploy
