@@ -172,19 +172,16 @@ Follow the steps below to grant permission:
 
 4.	Fill in the account and service principal information displayed in step 
 2.1 or 2.2 output.
-
-![accountInfo](.././images/office365Subscriptions/accountInfo.png#thumbnail) 
+    ![accountInfo](.././images/office365Subscriptions/accountInfo.png#thumbnail) 
 
 5.	Click on ‘Add Account’.
 
 ## 5	Verify Data Collection**
 
 1.	Click on ‘Go To Dashboard’ to see the data.
-
     ![Success](.././images/office365Subscriptions/Success.png#thumbnail)
 
 2.	Wait approx. 5 minutes for the data to be collected, processed, and rendered to the Cloudneeti Dashboard. 
-
     ![Dashboard](.././images/office365Subscriptions/Dashboard.png#thumbnail)
 
 ## 6	Notification Configuration
@@ -257,8 +254,7 @@ The following is the process outlined to create a secure service account credent
     b.	Choose "App password", enter name for app password and click on "Next" button.
 
 6.	Choose copy password to clipboard. You won't need to memorize this password.
-
-![savePassword](.././images/office365Subscriptions/savePassword.png#thumbnail)
+    ![savePassword](.././images/office365Subscriptions/savePassword.png#thumbnail)
 
 
 ## 8	Generate Cloudneeti API key
@@ -311,28 +307,29 @@ The following is the process outlined to create a secure service account credent
     wget https://raw.githubusercontent.com/Cloudneeti/docs_cloudneeti/master/scripts/Provision-M365DataCollector.ps1 -O Provision-M365DataCollector.ps1
     </pre></code>
 
-    a: Switch to the User directory
+5. Switch to the User directory
     <pre><code>
     cd $User
     </pre></code>
-    b: Run provisioning script with inline parameters
-
+    
+6. Run provisioning script with inline parameters
     <pre><code>
-    ./Provision-M365DataCollector.ps1 -CloudneetiLicenseId <Cloudneeti License Id> `
-    -CloudneetiAccountId <Cloudneeti Account Id> `
-    -CloudneetiEnvironment <Cloudneeti Environment> `
-    -ServicePrincipalId <Cloudneeti Data Collector Service Principal Id> `
-    -ArtifactsName <Cloudneeti office 365 Data Collector Artifact Name> `
-    -DataCollectorVersion <Cloudneeti Office 365 Data Collector Version> `
-    -OfficeDomain <Office 365 Domain Name> `
-    -OfficeTenantId <Office 365 Tenant Id> `
-    -OfficeAdminId <Office 365 Administator Id> `
-    -AzureSubscriptionId <Azure Subscription Id where office 365 data collector resouces will be   created> `
-    -DataCollectorName <Office 365 Data Collector Name> `
-                    -Location <Default EastUs2> <Region>
+    ./Provision-M365DataCollector.ps1 
+        -CloudneetiLicenseId <Cloudneeti License Id> `
+        -CloudneetiAccountId <Cloudneeti Account Id> `
+        -CloudneetiEnvironment <Cloudneeti Environment> `
+        -ServicePrincipalId <Cloudneeti Data Collector Service Principal Id> `
+        -ArtifactsName <Cloudneeti office 365 Data Collector Artifact Name> `
+        -DataCollectorVersion <Cloudneeti Office 365 Data Collector Version> `
+        -OfficeDomain <Office 365 Domain Name> `
+        -OfficeTenantId <Office 365 Tenant Id> `
+        -OfficeAdminId <Office 365 Administator Id> `
+        -AzureSubscriptionId <Azure Subscription Id where office 365 data collector resouces will be   created> `
+        -DataCollectorName <Office 365 Data Collector Name> `
+        -Location <Default EastUs2> <Region>
     </pre></code>
 
-    Note: Contact Cloudneeti Team for ArtifactsName, DataCollectorVersion and ArtifactsAccessKey
+    **Note: Contact Cloudneeti Team for ArtifactsName, DataCollectorVersion and ArtifactsAccessKey**
 
 
 7.	Then script execution will prompt you for below details: (Enter requested information)
