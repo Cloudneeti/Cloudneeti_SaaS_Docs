@@ -1,6 +1,34 @@
 # Office 365 Onboarding Guide
+Onboarding an Office 365 subscription to Cloudneeti is the process of granting Cloudneeti platform access to the customer’s cloud accounts. The onboarding process is in two Parts: 
 
-### **1. Prerequisites**
+**Part 1: Onboarding Office 365 account**
+
+**Part 2: Advanced security configuration** 
+
+![m365Overview](.././images/office365Subscriptions/m365OnboardOverview.png#thumbnail)
+
+Follow these steps to onboard an Office 365 Subscription to Cloudneeti:
+
+
+| Step No | Description                                     | Portal                        |
+|---|------------------------------------------|-------------------------------|
+| 1 | Prerequisites |                     |
+|   | **Part 1: Onboarding Office 365 account**    |                               |
+| 2 | Register Cloudneeti Application in the Customer’s Azure AD | Powershell                    |
+| 3 | Grant admin consent to the Service Principal          | Azure AD portal               |
+| 4 | Add Office 365 Account to Cloudneeti     | Cloudneeti application portal |
+| 5 | Verify Data Collection                   | Cloudneeti application portal |
+| 6 | Notification Configuration               | Cloudneeti application portal |
+|  | **Part 2: Advanced security configuration**  |                               |
+| 7 | Create application password              | Office 365 My Account portal  |
+| 8 | Generate Cloudneeti API key              | Cloudneeti API portal         |
+| 9 | Provision M365 Data Collector to your Azure Subscription | Azure portal                  |
+| 10 | Apply delete lock                        | Azure portal                  |
+
+
+
+
+## 1 Prerequisites
 Upon customer request, Cloudneeti license(s) will be configured and email invitation(s) will be sent to License Administrator(s). Additional users within Cloudneeti applications will be provisioned by the customer’s License Administrator.
 
 The following activities need to be completed prior to onboarding.
@@ -27,38 +55,54 @@ The following activities need to be completed prior to onboarding.
 
 
 
-### **2. Onboarding Steps**
+## Part 1: Onboarding Office 365 account
 
-Onboarding an Office 365 subscription to Cloudneeti is the process of granting Cloudneeti platform access to the customer’s cloud accounts. The onboarding process is in two Parts: 
+## 2	Register Cloudneeti Application in the Customer’s Azure AD
+Registering Cloudneeti Service Principal in the Azure AD can be done manually or using automation script.  
 
-1.	Part 1: Onboarding Office 365 account
-2.	Part 2: Advanced security configuration 
+#### 2.1 Manual
+1. Register Cloudneeti Service Principal
 
-![m365Overview](.././images/office365Subscriptions/m365OnboardOverview.png#thumbnail)
+    a. Login to [Azure Portal](https://portal.azure.com) with Global Administrator role
 
-Follow these steps to onboard an Office 365 Subscription to Cloudneeti:
+    b. Go to  Azure Active Directory in the sidebar then select App Registrations
+    
+    ![Service Principal - Azure Portal](.././images/azureSubscriptions/AzureManual_AddSP.png#thumbnail)
+
+    c. Enter the Name for example "Cloudneeti" 
+      
+    d. Click on "Register" button to create application.
+    
+2. Add Client Secret to Cloudneeti Service Principal
+
+    a. Click on "New Client Secret" in "Client Secret" section
+    
+    ![Client Secret](.././images/azureSubscriptions/Azure_SP_AddClientSecret.png#thumbnail)
+    
+    b. Add Description and select expiry time 
+    c. Click on "Add" button
+    d. Please copy and save the "Client Secret"
+    
+    ![Client Secret](.././images/azureSubscriptions/AzureSP_CaptureClientSecret.png#thumbnail)
+
+3. Add the Microsoft Graph permissions 
+
+    **This step is optional** in case the user doesn’t want to provide the Microsoft Graph permissions given in section Azure Active Directory Permissions.
+
+    a. Click on API Permissions
+
+    ![Service Principal - Azure Portal](.././images/azureSubscriptions/AzureManual_AddSP.png#thumbnail)
+
+    b. Add below permission
+
+    | API             | Permission Name                | Type        |
+    |-----------------|--------------------------------|-------------|
+    | Microsoft.Graph | Directory.Read.All<br>Refer here | Application |
+
+    c. Click on the 'Grant admin consent’ button in the ‘Grant consent’ section.
 
 
-| Step No | Description                                     | Portal                        |
-|---|------------------------------------------|-------------------------------|
-|   | **Part 1: Onboarding Office 365 account**    |                               |
-| 1 | Register Cloudneeti Application in the Customer’s Azure AD | Powershell                    |
-| 2 | Grant admin consent to the Service Principal          | Azure AD portal               |
-| 3 | Add Office 365 Account to Cloudneeti     | Cloudneeti application portal |
-| 4 | Verify Data Collection                   | Cloudneeti application portal |
-| 5 | Notification Configuration               | Cloudneeti application portal |
-|   | **Part 2: Advanced security configuration**  |                               |
-| 6 | Create application password              | Office 365 My Account portal  |
-| 7 | Generate Cloudneeti API key              | Cloudneeti API portal         |
-| 8 | Provision M365 Data Collector to your Azure Subscription | Azure portal                  |
-| 9 | Apply delete lock                        | Azure portal                  |
-
-
-
-### **3.	Part 1: Onboarding Office 365 account**
-
-#### 3.1	Register Cloudneeti Application in the Customer’s Azure AD
-
+#### 2.2 Automation
 Use the ***`Create-ServicePrincipal-Office365Onboarding.ps1`*** script to create and register a Cloudneeti data collector application. 
 
 1.	Open PowerShell in administrator mode. An administrative prompt is needed only to install missing Azure PowerShell modules.
@@ -82,7 +126,7 @@ Use the ***`Create-ServicePrincipal-Office365Onboarding.ps1`*** script to create
 
     ![storeSPInfo](.././images/office365Subscriptions/storeSPInfo.png#thumbnail)
 
-#### 3.2	Grant admin consent to the Service Principal
+## 3	Grant admin consent to the Service Principal
 
 The Azure AD Global Administrator needs to grant permissions to Cloudneeti in order to collect the Azure AD data. 
 
@@ -101,7 +145,7 @@ Follow the steps below to grant permission:
 
     ![APIPermission](.././images/office365Subscriptions/APIPermission.png#thumbnail)
 
-#### 3.3	Add Office 365 Account to Cloudneeti
+## 4	Add Office 365 Account to Cloudneeti
 
 1.	Log in to the Cloudneeti portal using the license admin user credentials.
 2.	If the license is not activated, click on the ‘Activate License’ button to activate the license. This step is needed    if this is the first cloud account you are adding to the License.
@@ -132,7 +176,7 @@ Follow the steps below to grant permission:
 
 5.	Click on ‘Add Account’.
 
-### **4.	Verify Data Collection**
+## 5	Verify Data Collection**
 
 1.	Click on ‘Go To Dashboard’ to see the data.
 
@@ -142,7 +186,7 @@ Follow the steps below to grant permission:
 
     ![Dashboard](.././images/office365Subscriptions/Dashboard.png#thumbnail)
 
-### **5.	Notification Configuration**
+## 6	Notification Configuration
 
 To receive email notifications from Cloudneeti Bot, please refer following steps.
 
@@ -155,7 +199,7 @@ To receive email notifications from Cloudneeti Bot, please refer following steps
 
 5.	Click on save button.
 
-### **6.	Part 2: Advanced security configuration**
+**Part 2: Advanced security configuration**
 An Azure Automation Account resource is deployed to collect data for additional 19 advanced security policies. Office 365 control plane exposes the data only through PowerShell that needs to run under a Global AD administrator credential (with MFA access). To ensure that Cloudneeti does not ever store/have access to a global AD administrator, the recommended way to deploy a small PowerShell script under customer’s control in their own Azure subscription. The metadata collected after running a script is then pushed to a Cloudneeti API that you have registered during the Cloudneeti API key generation procedure steps. 
 
 The advanced security policy data collector enables the following 19 policies as available in the Center for Internet Security (CIS) Microsoft 365 benchmark. Refer [here](https://www.cloudneeti.com/2019/01/assure-microsoft-365-security-and-compliance-with-cloudneeti/) 
@@ -186,7 +230,7 @@ The advanced security policy data collector enables the following 19 policies as
 
 Cloudneeti data collector provisioning steps:
 
-#### 6.1	Create application password
+## 7	Create application password
 Cloudneeti platform queries and processes Office 365 meta-data using a non-interactive login credential. As the background job processing is non-interactive it’ll require a service account credential. 
 The following is the process outlined to create a secure service account credential. 
 
@@ -217,7 +261,7 @@ The following is the process outlined to create a secure service account credent
 ![savePassword](.././images/office365Subscriptions/savePassword.png#thumbnail)
 
 
-#### 6.2	Generate Cloudneeti API key
+## 8	Generate Cloudneeti API key
 
 1.	Sign-up on Cloudneeti API portal.
 
@@ -252,7 +296,7 @@ The following is the process outlined to create a secure service account credent
     
     ![captureKeys](.././images/office365Subscriptions/captureKeys.png#thumbnail)
 
-#### 6.3	Office 365 data collector provisioning
+## 9	Office 365 data collector provisioning
 
 1.	Login to Azure portal: https://portal.azure.com 
 
@@ -302,7 +346,7 @@ The following is the process outlined to create a secure service account credent
     d:	Office 365 App Password
     
 
-#### 6.4	Apply delete lock 
+## 10	Apply delete lock 
 
 Apply delete lock to prevent accidental deletion of the data collection resource group
 
@@ -338,22 +382,5 @@ Apply delete lock to prevent accidental deletion of the data collection resource
     Congratulations! 
     You have just on-boarded an Office 365 account to Cloudneeti. 
     
-
-### **7.	Office 365 Post-Onboarding Configuration**
-
-To receive email notifications from Cloudneeti Bot, please refer following steps.
-
-1.	On Cloudneeti portal, navigate to settings
-
-2.	Select desired License and Account 
-
-3.	Click on configure button to select “Configure Notifications”
-
-4.	Enter comma separated email addresses.
-
-    ![configureNotifications](.././images/office365Subscriptions/configureNotifications.png#thumbnail)
-
-5.	Click on save button.
-
 
 
