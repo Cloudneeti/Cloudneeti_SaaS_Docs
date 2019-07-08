@@ -314,7 +314,8 @@ The following is the process outlined to create a secure service account credent
     
 6. Run provisioning script with inline parameters
     <pre><code>
-    ./Provision-M365DataCollector.ps1 -CloudneetiLicenseId <Cloudneeti License Id> `
+    ./Provision-M365DataCollector.ps1 
+        -CloudneetiLicenseId <Cloudneeti License Id> `
         -CloudneetiAccountId <Cloudneeti Account Id> `
         -CloudneetiEnvironment <Cloudneeti Environment> `
         -ServicePrincipalId <Cloudneeti Data Collector Service Principal Id> `
