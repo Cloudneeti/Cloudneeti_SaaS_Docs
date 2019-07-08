@@ -313,8 +313,8 @@ The following is the process outlined to create a secure service account credent
     </pre></code>
     
 6. Run provisioning script with inline parameters
-    <pre><code>
-    ./Provision-M365DataCollector.ps1 
+    <pre><code>```
+    ./Provision-M365DataCollector.ps1
         -CloudneetiLicenseId <Cloudneeti License Id> `
         -CloudneetiAccountId <Cloudneeti Account Id> `
         -CloudneetiEnvironment <Cloudneeti Environment> `
@@ -327,11 +327,9 @@ The following is the process outlined to create a secure service account credent
         -AzureSubscriptionId <Azure Subscription Id where office 365 data collector resouces will be   created> `
         -DataCollectorName <Office 365 Data Collector Name> `
         -Location <Default EastUs2> <Region>
-    </pre></code>
-
+```
+    </code></pre>
     **Note: Contact Cloudneeti Team for ArtifactsName, DataCollectorVersion and ArtifactsAccessKey**
-
-
 7.	Then script execution will prompt you for below details: (Enter requested information)
 
     a:	Cloudneeti API key
