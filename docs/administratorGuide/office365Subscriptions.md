@@ -114,11 +114,14 @@ Use the ***`Create-ServicePrincipal-Office365Onboarding.ps1`*** script to create
    
     b. data_collector_name with any friendly name for Cloudneeti data collector.
         <pre>
-        <code> .\Create-ServicePrincipal-Office365Onboarding.ps1 -azureActiveDirectoryId <Active_Directory_Id> `
-                -servicePrincipalName <data_collector_name> 
+        <code>```
+         .\Create-ServicePrincipal-Office365Onboarding.ps1 `
+                -azureActiveDirectoryId <Active_Directory_Id> `
+                -servicePrincipalName <data_collector_name> `
                 -expirationPeriod 1year
-        </pre>
+        ```
         </code>
+        </pre>
 
 
 4.	The script will prompt the login screen; you need to log in with **Global AD Administrator** or **Application Administrator** user credentials.
@@ -303,18 +306,18 @@ The following is the process outlined to create a secure service account credent
     ![Cloudshell](.././images/office365Subscriptions/Cloudshell.png#thumbnail) 
 
 4.	Execute below command in Cloudshell to download the Cloudneeti data collector provisioning script.
-    <pre><code>
+    <pre><code>```
     wget https://raw.githubusercontent.com/Cloudneeti/docs_cloudneeti/master/scripts/Provision-M365DataCollector.ps1 -O Provision-M365DataCollector.ps1
-    </pre></code>
+    ```</code></pre>
 
 5. Switch to the User directory
-    <pre><code>
+    <pre><code>```
     cd $User
-    </pre></code>
+    ```</code></pre>
     
 6. Run provisioning script with inline parameters
     <pre><code>```
-    ./Provision-M365DataCollector.ps1
+    ./Provision-M365DataCollector.ps1 `
         -CloudneetiLicenseId <Cloudneeti License Id> `
         -CloudneetiAccountId <Cloudneeti Account Id> `
         -CloudneetiEnvironment <Cloudneeti Environment> `
@@ -324,9 +327,9 @@ The following is the process outlined to create a secure service account credent
         -OfficeDomain <Office 365 Domain Name> `
         -OfficeTenantId <Office 365 Tenant Id> `
         -OfficeAdminId <Office 365 Administator Id> `
-        -AzureSubscriptionId <Azure Subscription Id where office 365 data collector resouces will be   created> `
+        -AzureSubscriptionId <Azure Subscription Id where office 365 data collector resouces will be created> `
         -DataCollectorName <Office 365 Data Collector Name> `
-        -Location <Default EastUs2> <Region>
+        -Location <Default EastUs2>
 ```
     </code></pre>
     **Note: Contact Cloudneeti Team for ArtifactsName, DataCollectorVersion and ArtifactsAccessKey**

@@ -101,8 +101,9 @@ Use the `Create-ServicePrincipal-AzureOnboarding.ps1` script to create and regis
 3.	Run the below command to create a service principal:
 
     <pre>
-    <code>
+    <code>```
         .\Create-ServicePrincipal-AzureOnboarding.ps1 -azureActiveDirectoryId <Active_Directory_Id> -servicePrincipalName <data_collector_name> -expirationPeriod 1year
+    ```
     </code>
     </pre>
 
@@ -116,8 +117,9 @@ Use the `Create-ServicePrincipal-AzureOnboarding.ps1` script to create and regis
     In case the user doesn’t want to provide the Microsoft Graph permissions given in section Azure Active Directory Permissions, you can use the `disableADPolicies` switch in the `Create-ServicePrincipal-AzureOnboarding.ps1` command:
 
     <pre>
-    <code>
+    <code>```
     .\Create-ServicePrincipal-AzureOnboarding.ps1 -azureActiveDirectoryId <Active_Directory_Id> -disableADPolicies -servicePrincipalName <data_collector_name> -expirationPeriod 1year
+    ```
     </code>
     </pre>
 
