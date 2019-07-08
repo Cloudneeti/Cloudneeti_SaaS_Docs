@@ -4,13 +4,13 @@ The purpose of this document is to outline the concept of Cloudneeti application
 Follow these steps to onboard the AWS account:
 
 
-| # | Step                                     |
-|---|------------------------------------------|
-| 1 | Prerequisites |
-| 2 | Create an AWS role for Cloudneeti access |
-| 3 | Add your AWS Account to Cloudneeti       |
-| 4 | Verify Data Collection                   |
-| 5 | Notification Configuration             |
+| # | Step                                     | Portal                        |
+|---|------------------------------------------|-------------------------------|
+| 1 | Prerequisites |   |
+| 2 | Create an AWS role for Cloudneeti access | Powershell or AWS Portal |
+| 3 | Add your AWS Account to Cloudneeti       | Cloudneeti application portal |
+| 4 | Verify Data Collection                   | Cloudneeti application portal |
+| 5 | Notification Configuration             | Cloudneeti application portal |
 
 
  ![AWSOnboardingOverview](.././images/amazonWebServiceAccounts/AWSOnboardingOverview.png#thumbnail)

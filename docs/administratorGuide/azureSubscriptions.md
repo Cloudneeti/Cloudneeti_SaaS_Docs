@@ -6,14 +6,14 @@ The purpose of this document is to outline the concept of Cloudneeti application
 Follow these steps to onboard the Azure subscription:
 
 
-| Step No  | Description                                      |
-|----------|------------------------------------------        |
-| 1        | Prerequisites       |
-| 2       | Register Cloudneeti Service Principal in the Azure AD and grant admin consent to Cloudneeti Service Principal     |
-| 3        | Assigning Role on Azure Subscription to Cloudneeti Service Principal |
-| 4        | Activating Cloudneeti License and Onboarding Azure Account |
-| 5        | Verification of Data Collection          |
-| 6        | Notification Configuration          |
+| Step No| Description                                      |Portal                        |
+|--------|------------------------------------------        |------------------------------|
+| 1      | Prerequisites       |   |
+| 2      | Register Cloudneeti Service Principal in the Azure AD and grant admin consent to Cloudneeti Service Principal     | Powershell or Azure AD portal |
+| 3      | Assigning Role on Azure Subscription to Cloudneeti Service Principal | Azure AD portal |
+| 4      | Activating Cloudneeti License and Onboarding Azure Account | Cloudneeti application portal |
+| 5      | Verification of Data Collection          | Cloudneeti application portal |
+| 6      | Notification Configuration          | Cloudneeti application portal |
 
 ## 1.	Prerequisites
 Upon customer request, Cloudneeti license(s) will be configured and email invitation(s) will be sent to License Administrator(s). Additional users within Cloudneeti applications will be provisioned by the customer’s License Administrator. 
@@ -80,13 +80,13 @@ Registering Cloudneeti Service Principal in the Azure AD can be done manually or
 
     a. Click on API Permissions
 
-    ![Service Principal - Azure Portal](.././images/azureSubscriptions/AzureManual_AddSP.png#thumbnail)
+    ![Service Principal - Azure Portal](.././images/azureSubscriptions/Grant_Permission_2.png#thumbnail)
 
     b. Add below permission
 
     | API             | Permission Name                | Type        |
     |-----------------|--------------------------------|-------------|
-    | Microsoft.Graph | Directory.Read.All<br>Refer here | Application |
+    | Microsoft.Graph | Directory.Read.All<br> [Refer here](https://docs.microsoft.com/en-us/graph/permissions-reference#directory-permissions) | Application |
 
     c. Click on the 'Grant admin consent’ button in the ‘Grant consent’ section.
 
@@ -230,7 +230,7 @@ f. Click on the 'Grant admin consent’ button in the ‘Grant consent’ sectio
  
     ![Azure connector](.././images/azureSubscriptions/Connector.png#thumbnail)
 
-4.	Fill in the account and service principal information displayed in step 2.1 output.
+4.	Fill in the account and service principal information displayed in step 2.1 or 2.2 output.
  
     ![Add account](.././images/azureSubscriptions/Add_Azure_Account.png#thumbnail)
 

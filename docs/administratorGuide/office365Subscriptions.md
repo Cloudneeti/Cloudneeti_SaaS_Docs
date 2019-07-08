@@ -14,7 +14,7 @@ Follow these steps to onboard an Office 365 Subscription to Cloudneeti:
 |---|------------------------------------------|-------------------------------|
 | 1 | Prerequisites |                     |
 |   | **Part 1: Onboarding Office 365 account**    |                               |
-| 2 | Register Cloudneeti Application in the Customer’s Azure AD | Powershell                    |
+| 2 | Register Cloudneeti Application in the Customer’s Azure AD | Azure AD portal or Powershell                    |
 | 3 | Grant admin consent to the Service Principal          | Azure AD portal               |
 | 4 | Add Office 365 Account to Cloudneeti     | Cloudneeti application portal |
 | 5 | Verify Data Collection                   | Cloudneeti application portal |
@@ -87,17 +87,18 @@ Registering Cloudneeti Service Principal in the Azure AD can be done manually or
 
 3. Add the Microsoft Graph permissions 
 
-    **This step is optional** in case the user doesn’t want to provide the Microsoft Graph permissions given in section Azure Active Directory Permissions.
+    The Microsoft graph permission Directory.Read.All allows the app to read data in the organization's directory, such as user attributes, groups, and applications, without a signed-in user. Microsoft graph permission SecurityEvents.Read.All allow app to read Office 365 Secure Score data. You can find more details about Microsoft Graph API permission [here](https://docs.microsoft.com/en-us/graph/permissions-reference).
 
     a. Click on API Permissions
 
-    ![Service Principal - Azure Portal](.././images/azureSubscriptions/AzureManual_AddSP.png#thumbnail)
+    ![Service Principal - Azure Portal](.././images/office365Subscriptions/APIPermission.png#thumbnail)
 
-    b. Add below permission
+    b. Add below permission.     
 
     | API             | Permission Name                | Type        |
     |-----------------|--------------------------------|-------------|
-    | Microsoft.Graph | Directory.Read.All<br>Refer here | Application |
+    | Microsoft.Graph | Directory.Read.All | Application |
+    | Microsoft.Graph | SecurityEvents.Read.All | Application |
 
     c. Click on the 'Grant admin consent’ button in the ‘Grant consent’ section.
 
@@ -170,9 +171,9 @@ Follow the steps below to grant permission:
     ![m365Connector](.././images/office365Subscriptions/m365Connector.png#thumbnail)
 
 4.	Fill in the account and service principal information displayed in step 
-3.1 output.
+2.1 or 2.2 output.
 
-    ![accountInfo](.././images/office365Subscriptions/accountInfo.png#thumbnail) 
+![accountInfo](.././images/office365Subscriptions/accountInfo.png#thumbnail) 
 
 5.	Click on ‘Add Account’.
 
@@ -199,7 +200,8 @@ To receive email notifications from Cloudneeti Bot, please refer following steps
 
 5.	Click on save button.
 
-**Part 2: Advanced security configuration**
+## Part 2: Advanced security configuration
+
 An Azure Automation Account resource is deployed to collect data for additional 19 advanced security policies. Office 365 control plane exposes the data only through PowerShell that needs to run under a Global AD administrator credential (with MFA access). To ensure that Cloudneeti does not ever store/have access to a global AD administrator, the recommended way to deploy a small PowerShell script under customer’s control in their own Azure subscription. The metadata collected after running a script is then pushed to a Cloudneeti API that you have registered during the Cloudneeti API key generation procedure steps. 
 
 The advanced security policy data collector enables the following 19 policies as available in the Center for Internet Security (CIS) Microsoft 365 benchmark. Refer [here](https://www.cloudneeti.com/2019/01/assure-microsoft-365-security-and-compliance-with-cloudneeti/) 
@@ -227,8 +229,6 @@ The advanced security policy data collector enables the following 19 policies as
 | 5.6       | 18. (L1) Ensure user role group changes is reviewed at least every week | Auditing                         |
 | 6.1       | 19. (L2) Ensure that document sharing is being controlled by domains with white/black list | Storage                          |
 
-
-Cloudneeti data collector provisioning steps:
 
 ## 7	Create application password
 Cloudneeti platform queries and processes Office 365 meta-data using a non-interactive login credential. As the background job processing is non-interactive it’ll require a service account credential. 
