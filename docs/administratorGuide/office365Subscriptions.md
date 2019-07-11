@@ -55,7 +55,7 @@ The following activities need to be completed prior to onboarding.
 
 
 
-## Part 1: Onboarding Office 365 account
+# Part 1: Onboarding Office 365 account
 
 ## 2	Register Cloudneeti Application in the Customer’s Azure AD
 Registering Cloudneeti Service Principal in the Azure AD can be done manually or using automation script.  
@@ -179,7 +179,7 @@ Follow the steps below to grant permission:
 
 5.	Click on ‘Add Account’.
 
-## 5	Verify Data Collection**
+## 5	Verify Data Collection
 
 1.	Click on ‘Go To Dashboard’ to see the data.
     ![Success](.././images/office365Subscriptions/Success.png#thumbnail)
@@ -200,7 +200,7 @@ To receive email notifications from Cloudneeti Bot, please refer following steps
 
 5.	Click on save button.
 
-## Part 2: Advanced security configuration
+# Part 2: Advanced security configuration
 
 An Azure Automation Account resource is deployed to collect data for additional 19 advanced security policies. Office 365 control plane exposes the data only through PowerShell that needs to run under a Global AD administrator credential (with MFA access). To ensure that Cloudneeti does not ever store/have access to a global AD administrator, the recommended way to deploy a small PowerShell script under customer’s control in their own Azure subscription. The metadata collected after running a script is then pushed to a Cloudneeti API that you have registered during the Cloudneeti API key generation procedure steps. 
 
