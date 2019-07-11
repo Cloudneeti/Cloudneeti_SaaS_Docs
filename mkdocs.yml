@@ -42,7 +42,7 @@ nav:
     - Authentication: gettingStarted/authentication.md
     - Authorization: gettingStarted/authorization.md
 - Administrator Guide:
-  - OVERRVIEW : administratorGuide/adminstrationGuide.md
+  - OVERVIEW: administratorGuide/adminstrationGuide.md
   - ONBOARDING CLOUD ACCOUNTS:
     - Azure Subscriptions: administratorGuide/azureSubscriptions.md
   #  - Azure Subscriptions (Manual): administratorGuide/azureSubscriptionsManual.md
