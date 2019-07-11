@@ -41,7 +41,9 @@ The following activities need to be completed by the customer prior to onboardin
 
     ![Azure Overview](.././images/azureSubscriptions/Switch_to_AzureDirectory.png#thumbnail)
 
-2. Click on Azure Active Directory from left pan of the portal and click on properties to get Tenant ID
+2. Click on **Azure Active Directory** from in the primary menu.
+    Click on **Properties** in the secondary menu.
+    Copy **Directory ID** to a notepad.
     
     ![Azure Overview](.././images/azureSubscriptions/Azure_Directory_ID.png#thumbnail)
 
@@ -57,31 +59,33 @@ Registering Cloudneeti Service Principal in the Azure AD can be done manually or
 
     a. Login to [Azure Portal](https://portal.azure.com) with Global Administrator role
 
-    b. Go to  Azure Active Directory in the sidebar then select App Registrations and click on "New registration"
+    b. Go to  **Azure Active Directory** in the in the primary menu.
+        Select **App Registrations** in the secondary menu
+        Click on **New registration**
     
     ![Service Principal - Azure Portal](.././images/azureSubscriptions/AzureManual_AddSP.png#thumbnail)
 
-    c. Enter the Name for example "Cloudneeti" 
+    c. Enter the name (for example "Cloudneeti")
       
-    d. Click on "Register" button to create application.
+    d. Click on **Register** button to create Cloudneeti Service Principal.
     
 2. Add Client Secret to Cloudneeti Service Principal
 
-    a. Click on "New Client Secret" in "Client Secret" section
+    a. Click on **new client secret** in "Client Secret" section
     
     ![Client Secret](.././images/azureSubscriptions/Azure_SP_AddClientSecret.png#thumbnail)
     
     b. Add Description and select expiry time 
     
-    c. Click on "Add" button
+    c. Click on **Add** button
     
-    d. Please copy and save the "Client Secret"
+    d. Please copy to clipboard and paste the Client Secret in your notepad
     
     ![Client Secret](.././images/azureSubscriptions/AzureSP_CaptureClientSecret.png#thumbnail)
 
 3. Add the Microsoft Graph permissions 
 
-    **This step is optional** in case the user doesn’t want to provide the Microsoft Graph permissions given in section Azure Active Directory Permissions.
+    This step is needed to gain access to Azure AD related policies. If customer doesn’t want to grant Cloudneeti application access to customer’s Azure AD, Cloudneeti application will not be able to provider Azure AD related security posture information.
 
     a. Click on API Permissions
 
@@ -92,6 +96,7 @@ Registering Cloudneeti Service Principal in the Azure AD can be done manually or
     | Microsoft.Graph | Directory.Read.All<br> [Refer here](https://docs.microsoft.com/en-us/graph/permissions-reference#directory-permissions) | Application |
 
     c. Click on the 'Grant admin consent’ button in the ‘Grant consent’ section.
+    d. Verify success message showing Successfully granted admin consent for the requested permissions.
 
     ![Service Principal - Azure Portal](.././images/azureSubscriptions/Azure_API_Permissions.png#thumbnail)
 
@@ -131,29 +136,24 @@ Use the `Create-ServicePrincipal-AzureOnboarding.ps1` script to create and regis
 
 6. Grant admin consent to Cloudneeti Service Principal
 
+This step is needed to gain access to Azure AD related policies. If customer doesn’t want to grant Cloudneeti application access to customer’s Azure AD, Cloudneeti application will not be able to provider Azure AD related security posture information.
 
-    The Azure AD **Global Administrator** needs to grant permissions to Cloudneeti in order to collect the Azure AD data. 
+Click on the 'Grant admin consent’ button in the ‘Grant consent’ section.
 
-    Skip this step if the user has created the Cloudneeti service principal without the Microsoft Graph permissions.
-
-    Follow the steps below to grant permission:
-
-    a. Sign in to the Azure portal as a global administrator.
+Follow the steps below to grant permission:
+a. Sign in to the Azure portal as a global administrator.  
+b. Click on **Azure Active Directory**.  
+c. Navigate to the **App Registrations blade**.   
+d. Select Cloudneeti Service Principal.
     
-    b. Click on `Azure Active Directory`.
-    
-    c. Navigate to the App Registrations blade.
-    
-    d. Select Cloudneeti service principal.
-    
-    ![Service Principal - Azure Portal](.././images/azureSubscriptions/Grant_Permission.png#thumbnail)
+![Service Principal - Azure Portal](.././images/azureSubscriptions/Grant_Permission.png#thumbnail)
      
 
-    e. Go to 'API permissions' and confirm Microsoft Graph permissions.
+e. Go to API permissions and confirm Microsoft Graph permissions.
 
-    f. Click on the 'Grant admin consent’ button in the ‘Grant consent’ section.
+f. Click on the 'Grant admin consent’ button in the ‘Grant consent’ section for the listed permissions.
 
-    ![Grant permission ](.././images/azureSubscriptions/Azure_API_Permissions.png#thumbnail)
+   ![Grant permission ](.././images/azureSubscriptions/Azure_API_Permissions.png#thumbnail)
 
 
 ## 3	Assigning Role 
@@ -164,20 +164,19 @@ Assign required roles Cloudneeti Service Principal to on Customer Subscription
 #### 3.1  Reader and backup reader
 Follow the steps below to assign reader and backup reader roles to Cloudneeti Service Principal on the Azure subscription:
 
-1.	Go to the subscription’s Access control (IAM) in the menu.
+1.	Go to the subscription’s **Access control (IAM)** in the third level menu..
 
-2.	Click on the ’Add’ button and select ‘Add role assignment’.
+2.	Click on the **Add** button and select **Add role assignment**.
  
-3.	Select ‘Reader’ role and Cloudneeti service principal.
+3.	Select **Reader** role and Cloudneeti service principal.
 
-4.	Select ‘Save’ to complete the role assignment. 
+4.	Select **Save** to complete the role assignment. 
 
     ![Assign role](.././images/azureSubscriptions/Azure_Assign_Role.png#thumbnail)
  
 
 #### 3.2 Website Contributor 
- 
- Cloudneeti Service principal needs Website Contributor role access to the Subscription in order to view application settings. **This step is optional**, if the Website Contributor Role is not assigned then below 15 policies will show "No Data" on Cloudneeti portal.
+This step is needed to gain access to application settings. If customer doesn’t want to grant the Website Contributor Role is not assigned then below 15 policies will show "No Data" on Cloudneeti portal.
  
  
 | Policy ID | Policy Name                              | Category |
@@ -202,21 +201,18 @@ Follow the steps below to assign reader and backup reader roles to Cloudneeti Se
 
  Follow the steps below to assign Website Contributor role to Cloudneeti Service Principal on the Azure subscription.
 
-1.	Go to the subscription’s Access control (IAM) in the menu..
+1.	Go to the subscription’s **Access control (IAM)** in third level menu.
 
-2.	Click on the ’Add’ button and select ‘Add role assignment’.
- 
-    ![Add role](.././images/azureSubscriptions/Assign_role.png#thumbnail)
- 
+2.	Click on the **Add** button and select **Add role assignment**.
 
-3.	Select ‘Website Contributor’ role and Cloudneeti service principal.
+3.	Select **Website Contributor** role and **Cloudneeti service principal**.
+4.	Select **Save** to complete the role assignment. 
 
     ![Assign role](.././images/azureSubscriptions/Website_Contributor_Role.png#thumbnail)
  
 
-4.	Select ‘Save’ to complete the role assignment. 
+## 4	Onboarding Azure Subscription
 
-## 4	Onboarding Azure Subscription Account
 
 1.	Log in to the Cloudneeti portal using the license admin user credentials.
 
@@ -231,7 +227,7 @@ Follow the steps below to assign reader and backup reader roles to Cloudneeti Se
     a. Please go to Settings > Manage Accounts on Cloudneeti portal
     ![Activate License](.././images/azureSubscriptions/Manage_Accounts.png#thumbnail)
     
-    b. Click on "Add Cloud Account" button
+    b. Click on **Add Cloud Account** button
     ![Activate License](.././images/azureSubscriptions/Add_Account.png#thumbnail)
 
     c. Select License to add cloud account
@@ -247,7 +243,7 @@ Follow the steps below to assign reader and backup reader roles to Cloudneeti Se
 
 5.	Click on ‘Get Subscriptions’ to get the list of subscriptions on which Cloudneeti service principal has reader access.
 
-6.	Select the Azure subscription to onboard and click ‘Save & Continue’.
+6.	Select the Azure subscription to onboard and click **Save & Continue**.
  
     ![Add Account - save and continue](.././images/azureSubscriptions/Add_Azure_Account_Select_Subscription.png#thumbnail)
 
@@ -271,7 +267,7 @@ To receive email notifications from Cloudneeti Bot, please refer following steps
 
 1.	On Cloudneeti portal, navigate to settings
 2.	Select desired License and Account 
-3.	Click on configure button to select “Configure Notifications”
+3.	Click on configure button to select **Configure Notifications**
 4.	Enter comma separated email addresses.
 
     ![Configure Notifications](.././images/azureSubscriptions/Configure_notifications.png#thumbnail)
