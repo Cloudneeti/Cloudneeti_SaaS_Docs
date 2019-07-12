@@ -1,5 +1,20 @@
 # **Release Notes**
 
+## **July 2019- v2.11.1**
+
+1.  **User Experience Improvements**
+    *   Risk Dashboard: Cloudneeti introduces Risk dashboard based on “NIST Cyber Security Framework v1.1”. Last month we introduced our Industry leading Risk Posture (a matrix of machine learning infused Risk Likelihood prediction overlaid with Risk Impact). And this month we are topping that by combining it with a NIST CSF v1.1. A continuous risk assurance ensures a solid basis for justifying remediation plans, strategies and resource requests to management.
+    *   Reporting: Cloudneeti added detailed report download in word format for Azure and AWS cloud accounts. This feature enables the user to download the report to get a list of resources and controls.
+    *   Documentation: Cloudneeti released a user-friendly version of the documentation site.
+
+2.  **Platform & Stability Improvements**
+    *   Performance enhancements to data collection and processing mechanism.
+    *   Azure and AWS - category name to category id updates for performance optimizations.
+
+3.  **Policies & Benchmarks Additions/Updates**
+    *   Added additional 16 controls to following compliance benchmark for AWS cloud accounts.
+        1.  AWS: FFIEC - Federal Financial Institutions Examination Council (CAT).
+
 ## **July 2019- v2.10.1**
 
 1.  **User Experience Improvements**
