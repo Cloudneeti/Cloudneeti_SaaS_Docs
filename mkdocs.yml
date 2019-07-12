@@ -1,4 +1,4 @@
-site_name: Cloudneeti Documentation
+﻿site_name: Cloudneeti Documentation
 site_description: Cloudneeti Documentation
 site_author: The Cloudneeti Team
 repo_name: Cloudneeti_SaaS_Docs
@@ -10,7 +10,7 @@ theme:
   static_templates:
       - index.html
   feature:
-    tabs: true
+    tabs: false
   palette:
     primary: 'cloudneeti'
     accent: 'cloudneeti'
