@@ -109,17 +109,25 @@ Follow below steps to assign required roles to remediation policies configured f
 4.	Run below commands on CloudShell:
 
     a.	Download script 
-        <pre><code>
+        <pre>
+        <code>```
         wget https://raw.githubusercontent.com/Cloudneeti/docs_cloudneeti/master/scripts/Assign-RolesToRemediationPolicy.ps1 -O Assign-RolesToRemediationPolicy.ps1
-        </pre></code>
+        ```
+        </pre>
+        </code>
+    
     b.  Switch to the User directory
         <pre><code>
+        ```
         cd $user
+        ```
         </pre></code>  
     c.  Run provisioning script with inline parameters
         <pre><code>
+        ```
         ./Assign-RolesToRemediationPolicy.ps1 -azureActiveDirectoryId<Azure active directory Id> `
                                     -subscriptionId<Subscription Id > `
+        ```
         </pre></code>
 
 5.	Azure will start evaluation of resources related to enabled policies.

@@ -4,13 +4,13 @@ The purpose of this document is to outline the concept of Cloudneeti application
 Follow these steps to onboard the AWS account:
 
 
-| # | Step                                     |
-|---|------------------------------------------|
-| 1 | Prerequisites |
-| 2 | Create an AWS role for Cloudneeti access |
-| 3 | Add your AWS Account to Cloudneeti       |
-| 4 | Verify Data Collection                   |
-| 5 | Notification Configuration             |
+| # | Step                                     | Portal                        |
+|---|------------------------------------------|-------------------------------|
+| 1 | Prerequisites |   |
+| 2 | Create an AWS role for Cloudneeti access | Powershell or AWS Portal |
+| 3 | Add your AWS Account to Cloudneeti       | Cloudneeti application portal |
+| 4 | Verify Data Collection                   | Cloudneeti application portal |
+| 5 | Notification Configuration             | Cloudneeti application portal |
 
 
  ![AWSOnboardingOverview](.././images/amazonWebServiceAccounts/AWSOnboardingOverview.png#thumbnail)
@@ -67,12 +67,18 @@ Use serverless.yml file to create a role to mark Cloudneeti's account as a trust
 
 1.	Open PowerShell application as an administrator (right click on PowerShell and select run as administrator)
 2.	In PowerShell application, navigate to folder location where you downloaded the file “serverless.yml” (e.g. “cd C:\Downloads”)
-3.	Type “aws configure” and enter 
-    a.	Account access key id and secret access key of an AWS IAM User (with **Administrator Access** policy) 
-    b.	Default region name(eg. us-east-1). 
-    c.	Default output format as "json" only.
-4.	To add Cloudneeti data provisioning resource, execute the command “serverless deploy”
+3.	Type “aws configure” and enter
 
+    a.	Account access key id and secret access key of an AWS IAM User (with **Administrator Access** policy) 
+
+    b.	Default region name(eg. us-east-1). 
+
+    c.	Default output format as "json" only.
+
+4.	To add Cloudneeti data provisioning resource, execute below command 
+    <pre><code>```
+    serverless deploy
+    ```</code></pre>
     ![Serverless Deploy](.././images/amazonWebServiceAccounts/Serverless_Deploy.png#thumbnail)
 5.	An AWS role will be created in the customer's account to mark Cloudneeti's account as a trusted entity with the SecurityAudit access policy. 
 
