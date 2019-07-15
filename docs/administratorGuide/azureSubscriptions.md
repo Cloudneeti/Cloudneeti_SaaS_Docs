@@ -51,6 +51,7 @@ The following activities need to be completed by the customer prior to onboardin
     
     ![Azure Overview](.././images/azureSubscriptions/DomainName.png#thumbnail)
 
+
 ## 2. Register Cloudneeti Service Principal in the Azure AD
 Registering Cloudneeti Service Principal in the Azure AD can be done manually or using automation script.  
 
@@ -68,6 +69,10 @@ Registering Cloudneeti Service Principal in the Azure AD can be done manually or
     c. Enter the name (for example "Cloudneeti")
       
     d. Click on **Register** button to create Cloudneeti Service Principal.
+
+    e. Copy the Cloudneeti Service Principal id
+
+    ![Service Principal - Azure Portal](.././images/azureSubscriptions/Azure_AppReg_App_ID.png#thumbnail)
     
 2. Add Client Secret to Cloudneeti Service Principal
 
