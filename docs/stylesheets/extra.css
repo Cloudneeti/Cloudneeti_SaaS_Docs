@@ -1,17 +1,14 @@
 /* ===== Generel CSS ===== */
-
 * {
     margin: 0;
     padding: 0;
 }
-
 body {
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
 }
 
 /* ===== Navigation Section ===== */
-
 .navbar-brand { position: relative; z-index: 2; }
 
 .navbar-nav.navbar-right .btn { position: relative; z-index: 2; padding: 4px 20px; margin: 10px auto; transition: transform 0.3s; }
@@ -86,7 +83,6 @@ body {
 
 
 /* ===== Header Section ===== */
-
 .header-text {
     margin-top: 10px;
     padding-top: 0px;
@@ -110,7 +106,6 @@ body {
 
 
 /* ===== Tiles Section ===== */
-
 .tiles_section{margin-top: 2%;margin-bottom: 2%}
 .tiles_section-caption{
     color: #475363;
@@ -144,7 +139,6 @@ body {
 }
 
 /* ===== Footer Section ===== */
-
 .footer {
     background-color: black;
     margin-top: 0px;
@@ -177,7 +171,6 @@ body {
 } */
 
 /* ------- MarkDown Theme Customization CSS--------- */
-
 img[src*="#thumbnail"] {
     display: block;
     max-width: 100%;
