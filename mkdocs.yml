@@ -27,7 +27,7 @@ extra_javascript:
   
 nav:
 - Getting Started: 
-  - CLOUDNEETI PRODUCT: 
+  - Cloudneeti Product: 
     - Product Overview: gettingStarted/productOverview.md
     - Product Capabilities: gettingStarted/productCapabilities.md
     - Cloud Accounts​: gettingStarted/cloudAccounts.md
@@ -36,29 +36,29 @@ nav:
   # - USER IDENTITY MANAGEMENT:
   #   - Authentication: gettingStarted/authentication.md
   #   - Authorization: gettingStarted/authorization.md
-  - ACTIVATE LICENSE: 
+  - Activate License: 
     - How To Activate License​: gettingStarted/activateCloudneetiLicense.md
-  - USER IDENTITY MANAGEMENT:
+  - User Identity Management:
     - Authentication: gettingStarted/authentication.md
     - Authorization: gettingStarted/authorization.md
 - Administrator Guide:
-  - OVERVIEW: administratorGuide/adminstrationGuide.md
-  - ONBOARDING CLOUD ACCOUNTS:
+  - Overview: administratorGuide/adminstrationGuide.md
+  - Onboarding Cloud Accounts:
     - Azure Subscriptions: administratorGuide/azureSubscriptions.md
   #  - Azure Subscriptions (Manual): administratorGuide/azureSubscriptionsManual.md
     - Amazon Web Service Accounts: administratorGuide/amazonWebServiceAccounts.md
   #  - Amazon Web Service Accounts (Manual): administratorGuide/amazonWebServiceAccountsManual.md
     - Office 365 Subscriptions: administratorGuide/office365Subscriptions.md
-  - MANAGE CLOUD ACCOUNTS:
+  - Manage Cloud Accounts:
     - Add Cloud Account: administratorGuide/addCloudAccount.md
     - Configure Security Policies: administratorGuide/configureSecurityPolicies.md
     - Configure Notifications: administratorGuide/configureNotifications.md
   #   - Configure Data Collection: administratorGuide/configureDataCollection.md
     - Manage Cloud Account Users: administratorGuide/manageCloudAccountUsers.md
-  - MANAGE USERS:
+  - Manage Users:
     - License Users: administratorGuide/licenseUsers.md
     - Cloud Account Users: administratorGuide/cloudAccountUsers.md
-  - MANAGE REMEDIATIONS:
+  - Manage Remediations:
     - For Azure Policies: administratorGuide/forAzurePolicies.md
   #   - For AWS Policies: administratorGuide/forAWSPolicies.md
   # - MANAGE INTEGRATIONS:
@@ -71,7 +71,7 @@ nav:
   # - MANAGE ORGANIZATION:
   #   - Manage Licenses: administratorGuide/manageLicenses.md
 - Release Notes:
-  - RELEASE NOTES: releaseNotes/releaseNotes.md
+  - Release Notes: releaseNotes/releaseNotes.md
 # - User Guide:
 #   - DASHBOARDS: 
 #     - CISO: userGuide/CISO.md
