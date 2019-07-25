@@ -1,5 +1,79 @@
 # **Release Notes**
 
+## **July 2019- v2.12.1**
+
+1.  **User Experience Improvements**
+    *   Self-service free trial à experience the power of security and compliance automation in your AWS and Azure cloud environment with a 1 month free trial of Cloudneeti Continuous Cloud Assurance. Cloudneeti self-service free trial is available at Azure Marketplace.
+    *   Enhancements to Risk dashboard for screen resolution and “Risk Level Trend” chart.
+    *   Enhancements to Manage Features page to show license type and cloud connector quotas.
+    *   Notification message updated to include operation id.
+
+2.  **Platform & Stability Improvements**
+    *   Data collection and professing performance and scale improvements for many policies.
+    *   Enhancements to OS and data disk encryption policies.
+
+3.  **Policies & Benchmarks Additions/Updates**
+    *   Addition of following compliance benchmark for Azure and AWS cloud account
+        1.  AWS: GxP Life Sciences - FDA 21 CFR PART 11
+        2.  Azure: GxP Life Science - FDA 21 CFR PART 11
+    *   Addition of following 52 new Azure security policies
+
+|   **Category**            |   **Policy Title**            |
+|-----------------------|---------------------------|
+|   Azure - Storage and Database    |   Ensure that monitoring of SQL managed server without Advanced Data Security is enabled in ASC |
+|   Azure - Storage and Database    |   Ensure that all Advanced Threat Protection types on SQL managed instance is enabled in ASC   |
+|   Azure - Storage and Databases    |   Ensure that all Advanced Threat Protection types on SQL server is enabled in ASC   |
+|   Azure - Fundamentals    |   Ensure that monitoring of access rules in Event Hub namespaces is enabled in ASC   |
+|   Azure - Storage and Databases    |   Ensure that monitoring of auditing policy Action-Groups and Actions setting is enabled in ASC   |
+|   Azure - Storage and Databases    |   Ensure that the audit monitoring of SQL Servers is enabled in ASC   |
+|   Azure - Fundamentals   |   Ensure that monitoring of using built-in RBAC rules is enabled in ASC   |
+|   Azure - Fundamentals    |   Ensure that monitoring of access rules in Event Hubs is enabled in ASC   |
+|   Azure - Kubernetes & Containers   |   Ensure that monitoring of kubernetes services without authorized IP ranges is enabled in ASC   |
+|   Azure - Fundamentals   |   Ensure that monitoring of automation account encryption is enabled in ASC   |
+|   Azure - Networking    |   Ensure that monitoring of DDoS protection for virtual network is enabled in ASC   |
+|   Azure - Logging and Auditing   |   Ensure that monitoring of diagnostic logs in IoT Hubs is enabled in ASC   |
+|   Azure - Compute (IaaS)    |   Ensure that endpoint protection monitoring for virtual machine scale sets is enabled in ASC   |
+|   Azure - Storage and Databases    |   Ensure that 'Send alerts to' is set in SQL server Advanced Data Security settings is enabled in ASC   |
+|   Azure - Compute (IaaS)    |   Ensure that IP forwarding monitoring on virtual machines is disabled in ASC   |
+|   Azure - Compute (IaaS)    |   Ensure that monitoring of network just In time access is enabled in ASC   |
+|   Azure - Compute (IaaS)    |   Ensure that monitoring of open management ports on virtual machines is enabled in ASC   |
+|   Azure - Logging and Auditing    |   Ensure that monitoring of endpoint protection is enabled in ASC   |
+|   Azure - Compute (IaaS)    |   Ensure that monitoring of Internet-facing VM for NSG traffic hardening is enabled in ASC   |
+|   Azure - Compute (IaaS)    |   Ensure that monitoring of NSG for virtual machines is enabled in ASC   |
+|   Azure - Compute (IaaS)    |   Ensure that monitoring of NSG for Subnet is enabled in ASC   |
+|   Azure - Kubernetes & Containers    |   Ensure that monitoring of kubernetes services without pod security policy is enabled in ASC   |
+|   Azure - Logging and Auditing    |   Ensure that required diagnostic logs retention period in days for Batch accounts is set in ASC   |
+|   Azure - Logging and Auditing    |   Ensure that required diagnostic logs retention period in days in Azure Search service is set in ASC   |
+|   Azure - Logging and Auditing    |   Ensure that required diagnostic logs retention period in days in Data Lake Analytics is set in ASC   |
+|   Azure - Logging and Auditing    |   Ensure that required diagnostic logs retention period in days in Event Hub accounts is set in ASC   |
+|   Azure - Logging and Auditing    |   Ensure that required diagnostic logs retention period in days in IoT Hub accounts is set in ASC   |
+|   Azure - Logging and Auditing    |   Ensure that required diagnostic logs retention period in days in Key Vault vaults is set in ASC   |
+|   Azure - Logging and Auditing    |   Ensure that required diagnostic logs retention period in days in Service Bus is set in ASC   |
+|   Azure - Logging and Auditing    |   Ensure that required diagnostic logs retention period in days in Stream Analytics is set in ASC   |
+|   Azure - Kubernetes & Containers    |   Ensure that monitoring of kubernetes services without RBAC is enabled in ASC   |
+|   Azure - Storage and Databases    |   Ensure that monitoring of sensitive data is classified on SQL database is enabled in ASC   |
+|   Azure - Storage and Databases    |   Ensure that monitoring of SQL managed instances alerts being sent to admins and subscription owners is enabled in ASC   |
+|   Azure - Fundamentals    |   Ensure that monitoring of classic storage accounts migration to ARM is enabled in ASC   |
+|   Azure - Compute (IaaS)    |   Ensure that reporting of system updates in virtual machine scale sets is enabled in ASC   |
+|   Azure - Storage and Database    |   Ensure that monitoring of unencrypted SQL databases is enabled in ASC   |
+|   Azure - Compute (IaaS)    |   Ensure that monitoring of classic virtual machines is enabled in ASC   |
+|   Azure - Compute (IaaS)    |   Ensure that OS vulnerabilities monitoring for virtual machine scale sets is enabled in ASC   |
+|   Azure - Fundamentals    |   Ensure that the detection of VM vulnerabilities by a vulnerability assessment solution is enabled in ASC   |
+|   Azure - Storage and Databases    |   Ensure that Vulnerability assessment on your SQL managed instances is enabled in ASC   |
+|   Azure - Storage and Database    |   Ensure that Vulnerability assessment on your SQL servers is enabled in ASC   |
+|   Azure - Storage and Databases    |   Ensure that monitoring of SQL managed instances without Advanced Data Security is enabled in ASC   |
+|   Azure - Compute (PaaS and Serverless)    |   Ensure that monitoring of permissive network access to app-services is enabled in ASC   |
+|   Azure - Compute (PaaS and Serverless)    |   Ensure that monitoring of the use of HTTPS in API app is enable in ASC   |
+|   Azure - Compute (PaaS and Serverless)    |   Ensure that monitoring of CORS restrictions for API app is enable in ASC   |
+|   Azure - Compute (PaaS and Serverless)    |   Ensure that monitoring of CORS restrictions for API function is enabled in ASC   |
+|   Azure - Compute (PaaS and Serverless)    |   Ensure that monitoring of CORS restrictions for API web is enable in ASC   |
+|   Azure - Compute (PaaS and Serverless)    |   Ensure that monitoring of diagnostics logs in app services is enabled in ASC   |
+|   Azure - Compute (PaaS and Serverless)    |   Ensure that monitoring of the use of HTTPS in function app is enabled in ASC   |
+|   Azure - Compute (PaaS and Serverless)    |   Ensure that monitoring of IP restrictions for API app is enabled in ASC   |
+|   Azure - Compute (PaaS and Serverless)    |   Ensure that monitoring of IP restrictions for function app is enabled in ASC   |
+|   Azure - Compute (PaaS and Serverless)    |   Ensure that monitoring of IP restrictions for web app is enabled in ASC   |
+
+
 ## **July 2019- v2.11.1**
 
 1.  **User Experience Improvements**
