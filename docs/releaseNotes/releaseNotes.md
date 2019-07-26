@@ -1,15 +1,15 @@
-# **Release Notes**
+﻿# **Release Notes**
 
 ## **July 2019- v2.12.1**
 
 1.  **User Experience Improvements**
-    *   Self-service free trial à experience the power of security and compliance automation in your AWS and Azure cloud environment with a 1 month free trial of Cloudneeti Continuous Cloud Assurance. Cloudneeti self-service free trial is available at Azure Marketplace.
+    *   Self-service free trial experience the power of security and compliance automation in your AWS and Azure cloud environment with 1 month free trial of Cloudneeti Continuous Cloud Assurance. Cloudneeti self-service free trial is available at Azure Marketplace.
     *   Enhancements to Risk dashboard for screen resolution and “Risk Level Trend” chart.
     *   Enhancements to Manage Features page to show license type and cloud connector quotas.
     *   Notification message updated to include operation id.
 
 2.  **Platform & Stability Improvements**
-    *   Data collection and professing performance and scale improvements for many policies.
+    *   Data collection and processing performance and scale improvements for many policies.
     *   Enhancements to OS and data disk encryption policies.
 
 3.  **Policies & Benchmarks Additions/Updates**
