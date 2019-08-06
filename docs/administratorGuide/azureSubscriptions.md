@@ -125,7 +125,7 @@ Use the Create-ServicePrincipal-AzureOnboarding.ps1 script to create and registe
         -azureActiveDirectoryId <Active_Directory_Id> `
         -servicePrincipalName <data_collector_name> `
         -expirationPeriod 1year `
-        **-disableADPolicies**
+        -disableADPolicies
     ```
     </code>
     </pre>
