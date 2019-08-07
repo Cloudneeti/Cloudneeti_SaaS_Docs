@@ -35,8 +35,8 @@ Request Cloudneeti to provide the Cloudneeti AWS account ID. This is a mandatory
 ## Create an AWS role for Cloudneeti
 The following steps are executed by AWS **Administrator** role. AWS role for Cloudneeti can be created manually or using an automated script. 
 
-## Manual
-### Grant Permissions
+### Manual
+#### Grant Permissions
 Login to [AWS portal](https://console.aws.amazon.com/) with AWS **Administrator** role.
 
 1.	Navigate to **Services > IAM**
@@ -65,8 +65,8 @@ Login to [AWS portal](https://console.aws.amazon.com/) with AWS **Administrator*
 
 An AWS role will be created in the customer's account to mark Cloudneeti's account as a trusted entity with the SecurityAudit access policy.
 
-## Automated
-### Workstation readiness
+### Automated
+#### Workstation readiness
 
 Use serverless.yml file to create a role to mark Cloudneeti's account as a
 trusted entity with the SecurityAudit access policy.
@@ -78,13 +78,13 @@ trusted entity with the SecurityAudit access policy.
 | **Workstation:** Install Nodejs                                               | Download latest stable version of nodejs from [here](https://nodejs.org/en/) and install on the workstation.                                                                                            |
 | **Workstation:** Install serverless npm module                                | Serverless Framework is a CLI tool to manage AWS deployments. Execute below command to install serverless module, \# npm install –g serverless                                                           |
 
-1.  Open PowerShell application as an administrator (right click on PowerShell
+1.  **Open PowerShell** application as an administrator (right click on PowerShell
     and select run as administrator)
 
 2.  In PowerShell application, navigate to folder location where you downloaded
     the file “serverless.yml” (e.g. “cd C:\\Downloads”)
 
-3.  Type “aws configure” and enter
+3.  Type **aws configure** and enter
 
     a.  Account access key id and secret access key of an AWS IAM User (with
         **Administrator Access** policy)
@@ -94,7 +94,7 @@ trusted entity with the SecurityAudit access policy.
     c.  Default output format as "json" only.
 
 4.  To add Cloudneeti data provisioning resource, execute the command
-    “serverless deploy”
+    **serverless deploy**
 
     ![Administrator Access](.././images/amazonWebServiceAccounts/Serverless_Deploy.png#thumbnail)
 
@@ -113,7 +113,7 @@ Sign into your AWS account.
 
     ![SignIn AWS](.././images/amazonWebServiceAccounts/AWS_Management_Console.png#thumbnail)
 
-###AWS account access key id and secret 
+### AWS account access key id and secret 
 
 1.	Click **your name** located on the top right navigation pane
 2.	Select **My Security** Credentials 
@@ -124,7 +124,6 @@ Sign into your AWS account.
 4.	If access key secret is not available for this id, please create a new access key by clicking on **Create access key** button.
 
     ![Create access key](.././images/amazonWebServiceAccounts/Access_Key_Success.png#thumbnail)
-
 
 ## Add AWS Account on Cloudneeti
 The following steps are executed by Cloudneeti application **License Admin** role.
@@ -142,7 +141,7 @@ Log into the Cloudneeti application.
      ![Add account](.././images/amazonWebServiceAccounts/Add_Account.png#thumbnail)
 
 
-###Data Collection
+### Data Collection
 Once AWS account is added to the cloud account under the Cloudneeti License, it requires about 5 minutes for the data to be collected and processed,before they can be displayed in Cloudneeti dashboards. 
 
 1.	Select **Dashboard** on the menu

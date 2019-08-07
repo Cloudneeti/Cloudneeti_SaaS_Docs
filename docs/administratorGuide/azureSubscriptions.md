@@ -91,8 +91,8 @@ The below steps are required for registering Cloudneeti application in Azure Ten
 |----------------------|----------------------------|
 | 1.	Download and review **PowerShell script** for creation of the service principal | The PowerShell script is used to create a service principal in Azure Tenant AD: [Download Link.](https://github.com/Cloudneeti/docs_cloudneeti/blob/master/scripts/Create-ServicePrincipal-AzureOnboarding.ps1) |
 | 2.	**Workstation**: Ensure you have the latest PowerShell version (v5 and above) | Verify PowerShell version by running the following command<br>`$PSVersionTable.PSVersion`<br>on the workstation where you will run the ServicePrincipal creation script. If PowerShell version is lower than 5, then follow this link for installation of a later version: [Download Link.](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-windows-powershell?view=powershell-6) |
-| 3. **Workstation:** Before executing the script, make sure there are no restrictions in running the PowerShell script  | Use this PowerShell command:<br>`Set-ExecutionPolicy`<br>`-Scope Process`<br>`-ExecutionPolicy Bypass`<br>PowerShell contains built-in execution policies that limit its use as an attack vector. By default, the execution policy is set to Restricted, which is the primary policy for script execution. The bypass allows for running scripts and keeps the lowered permissions isolated to just the current running process. |
-| 4.	**Workstation:** Install Azure Modules to execute PowerShell commands within service principal automation script | `Install-Module`<br> `-Name AzureAD`<br>`-MinimumVersion 2.0.0.131`<br><br>It is a roll-up module for the Azure Resource Manager cmdlets. |
+| 3.	**Workstation:** Before executing the script, make sure there are no restrictions in running the PowerShell script  | Use this PowerShell command:<br>``Set-ExecutionPolicy` ``<br>``-Scope Process` ``<br>``-ExecutionPolicy Bypass` ``<br>PowerShell contains built-in execution policies that limit its use as an attack vector. By default, the execution policy is set to Restricted, which is the primary policy for script execution. The bypass allows for running scripts and keeps the lowered permissions isolated to just the current running process. |
+| 4.	**Workstation:** Install Azure Modules to execute PowerShell commands within service principal automation script | ``Install-Module` ``<br>``-Name AzureAD` ``<br>``-MinimumVersion 2.0.0.131` ``<br><br>It is a roll-up module for the Azure Resource Manager cmdlets. |
 
 #### Register Cloudneeti Application
 
@@ -101,15 +101,13 @@ Use the Create-ServicePrincipal-AzureOnboarding.ps1 script to create and registe
 1. Open PowerShell in administrator mode.
 2. Go to the directory where Create-ServicePrincipal-AzureOnboarding.ps1 was downloaded earlier.
 3. Run the below command to create a service principal
-
     <pre>
     <code>```
     .\Create-ServicePrincipal-AzureOnboarding.ps1 `
         -azureActiveDirectoryId <Active_Directory_Id> `
         -servicePrincipalName <data_collector_name> `
         -expirationPeriod 1year
-    ```
-    </code>
+    ```</code>
     </pre>
     
 4. The script will prompt the login screen
@@ -120,15 +118,14 @@ Use the Create-ServicePrincipal-AzureOnboarding.ps1 script to create and registe
 
 **Note:**<br>In case the user doesn’t want to provide the Microsoft Graph permissions given in section Azure Active Directory Permissions, you can use the disableADPolicies switch in the Create-ServicePrincipal-AzureOnboarding.ps1 command:
     <pre>
-    <code>```
+	<code>```
     .\Create-ServicePrincipal-AzureOnboarding.ps1 `
         -azureActiveDirectoryId <Active_Directory_Id> `
         -servicePrincipalName <data_collector_name> `
         -expirationPeriod 1year `
-        -disableADPolicies
-    ```
-    </code>
-    </pre>
+    -disableADPolicies
+	```</code>
+	</pre>
     
 #### Grant admin consent for API permissions
 
@@ -151,10 +148,10 @@ Use the Create-ServicePrincipal-AzureOnboarding.ps1 script to create and registe
 ## 2.Grant access to Azure subscription
 The following roles need to be granted to the Cloudneeti App registered in the previous step
 
-1.	Reader role for Azure Subscription level scope.
-2.	Backup reader role for Azure Subscription level scope.
-3.	Website contributor role for Azure Subscription level scope.
-4.	Key Vault access policies for specific managed Key Vaults
+1.	[Reader role for Azure Subscription level scope.](https://docs.cloudneeti.com/administratorGuide/azureSubscriptions/#grant-azure-subscription-reader-role)
+2.	[Backup reader role for Azure Subscription level scope.](https://docs.cloudneeti.com/administratorGuide/azureSubscriptions/#grant-azure-subscription-backup-reader-role)
+3.	[Website contributor role for Azure Subscription level scope.](https://docs.cloudneeti.com/administratorGuide/azureSubscriptions/#grant-azure-subscription-website-contributor-role)
+4.	[Key Vault access policies for specific managed Key Vaults](https://docs.cloudneeti.com/administratorGuide/azureSubscriptions/##add-key-vault-access-policy-for-specific-managed-key-vaults)
 
 The following steps are done by Microsoft Azure **Subscription Owner** role.
 
@@ -236,7 +233,7 @@ The Cloudneeti application **License Admin** requires this information to add an
 | Registered Cloudneeti Application ID     | Microsoft Azure   | Subscription Owner |
 | Registered Cloudneeti Application Secret | Microsoft Azure   | Subscription Owner |
 
-### Azure Subscription ID
+#### Azure Subscription ID
 
 1.  Choose your Azure AD tenant by selecting your **Azure subscription** in the top right corner of the page
 2.  Select **Default Directory**
@@ -253,7 +250,7 @@ The Cloudneeti application **License Admin** requires this information to add an
 
     ![Azure Subscription](.././images/azureSubscriptions/Azure_AppReg_App_ID.png#thumbnail)
 
-### Azure Directory ID
+#### Azure Directory ID
 
 1.  Click on **Azure Active Directory** on the primary menu
 
@@ -263,7 +260,7 @@ The Cloudneeti application **License Admin** requires this information to add an
 
     ![Azure Directory](.././images/azureSubscriptions/Azure_Directory_ID.png#thumbnail)
 
-### Azure Domain Name
+#### Azure Domain Name
 
 1.  Click on **Azure Active Directory** on the primary menu
 
@@ -273,7 +270,7 @@ The Cloudneeti application **License Admin** requires this information to add an
 
     ![Azure Domain](.././images/azureSubscriptions/DomainName.png#thumbnail)
 
-### Registered Cloudneeti Application ID 
+#### Registered Cloudneeti Application ID 
 
 1.  Select **Azure Active Directory** in the primary menu
 
@@ -287,7 +284,7 @@ The Cloudneeti application **License Admin** requires this information to add an
 
     ![Azure Domain](.././images/azureSubscriptions/Azure_AppReg_App_ID.png#thumbnail)
 
-### Registered Cloudneeti Application Secret 
+#### Registered Cloudneeti Application Secret 
 
 1.  Select **Azure Active Directory** in the primary menu
 
