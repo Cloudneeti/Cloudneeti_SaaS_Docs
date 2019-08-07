@@ -2,10 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\docs",
-    "\\docs\\administratorGuide",
-    "\\docs\\images",
-    "\\docs\\images\\azureSubscriptions"
+    "\\docs\\administratorGuide"
   ],
-  "SelectedNode": "\\docs\\administratorGuide\\bringYourBlobStorage.md",
+  "SelectedNode": "\\docs\\administratorGuide\\amazonWebServiceAccounts.md",
   "PreviewInSolutionExplorer": false
 }
