@@ -91,8 +91,8 @@ The below steps are required for registering Cloudneeti application in Azure Ten
 |----------------------|----------------------------|
 | 1.	Download and review **PowerShell script** for creation of the service principal | The PowerShell script is used to create a service principal in Azure Tenant AD: [Download Link.](https://github.com/Cloudneeti/docs_cloudneeti/blob/master/scripts/Create-ServicePrincipal-AzureOnboarding.ps1) |
 | 2.	**Workstation**: Ensure you have the latest PowerShell version (v5 and above) | Verify PowerShell version by running the following command<br>`$PSVersionTable.PSVersion`<br>on the workstation where you will run the ServicePrincipal creation script. If PowerShell version is lower than 5, then follow this link for installation of a later version: [Download Link.](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-windows-powershell?view=powershell-6) |
-| 3.	**Workstation:** Before executing the script, make sure there are no restrictions in running the PowerShell script  | Use this PowerShell command:<br>``Set-ExecutionPolicy` ``<br>``-Scope Process` ``<br>``-ExecutionPolicy Bypass` ``<br>PowerShell contains built-in execution policies that limit its use as an attack vector. By default, the execution policy is set to Restricted, which is the primary policy for script execution. The bypass allows for running scripts and keeps the lowered permissions isolated to just the current running process. |
-| 4.	**Workstation:** Install Azure Modules to execute PowerShell commands within service principal automation script | ``Install-Module` ``<br>``-Name AzureAD` ``<br>``-MinimumVersion 2.0.0.131` ``<br><br>It is a roll-up module for the Azure Resource Manager cmdlets. |
+| 3.	**Workstation:** Before executing the script, make sure there are no restrictions in running the PowerShell script  | Use this PowerShell command:<br>``Set-ExecutionPolicy ` ``<br>``-Scope Process ` ``<br>``-ExecutionPolicy Bypass``<br>PowerShell contains built-in execution policies that limit its use as an attack vector. By default, the execution policy is set to Restricted, which is the primary policy for script execution. The bypass allows for running scripts and keeps the lowered permissions isolated to just the current running process. |
+| 4.	**Workstation:** Install Azure Modules to execute PowerShell commands within service principal automation script | ``Install-Module ` ``<br>``-Name AzureAD ` ``<br>``-MinimumVersion 2.0.0.131``<br><br>It is a roll-up module for the Azure Resource Manager cmdlets. |
 
 #### Register Cloudneeti Application
 
@@ -112,7 +112,7 @@ Use the Create-ServicePrincipal-AzureOnboarding.ps1 script to create and registe
     
 4. The script will prompt the login screen
 5. Log in with Global AD Administrator or Application Administrator user credentials.
-6. Store service principal information from the output in a notepad. This information will be needed while onboarding the Azure account in the     Cloudneeti portal.
+6. Store service principal information from the output in a notepad. This information will be needed while onboarding the Azure account in the Cloudneeti portal.
  
     ![Service Principal Screenshot](.././images/azureSubscriptions/Azure_SP_Creatoin.png#thumbnail)
 
@@ -122,7 +122,7 @@ Use the Create-ServicePrincipal-AzureOnboarding.ps1 script to create and registe
     .\Create-ServicePrincipal-AzureOnboarding.ps1 `
         -azureActiveDirectoryId <Active_Directory_Id> `
         -servicePrincipalName <data_collector_name> `
-        -expirationPeriod 1year `
+        -expirationPeriod 1year
     -disableADPolicies
 	```</code>
 	</pre>
@@ -148,10 +148,10 @@ Use the Create-ServicePrincipal-AzureOnboarding.ps1 script to create and registe
 ## 2.Grant access to Azure subscription
 The following roles need to be granted to the Cloudneeti App registered in the previous step
 
-1.	[Reader role for Azure Subscription level scope.](https://docs.cloudneeti.com/administratorGuide/azureSubscriptions/#grant-azure-subscription-reader-role)
-2.	[Backup reader role for Azure Subscription level scope.](https://docs.cloudneeti.com/administratorGuide/azureSubscriptions/#grant-azure-subscription-backup-reader-role)
-3.	[Website contributor role for Azure Subscription level scope.](https://docs.cloudneeti.com/administratorGuide/azureSubscriptions/#grant-azure-subscription-website-contributor-role)
-4.	[Key Vault access policies for specific managed Key Vaults](https://docs.cloudneeti.com/administratorGuide/azureSubscriptions/##add-key-vault-access-policy-for-specific-managed-key-vaults)
+1.	[Reader role for Azure Subscription level scope.](.././azureSubscriptions/#grant-azure-subscription-reader-role)
+2.	[Backup reader role for Azure Subscription level scope.](.././azureSubscriptions/#grant-azure-subscription-backup-reader-role)
+3.	[Website contributor role for Azure Subscription level scope.](.././azureSubscriptions/#grant-azure-subscription-website-contributor-role)
+4.	[Key Vault access policies for specific managed Key Vaults](.././azureSubscriptions/#add-key-vault-access-policy-for-specific-managed-key-vaults)
 
 The following steps are done by Microsoft Azure **Subscription Owner** role.
 
@@ -172,7 +172,7 @@ Login to [Azure Portal](https://portal.azure.com/) with Microsoft Azure **Subscr
 
 The Cloudneeti application requires Backup Reader role access to the Subscription in order to view application settings. 
 
-If the Backup Reader Role is not assigned, Cloudneeti application will not be able to collect data of security policies [listed here](https://docs.cloudneeti.com/administratorGuide/azureSubscriptions/#require-backup-reader-role).
+If the Backup Reader Role is not assigned, Cloudneeti application will not be able to collect data of security policies [listed here](.././azureSubscriptions/#require-backup-reader-role).
 
 1.	Go to the subscription’s **Access control (IAM)** in the third level menu
 2.	Click on the **Add** button and select **Add role assignment**
@@ -186,7 +186,7 @@ If the Backup Reader Role is not assigned, Cloudneeti application will not be ab
 
 The Cloudneeti application requires Website Contributor role access to the Subscription in order to view application settings. 
 
-If the Website Contributor Role is not assigned, Cloudneeti application will not be able to collect data of security policies [listed here.](https://docs.cloudneeti.com/administratorGuide/azureSubscriptions/#require-website-contributor-role)
+If the Website Contributor Role is not assigned, Cloudneeti application will not be able to collect data of security policies [listed here.](.././azureSubscriptions/#require-website-contributor-role)
 
 1.	Go to the subscription’s **Access control (IAM)** in the menu
 2.	Click **Add** and select **Add role assignment**
@@ -199,7 +199,7 @@ If the Website Contributor Role is not assigned, Cloudneeti application will not
 **This step is optional**
 
 The Cloudneeti application requires special permission on desired key vaults to get policies data related to secrets. 
-If the Key Vault access policy is not added, Cloudneeti application will not be able to collect data of security policies [listed here](https://docs.cloudneeti.com/administratorGuide/azureSubscriptions/#require-backup-reader-role).
+If the Key Vault access policy is not added, Cloudneeti application will not be able to collect data of security policies [listed here](.././azureSubscriptions/#require-backup-reader-role).
 
 1.	Login to Azure portal.
 2.	Go to the **Key vaults** (1)
@@ -213,7 +213,7 @@ If the Key Vault access policy is not added, Cloudneeti application will not be 
     ![Access Policy](.././images/azureSubscriptions/Add_Access_Policy.png#thumbnail)
 
 6.	Select **List** in **Secret Permission** (1)
-7.	Select **Principal** as Cloudneeti Application registered in [step 1](https://docs.cloudneeti.com/administratorGuide/azureSubscriptions/#1-register-cloudneeti-application) (2)
+7.	Select **Principal** as Cloudneeti Application registered in [step 1](.././azureSubscriptions/#1-register-cloudneeti-application) (2)
 8.	Click **Add** access policy (3)
    
    ![Access Policy](.././images/azureSubscriptions/Select_Permission.png#thumbnail)
@@ -276,7 +276,7 @@ The Cloudneeti application **License Admin** requires this information to add an
 
 2.  Select **App Registrations** in the secondary menu
 
-3.  Select Cloudneeti Application registered in [step1](https://docs.cloudneeti.com/administratorGuide/azureSubscriptions/#1-register-cloudneeti-application)
+3.  Select Cloudneeti Application registered in [step1](.././azureSubscriptions/#1-register-cloudneeti-application)
 
     ![Azure Domain](.././images/azureSubscriptions/Grant_Permission.png#thumbnail)
 
@@ -290,7 +290,7 @@ The Cloudneeti application **License Admin** requires this information to add an
 
 2.  Select **App Registrations** in the secondary menu
 
-3.  Select Cloudneeti Application registered in [step 1](https://docs.cloudneeti.com/administratorGuide/azureSubscriptions/#1-register-cloudneeti-application)
+3.  Select Cloudneeti Application registered in [step 1](.././azureSubscriptions/#1-register-cloudneeti-application)
 
 4.  Click on **new client secret** in **Certificates & secrets** section
 
