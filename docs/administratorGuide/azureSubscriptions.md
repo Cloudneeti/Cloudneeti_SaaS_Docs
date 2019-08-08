@@ -416,4 +416,4 @@ listed below.
 
 ## NEXT STEPS
 
-[Configure Notifications](../administratorGuide/configureNotifications/)
+[Configure Notifications](./../configureNotifications/)
