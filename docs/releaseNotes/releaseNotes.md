@@ -9,7 +9,7 @@
     *   NIST Cybersecurity Framework v1.1 Benchmark: An update to the NIST CSF v1.1 summary view to clarify the level1 and level2 domains along with mappings to new Azure, AWS and Office365 policies.
 
     *   ‘Audit logs’ menu item has now been moved from under ‘Settings’ header to main menu for easy discoverabaility and relevance. 
-    *    Azure Marketplace Free Trial: Customers will be able to try before they buy on Azure marketplace. With this offering Customers can try out our product for their Azure, AWS and O365 cloud accounts.
+    *    Azure Marketplace Free Trial: Customers will be able to try before they buy on [ Azure marketplace ](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/cloudneeti.cloudneeti-saas-free-trial-preview?tab=Overview&flightCodes=29797414-5017-45d9-b5f4-5da78997791e) . With this offering Customers can try out our product for their Azure, AWS and O365 cloud accounts.
 
 2.  **Platform & Stability Improvements**
     *   Enhancement to AWS data collection and data processing mechanism for exception logging and HTTP connection issue.
