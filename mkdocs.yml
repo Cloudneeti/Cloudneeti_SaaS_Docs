@@ -28,38 +28,38 @@ extra_javascript:
 nav:
 - Getting Started: 
   - Cloudneeti Product: 
-    - Product Overview: gettingStarted/productOverview.md
-    - Product Capabilities: gettingStarted/productCapabilities.md
-    - Cloud Accounts​: gettingStarted/cloudAccounts.md
-    - Licenses: gettingStarted/licenses.md
-    - User & Roles : gettingStarted/userRoles.md
+    # Product Overview: gettingStarted/productOverview.md
+    # Product Capabilities: gettingStarted/productCapabilities.md
+    # Cloud Accounts​: gettingStarted/cloudAccounts.md
+    # Licenses: gettingStarted/licenses.md
+    # User & Roles : gettingStarted/userRoles.md
   # - USER IDENTITY MANAGEMENT:
   #   - Authentication: gettingStarted/authentication.md
   #   - Authorization: gettingStarted/authorization.md
   - Activate License: 
-    - How To Activate License​: gettingStarted/activateCloudneetiLicense.md
-  - User Identity Management:
-    - Authentication: gettingStarted/authentication.md
-    - Authorization: gettingStarted/authorization.md
-- Administrator Guide:
-  - Overview: administratorGuide/adminstrationGuide.md
-  - Onboarding Cloud Accounts:
+     How To Activate License​: gettingStarted/activateCloudneetiLicense.md
+  # User Identity Management:
+    # Authentication: gettingStarted/authentication.md
+    # Authorization: gettingStarted/authorization.md
+# Administrator Guide:
+  # Overview: administratorGuide/adminstrationGuide.md
+  # Onboarding Cloud Accounts:
     - Azure Subscriptions: administratorGuide/azureSubscriptions.md
   #  - Azure Subscriptions (Manual): administratorGuide/azureSubscriptionsManual.md
     - Amazon Web Service Accounts: administratorGuide/amazonWebServiceAccounts.md
   #  - Amazon Web Service Accounts (Manual): administratorGuide/amazonWebServiceAccountsManual.md
-    - Office 365 Subscriptions: administratorGuide/office365Subscriptions.md
-  - Manage Cloud Accounts:
-    - Add Cloud Account: administratorGuide/addCloudAccount.md
-    - Configure Security Policies: administratorGuide/configureSecurityPolicies.md
-    - Configure Notifications: administratorGuide/configureNotifications.md
+    #- Office 365 Subscriptions: administratorGuide/office365Subscriptions.md
+  #- Manage Cloud Accounts:
+    #- Add Cloud Account: administratorGuide/addCloudAccount.md
+    #- Configure Security Policies: administratorGuide/configureSecurityPolicies.md
+    #- Configure Notifications: administratorGuide/configureNotifications.md
   #   - Configure Data Collection: administratorGuide/configureDataCollection.md
-    - Manage Cloud Account Users: administratorGuide/manageCloudAccountUsers.md
-  - Manage Users:
-    - License Users: administratorGuide/licenseUsers.md
-    - Cloud Account Users: administratorGuide/cloudAccountUsers.md
-  - Manage Remediations:
-    - For Azure Policies: administratorGuide/forAzurePolicies.md
+    #- Manage Cloud Account Users: administratorGuide/manageCloudAccountUsers.md
+  #- Manage Users:
+    #- License Users: administratorGuide/licenseUsers.md
+    #- Cloud Account Users: administratorGuide/cloudAccountUsers.md
+  #- Manage Remediations:
+    #- For Azure Policies: administratorGuide/forAzurePolicies.md
   #   - For AWS Policies: administratorGuide/forAWSPolicies.md
   # - MANAGE INTEGRATIONS:
   #   - INCIDENT MANAGEMENT (TICKETING):
@@ -76,7 +76,7 @@ nav:
 #   - DASHBOARDS: 
 #     - CISO: userGuide/CISO.md
 #     - SOC​: userGuide/SOC​.md
-#     - Assets: userGuide/assets.md
+     - Assets: userGuide/assets.md
 #   - SECURITY POLICIES:
 #     - Categories and Policies​ Details (Description, Resources, Audit procedure, Remediation guidance)​: userGuide/categoriesAndPolicies.md
 #   - RISK POSTURE:
