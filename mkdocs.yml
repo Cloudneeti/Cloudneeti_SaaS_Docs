@@ -27,61 +27,24 @@ extra_javascript:
   
 nav:
 - Getting Started: 
-  #- Cloudneeti Product: 
-    # Product Overview: gettingStarted/productOverview.md
-    # Product Capabilities: gettingStarted/productCapabilities.md
-    # Cloud Accounts​: gettingStarted/cloudAccounts.md
-    # Licenses: gettingStarted/licenses.md
-    # User & Roles : gettingStarted/userRoles.md
-  # - USER IDENTITY MANAGEMENT:
-  #   - Authentication: gettingStarted/authentication.md
-  #   - Authorization: gettingStarted/authorization.md
-  - Activate License: 
-    - How To Activate License​: gettingStarted/activateCloudneetiLicense.md
-  # User Identity Management:
-    # Authentication: gettingStarted/authentication.md
-    # Authorization: gettingStarted/authorization.md
-# Administrator Guide:
-  # Overview: administratorGuide/adminstrationGuide.md
-- Onboarding Cloud Accounts:
-    - Azure Subscriptions: administratorGuide/azureSubscriptions.md
-  #  - Azure Subscriptions (Manual): administratorGuide/azureSubscriptionsManual.md
-    - Amazon Web Service Accounts: administratorGuide/amazonWebServiceAccounts.md
-  #  - Amazon Web Service Accounts (Manual): administratorGuide/amazonWebServiceAccountsManual.md
-    #- Office 365 Subscriptions: administratorGuide/office365Subscriptions.md
-  #- Manage Cloud Accounts:
-    #- Add Cloud Account: administratorGuide/addCloudAccount.md
-    #- Configure Security Policies: administratorGuide/configureSecurityPolicies.md
-    #- Configure Notifications: administratorGuide/configureNotifications.md
-  #   - Configure Data Collection: administratorGuide/configureDataCollection.md
-    #- Manage Cloud Account Users: administratorGuide/manageCloudAccountUsers.md
-  #- Manage Users:
-    #- License Users: administratorGuide/licenseUsers.md
-    #- Cloud Account Users: administratorGuide/cloudAccountUsers.md
-  #- Manage Remediations:
-    #- For Azure Policies: administratorGuide/forAzurePolicies.md
-  #   - For AWS Policies: administratorGuide/forAWSPolicies.md
-  # - MANAGE INTEGRATIONS:
-  #   - INCIDENT MANAGEMENT (TICKETING):
-  #     - Service Now: administratorGuide/serviceNow.md
-  #     - Zen Desk: administratorGuide/zenDesk.md
-  #   - REPORTING DATA FEEDS:
-  #     - Bring your blob storage: administratorGuide/bringYourBlobStorage.md
-  #     - Bring your NoSQL storage: administratorGuide/bringYourNoSQLStorage.md
-  # - MANAGE ORGANIZATION:
-  #   - Manage Licenses: administratorGuide/manageLicenses.md
+  - Introduction: gettingStarted/introduction.md
+  - Subscribe: gettingStarted/subscribe.md
+  - System Architecture: gettingStarted/systemArchitecture.md
+  - Sign In and Sign Out: gettingStarted/signInAndSignOut.md
+- Onboarding Guide:
+    - Azure Subscriptions: onboardingGuide/azureSubscriptions.md
+    - AWS Accounts: onboardingGuide/awsAccounts.md
+    - Office 365 Subscriptions: onboardingGuide/onboardingOffice365Subscription.md
+- User Guide:
+  - UI Navigation: userGuide/userGuideUINavigation.md
+  - Dashboards: userGuide/dashboards.md
+  - Security Policies: userGuide/securityPolicies.md
+  - Compliance Benchmarks: userGuide/complianceBenchmarks.md
+  - Reports: userGuide/reports.md
+- Administrator Guide:
+  - Manage Accounts: administratorGuide/manageAccounts.md
+  - Manage Licenses: administratorGuide/manageLicenses.md
+  - Manage Users: administratorGuide/manageUsers.md
+  - Audit Log: administratorGuide/auditLog.md
 - Release Notes:
   - Release Notes: releaseNotes/releaseNotes.md
-- User Guide:
-#   - DASHBOARDS: 
-#     - CISO: userGuide/CISO.md
-#     - SOC​: userGuide/SOC​.md
-     - Assets: userGuide/assets.md
-#   - SECURITY POLICIES:
-#     - Categories and Policies​ Details (Description, Resources, Audit procedure, Remediation guidance)​: userGuide/categoriesAndPolicies.md
-#   - RISK POSTURE:
-#     - Risk Dashboard: userGuide/riskDashboard.md
-#     - Risk Analysis & Prioritization: userGuide/riskAnalysis&Prioritization.md
-#   - REPORTS:
-#     - Download and Understand reports: userGuide/downloadAndUnderstandReports.md
-    
