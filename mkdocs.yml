@@ -32,7 +32,7 @@ nav:
   - System Architecture: gettingStarted/systemArchitecture.md
   - Sign In and Sign Out: gettingStarted/signInAndSignOut.md
 - Onboarding Guide:
-    - Azure Subscriptions: onboardingGuide/azureSubscriptions.md
+    - Azure Subscriptions: onboardingGuide/onboardingAzureSubscription.md
     - AWS Accounts: onboardingGuide/awsAccounts.md
 #    - Office 365 Subscriptions: onboardingGuide/onboardingOffice365Subscription.md
 - User Guide:
