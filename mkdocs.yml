@@ -27,7 +27,7 @@ extra_javascript:
   
 nav:
 - Getting Started: 
-  - Cloudneeti Product: 
+  #- Cloudneeti Product: 
     # Product Overview: gettingStarted/productOverview.md
     # Product Capabilities: gettingStarted/productCapabilities.md
     # Cloud Accounts​: gettingStarted/cloudAccounts.md
@@ -37,13 +37,13 @@ nav:
   #   - Authentication: gettingStarted/authentication.md
   #   - Authorization: gettingStarted/authorization.md
   - Activate License: 
-     How To Activate License​: gettingStarted/activateCloudneetiLicense.md
+    - How To Activate License​: gettingStarted/activateCloudneetiLicense.md
   # User Identity Management:
     # Authentication: gettingStarted/authentication.md
     # Authorization: gettingStarted/authorization.md
 # Administrator Guide:
   # Overview: administratorGuide/adminstrationGuide.md
-  # Onboarding Cloud Accounts:
+- Onboarding Cloud Accounts:
     - Azure Subscriptions: administratorGuide/azureSubscriptions.md
   #  - Azure Subscriptions (Manual): administratorGuide/azureSubscriptionsManual.md
     - Amazon Web Service Accounts: administratorGuide/amazonWebServiceAccounts.md
@@ -72,7 +72,7 @@ nav:
   #   - Manage Licenses: administratorGuide/manageLicenses.md
 - Release Notes:
   - Release Notes: releaseNotes/releaseNotes.md
-# - User Guide:
+- User Guide:
 #   - DASHBOARDS: 
 #     - CISO: userGuide/CISO.md
 #     - SOC​: userGuide/SOC​.md
