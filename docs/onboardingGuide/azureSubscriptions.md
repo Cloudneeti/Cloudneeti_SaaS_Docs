@@ -1,6 +1,5 @@
-# Azure Subscription Onboarding Guide
-## Overview
-### Onboarding Steps
+Onboarding Steps
+================
 
 The following steps are required to onboard Microsoft Azure to the Cloudneeti application.
 
