@@ -86,6 +86,7 @@ body {
 .header-text {
     margin-top: 10px;
     padding-top: 0px;
+    color: #FF7D2C;
 }
 
 .header-text ul li {
@@ -99,7 +100,7 @@ body {
 
 .header-saas img {
     margin-top: 20px;
-    width: 100%;
+    width: 30%;
 }
 
 .md-tabs{display: none;}
