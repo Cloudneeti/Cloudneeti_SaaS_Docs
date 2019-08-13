@@ -1,6 +1,6 @@
 ﻿# **Release Notes**
 
-## **July 2019- v2.13.1**
+## **August 2019- v2.13.1**
 
 1.  **User Experience Improvements**
     *   Segregated Manage License menu into two menus.
@@ -9,12 +9,12 @@
     *   NIST Cybersecurity Framework v1.1 Benchmark: An update to the NIST CSF v1.1 summary view to clarify the level1 and level2 domains along with mappings to new Azure, AWS and Office365 policies.
 
     *   ‘Audit logs’ menu item has now been moved from under ‘Settings’ header to main menu for easy discoverabaility and relevance. 
-    *    Azure Marketplace Free Trial: Customers will be able to try before they buy on [ Azure marketplace ](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/cloudneeti.cloudneeti-saas-free-trial-preview?tab=Overview&flightCodes=29797414-5017-45d9-b5f4-5da78997791e) . With this offering Customers can try out our product for their Azure, AWS and O365 cloud accounts.
+    *    Azure Marketplace Free Trial: Customers will be able to try before they buy on [ Azure marketplace ](https://azuremarketplace.microsoft.com/en/marketplace/apps/cloudneeti.cloudneeti_azmkt_free_trial?tab=Overview) . With this offering Customers can try out our product for their Azure, AWS and O365 cloud accounts.
 
 2.  **Platform & Stability Improvements**
-    *   Enhancement to AWS data collection and data processing mechanism for exception logging and HTTP connection issue.
+    *   Enhancement to AWS data collection and data processing mechanism for better exception handling and retry mechanism for intermittent failures.
     *   Improved page load performance for various summary and detailed pages with content pagination.
-    *   Improved parallization to collect and process data for various cloud services.
+    *   Improved parallization to collect and process data for various Azure and AWS cloud services
 
 3.  **Policies & Benchmarks Additions/Updates**
     *   Updation of following compliance benchmark for Azure and AWS cloud accounts.
