@@ -229,7 +229,7 @@ Azure subscription as a cloud account.
 3. Copy **Directory ID** to a notepad
 	![Directory ID](.././images/onboardingOffice365Subscription/Directory_ID.png#thumbnail)
 
-#### Azure Domain Name
+#### Azure AD Domain Name
 
 1. Click on **Azure Active Directory** on the primary menu
 2. Click on **Overview** on the secondary menu
