@@ -20,9 +20,9 @@ Cloudneeti supports “administrator” and “reader” roles under a License a
 
 Please follow links for details:
 
-[License Users](../licenseUsers/)
+[License Users](../../administratorGuide/manageUsers/#license-users)
 
-[Cloud Account Users](../cloudAccountUsers/)
+[Cloud Account Users](../../administratorGuide/manageUsers/#account-users)
 
 ## 3. Manage Remediations
 While discovering deviations from a set baseline is important for visibility, it is equally important to enforce compliance with a closed loop remediation process. Cloudneeti provides assessment procedures and remediation guidance for every security policy. Auto-remediations are not possible for all security policies but are a good fit for several categories of remediations such as Identity & Management controls, Core Networking, Logging, Auditing with low impact to application experience. The third category is delegated remediation where Cloudneeti is logging a ticket in a ticketing tool or SIEM product that can be assigned to a proper engineer for remediation action. Preventative policies are a set of policies that are usually enabled at the cloud accounts (CSPs) that prevent/forbid certain configurations as general guardrails.

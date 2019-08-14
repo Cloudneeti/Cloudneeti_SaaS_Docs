@@ -10,7 +10,7 @@ The customer’s primary point of contact (who will become the License Admin)
 requests Cloudneeti to provision a License. In case you don’t have a point of
 contact from Cloudneeti, please use the contact us form on Cloudneeti website.
 
-[Contact Us]()
+[Contact Us](https://www.cloudneeti.com/contact_us)
 
 Cloudneeti creates a new License with License term (duration), industry
 compliance packages and other customer-specific License level configurations.

@@ -42,11 +42,10 @@ nav:
   - Security Policies: userGuide/securityPolicies.md
   - Compliance Benchmarks: userGuide/complianceBenchmarks.md
   - Reports: userGuide/reports.md
-- Administration Guide:
-#  - Manage Accounts: administratorGuide/manageAccounts.md
-#  - Manage Licenses: administratorGuide/manageLicenses.md
-#  - Manage Users: administratorGuide/manageUsers.md
-#  - Audit Log: administratorGuide/auditLog.md
-  - Configure Notifications: administrationGuide/configureNotifications.md
+- Administrator Guide:
+  - Manage Accounts: administratorGuide/manageAccounts.md
+  - Manage Licenses: administratorGuide/manageLicenses.md
+  - Manage Users: administratorGuide/manageUsers.md
+  - Audit Log: administratorGuide/auditLog.md
 - Release Notes:
   - Release Notes: releaseNotes/releaseNotes.md
