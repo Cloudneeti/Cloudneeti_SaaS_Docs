@@ -15,7 +15,7 @@
 2.  **Platform & Stability Improvements**
     *   Enhancement to AWS data collection and data processing mechanism for better exception handling and retry mechanism for intermittent failures.
     *   Improved page load performance for various summary and detailed pages with content pagination.
-    *   Improved parallization to collect and process data for various Azure and AWS cloud services
+    *   Improved parallization to collect and process data for various Azure and AWS cloud services.
 
 3.  **Policies & Benchmarks Additions/Updates**
     *   Updation of following compliance benchmark for Azure and AWS cloud accounts.
