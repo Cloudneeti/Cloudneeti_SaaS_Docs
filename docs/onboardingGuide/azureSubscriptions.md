@@ -468,4 +468,4 @@ listed below.
 
 ## NEXT STEPS
 
-[Configure Notifications](./../configureNotifications/)
+[Configure Notifications](../../administrationGuide/configureNotifications/)
