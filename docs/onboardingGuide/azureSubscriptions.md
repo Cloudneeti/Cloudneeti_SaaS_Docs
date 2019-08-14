@@ -273,7 +273,7 @@ The Cloudneeti application **License Admin** requires this information to add an
 | Information                              |Portal to use      |User                |
 |------------------------------------------|-------------------|--------------------|
 | Azure Directory ID                       | Microsoft Azure   | Subscription Owner |
-| Azure Directory Domain name              | Microsoft Azure   | Subscription Owner |
+| Azure Active Directory Domain name              | Microsoft Azure   | Subscription Owner |
 | Registered Cloudneeti Application ID     | Microsoft Azure   | Subscription Owner |
 | Registered Cloudneeti Application Secret | Microsoft Azure   | Subscription Owner |
 
@@ -286,7 +286,7 @@ The Cloudneeti application **License Admin** requires this information to add an
 3.  Copy **Directory ID** to a notepad
     ![Azure Directory](.././images/azureSubscriptions/Azure_Directory_ID.png#thumbnail)
 
-#### Azure Domain Name
+#### Azure AD Domain Name
 
 1.  Click on **Azure Active Directory** on the primary menu
 
