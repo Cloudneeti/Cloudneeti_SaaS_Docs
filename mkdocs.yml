@@ -32,10 +32,10 @@ nav:
   - System Architecture: gettingStarted/systemArchitecture.md
   - Sign In and Sign Out: gettingStarted/signInAndSignOut.md
 - Onboarding Guide:
-    - Overview: onboardingGuide/onboardingGuideOverview.md
-    - Azure Subscriptions: onboardingGuide/azureSubscriptions.md
-    - AWS Accounts: onboardingGuide/amazonWebServiceAccounts.md
-    - Office 365 Subscriptions: onboardingGuide/onboardingOffice365Subscription.md
+   - Overview: onboardingGuide/onboardingGuideOverview.md
+   - Azure Subscriptions: onboardingGuide/azureSubscriptions.md
+   - AWS Accounts: onboardingGuide/amazonWebServiceAccounts.md
+   - Office 365 Subscriptions: onboardingGuide/onboardingOffice365Subscription.md
 - User Guide:
   - UI Navigation: userGuide/userGuideUINavigation.md
   - Dashboards: userGuide/dashboards.md
@@ -48,4 +48,4 @@ nav:
   - Manage Users: administratorGuide/manageUsers.md
   - Audit Log: administratorGuide/auditLog.md
 - Release Notes:
-  - Release Notes: releaseNotes/releaseNotes.md
+  - Releases in 2019: releaseNotes/releaseNotes.md
