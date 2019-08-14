@@ -1,5 +1,6 @@
-# Overview
-## Onboarding Steps
+# Office 365 Subscription Onboarding Guide
+## Overview
+### Onboarding Steps
 
 The following steps are required to onboard Office 365 to Cloudneeti
 application.
@@ -36,7 +37,7 @@ as a JSON file to the Cloudneeti application.
 |        | c. Provision M365 Data Collector to your Azure Subscription  | Microsoft Azure              | Subscription Owner or Azure Subscription Contributor |
 |        | d .Apply delete lock                                         | Microsoft Azure              | Subscription Owner or Azure Subscription Contributor |
 
-### Required Roles
+#### Required Roles
 
 
 People with the following roles are required to complete the Office 365
@@ -72,7 +73,7 @@ The Microsoft Azure **Subscription Owner or Contributor** role is required to
 provision a PowerShell agent to pull advanced security configuration information
 and ingest to the Cloudneeti application.
 
-### Required Permissions
+#### Required Permissions
 
 
 The Cloudneeti application will be granted three read permissions to the Azure
@@ -251,11 +252,11 @@ Azure subscription as a cloud account.
 
 1. Click on **Azure Active Directory** on the primary menu
 
-2. Click on **Custom domain names** on the secondary menu
+2. Click on **Overview** on the secondary menu
 
 3. Copy **Domain name** to a notepad
 
-![Azure Domain Name](.././images/onboardingOffice365Subscription/Domain_Name.png#thumbnail)
+![Azure Domain Name](.././images/onboardingOffice365Subscription/Azure_Domain_Name.png#thumbnail)
 
 #### Registered Cloudneeti Application ID 
 
@@ -413,7 +414,7 @@ Login to Azure portal <https://portal.azure.com> as subscription owner.
 4. Select the desired **Azure subscription** (2)
 ![Azure subscription](.././images/onboardingOffice365Subscription/Azure_Subscription.png#thumbnail)
 5. Copy **Subscription ID** to a notepad
-![Subscription ID](.././images/onboardingOffice365Subscription/Copy_AppID.png#thumbnail)
+![Subscription ID](.././images/onboardingOffice365Subscription/Subscription_Id.png#thumbnail)
 
 #### Generate Cloudneeti API key
 
