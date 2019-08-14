@@ -259,9 +259,9 @@ If the Key Vault access policy is not added, Cloudneeti application will not be 
 4.	Select **Access policies** (1)
 5.	Click on **Add Access Policy** (2)
     ![Access Policy](.././images/azureSubscriptions/Add_Access_Policy.png#thumbnail)
-6.	Select **List** in **Secret Permission** (1)
-7.	Select **Principal** as Cloudneeti Application registered in [step 1](.././azureSubscriptions/#step-1-register-cloudneeti-application) (2)
-8.	Click **Add** access policy (3)
+6.	Select **List** in **Key Permissions** and **Secret Permissions** (1) (2)
+7.	Select **Principal** as Cloudneeti Application registered in [step 1](.././azureSubscriptions/#step-1-register-cloudneeti-application) (3)
+8.	Click **Add** access policy (4)
    ![Access Policy](.././images/azureSubscriptions/Select_Permission.png#thumbnail)
 Note: Perform this step on all the key vaults present in your subscription.
 
