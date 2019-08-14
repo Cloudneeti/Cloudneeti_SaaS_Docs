@@ -205,7 +205,8 @@ table, th {
  ul.breadcrumb {
     padding: 5px 10px;
     list-style: none;
-    background-color: #eee;
+    background-color: #dedede;
+    color: #060606;
   }
   ul.breadcrumb li {
     display: inline;

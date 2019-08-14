@@ -53,6 +53,57 @@
 | Azure - Compute (PaaS and Serverless) | Ensure that monitoring of the use of HTTPS in Web App is enabled in ASC |
 | Azure - Logging and Auditing | Ensure that required diagnostic logs retention period in days  in Data Lake Store accounts is set in ASC |
 
+## **August 2019- v2.13.1**
+
+1.  **User Experience Improvements**
+    *   Segregated Manage License menu into two menus.
+        1. Features and Quotas: A new view that provides all the features and quotas associated with customer’s license.
+        2. Configure Integrations: A new page that lists and allows customers to configure integrations available within product. Integrations like reporting data feeds, Ticketing (Incident management) etc.
+    *   NIST Cybersecurity Framework v1.1 Benchmark: An update to the NIST CSF v1.1 summary view to clarify the level1 and level2 domains along with mappings to new Azure, AWS and Office365 policies.
+
+    *   ‘Audit logs’ menu item has now been moved from under ‘Settings’ header to main menu for easy discoverabaility and relevance. 
+    *    Azure Marketplace Free Trial: Customers will be able to try before they buy on [ Azure marketplace ](https://azuremarketplace.microsoft.com/en/marketplace/apps/cloudneeti.cloudneeti_azmkt_free_trial?tab=Overview) . With this offering Customers can try out our product for their Azure, AWS and O365 cloud accounts.
+
+2.  **Platform & Stability Improvements**
+    *   Enhancement to AWS data collection and data processing mechanism for better exception handling and retry mechanism for intermittent failures.
+    *   Improved page load performance for various summary and detailed pages with content pagination.
+    *   Improved parallization to collect and process data for various Azure and AWS cloud services
+
+3.  **Policies & Benchmarks Additions/Updates**
+    *   Updation of following compliance benchmark for Azure and AWS cloud accounts.
+        - AWS: GxP Life Sciences - FDA 21 CFR PART 11 AND PART 820.30 regulation controls.
+        - Azure: GxP Life Science - FDA 21 CFR PART 11 AND PART 820.30 regulation controls.
+    *   Addition of following compliance benchmark for M365 accounts.
+        - M365: GxP Life Sciences - FDA 21 CFR PART 11 AND PART 820.30 regulation controls.
+    *   Updates to Azure NSG related policies to consider port ranges.
+    *   Enhancements to Azure App service-related policies to include the latest updated versions.
+    *   Addition of following 22 new Azure security policies.
+
+| **Categoory** | **Policy Title** |
+| --- | --- |
+| Azure - Compute (PaaS and Serverless) | Ensure that monitoring of diagnostics logs in app services is enabled in ASC |
+| Azure - Compute (PaaS and Serverless) | Ensure that monitoring of web sockets for API app  is enable in ASC |
+| Azure - Compute (PaaS and Serverless) | Ensure that monitoring of web sockets for function app is enabled in ASC |
+| Azure - Compute (PaaS and Serverless) | Ensure that monitoring of web sockets for web app  is enabled in ASC |
+| Azure - Compute (PaaS and Serverless) | Ensure that monitoring of custom domain use in API app is enabled in ASC |
+| Azure - Compute (PaaS and Serverless) | Ensure that monitoring of custom domain use in function app is enabled in ASC |
+| Azure - Compute (PaaS and Serverless) | Ensure that monitoring of custom domain use in web app is enabled in ASC |
+| Azure - Compute (PaaS and Serverless) | Ensure that monitoring of .Net version in API app is enabled in ASC |
+| Azure - Compute (PaaS and Serverless) | Ensure that monitoring of .Net version in web app is enabled in ASC |
+| Azure - Compute (PaaS and Serverless) | Ensure that monitoring of Java version in API app is enabled in ASC |
+| Azure - Compute (PaaS and Serverless) | Ensure that monitoring of Java version in web app is enabled in ASC |
+| Azure - Compute (PaaS and Serverless) | Ensure that monitoring of Node.js version in web app is enabled in ASC |
+| Azure - Compute (PaaS and Serverless) | Ensure that monitoring of PHP version in API app is enabled in ASC |
+| Azure - Compute (PaaS and Serverless) | Ensure that monitoring of PHP version in web app  is enabled  in ASC |
+| Azure - Compute (PaaS and Serverless) | Ensure that monitoring of Python version in API app is enabled in ASC |
+| Azure - Compute (PaaS and Serverless) | Ensure that monitoring of Python version in web app  is enabled in ASC |
+| Azure - Compute (PaaS and Serverless) | Ensure that monitoring of remote debugging for API app is enabled in ASC |
+| Azure - Compute (PaaS and Serverless) | Ensure that monitoring of remote debugging for function app  is enabled in ASC |
+| Azure - Compute (PaaS and Serverless) | Ensure that monitoring of remote debugging for web app  is enabled in ASC |
+| Azure - Compute (PaaS and Serverless) | Ensure that required diagnostic logs retention period in days in Logic Apps workflows is set in ASC |
+| Azure - Compute (PaaS and Serverless) | Ensure that monitoring of the use of HTTPS in Web App is enabled in ASC |
+| Azure - Logging and Auditing | Ensure that required diagnostic logs retention period in days  in Data Lake Store accounts is set in ASC |
+
 ## **July 2019- v2.12.1**
 
 1.  **User Experience Improvements**
