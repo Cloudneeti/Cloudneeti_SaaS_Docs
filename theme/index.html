@@ -5,47 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Cloudneeti Documentation</title>
-    <link rel="shortcut icon" href="../../assets/images/favicon.png">
+    <link rel="shortcut icon" href="assets/images/favicon.png">
+
     <!-- google fonts -->
-    <!-- <link href="//fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
 
     <!-- css, bootstrap, fontAwesome -->
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="stylesheets/extra.css?v=1.1.0">
+    <link rel="stylesheet" href="stylesheets/extra.css">
+    <style>
+    @media (min-width: 992px){
+        .tiles_section .col-md-3 {
+            width: 20%;
+        }
+    }
+    </style>
 </head>
-<body>
     <!-- Header -->
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="text-left logo">
-                            <img src="images/logo.png" class="rounded" alt="Logo">
-                        </div>
+    <header class="header">
+        <div class="container-fluid">
+            <nav class="navbar navbar-default" style="background-color: #ffffff; border: none;">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="https://www.cloudneeti.com/" target="_blank"><img src="images/logo.png" class="rounded" alt="" max-width=50% height=200%></a>
                     </div>
-                </div>
-            </div>
-        </nav>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="https://www.cloudneeti.com/contact_us/" target="_blank">Contact Us</a></li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container -->
+            </nav><!-- /.navbar -->
+        </div>
     </header>
-    <main class="main">
+    <main class="main content-section">
     <div class="container">
         <div class="row">
-            <div class="col-md-8">
-                <div class="header-text">
-                    <h4>Cloudneeti accelerates cloud adoption by enabling businesses to continuously and proactively eliminating cloud security and compliance risks for their multi-cloud workloads.​
-                        The platform leverages cloud-native APIs to continuously discover and assess customer’s workloads and provide the following benefits,</h4>
-                    <ul>
-                        <li><strong>Visibility</strong> into misconfigurations, compare it against the defined standard (security baseline) to identify deviations from this security baseline </li>
-                        <li><strong>Enforce</strong> remediation of discovered misconfigurations via automatic and guided remediations.​</li>
-                        <li><strong>Continuous Governance</strong> with abilities to manage exceptions, adjust posture, compliance reporting for 11+ compliance frameworks, deviation notifications and various data-feed integrations with IT and compliance oversight tooling.</li>
-                    </ul>
+            <div class="col-md-12">
+                <div class="header-text text-center">
+                    <h3>Cloudneeti Documentation</h3>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="header-saas">
-                    <!-- Header iPhone Image -->
+                <div class="header-saas text-center">
                     <img src="images/SaaS.png" alt="SaaS-header">
                 </div>
             </div>
@@ -54,7 +64,7 @@
     <div class="container tiles_section">
         <div class="row">
             <div class="col-md-3">
-                <a href="gettingStarted/productOverview/">
+                <a href="gettingStarted/introduction/">
                     <div class="text-center tile_item">
                         <i class="fa fa-rocket" aria-hidden="true"></i>
                         <div class="tiles_section-caption">
@@ -64,19 +74,19 @@
                 </a>
             </div>
             <div class="col-md-3">
-                <a href="administratorGuide/azureSubscriptions/">
+                <a href="onboardingGuide/onboardingGuideOverview/">
                     <div class="text-center tile_item">
-                        <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                        <i class="fa fa-handshake-o" aria-hidden="true"></i>
                         <div class="tiles_section-caption">
-                            <h2>Administration Guide</h2>
+                            <h2>Onboarding Guide</h2>  
                         </div>
                     </div>
                 </a>
             </div>
             <div class="col-md-3">
-                <a href="userGuide/CISO/">
+                <a href="userGuide/userGuideUINavigation/">
                     <div class="text-center tile_item">
-                        <i class="fa fa-users" aria-hidden="true"></i>
+                        <i class="fa fa-user" aria-hidden="true"></i>
                         <div class="tiles_section-caption">
                             <h2>User Guide</h2>  
                         </div>
@@ -84,11 +94,21 @@
                 </a>
             </div>
             <div class="col-md-3">
-                <a href="">
+                <a href="administratorGuide/manageAccounts/">
                     <div class="text-center tile_item">
-                        <i class="fa fa-question-circle-o" aria-hidden="true"></i>
+                        <i class="fa fa-user-circle-o" aria-hidden="true"></i>
                         <div class="tiles_section-caption">
-                            <h2>FAQ's</h2>
+                            <h2>Admin Guide</h2>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="releaseNotes/releaseNotes/">
+                    <div class="text-center tile_item">
+                        <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                        <div class="tiles_section-caption">
+                            <h2>Release Notes</h2>
                         </div>
                     </div>
                 </a>
@@ -98,20 +118,18 @@
     </main>
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
+        <!-- <div class="container">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-12"> -->
                     <div id="copyright">
-                        <p>Copyright &copy; 2019 <a href="#">- Cloudneeti</a></p>
+                        <p>&copy; 2019 <a href="https://www.cloudneeti.com/" target="_blank">Cloudneeti.</a> All Rights Reserved. | <a href="https://www.cloudneeti.com/privacy-policy-2/" target="_blank"> Privacy Policy</a> | <a href="https://www.cloudneeti.com/terms-of-use/" target="_blank"> Terms of Use</a></p>
                     </div>
-                </div>
+                <!-- </div>
             </div>
-        </div>
+        </div> -->
     </footer>
-
     <!-- jS -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
 </body>
 </html>
