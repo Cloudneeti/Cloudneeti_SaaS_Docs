@@ -25,8 +25,7 @@ The following steps are required to onboard Microsoft Azure to the Cloudneeti ap
 | 2      | Grant access to Azure subscription | Microsoft Azure   | Subscription Owner      |
 | 3      | Add Azure subscription             | Cloudneeti        | License Admin           |
 
-Required Roles
---------------
+#### Required Roles
 
 One or more people with the following roles are required to complete Microsoft
 Azure onboarding process.
@@ -48,8 +47,7 @@ Azure onboarding process.
 -   The Microsoft Azure **Subscription Owner** role is required for providing
     Cloudneeti application required read access to the Azure Subscription.
 
-Required Permissions
---------------------
+#### Required Permissions
 
 Cloudneeti application will be granted five read permissions to Azure AD and
 Azure subscriptions. Four of these permissions are optional. Each optional read
@@ -59,7 +57,7 @@ Cloudneeti application will not be able to collect the data for the related
 policies. Excluded security policies by permission are listed later in this
 document.
 
-| **Information**                                             | **Portal to use** | **Role**           | **Step** | **Type**  | **Policies** |
+| Information                                                 | Portal to use     | Role               | Step     | Type      | Policies     |
 |-------------------------------------------------------------|-------------------|--------------------|----------|-----------|--------------|
 | Directory Read All Microsoft Graph permissions              | Microsoft Azure   | Global AD Admin    | STEP 1   | optional  | 5            |
 | Reader role for Azure Subscription level scope              | Microsoft Azure   | Subscription Owner | STEP 2   | mandatory | 0            |
@@ -67,8 +65,8 @@ document.
 | Website contributor role for Azure Subscription level scope | Microsoft Azure   | Subscription Owner | STEP 2   | optional  | 15           |
 | Key Vault access policies for specific managed Key Vaults   | Microsoft Azure   | Subscription Owner | STEP 2   | optional  | 1            |
 
-STEP 1: Register Cloudneeti application
-=======================================
+## STEP 1: Register Cloudneeti application
+
 
 The following steps are executed by the Microsoft Azure **Global AD
 Administrator** role on the Microsoft Azure Portal.
@@ -76,10 +74,10 @@ Administrator** role on the Microsoft Azure Portal.
 The Cloudneeti application can be registered either manually or using automation
 script.
 
-Manual Steps
-------------
+### Manual Steps
 
-### Register Cloudneeti Application 
+
+#### Register Cloudneeti Application 
 
 Login to [Azure Portal](https://portal.azure.com/) with **Global AD
 Administrator** role.
@@ -113,20 +111,21 @@ Administrator** role.
 #### Grant admin consent for API permissions
 **This step is optional**
 
-Add Microsoft Graph permissions and grant admin consent
+Add Read All Microsoft Graph permissions and grant admin consent
 
+This step is needed to gain access to Azure AD related policies. If the customer
+doesn’t want to grant Cloudneeti application access to customer’s Azure AD, this
+step can be skipped. The Cloudneeti application will not be able to provide
+Azure AD related security policy information.
 
-This step is needed to gain access to Azure AD related policies. If customer doesn’t want to grant Cloudneeti application access to customer’s Azure AD, this step can be skipped. Cloudneeti application will not be able to provide Azure AD related security policies information [listed here.](https://docs.cloudneeti.com/administratorGuide/azureSubscriptions/#security-policies-exceptions)
-
-1. Click on **Azure Active Directory**
-2. Click **API Permissions**
-3. Click **Add permission** and add the following information:
+1. Click **API Permissions**
+2. Click **Add permission** and add the following information:
 
     | API             | Permission Name                | Type        |
     |-----------------|--------------------------------|-------------|
     | Microsoft.Graph | Directory.Read.All [Refer here](https://docs.microsoft.com/en-us/graph/permissions-reference#directory-permissions) | Application |
 
-4. Click on **Grant admin consent for …** button in the Grant consent section. 
+3. Click on **Grant admin consent for …** button in the Grant consent section. 
 
     ![Service Principal - Azure Portal](.././images/azureSubscriptions/Azure_API_Permissions.png#thumbnail)
 
@@ -193,17 +192,21 @@ Use the Create-ServicePrincipal-AzureOnboarding.ps1 script to create and registe
 
     ![Grant permission ](.././images/azureSubscriptions/Azure_API_Permissions.png#thumbnail)
 
-## 2.Grant access to Azure subscription
+## STEP 2: Grant access to Cloudneeti registered app
+
 The following roles need to be granted to the Cloudneeti App registered in the previous step
 
-1.	[Reader role for Azure Subscription level scope.](.././azureSubscriptions/#grant-azure-subscription-reader-role)
-2.	[Backup reader role for Azure Subscription level scope.](.././azureSubscriptions/#grant-azure-subscription-backup-reader-role)
-3.	[Website contributor role for Azure Subscription level scope.](.././azureSubscriptions/#grant-azure-subscription-website-contributor-role)
-4.	[Key Vault access policies for specific managed Key Vaults](.././azureSubscriptions/#add-key-vault-access-policy-for-specific-managed-key-vaults)
+1.	Reader role for Azure Subscription level scope.
+2.	Backup reader role for Azure Subscription level scope.
+3.	Website contributor role for Azure Subscription level scope.
+4.  Key Vault access policies for specific managed Key Vaults.
 
 The following steps are done by Microsoft Azure **Subscription Owner** role.
 
 ### Grant Azure Subscription Reader role
+
+**This step is mandatory**
+
 Add reader role for Cloudneeti application in Azure Subscription.
 
 Login to [Azure Portal](https://portal.azure.com/) with Microsoft Azure **Subscription Owner** role.
@@ -220,7 +223,7 @@ Login to [Azure Portal](https://portal.azure.com/) with Microsoft Azure **Subscr
 
 The Cloudneeti application requires Backup Reader role access to the Subscription in order to view application settings. 
 
-If the Backup Reader Role is not assigned, Cloudneeti application will not be able to collect data of security policies [listed here](.././azureSubscriptions/#require-backup-reader-role).
+If the Backup Reader Role is not assigned,the Cloudneeti application will not be able to collect data of security policies [listed here](.././azureSubscriptions/#backup-reader-role).
 
 1.	Go to the subscription’s **Access control (IAM)** in the third level menu
 2.	Click on the **Add** button and select **Add role assignment**
@@ -234,7 +237,7 @@ If the Backup Reader Role is not assigned, Cloudneeti application will not be ab
 
 The Cloudneeti application requires Website Contributor role access to the Subscription in order to view application settings. 
 
-If the Website Contributor Role is not assigned, Cloudneeti application will not be able to collect data of security policies [listed here.](.././azureSubscriptions/#require-website-contributor-role)
+If the Website Contributor Role is not assigned, Cloudneeti application will not be able to collect data of security policies [listed here.](.././azureSubscriptions/#website-contributor-role)
 
 1.	Go to the subscription’s **Access control (IAM)** in the menu
 2.	Click **Add** and select **Add role assignment**
@@ -246,8 +249,8 @@ If the Website Contributor Role is not assigned, Cloudneeti application will not
 ### Add Key Vault access policy for specific managed Key Vaults
 **This step is optional**
 
-The Cloudneeti application requires special permission on desired key vaults to get policies data related to secrets. 
-If the Key Vault access policy is not added, Cloudneeti application will not be able to collect data of security policies [listed here](.././azureSubscriptions/#require-backup-reader-role).
+The Cloudneeti application requires special permission on desired key vaults to get policy data related to secrets. 
+If the Key Vault access policy is not added, Cloudneeti application will not be able to collect data of security policies [listed here](.././azureSubscriptions/#backup-reader-role).
 
 1.	Login to Azure portal.
 2.	Go to the **Key vaults** (1)
@@ -261,7 +264,7 @@ If the Key Vault access policy is not added, Cloudneeti application will not be 
     ![Access Policy](.././images/azureSubscriptions/Add_Access_Policy.png#thumbnail)
 
 6.	Select **List** in **Secret Permission** (1)
-7.	Select **Principal** as Cloudneeti Application registered in [step 1](.././azureSubscriptions/#1-register-cloudneeti-application) (2)
+7.	Select **Principal** as Cloudneeti Application registered in [step 1](.././azureSubscriptions/#step-1-register-cloudneeti-application) (2)
 8.	Click **Add** access policy (3)
    
    ![Access Policy](.././images/azureSubscriptions/Select_Permission.png#thumbnail)
@@ -275,28 +278,10 @@ The Cloudneeti application **License Admin** requires this information to add an
 
 | Information                              |Portal to use      |User                |
 |------------------------------------------|-------------------|--------------------|
-| Azure Subscription ID                    | Microsoft Azure   | Subscription Owner |
 | Azure Directory ID                       | Microsoft Azure   | Subscription Owner |
 | Azure Directory Domain name              | Microsoft Azure   | Subscription Owner |
 | Registered Cloudneeti Application ID     | Microsoft Azure   | Subscription Owner |
 | Registered Cloudneeti Application Secret | Microsoft Azure   | Subscription Owner |
-
-#### Azure Subscription ID
-
-1.  Choose your Azure AD tenant by selecting your **Azure subscription** in the top right corner of the page
-2.  Select **Default Directory**
-
-    ![Azure Subscription](.././images/azureSubscriptions/Azure_Subscription_Id.png#thumbnail)
-
-3.  Click on **Subscriptions** (1) on the primary menu
-
-4.  Select the desired **Azure subscription** (2)
-
-    ![Azure Subscription](.././images/azureSubscriptions/Select_Azure_Subscription.png#thumbnail)
-
-5.  Copy **Subscription ID** to a notepad
-
-    ![Azure Subscription](.././images/azureSubscriptions/Azure_AppReg_App_ID.png#thumbnail)
 
 #### Azure Directory ID
 
@@ -312,11 +297,11 @@ The Cloudneeti application **License Admin** requires this information to add an
 
 1.  Click on **Azure Active Directory** on the primary menu
 
-2.  Click on **Custom domain names** on the secondary menu
+2.  Click on **Overview** on the secondary menu
 
 3.  Copy **Domain name** to a notepad
 
-    ![Azure Domain](.././images/azureSubscriptions/DomainName.png#thumbnail)
+    ![Azure Domain](.././images/azureSubscriptions/Azure_Domain_Name.png#thumbnail)
 
 #### Registered Cloudneeti Application ID 
 
@@ -324,7 +309,7 @@ The Cloudneeti application **License Admin** requires this information to add an
 
 2.  Select **App Registrations** in the secondary menu
 
-3.  Select Cloudneeti Application registered in [step1](.././azureSubscriptions/#1-register-cloudneeti-application)
+3.  Select Cloudneeti Application registered in [step1](.././azureSubscriptions/#step-1-register-cloudneeti-application)
 
     ![Azure Domain](.././images/azureSubscriptions/Grant_Permission.png#thumbnail)
 
@@ -338,7 +323,7 @@ The Cloudneeti application **License Admin** requires this information to add an
 
 2.  Select **App Registrations** in the secondary menu
 
-3.  Select Cloudneeti Application registered in [step 1](.././azureSubscriptions/#1-register-cloudneeti-application)
+3.  Select Cloudneeti Application registered in [step 1](.././azureSubscriptions/#step-1-register-cloudneeti-application)
 
 4.  Click on **new client secret** in **Certificates & secrets** section
 
@@ -352,7 +337,7 @@ The Cloudneeti application **License Admin** requires this information to add an
 
     ![Application Secret](.././images/azureSubscriptions/AzureSP_CaptureClientSecret.png#thumbnail)
 
-## 3. Add Azure Subscription to Cloudneeti
+## STEP 3: Add Azure Subscription
 
 The following steps are done by Cloudneeti application **License Admin** role.
 
@@ -404,8 +389,20 @@ before they can be displayed in Cloudneeti dashboards.
 
 Congratulations! You have added an Azure subscription to Cloudneeti application.
 
-## Annexure - Security Policies Exceptions
-### Require Microsoft Graph permissions
+## Security Polices with Required Permissions
+
+The following Security Policies will be excluded if one or multiple roles are
+not assigned.
+
+| Permissions                                                  | Number of Excluded Security Policies     |
+|--------------------------------------------------------------|------------------------------------------|
+| Read All Microsoft Graph permissions                         | 5                                        |
+| Reader role for Azure Subscription level scope.              | 0                                        |
+| Backup reader role for Azure Subscription level scope.       | 4                                        |
+| Website contributor role for Azure Subscription level scope. | 15                                       |
+| Key Vault access policies for specific managed Key Vaults    | 1                                        |
+
+### Microsoft Graph
 
 Microsoft graph permissions are needed to collect data for Azure AD related
 security policies listed below.
@@ -413,20 +410,17 @@ security policies listed below.
 | Policy-Id | Policy Name   | AAD Entity Used for Evaluating Misconfiguration  | Data Stored in Cloudneeti Data Store   |
 |-----------|---------------|--------------------------------------------------|----------------------------------------|
 | 1800.1    | Ensure that AD Application Keys are Rotated Before They Expire   |*passwordCredentials*<br><br>Metadata information contained within the data entity will be key start-date, end-date, and expiry policies. No actual values are retrievable.| <ul><li>AD Application Name</li><li>AD Application ID</li><li>Expiry Date</li></ul> |       
-| 1100.11   | Ensure that Service Principal Certificate is Renewed Before It Expires | *keyCredentials*<br><br>Metadata information contained within the data involves start-date and end-date. Refer to documentation [here](https://docs.microsoft.com/en-us/powershell/module/azuread/new-azureadserviceprincipalkeycredential?view=azureadps-2.0).| <ul><li>AD Application Name</li><li>AD Application ID</li><li>Expiry Date</li></ul> |
+| 1100.11   | Ensure that the Service Principal Certificate is Renewed Before It Expires | *keyCredentials*<br><br>Metadata information contained within the data involves start-date and end-date. Refer to documentation [here](https://docs.microsoft.com/en-us/powershell/module/azuread/new-azureadserviceprincipalkeycredential?view=azureadps-2.0).| <ul><li>AD Application Name</li><li>AD Application ID</li><li>Expiry Date</li></ul> |
 | 1100.12   | Ensure that There are No Guest Users | *userType*<br><br>Member or guest. | <ul><li>No data is stored in the Cloudneeti database. This policy only retrieves the count of total users and how many are guest users.</li></ul> |
 | 1100.4    | Enforce the Policy to Set Password to ‘Always’ Expire in Azure Active Directory for All Organization Users | *passwordPolicies*<br><br>Metadata involving the length of the password, password strength, and password restrictions. Refer to documentation [here](https://docs.microsoft.com/en-us/azure/active-directory/authentication/concept-sspr-policy#password-policies-that-only-apply-to-cloud-user-accounts). | <ul><li>No data is stored in the Cloudneeti database. This policy only retrieves the count of all organization users and how many of them have set ‘Password always expired’ to ‘On’.</li></ul>  |
 | 1100.8    | Ensure that Azure Resources are Accessible Only Through the Organization Account | *userType*<br><br>Member or [guest](https://docs.microsoft.com/en-us/azure/active-directory/b2b/what-is-b2b). | <ul><li>No data is stored in the Cloudneeti database. This policy only retrieves the count of external users in an organization who can access resources under the Azure Subscription.</ul></li> |
 
-### Require List permissions on Key-vault
-Special permission on key vaults is needed to collect data for security policies
-listed below.
+### Azure Subscription 
 
-| Policy-Id     | Policy Name                                                       | Category       |
-|---------------|-------------------------------------------------------------------|----------------|
-| 1800.2        | Ensure that the expiry date is set on all Secrets in a Key Vault  | Key Management |
+This a mandatory read access for Cloudneeti application to do data collection
+from Azure subscriptions.
 
-### Require Backup Reader role
+### Backup Reader Role
 
 Backup Reader role access is needed to collect data for security policies listed
 below.
@@ -438,7 +432,7 @@ below.
 | 1700.12       | Ensure that Backup feature is configured for Function Apps deployed on Standard and above App Service Plan | Business continuity and DR |
 | 1700.13       | Ensure that Backup feature is configured for Mobile Apps deployed on Standard and above App Service Plan   | Business continuity and DR |
 
-### Require Website Contributor role
+### Website Contributor role
 
 Website Contributor role access is needed to collect data for security policies
 listed below.
@@ -460,6 +454,16 @@ listed below.
 | 1900.84       | Ensure that 'App Insights' are configured for Azure Mobile Apps                      | Azure - Compute (PaaS and Serverless) |
 | 1900.85       | Ensure that 'App Insights' are configured for Azure Function Apps                    | Azure - Compute (PaaS and Serverless) |
 | 1900.86       | Ensure that 'App Insights' are configured for Azure API Apps                         | Azure - Compute (PaaS and Serverless) |
+
+
+### Key Vault List
+
+Special permission on key vaults is needed to collect data for security policies
+listed below.
+
+| Policy-Id     | Policy Name                                                      | Category       |
+|---------------|------------------------------------------------------------------|----------------|
+| 1800.2        | Ensure that the expiry date is set on all Secrets in a Key Vault | Key Management |
 
 
 ## NEXT STEPS

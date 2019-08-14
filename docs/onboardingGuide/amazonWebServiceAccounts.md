@@ -1,6 +1,5 @@
 # AWS Subscription Onboarding Guide
-## Overview
-### Onboarding Steps
+## Onboarding Steps
 
 The following steps are required to onboard AWS to the Cloudneeti application.
 
@@ -11,11 +10,11 @@ The following steps are required to onboard AWS to the Cloudneeti application.
 | 3  | Add AWS Account                          | Cloudneeti                     | License Admin      |
 
 
-1. **Create an AWS role for Cloudneeti** includes registering a new AWS role for Cloudneeti application and granting the required access permissions.
+**1. Registering Cloudneeti application** includes registering the Cloudneeti application with the Azure Active Directory (AD) tenant, providing access to Microsoft Graph and granting admin consent to the Cloudneeti application.
 
-2. **Collect AWS account information** involves taking a copy of the AWS account id, AWS account access key id and secret and providing it to License Admin.
+**2. Adding the Office 365 subscription** includes adding Office 365 subscription information to the respective Cloud Account and waiting until the first data collection is complete.
 
-3. **Add AWS Account to Cloudneeti** includes adding AWS account information to the respective Cloudneeti cloud account and waiting until the first data collection is complete.
+**3. Advanced security configuration** includes adding a script to the customer’s Azure account and granting the required access rights.
 
 ### Required Roles
 One or more people with the following roles are required to complete Microsoft Azure onboarding process.
@@ -30,9 +29,10 @@ Cloudneeti application **License Admin** is assigned to an individual in the cus
 AWS **Administrator** role is required for granting Cloudneeti application access rights to AWS account(s). The administrator must have enough permissions to create a role as a trusted entity with the [SecurityAudit access policy.](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_job-functions.html#jf_security-auditor)
 
 ### Request Cloudneeti AWS account ID
-Request Cloudneeti to provide the Cloudneeti AWS account ID. This is a mandatory field to create a role as a trusted entity with the SecurityAudit access policy.
+**Note:**<br>`Request Cloudneeti to provide the Cloudneeti AWS account ID. This is a mandatory field to create a role as a trusted 
+entity with the SecurityAudit access policy.`
 
-## Create an AWS role for Cloudneeti
+## STEP 1: Create an AWS role for Cloudneeti
 The following steps are executed by AWS **Administrator** role. AWS role for Cloudneeti can be created manually or using an automated script. 
 
 ### Manual
@@ -101,7 +101,7 @@ trusted entity with the SecurityAudit access policy.
 5.  An AWS role will be created in the customer's account to mark Cloudneeti's
     account as a trusted entity with the SecurityAudit access policy.
 
-## Collect AWS account information
+## STEP 2: Collect AWS account information
 The following steps are executed by the AWS **Administrator** role.
 
 ### AWS account id 
@@ -125,7 +125,7 @@ Sign into your AWS account.
 
     ![Create access key](.././images/amazonWebServiceAccounts/Access_Key_Success.png#thumbnail)
 
-## Add AWS Account on Cloudneeti
+## STEP 3: Add AWS Account
 The following steps are executed by Cloudneeti application **License Admin** role.
 
 ### Add AWS Account
@@ -142,7 +142,7 @@ Log into the Cloudneeti application.
 
 
 ### Data Collection
-Once AWS account is added to the cloud account under the Cloudneeti License, it requires about 5 minutes for the data to be collected and processed,before they can be displayed in Cloudneeti dashboards. 
+Once the AWS account is added to the cloud account under the Cloudneeti License, it requires about 5 minutes for the data to be collected and processed,before they can be displayed in Cloudneeti dashboards. 
 
 1.	Select **Dashboard** on the menu
 2.	Review the data on dashboard
