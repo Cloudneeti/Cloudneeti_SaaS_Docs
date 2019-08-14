@@ -67,11 +67,11 @@ Cloud Account to a License.
 Please follow the onboarding steps to connect Cloudneeti application to your
 cloud infrastructure.
 
-### Azure Subscriptions
+[Azure Subscriptions](../../onboardingGuide/azureSubscriptions/)
 
-### AWS Accounts
+[AWS Accounts](../../onboardingGuide/amazonWebServiceAccounts/)
 
-### Office 365 Subscriptions
+[Office 365 Subscriptions](../../onboardingGuide/onboardingOffice365Subscription/)
 
 User Guide
 ----------
@@ -82,15 +82,15 @@ each benchmark, compliance statistics for each security policy and drill down
 into the compliance status of each individual resource where this security
 policy is applicable.
 
-### UI Navigation
+[UI Navigation](../../userGuide/userGuideUINavigation/)
 
-### Dashboards
+[Dashboards](../../userGuide/dashboards/)
 
-### Security Policies
+[Security Policies](../../userGuide/securityPolicies/)
 
-### Compliance Benchmarks
+[Compliance Benchmarks](../../userGuide/complianceBenchmarks/)
 
-### Reports
+[Reports](../../userGuide/reports/)
 
 Administrator Guide
 -------------------
@@ -99,10 +99,10 @@ License Admin and Account Admin can change Settings of the Cloudneeti
 application. This includes management of users, configuration of integrations
 with other systems, and management of security policies.
 
-### Manage Accounts
+[Manage Accounts](../../administratorGuide/manageAccounts/)
 
-### Manage Licenses
+[Manage Licenses](../../administratorGuide/manageLicenses/)
 
-### Manage Users
+[Manage Users](../../administratorGuide/manageUsers/)
 
-### Audit Log
+[Audit Log](../../administratorGuide/auditLog/)

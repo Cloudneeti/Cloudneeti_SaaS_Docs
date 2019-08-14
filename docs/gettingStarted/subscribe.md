@@ -39,7 +39,7 @@ Login to [Azure portal](https://portal.azure.com) as Subscription Reader/Owner.
 4.  Total resource count is mentioned on the upper left of the screen
     highlighted below
 
-![Azure Resources](.././images/Subscribe/Azure_Resources.png#thumbnail)
+    ![Azure Resources](.././images/Subscribe/Azure_Resources.png#thumbnail)
 
 Resources in AWS account
 ------------------------
@@ -63,8 +63,8 @@ Login to [AWS console](https://console.aws.amazon.com) with security audit role
 
 6.  Wait until all resources are loaded.
 
-   ![AWS Resources](.././images/Subscribe/Loading_Resources.png#thumbnail)
+    ![AWS Resources](.././images/Subscribe/Loading_Resources.png#thumbnail)
 
 7.  Resource count will appear next to **Resource search results**
 
-   ![Azure Resources](.././images/Subscribe/Resource_Search_Result.png#thumbnail)
+    ![Azure Resources](.././images/Subscribe/Resource_Search_Result.png#thumbnail)
