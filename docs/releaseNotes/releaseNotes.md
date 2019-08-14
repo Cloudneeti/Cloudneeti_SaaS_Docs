@@ -8,7 +8,8 @@
         2. Configure Integrations: A new page that lists and allows customers to configure integrations available within product. Integrations like reporting data feeds, Ticketing (Incident management) etc.
     *   NIST Cybersecurity Framework v1.1 Benchmark: An update to the NIST CSF v1.1 summary view to clarify the level1 and level2 domains along with mappings to new Azure, AWS and Office365 policies.
 
-    *   ‘Audit logs’ menu item has now been moved from under ‘Settings’ header to main menu for easy discoverabaility and relevance. 
+    *   ‘Audit logs’ menu item has now been moved from under ‘Settings’ header to main menu for easy discoverability and relevance. 
+
     *    Azure Marketplace Free Trial: Customers will be able to try before they buy on [ Azure marketplace ](https://azuremarketplace.microsoft.com/en/marketplace/apps/cloudneeti.cloudneeti_azmkt_free_trial?tab=Overview) . With this offering Customers can try out our product for their Azure, AWS and O365 cloud accounts.
 
 2.  **Platform & Stability Improvements**
@@ -18,10 +19,11 @@
 
 3.  **Policies & Benchmarks Additions/Updates**
     *   Updation of following compliance benchmark for Azure and AWS cloud accounts.
-        - AWS: GxP Life Sciences - FDA 21 CFR PART 11 AND PART 820.30 regulation controls.
-        - Azure: GxP Life Science - FDA 21 CFR PART 11 AND PART 820.30 regulation controls.
+        - AWS: GxP Life Sciences - FDA 21 CFR PART 11 AND PART 820.30 
+        - Azure: GxP Life Science - FDA 21 CFR PART 11 AND PART 820.30 
     *   Addition of following compliance benchmark for M365 accounts.
-        - M365: GxP Life Sciences - FDA 21 CFR PART 11 AND PART 820.30 regulation controls.
+        - M365: GxP Life Sciences - FDA 21 CFR PART 11 AND PART 820.30
+
     *   Updates to Azure NSG related policies to consider port ranges.
     *   Enhancements to Azure App service-related policies to include the latest updated versions.
     *   Addition of following 22 new Azure security policies.
