@@ -21,8 +21,7 @@ Select Settings on the left menu and click on Manage Accounts.
 6. The right bottom section **Point of Contact** lists the primary and
     secondary License Admin from the customer side and Cloudneeti points of
     contact for this License.
-
-![Manage Licenses](.././images/administratorGuide/Manage_Licenses.png#thumbnail)
+	![Manage Licenses](.././images/administratorGuide/Manage_Licenses.png#thumbnail)
 
 1. Click **Update** to edit the License Name
 
@@ -48,14 +47,12 @@ Select Settings on the left menu and click on Manage Accounts.
     and report data after the License expires.
 
 9. **Expiry / Renewal (UTC)** displays start and end date of the License.
-
-![License Features](.././images/administratorGuide/License_Features.png#thumbnail)
+	![License Features](.././images/administratorGuide/License_Features.png#thumbnail)
 
 ### License Name Update
 
 You can edit the **License Name** and click **Save**.
-
-![License Name Update](.././images/administratorGuide/License_Name _Update.png#thumbnail)
+	![License Name Update](.././images/administratorGuide/License_Name _Update.png#thumbnail)
 
 ### Configure Data Feed Destinations
 
@@ -83,8 +80,7 @@ collection.
 5. Click **Verify Connection** to verify connection status
 
 6. Click **Save**
-
-![Storage System](.././images/administratorGuide/Storage_System.png#thumbnail)
+	![Storage System](.././images/administratorGuide/Storage_System.png#thumbnail)
 
 #### NoSql storage system
 
@@ -108,8 +104,7 @@ collection.
 8. Click **Verify Connection** to verify connection status
 
 9. Click **Save**
-
-![NoSql storage system](.././images/administratorGuide/NoSql_Storage_System.png#thumbnail)
+	![NoSql storage system](.././images/administratorGuide/NoSql_Storage_System.png#thumbnail)
 
 ### Data Feed Scope & Frequency
 
@@ -123,12 +118,10 @@ type of data feeds and the frequency of data feeds.
 3. Edit data feeds for **each individual benchmark**
 
 4. Click **Save**
-
-![Data Feed Scope](.././images/administratorGuide/Data_Feed_Scope.png#thumbnail)
+	![Data Feed Scope](.././images/administratorGuide/Data_Feed_Scope.png#thumbnail)
 
 The following settings can be updated at an individual benchmark level.
-
-![Data Feed Scope](.././images/administratorGuide/Benchmark_Level.png#thumbnail)
+	![Data Feed Scope](.././images/administratorGuide/Benchmark_Level.png#thumbnail)
 
 ### Incident Management (Ticketing)
 
@@ -160,8 +153,7 @@ as ZenDesk and ServiceNow.
     Low Priority section
 
 9. Click Save
-
-![Incident Management](.././images/administratorGuide/Incident_Management.png#thumbnail)
+	![Incident Management](.././images/administratorGuide/Incident_Management.png#thumbnail)
 
 ### Update Global Policies
 
@@ -176,5 +168,4 @@ excluded from data collection.
     Policies and back
 
 4. Click Save
-
-![Update_Global_Policies](.././images/administratorGuide/Update_Global_Policies.png#thumbnail)
+	![Update_Global_Policies](.././images/administratorGuide/Update_Global_Policies.png#thumbnail)

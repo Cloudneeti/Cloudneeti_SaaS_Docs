@@ -255,20 +255,14 @@ If the Key Vault access policy is not added, Cloudneeti application will not be 
 1.	Login to Azure portal.
 2.	Go to the **Key vaults** (1)
 3.	Select **key vault** (2)
-
     ![Access Policy](.././images/azureSubscriptions/Add_KeyVault_Access.png#thumbnail)
-
 4.	Select **Access policies** (1)
 5.	Click on **Add Access Policy** (2)
-   
     ![Access Policy](.././images/azureSubscriptions/Add_Access_Policy.png#thumbnail)
-
-6.	Select **List** in **Secret Permission** (1)
-7.	Select **Principal** as Cloudneeti Application registered in [step 1](.././azureSubscriptions/#step-1-register-cloudneeti-application) (2)
-8.	Click **Add** access policy (3)
-   
+6.	Select **List** in **Key Permissions** and **Secret Permissions** (1) (2)
+7.	Select **Principal** as Cloudneeti Application registered in [step 1](.././azureSubscriptions/#step-1-register-cloudneeti-application) (3)
+8.	Click **Add** access policy (4)
    ![Access Policy](.././images/azureSubscriptions/Select_Permission.png#thumbnail)
-
 Note: Perform this step on all the key vaults present in your subscription.
 
 ### Collect information
@@ -290,7 +284,6 @@ The Cloudneeti application **License Admin** requires this information to add an
 2.  Click on **Properties** on the secondary menu
 
 3.  Copy **Directory ID** to a notepad
-
     ![Azure Directory](.././images/azureSubscriptions/Azure_Directory_ID.png#thumbnail)
 
 #### Azure Domain Name
@@ -300,7 +293,6 @@ The Cloudneeti application **License Admin** requires this information to add an
 2.  Click on **Overview** on the secondary menu
 
 3.  Copy **Domain name** to a notepad
-
     ![Azure Domain](.././images/azureSubscriptions/Azure_Domain_Name.png#thumbnail)
 
 #### Registered Cloudneeti Application ID 
@@ -310,11 +302,9 @@ The Cloudneeti application **License Admin** requires this information to add an
 2.  Select **App Registrations** in the secondary menu
 
 3.  Select Cloudneeti Application registered in [step1](.././azureSubscriptions/#step-1-register-cloudneeti-application)
-
     ![Azure Domain](.././images/azureSubscriptions/Grant_Permission.png#thumbnail)
 
 4.  Copy the Cloudneeti Application id
-
     ![Azure Domain](.././images/azureSubscriptions/Azure_AppReg_App_ID.png#thumbnail)
 
 #### Registered Cloudneeti Application Secret 
@@ -334,7 +324,6 @@ The Cloudneeti application **License Admin** requires this information to add an
 7.  **Copy to clipboard** and paste the Client Secret to your notepad. **Note:**
     You will not be able to copy this value after you move away from this
     screen.
-
     ![Application Secret](.././images/azureSubscriptions/AzureSP_CaptureClientSecret.png#thumbnail)
 
 ## STEP 3: Add Azure Subscription
@@ -344,35 +333,24 @@ The following steps are done by Cloudneeti application **License Admin** role.
 ### Activate the License
 
 1.  Log in to the Cloudneeti application with **License Admin** role.
-
 2.  Click on **Activate License**
-
     ![Activate License](.././images/azureSubscriptions/Activate_License.png#thumbnail)
 
 ### Add Cloud Account
 
 1.  Select cloud connector for **Microsoft Azure**
-
     ![Add Account](.././images/azureSubscriptions/Azure_Select_Connector_Type.png#thumbnail)
-
 2.  Fill in the Account Name, Domain name, Azure Tenant Id (Domain ID) Azure
     Application ID and Azure Application Password.
-
     ![Add Account](.././images/azureSubscriptions/Azure_Create_Account.png#thumbnail)
-
 3.  Click on **Get Subscriptions** to get the list of Azure subscriptions that
     Cloudneeti application can access in the selected azure tenant. If your
     subscription does not exist on the list then please check access to service
     principal
-
 4.  **Select Subscription** in the dropdown menu
-
 5.  Click **Save & Continue**
-
     ![Add Account](.././images/azureSubscriptions/Add_Azure_Account_Select_Subscription.png#thumbnail)
-
 6.  You will receive a confirmation that the Azure subscription has been added.
-
     ![Add Account](.././images/azureSubscriptions/Account_Success.png#thumbnail)
 
 ### Data Collection
@@ -384,7 +362,6 @@ before they can be displayed in Cloudneeti dashboards.
 1.  Select **Dashboard** on the menu
 
 2.  Review the data on dashboard
-
     ![Data Collection](.././images/azureSubscriptions/Dashboard.png#thumbnail)
 
 Congratulations! You have added an Azure subscription to Cloudneeti application.
