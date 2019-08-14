@@ -178,6 +178,7 @@ html {
 img[src*="#thumbnail"] {
     display: block;
     max-width: 100%;
+    border: 1px #333333 solid;
  }
 
 table, td {
