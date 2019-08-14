@@ -1,45 +1,94 @@
-Onboarding Steps
-================
+# Azure Subscription Onboarding Guide
+## Overview
+### Onboarding Steps
 
 The following steps are required to onboard Microsoft Azure to the Cloudneeti application.
 
-| Nr     | Step                                     | Portal to use                | Role                    |
-|--------|------------------------------------------|------------------------------|-------------------------|
-| 1      | Register Cloudneeti Application          | Microsoft Azure              | Global AD Administrator |
-| 2      | Grant access to Azure subscription       | Microsoft Azure              | Subscription Owner      |
-| 3      | Add Azure subscription                   | Cloudneeti                   | License Admin           |
+![Onboarding Steps](.././images/azureSubscriptions/Onboarding_Steps.png#thumbnail)
 
-1. **Register Cloudneeti Applications** includes registering Cloudneeti application with Azure tenant, providing access to Microsoft Graph and granting admin consent to Cloudneeti application.
+1.  **Registering the Cloudneeti application** includes registering the
+    Cloudneeti application with Azure tenant, providing access to Microsoft
+    Graph and granting admin consent to the Cloudneeti application.
 
-2. **Grant access to Azure subscription** includes giving Cloudneeti application access to Azure subscription, assigning a Reader, Backup reader and Website contributor role, and collecting Subscription ID, Directory ID, Domain Name information.
+2.  **Granting access to the Azure subscription** includes giving the Cloudneeti
+    application access to the Azure subscription, assigning a Website
+    contributor role, and collecting Subscription ID, Directory ID, Domain Name
+    information.
 
-3. **Add Azure subscription** includes adding Azure subscription information to the respective Cloud Account and waiting until the first data collection is complete.
+3.  **Adding Azure subscription** includes adding Azure subscription information
+    to the respective Cloud Account and waiting until the first data collection
+    is complete.
 
-### Required User Roles
-One or more people with the following roles are required to complete Microsoft Azure onboarding process.
+| Nr | Step                           | Portal to use | Role                |
+|--------|------------------------------------|-------------------|-------------------------|
+| 1      | Register Cloudneeti application    | Microsoft Azure   | Global AD Administrator |
+| 2      | Grant access to Azure subscription | Microsoft Azure   | Subscription Owner      |
+| 3      | Add Azure subscription             | Cloudneeti        | License Admin           |
 
-| Nr     | Pre-requisite Role                   | Portal to use                 |
-|--------|--------------------------------------|-------------------------------|
-| 1      | License Admin                        | Microsoft Azure               |
-| 2      | Global AD Administrator              | Microsoft Azure               |
-| 3      | Subscription Owner                   | Microsoft Azure               |
+Required Roles
+--------------
 
-* Onboarding a cloud account (in this case an Azure Subscription) requires the logged in user to be assigned the **License** Admin role in the Cloudneeti application.
+One or more people with the following roles are required to complete Microsoft
+Azure onboarding process.
 
-* Microsoft Azure **Global AD Administrator** role is required for App Registration of Cloudneeti application and granting access rights to Cloudneeti application. 
+| **Nr** | **Pre-requisite Role**  | **Portal to use**      |
+|--------|-------------------------|------------------------|
+| 1      | License Admin           | Cloudneeti application |
+| 2      | Global AD Administrator | Microsoft Azure        |
+| 3      | Subscription Owner      | Microsoft Azure        |
 
-* Microsoft Azure **Subscription Owner** role is required for providing Cloudneeti application required read access to the Azure Subscription.
+-   Onboarding a cloud account (in this case an Azure Subscription) requires the
+    logged in user to be assigned the **License Admin** role in the Cloudneeti
+    application.
 
-##1. Register Cloudneeti application
+-   Microsoft Azure **Global AD Administrator** role is required for App
+    Registration of the Cloudneeti application and granting access rights to the
+    Cloudneeti application.
 
-The following steps are executed by Microsoft Azure **Global AD Administrator** role on the Microsoft Azure Portal. Cloudneeti application can be registered either manually or using automation script
-### Manual Steps
-#### Register Cloudneeti Application
-Login to [Azure Portal](https://portal.azure.com/) with **Global AD Administrator** role.
+-   The Microsoft Azure **Subscription Owner** role is required for providing
+    Cloudneeti application required read access to the Azure Subscription.
 
-1. Select **Azure Active Directory** in the primary menu
-2. Select **App Registrations** in the secondary menu
-3. Click on **New Registration**
+Required Permissions
+--------------------
+
+Cloudneeti application will be granted five read permissions to Azure AD and
+Azure subscriptions. Four of these permissions are optional. Each optional read
+permission is linked to a number of security policies where this permission is
+needed for data collection. If an optional permission will not be provided,
+Cloudneeti application will not be able to collect the data for the related
+policies. Excluded security policies by permission are listed later in this
+document.
+
+| **Information**                                             | **Portal to use** | **Role**           | **Step** | **Type**  | **Policies** |
+|-------------------------------------------------------------|-------------------|--------------------|----------|-----------|--------------|
+| Directory Read All Microsoft Graph permissions              | Microsoft Azure   | Global AD Admin    | STEP 1   | optional  | 5            |
+| Reader role for Azure Subscription level scope              | Microsoft Azure   | Subscription Owner | STEP 2   | mandatory | 0            |
+| Backup reader role for Azure Subscription level scope       | Microsoft Azure   | Subscription Owner | STEP 2   | optional  | 4            |
+| Website contributor role for Azure Subscription level scope | Microsoft Azure   | Subscription Owner | STEP 2   | optional  | 15           |
+| Key Vault access policies for specific managed Key Vaults   | Microsoft Azure   | Subscription Owner | STEP 2   | optional  | 1            |
+
+STEP 1: Register Cloudneeti application
+=======================================
+
+The following steps are executed by the Microsoft Azure **Global AD
+Administrator** role on the Microsoft Azure Portal.
+
+The Cloudneeti application can be registered either manually or using automation
+script.
+
+Manual Steps
+------------
+
+### Register Cloudneeti Application 
+
+Login to [Azure Portal](https://portal.azure.com/) with **Global AD
+Administrator** role.
+
+1.  Select **Azure Active Directory** in the primary menu
+
+2.  Select **App Registrations** in the secondary menu
+
+3.  Click on **New Registration**
 
     ![Service Principal - Azure Portal](.././images/azureSubscriptions/AzureManual_AddSP.png#thumbnail)
 

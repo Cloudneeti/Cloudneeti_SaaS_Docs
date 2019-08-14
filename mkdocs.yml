@@ -32,15 +32,16 @@ nav:
   - System Architecture: gettingStarted/systemArchitecture.md
   - Sign In and Sign Out: gettingStarted/signInAndSignOut.md
 - Onboarding Guide:
-    - Azure Subscriptions: onboardingGuide/azureSubscriptions.md
-    - AWS Accounts: onboardingGuide/awsAccounts.md
+    - Overview: onboardingGuide/onboardingGuideOverview.md
+    - Azure Subscriptions: onboardingGuide/onboardingAzureSubscription.md
+    - AWS Accounts: onboardingGuide/amazonWebServiceAccounts.md
 #    - Office 365 Subscriptions: onboardingGuide/onboardingOffice365Subscription.md
 - User Guide:
   - UI Navigation: userGuide/userGuideUINavigation.md
-# - Dashboards: userGuide/dashboards.md
-# - Security Policies: userGuide/securityPolicies.md
-# - Compliance Benchmarks: userGuide/complianceBenchmarks.md
-# - Reports: userGuide/reports.md
+  - Dashboards: userGuide/dashboards.md
+  - Security Policies: userGuide/securityPolicies.md
+  - Compliance Benchmarks: userGuide/complianceBenchmarks.md
+  - Reports: userGuide/reports.md
 #- Administrator Guide:
 #  - Manage Accounts: administratorGuide/manageAccounts.md
 #  - Manage Licenses: administratorGuide/manageLicenses.md
