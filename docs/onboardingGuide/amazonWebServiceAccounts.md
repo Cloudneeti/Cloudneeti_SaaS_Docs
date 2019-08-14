@@ -1,5 +1,6 @@
-# AWS Subscription Onboarding Guide
-## Onboarding Steps
+# AWS Accounts Onboarding Guide
+## Overview
+### Onboarding Steps
 
 The following steps are required to onboard AWS to the Cloudneeti application.
 
@@ -16,7 +17,7 @@ The following steps are required to onboard AWS to the Cloudneeti application.
 
 **3. Advanced security configuration** includes adding a script to the customer’s Azure account and granting the required access rights.
 
-### Required Roles
+#### Required Roles
 One or more people with the following roles are required to complete Microsoft Azure onboarding process.
 
 | Nr | Role          | Product    |
@@ -28,7 +29,7 @@ Cloudneeti application **License Admin** is assigned to an individual in the cus
 
 AWS **Administrator** role is required for granting Cloudneeti application access rights to AWS account(s). The administrator must have enough permissions to create a role as a trusted entity with the [SecurityAudit access policy.](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_job-functions.html#jf_security-auditor)
 
-### Request Cloudneeti AWS account ID
+#### Request Cloudneeti AWS account ID
 **Note:**<br>`Request Cloudneeti to provide the Cloudneeti AWS account ID. This is a mandatory field to create a role as a trusted 
 entity with the SecurityAudit access policy.`
 
