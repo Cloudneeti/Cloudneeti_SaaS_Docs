@@ -8,7 +8,7 @@ Cloudneeti application can integrate with multiple cloud accounts (Azure subscri
 
 Please follow links for details:
 
-[1. Microsoft Azure subscription](../onboardingAzureSubscription/)
+[1. Microsoft Azure subscription](../azureSubscriptions/)
 
 [2. Amazon Web Services (AWS) account](../amazonWebServiceAccounts/)
 

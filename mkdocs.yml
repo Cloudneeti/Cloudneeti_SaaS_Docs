@@ -33,9 +33,9 @@ nav:
   - Sign In and Sign Out: gettingStarted/signInAndSignOut.md
 - Onboarding Guide:
     - Overview: onboardingGuide/onboardingGuideOverview.md
-    - Azure Subscriptions: onboardingGuide/onboardingAzureSubscription.md
+    - Azure Subscriptions: onboardingGuide/azureSubscriptions.md
     - AWS Accounts: onboardingGuide/amazonWebServiceAccounts.md
-#    - Office 365 Subscriptions: onboardingGuide/onboardingOffice365Subscription.md
+    - Office 365 Subscriptions: onboardingGuide/onboardingOffice365Subscription.md
 - User Guide:
   - UI Navigation: userGuide/userGuideUINavigation.md
   - Dashboards: userGuide/dashboards.md

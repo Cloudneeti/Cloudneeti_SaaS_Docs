@@ -104,26 +104,26 @@ script.
 Login to [Azure Portal](https://portal.azure.com/) with **Global AD
 Administrator** associated to your Office 365 Subscription role.
 
-1.  Select **Azure Active Directory** associated to your Office 365 Subscription
+1. Select **Azure Active Directory** associated to your Office 365 Subscription
     in the primary menu
-2.  Select **App Registrations** in the secondary menu
-3.  Click on **New Registration**
+2. Select **App Registrations** in the secondary menu
+3. Click on **New Registration**
 ![New Registration](.././images/onboardingOffice365Subscription/New_Registration.png#thumbnail)
-4.  Enter the name, for example "Cloudneeti"
-5.  Click **Register**
+4. Enter the name, for example "Cloudneeti"
+5. Click **Register**
 ![Register](.././images/onboardingOffice365Subscription/Register.png#thumbnail)
-6.  **Copy to clipboard** and paste the Application id to your notepad
+6. **Copy to clipboard** and paste the Application id to your notepad
 ![Copy AppID](.././images/onboardingOffice365Subscription/Copy_AppID.png#thumbnail)
 
 #### Add Client Secret
 
-1.  Click on **new client secret** in **Certificates & secrets** section (1)
+1. Click on **new client secret** in **Certificates & secrets** section (1)
 
-2.  Add **Description** and select expiry time
+2. Add **Description** and select expiry time
 
-3.  Click on **Add** (2)
+3. Click on **Add** (2)
 
-4.  **Copy to clipboard** (3) and paste the Client Secret to your notepad.
+4. **Copy to clipboard** (3) and paste the Client Secret to your notepad.
     **Note:** You will not be able to copy this value after you move away from
     this screen.
 
@@ -142,22 +142,22 @@ Office 365 Secure Score data. You can find more details about the Microsoft
 Graph API
 permission [here](https://docs.microsoft.com/en-us/graph/permissions-reference).
 
-1.  Click **API Permissions**
+1. Click **API Permissions**
 
-2.  Select **Microsoft Graph**
+2. Select **Microsoft Graph**
 
 ![API Permissions](.././images/onboardingOffice365Subscription/API_Permissions.png#thumbnail)
-3.  Select **Application**
+3. Select **Application**
 
 ![Application](.././images/onboardingOffice365Subscription/Application.png#thumbnail)
-4.  Click **Add permission** and add the following information (1)
+4. Click **Add permission** and add the following information (1)
 
 | API             | Permission Name                                                                                                     | Type        |
 |-----------------|---------------------------------------------------------------------------------------------------------------------|-------------|
 | Microsoft.Graph | Directory.Read.All [Refer here](https://docs.microsoft.com/en-us/graph/permissions-reference#directory-permissions) | Application |
 | Microsoft.Graph | SecurityEvents.Read.All                                                                                             | Application |
 
-5.  Click **Grant admin consent** in the Grant consent section (2)
+5. Click **Grant admin consent** in the Grant consent section (2)
 
 ![API Permission](.././images/onboardingOffice365Subscription/Grant_Admin_Consent.png#thumbnail)
 
@@ -172,7 +172,7 @@ Tenant using PowerShell script.
 | Activity                                                                                                              | Description                                                                                                                                                                                                               |
 |-----------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 1. Download and review **PowerShell script** for creation of the service principal                                    | The PowerShell script is used to create a service principal in Azure Tenant AD: [Download Link.](https://raw.githubusercontent.com/Cloudneeti/docs_cloudneeti/master/scripts/Create-ServicePrincipal-Office365Onboarding.ps1) |
-| 2. **Workstation:** Ensure you have the latest PowerShell version (v5 and above)                                      | Verify PowerShell version by running the following command<br>`$PSVersionTable.PSVersion`<br>on the workstation where you will run the ServicePrincipal creation script. If the PowerShell version is lower than 5, then follow this link for installation of a later version: [Download Link.]()|
+| 2. **Workstation:** Ensure you have the latest PowerShell version (v5 and above)                                      | Verify PowerShell version by running the following command<br>`$PSVersionTable.PSVersion`<br>on the workstation where you will run the ServicePrincipal creation script. If the PowerShell version is lower than 5, then follow this link for installation of a later version: [Download Link.](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-windows-powershell?view=powershell-6)|
 | 3. **Workstation:** Before executing the script, make sure there are no restrictions in running the PowerShell script | Use this PowerShell command:<br>``Set-ExecutionPolicy ` ``<br>``-Scope Process ` ``<br>`-ExecutionPolicy Bypass`<br>PowerShell contains built-in execution policies that limit its use as an attack vector. By default, the execution policy is set to Restricted, which is the primary policy for script execution. The bypass allows for running scripts and keeps the lowered permissions isolated to just the current running process. |
 | 4. **Workstation:** Install Azure Modules to execute PowerShell commands within service principal automation script   | ``Install-Module ` ``<br>``-Name AzureAD ` ``<br>`-MinimumVersion 2.0.0.131`<br>It is a roll-up module for the Azure Resource Manager cmdlets. |
 
@@ -181,12 +181,12 @@ Tenant using PowerShell script.
 Use the Create-ServicePrincipal-Office365Onboarding.ps1 script to create and
 register a Cloudneeti Application.
 
-1.  Open PowerShell in administrator mode.
+1. Open PowerShell in administrator mode.
 
-2.  Go to the directory where Create-ServicePrincipal-Office365Onboarding.ps1
+2. Go to the directory where Create-ServicePrincipal-Office365Onboarding.ps1
     was downloaded earlier.
 
-3.  Run the below command to create a service principal
+3. Run the below command to create a service principal
 <pre>
 	<code>```
     .\Create-ServicePrincipal-Office365Onboarding.ps1 `
@@ -195,12 +195,12 @@ register a Cloudneeti Application.
 		-expirationPeriod 1year
     ```</code>
 </pre>
-4.  The script will prompt the login screen
+4. The script will prompt the login screen
 
-5.  Log in with Global AD Administrator or Application Administrator user
+5. Log in with Global AD Administrator or Application Administrator user
     credentials.
 
-6.  Store service principal information from the output in a notepad. This
+6. Store service principal information from the output in a notepad. This
     information will be needed while onboarding the Azure account in the
     Cloudneeti portal.
 
@@ -211,19 +211,19 @@ register a Cloudneeti Application.
 The Azure **Global AD Administrator** needs to grant permissions to the
 Cloudneeti application to be able to collect the Azure AD data.
 
-1.  Click **Azure Active Directory**
-2.  Click **App registrations**
-3.  Find and select Cloudneeti application under Display NameGo to **API
+1. Click **Azure Active Directory**
+2. Click **App registrations**
+3. Find and select Cloudneeti application under Display NameGo to **API
     permissions**
-4.  Click **Grant admin consent** in the Grant consent section
-5.  Review permissions as below listed (1)
+4. Click **Grant admin consent** in the Grant consent section
+5. Review permissions as below listed (1)
 
 | API             | Permission Name                                                                                                     | Type        |
 |-----------------|---------------------------------------------------------------------------------------------------------------------|-------------|
 | Microsoft.Graph | Directory.Read.All [Refer here](https://docs.microsoft.com/en-us/graph/permissions-reference#directory-permissions) | Application |
 | Microsoft.Graph | SecurityEvents.Read.All                                                                                             | Application |
 
-6.  Click **Grant admin consent** in the Grant consent section (2)
+6. Click **Grant admin consent** in the Grant consent section (2)
 ![Grant_Admin_Consent](.././images/onboardingOffice365Subscription/Grant_Admin_Consent.png#thumbnail)
 
 ### Collect Information
@@ -241,50 +241,48 @@ Azure subscription as a cloud account.
 
 #### Azure Directory ID
 
-1.  Click on **Azure Active Directory** on the primary menu
-
-2.  Click on **Properties** on the secondary menu
-
-3.  Copy **Directory ID** to a notepad
+1. Click on **Azure Active Directory** on the primary menu
+2. Click on **Properties** on the secondary menu
+3. Copy **Directory ID** to a notepad
 
 ![Directory ID](.././images/onboardingOffice365Subscription/Directory_ID.png#thumbnail)
 
 #### Azure Domain Name
 
-1.  Click on **Azure Active Directory** on the primary menu
+1. Click on **Azure Active Directory** on the primary menu
 
-2.  Click on **Custom domain names** on the secondary menu
+2. Click on **Custom domain names** on the secondary menu
 
-3.  Copy **Domain name** to a notepad
+3. Copy **Domain name** to a notepad
 
 ![Azure Domain Name](.././images/onboardingOffice365Subscription/Domain_Name.png#thumbnail)
 
 #### Registered Cloudneeti Application ID 
 
-1.  Select **Azure Active Directory** in the primary menu
+1. Select **Azure Active Directory** in the primary menu
 
-2.  Select **App Registrations** in the secondary menu
+2. Select **App Registrations** in the secondary menu
 
-3.  Select Cloudneeti Application registered in [Step 1]()
+3. Select Cloudneeti Application registered in [Step 1](.././onboardingOffice365Subscription/#step-1-register-cloudneeti-application)
 ![Registered Cloudneeti Application ID](.././images/onboardingOffice365Subscription/Cloudneeti_Application_ID.png#thumbnail)
-4.  Copy the Cloudneeti Application id
+4. Copy the Cloudneeti Application id
 ![Cloudneeti Application id](.././images/onboardingOffice365Subscription/Copy_AppID.png#thumbnail)
 
 #### Registered Cloudneeti Application Secret 
 
-1.  Select **Azure Active Directory** in the primary menu
+1. Select **Azure Active Directory** in the primary menu
 
-2.  Select **App Registrations** in the secondary menu
+2. Select **App Registrations** in the secondary menu
 
-3.  Select Cloudneeti Application registered in [Step 1]()
+3. Select Cloudneeti Application registered in [Step 1](.././onboardingOffice365Subscription/#step-1-register-cloudneeti-application)
 
-4.  Click on **new client secret** in **Certificates & secrets** section (1)
+4. Click on **new client secret** in **Certificates & secrets** section (1)
 
-5.  Add **Description** and select expiry time
+5. Add **Description** and select expiry time
 
-6.  Click on **Add** (2)
+6. Click on **Add** (2)
 
-7.  **Copy to clipboard** and paste the Client Secret to your notepad. **Note:**
+7. **Copy to clipboard** and paste the Client Secret to your notepad. **Note:**
     You will not be able to copy this value after you move away from this
     screen. (3)
 
@@ -299,23 +297,23 @@ role.
 ### Activate the License
 
 
-1.  Log in to the Cloudneeti application with **License Admin** role.
+1. Log in to the Cloudneeti application with **License Admin** role.
 
-2.  Click on **Activate License**
+2. Click on **Activate License**
 
 ![Activate License](.././images/onboardingOffice365Subscription/Activate_License.png#thumbnail)
 
 ### Add Cloud Account
 
 
-1.  Select cloud connector for **Office 365**
+1. Select cloud connector for **Office 365**
 
 ![Add Cloud Account](.././images/onboardingOffice365Subscription/Add_Cloud_Account.png#thumbnail)
-2.  Fill in the Account Name, Domain name, Azure Tenant Id (Domain ID) Azure
+2. Fill in the Account Name, Domain name, Azure Tenant Id (Domain ID) Azure
     Application ID and Azure Application Password.
-3.  Click on **Add Account**
+3. Click on **Add Account**
 ![Add Account](.././images/onboardingOffice365Subscription/Add_Account.png#thumbnail)
-4.  You receive a confirmation that Office 365 has been added and data
+4. You receive a confirmation that Office 365 has been added and data
     collection started.
 ![confirmation](.././images/onboardingOffice365Subscription/Confirmation.png#thumbnail)
 
@@ -326,8 +324,8 @@ Once Azure subscription is added to the cloud account under Cloudneeti License,
 it requires about 5 minutes for the data to be collected and processed, before
 they can be displayed in Cloudneeti dashboards.
 
-1.  Select **Dashboard** on the menu
-2.  Review the data on dashboard
+1. Select **Dashboard** on the menu
+2. Review the data on dashboard
 ![Dashboard](.././images/onboardingOffice365Subscription/Dashboard.png#thumbnail)
 
 ## STEP 3: Advanced security configuration
@@ -354,38 +352,38 @@ the Cloudneeti API key generation.
 
 | **Information**                                                                                 | **Source / Portal to use** | **User**                |
 |-------------------------------------------------------------------------------------------------|----------------------------|-------------------------|
-| [Cloudneeti License Id](#RANGE!_License_id)                                                     | Cloudneeti                 | License Admin           |
-| [Cloudneeti Account Id ](#RANGE!_Account_id)                                                    | Cloudneeti                 | License Admin           |
-| [Office Tenant Id ](#RANGE!_Azure_Subscription_ID)                                              | Cloudneeti                 | License Admin           |
-| [Service Principal Id ](#RANGE!_Registered_Cloudneeti_Applicatio)                               | Cloudneeti                 | License Admin           |
-| [Cloudneeti Environment ](#RANGE!_Cloudneeti_Artifacts_and_1)                                   | Cloudneeti Team            | License Admin           |
-| [Cloudneeti API key](#RANGE!_Generate_Cloudneeti_API)                                           | Cloudneeti Team            | License Admin           |
-| [Artifacts Name ](#RANGE!_Cloudneeti_Artifacts_and)                                             | Cloudneeti Team            | License Admin           |
-| [Data Collector Version ](#RANGE!_Cloudneeti_Artifacts_and)                                     | Cloudneeti Team            | License Admin           |
-| [Cloudneeti M365 data collector artifacts storage access Key](#RANGE!_Cloudneeti_Artifacts_and) | Cloudneeti Team            | License Admin           |
-| [Cloudneeti data collector Service Principal secret](#RANGE!_Registered_Cloudneeti_Applicatio)  | Microsoft Azure            | Subscription Owner      |
-| [Azure Subscription Id ](#RANGE!_Azure_Subscription_ID_1)                                       | Microsoft Azure            | Subscription Owner      |
-| [Office Domain ](#RANGE!_Office_365_details)                                                    | Office 365 portal          | Office 365 Global Admin |
-| [Office Admin Id ](#RANGE!_Create_application_password)                                         | Office 365 portal          | Office 365 Global Admin |
-| [Office 365 App Password](#RANGE!_Create_application_password)                                  | Office 365 portal          | Office 365 Global Admin |
+| [Cloudneeti License Id](.././onboardingOffice365Subscription/#license-id)                        | Cloudneeti                 | License Admin           |
+| [Cloudneeti Account Id ](.././onboardingOffice365Subscription/#account-id)                         | Cloudneeti                 | License Admin           |
+| [Office Tenant Id ](.././onboardingOffice365Subscription/#azure-subscription-id)                     | Cloudneeti                 | License Admin           |
+| [Service Principal Id ](.././onboardingOffice365Subscription/#registered-cloudneeti-application-id)    | Cloudneeti                 | License Admin           |
+| [Cloudneeti Environment ](.././onboardingOffice365Subscription/#cloudneeti-artifacts-and-data-collector-details)  | Cloudneeti Team            | License Admin           |
+| [Cloudneeti API key](.././onboardingOffice365Subscription/#generate-cloudneeti-api-key)   | Cloudneeti Team            | License Admin           |
+| [Artifacts Name ](.././onboardingOffice365Subscription/#cloudneeti-artifacts-and-data-collector-details) | Cloudneeti Team            | License Admin           |
+| [Data Collector Version ](.././onboardingOffice365Subscription/#cloudneeti-artifacts-and-data-collector-details) | Cloudneeti Team            | License Admin           |
+| [Cloudneeti M365 data collector artifacts storage access Key](.././onboardingOffice365Subscription/#cloudneeti-artifacts-and-data-collector-details) | Cloudneeti Team            | License Admin           |
+| [Cloudneeti data collector Service Principal secret](.././onboardingOffice365Subscription/#registered-cloudneeti-application-secret)  | Microsoft Azure            | Subscription Owner      |
+| [Azure Subscription Id ](.././onboardingOffice365Subscription/#azure-subscription-id)    | Microsoft Azure            | Subscription Owner      |
+| [Office Domain ](.././onboardingOffice365Subscription/#office-365-details)       | Office 365 portal          | Office 365 Global Admin |
+| [Office Admin Id ](.././onboardingOffice365Subscription/#enable-mfa-and-create-application-password)     | Office 365 portal          | Office 365 Global Admin |
+| [Office 365 App Password](.././onboardingOffice365Subscription/#enable-mfa-and-create-application-password)   | Office 365 portal          | Office 365 Global Admin |
 
 #### Cloudneeti license and account details
 
 Login to Cloudneeti portal as a License Admin.
 
-<em>**License id**</em>
+##### License id
 
-1.  Navigate to **View License** under **Settings**
+1. Navigate to **View License** under **Settings**
 
-2.  Copy license ID and paste to notepad.
+2. Copy license ID and paste to notepad.
 
 ![License id](.././images/onboardingOffice365Subscription/License_Id.png#thumbnail)
 
-<em>**Account id**</em>
+##### Account id
 
-1.  Navigate to **Manage Accounts** in **Settings**
+1. Navigate to **Manage Accounts** in **Settings**
 
-2.  Copy account ID and paste to notepad.
+2. Copy account ID and paste to notepad.
 
 ![Manage Accounts](.././images/onboardingOffice365Subscription/Manage_Accounts.png#thumbnail)
 
@@ -401,49 +399,49 @@ Contact Cloudneeti Team for:
 
 -   ArtifactsAccessKey.
 
-<em>**Azure details**</em>
+##### Azure details
 
 Login to Azure portal <https://portal.azure.com> as subscription owner.
 
-<em>**Azure Subscription ID**</em>
+##### Azure Subscription ID
 
-1.  Choose your Azure AD tenant by selecting your **Azure subscription** in the
+1. Choose your Azure AD tenant by selecting your **Azure subscription** in the
     top right corner of the page
-2.  Select **Default Directory**
+2. Select **Default Directory**
 ![Default Directory](.././images/onboardingOffice365Subscription/Default_Directory.png#thumbnail)
-3.  Click on **Subscriptions** (1) on the primary menu
-4.  Select the desired **Azure subscription** (2)
+3. Click on **Subscriptions** (1) on the primary menu
+4. Select the desired **Azure subscription** (2)
 ![Azure subscription](.././images/onboardingOffice365Subscription/Azure_Subscription.png#thumbnail)
-5.  Copy **Subscription ID** to a notepad
+5. Copy **Subscription ID** to a notepad
 ![Subscription ID](.././images/onboardingOffice365Subscription/Copy_AppID.png#thumbnail)
 
 #### Generate Cloudneeti API key
 
-<em>**Sign-up on Cloudneeti API portal.**</em>
+##### Sign-up on Cloudneeti API portal.
 
-1.  Go to API portal and Sign up: \< Environment \> portal.cloudneeti.com
+1. Go to API portal and Sign up: \< Environment \> portal.cloudneeti.com
     Example: trialportal.cloudneeti.com (check with your support/consulting team
     on the specific Cloudneeti platform environment you are planning an
     onboarding to)
 
-2.  Fill the required fields in the sign-up form
+2. Fill the required fields in the sign-up form
 
-3.  You will receive a confirmation mail for sign-up, Click on the confirmation
+3. You will receive a confirmation mail for sign-up, Click on the confirmation
     link.
 
-4.  The confirmation link will ask you for change password (info: You can use
+4. The confirmation link will ask you for change password (info: You can use
     the password your used when signing up)
 
-5.  You are signed up successfully
+5. You are signed up successfully
 
-<em>**Retrieve and activate API key**</em>
+##### Retrieve and activate API key
 
 Retrieve and activate your API key using the Cloudneeti API portal
 
-1.  Click on **PRODUCTS**
-2.  Select **Unlimited**
+1. Click on **PRODUCTS**
+2. Select **Unlimited**
 ![Cloudneeti API](.././images/onboardingOffice365Subscription/Cloudneeti_API.png#thumbnail)
-3.  Click on **Subscribe**
+3. Click on **Subscribe**
 ![Subscribe](.././images/onboardingOffice365Subscription/API_Subscribe.png#thumbnail)
 
 This will notify Cloudneeti to activate your API subscription access. Please
@@ -452,13 +450,13 @@ will get an email notification.
 
 Once you receive the confirmation, proceed with the following steps.
 
-1.  Click on **Username**
+1. Click on **Username**
 
-2.  Select **Profile**
+2. Select **Profile**
 
-3.  Click on **Show**
+3. Click on **Show**
 
-4.  Copy the **Primary key** to your notepad.
+4. Copy the **Primary key** to your notepad.
 
 ![Primary key](.././images/onboardingOffice365Subscription/Primary_key.png#thumbnail)
 
@@ -467,7 +465,7 @@ Once you receive the confirmation, proceed with the following steps.
 Office Admin id and office domain can be retrieved from the user id used for
 signing-in like userid\@domain.com.
 
-<em>**Enable MFA and Create application password**</em>
+##### Enable MFA and Create application password
 
 Cloudneeti platform queries and processes Office 365 meta-data using a
 non-interactive login credential. As the background job processing is
@@ -477,16 +475,15 @@ process outlined to create a secure service account credential.
 Sign into your Office 365 portal (e.g. <https://outlook.office.com/mail/inbox>)
 as global administrator.
 
-1.  Choose **My Account Settings**
-
+1. Choose **My Account Settings**
 ![My Account Settings](.././images/onboardingOffice365Subscription/My_Account_Settings.png#thumbnail)
-2.  Select **Security & privacy**
-3.  Select **Additional security verification**
-4.  Click **Create and manage app passwords**
+2. Select **Security & privacy**
+3. Select **Additional security verification**
+4. Click **Create and manage app passwords**
 ![Create and manage app passwords](.././images/onboardingOffice365Subscription/Manage_Password.png#thumbnail)
-5.  Select **app passwords**
-6.  Click **create**
-7.  Get an app password
+5. Select **app passwords**
+6. Click **create**
+7. Get an app password
 ![App Password](.././images/onboardingOffice365Subscription/App_Password.png#thumbnail)
 
 ### Provision Office 365 data collector 
@@ -497,12 +494,12 @@ Subscription Owner access.
 
 Switch to Azure AD with the Azure Subscription with pre-requisite access.
 
-1.  Open **CloudShell**
-2.  Click on **Cloudshell** icon on the navigation bar to open Cloudshell
-3.  Choose PowerShell from shell drop down
-4.  Select **storage**
+1. Open **CloudShell**
+2. Click on **Cloudshell** icon on the navigation bar to open Cloudshell
+3. Choose PowerShell from shell drop down
+4. Select **storage**
 ![CloudShell](.././images/onboardingOffice365Subscription/CloudShell.png#thumbnail)
-5.  Execute below command in Cloudshell to download the Cloudneeti data
+5. Execute below command in Cloudshell to download the Cloudneeti data
     collector provisioning script.
 <pre>
 <code>```
@@ -510,13 +507,13 @@ Switch to Azure AD with the Azure Subscription with pre-requisite access.
 	https://raw.githubusercontent.com/Cloudneeti/docs_cloudneeti/master/scripts/Provision-M365DataCollector.ps1 -O Provision-M365DataCollector.ps1
 ```</code>
 </pre>
-6.  Switch to the User directory
+6. Switch to the User directory
 <pre>
 <code>```
 	cd \$User
 ```</code>
 </pre>
-7.  Run provisioning script with inline parameters
+7. Run provisioning script with inline parameters
 <pre>
 <code>```
 ./Provision-M365DataCollector.ps1 `
@@ -536,12 +533,12 @@ Switch to Azure AD with the Azure Subscription with pre-requisite access.
 </pre>
 Note: Contact Cloudneeti Team for ArtifactsName, DataCollectorVersion and
 ArtifactsAccessKey
-8.  The script will execute and prompt you for below details:
+8. The script will execute and prompt you for below details:
    Cloudneeti API key </br>
    Cloudneeti data collector Service Principal secret </br>
    Cloudneeti M365 data collector artifacts storage access Key </br>
    Office 365 App Password </br>
-9.  This will create a runbook inside automation account
+9. This will create a runbook inside automation account
 
 ### Apply delete lock
 
@@ -549,20 +546,20 @@ ArtifactsAccessKey
 Apply delete lock to prevent accidental deletion of the data collection resource
 group in your Azure Subscription.
 
-1.  Navigate to M365 data collector resource group
+1. Navigate to M365 data collector resource group
     (**cloudneeti-m365-datacollector-rg**).
 
-2.  Click on **Locks** (1)
+2. Click on **Locks** (1)
 
-3.  Click **Add** (2)
+3. Click **Add** (2)
 
-4.  Enter **Lock name** DoNotDelete (3)
+4. Enter **Lock name** DoNotDelete (3)
 
-5.  Select **Lock type** as Delete (4)
+5. Select **Lock type** as Delete (4)
 
-6.  Add **Notes** (Do not delete M365 data collector resource group) (5)
+6. Add **Notes** (Do not delete M365 data collector resource group) (5)
 
-7.  Click **OK** (6)
+7. Click **OK** (6)
 
 ![Apply Delete Lock](.././images/onboardingOffice365Subscription/Locks.png#thumbnail)
 
@@ -571,17 +568,17 @@ group in your Azure Subscription.
 Set the automation account schedule before the daily Cloudneeti data collection
 time.
 
-1.  Go to **M365 data collector** resource group
+1. Go to **M365 data collector** resource group
 
-2.  Select **Automation account**
+2. Select **Automation account**
 
-3.  Click on **Schedules**
+3. Click on **Schedules**
 
-4.  Select **Schedule**
+4. Select **Schedule**
 ![Schedule](.././images/onboardingOffice365Subscription/Schedule.png#thumbnail)
-5.  Modify the schedule **Time** (set time about 1 hour before the daily
+5. Modify the schedule **Time** (set time about 1 hour before the daily
     Cloudneeti data collection time)
-6.  Click **Save**
+6. Click **Save**
 ![Modify and Save](.././images/onboardingOffice365Subscription/Modify_Save.png#thumbnail)
 
 Cloudneeti portal will show details for policies from next scan.
