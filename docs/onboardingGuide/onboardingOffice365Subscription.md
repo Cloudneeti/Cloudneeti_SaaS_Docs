@@ -201,10 +201,10 @@ Cloudneeti application to be able to collect the Azure AD data.
 4. Click **Grant admin consent** in the Grant consent section
 5. Review permissions as below listed (1)
 
-| API             | Permission Name                                                                                                     | Type        |
+	| API             | Permission Name                                                                                                     | Type        |
 |-----------------|---------------------------------------------------------------------------------------------------------------------|-------------|
 | Microsoft.Graph | Directory.Read.All [Refer here](https://docs.microsoft.com/en-us/graph/permissions-reference#directory-permissions) | Application |
-| Microsoft.Graph | SecurityEvents.Read.All                                                                                             | Application |
+| Microsoft.Graph | SecurityEvents.Read.All [Refer here](https://docs.microsoft.com/en-us/graph/permissions-reference#security-permissions)  | Application |
 
 6. Click **Grant admin consent** in the Grant consent section (2)
 	![Grant_Admin_Consent](.././images/onboardingOffice365Subscription/Grant_Admin_Consent.png#thumbnail)
@@ -401,6 +401,7 @@ wait for activation to be done. When Cloudneeti activates your subscription, you
 will get an email notification.
 
 Once you receive the confirmation, proceed with the following steps.
+
 1. Click on **Username**
 2. Select **Profile**
 3. Click on **Show**
