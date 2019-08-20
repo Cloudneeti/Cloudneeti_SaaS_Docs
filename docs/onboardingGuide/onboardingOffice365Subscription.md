@@ -528,7 +528,7 @@ Cloudneeti portal will show details for policies from next scan.
 
 ## NEXT STEPS
 
-[Configure Notifications](../../administratorGuide/configureNotifications/)
+[Configure Notifications](../../administrationGuide/configureNotifications/)
 
 ## Security Policies that Require Permissions
 
