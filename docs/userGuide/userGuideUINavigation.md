@@ -9,22 +9,16 @@ application.
 
 1.  On the top of the page, the user can select the required **License** from
     the dropdown menu.
-
-2.  Users can select from the required **Cloud Account** from the dropdown menu.
-
+2.	Users can select from the required **Cloud Account** from the dropdown menu.
 3.  Users can click on the **User** icon to sign out of the Cloudneeti
     application.
-
 4.  The **Tune** icon opens a dropdown menu for configuring Cloud Account
     settings.
-
 5.  Clicking on the **Menu** icon will remove the left menu completely in order
     to increase the visible area for the dashboards.
-
 6.  This **collapse icon** will narrow the left menu to icon level in order to
     increase the visible area for the dashboards.
 	![UI Navigation](.././images/userGuideUINavigation/UINavigation_Homepage.png#thumbnail)
-
 The left menu provides access to Dashboards (1), Views (2) and Settings (3).
 
 1.  The menu item **Dashboard** brings the user to the Compliance, Security,
