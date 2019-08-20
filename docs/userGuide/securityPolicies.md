@@ -13,8 +13,7 @@ This page has the following sections.
     status by category.
 
 4.  The header of the view has the buttons for **Remediations** and **Reports**.
-
-![CSRP_Security_Policies](.././images/userGuide/CSRP_Security_Policies.png#thumbnail)
+	![CSRP_Security_Policies](.././images/userGuide/CSRP_Security_Policies.png#thumbnail)
 
 The charts section presents for Risk Posture, Policy Compliance, and Policy
 Compliance Trends.
@@ -43,8 +42,7 @@ Compliance Trends.
     policies status on a daily basis over the last one month as a percentage of
     all security policies with available data by Policy Status (Fail, Warn,
     Pass).
-
-![Policy Trade and Compliance](.././images/userGuide/Policy_Trade.png#thumbnail)
+	![Policy Trade and Compliance](.././images/userGuide/Policy_Trade.png#thumbnail)
 
 1.  The upper part of the view has filters for Risk **Impact**, Risk
     **Likelihood** and **Policy Status**. Users can filter security policies
@@ -60,8 +58,7 @@ Compliance Trends.
 
 4.  By clicking on the Category (2), users can view the list of **Security
     Policies** in this Category with their Policy Status information.
-
-![Policy_Details](.././images/userGuide/Policy_Details.png#thumbnail)
+	![Policy_Details](.././images/userGuide/Policy_Details.png#thumbnail)
 
 1.  Clicking on Security Policy line opens a window on the right side with
     additional details.
@@ -71,14 +68,12 @@ Compliance Trends.
 
 3.  The bottom part of the details windows presents security policy compliance
     status at an individual resource level.
-
-![Summary and Remediation](.././images/userGuide/Summary_Remediation.png#thumbnail)
+	![Summary and Remediation](.././images/userGuide/Summary_Remediation.png#thumbnail)
 
 **Summary & Recommendations** (1) shows Compliance Trends (2), Policy Status,
 Risk Impact and Risk Likelihood (3), Summary of status across all resources (4),
 and Recommendations (5) as definition of security policy.
-
-![Summary and Recommendation](.././images/userGuide/Summary_Recommendation_Details.png#thumbnail)
+	![Summary and Recommendation](.././images/userGuide/Summary_Recommendation_Details.png#thumbnail)
 
 Resource level information about Security Policy status per resource is
 displayed in the bottom part of the details view.
@@ -88,8 +83,7 @@ displayed in the bottom part of the details view.
 
 2.  Each resource is listed with its Status information, Resource Group and
     related resource level details.
-
-![Resource_level_Information](.././images/userGuide/Resource_Level_Information.png#thumbnail)
+	![Resource_level_Information](.././images/userGuide/Resource_Level_Information.png#thumbnail)
 
 1.  Click on **Audit Procedure** to see manual and command line ways to validate
     status of this security policy
@@ -99,8 +93,7 @@ displayed in the bottom part of the details view.
 
 3.  The **Azure Command Line Interface** provides a command to collect the same
     information programmatically.
-
-![Audit Procedure](.././images/userGuide/Audit_Procedure.png#thumbnail)
+	![Audit Procedure](.././images/userGuide/Audit_Procedure.png#thumbnail)
 
 1.  Click on **Remediation Procedure** to see manual and command line
     remediation steps.
@@ -110,13 +103,11 @@ displayed in the bottom part of the details view.
 
 3.  The **Azure Command Line Interface** provides a command to change the cloud
     infrastructure configuration.
-
-![Remediation Procedure](.././images/userGuide/Remediation_Procedure.png#thumbnail)
+	![Remediation Procedure](.././images/userGuide/Remediation_Procedure.png#thumbnail)
 
 1.  The **Remediate** button provides access to manually triggered remediations.
     For more detail, see the remediation section.
 
 2.  The **Reports** button allows download of a PDF and Word reports. You can
     find additional details in the Reports section.
-
-![Remediate and Reports Button](.././images/userGuide/Remediate_Reports_Button.png#thumbnail)
+	![Remediate and Reports Button](.././images/userGuide/Remediate_Reports_Button.png#thumbnail)
