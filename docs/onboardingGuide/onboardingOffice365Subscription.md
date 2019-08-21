@@ -73,7 +73,7 @@ and ingest to the Cloudneeti application.
 #### Required Permissions
 
 The Cloudneeti application will be granted two read permissions to the Azure
-AD. Cloudneeti Agent provisioned in Step 3 will require Office 365 Global Admin permission. Each
+AD and Cloudneeti Agent provisioned in Step 3 will require Office 365 Global Admin permission. Each
 optional permission is linked to a number of security policies where this
 permission is needed for data collection. If an optional permission is not
 provided, Cloudneeti application will not collect the data for the related
@@ -88,8 +88,7 @@ this document.
 
 ## STEP 1: Register Cloudneeti Application
 
-The following steps are executed by the Microsoft Azure **Global AD
-Administrator** role.
+The following steps are executed by the Microsoft Azure **Global ADAdministrator** role.
 
 Cloudneeti application can be registered either manually or using automation
 script.
