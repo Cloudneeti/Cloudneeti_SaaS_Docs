@@ -72,19 +72,19 @@ and ingest to the Cloudneeti application.
 
 #### Required Permissions
 
-The Cloudneeti application will be granted three read permissions to the Azure
-AD and Office 365 subscriptions. Four of these permissions are optional. Each
+The Cloudneeti application will be granted two read permissions to the Azure
+AD. Cloudneeti Agent provisioned in Step 3 will require Office 365 Global Admin permission. Each
 optional permission is linked to a number of security policies where this
 permission is needed for data collection. If an optional permission is not
 provided, Cloudneeti application will not collect the data for the related
 policies. Security policies that require such permissions are listed later in
 this document.
 
-| Information                                          | Portal to use     | Role               | Step     |
-|------------------------------------------------------|-------------------|--------------------|----------|
-| Directory Read All Microsoft Graph permissions       | Microsoft Azure   | Global AD Admin    | STEP 1   |
-| Security Events Read All Microsoft Graph permissions | Microsoft Azure   | Global AD Admin    | STEP 1   |
-| Advanced security configuration                      | Microsoft Azure   | Subscription Owner | STEP 3   |
+| Object                                          | Permission     | Portal to use     | Required Role |               
+|-------------------------------------------------|----------------|-------------------|------|
+| Azure Active Directory | Directory Read All Microsoft Graph permissions       | Microsoft Azure   | Global AD Admin    | 
+| Azure Active Directory | Security Events Read All Microsoft Graph permissions | Microsoft Azure   | Global AD Admin    | 
+| Cloudneeti Agent | Office 365 Global Administrator | Microsoft Azure   | Subscription Owner | 
 
 ## STEP 1: Register Cloudneeti Application
 
@@ -144,7 +144,7 @@ permission [here](https://docs.microsoft.com/en-us/graph/permissions-reference)
 | API             | Permission Name                                                                                                     | Type        |
 |-----------------|---------------------------------------------------------------------------------------------------------------------|-------------|
 | Microsoft.Graph | Directory.Read.All [Refer here](https://docs.microsoft.com/en-us/graph/permissions-reference#directory-permissions) | Application |
-| Microsoft.Graph | SecurityEvents.Read.All                                                                                             | Application |
+| Microsoft.Graph | SecurityEvents.Read.All [Refer here](https://docs.microsoft.com/en-us/graph/permissions-reference#security-permissions)                                                                                           | Application |
 
 5. Click **Grant admin consent** in the Grant consent section (2)
 	![API Permission](.././images/onboardingOffice365Subscription/Grant_Admin_Consent.png#thumbnail)
