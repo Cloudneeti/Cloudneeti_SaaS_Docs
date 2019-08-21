@@ -10,8 +10,7 @@ Cloudneeti portal home page displays **Compliance** (1) dashboard. The left side
 of the screen (2) displays various compliance benchmarks with the overall
 compliance score and a daily trend. The right side of the screen (2) displays a
 fly wheel that allows quick drill down into each compliance score.
-
-![Compliance](.././images/userGuide/Compliance_Dashboard.png#thumbnail)
+	![Compliance](.././images/userGuide/Compliance_Dashboard.png#thumbnail)
 
 Users can click on different part of the fly wheel for a quick drill down.
 
@@ -30,8 +29,7 @@ The left side of the screen also allows navigation.
 
 6.  Redirects user to a complete list of security policies within Cloudneeti
     application.
-
-![Compliance](.././images/userGuide/Compliance_Navigation_Dashboard.png#thumbnail)
+	![Compliance](.././images/userGuide/Compliance_Navigation_Dashboard.png#thumbnail)
 
 ### Security
 
@@ -39,8 +37,7 @@ By clicking on **Security** tab (1) on the top, users gain access to a security
 dashboard that provides a compliance score by resource category. By clicking on
 category header (2) user can navigate to a detailed security policy level report
 for further analysis.
-
-![Security Dashboard](.././images/userGuide/Security_Dashboard.png#thumbnail)
+	![Security Dashboard](.././images/userGuide/Security_Dashboard.png#thumbnail)
 
 ### Risk
 
@@ -50,8 +47,7 @@ by Risk Impact and Risk Likelihood. The upper right corner of the dashboard
 displays high risk deviations from cloud security best practices. This allows
 users to better understand their risk exposure and prioritize remediation
 activities.
-
-![Risk Dashboard](.././images/userGuide/Risk_Dashboard.png#thumbnail)
+	![Risk Dashboard](.././images/userGuide/Risk_Dashboard.png#thumbnail)
 
 ### Assets
 
@@ -59,8 +55,7 @@ By clicking on the **Assets** tab (1) on the top, users gain access to an assets
 dashboard that provides insights into the total number of resources, users, AD
 admins and other metrics. By clicking on the bar (2) in the chart, the map shows
 locations (3) of this resource category.
-
-![Assets_Dashboard](.././images/userGuide/Assets_Dashboard.png#thumbnail)
+	![Assets_Dashboard](.././images/userGuide/Assets_Dashboard.png#thumbnail)
 
 Security Policies
 -----------------
@@ -80,8 +75,7 @@ This page has the following sections.
     status by category.
 
 4.  The header of the view has the buttons for **Remediations** and **Reports**.
-
-![CSRP_Security_Policies](.././images/userGuide/CSRP_Security_Policies.png#thumbnail)
+	![CSRP_Security_Policies](.././images/userGuide/CSRP_Security_Policies.png#thumbnail)
 
 The charts section presents for Risk Posture, Policy Compliance, and Policy
 Compliance Trends.
@@ -110,8 +104,7 @@ Compliance Trends.
     policies status on a daily basis over the last one month as a percentage of
     all security policies with available data by Policy Status (Fail, Warn,
     Pass).
-
-![Policy Trade and Compliance](.././images/userGuide/Policy_Trade.png#thumbnail)
+	![Policy Trade and Compliance](.././images/userGuide/Policy_Trade.png#thumbnail)
 
 1.  The upper part of the view has filters for Risk **Impact**, Risk
     **Likelihood** and **Policy Status**. Users can filter security policies
@@ -127,8 +120,7 @@ Compliance Trends.
 
 4.  By clicking on the Category (2), users can view the list of **Security
     Policies** in this Category with their Policy Status information.
-
-![Policy_Details](.././images/userGuide/Policy_Details.png#thumbnail)
+	![Policy_Details](.././images/userGuide/Policy_Details.png#thumbnail)
 
 1.  Clicking on Security Policy line opens a window on the right side with
     additional details.
@@ -138,14 +130,12 @@ Compliance Trends.
 
 3.  The bottom part of the details windows presents security policy compliance
     status at an individual resource level.
-
-![Summary and Remediation](.././images/userGuide/Summary_Remediation.png#thumbnail)
+	![Summary and Remediation](.././images/userGuide/Summary_Remediation.png#thumbnail)
 
 **Summary & Recommendations** (1) shows Compliance Trends (2), Policy Status,
 Risk Impact and Risk Likelihood (3), Summary of status across all resources (4),
 and Recommendations (5) as definition of security policy.
-
-![Summary and Recommendation](.././images/userGuide/Summary_Recommendation_Details.png#thumbnail)
+	![Summary and Recommendation](.././images/userGuide/Summary_Recommendation_Details.png#thumbnail)
 
 Resource level information about Security Policy status per resource is
 displayed in the bottom part of the details view.
@@ -155,8 +145,7 @@ displayed in the bottom part of the details view.
 
 2.  Each resource is listed with its Status information, Resource Group and
     related resource level details.
-
-![Resource_level_Information](.././images/userGuide/Resource_Level_Information.png#thumbnail)
+	![Resource_level_Information](.././images/userGuide/Resource_Level_Information.png#thumbnail)
 
 1.  Click on **Audit Procedure** to see manual and command line ways to validate
     status of this security policy
@@ -166,8 +155,7 @@ displayed in the bottom part of the details view.
 
 3.  The **Azure Command Line Interface** provides a command to collect the same
     information programmatically.
-
-![Audit Procedure](.././images/userGuide/Audit_Procedure.png#thumbnail)
+	![Audit Procedure](.././images/userGuide/Audit_Procedure.png#thumbnail)
 
 1.  Click on **Remediation Procedure** to see manual and command line
     remediation steps.
@@ -177,16 +165,14 @@ displayed in the bottom part of the details view.
 
 3.  The **Azure Command Line Interface** provides a command to change the cloud
     infrastructure configuration.
-
-![Remediation Procedure](.././images/userGuide/Remediation_Procedure.png#thumbnail)
+	![Remediation Procedure](.././images/userGuide/Remediation_Procedure.png#thumbnail)
 
 1.  The **Remediate** button provides access to manually triggered remediations.
     For more detail, see the remediation section.
 
 2.  The **Reports** button allows download of a PDF and Word reports. You can
     find additional details in the Reports section.
-
-![Remediate and Reports Button](.././images/userGuide/Remediate_Reports_Button.png#thumbnail)
+	![Remediate and Reports Button](.././images/userGuide/Remediate_Reports_Button.png#thumbnail)
 
 Compliance Benchmarks
 ---------------------
@@ -219,8 +205,7 @@ of security policies, and remediation guidance.
 5.  The security policies view has a header with additional filters by Control
     Number and Security Policy Title. Individual security policies are mapped to
     the relevant Control Numbers of the benchmark.
-
-![Compliance Benchmark](.././images/userGuide/Compliance_Benchmark.png#thumbnail)
+	![Compliance Benchmark](.././images/userGuide/Compliance_Benchmark.png#thumbnail)
 
 1.  Clicking on Security Policy line opens a window on the right side with
     additional details. The details window is identical to the one displayed in
@@ -231,8 +216,7 @@ of security policies, and remediation guidance.
 
 3.  The bottom part of the details windows presents security policy compliance
     status at an individual resource level.
-
-![compliance Status](.././images/userGuide/Compliance_Status.png#thumbnail)
+	![compliance Status](.././images/userGuide/Compliance_Status.png#thumbnail)
 
 Reports
 -------
@@ -240,14 +224,11 @@ Reports
 The reports button on the upper right side offers a dropdown for report format
 selection. These reports are generated on the fly and are instantly available
 for download.
-
-![Reports_Button](.././images/userGuide/Reports_Button.png#thumbnail)
+	![Reports_Button](.././images/userGuide/Reports_Button.png#thumbnail)
 
 The PDF report presents the same information as the Security Policies view.
-
-![PDF Report](.././images/userGuide/PDF_Report.png#thumbnail)
+	![PDF Report](.././images/userGuide/PDF_Report.png#thumbnail)
 
 The Word report outlines Remediation recommendations and security policy
 adherence status at a resource level.
-
-![Word Report](.././images/userGuide/Word_Report.png#thumbnail)
+	![Word Report](.././images/userGuide/Word_Report.png#thumbnail)

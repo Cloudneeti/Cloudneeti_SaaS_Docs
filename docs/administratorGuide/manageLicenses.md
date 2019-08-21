@@ -123,10 +123,50 @@ type of data feeds and the frequency of data feeds.
 The following settings can be updated at an individual benchmark level.
 	![Data Feed Scope](.././images/administratorGuide/Benchmark_Level.png#thumbnail)
 
-### Incident Management (Ticketing)
+### Configure Incident Management system  
 
 Incident Management (Ticketing) allows integrations with ticketing systems such
-as ZenDesk and ServiceNow.
+as ZenDesk and ServiceNow.Ticket prioritization based on policy categories. Tickets/incidents will be created for non-compliant policies from selected categories and for configured accounts.
+
+1. Go to settings and click on **Configure Integrations** 
+
+2. Click on **Edit** button of Incident Management (Ticketing). 
+
+    ![Ticketing](.././images/administratorGuide/ConfigureIntegrations.png#thumbnail)
+
+3. Select desired Ticketing system Zendesk or Service Now. 
+
+4. Click on **Configure** button. 
+
+    ![Ticketing](.././images/administratorGuide/ConfigureButton.png#thumbnail)
+
+5. Enter Ticketing system configuration details
+
+    #### Zendesk
+
+    Zendesk Sub-Domain  
+
+    Zendesk User Id 
+
+    Choose and enter Zendesk Access Type: Password Access or Token Access 
+
+    Assign Ticket To (Email Id Tickets will be assigned to email@example.com) 
+
+    ![Ticketing](.././images/administratorGuide/Zendesk.png#thumbnail)
+
+    #### Service Now
+
+    Service Now Instance 
+
+    Service Now User Id 
+
+    ServiceNow Access Type: Password Access or Token Access 
+
+    Assign Ticket To (Email Id, Tickets will be assigned to email@example.com) 
+
+    ![Ticketing](.././images/administratorGuide/ServiceNow.png#thumbnail)
+
+### Incident Management Scope & Frequency
 
 1. **Select Ticketing System** from dropdown (ZenDesk, ServiceNow).
 

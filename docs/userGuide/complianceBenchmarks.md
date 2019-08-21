@@ -26,8 +26,7 @@ of security policies, and remediation guidance.
 5.  The security policies view has a header with additional filters by Control
     Number and Security Policy Title. Individual security policies are mapped to
     the relevant Control Numbers of the benchmark.
-
-![Compliance Benchmark](.././images/userGuide/Compliance_Benchmark.png#thumbnail)
+	![Compliance Benchmark](.././images/userGuide/Compliance_Benchmark.png#thumbnail)
 
 1.  Clicking on Security Policy line opens a window on the right side with
     additional details. The details window is identical to the one displayed in
@@ -38,5 +37,4 @@ of security policies, and remediation guidance.
 
 3.  The bottom part of the details windows presents security policy compliance
     status at an individual resource level.
-
-![compliance Status](.././images/userGuide/Compliance_Status.png#thumbnail)
+	![compliance Status](.././images/userGuide/Compliance_Status.png#thumbnail)
