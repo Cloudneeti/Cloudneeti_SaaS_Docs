@@ -84,7 +84,7 @@ this document.
 |-------------------------------------------------|----------------|-------------------|------|
 | Azure Active Directory | Directory Read All Microsoft Graph permissions       | Microsoft Azure   | Global AD Admin    | 
 | Azure Active Directory | Security Events Read All Microsoft Graph permissions | Microsoft Azure   | Global AD Admin    | 
-| Cloudneeti Agent | Office 365 Global Administrator | Microsoft Azure   | Subscription Owner | 
+| Cloudneeti Agent | Office 365 Global Administrator Access Permission | Microsoft Azure   | Subscription Owner | 
 
 ## STEP 1: Register Cloudneeti Application
 
