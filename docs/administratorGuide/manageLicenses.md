@@ -123,14 +123,10 @@ type of data feeds and the frequency of data feeds.
 The following settings can be updated at an individual benchmark level.
 	![Data Feed Scope](.././images/administratorGuide/Benchmark_Level.png#thumbnail)
 
-### Incident Management (Ticketing)
+### Configure Incident Management system  
 
 Incident Management (Ticketing) allows integrations with ticketing systems such
-as ZenDesk and ServiceNow.
-
-Ticket prioritization based on policy categories. Tickets/incidents will be created for non-compliant policies from selected categories and for configured accounts. 
-
-## Configure Incident Management system  
+as ZenDesk and ServiceNow.Ticket prioritization based on policy categories. Tickets/incidents will be created for non-compliant policies from selected categories and for configured accounts.
 
 1. Go to settings and click on **Configure Integrations** 
 
@@ -146,7 +142,7 @@ Ticket prioritization based on policy categories. Tickets/incidents will be crea
 
 5. Enter Ticketing system configuration details
 
-    ### Zendesk
+    #### Zendesk
 
     Zendesk Sub-Domain  
 
@@ -158,7 +154,7 @@ Ticket prioritization based on policy categories. Tickets/incidents will be crea
 
     ![Ticketing](.././images/administratorGuide/Zendesk.png#thumbnail)
 
-    ### Service Now
+    #### Service Now
 
     Service Now Instance 
 
