@@ -54,7 +54,7 @@ collection at a security policy level for this specific Cloud Account.
     to disable data collection
 
 4.  Select **ENABLE** to enable auto-remediations for this security policy or
-    **NDISABLEO** to disable auto-remediations
+    **NO** to disable auto-remediations
 	![Manage Accounts](.././images/administratorGuide/Auto_Remediations.png#thumbnail)
 
 ### Configure Notifications
