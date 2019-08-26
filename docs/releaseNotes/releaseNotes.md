@@ -1,4 +1,59 @@
-﻿﻿# **Release Notes**
+﻿﻿
+## **August 2019- v2.14.1**
+
+1.  **User Experience Improvements**
+    *   Enhancements to Risk Dashboard for
+        1.  Field name updates for aptness and clarity.
+        2.  Removal of mitigated control % tile.
+    *   Enhancement to Configure Integrations to show dependency between different tiles for relevance. 
+    *   Updated the color for the ‘high’ risk impact -to differentiate with that of 'critical' risk impact.
+
+2.  **Platform & Stability Improvements**
+    *   Enhancement to display appropriate Authorization error message in Manage Users section in case if Azure Service Principal does not have permission to access Azure Active directory.
+
+3.  **Policies & Benchmarks Additions/Updates**
+    *   Enhancements to recommendation section Azure VM baseline policies.
+    *   Removed duplicate policy numbers across different categories in Cloud Security Risk Posture.
+    *   Updation of following Azure security policies for additional permission to collect data.
+
+| Category | Policy Title |
+| --- | --- |
+| Azure - Storage and Databases | Ensure that &#39;Public access level&#39; is set to Private for Blob Containers |
+
+*   Addition of the following 21 new AWS security policies.
+
+| Category | Policy Title |
+| --- | --- |
+| AWS - Business Continuity | Ensure Auto Minor Version Upgrade feature is Enabled for Relational Database Service Instances |
+| AWS - Business Continuity | Ensure backup retention policy is set for Relational Database Service |
+| AWS - Business Continuity | Ensure that backtracking is enabled for Amazon Aurora MySQL database clusters |
+| AWS - Business Continuity | Ensure Multi-AZ feature is Enabled for Relational Database Service |
+| AWS - Business Continuity | Ensure that sufficient backup retention period is applied to RDS Instances |
+| AWS - Governance | Ensure that Copy Tags to Snapshots feature is enabled for Amazon RDS instances |
+| AWS - Data Protection | Ensure Deletion Protection feature is enabled for AWS RDS database instances |
+| AWS - Data Protection | Ensure that encryption is enabled for RDS instances |
+| AWS - Data Protection | Ensure Performance Insights feature is enabled for Amazon RDS database instances |
+| AWS - Data Protection | Ensure that encryption for storage done with KMS CMKs for each RDS instance |
+| AWS - Data Protection | Ensure that Deletion Protection feature is enabled for Aurora database clusters |
+| AWS - Identity and Access Management | Ensure IAM Database Authentication feature is enabled for AWS RDS MySQL and PostgreSQL database instances |
+| AWS - Identity and Access Management | Ensure that Amazon RDS database snapshots are not accessible to all AWS accounts |
+| AWS - Audit and Logging | Ensure that Event Subscription is enabled for RDS instance |
+| AWS - Business Continuity | Ensure Multi-AZ feature is Enabled for Relational Database Service |
+| AWS - Data Protection | Ensure Performance Insights feature is enabled for Amazon RDS database instances |
+| AWS - Audit and Logging | Ensure Log Exports feature is enabled for Amazon Aurora Serverless databases |
+| AWS - Networking | Ensure that public access is not given to RDS database instance |
+| AWS - Storage and Databases | Ensure that port number should not be set as default port number for AWS RDS Instances |
+| AWS - Data Protection | Ensure that encryption for storage done with KMS CMKs for each RDS instance |
+| AWS - Networking | Ensure that public subnets is not assigned to RDS database instances |
+| AWS - Governance | Ensure that unique master user name is used for each RDS database instance |
+| AWS - Identity and Access Management | Ensure that Amazon RDS database snapshots are not accessible to all AWS accounts |
+| AWS - Business Continuity | Ensure that sufficient backup retention period is applied to RDS Instances |
+| AWS - Governance | Ensure that Copy Tags to Snapshots feature is enabled for Amazon RDS instances |
+| AWS - Governance | Ensure that AutoPause feature is enabled for Amazon Aurora Serverless clusters |
+| AWS - Data In Transit Encryption | Ensure that Transport Encryption feature enabled for AWS RDS SQL Server instances |
+| AWS - Data Protection | Ensure that Deletion Protection feature is enabled for Aurora database clusters |
+| AWS - Audit and Logging | Ensure Log Exports feature is enabled for Amazon Aurora Serverless databases |
+| AWS - Governance | Ensure that AutoPause feature is enabled for Amazon Aurora Serverless clusters |
 
 ## **August 2019- v2.13.1**
 
