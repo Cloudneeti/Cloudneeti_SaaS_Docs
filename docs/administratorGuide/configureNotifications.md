@@ -10,6 +10,6 @@ Scan notifications allow a cloud account user to subscribe to changes in securit
 
 4.	Enter comma separated email addresses.
     
-    ![Configure Notifications](.././images/administrationGuide/Configure_notifications.png#thumbnail)
+    ![Configure Notifications](.././images/administratorGuide/Configure_Notifications.png#thumbnail)
 
 5.	Click on save button.
