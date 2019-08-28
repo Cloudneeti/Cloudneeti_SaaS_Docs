@@ -444,4 +444,4 @@ listed below.
 
 ## NEXT STEPS
 
-[Configure Notifications](../../administratorGuide/configureNotifications/)
+[Configure Notifications](../../administrationGuide/configureNotifications/)
