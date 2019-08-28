@@ -10,15 +10,15 @@ The following steps are required to onboard AWS to the Cloudneeti application.
 | 2  | Collect AWS account information          | AWS                            | Administrator      |
 | 3  | Add AWS Account                          | Cloudneeti                     | License Admin      |
 
+**1. Creating an AWS role for Cloudneeti** includes registering a new AWS role for the Cloudneeti application and granting the required access permissions.
 
-**1. Registering Cloudneeti application** includes registering the Cloudneeti application with the Azure Active Directory (AD) tenant, providing access to Microsoft Graph and granting admin consent to the Cloudneeti application.
+**2. Collecting AWS account information** involves taking a copy of the AWS account id, AWS account access key id and secret and providing it to License Admin.
 
-**2. Adding the Office 365 subscription** includes adding Office 365 subscription information to the respective Cloud Account and waiting until the first data collection is complete.
+**3. Add AWS Account** to the Cloudneeti application includes adding AWS account information to the respective Cloudneeti cloud account and waiting until the first data collection is complete.
 
-**3. Advanced security configuration** includes adding a script to the customer’s Azure account and granting the required access rights.
 
 #### Required Roles
-One or more people with the following roles are required to complete Microsoft Azure onboarding process.
+One or more people with the following roles are required to complete Amazon Web Service Account onboarding process.
 
 | Nr | Role          | Product    |
 |----|---------------|------------|
