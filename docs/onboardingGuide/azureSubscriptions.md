@@ -246,6 +246,24 @@ If the Website Contributor Role is not assigned, Cloudneeti application will not
 
     ![Assign role](.././images/azureSubscriptions/Website_Contributor_Role.png#thumbnail)
 
+### Grant Azure Subscription Storage Account Contributor Role
+**This step is optional**
+
+The Cloudneeti application requires Storage Account Contributor or Storage Account Key Operator Service role access to the Subscription in order to view application settings. 
+
+If the Storage Account Contributor or Storage Account Key Operator Service role access Role is not assigned, Cloudneeti application will not be able to collect data of security policies [listed here.](.././azureSubscriptions/#storage-account-contributor-role)
+
+1.	Go to the subscription’s **Access control (IAM)** in the menu
+2.	Click **Add** and select **Add role assignment**
+3.	Select **Storage Account Contributor** or **Storage Account Key Operator Service role access** role and Cloudneeti application
+4.	Click **Save** to complete the role assignment
+
+    ![Assign role](.././images/azureSubscriptions/Storage_Account_Contributor.png#thumbnail)
+
+    OR
+
+    ![Assign role](.././images/azureSubscriptions/Storage_Account_Key_Operator_Service_Role.png#thumbnail)
+
 ### Add Key Vault access policy for specific managed Key Vaults
 **This step is optional**
 
@@ -432,6 +450,15 @@ listed below.
 | 1900.85       | Ensure that 'App Insights' are configured for Azure Function Apps                    | Azure - Compute (PaaS and Serverless) |
 | 1900.86       | Ensure that 'App Insights' are configured for Azure API Apps                         | Azure - Compute (PaaS and Serverless) |
 
+### Storage Account Contributor role 
+
+Storage Account Contributor role or Storage Account Key Operator Servic role access is needed to collect data for security policies
+listed below.
+
+| Policy ID     | Policy Name                                                                          | Category                              |
+|---------------|--------------------------------------------------------------------------------------|---------------------------------------|
+| 3.6       | Ensure that 'Public access level' is set to Private for Blob Containers                         | Storage Accounts |
+
 ### Key Vault List
 
 Special permission on key vaults is needed to collect data for security policies
@@ -444,4 +471,4 @@ listed below.
 
 ## NEXT STEPS
 
-[Configure Notifications](../../administrationGuide/configureNotifications/)
+[Configure Notifications](../../administratorGuide/configureNotifications/)
