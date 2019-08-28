@@ -432,7 +432,6 @@ listed below.
 | 1900.85       | Ensure that 'App Insights' are configured for Azure Function Apps                    | Azure - Compute (PaaS and Serverless) |
 | 1900.86       | Ensure that 'App Insights' are configured for Azure API Apps                         | Azure - Compute (PaaS and Serverless) |
 
-
 ### Key Vault List
 
 Special permission on key vaults is needed to collect data for security policies

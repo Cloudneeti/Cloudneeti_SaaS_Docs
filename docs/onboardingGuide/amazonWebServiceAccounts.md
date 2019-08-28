@@ -4,6 +4,8 @@
 
 The following steps are required to onboard AWS to the Cloudneeti application.
 
+![AWS Overview](.././images/amazonWebServiceAccounts/AWS_Overview.png#thumbnail)
+
 | Nr | Step                                     | Product                        | Role               |
 |----|------------------------------------------|--------------------------------|--------------------|
 | 1  | Create an AWS role for Cloudneeti        | AWS                            | Administrator      |
