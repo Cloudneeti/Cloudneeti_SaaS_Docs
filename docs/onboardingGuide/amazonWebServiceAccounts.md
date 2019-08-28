@@ -132,4 +132,4 @@ Congratulations! You have added an AWS account to Cloudneeti application.
 
 ## NEXT STEPS
 
-[Configure Notifications](../../administrationGuide/configureNotifications/)
+[Configure Notifications](../../administratorGuide/configureNotifications/)
