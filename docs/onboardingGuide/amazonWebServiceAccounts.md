@@ -14,7 +14,7 @@ The following steps are required to onboard AWS to the Cloudneeti application.
 
 **1. Creating an AWS role for Cloudneeti** includes registering a new AWS role for the Cloudneeti application and granting the required access permissions.
 
-**2. Collecting AWS account information** involves taking a copy of the AWS account id, AWS account access key id and secret and providing it to License Admin.
+**2. Collecting AWS account information** involves taking a copy of the AWS account id and providing it to License Admin.
 
 **3. Add AWS Account** to the Cloudneeti application includes adding AWS account information to the respective Cloudneeti cloud account and waiting until the first data collection is complete.
 
