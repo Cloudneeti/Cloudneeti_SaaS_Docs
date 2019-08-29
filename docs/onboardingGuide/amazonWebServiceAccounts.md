@@ -14,7 +14,7 @@ The following steps are required to onboard AWS to the Cloudneeti application.
 
 **1. Creating an AWS role for Cloudneeti** includes registering a new AWS role for the Cloudneeti application and granting the required access permissions.
 
-**2. Collecting AWS account information** involves taking a copy of the AWS account id, AWS account access key id and secret and providing it to License Admin.
+**2. Collecting AWS account information** involves taking a copy of the AWS account id and providing it to License Admin.
 
 **3. Add AWS Account** to the Cloudneeti application includes adding AWS account information to the respective Cloudneeti cloud account and waiting until the first data collection is complete.
 
@@ -36,7 +36,7 @@ AWS **Administrator** role is required for granting Cloudneeti application acces
 entity with the SecurityAudit access policy.`
 
 ## STEP 1: Create an AWS role for Cloudneeti
-The following steps are executed by AWS **Administrator** role. AWS role for Cloudneeti can be created manually or using an automated script. 
+The following steps are executed by AWS **Administrator** role. AWS role for Cloudneeti can be created manually or using an automation script. 
 
 ### Manual
 #### Grant Permissions
@@ -46,24 +46,24 @@ Login to [AWS portal](https://console.aws.amazon.com/) with AWS **Administrator*
     ![AWS Portal](.././images/amazonWebServiceAccounts/AWS_Portal.png#thumbnail)
 2.	Click on **Roles** and **Create Role**
     ![Create Role](.././images/amazonWebServiceAccounts/Roles.png#thumbnail)
-3.	Select **Another AWS account** and enter Cloudneeti's Account ID 
+3.	Select **Another AWS account** and enter Cloudneeti's AWS account ID 
 4.	Click **Next: Permissions**
      ![Activate License](.././images/amazonWebServiceAccounts/Another_AWS_Account.png#thumbnail)
 5.	Select policy name **SecurityAudit**
 6.	Click **Next**
     ![Create Role](.././images/amazonWebServiceAccounts/Attatch_policies.png#thumbnail)
 7.	Click **Next: Tags**
-8.	Enter details like Role Name, Role description
+8.	Enter Role Name as **Cloudneeti-SecurityAudit**
+9.  Enter Role description
 9.	Click on **Create role**
      ![Create Role](.././images/amazonWebServiceAccounts/Role_Information.png#thumbnail)
 
 An AWS role will be created in the customer's account to mark Cloudneeti's account as a trusted entity with the SecurityAudit access policy.
 
-### Automated
-#### Workstation readiness
+### Automated script
+Automation script can be used for creation of a role to mark Cloudneeti's account as a trusted entity with the SecurityAudit access policy.
 
-Use serverless.yml file to create a role to mark Cloudneeti's account as a
-trusted entity with the SecurityAudit access policy.
+#### Workstation readiness
 
 | Activity                                                                      | Description                                              |
 |-------------------------------------------------------------------------------|----------------------------------------------------------|
@@ -72,14 +72,29 @@ trusted entity with the SecurityAudit access policy.
 | **Workstation:** Install Nodejs                                               | Download latest stable version of nodejs from [here](https://nodejs.org/en/) and install on the workstation.                                                                                            |
 | **Workstation:** Install serverless npm module                                | Serverless Framework is a CLI tool to manage AWS deployments. Execute below command to install serverless module, \# npm install –g serverless                                                           |
 
+#### Generate AWS account access key id and secret 
+
+1.	Click **your name** located on the top right navigation pane
+2.	Select **My Security** Credentials 
+3.	**Access key id** is under the section **Access keys for CLI, SDK, & API access**
+    ![Create access key](.././images/amazonWebServiceAccounts/AWS_Account_Access_Key.png#thumbnail)
+4.	If access key secret is not available for this id, please create a new access key by clicking on **Create access key** button.
+    ![Create access key](.././images/amazonWebServiceAccounts/Access_Key_Success.png#thumbnail)
+
+#### Cretae an AWS role for Cloudneeti using automation script
+Use serverless.yml file to create a role to mark Cloudneeti's account as a
+trusted entity with the SecurityAudit access policy.
+
 1.  **Open PowerShell** application as an administrator (right click on PowerShell
     and select run as administrator)
 2.  In PowerShell application, navigate to folder location where you downloaded
     the file “serverless.yml” (e.g. “cd C:\\Downloads”)
 3.  Type **aws configure** and enter
-    a.  Account access key id and secret access key of an AWS IAM User (with
-        **Administrator Access** policy)
+    
+    a.  Account access key id and secret access key generated in [step](.././amazonWebServiceAccounts/#generate-aws-account-access-key-id-and-secret)
+    
     b.  Default region name(eg. us-east-1).
+    
     c.  Default output format as "json" only.
 
 4.  To add Cloudneeti data provisioning resource, execute the command
@@ -99,14 +114,6 @@ Sign into your AWS account.
 3.	Your AWS ID is the twelve-digit number located underneath the Account Settings section. Copy paste it to your notepad.
     ![SignIn AWS](.././images/amazonWebServiceAccounts/AWS_Management_Console.png#thumbnail)
 
-### AWS account access key id and secret 
-
-1.	Click **your name** located on the top right navigation pane
-2.	Select **My Security** Credentials 
-3.	**Access key id** is under the section **Access keys for CLI, SDK, & API access**
-    ![Create access key](.././images/amazonWebServiceAccounts/AWS_Account_Access_Key.png#thumbnail)
-4.	If access key secret is not available for this id, please create a new access key by clicking on **Create access key** button.
-    ![Create access key](.././images/amazonWebServiceAccounts/Access_Key_Success.png#thumbnail)
 
 ## STEP 3: Add AWS Account
 The following steps are executed by Cloudneeti application **License Admin** role.
