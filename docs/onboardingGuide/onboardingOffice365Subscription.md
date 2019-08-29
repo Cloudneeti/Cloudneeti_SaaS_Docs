@@ -330,12 +330,12 @@ Login to Cloudneeti portal as a License Admin.
 
 ##### License id
 
-1. Navigate to **View License** under **Settings**
+1. Navigate to **Features and Quota​s** under **Settings**
 2. Copy license ID and paste to notepad.
 	![License id](.././images/onboardingOffice365Subscription/License_Id.png#thumbnail)
 
 ##### Account id
-1. Navigate to **Manage Accounts** in **Settings**
+1. Navigate to **Manage Cloud Accounts** in **Settings**
 2. Copy account ID and paste to notepad.
 	![Manage Accounts](.././images/onboardingOffice365Subscription/Manage_Accounts.png#thumbnail)
 

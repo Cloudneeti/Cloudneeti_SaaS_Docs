@@ -36,7 +36,7 @@ AWS **Administrator** role is required for granting Cloudneeti application acces
 entity with the SecurityAudit access policy.`
 
 ## STEP 1: Create an AWS role for Cloudneeti
-The following steps are executed by AWS **Administrator** role. AWS role for Cloudneeti can be created manually or using an automated script. 
+The following steps are executed by AWS **Administrator** role. AWS role for Cloudneeti can be created manually or using an automation script. 
 
 ### Manual
 #### Grant Permissions
@@ -53,7 +53,7 @@ Login to [AWS portal](https://console.aws.amazon.com/) with AWS **Administrator*
 6.	Click **Next**
     ![Create Role](.././images/amazonWebServiceAccounts/Attatch_policies.png#thumbnail)
 7.	Click **Next: Tags**
-8.	Enter details like Role Name, Role description
+8.	Enter details like Role Name as **Cloudneeti-SecurityAudit**, Role description
 9.	Click on **Create role**
      ![Create Role](.././images/amazonWebServiceAccounts/Role_Information.png#thumbnail)
 
