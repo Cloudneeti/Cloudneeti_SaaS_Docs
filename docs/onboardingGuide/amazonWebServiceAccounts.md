@@ -59,11 +59,10 @@ Login to [AWS portal](https://console.aws.amazon.com/) with AWS **Administrator*
 
 An AWS role will be created in the customer's account to mark Cloudneeti's account as a trusted entity with the SecurityAudit access policy.
 
-### Automated
-#### Workstation readiness
+### Automated script
+Automation script can be used for creation of a role to mark Cloudneeti's account as a trusted entity with the SecurityAudit access policy.
 
-Use serverless.yml file to create a role to mark Cloudneeti's account as a
-trusted entity with the SecurityAudit access policy.
+#### Workstation readiness
 
 | Activity                                                                      | Description                                              |
 |-------------------------------------------------------------------------------|----------------------------------------------------------|
@@ -71,6 +70,19 @@ trusted entity with the SecurityAudit access policy.
 | **Workstation:** Install AWS Command Line Interface                           | To install AWS cli follow [link](https://docs.aws.amazon.com/cli/latest/userguide/install-windows.html) **AWS Command Line** Interface (CLI) is a unified tool to manage your AWS services.             |
 | **Workstation:** Install Nodejs                                               | Download latest stable version of nodejs from [here](https://nodejs.org/en/) and install on the workstation.                                                                                            |
 | **Workstation:** Install serverless npm module                                | Serverless Framework is a CLI tool to manage AWS deployments. Execute below command to install serverless module, \# npm install –g serverless                                                           |
+
+#### Collect information - AWS account access key id and secret 
+
+1.	Click **your name** located on the top right navigation pane
+2.	Select **My Security** Credentials 
+3.	**Access key id** is under the section **Access keys for CLI, SDK, & API access**
+    ![Create access key](.././images/amazonWebServiceAccounts/AWS_Account_Access_Key.png#thumbnail)
+4.	If access key secret is not available for this id, please create a new access key by clicking on **Create access key** button.
+    ![Create access key](.././images/amazonWebServiceAccounts/Access_Key_Success.png#thumbnail)
+
+#### Cretae an AWS role for Cloudneeti using automation script
+Use serverless.yml file to create a role to mark Cloudneeti's account as a
+trusted entity with the SecurityAudit access policy.
 
 1.  **Open PowerShell** application as an administrator (right click on PowerShell
     and select run as administrator)
@@ -99,14 +111,6 @@ Sign into your AWS account.
 3.	Your AWS ID is the twelve-digit number located underneath the Account Settings section. Copy paste it to your notepad.
     ![SignIn AWS](.././images/amazonWebServiceAccounts/AWS_Management_Console.png#thumbnail)
 
-### AWS account access key id and secret 
-
-1.	Click **your name** located on the top right navigation pane
-2.	Select **My Security** Credentials 
-3.	**Access key id** is under the section **Access keys for CLI, SDK, & API access**
-    ![Create access key](.././images/amazonWebServiceAccounts/AWS_Account_Access_Key.png#thumbnail)
-4.	If access key secret is not available for this id, please create a new access key by clicking on **Create access key** button.
-    ![Create access key](.././images/amazonWebServiceAccounts/Access_Key_Success.png#thumbnail)
 
 ## STEP 3: Add AWS Account
 The following steps are executed by Cloudneeti application **License Admin** role.
