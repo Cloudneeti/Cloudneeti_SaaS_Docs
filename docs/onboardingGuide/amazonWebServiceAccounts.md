@@ -46,14 +46,15 @@ Login to [AWS portal](https://console.aws.amazon.com/) with AWS **Administrator*
     ![AWS Portal](.././images/amazonWebServiceAccounts/AWS_Portal.png#thumbnail)
 2.	Click on **Roles** and **Create Role**
     ![Create Role](.././images/amazonWebServiceAccounts/Roles.png#thumbnail)
-3.	Select **Another AWS account** and enter Cloudneeti's Account ID 
+3.	Select **Another AWS account** and enter Cloudneeti's AWS account ID 
 4.	Click **Next: Permissions**
      ![Activate License](.././images/amazonWebServiceAccounts/Another_AWS_Account.png#thumbnail)
 5.	Select policy name **SecurityAudit**
 6.	Click **Next**
     ![Create Role](.././images/amazonWebServiceAccounts/Attatch_policies.png#thumbnail)
 7.	Click **Next: Tags**
-8.	Enter details like Role Name as **Cloudneeti-SecurityAudit**, Role description
+8.	Enter Role Name as **Cloudneeti-SecurityAudit**
+9.  Enter Role description
 9.	Click on **Create role**
      ![Create Role](.././images/amazonWebServiceAccounts/Role_Information.png#thumbnail)
 
@@ -71,7 +72,7 @@ Automation script can be used for creation of a role to mark Cloudneeti's accoun
 | **Workstation:** Install Nodejs                                               | Download latest stable version of nodejs from [here](https://nodejs.org/en/) and install on the workstation.                                                                                            |
 | **Workstation:** Install serverless npm module                                | Serverless Framework is a CLI tool to manage AWS deployments. Execute below command to install serverless module, \# npm install –g serverless                                                           |
 
-#### Collect information - AWS account access key id and secret 
+#### Generate AWS account access key id and secret 
 
 1.	Click **your name** located on the top right navigation pane
 2.	Select **My Security** Credentials 
@@ -89,9 +90,11 @@ trusted entity with the SecurityAudit access policy.
 2.  In PowerShell application, navigate to folder location where you downloaded
     the file “serverless.yml” (e.g. “cd C:\\Downloads”)
 3.  Type **aws configure** and enter
-    a.  Account access key id and secret access key of an AWS IAM User (with
-        **Administrator Access** policy)
+    
+    a.  Account access key id and secret access key generated in [step](.././amazonWebServiceAccounts/#generate-aws-account-access-key-id-and-secret)
+    
     b.  Default region name(eg. us-east-1).
+    
     c.  Default output format as "json" only.
 
 4.  To add Cloudneeti data provisioning resource, execute the command
