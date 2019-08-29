@@ -25,7 +25,7 @@ no Office 365 APIs to retrieve this information) and pushes (B) this information
 as a JSON file to the Cloudneeti application.
 	![Advanced Security Configuration](.././images/onboardingOffice365Subscription/Advanced_Security_Configuration.png#thumbnail)
 
-| Nr	 | Step                                                         | Product                      | Role                                                 |
+| S. No.	 | Step                                                         | Product                      | Role                                                 |
 |--------|--------------------------------------------------------------|------------------------------|------------------------------------------------------|
 | 1      | Register Cloudneeti application                              | Microsoft Azure AD           | Global AD Administrator                              |
 | 2      | Add Office 365 subscription                                  | Cloudneeti                   | License Admin                                        |
@@ -40,12 +40,12 @@ as a JSON file to the Cloudneeti application.
 People with the following roles are required to complete the Office 365
 onboarding process.
 
-| Nr     | Role                    | Product                |
-|--------|-------------------------|------------------------|
-| 1      | License Admin           | Cloudneeti application |
-| 2      | Global AD Administrator | Microsoft Azure AD     |
-| 3      | Global Administrator    | Microsoft Office 365   |
-| 4      | Subscription Owner      | Microsoft Azure        |
+| Role                    | Product                |
+|-------------------------|------------------------|
+| License Admin           | Cloudneeti application |
+| Global AD Administrator | Microsoft Azure AD     |
+| Global Administrator    | Microsoft Office 365   |
+| Subscription Owner      | Microsoft Azure        |
 
 The Cloudneeti application **License Admin** is assigned to an individual in the
 customer’s organization who will be responsible for the configuration of the
@@ -61,10 +61,10 @@ Cloudneeti application.
 
 For Advanced security configuration (optional) the following roles are required.
 
-| **Nr** | **Role**                                                   | **Product**            |
-|--------|------------------------------------------------------------|------------------------|
-| 1      | License Admin                                              | Cloudneeti application |
-| 2      | Azure Subscription Owner or Azure Subscription Contributor | Microsoft Azure        |
+| **Role**                                                   | **Product**            |
+|------------------------------------------------------------|------------------------|
+| License Admin                                              | Cloudneeti application |
+| Azure Subscription Owner or Azure Subscription Contributor | Microsoft Azure        |
 
 The Microsoft Azure **Subscription Owner or Contributor** role is required to
 provision a PowerShell agent to pull advanced security configuration information
@@ -370,10 +370,7 @@ Login to Azure portal <https://portal.azure.com> as subscription owner.
 
 ##### Sign-up on Cloudneeti API portal.
 
-1. Go to API portal and Sign up: \< Environment \> portal.cloudneeti.com
-    Example: trialportal.cloudneeti.com (check with your support/consulting team
-    on the specific Cloudneeti platform environment you are planning an
-    onboarding to)
+1. Go to [API portal](https://portal.cloudneeti.com/) and Sign up.
 
 2. Fill the required fields in the sign-up form
 
@@ -450,8 +447,7 @@ Switch to Azure AD with the Azure Subscription with pre-requisite access.
     collector provisioning script.
 	<pre>
 	<code>```
-		wget 
-		https://raw.githubusercontent.com/Cloudneeti/docs_cloudneeti/master/scripts/Provision-M365DataCollector.ps1 -O Provision-M365DataCollector.ps1
+		wget https://raw.githubusercontent.com/Cloudneeti/docs_cloudneeti/master/scripts/Provision-M365DataCollector.ps1 -O Provision-M365DataCollector.ps1
 	```</code>
 	</pre>
 6. Switch to the User directory
