@@ -19,7 +19,7 @@ The following steps are required to onboard Microsoft Azure to the Cloudneeti ap
     to the respective Cloud Account and waiting until the first data collection
     is complete.
 
-| Nr | Step                                   | Portal to use     | Role                    |
+| S. No. | Step                                   | Portal to use     | Role                    |
 |--------|------------------------------------|-------------------|-------------------------|
 | 1      | Register Cloudneeti application    | Microsoft Azure   | Global AD Administrator |
 | 2      | Grant access to Azure subscription | Microsoft Azure   | Subscription Owner      |
@@ -30,11 +30,11 @@ The following steps are required to onboard Microsoft Azure to the Cloudneeti ap
 One or more people with the following roles are required to complete Microsoft
 Azure onboarding process.
 
-| **Nr** | **Pre-requisite Role**  | **Portal to use**      |
-|--------|-------------------------|------------------------|
-| 1      | License Admin           | Cloudneeti application |
-| 2      | Global AD Administrator | Microsoft Azure        |
-| 3      | Subscription Owner      | Microsoft Azure        |
+| **Pre-requisite Role**  | **Portal to use**      |
+|-------------------------|------------------------|
+| License Admin           | Cloudneeti application |
+| Global AD Administrator | Microsoft Azure        |
+| Subscription Owner      | Microsoft Azure        |
 
 -   Onboarding a cloud account (in this case an Azure Subscription) requires the
     logged in user to be assigned the **License Admin** role in the Cloudneeti
