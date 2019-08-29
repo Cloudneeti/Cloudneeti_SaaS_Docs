@@ -6,7 +6,7 @@ The following steps are required to onboard AWS to the Cloudneeti application.
 
 ![AWS Overview](.././images/amazonWebServiceAccounts/AWS_Overview.png#thumbnail)
 
-| Nr | Step                                     | Product                        | Role               |
+| S. No. | Step                                     | Product                        | Role               |
 |----|------------------------------------------|--------------------------------|--------------------|
 | 1  | Create an AWS role for Cloudneeti        | AWS                            | Administrator      |
 | 2  | Collect AWS account information          | AWS                            | Administrator      |
@@ -22,10 +22,10 @@ The following steps are required to onboard AWS to the Cloudneeti application.
 #### Required Roles
 One or more people with the following roles are required to complete Amazon Web Service Account onboarding process.
 
-| Nr | Role          | Product    |
-|----|---------------|------------|
-| 1  | License Admin | Cloudneeti |
-| 2  | Administrator | AWS        |
+| Role          | Product    |
+|---------------|------------|
+| License Admin | Cloudneeti |
+| Administrator | AWS        |
 
 Cloudneeti application **License Admin** is assigned to an individual in the customer’s organization who will be responsible for configuration of the respective Cloudneeti application License.
 
