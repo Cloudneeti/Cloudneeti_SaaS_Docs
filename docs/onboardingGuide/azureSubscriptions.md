@@ -457,7 +457,7 @@ listed below.
 
 | Policy ID     | Policy Name                                                                          | Category                              |
 |---------------|--------------------------------------------------------------------------------------|---------------------------------------|
-| 3.6       | Ensure that 'Public access level' is set to Private for Blob Containers                         | Storage Accounts |
+| 1600.13       | Ensure that 'Public access level' is set to Private for Blob Containers                         | Storage Accounts |
 
 ### Key Vault List
 
