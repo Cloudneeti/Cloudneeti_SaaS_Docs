@@ -3,10 +3,10 @@
 
 **September 2019- v2.15.1**
 ----------------------------
-*	**New Marketplace Offers**
-	*	Microsoft Azure customers worldwide now gain access to Cloudneeti to take advantage of the Continuous Cloud Security and Compliance Assurance for Microsoft Azure, Amazon Web Services and Office 365. With the current release below SKU's are available on [Azure Marketplace.](https://azuremarketplace.microsoft.com/en-us/marketplace/apps?search=Cloudneeti&page=1)
+1.	**New Marketplace Offers**
+	*	Microsoft Azure customers worldwide now gain access to Cloudneeti to take advantage of the Continuous Cloud Security and Compliance Assurance for Microsoft Azure, Amazon Web Services and Office 365. With the current release below SKU's are available on <a href="https://azuremarketplace.microsoft.com/en-us/marketplace/apps?search=Cloudneeti&page=1" target="_blank">Azure Marketplace.</a>
 
-Refer to all the Cloudneeti’s Azure Marketplace offers here – [https://www.cloudneeti.com/offers.](https://www.cloudneeti.com/offers)
+Refer to all the Cloudneeti’s Azure Marketplace offers here- <a href="https://www.cloudneeti.com/offers/" target="_blank">https://www.cloudneeti.com/offers</a>
 
 **August 2019- v2.14.1**
 ------------------------
