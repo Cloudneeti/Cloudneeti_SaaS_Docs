@@ -14,7 +14,7 @@
 3.	**Policies & Benchmarks Additions/Updates**
 	*	Addition of the following 20 new AWS security policies.
 
-| Category                             | Policy Title                                                                                  |
+    | Category                             | Policy Title                                                                                  |
 |--------------------------------------|------------------------------------------------------------------------------------------------------|
 | AWS - Audit and Logging              | Ensure that Object level write event log is enabled for S3 bucket                                    |
 | AWS - Audit and Logging              | Ensure that Object level read event log is enabled for S3 bucket                                     |
@@ -64,13 +64,13 @@
     *   Removed duplicate policy numbers across different categories in Cloud Security Risk Posture.
     *   Updation of following Azure security policies for additional permission to collect data.
 
-| Category | Policy Title |
+    | Category | Policy Title |
 | --- | --- |
 | Azure - Storage and Databases | Ensure that &#39;Public access level&#39; is set to Private for Blob Containers |
 
 *   Addition of the following 21 new AWS security policies.
 
-| Category | Policy Title |
+    | Category | Policy Title |
 | --- | --- |
 | AWS - Business Continuity | Ensure Auto Minor Version Upgrade feature is Enabled for Relational Database Service Instances |
 | AWS - Business Continuity | Ensure backup retention policy is set for Relational Database Service |
@@ -131,7 +131,7 @@
     *   Enhancements to Azure App service-related policies to include the latest updated versions.
     *   Addition of following 22 new Azure security policies.
 
-| **Categoory** | **Policy Title** |
+    | **Categoory** | **Policy Title** |
 | --- | --- |
 | Azure - Compute (PaaS and Serverless) | Ensure that monitoring of diagnostics logs in app services is enabled in ASC |
 | Azure - Compute (PaaS and Serverless) | Ensure that monitoring of web sockets for API app  is enable in ASC |
@@ -174,7 +174,7 @@
         2.  Azure: GxP Life Science - FDA 21 CFR PART 11
     *   Addition of following 52 new Azure security policies
 
-|   **Category**            |   **Policy Title**            |
+    |   **Category**            |   **Policy Title**            |
 |-----------------------|---------------------------|
 |   Azure - Storage and Database    |   Ensure that monitoring of SQL managed server without Advanced Data Security is enabled in ASC |
 |   Azure - Storage and Database    |   Ensure that all Advanced Threat Protection types on SQL managed instance is enabled in ASC   |
@@ -261,7 +261,7 @@
         1.  AWS: FFIEC - Federal Financial Institutions Examination Council (CAT).
     *   Addition of following new Azure security policies
 
-|   **Category**            |   **Policy Title**            |
+    |   **Category**            |   **Policy Title**            |
 |-----------------------|---------------------------|
 |   Azure-Networking    |   Ensure that ingress traffic to SMTP (TCP:25) is restricted for Virtual Machine. |
 |   Azure-Networking    |   Ensure that ingress traffic to 'POP3' (TCP:110) is restricted for Virtual Machine.  |
@@ -290,7 +290,7 @@
     *   Updated AWS Compliance Mapping for HIPAA, GDPR, and PCI DSS 3.2.1
     *   Addition of following new AWS security policies
 
-|   **Category**            |   **Policy Title**            |
+    |   **Category**            |   **Policy Title**            |
 |-----------------------|---------------------------|
 |   AWS - Business Continuity   |	Ensure all CloudFront Distributions require HTTPS between CloudFront and your ELB origin    |
 |   AWS - Business Continuity   |	Configure HTTP to HTTPS redirects with a CloudFront Viewer Protocol Policy  |
@@ -341,7 +341,7 @@
 3.    **Policies & Benchmarks Additions/Updates**
     *   Addition of following new AWS security policies
 
-|   **Category**            |   **Policy Title**            |
+    |   **Category**            |   **Policy Title**            |
 |-----------------------|---------------------------|
 |   AWS - Data In Transit Encryption    |	Ensure that wildcard certificates issued by Amazon Certificate Manager (ACM) or imported to ACM are not in use    |
 |   AWS - Data In Transit Encryption    |	Ensure there are no failed SSL/TLS certificates in the AWS Certificate Manager (ACM)    |
@@ -366,7 +366,7 @@
 
 *   Addition/Updates to the following Azure security policies
 
-|   **Category**            |   **Policy Title**            |
+    |   **Category**            |   **Policy Title**            |
 |-----------------------|---------------------------|
 |   Azure - Business continuity and DR  |	Ensure that Backup feature is configured for Function Apps deployed on Standard and above App Service Plan  |
 |   Azure - Business continuity and DR  |	Ensure that Backup feature is configured for Mobile Apps deployed on Standard and above App Service Plan  |
@@ -401,7 +401,7 @@
 3.  **Policies & Benchmarks Additions/Updates**
     *  Addition of following new AWS security policies
 
-|   **Category**            |   **Policy Title**            |
+    |   **Category**            |   **Policy Title**            |
 |-----------------------|---------------------------|
 |   Networking  |	Ensure Classic Load Balancer with unencrypted LDAP (TCP:389) is not exposed to the public internet  |
 |   Networking  |	Ensure Classic Load Balancer with service 'Prevalent known internal port' (TCP:3000) is not exposed to the public internet  |
@@ -448,7 +448,7 @@
 
 *   Addition/Updates to the following Azure security policies
 
-|   **Category**            |   **Policy Title**            |
+    |   **Category**            |   **Policy Title**            |
 |-----------------------|---------------------------|
 |   Networking  |	Ensure that ingress traffic to Memcached (TCP:11211) is restricted for Virtual Machine  |
 |   Networking  |	Ensure that ingress traffic to 'MSSQL Server' (TCP:1433) is restricted for Virtual Machine  |
@@ -500,7 +500,7 @@
 3.  **Policies & Benchmarks Additions/Updates**
     *   Addition of following AWS security policies
 
-|   **Category**            |   **Policy Title**            |
+    |   **Category**            |   **Policy Title**            |
 |-----------------------|---------------------------|
 |   Networking  |	Ensure AWS Application Load Balancers (ALBs) are using the latest predefined security policy
 |   Networking  |	Identify unused Application Load Balancers and delete them in order to reduce AWS costs
@@ -564,7 +564,7 @@
 2.  **Policies & Benchmarks**
     *   Addition of following AWS security policies
 
-|   **Category**            |   **Policy Title**            |
+    |   **Category**            |   **Policy Title**            |
 |-----------------------|---------------------------|
 |   Networking  |	Ensure that your Application Load Balancer (ALB) listeners are using a secure protocol such as HTTPS  |
 |   Networking  |	Ensure Application Load Balancer with unencrypted Mongo (TCP:27017) is not exposed to the public internet  |
@@ -627,7 +627,7 @@
 
 *   Addition of new Azure security policies
 
-|   **Category**            |   **Policy Title**            |
+    |   **Category**            |   **Policy Title**            |
 |-----------------------|---------------------------|
 |   Kubernetes & Containers |	Ensure that Diagnostics logs must be enabled with a retention period of at least 365 days for Azure Kubernetes Service |
 |   Kubernetes & Containers |	Ensure Azure Kubernetes Service clusters are always running with latest Kubernetes versions |
@@ -691,7 +691,7 @@
     *   CIS certified Cloudneeti for Amazon Web Services Foundations Benchmark v1.2.0  [    (https://www.cisecurity.org/partner/cloudneeti/)    ](https://www.cisecurity.org/partner/cloudneeti/)
     *   Addition of new Azure security policies
 
-|   **Category**            |   **Policy Title**            |
+    |   **Category**            |   **Policy Title**            |
 |-----------------------|---------------------------|
 |   Kubernetes & Containers |	Ensure Azure Active Directory RBAC is enabled for Azure Kubernetes Services (AKS) |
 |   Kubernetes & Containers |	Ensure that AAD is enabled in Kubernetes Service |
