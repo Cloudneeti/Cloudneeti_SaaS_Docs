@@ -4,7 +4,7 @@
 
 The following steps are required to onboard AWS to the Cloudneeti application.
 
-![AWS Overview](.././images/amazonWebServiceAccounts/AWS_Overview.png#thumbnail)
+![AWS Overview](.././images/amazonWebServiceAccounts/AWS_Overview.png#thumbnail_1)
 
 | S. No. | Step                                     | Product                        | Role               |
 |----|------------------------------------------|--------------------------------|--------------------|
@@ -81,7 +81,7 @@ Automation script can be used for creation of a role to mark Cloudneeti's accoun
 4.	If access key secret is not available for this id, please create a new access key by clicking on **Create access key** button.
     ![Create access key](.././images/amazonWebServiceAccounts/Access_Key_Success.png#thumbnail)
 
-#### Cretae an AWS role for Cloudneeti using automation script
+#### Create an AWS role for Cloudneeti using automation script
 Use serverless.yml file to create a role to mark Cloudneeti's account as a
 trusted entity with the SecurityAudit access policy.
 

@@ -4,7 +4,7 @@
 
 The following steps are required to onboard Office 365 to Cloudneeti
 application.
-	![onBoarding Steps](.././images/onboardingOffice365Subscription/Onboarding_Steps.png#thumbnail)
+	![onBoarding Steps](.././images/onboardingOffice365Subscription/Onboarding_Steps.png#thumbnail_1)
 
 **1. Registering Cloudneeti application** includes registering the Cloudneeti
 application with the Azure Active Directory (AD) tenant, providing access to
