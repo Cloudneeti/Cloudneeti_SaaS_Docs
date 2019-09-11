@@ -4,7 +4,7 @@
 
 The following steps are required to onboard Microsoft Azure to the Cloudneeti application.
 
-![Onboarding Steps](.././images/azureSubscriptions/Onboarding_Steps.png#thumbnail)
+![Onboarding Steps](.././images/azureSubscriptions/Onboarding_Steps.png#thumbnail_1)
 
 1.  **Registering the Cloudneeti application** includes registering the
     Cloudneeti application with Azure tenant, providing access to Microsoft

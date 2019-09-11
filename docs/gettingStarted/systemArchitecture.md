@@ -119,7 +119,7 @@ it enables single sign on (SSO) with corporate identity management system.
 Cloudneeti currently supports Azure AD, Office 365 AD tenant and Microsoft
 accounts (such as outlook, live, and Hotmail).
 
-![Single Sign On](.././images/systemArchitecture/Single_Sign_On.png#thumbnail)
+![Single Sign On](.././images/systemArchitecture/Single_Sign_On.png#thumbnail_1)
 
 Users enter their corporate ID credentials to sign into the Cloudneeti
 application.

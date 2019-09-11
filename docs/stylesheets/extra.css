@@ -261,5 +261,5 @@ table, th {
 .md-sidebar--primary .md-nav__item{font-size: 13px;}
 .md-custom-logo{padding: 0}
 .md-typeset h1,.md-typeset h2{margin: 0.5rem 0 .8rem}
-.md-nav__list {background: #f1f3f4;}
+.md-sidebar--primary .md-nav__list {background: #f1f3f4;}
 .md-header{ background: url('../images/header-bg.png') !important;}
