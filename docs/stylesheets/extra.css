@@ -179,11 +179,13 @@ img[src*="#thumbnail"] {
     display: block;
     max-width: 100%;
     border: 1px #c9c7c7 solid;
+    margin: .5em 0;
 }
 img[src*="#thumbnail_1"] {
     display: block;
     max-width: 100%;
     border: none;
+    margin: .5em 0;
  }
 
 table, td {
