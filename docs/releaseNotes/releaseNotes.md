@@ -14,7 +14,7 @@
 3.	**Policies & Benchmarks Additions/Updates**
 	*	Addition of the following 10 new AWS security policies.
 
-        | Category                             | Policy Title                                                                                 |
+        | **Category**                 | **Policy Title**                                                                                 |
 |--------------------------------------|------------------------------------------------------------------------------------------------------|
 | AWS - Audit and Logging              | Ensure that Object level write event log is enabled for S3 bucket                                    |
 | AWS - Audit and Logging              | Ensure that Object level read event log is enabled for S3 bucket                                     |
@@ -52,14 +52,14 @@
     *   Removed duplicate policy numbers across different categories in Cloud Security Risk Posture.
     *   Updation of following Azure security policies for additional permission to collect data.
 
-        | Category | Policy Title |
+        | **Category** | **Policy Title** |
         | --- | --- |
     | Azure - Storage and Databases | Ensure that &#39;Public access level&#39; is set to Private for Blob Containers |
 
 
     *   Addition of the following 21 new AWS security policies.
 
-        | Category | Policy Title |
+        | **Category** | **Policy Title** |
 | --- | --- |
 | AWS - Business Continuity | Ensure Auto Minor Version Upgrade feature is Enabled for Relational Database Service Instances |
 | AWS - Business Continuity | Ensure backup retention policy is set for Relational Database Service |
@@ -311,13 +311,13 @@
 |   AWS - Storage and Databases |	Ensure Version Upgrade is enabled for Redshift clusters to automatically receive upgrades during the maintenance window |
 |   AWS - Storage and Databases |	Ensure that retention period is enabled for Amazon Redshift automated snapshots |
 
-        *   Addition/Updates to the following Azure security policies
+	*   Addition/Updates to the following Azure security policies
         
-                |   **Category**            |   **Policy Title**            |
-|-----------------------|---------------------------|
-|   Azure - Data in Transit   |	 Ensure that TLS 1.0 and 1.1 protocols are disabled for Application Gateway   |
-|   Azure - Networking   |  Ensure that ingress traffic to bitcoin ports (TCP 8332 and 8333) is restricted for Virtual Machine  |
-|   Azure - Networking   |  Ensure that ingress traffic to Ethereum port (TCP 8545) is restricted for Virtual Machine |
+		|   **Category**				|   **Policy Title**																					|
+|-------------------------------|-------------------------------------------------------------------------------------------------------|
+|   Azure - Data in Transit		|	 Ensure that TLS 1.0 and 1.1 protocols are disabled for Application Gateway							|
+|   Azure - Networking			|  Ensure that ingress traffic to bitcoin ports (TCP 8332 and 8333) is restricted for Virtual Machine   |
+|   Azure - Networking			|  Ensure that ingress traffic to Ethereum port (TCP 8545) is restricted for Virtual Machine			|
 
 ## **June 2019- v2.8.1**
 
