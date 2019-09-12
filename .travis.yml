@@ -38,3 +38,5 @@ deploy: # Deploy documentation to Github in the gh_pages branch
     local_dir: site
     on:
         branch: master
+git:
+  depth: 9999999
