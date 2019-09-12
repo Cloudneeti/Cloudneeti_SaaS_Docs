@@ -12,31 +12,19 @@
 	*	Enhancement of data collection and data processing mechanisms tracing and handling intermittent failures.
 
 3.	**Policies & Benchmarks Additions/Updates**
-	*	Addition of the following 20 new AWS security policies.
+	*	Addition of the following 10 new AWS security policies.
 
-        | Category                             | Policy Title                                                                                  |
+        | Category                             | Policy Title                                                                                 |
 |--------------------------------------|------------------------------------------------------------------------------------------------------|
 | AWS - Audit and Logging              | Ensure that Object level write event log is enabled for S3 bucket                                    |
 | AWS - Audit and Logging              | Ensure that Object level read event log is enabled for S3 bucket                                     |
 | AWS - Business Continuity            | Ensure Amazon Neptune instances have Auto Minor Version Upgrade feature enabled                      |
-| AWS - Business Continuity            | Ensure that Amazon Neptune database clusters have the Multi-AZ feature enabled                       |
-| AWS - Business Continuity            | Ensure AWS Neptune clusters have a sufficient backup retention period set for compliance purposes    |
 | AWS - Business Continuity            | Ensure that AWS Redshift Reserved Nodes are renewed in The Next 7 Days                               |
 | AWS - Business Continuity            | Ensure that AWS Redshift Reserved Nodes are renewed in The Next 30 Days                              |
-| AWS - Business Continuity            | Ensure policies are set to prevent accidental updates to CloudFormation stack resources              |
-| AWS - Business Continuity            | Ensure that deletion policy is set for Amazon CloudFormation stacks                                  |
 | AWS - Business Continuity            | Ensure that Termination Protection feature is enabled for AWS CloudFormation stacks                  |
-| AWS - Compute                        | Ensure that the latest execution environment is used for your AWS Lambda functions                   |
-| AWS - Compute                        | Ensure that tracing is enabled for your AWS Lambda functions                                         |
 | AWS - Data In Transit Encryption     | Ensure that AWS Neptune instances enforce data-at-rest encryption using KMS CMKs                     |
 | AWS - Data In Transit Encryption     | Ensure that Amazon Neptune graph database instances are encrypted                                    |
-| AWS - Governance                     | Ensure that there are no publicly accessible AWS Lambda functions                                    |
 | AWS - Identity and Access Management | Ensure IAM Database Authentication feature is enabled for Amazon Neptune clusters                    |
-| AWS - Identity and Access Management | Ensure that the IAM role associated with your AWS CloudFormation stack grants least privilege        |
-| AWS - Identity and Access Management | Ensure that access to VPC-only resources is used for your AWS Lambda functions                       |
-| AWS - Identity and Access Management | Ensure that no admin privileges are given to Lambda functions                                        |
-| AWS - Identity and Access Management | Ensure that unknown cross account access is not allowed to AWS Lambda function                       |
-| AWS - Identity and Access Management | Ensure you do not allow unknown cross account access via permission policies to AWS Lambda functions |
 | AWS - Monitoring                     | Ensure to integrate Simple Notification Service with AWS CloudFormation stack                        |
 
 **September 2019- v2.15.1**
@@ -71,7 +59,7 @@
 
     *   Addition of the following 21 new AWS security policies.
 
-    | Category | Policy Title |
+		| Category | Policy Title |
 | --- | --- |
 | AWS - Business Continuity | Ensure Auto Minor Version Upgrade feature is Enabled for Relational Database Service Instances |
 | AWS - Business Continuity | Ensure backup retention policy is set for Relational Database Service |
