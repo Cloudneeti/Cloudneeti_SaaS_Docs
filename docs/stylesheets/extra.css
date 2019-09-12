@@ -179,6 +179,11 @@ img[src*="#thumbnail"] {
     display: block;
     max-width: 100%;
     border: 1px #c9c7c7 solid;
+}
+img[src*="#thumbnail_1"] {
+    display: block;
+    max-width: 100%;
+    border: none;
  }
 
 table, td {
@@ -251,8 +256,15 @@ table, th {
     .content-section{height: 87vh;}
     .tiles_section {margin-top: 6%;}
 }
+@media only screen and (min-width : 1600px){
+    .md-sidebar--primary  {background: #f1f3f4;height:89% !important;}
+}
 .md-nav--secondary .md-nav__item{font-size: 12px;color: #3f51b5}
 .md-nav--secondary .md-nav__item:hover{color: #0275d8}
 .md-sidebar--primary .md-nav__item{font-size: 13px;}
 .md-custom-logo{padding: 0}
-.md-typeset h1,.md-typeset h2{margin: 0.5rem 0 .8rem}
+.md-typeset h1{ margin: 0.5rem 0 .8rem;color:#44546A; font-weight: 700}
+.md-typeset h2{margin: 0.5rem 0 .8rem;color:#080808;font-weight: 700}
+.md-typeset h3 {margin: 0.5rem 0 .8rem;color:#080808;font-weight: 700}
+.md-sidebar--primary  {background: #f1f3f4;height:84% !important;}
+.md-header{ background: url('../images/header-bg.png') !important;}
