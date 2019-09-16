@@ -1,6 +1,6 @@
 # Office 365 Subscription Onboarding Guide
-## Overview
-### Onboarding Steps
+
+## Onboarding Steps
 
 The following steps are required to onboard Office 365 to Cloudneeti
 application.
@@ -35,7 +35,7 @@ as a JSON file to the Cloudneeti application.
 |        | c. Provision M365 Data Collector to your Azure Subscription  | Microsoft Azure              | Subscription Owner or Azure Subscription Contributor |
 |        | d .Apply delete lock                                         | Microsoft Azure              | Subscription Owner or Azure Subscription Contributor |
 
-#### Required Roles
+### Required Roles
 
 People with the following roles are required to complete the Office 365
 onboarding process.
@@ -70,7 +70,7 @@ The Microsoft Azure **Subscription Owner or Contributor** role is required to
 provision a PowerShell agent to pull advanced security configuration information
 and ingest to the Cloudneeti application.
 
-#### Required Permissions
+### Required Permissions
 
 The Cloudneeti application will be granted two read permissions to the Azure
 AD and Cloudneeti Agent provisioned in Step 3 will require Office 365 Global Admin permission. Each
