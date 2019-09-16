@@ -63,6 +63,7 @@ document.
 | Reader role for Azure Subscription level scope              | Microsoft Azure   | Subscription Owner | STEP 2   | mandatory | 0            |
 | Backup reader role for Azure Subscription level scope       | Microsoft Azure   | Subscription Owner | STEP 2   | optional  | 4            |
 | Website contributor role for Azure Subscription level scope | Microsoft Azure   | Subscription Owner | STEP 2   | optional  | 15           |
+| Storage Account Contributor role   | Microsoft Azure   | Subscription Owner | STEP 2   | optional  | 1            |
 | Key Vault access policies for specific managed Key Vaults   | Microsoft Azure   | Subscription Owner | STEP 2   | optional  | 1            |
 
 ## STEP 1: Register Cloudneeti application
