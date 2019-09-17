@@ -148,7 +148,7 @@ permission [here](https://docs.microsoft.com/en-us/graph/permissions-reference)
 5. Click **Grant admin consent** in the Grant consent section (2)
 	![API Permission](.././images/onboardingOffice365Subscription/Grant_Admin_Consent.png#thumbnail)
 
-### 1.1 Automated
+### 1.2 Automated
 #### Prerequisites 
 
 The below steps are required for registering the Cloudneeti application in Azure
@@ -208,7 +208,7 @@ Cloudneeti application to be able to collect the Azure AD data.
 6. Click **Grant admin consent** in the Grant consent section (2)
 	![Grant_Admin_Consent](.././images/onboardingOffice365Subscription/Grant_Admin_Consent.png#thumbnail)
 
-### 1.2 Collect Information
+### 1.3 Collect Information
 
 
 The Cloudneeti application **License Admin** requires this information to add an
