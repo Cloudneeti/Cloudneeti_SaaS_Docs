@@ -130,7 +130,7 @@ Azure AD related security policy information.
     ![Service Principal - Azure Portal](.././images/azureSubscriptions/Azure_API_Permissions.png#thumbnail)
 
 
-### 1.1 Automated Steps
+### 1.2 Automated Steps
 #### Prerequisites 
 The below steps are required for registering Cloudneeti application in Azure Tenant using PowerShell script.
 
