@@ -581,3 +581,144 @@ available in the Center for Internet Security (CIS) Microsoft 365 benchmark
 | 5.12          | 17. (L1) Ensure the spoofed domains report is review weekly                                                                                                        | Auditing                         |
 | 5.6           | 18. (L1) Ensure user role group changes is reviewed at least every week                                                                                            | Auditing                         |
 | 6.1           | 19. (L2) Ensure that document sharing is being controlled by domains with white/blacklist                                                                          | Storage                          |
+
+<div class="policy-json-code">
+<pre>
+<code>
+	[
+    {
+        "ttl": xxxxxxxxx,
+        "id": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "_rid": "SvAwAJo4UAdIVAQAAAAADA==",
+        "_self": "dbs/SvAwAA==/colls/SvAwAJo4UAc=/docs/SvAwAJo4UAdIVAQAAAAADA==/",
+        "_etag": "\"1900267d-0000-0100-0000-5d1ee0810000\"",
+        "AccountId": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXxx",
+        "Type": "M365ScanedData",
+        "PartitionKey": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXx",
+        "ScanedDataFromPS": [
+            {
+                "Status": "Green",
+                "TotalResourceCount": 1,
+                "PolicyId": "CalExtSharing",
+                "PassedResourceCount": 1
+            },
+            {
+                "Status": "Red",
+                "TotalResourceCount": 1,
+                "PolicyId": "ATPSafeLinks",
+                "PassedResourceCount": 0
+            },
+            {
+                "Status": "Green",
+                "TotalResourceCount": 1,
+                "PolicyId": "ATPEnabled",
+                "PassedResourceCount": 1
+            },
+            {
+                "Status": "Red",
+                "TotalResourceCount": 1,
+                "PolicyId": "AttachmentFilter",
+                "PassedResourceCount": 0
+            },
+            {
+                "Status": "Green",
+                "TotalResourceCount": 1,
+                "PolicyId": "OutbondSpam",
+                "PassedResourceCount": 1
+            },
+            {
+                "Status": "Green",
+                "TotalResourceCount": 1,
+                "PolicyId": "TransportRule",
+                "PassedResourceCount": 1
+            },
+            {
+                "Status": "Green",
+                "TotalResourceCount": 1,
+                "PolicyId": "ClientRuleFrwd",
+                "PassedResourceCount": 1
+            },
+            {
+                "Status": "Green",
+                "TotalResourceCount": 1,
+                "PolicyId": "AntiPhishing",
+                "PassedResourceCount": 1
+            },
+            {
+                "Status": "Green",
+                "TotalResourceCount": 1,
+                "PolicyId": "DKIMExchange",
+                "PassedResourceCount": 1
+            },
+            {
+                "Status": "Green",
+                "TotalResourceCount": 1,
+                "PolicyId": "InternalMalware",
+                "PassedResourceCount": 1
+            },
+            {
+                "Status": "Green",
+                "TotalResourceCount": 1,
+                "PolicyId": "AuditLogSearch",
+                "PassedResourceCount": 1
+            },
+            {
+                "Status": "Red",
+                "TotalResourceCount": 1,
+                "PolicyId": "UserRoleGroup",
+                "PassedResourceCount": 0
+            },
+            {
+                "Status": "Green",
+                "TotalResourceCount": 1,
+                "PolicyId": "AddedAccount",
+                "PassedResourceCount": 1
+            },
+            {
+                "Status": "Green",
+                "TotalResourceCount": 1,
+                "PolicyId": "DomainSpoof",
+                "PassedResourceCount": 1
+            },
+            {
+                "Status": "Red",
+                "TotalResourceCount": 1,
+                "PolicyId": "ModernAuthSPO",
+                "PassedResourceCount": 0
+            },
+            {
+                "Status": "Red",
+                "TotalResourceCount": 1,
+                "PolicyId": "ExtUserSharing",
+                "PassedResourceCount": 0
+            },
+            {
+                "Status": "Red",
+                "TotalResourceCount": 1,
+                "PolicyId": "DomainControl",
+                "PassedResourceCount": 0
+            },
+            {
+                "Status": "Green",
+                "TotalResourceCount": 1,
+                "PolicyId": "SPFExchange",
+                "PassedResourceCount": 1
+            },
+            {
+                "Status": "Red",
+                "TotalResourceCount": 1,
+                "PolicyId": "DMARCExchange",
+                "PassedResourceCount": 0
+            }
+        ],
+        "ContractId": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "LastModified": "0001-01-01T00:00:00",
+        "LastModifiedBy": null,
+        "AppVersion": "xxx",
+        "_attachments": "attachments/",
+        "_ts": xxxxxxx
+    }
+]
+</code>
+</pre>
+</div>
