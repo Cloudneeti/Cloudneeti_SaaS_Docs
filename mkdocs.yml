@@ -31,6 +31,8 @@ nav:
   - Subscribe: gettingStarted/subscribe.md
   - System Architecture: gettingStarted/systemArchitecture.md
   - Sign In and Sign Out: gettingStarted/signInAndSignOut.md
+- Try and Buy:
+  - Azure Marketplace: azureMarketplace/Subscribe_on_Azure_Marketplace.md
 - Onboarding Guide:
    - Overview: onboardingGuide/onboardingGuideOverview.md
    - Azure Subscriptions: onboardingGuide/azureSubscriptions.md
