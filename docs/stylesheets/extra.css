@@ -197,7 +197,7 @@ table td {
     border-top: 1px solid #dee2e6;
 }
 table tr:last-child td {
-    border-bottom: 1px solid #dee2e6;
+    border-bottom: 2px solid #dee2e6;
 }
 table thead th {
     vertical-align: bottom;
