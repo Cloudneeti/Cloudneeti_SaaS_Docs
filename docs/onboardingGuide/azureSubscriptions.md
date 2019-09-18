@@ -1,6 +1,5 @@
 # Azure Subscription Onboarding Guide
-## Overview
-### Onboarding Steps
+## Onboarding Steps
 
 The following steps are required to onboard Microsoft Azure to the Cloudneeti application.
 
@@ -25,7 +24,7 @@ The following steps are required to onboard Microsoft Azure to the Cloudneeti ap
 | 2      | Grant access to Azure subscription | Microsoft Azure   | Subscription Owner      |
 | 3      | Add Azure subscription             | Cloudneeti        | License Admin           |
 
-#### Required Roles
+### Required Roles
 
 One or more people with the following roles are required to complete Microsoft
 Azure onboarding process.
@@ -47,7 +46,7 @@ Azure onboarding process.
 -   The Microsoft Azure **Subscription Owner** role is required for providing
     Cloudneeti application required read access to the Azure Subscription.
 
-#### Required Permissions
+### Required Permissions
 
 Cloudneeti application will be granted five read permissions to Azure AD and
 Azure subscriptions. Four of these permissions are optional. Each optional read
@@ -63,6 +62,7 @@ document.
 | Reader role for Azure Subscription level scope              | Microsoft Azure   | Subscription Owner | STEP 2   | mandatory | 0            |
 | Backup reader role for Azure Subscription level scope       | Microsoft Azure   | Subscription Owner | STEP 2   | optional  | 4            |
 | Website contributor role for Azure Subscription level scope | Microsoft Azure   | Subscription Owner | STEP 2   | optional  | 15           |
+| Storage Account Contributor role for Azure Subscription level scope  | Microsoft Azure   | Subscription Owner | STEP 2   | optional  | 1            |
 | Key Vault access policies for specific managed Key Vaults   | Microsoft Azure   | Subscription Owner | STEP 2   | optional  | 1            |
 
 ## STEP 1: Register Cloudneeti application
@@ -74,7 +74,7 @@ Administrator** role on the Microsoft Azure Portal.
 The Cloudneeti application can be registered either manually or using automation
 script.
 
-### Manual Steps
+### 1.1 Manual Steps
 
 
 #### Register Cloudneeti Application 
@@ -130,7 +130,7 @@ Azure AD related security policy information.
     ![Service Principal - Azure Portal](.././images/azureSubscriptions/Azure_API_Permissions.png#thumbnail)
 
 
-### Automated Steps
+### 1.2 Automated Steps
 #### Prerequisites 
 The below steps are required for registering Cloudneeti application in Azure Tenant using PowerShell script.
 
@@ -203,7 +203,7 @@ The following roles need to be granted to the Cloudneeti App registered in the p
 
 The following steps are done by Microsoft Azure **Subscription Owner** role.
 
-### Grant Azure Subscription Reader role
+### 2.1 Grant Azure Subscription Reader role
 
 **This step is mandatory**
 
@@ -218,7 +218,7 @@ Login to [Azure Portal](https://portal.azure.com/) with Microsoft Azure **Subscr
 
     ![Assign role](.././images/azureSubscriptions/Azure_Assign_Role.png#thumbnail)
  
-### Grant Azure Subscription Backup Reader Role 
+### 2.2 Grant Azure Subscription Backup Reader Role 
 **This step is optional**
 
 The Cloudneeti application requires Backup Reader role access to the Subscription in order to view application settings. 
@@ -232,7 +232,7 @@ If the Backup Reader Role is not assigned,the Cloudneeti application will not be
  
      ![Assign role](.././images/azureSubscriptions/Backup_Reader_Role.png#thumbnail)
 
-### Grant Azure Subscription Website Contributor Role
+### 2.3 Grant Azure Subscription Website Contributor Role
 **This step is optional**
 
 The Cloudneeti application requires Website Contributor role access to the Subscription in order to view application settings. 
@@ -246,7 +246,7 @@ If the Website Contributor Role is not assigned, Cloudneeti application will not
 
     ![Assign role](.././images/azureSubscriptions/Website_Contributor_Role.png#thumbnail)
 
-### Grant Azure Subscription Storage Account Contributor Role
+### 2.4 Grant Azure Subscription Storage Account Contributor Role
 **This step is optional**
 
 The Cloudneeti application requires Storage Account Contributor or Storage Account Key Operator Service role access to the Subscription in order to view application settings. 
@@ -264,7 +264,7 @@ If the Storage Account Contributor or Storage Account Key Operator Service role 
 
     ![Assign role](.././images/azureSubscriptions/Storage_Account_Key_Operator_Service_Role.png#thumbnail)
 
-### Add Key Vault access policy for specific managed Key Vaults
+### 2.5 Add Key Vault access policy for specific managed Key Vaults
 **This step is optional**
 
 The Cloudneeti application requires special permission on desired key vaults to get policy data related to secrets. 
@@ -283,7 +283,7 @@ If the Key Vault access policy is not added, Cloudneeti application will not be 
    ![Access Policy](.././images/azureSubscriptions/Select_Permission.png#thumbnail)
 Note: Perform this step on all the key vaults present in your subscription.
 
-### Collect information
+### 2.6 Collect information
 
 The Cloudneeti application **License Admin** requires this information to add an Azure subscription as a cloud account.
 
@@ -348,13 +348,13 @@ The Cloudneeti application **License Admin** requires this information to add an
 
 The following steps are done by Cloudneeti application **License Admin** role.
 
-### Activate the License
+### 3.1 Activate the License
 
 1.  Log in to the Cloudneeti application with **License Admin** role.
 2.  Click on **Activate License**
     ![Activate License](.././images/azureSubscriptions/Activate_License.png#thumbnail)
 
-### Add Cloud Account
+### 3.2 Add Cloud Account
 
 1.  Select cloud connector for **Microsoft Azure**
     ![Add Account](.././images/azureSubscriptions/Azure_Select_Connector_Type.png#thumbnail)
@@ -371,7 +371,7 @@ The following steps are done by Cloudneeti application **License Admin** role.
 6.  You will receive a confirmation that the Azure subscription has been added.
     ![Add Account](.././images/azureSubscriptions/Account_Success.png#thumbnail)
 
-### Data Collection
+### 3.3 Data Collection
 
 Once the Azure subscription is added to the cloud account under Cloudneeti
 License, it requires about 5 minutes for the data to be collected and processed,
