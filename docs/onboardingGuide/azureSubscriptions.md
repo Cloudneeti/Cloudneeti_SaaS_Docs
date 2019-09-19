@@ -492,6 +492,6 @@ Cloudneeti application registration created during onboarding an Azure Subscript
 4.  Click on **Delete** to remove Cloudneeti Application registration
 	![Azure Offboarding](.././images/azureSubscriptions/Azure_Offboarding.png#thumbnail)
 
-###	Delete Azure Cloud account in Cloudneeti
+### Delete cloud account in Cloudneeti application 
 
-Data collection will be stopped on Cloudneeti as the registered application is deleted in Azure.
+Please send a request to [support@cloudneeti.com](mailto:support@cloudneeti.com) to delete this cloud account under your license.
