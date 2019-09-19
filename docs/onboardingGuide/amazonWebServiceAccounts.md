@@ -35,7 +35,7 @@ AWS **Administrator** role is required for granting Cloudneeti application acces
 **Note:**<br>`Request Cloudneeti to provide the Cloudneeti AWS account ID. This is a mandatory field to create a role as a trusted 
 entity with the SecurityAudit access policy.`
 
-## STEP 1: Create an AWS role for Cloudneeti
+## STEP 1: Create an AWS role for Cloudneeti Manually or using automated script
 The following steps are executed by AWS **Administrator** role. AWS role for Cloudneeti can be created manually or using an automation script. 
 
 ### 1.1 Manual
@@ -141,7 +141,7 @@ Congratulations! You have added an AWS account to Cloudneeti application.
 
 [Configure Notifications](../../administratorGuide/configureNotifications/)
 
-## Offboarding
+## OFFBOARDING
 
 ### Delete Role for each AWS account
 

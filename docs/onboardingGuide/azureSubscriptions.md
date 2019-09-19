@@ -65,7 +65,7 @@ document.
 | Storage Account Contributor role for Azure Subscription level scope  | Microsoft Azure   | Subscription Owner | STEP 2   | optional  | 1            |
 | Key Vault access policies for specific managed Key Vaults   | Microsoft Azure   | Subscription Owner | STEP 2   | optional  | 1            |
 
-## STEP 1: Register Cloudneeti application
+## STEP 1: Register Cloudneeti application Manually or using Azure powershell script
 
 
 The following steps are executed by the Microsoft Azure **Global AD
@@ -75,7 +75,6 @@ The Cloudneeti application can be registered either manually or using automation
 script.
 
 ### 1.1 Manual Steps
-
 
 #### Register Cloudneeti Application 
 
@@ -473,7 +472,7 @@ listed below.
 
 [Configure Notifications](../../administratorGuide/configureNotifications/)
 
-##	Offboarding
+##	OFFBOARDING
 
 ### Delete App Registration for each Azure Subscription
 
