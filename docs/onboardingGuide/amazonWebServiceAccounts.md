@@ -137,6 +137,29 @@ Once the AWS account is added to the cloud account under the Cloudneeti License,
 
 Congratulations! You have added an AWS account to Cloudneeti application.
 
-## NEXT STEPS
+## Configuration
 
 [Configure Notifications](../../administratorGuide/configureNotifications/)
+
+## Offboarding
+
+### Delete Role for each AWS account
+
+Security audit role created during onboarding of a specific AWS account should be removed. This step needs to be repeated for each AWS account.
+
+1.  Go to **AWS Console**
+
+2.  Go to **IAM in Services**
+
+3.  Click on **Roles**
+
+4.  Select
+    [Cloudneeti-SecurityAudit](https://console.aws.amazon.com/iam/home?region=us-east-1#/roles/Cloudneeti-SecurityAudit)
+
+5.  Click on **Delete** to remove
+    [Cloudneeti-SecurityAudit](https://console.aws.amazon.com/iam/home?region=us-east-1#/roles/Cloudneeti-SecurityAudit)
+	![AWS Offboarding](.././images/amazonWebServiceAccounts/AWS_Offboarding.png#thumbnail)
+
+### Delete cloud account in Cloudneeti application 
+
+Please send a request to [support@cloudneeti.com](mailto:support@cloudneeti.com) to delete this cloud account under your license.

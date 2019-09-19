@@ -469,6 +469,30 @@ listed below.
 | 1800.2        | Ensure that the expiry date is set on all Secrets in a Key Vault | Key Management |
 
 
-## NEXT STEPS
+## Configuration
 
 [Configure Notifications](../../administratorGuide/configureNotifications/)
+
+##	Offboarding
+
+### Delete App Registration for each Azure Subscription
+
+
+Login to [Azure Portal](https://portal.azure.com/) with **Subscription Owner**
+role.
+
+Cloudneeti application registration created during onboarding an Azure Subscription should be deleted which will remove permissions and assigned roles on subscription/subscriptions.
+
+1.  Go to **Azure Active Directory**
+
+2.  Click on **App Registration**
+
+3.  Select **Cloudneeti Application** which has role assignment to Azure
+    Subscription to be offboarded
+
+4.  Click on **Delete** to remove Cloudneeti Application registration
+	![Azure Offboarding](.././images/azureSubscriptions/Azure_Offboarding.png#thumbnail)
+
+###	Delete Azure Cloud account in Cloudneeti
+
+Data collection will be stopped on Cloudneeti as the registered application is deleted in Azure.
