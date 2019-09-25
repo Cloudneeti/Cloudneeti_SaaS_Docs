@@ -49,8 +49,8 @@ nav:
   - Manage Licenses: administratorGuide/manageLicenses.md
   - Manage Users: administratorGuide/manageUsers.md
   - Audit Log: administratorGuide/auditLog.md
-# - Cloudneeti Remediation:
-#   - Overview: cloudneetiRemediation/overview.md
-#   - Azure Subscription: cloudneetiRemediation/azureSubscriptionRemediation.md
+- Cloudneeti Remediation:
+  - Overview: cloudneetiRemediation/overview.md
+  - Azure Subscription: cloudneetiRemediation/azureSubscriptionRemediation.md
 - Release Notes:
   - Releases in 2019: releaseNotes/releaseNotes.md
