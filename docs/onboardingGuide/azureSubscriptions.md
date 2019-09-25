@@ -65,7 +65,7 @@ document.
 | Storage Account Contributor role for Azure Subscription level scope  | Microsoft Azure   | Subscription Owner | STEP 2   | optional  | 1            |
 | Key Vault access policies for specific managed Key Vaults   | Microsoft Azure   | Subscription Owner | STEP 2   | optional  | 1            |
 
-## STEP 1: Register Cloudneeti application
+## STEP 1: Register Cloudneeti application Manually or using Azure powershell script
 
 
 The following steps are executed by the Microsoft Azure **Global AD
@@ -75,7 +75,6 @@ The Cloudneeti application can be registered either manually or using automation
 script.
 
 ### 1.1 Manual Steps
-
 
 #### Register Cloudneeti Application 
 
@@ -469,6 +468,30 @@ listed below.
 | 1800.2        | Ensure that the expiry date is set on all Secrets in a Key Vault | Key Management |
 
 
-## NEXT STEPS
+## Configuration
 
 [Configure Notifications](../../administratorGuide/configureNotifications/)
+
+##	OFFBOARDING
+
+### Delete App Registration for each Azure Subscription
+
+
+Login to [Azure Portal](https://portal.azure.com/) with **Subscription Owner**
+role.
+
+Cloudneeti application registration created during onboarding an Azure Subscription should be deleted which will remove permissions and assigned roles on subscription/subscriptions.
+
+1.  Go to **Azure Active Directory**
+
+2.  Click on **App Registration**
+
+3.  Select **Cloudneeti Application** which has role assignment to Azure
+    Subscription to be offboarded
+
+4.  Click on **Delete** to remove Cloudneeti Application registration
+	![Azure Offboarding](.././images/azureSubscriptions/Azure_Offboarding.png#thumbnail)
+
+### Delete cloud account in Cloudneeti application 
+
+Please send a request to [support@cloudneeti.com](mailto:support@cloudneeti.com) to delete this cloud account under your license.

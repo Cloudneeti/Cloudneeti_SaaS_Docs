@@ -1,6 +1,62 @@
 ﻿﻿Releases in 2019
 ===============
 
+**September 2019- v2.17.1**
+----------------------------
+
+1.  **User Experience Improvements**
+    *   Delivered AWS auto remediations for critical AWS policies. When a misconfiguration occurs, organizations require instant remediation to minimize the window of opportunity for malicious attacks. This self-healing ability enables organizations to enforce their most important security and compliance policies.
+    *	Added a new option for scan frequency - ‘Weekly’. Customers can now set weekly schedules for collecting the configuration data and tracking remediation progress.
+    *   Released multiple Azure Marketplace offers: <a href="https://www.cloudneeti.com/offers/" target="_blank">https://www.cloudneeti.com/offers.</a>
+
+2.	**Platform & Stability Improvements**
+    *	Bug-fixes
+        1. Networking policies - NSG count issue (mismatch in pass/total count with policy details)
+        2. Updated asset dashboard for M365 accounts to fix the issue of number of users and number AD applications.
+
+3.	**Policies & Benchmarks Additions/Updates**
+	*	Added the following 4 new Office 365 security policies.   
+
+        | **Category**                 | **Policy Title**
+|--------------------------------------|-------------------------------------------|                             
+| M365 - Apps             | Ensure that AD Application keys are rotated before they expire.                                         |
+| M365 - Identity             | Ensure that there are no guest users.                           |
+| M365 - Identity           | Ensure Amazon Neptune instances have Auto Minor Version Upgrade feature enabled                          |
+| M365 - Identity          | Ensure that Service Principal Certificates are renewed before it expires.                                  |      
+
+    *  Added the following 21 new AWS security policies.
+
+         |   **Category**            |   **Policy Title**            |
+|--------------------------------------|-------------------------------------------|
+| AWS - Business Continuity            | Ensure that Amazon Neptune database clusters have the Multi-AZ feature enabled                          |
+| AWS - Business Continuity          | Ensure AWS Neptune clusters have sufficient backup retention period set for compliance purposes                         |
+|AWS - Compute         | Ensure that the latest execution environment is used for your AWS Lambda functions                                  | 
+|AWS - Compute    | Ensure that tracing is enabled for your AWS Lambda functions|
+|AWS - Data In Transit Encryption|Ensure EBS volumes are encrypted with KMS CMKs in order to have full control over data encryption and decryption.|
+|AWS - Data In Transit Encryption| Ensure that encryption with KMS key implemented for each SNS topic|
+|AWS - Data In Transit Encryption|  Ensure that KMS CMK is used to encrypt SQS queue|
+|AWS - Data Protection |  Ensure that existing Elastic Block Store (EBS) attached volumes are encrypted|
+|AWS - Data Protection|  Identify and remove any unattached Elastic Block Store volumes to improve security.|
+|AWS - Data Protection | Ensure Simple Notification Service are not using HTTP as delivery protocol in subscription |
+|AWS - Data Protection | Ensure that AWS Simple Notification Service topics are not exposed to everyone | 
+|AWS - Data Protection | Ensure that AWS Simple Queue Service queues are not exposed to everyone |
+|AWS - Data Protection | Ensure that Server-Side Encryption is enabled for Amazon SQS queues |
+|AWS - Governance | Ensure Amazon Organization is in use to consolidate all AWS accounts into an organization |
+|AWS - Governance | Ensure there is a Dead Letter Queue configured for each Amazon SQS queue |
+|AWS - Governance | Ensure that there are no publicly accessible AWS Lambda functions |
+|AWS - Identity and Access Management | Ensure that Everyone is not allowed to publish in SNS topics|
+|AWS - Identity and Access Management | Ensure that Everyone is not allowed to subscribe to SNS topics |
+|AWS - Identity and Access Management | Ensure that access to VPC-only resources is used for your AWS Lambda functions |
+|AWS - Identity and Access Management | Ensure that no admin privileges are given to Lambda functions |
+|AWS - Identity and Access Management | Ensure you do not allow unknown cross account access via permission policies to AWS Lambda functions |
+
+     *  Deprecated the following Azure security policy
+
+        |   **Category**            |   **Policy Title**            |
+|--------------------------------------|-------------------------------------------|
+|Azure - Compute (IaaS) | Ensure that VM images are always hardened with Azure CIS benchmark|
+
+
 **September 2019- v2.16.1**
 ----------------------------
 
@@ -14,7 +70,7 @@
 3.	**Policies & Benchmarks Additions/Updates**
 	*	Addition of the following 10 new AWS security policies.
 
-        | **Category**                 | **Policy Title**                                                                                 |
+        |  **Category**                 |    **Policy Title**                                                                                 |
 |--------------------------------------|------------------------------------------------------------------------------------------------------|
 | AWS - Audit and Logging              | Ensure that Object level write event log is enabled for S3 bucket                                    |
 | AWS - Audit and Logging              | Ensure that Object level read event log is enabled for S3 bucket                                     |

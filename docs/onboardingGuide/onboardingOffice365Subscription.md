@@ -453,7 +453,7 @@ as user created above [step](.././onboardingOffice365Subscription/#create-office
 7. Get an app password
 	![App Password](.././images/onboardingOffice365Subscription/App_Password.png#thumbnail)
 
-### 3.3 Provision Office 365 data collector 
+### 3.2 Provision Office 365 data collector 
 
 
 Login to Azure portal <https://portal.azure.com> as Subscription Contributor or
@@ -506,7 +506,7 @@ ArtifactsAccessKey
    Office 365 App Password </br>
 9. This will create a runbook inside automation account
 
-### 3.4 Apply delete lock
+### 3.3 Apply delete lock
 
 Apply delete lock to prevent accidental deletion of the data collection resource
 group in your Azure Subscription.
@@ -527,7 +527,7 @@ group in your Azure Subscription.
 7. Click **OK** (6)
 	![Apply Delete Lock](.././images/onboardingOffice365Subscription/Locks.png#thumbnail)
 
-### 3.5 Modify the data collection schedule
+### 3.4 Modify the data collection schedule
 
 Set the automation account schedule before the daily Cloudneeti data collection
 time.
