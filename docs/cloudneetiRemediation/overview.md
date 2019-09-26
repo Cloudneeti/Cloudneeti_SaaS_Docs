@@ -9,7 +9,7 @@ remediation for  
 Subscription](../azureSubscriptionRemediation/)
 
 [AWS
-account](https://avyanconsulting.sharepoint.com/sites/productdev/Shared%20Documents/Product/Development/Design/SaaS/Documentation/Release2/Link%20to%20AWS%20remediation%20page)
+account](../awsRemediation/)
 
  
 
