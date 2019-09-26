@@ -15,7 +15,7 @@ Resources that are non-compliant to a security policy can be put into a complian
 5.	**Verify results** includes verifying policy result post next data scan on Cloudneeti.
 
 
-| **Step**                                   | **Product**          | **Role**                         |
+| **Step**                               | **Product**      | **Role**                     |
 |----------------------------------------|------------------|------------------------------|
 | Assign permission to Service Principal | Azure Portal     | Subscription Owner           |
 | Configure Policy Remediation           | Cloudneeti       | License Admin/ Account Admin |
@@ -44,27 +44,27 @@ The **Cloudneeti Application registered** while onboarding the Azure Account to 
 | **Information**                   | **Portal to use** | **Role**                                                                                                                                                                | **Step** |
 |-----------------------------------|-------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
 | Registered Cloudneeti Application | Microsoft Azure   | Resource Policy Contributor (Preview) [Refer here](https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#resource-policy-contributor-preview) | STEP 1   |
-| Azure Assignments                 | Microsoft Azure   | Roles as per policies enabled for remediation                                                                                                                           | STEP 4   |
+| Azure Assignments                 | Microsoft Azure   | Roles as per policies enabled for remediation [Refer here](../azureSubscriptionRemediation/#roles-as-per-policies-enabled-for-remediation) | STEP 4   |
 
 
 ## STEP 1: Assign permission to Service Principal
 Login to [Azure Portal](https://portal.azure.com/)  with Subscription Owner role.
 
-1.	Click **Subscriptions in primary menu (1)**
+1.	Click **Subscriptions in primary menu** (1)
 2.	Select desired **Subscription**
-3.	Click **on Access Control (IAM) (2)**
-4.	Click **Add (3)**
-5.	Select **Add role assignment (4)**
-6.	Select **Resource Policy Contributor (Preview) role (5)**
-7.	Select **Cloudneeti Application (6)**
-8.	**Save (7)**
+3.	Click on **Access Control (IAM)** (2)
+4.	Click **Add** (3)
+5.	Select **Add role assignment** (4)
+6.	Select **Resource Policy Contributor (Preview)** role (5)
+7.	Select **Cloudneeti Application** (6)
+8.	**Save** (7)
 
 ![STEP 1: Assign permission to Service Principal](.././images/cloudneetiRemediation/Azure_Remediation_Step1.png#thumbnail_1)
 
 ## STEP 2: Configure remediation policies
 Login to Cloudneeti portal with **License Admin** role 
 
-1.	Select desired License and Account (1)(2)
+1.	Select desired **License** (1) and **Cloud Account** (2)
 2.	Click **Configure** 
 3.	Select **Configure security policies**
 
@@ -75,7 +75,7 @@ Login to Cloudneeti portal with **License Admin** role
 
 5.**Enable** policies for remediation (2) (3)
 
-6.Click **Save (4)**
+6.Click **Save** (4)
 
 ![STEP 2: Configure remediation policies](.././images/cloudneetiRemediation/Azure_Remediation_Step2.1.png#thumbnail_1)
 
@@ -84,7 +84,9 @@ Login to Cloudneeti portal with **License Admin** role
 ![STEP 2: Configure remediation policies](.././images/cloudneetiRemediation/Azure_Remediation_Step2.2.png#thumbnail_1)
 
 **Note:**
+
 * If Resource Policy Contributor (Preview) role is not assigned as mentioned in step1, enabling policy remediation will fail. Email notification to configured email ids will be sent.
+
 * Assigning **Resource Policy Contributor (Preview)** role to Cloudneeti Application in Azure is prerequisite for this step.
 
 ## STEP 3: Assigning roles to MSI generated for remediation policies
@@ -99,7 +101,9 @@ Login to [Azure Portal](https://portal.azure.com/) with **Subscription Owner** r
 Azure will start evaluation of resources related to enabled policies.
 
 **Note:**
+
 * Azure policy framework takes some time to evaluate the state of the resources internally. It may vary depending on the number of resources present in Azure subscription.
+
 * Perform this step whenever user adds new or configures existing remediation policies.
 
 ## STEP 4: Initiate Remediation
@@ -112,19 +116,19 @@ Cloudneeti supports two ways to remediate non-compliant resources.
 ### Manually Triggered [for existing resources]
 Login to Cloudneeti portal with **License Admin** role
 
-1.Select desired License and Account (1) (2)
+1.Select desired **License** (1) and **Cloud Account**
 
-2.Click **Cloud Security and Risk Posture (3)**
+2.Click **Cloud Security and Risk Posture** (3)
 
-3.Click **Remediate (4)**
+3.Click **Remediate** (4)
 
 ![Manually Triggered [for existing resources]](.././images/cloudneetiRemediation/Manually_Triggered1.png#thumbnail_1)
 
 4.All remediation enabled policies will appear. If the selection checkbox is disable state please check all prerequisites are met.
 
-5.Select desired **policy/policies (1) (2)**
+5.Select desired **policy/policies** (1) (2)
 
-6.Click **Remediate Now (3)**
+6.Click **Remediate Now** (3)
 
 ![Manually Triggered [for existing resources]](.././images/cloudneetiRemediation/Manually_Triggered2.png#thumbnail_1)
 
@@ -133,7 +137,9 @@ Login to Cloudneeti portal with **License Admin** role
 ![Manually Triggered [for existing resources]](.././images/cloudneetiRemediation/Manually_Triggered3.png#thumbnail_1)
 
  **Note:**
+
 *	In case Azure evaluation is not complete a message will appear “Evaluation in progress, please try after sometime”
+
 *	If Azure policy evaluation is done, the remediation process for selected policies will start. It will take some time to change resource configuration as per policy. This will change configuration for existing resources.
 
 ## STEP 5: Verify Resource Remediation
@@ -141,11 +147,11 @@ On remediation of non-compliant resources using manually triggered or auto-remed
 
 Login to Cloudneeti portal with **License Admin** role
 
-1.	Select desired License and Account (1) (2)
+1.	Select desired **License** (1) and **Cloud Account** (2)
 
-2.	Click **Configure (3)**
+2.	Click **Configure** (3)
 
-3.	Select **Re-scan (4)**
+3.	Select **Re-scan** (4)
 
 ![STEP 5: Verify Resource Remediation](.././images/cloudneetiRemediation/Azure_Remediation_Step5.1.png#thumbnail_1)
 
@@ -162,7 +168,7 @@ To decommission the remediation functionality in Azure subscription,
 
 **Remove Resource Policy Contributor (Preview) role** access of Cloudneeti application from the subscription.
 
-### Disable Remediation policies
+### 1. Disable Remediation policies
 Login to Cloudneeti portal with **License Admin** role
 
 1.Select desired License and Account 
@@ -182,26 +188,28 @@ Login to Cloudneeti portal with **License Admin** role
 ![Disable Remediation policies](.././images/cloudneetiRemediation/Azure_Remediation_Step5.4.png#thumbnail_1)
 
 **Note:**
+
 * Disabling remediation of security policies does not immediately effective, it will take some time to delete internal assignment present in Azure policy framework.
+
 * The resource configuration updated during remediation will remain the same after disabling the remediation policies.
 
-### Remove “Policy Resource Contributor (Preview)” access
+### 2. Remove “Policy Resource Contributor (Preview)” access
 
-1.Click **Subscriptions in primary menu (1)**
+1.Click **Subscriptions** in primary menu (1)
 
-2.Select **desired Subscription**
+2.Select desired **Subscription**
 
-3.Click **on Access Control (IAM) (2)**
+3.Click on **Access Control (IAM)** (2)
 
-4.Select **Roles tab**
+4.Select **Roles** tab
 
 5.Select **Resource Policy Contributor (Preview)**
 
 ![Remove “Policy Resource Contributor (Preview)” access](.././images/cloudneetiRemediation/Azure_Remediation_Step5.5.png#thumbnail_1)
 
-6.Select **Cloudneeti Application (1)**
+6.Select **Cloudneeti Application** (1)
 
-7.Click **Remove (2)7.**	 
+7.Click **Remove** (2)
 
 ![Remove “Policy Resource Contributor (Preview)” access](.././images/cloudneetiRemediation/Azure_Remediation_Step5.6.png#thumbnail_1)
 

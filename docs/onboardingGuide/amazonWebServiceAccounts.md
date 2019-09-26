@@ -31,9 +31,10 @@ Cloudneeti application **License Admin** is assigned to an individual in the cus
 
 AWS **Administrator** role is required for granting Cloudneeti application access rights to AWS account(s). The administrator must have enough permissions to create a role as a trusted entity with the [SecurityAudit access policy.](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_job-functions.html#jf_security-auditor)
 
-### Request Cloudneeti AWS account ID
-**Note:**<br>`Request Cloudneeti to provide the Cloudneeti AWS account ID. This is a mandatory field to create a role as a trusted 
-entity with the SecurityAudit access policy.`
+### Cloudneeti AWS account id
+Cloudneeti AWS account id can be retrived from email notification recieved by License Admin on License creation sent by Cloudneeti Notification Bot. 
+
+![AWS Portal](.././images/amazonWebServiceAccounts/Welcome_Email.png#thumbnail)
 
 ## STEP 1: Create an AWS role for Cloudneeti Manually or using automated script
 The following steps are executed by AWS **Administrator** role. AWS role for Cloudneeti can be created manually or using an automation script. 
