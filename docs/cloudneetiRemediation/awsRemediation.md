@@ -142,22 +142,22 @@ Login to Cloudneeti portal with **License Admin** role
 
 3.  Select **Configure Account Remediation**
 
-![STEP 2: Configure Cloud Account for remediation ](.././images/cloudneetiRemediation/AWS_RemediationStep2.1.png#thumbnail_1)
+    ![STEP 2: Configure Cloud Account for remediation ](.././images/cloudneetiRemediation/AWS_RemediationStep2.1.png#thumbnail_1)
 
-4.**Enable** remediation (1)
+4. **Enable** remediation (1)
 
-5.Enter the AWS account id (2)
+5. Enter the AWS account id (2)
 
  This can be same as AWS account or different account id where Cloudneeti
  remediation framework is deployed.
 
-6.**Save** (3)
+6. **Save** (3)
 
  This will validate Cloudneeti Remediation framework on given AWS account and
  enable remediation on success.
 
 
-![STEP 2: Configure Cloud Account for remediation ](.././images/cloudneetiRemediation/AWS_RemediationStep2.2.png#thumbnail_1)
+    ![STEP 2: Configure Cloud Account for remediation ](.././images/cloudneetiRemediation/AWS_RemediationStep2.2.png#thumbnail_1)
 
 **Note:**
 
@@ -174,25 +174,25 @@ STEP 3: Configure policy remediation
 
 Login to Cloudneeti portal with **License Admin** role
 
-7.Select desired License and Account (1)(2)
+7. Select desired License and Account (1)(2)
 
-8.Click **Configure**
+8. Click **Configure**
 
-9.Select **Configure Security Policies**
+9. Select **Configure Security Policies**
 
-![STEP 3: Configure policy remediation ](.././images/cloudneetiRemediation/AWS_RemediationStep3.1.png#thumbnail_1)
+    ![STEP 3: Configure policy remediation ](.././images/cloudneetiRemediation/AWS_RemediationStep3.1.png#thumbnail_1)
 
-10.Select **Remediation available** in filter (1)
+10. Select **Remediation available** in filter (1)
 
-11.**Enable** policies for remediation (2) (3)
+11. **Enable** policies for remediation (2) (3)
 
-12.Click **Save (4)**
+12. Click **Save (4)**
 
-![STEP 3: Configure policy remediation ](.././images/cloudneetiRemediation/AWS_RemediationStep3.2.png#thumbnail_1)
+    ![STEP 3: Configure policy remediation ](.././images/cloudneetiRemediation/AWS_RemediationStep3.2.png#thumbnail_1)
 
-13.Confirm by hitting “Yes Please” on confirmation message box.
+13. Confirm by hitting “Yes Please” on confirmation message box.
 
-![STEP 3: Configure policy remediation ](.././images/cloudneetiRemediation/AWS_RemediationStep3.3.png#thumbnail_1)
+    ![STEP 3: Configure policy remediation ](.././images/cloudneetiRemediation/AWS_RemediationStep3.3.png#thumbnail_1)
 
 STEP 4: Remediate non-compliant resources
 -----------------------------------------
@@ -217,22 +217,20 @@ Login to Cloudneeti portal with **License Admin** role
 
 3.  Click **Remediate** (4)
 
-![STEP 4: Remediate non-compliant resources ](.././images/cloudneetiRemediation/AWS_RemediationStep4.1.png#thumbnail_1)
+    ![STEP 4: Remediate non-compliant resources ](.././images/cloudneetiRemediation/AWS_RemediationStep4.1.png#thumbnail_1)
 
-4.All remediation enabled policies will appear. If the selection checkbox is
+4. All remediation enabled policies will appear. If the selection checkbox is
     disable state please check all prerequisites are met.
 
-5.Select desired **policy/policies (1)**
+5. Select desired **policy/policies (1)**
 
-6.Click **Remediate Now (2)**
+6. Click **Remediate Now (2)**
 
+    ![STEP 4: Remediate non-compliant resources ](.././images/cloudneetiRemediation/AWS_RemediationStep4.2.png#thumbnail_1)
 
-![STEP 4: Remediate non-compliant resources ](.././images/cloudneetiRemediation/AWS_RemediationStep4.2.png#thumbnail_1)
+7. Remediation will change the configuration for resources to make them compliant with the policy with deploy if not exist.
 
-7.Remediation will change the configuration for resources to make them compliant with the policy with deploy if not exist.
-
-
-![STEP 4: Remediate non-compliant resources ](.././images/cloudneetiRemediation/AWS_RemediationStep4.3.png#thumbnail_1)
+    ![STEP 4: Remediate non-compliant resources ](.././images/cloudneetiRemediation/AWS_RemediationStep4.3.png#thumbnail_1)
 
 STEP 5: Verify Resource Remediation
 -----------------------------------
@@ -245,20 +243,20 @@ on-demand re-scan the in Cloudneeti portal using below steps,
 
 Login to Cloudneeti portal with **License Admin** role
 
-1.Select desired License and Account (1) (2)
+1. Select desired License and Account (1) (2)
 
-2.Click **Configure** (3)
+2. Click **Configure** (3)
 
-3.Select **re-scan (4)**
+3. Select **re-scan (4)**
 
-![STEP 5: Verify Resource Remediation](.././images/cloudneetiRemediation/AWS_RemediationStep5.1.png#thumbnail_1)
+    ![STEP 5: Verify Resource Remediation](.././images/cloudneetiRemediation/AWS_RemediationStep5.1.png#thumbnail_1)
 
-4.It will take a few minutes to scan and process data. On Dashboards **Last
+4. It will take a few minutes to scan and process data. On Dashboards **Last
     Scanned On** will be updated once data scan and processing done.
 
-5.Verify data on **Dashboard**
+5. Verify data on **Dashboard**
 
-![STEP 5: Verify Resource Remediation](.././images/cloudneetiRemediation/AWS_RemediationStep5.2.png#thumbnail_1)
+    ![STEP 5: Verify Resource Remediation](.././images/cloudneetiRemediation/AWS_RemediationStep5.2.png#thumbnail_1)
 
 Decommission of remediation
 ---------------------------
@@ -280,16 +278,16 @@ Login to Cloudneeti portal with **License Admin** role
 
 3. Select **Configure security policies**
 
-![Decommission of remediation](.././images/cloudneetiRemediation/AWS_RemediationStep5.3.png#thumbnail_1)
+    ![Decommission of remediation](.././images/cloudneetiRemediation/AWS_RemediationStep5.3.png#thumbnail_1)
 
-4.Select **Remediation Available** in filter to see only the policies with
+4. Select **Remediation Available** in filter to see only the policies with
     remediation available. (1)
 
-5.Disable the policy remediation (2)
+5. Disable the policy remediation (2)
 
-6.Click **Save** (3)
+6. Click **Save** (3)
 
-![Decommission of remediation](.././images/cloudneetiRemediation/AWS_RemediationStep5.4.png#thumbnail_1)
+    ![Decommission of remediation](.././images/cloudneetiRemediation/AWS_RemediationStep5.4.png#thumbnail_1)
 
 **Note:**
 
@@ -304,11 +302,11 @@ Login to Cloudneeti portal with **License Admin** role
 
 3.  Select **Configure Account Remediation**
 
-![Disable AWS account Remediation](.././images/cloudneetiRemediation/AWS_RemediationStep5.5.png#thumbnail_1)
+    ![Disable AWS account Remediation](.././images/cloudneetiRemediation/AWS_RemediationStep5.5.png#thumbnail_1)
 
-4.Disable Remediation (1)
+4. Disable Remediation (1)
 
-5.**Save (2)**
+5. **Save (2)**
 
 6.After successful change in the configuration policies enabled earlier will get deleted.
   In case remediation policies are to be enabled again then policies
@@ -328,7 +326,7 @@ Decommission of remediation framework take place in two phases.
 
         \# cd remediation-framework 
 
-4.Deploy remediation framework in AWS account which need to be remediated.
+4. Deploy remediation framework in AWS account which need to be remediated.
 
     \# verify-local-account-remediation-setup.sh -a \<AWS-account-id\> 
 
