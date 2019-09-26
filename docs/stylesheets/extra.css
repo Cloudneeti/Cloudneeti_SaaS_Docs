@@ -289,18 +289,21 @@ table thead th {
 .md-header{ background: url('../images/header-bg.png') !important;}
 .md-footer-meta {position: sticky;}
 @media only screen and (min-width:1280px){
-    .md-sidebar {
-      width: 300px;
+    .md-sidebar--primary {
+      width: 260px;
     }}
-
+@media only screen and (min-width:1280px){
+        .md-sidebar--secondary {
+          width: 300px;
+        }}
 @media only screen and (min-width: 76.25em){
 .md-content__inner {
     margin-right: 4rem;
-    margin-left: 4rem;
+    margin-left: 2rem;
 }}
-@media only screen and (min-width:1280px){
+/* @media only screen and (min-width:1280px){
     .md-sidebar--primary .md-nav__item{margin-left:30px} 
 }
 @media only screen and (min-width:1280px){
     .md-sidebar--primary .md-nav__title{margin-left:30px} 
-}
+} */
