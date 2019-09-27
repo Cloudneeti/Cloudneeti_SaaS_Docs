@@ -73,7 +73,7 @@ additions in remediation framework.
 | Cloudneeti AWS Account | AWS Console       | CN-Remediation-Invocation-Role | STEP 3   |
 | Remediation Framework  | AWS Console       | CN-Auto-Remediation-Role       | STEP 1   |
 
-Workstation readiness
+Workstation Readiness
 ---------------------
 
 | **Activity**                                        | **Description**                                                                                                                                                                             |
@@ -95,35 +95,65 @@ STEP 1: Provision Remediation framework on same or different AWS Account
 
 3.  Go to remediation framework repository
 
-        \# cd remediation-framework 
+        cd remediation-framework 
 
-4.  Deploy remediation framework in AWS account which need to be remediated.
+4.  Configure AWS account where remediation framework is to be deployed
 
-        \# deploy-remediation-framework.sh -awsAccountId \<AWS-acount-id\> -env \< Cloudneeti-environment-prefix \> -version 1.0 
+        aws configure
+
+5.  Deploy remediation framework in AWS account which need to be remediated.
+
+        bash deploy-remediation-framework.sh -awsAccountId \<AWS-acount-id\> -env \< Cloudneeti-environment-prefix \> -version 1.0 
+
+    (-a) Account Id: 12-digit AWS account Id of the account where you want the remediation framework to be deployed
+    
+    (-e) Environment prefix: Enter any suitable prefix for your deployment
+    
+    (-v) Version: Enter the remediation framework version (Would be provided by Cloudneeti)
 
 
-
-5.  Verify the Remediation framework deployment. After deployment of remediation
-    framework on AWS account, run the below commands to validate remediation
+6.  Verify the Remediation framework deployment. Run the below commands to validate remediation
     framework deployments and necessary permissions.
 
-         \# verify-local-acc-remediation-setup.sh -awsAccountId \<AWS-account-id\> 
+        bash verify-remediation-setup.sh [-a <12-digit-account-id>] [-e <environment-prefix>] 
+    
+    (-a) Account Id: 12-digit AWS account Id of the account for which you want to verify if remediation framework is deployed or not.
+    
+    (-e) Environment prefix: Enter any suitable prefix for your deployment
 
 
 ### 1.2 (Optional) Multi Account Remediation
 
 1.  Open bash and go to remediation framework repository
 
-        \# cd remediation-framework 
+        cd remediation-framework 
 
-2.  Deploy remediation framework in AWS account which need to be remediated.
+2. Configure AWS account where remediation framework is to be deployed, using below command.
+    
+        aws configure 
+
+3.  Deploy remediation framework in AWS account wwhich will be used as the remediator in multi-mode: 
 
     (Optional if you have provisioned the remediation framework earlier)
 
-        \# configure-multi-mode-remediation.sh -a \<AWS-account-id\> -r \<remediation-framework-AWS-account-id\> -s \<Cloudneeti-environment-prefix\> -v \<1.0\> 
+        bash deploy-remediation-framework.sh [-a <12-digit-account-id>] [-e <environment-prefix>] [-v <1.0>]
+
+        (-a) Account Id: 12-digit AWS account Id of the account where you want the remediation framework to be deployed
+
+        (-e) Environment prefix: Enter any suitable prefix for your deployment
+        
+        (-v) Version: Enter the remediation framework version (Would be provided by Cloudneeti)
+ 
+4.   Update the role in the account with the remediation framework so that it is aware of the new account that is/ will be added for remediation. (Make sure you have configured the account with the       remediation framework until this step using “aws configure”)
+
+        bash update-remediation-role.sh [-r <12-digit-account-id>] [-a <12-digit-account-id>]
+
+        (-r) Remediation Account Id: 12-digit AWS account Id of the account where the remediation framework is deployed
+
+        (-a) New AWS Account Id: 12-digit AWS Account Id of the account which is newly added to use the remediation framework
 
 
-3.  Verify the Remediation framework deployment. After deployment of remediation
+5.  Verify the Remediation framework deployment. After deployment of remediation
     invoker resources on AWS account which is to be remediate, run the below
     commands to validate remediation invoker resources along with necessary
     permissions along with remediation framework.
