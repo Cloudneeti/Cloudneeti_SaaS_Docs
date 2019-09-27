@@ -136,7 +136,7 @@ STEP 2: Configure Cloud Account for remediation
 
 Login to Cloudneeti portal with **License Admin** role
 
-1.  Select desired License and Account (1)(2)
+1.  Select desired **License** (1) and **Cloud Account** (2)
 
 2.  Click **Configure**
 
@@ -174,7 +174,7 @@ STEP 3: Configure policy remediation
 
 Login to Cloudneeti portal with **License Admin** role
 
-7. Select desired License and Account (1)(2)
+7. Select desired **License** (1) and **Cloud Account** (2)
 
 8. Click **Configure**
 
@@ -211,7 +211,7 @@ automatically remediated in near real time.
 
 Login to Cloudneeti portal with **License Admin** role
 
-1.  Select desired License and Account (1) (2)
+1.  Select desired **License** (1) and **Cloud Account** (2)
 
 2.  Click **Cloud Security and Risk Posture** (3)
 
@@ -222,9 +222,9 @@ Login to Cloudneeti portal with **License Admin** role
 4. All remediation enabled policies will appear. If the selection checkbox is
     disable state please check all prerequisites are met.
 
-5. Select desired **policy/policies (1)**
+5. Select desired **policy/policies** (1)
 
-6. Click **Remediate Now (2)**
+6. Click **Remediate Now** (2)
 
     ![STEP 4: Remediate non-compliant resources ](.././images/cloudneetiRemediation/AWS_RemediationStep4.2.png#thumbnail_1)
 
@@ -243,7 +243,7 @@ on-demand re-scan the in Cloudneeti portal using below steps,
 
 Login to Cloudneeti portal with **License Admin** role
 
-1. Select desired License and Account (1) (2)
+1. Select desired **License** (1) and **Cloud Account** (2)
 
 2. Click **Configure** (3)
 
@@ -251,8 +251,7 @@ Login to Cloudneeti portal with **License Admin** role
 
     ![STEP 5: Verify Resource Remediation](.././images/cloudneetiRemediation/AWS_RemediationStep5.1.png#thumbnail_1)
 
-4. It will take a few minutes to scan and process data. On Dashboards **Last
-    Scanned On** will be updated once data scan and processing done.
+4. It will take a few minutes to scan and process data. On Dashboards **Last Scanned On** will be updated once data scan and processing done.
 
 5. Verify data on **Dashboard**
 
@@ -296,7 +295,7 @@ Login to Cloudneeti portal with **License Admin** role
 
 ### Disable AWS account Remediation
 
-1.  Select desired License and Account (1)(2)
+1.  Select desired **License** (1) and **Cloud Account** (2)
 
 2.  Click **Configure**
 
@@ -306,7 +305,7 @@ Login to Cloudneeti portal with **License Admin** role
 
 4. Disable Remediation (1)
 
-5. **Save (2)**
+5. **Save** (2)
 
 6.After successful change in the configuration policies enabled earlier will get deleted.
   In case remediation policies are to be enabled again then policies
