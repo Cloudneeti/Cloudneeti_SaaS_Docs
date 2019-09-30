@@ -431,26 +431,8 @@ Decommission of remediation framework take place in two phases.
 Upgrade of Remediation framework
 --------------------------------
 
-Cloudneeti periodically releases new sets of remediation policies to the
-customer. To use the latest remediation policies, customer needs to upgrade
-their AWS remediation framework. Cloudneeti will notify customers whenever new
-version of remediation framework gets release.
-
-To upgrade the remediation framework, perform the below steps,
-
-1.  Open bash
-
-2.  Clone the aws-remediation framework from the git
-
-        git clone https://github.com/Cloudneeti/aws-auto-remediation
-
-3.  Go to remediation framework repository
-
-        cd aws-auto-remediation 
-
-4.  Execute below script to update Cloudneeti remediation framework
-
-        update-remfw-role.sh -a <AWS account id> -r <remediation-framework-AWS-account-id> 
+Cloudneeti periodically releases new sets of remediation policies to the customer. To use the latest remediation policies, customer needs to upgrade their AWS remediation framework. Cloudneeti will notify customers whenever new version of remediation framework gets release.
+To upgrade the remediation framework, you need to use the deployment commands as it is with the same input parameters.
 
 
 Cloudneeti Remediation Framework
