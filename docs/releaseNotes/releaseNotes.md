@@ -20,9 +20,9 @@
         | **Category**                 | **Policy Title**
 |--------------------------------------|-------------------------------------------|                             
 | M365 - Apps             | Ensure that AD Application keys are rotated before they expire.                                         |
-| M365 - Identity             | Ensure that there are no guest users.                           |
+| M365 - Identity             | Ensure that there are no guest users                           |
 | M365 - Identity           | Ensure Amazon Neptune instances have Auto Minor Version Upgrade feature enabled                          |
-| M365 - Identity          | Ensure that Service Principal Certificates are renewed before it expires.                                  |      
+| M365 - Identity          | Ensure that Service Principal Certificates are renewed before it expires                                 |      
 
     *  Added the following 21 new AWS security policies.
 
