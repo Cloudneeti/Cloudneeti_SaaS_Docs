@@ -30,7 +30,6 @@ nav:
   - Introduction: gettingStarted/introduction.md
   - Subscribe: gettingStarted/subscribe.md
   - System Architecture: gettingStarted/systemArchitecture.md
-  - Sign In and Sign Out: gettingStarted/signInAndSignOut.md
 - Try and Buy:
   - Azure Marketplace: azureMarketplace/Subscribe_on_Azure_Marketplace.md
 - Onboarding Guide:
@@ -39,6 +38,7 @@ nav:
    - AWS Accounts: onboardingGuide/amazonWebServiceAccounts.md
    - Office 365 Subscriptions: onboardingGuide/onboardingOffice365Subscription.md
 - User Guide:
+  - Sign In and Sign Out: gettingStarted/signInAndSignOut.md
   - UI Navigation: userGuide/userGuideUINavigation.md
   - Dashboards: userGuide/dashboards.md
   - Security Policies: userGuide/securityPolicies.md
@@ -49,7 +49,7 @@ nav:
   - Manage Licenses: administratorGuide/manageLicenses.md
   - Manage Users: administratorGuide/manageUsers.md
   - Audit Log: administratorGuide/auditLog.md
-- Cloudneeti Remediation:
+- Remediation:
   - Overview: cloudneetiRemediation/overview.md
   - Azure Subscription: cloudneetiRemediation/azureSubscriptionRemediation.md
   - AWS Account: cloudneetiRemediation/awsRemediation.md

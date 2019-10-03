@@ -47,16 +47,17 @@ Login to [AWS portal](https://console.aws.amazon.com/) with AWS **Administrator*
     ![AWS Portal](.././images/amazonWebServiceAccounts/AWS_Portal.png#thumbnail)
 2.	Click on **Roles** and **Create Role**
     ![Create Role](.././images/amazonWebServiceAccounts/Roles.png#thumbnail)
-3.	Select **Another AWS account** and enter Cloudneeti's AWS account ID 
-4.	Click **Next: Permissions**
-     ![Activate License](.././images/amazonWebServiceAccounts/Another_AWS_Account.png#thumbnail)
-5.	Select policy name **SecurityAudit**
-6.	Click **Next**
+3.	Select **Another AWS account** and enter Cloudneeti's AWS account ID (1)
+4.  Enter the license id as **External ID** (2)
+5.	Click **Next: Permissions**
+     ![Activate License](.././images/amazonWebServiceAccounts/Another_AWS_Account_ExternalId.png#thumbnail)
+6.	Select policy name **SecurityAudit**
+7.	Click **Next**
     ![Create Role](.././images/amazonWebServiceAccounts/Attatch_policies.png#thumbnail)
-7.	Click **Next: Tags**
-8.	Enter Role Name as **Cloudneeti-SecurityAudit**
-9.  Enter Role description
-9.	Click on **Create role**
+8.	Click **Next: Tags**
+9.	Enter Role Name as **Cloudneeti-SecurityAudit**
+10.  Enter Role description
+11.	Click on **Create role**
      ![Create Role](.././images/amazonWebServiceAccounts/Role_Information.png#thumbnail)
 
 An AWS role will be created in the customer's account to mark Cloudneeti's account as a trusted entity with the SecurityAudit access policy.
