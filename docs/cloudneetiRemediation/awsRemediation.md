@@ -157,7 +157,7 @@ STEP 1: Provision Remediation framework on same or different AWS Account
     
     c. Update the role in the account with the remediation framework so that it is aware of the new account that is/ will be added for remediation. (Make sure you have configured the account with the       remediation framework until this step using “aws configure”)
 
-            bash update-remediation-role.sh -r <12-digit-account-id> -a <12-digit-account-id>
+        bash update-remediation-role.sh -r <12-digit-account-id> -a <12-digit-account-id>
 
     (-r) Remediation Account Id: 12-digit AWS account Id of the account where the remediation framework is deployed
 
@@ -167,15 +167,15 @@ STEP 1: Provision Remediation framework on same or different AWS Account
 
     a.  Go to multi-mode remediation framework repository
 
-            cd aws-auto-remediation\multi-mode-remediation
+        cd aws-auto-remediation\multi-mode-remediation
 
     b.  Execute below command to configure your aws account where remediation is to be enabled: (Enter the requested values)
 
-            aws configure
+        aws configure
 
     c.  Deploy automatic remediation invoker resources and associated role on AWS account which is to be remediated.
 
-            bash configure-multi-mode-remediation.sh -a <12-digit-account-id> -r <12-digit-account-id> [-e <environment-prefix> -v <1.0>]
+        bash configure-multi-mode-remediation.sh -a <12-digit-account-id> -r <12-digit-account-id> [-e <environment-prefix> -v <1.0>]
 
     
     (-a) Account Id: 12-digit AWS account Id of the account for which you want to enable the remediation
@@ -193,7 +193,7 @@ STEP 1: Provision Remediation framework on same or different AWS Account
     commands to validate remediation invoker resources along with necessary
     permissions along with remediation framework.
 
-        # bash verify-multi-mode-remediation-setup.sh -a <12-digit-account-id> -r <12-digit-account-id>] -e <environment-prefix>
+        bash verify-multi-mode-remediation-setup.sh -a <12-digit-account-id> -r <12-digit-account-id>] -e <environment-prefix>
 
 
     (-a) New AWS Account Id: 12-digit AWS Account Id of the account which is newly added to use the remediation framework. 
@@ -440,7 +440,19 @@ Cloudneeti Remediation Framework
 
 ### Local Account Remediation
 
+The remediation framework uses CloudTrail, CloudWatch log group, the remediation lambda functions, and the appropriate IAM roles.
+
 ![Local Account Remediation](.././images/cloudneetiRemediation/AWS_RemediationLocal1.png#thumbnail_1)
+
+1. AWS account administrator creates/updates/reconfigure resources in aws account
+
+2. CloudTrail and CloudWatch logs group collects the events occurred in AWS account
+
+3. CloudWatch triggered the auto-remediation invoker in near real-time
+
+4. Auto-remediation invoker lambda calls the appropriate remediation functions present in the remediation framework
+
+5. Remediation functions setup required security configuration on the resources
 
 ### Multi Account Remediation
 
