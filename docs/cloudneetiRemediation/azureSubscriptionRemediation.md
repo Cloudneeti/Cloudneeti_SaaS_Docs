@@ -115,7 +115,7 @@ Cloudneeti supports two ways to remediate non-compliant resources.
 ### Manually Triggered [for existing resources]
 Login to Cloudneeti portal with **License Admin** role
 
-1. Select desired **License** (1) and **Cloud Account**
+1. Select desired **License** (1) and **Cloud Account** (2)
 
 2. Click **Cloud Security and Risk Posture** (3)
 

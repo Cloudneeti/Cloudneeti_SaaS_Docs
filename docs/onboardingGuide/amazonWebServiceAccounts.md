@@ -70,9 +70,8 @@ Automation script can be used for creation of a role to mark Cloudneeti's accoun
 | Activity                                                                      | Description                                              |
 |-------------------------------------------------------------------------------|----------------------------------------------------------|
 | **Workstation:** Ensure you have the latest PowerShell version (v5 and above) | Verify PowerShell version by running the \$PSVersionTable.PSVersion command on the workstation where you will execute commands to add a role. If PowerShell version is lower than 5, then follow this link for installation of a later version: [Download Link](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-windows-powershell?view=powershell-6).                                                                                          |
-| **Workstation:** Install AWS Command Line Interface                           | To install AWS cli follow [link](https://docs.aws.amazon.com/cli/latest/userguide/install-windows.html) **AWS Command Line** Interface (CLI) is a unified tool to manage your AWS services.             |
-| **Workstation:** Install Nodejs                                               | Download latest stable version of nodejs from [here](https://nodejs.org/en/) and install on the workstation.                                                                                            |
-| **Workstation:** Install serverless npm module                                | Serverless Framework is a CLI tool to manage AWS deployments. Execute below command to install serverless module, \# npm install –g serverless                                                           |
+| **Workstation:** Install AWS Command Line Interface                           | To install AWS cli follow [link](https://docs.aws.amazon.com/cli/latest/userguide/install-windows.html) **AWS Command Line** Interface (CLI) is a unified tool to manage your AWS services.             |                                                      |
+|**Workstation:** Download script provision-datacollection-role.yml| To download provision-datacollection-role.yml script follow [link](https://raw.githubusercontent.com/Cloudneeti/docs_cloudneeti/master/scripts/provision-datacollection-role.yml) |
 
 #### Generate AWS account access key id and secret 
 
@@ -90,7 +89,7 @@ trusted entity with the SecurityAudit access policy.
 1.  **Open PowerShell** application as an administrator (right click on PowerShell
     and select run as administrator)
 2.  In PowerShell application, navigate to folder location where you downloaded
-    the file “serverless.yml” (e.g. “cd C:\\Downloads”)
+    the file “provision-datacollection-role.yml” (e.g. “cd C:\\Downloads”)
 3.  Type **aws configure** and enter
     
     a.  Account access key id and secret access key generated in [step](.././amazonWebServiceAccounts/#generate-aws-account-access-key-id-and-secret)
@@ -99,9 +98,19 @@ trusted entity with the SecurityAudit access policy.
     
     c.  Default output format as "json" only.
 
-4.  To add Cloudneeti data provisioning resource, execute the command
-    **serverless deploy**
-    ![Administrator Access](.././images/amazonWebServiceAccounts/Serverless_Deploy.png#thumbnail)
+4.  To add Cloudneeti data provisioning resource, execute the below command by providing values for
+        
+    stack-name : User friendly name 
+    
+    RoleName : Role name for Cloudneeti AWS account
+    
+    ExternalId : [License Id](.././amazonWebServiceAccounts/#cloudneeti-aws-account-id)
+    
+    CloudneetiAWSAccountId : [Cloudneeti AWS Account Id](.././amazonWebServiceAccounts/#cloudneeti-aws-account-id)
+
+
+        aws cloudformation deploy --template-file provision-datacollection-role.yml --stack-name <Stack Name> --parameter-overrides RoleName=<Role Name> ExternalId=<License Id> CloudneetiAWSAccountId=<Cloudneeti AWS Account Id> --capabilities CAPABILITY_NAMED_IAM
+
 5.  An AWS role will be created in the customer's account to mark Cloudneeti's
     account as a trusted entity with the SecurityAudit access policy.
 
