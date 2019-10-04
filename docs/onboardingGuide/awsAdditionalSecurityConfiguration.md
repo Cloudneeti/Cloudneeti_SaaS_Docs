@@ -13,10 +13,21 @@ within timeframe mentioned below
 To ensures a smooth transition, please follow below two steps for each AWS
 account:
 
-1.  Link external id to existing Cloudneeti AWS account role
-    “Cloudneeti-SecurityAudit” or Create a new role with external id
+1.  Link external id to existing Cloudneeti AWS account role “Cloudneeti-SecurityAudit” or Create a new role with external id : includes updating role on AWS Console created while onboarding AWS account or creation of new IAM role.
 
-2.  Verify/update role name for Cloud Account
+2.  Verify/update role name for Cloud Account :  includes updating AWS cloud account in Cloudneeti Portal
+
+## Required Information
+
+### Cloudneeti AWS account id
+Cloudneeti AWS account id can be retrived from email notification recieved by License Admin on License creation sent by Cloudneeti Notification Bot. 
+
+![AWS Portal](.././images/amazonWebServiceAccounts/Welcome_Email.png#thumbnail)
+
+### License id
+License id can be retrived from Cloudneeti Portal **Features and Quotas** page
+
+![License Id](.././images/updateAWSConfiguration/LicenseId.png#thumbnail_1)
 
 **STEP 1: Link external id to Cloudneeti AWS account role Cloudneeti-SecurityAudit or Create a new role with external id**
 --------------------------------------------------------------------------------------------------------------------------
