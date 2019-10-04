@@ -55,8 +55,7 @@ Login to [AWS portal](https://console.aws.amazon.com/) with AWS **Administrator*
 7.	Click **Next**
     ![Create Role](.././images/amazonWebServiceAccounts/Attatch_policies.png#thumbnail)
 8.	Click **Next: Tags**
-9.	Enter Role Name as **Cloudneeti-SecurityAudit**
-10.  Enter Role description
+9.	Enter **Role Name**, the same role name should be added while creating an AWS Cloud Account in Cloudneeti.
 11.	Click on **Create role**
      ![Create Role](.././images/amazonWebServiceAccounts/Role_Information.png#thumbnail)
 
@@ -86,10 +85,8 @@ Automation script can be used for creation of a role to mark Cloudneeti's accoun
 Use serverless.yml file to create a role to mark Cloudneeti's account as a
 trusted entity with the SecurityAudit access policy.
 
-1.  **Open PowerShell** application as an administrator (right click on PowerShell
-    and select run as administrator)
-2.  In PowerShell application, navigate to folder location where you downloaded
-    the file “provision-datacollection-role.yml” (e.g. “cd C:\\Downloads”)
+1.  Open any termial which has AWS CLI configured
+2.  On terminal navigate to folder location where you downloaded the file “provision-datacollection-role.yml” (e.g. “cd C:\\Downloads”)
 3.  Type **aws configure** and enter
     
     a.  Account access key id and secret access key generated in [step](.././amazonWebServiceAccounts/#generate-aws-account-access-key-id-and-secret)
