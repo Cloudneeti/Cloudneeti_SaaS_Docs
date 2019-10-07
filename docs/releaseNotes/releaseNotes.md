@@ -6,7 +6,7 @@
 
 1.  **User Experience Improvements**
     * Added CSV format summary report download for Office 365 cloud accounts. This feature enables the user to download the report to get a list of controls with compliance status.
-    * Updated “Cloud Security & Risk Posture” to “Cloud Security Best Practices” for consistency with the CISO dashboard “Security Best Practices” tile.
+    * Updated “Cloud Security & Risk Posture” to “Cloud Security Best Practices” for consistency with the Compliance dashboard “Security Best Practices” tile.
     * Added search option so that users can search specific policies on any of the benchmark.
 
 2.	**Platform & Stability Improvements**
