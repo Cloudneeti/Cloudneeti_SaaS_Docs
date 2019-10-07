@@ -15,7 +15,7 @@
 3.	**Policies & Benchmarks Additions/Updates**
     *   Updated mapping for “Center for Internet Security AWS Foundations Benchmark v1.2.0 “. Now 46 out of 49 controls are mapped.
 
-    *   Deprecated following policy from Azure security best practices as those setting are updated in the Azure portal.
+    *   Deprecated following policy from Azure security best practices as those setting is updated in the Azure portal.
 
         | **Category** | **Policy Title** |
         | --- | --- |
