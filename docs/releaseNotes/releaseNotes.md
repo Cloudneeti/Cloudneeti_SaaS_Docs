@@ -61,7 +61,7 @@
         | AWS - Audit and Logging | Ensure that Event Subscription is enabled for RDS MariaDB Instance |
         | AWS - Audit and Logging | Ensure that Event Subscription is enabled for RDS Oracle Instances |
         | AWS - Audit and Logging | Ensure that Event Subscription is enabled for RDS SQLServer Instances |
-        | AWS - Audit and Logging | Ensure that Event Subscription is enabled for RDS AuroraL Cluster |
+        | AWS - Audit and Logging | Ensure that Event Subscription is enabled for RDS Aurora Cluster |
         | AWS - Audit and Logging | Ensure that Event Subscription is enabled for RDS Aurora MySQL Serverless Cluster |
         | AWS - Audit and Logging | Ensure Log Exports feature is enabled for RDS Aurora MySQL Serverless Cluster |
         | AWS - Audit and Logging | Ensure that Event Subscription is enabled for Aurora SQL Instances |
@@ -115,7 +115,7 @@
         | AWS - Identity and Access Management | Ensure data-tier security group are configured for RDS SQL Instances |
         | AWS - Identity and Access Management | Ensure data-tier security group are configured for RDS MariaDB Instances |
         | AWS - Identity and Access Management | Ensure data-tier security group are configured for RDS Oracle Instances |
-        | AWS - Identity and Access Management | Ensure data-tier security group are configured for RDS SQL Server Instances |
+        | AWS - Identity and Access Management | Ensure data-tier security group are configured for RDS SQLServer Instances |
         | AWS - Identity and Access Management | Ensure IAM Database Authentication feature is enabled for RDS Aurora Cluster |
         | AWS - Identity and Access Management | Ensure data-tier security group are configured for RDS Aurora Clusters |
         | AWS - Identity and Access Management | Ensure data-tier security group are configured for RDS Aurora MySQL Serverless Cluster |
