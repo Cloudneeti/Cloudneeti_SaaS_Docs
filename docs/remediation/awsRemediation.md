@@ -284,7 +284,7 @@ Login to Cloudneeti portal with **License Admin** role
 
 1.  Select desired **License** (1) and **Cloud Account** (2)
 
-2.  Click **Cloud Security and Risk Posture** (3)
+2.  Click **Cloud Security Best Practices** (3)
 
 3.  Click **Remediate** (4)
 
