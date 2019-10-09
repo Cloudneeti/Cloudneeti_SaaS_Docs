@@ -28,10 +28,11 @@ extra_javascript:
 nav:
 - Getting Started: 
   - Introduction: gettingStarted/introduction.md
-  - Subscribe: gettingStarted/subscribe.md
   - System Architecture: gettingStarted/systemArchitecture.md
 - Try and Buy:
-  - Azure Marketplace: azureMarketplace/Subscribe_on_Azure_Marketplace.md
+  - Buy on Azure Marketplace: azureMarketplace/Subscribe_on_Azure_Marketplace.md
+  - Request a License: gettingStarted/subscribe.md
+  #- Estimate Pricing: azureMarketplace/Subscribe_on_Azure_Marketplace.md
 - Onboarding Guide:
    - Overview: onboardingGuide/onboardingGuideOverview.md
    - Azure Subscriptions: onboardingGuide/azureSubscriptions.md
@@ -50,8 +51,8 @@ nav:
   - Manage Users: administratorGuide/manageUsers.md
   - Audit Log: administratorGuide/auditLog.md
 - Remediation:
-  - Overview: cloudneetiRemediation/overview.md
-  - Azure Subscription: cloudneetiRemediation/azureSubscriptionRemediation.md
-  - AWS Account: cloudneetiRemediation/awsRemediation.md
+  - Overview: remediation/overview.md
+  - Azure Subscription: remediation/azureSubscriptionRemediation.md
+  - AWS Account: remediation/awsRemediation.md
 - Release Notes:
   - Releases in 2019: releaseNotes/releaseNotes.md

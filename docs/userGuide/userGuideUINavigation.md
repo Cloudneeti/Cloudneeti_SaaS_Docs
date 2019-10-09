@@ -24,7 +24,7 @@ The left menu provides access to Dashboards (1), Views (2) and Settings (3).
 1.  The menu item **Dashboard** brings the user to the Compliance, Security,
     Risk and Assets dashboards.
 
-2.  The menu item **Cloud Security & Risk Posture** provides access to a view of
+2.  The menu item **Cloud Security Best Practices** provides access to a view of
     the complete list of cloud security best practices within the Cloudneeti
     application.
 
@@ -57,7 +57,7 @@ section.
 Security Policies
 -----------------
 
-The Cloud Security & Risk Posture view provides a list of all security policies
+The Cloud Security Best Practices view provides a list of all security policies
 within the Cloudneeti application and their compliance status. The status is
 displayed as number of resources that are adhering to the security policy
 standard out of the total number of resources. For more information please refer
