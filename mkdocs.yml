@@ -4,6 +4,8 @@ site_author: The Cloudneeti Team
 repo_name: Cloudneeti_SaaS_Docs
 copyright: "&copy; 2019 Cloudneeti."
 
+google_analytics: ['UA-149380164-2', 'docs.cloudneeti.com']
+
 theme:
   name: 'material'
   custom_dir: "theme"
