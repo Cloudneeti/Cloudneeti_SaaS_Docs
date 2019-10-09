@@ -7,7 +7,7 @@ within timeframe mentioned below
 
 | **Cloudneeti Product**                   | **Start date** | **End date** |
 |------------------------------------------|-----------------------------|----------------------------------------|
-| [Trial](https://trial.cloudneeti.com)    | 9 October 2019              | 23 October 2019                        |
+| [Trial](https://trial.cloudneeti.com)    | 7 October 2019              | 21 October 2019                        |
 | [Production](https://app.cloudneeti.com) | 14 October 2019             | 30 October 2019                        |
 
 To ensures a smooth transition, please follow below two steps for each AWS
