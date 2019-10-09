@@ -1,6 +1,146 @@
 ﻿﻿Releases in 2019
 ===============
 
+**October 2019- v2.18.1**
+----------------------------
+
+1.  **User Experience Improvements**
+    * Added CSV format summary report download for Office 365 cloud accounts. This feature enables the user to download the report to get a list of controls with compliance status.
+    * Updated “Cloud Security & Risk Posture” to “Cloud Security Best Practices” for consistency with the Compliance dashboard “Security Best Practices” tile.
+    * Added search option so that users can search specific policies on any of the benchmark.
+
+2.	**Platform & Stability Improvements**
+    *	Added additional security measures while onboarding AWS account using AWS <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user_externalid.html" target="_blank">External ID</a>.
+
+3.	**Policies & Benchmarks Additions/Updates**
+    *   Updated mapping for “Center for Internet Security AWS Foundations Benchmark v1.2.0 “. Now 46 out of 49 controls are mapped.
+
+    *   Deprecated following policy from Azure security best practices as this setting is updated in the Azure portal.
+
+        | **Category** | **Policy Title** |
+        | --- | --- |
+        | Azure - Networking | Ensure that retention period is greater than 90 days for Network Security Group flow logs |
+
+    *   Added the following new policy for Azure
+
+        | **Category** | **Policy Title** |
+        | --- | --- |
+        | Azure - Networking | Ensure that Flow Log Status is set to On for Network Security Groups |
+
+    *   Deprecated following 21 policies for AWS accounts. These are now replaced by the much more atomic policies (refer next bullet point).
+
+        | **Category** | **Policy Title** |
+        | --- | --- |
+        | AWS - Business Continuity | Ensure Auto Minor Version Upgrade feature is Enabled for Relational Database Service Instances |
+        | AWS - Business Continuity | Ensure backup retention policy is set for Relational Database Service |
+        | AWS - Business Continuity | Ensure that backtracking is enabled for Amazon Aurora MySQL database clusters |
+        | AWS - Governance | Ensure that Copy Tags to Snapshots feature is enabled for Amazon RDS instances |
+        | AWS - Data Protection | Ensure Deletion Protection feature is enabled for AWS RDS database instances |
+        | AWS - Data Protection | Ensure that encryption is enabled for RDS instances |
+        | AWS - Identity and Access Management | Ensure IAM Database Authentication feature is enabled for AWS RDS MySQL and PostgreSQL database instances |
+        | AWS - Audit and Logging | Ensure that Event Subscription is enabled for RDS instance |
+        | AWS - Data Protection | Ensure Performance Insights feature is enabled for Amazon RDS database instances |
+        | AWS - Networking | Ensure that public access is not given to RDS database instance |
+        | AWS - Storage and Databases | Ensure that port number should not be set as default port number for AWS RDS Instances |
+        | AWS - Data Protection | Ensure that encryption for storage done with KMS CMKs for each RDS instance |
+        | AWS - Networking | Ensure that public subnets is not assigned to RDS database instances |
+        | AWS - Governance | Ensure that unique master user name is used for each RDS database instance |
+        | AWS - Identity and Access Management | Ensure that Amazon RDS database snapshots are not accessible to all AWS accounts |
+        | AWS - Business Continuity | Ensure that sufficient backup retention period is applied to RDS Instances |
+        | AWS - Data In Transit Encryption | Ensure that Transport Encryption feature enabled for AWS RDS SQL Server instances |
+        | AWS - Data Protection | Ensure that Deletion Protection feature is enabled for Aurora database clusters |
+        | AWS - Audit and Logging | Ensure Log Exports feature is enabled for Amazon Aurora Serverless databases |
+        | AWS - Governance | Ensure that AutoPause feature is enabled for Amazon Aurora Serverless clusters |
+        | AWS - Identity and Access Management | Ensure data-tier security group are configured for RDS Aurora Clusters |
+
+    *   Added the following 83 new AWS security policies
+
+        | **Category** | **Policy Title** |
+        | --- | --- |
+        | AWS - Audit and Logging | Ensure that Event Subscription is enabled for RDS SQL Instance |
+        | AWS - Audit and Logging | Ensure that Event Subscription is enabled for RDS MariaDB Instance |
+        | AWS - Audit and Logging | Ensure that Event Subscription is enabled for RDS Oracle Instances |
+        | AWS - Audit and Logging | Ensure that Event Subscription is enabled for RDS SQLServer Instances |
+        | AWS - Audit and Logging | Ensure that Event Subscription is enabled for RDS Aurora Cluster |
+        | AWS - Audit and Logging | Ensure that Event Subscription is enabled for RDS Aurora MySQL Serverless Cluster |
+        | AWS - Audit and Logging | Ensure Log Exports feature is enabled for RDS Aurora MySQL Serverless Cluster |
+        | AWS - Audit and Logging | Ensure that Event Subscription is enabled for Aurora SQL Instances |
+        | AWS - Business Continuity | Ensure Auto Minor Version Upgrade feature is Enabled for RDS SQL Instances |
+        | AWS - Business Continuity | Ensure backup retention policy is set for RDS SQL Instances |
+        | AWS - Business Continuity | Ensure that sufficient backup retention period is applied to RDS SQL Instances |
+        | AWS - Business Continuity | Ensure Auto Minor Version Upgrade feature is Enabled for RDS MariaDB Instances |
+        | AWS - Business Continuity | Ensure backup retention policy is set for RDS MariaDB Instances |
+        | AWS - Business Continuity | Ensure that sufficient backup retention period is applied to RDS MariaDB Instances |
+        | AWS - Business Continuity | Ensure Auto Minor Version Upgrade feature is Enabled forRDS Oracle Instances |
+        | AWS - Business Continuity | Ensure backup retention policy is set for RDS Oracle Instances |
+        | AWS - Business Continuity | Ensure that sufficient backup retention period is applied to RDS Oracle Instances |
+        | AWS - Business Continuity | Ensure Auto Minor Version Upgrade feature is Enabled for RDS SQLServer Instances |
+        | AWS - Business Continuity | Ensure backup retention policy is set for RDS SQLServer Instance |
+        | AWS - Business Continuity | Ensure that sufficient backup retention period is applied to RDS SQLServer Instances |
+        | AWS - Business Continuity | Ensure backup retention policy is set for RDS Aurora Cluster |
+        | AWS - Business Continuity | Ensure that sufficient backup retention period is applied to RDS Aurora Cluster |
+        | AWS - Business Continuity | Ensure that backtracking is enabled for Amazon RDS Aurora Cluster |
+        | AWS - Business Continuity | Ensure that sufficient backup retention period is applied to RDS Aurora MySQL Serverless Cluster |
+        | AWS - Business Continuity | Ensure Auto Minor Version Upgrade feature is Enabled for Aurora SQL Instances |
+        | AWS - Business Continuity | Ensure AWS Elastic Block Store (EBS) volumes have recent snapshots available for point-in-time recovery |
+        | AWS - Data In Transit Encryption | Ensure that Transport Encryption feature enabled for AWS RDS SQLServer Instances |
+        | AWS - Data Protection | Ensure Deletion Protection feature is enabled for RDS SQL Instances |
+        | AWS - Data Protection | Ensure Performance Insights feature is enabled for Amazon RDS SQL Instances |
+        | AWS - Data Protection | Ensure Deletion Protection feature is enabled for RDS MariaDB Instances |
+        | AWS - Data Protection | Ensure Performance Insights feature is enabled for RDS MariaDB Instances |
+        | AWS - Data Protection | Ensure Deletion Protection feature is enabled for AWS RDS Oracle Instances |
+        | AWS - Data Protection | Ensure Performance Insights feature is enabled for RDS Oracle Instances |
+        | AWS - Data Protection | Ensure Deletion Protection feature is enabled for RDS SQLServer Instances |
+        | AWS - Data Protection | Ensure Performance Insights feature is enabled for RDS SQLServer Instances |
+        | AWS - Data Protection | Ensure that Deletion Protection feature is enabled for RDS Aurora Cluster |
+        | AWS - Data Protection | Ensure that Deletion Protection feature is enabled for RDS Aurora MySQL Serverless Cluster |
+        | AWS - Data Protection | Ensure Performance Insights feature is enabled for Aurora SQL Instances |
+        | AWS - Data Protection | Ensure Amazon EBS snapshots are encrypted to meet security and compliance requirements|
+        | AWS - Governance | Ensure that Copy Tags to Snapshots feature is enabled for RDS SQL Instances |
+        | AWS - Governance | Ensure that unique master user name is used for each RDS SQL Instance |
+        | AWS - Governance | Ensure that Copy Tags to Snapshots feature is enabled for RDS MariaDB Instances |
+        | AWS - Governance | Ensure that unique master user name is used for each RDS MariaDB Instance |
+        | AWS - Governance | Ensure that Copy Tags to Snapshots feature is enabled for RDS Oracle Instances |
+        | AWS - Governance | Ensure that unique master user name is used for each RDS Oracle Instances |
+        | AWS - Governance | Ensure that Copy Tags to Snapshots feature is enabled for RDS SQLServer Instances |
+        | AWS - Governance | Ensure that unique master user name is used for each RDS SQLServer Instances |
+        | AWS - Governance | Ensure that Copy Tags to Snapshots feature is enabled for RDS Aurora Cluster |
+        | AWS - Governance | Ensure that Copy Tags to Snapshots feature is enabled for RDS Aurora MySQL Serverless Cluster |
+        | AWS - Governance | Ensure that unique master user name is used for RDS Aurora MySQL Serverless Cluster |
+        | AWS - Governance | Ensure Amazon RDS Reserved Instances contract are renewed before expiration in 7 days |
+        | AWS - Governance | Ensure Amazon RDS Reserved Instances contract are renewed before expiration in 30 days |
+        | AWS - Governance | Ensure that AutoPause feature is enabled for RDS Aurora MySQL Serverless Cluster |
+        | AWS - Governance | Ensure that unique master user name is used for Aurora SQL Instances |
+        | AWS - Identity and Access Management | Ensure IAM Database Authentication feature is enabled for RDS SQL Instances |
+        | AWS - Identity and Access Management | Ensure data-tier security group are configured for RDS SQL Instances |
+        | AWS - Identity and Access Management | Ensure data-tier security group are configured for RDS MariaDB Instances |
+        | AWS - Identity and Access Management | Ensure data-tier security group are configured for RDS Oracle Instances |
+        | AWS - Identity and Access Management | Ensure data-tier security group are configured for RDS SQLServer Instances |
+        | AWS - Identity and Access Management | Ensure IAM Database Authentication feature is enabled for RDS Aurora Cluster |
+        | AWS - Identity and Access Management | Ensure data-tier security group are configured for RDS Aurora Clusters |
+        | AWS - Identity and Access Management | Ensure data-tier security group are configured for RDS Aurora MySQL Serverless Cluster |
+        | AWS - Identity and Access Management | Ensure data-tier security group are configured for RDS Aurora SQL Instance |
+        | AWS - Identity and Access Management | Ensure that Amazon RDS database snapshots are not accessible to all AWS accounts |
+        | AWS - Identity and Access Management | Ensure that your Amazon EBS volume snapshots are not accessible to all AWS accounts |
+        | AWS - Identity and Access Management | Avoid the use of the \&quot;root\&quot; account |
+        | AWS - Identity and Access Management | Ensure no root account access key exists |
+        | AWS - Networking | Ensure that public access is not given to RDS SQL Instance |
+        | AWS - Networking | Ensure that public subnets are not assigned to RDS SQL Instances |
+        | AWS - Networking | Ensure that public access is not given to RDS MariaDB Instance |
+        | AWS - Networking | Ensure that public subnets are not assigned to RDS MariaDB Instances |
+        | AWS - Networking | Ensure that public access is not given to RDS Oracle Instances |
+        | AWS - Networking | Ensure that public subnets are   not assigned to RDS Oracle Instances |
+        | AWS - Networking | Ensure that public access is not given to RDS SQLServer Instances |
+        | AWS - Networking | Ensure that public subnets are not assigned to RDS SQLServer Instances |
+        | AWS - Networking | Ensure that public subnets are not assigned to RDS Aurora MySQL Serverless Cluster |
+        | AWS - Networking | Ensure that public access is not given to Aurora SQL Instances |
+        | AWS - Networking | Ensure that public subnets are not assigned to Aurora SQL Instances |
+        | AWS - Storage and Databases | Ensure that port number should not be set as default port number for RDS SQL Instances |
+        | AWS - Storage and Databases | Ensure that port number should not be set as default port number for RDS MariaDB Instances |
+        | AWS - Storage and Databases | Ensure that port number should not be set as default port number for RDS Oracle Instances |
+        | AWS - Storage and Databases | Ensure that port number should not be set as default port number for RDS SQLServer Instances |
+        | AWS - Storage and Databases | Ensure that port number should not be set as default port number for Aurora SQL Instances |
+
 **September 2019- v2.17.1**
 ----------------------------
 
@@ -20,9 +160,9 @@
         | **Category**                 | **Policy Title**
 |--------------------------------------|-------------------------------------------|                             
 | M365 - Apps             | Ensure that AD Application keys are rotated before they expire.                                         |
-| M365 - Identity             | Ensure that there are no guest users.                           |
+| M365 - Identity             | Ensure that there are no guest users                           |
 | M365 - Identity           | Ensure Amazon Neptune instances have Auto Minor Version Upgrade feature enabled                          |
-| M365 - Identity          | Ensure that Service Principal Certificates are renewed before it expires.                                  |      
+| M365 - Identity          | Ensure that Service Principal Certificates are renewed before it expires                                 |      
 
     *  Added the following 21 new AWS security policies.
 

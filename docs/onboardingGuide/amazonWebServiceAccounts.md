@@ -31,9 +31,10 @@ Cloudneeti application **License Admin** is assigned to an individual in the cus
 
 AWS **Administrator** role is required for granting Cloudneeti application access rights to AWS account(s). The administrator must have enough permissions to create a role as a trusted entity with the [SecurityAudit access policy.](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_job-functions.html#jf_security-auditor)
 
-### Request Cloudneeti AWS account ID
-**Note:**<br>`Request Cloudneeti to provide the Cloudneeti AWS account ID. This is a mandatory field to create a role as a trusted 
-entity with the SecurityAudit access policy.`
+### Cloudneeti AWS account id
+Cloudneeti AWS account id can be retrived from email notification recieved by License Admin on License creation sent by Cloudneeti Notification Bot. 
+
+![AWS Portal](.././images/amazonWebServiceAccounts/Welcome_Email.png#thumbnail)
 
 ## STEP 1: Create an AWS role for Cloudneeti Manually or using automated script
 The following steps are executed by AWS **Administrator** role. AWS role for Cloudneeti can be created manually or using an automation script. 
@@ -46,16 +47,16 @@ Login to [AWS portal](https://console.aws.amazon.com/) with AWS **Administrator*
     ![AWS Portal](.././images/amazonWebServiceAccounts/AWS_Portal.png#thumbnail)
 2.	Click on **Roles** and **Create Role**
     ![Create Role](.././images/amazonWebServiceAccounts/Roles.png#thumbnail)
-3.	Select **Another AWS account** and enter Cloudneeti's AWS account ID 
-4.	Click **Next: Permissions**
-     ![Activate License](.././images/amazonWebServiceAccounts/Another_AWS_Account.png#thumbnail)
-5.	Select policy name **SecurityAudit**
-6.	Click **Next**
+3.	Select **Another AWS account** and enter Cloudneeti's AWS account ID (1)
+4.  Enter the license id as **External ID** (2)
+5.	Click **Next: Permissions**
+     ![Activate License](.././images/amazonWebServiceAccounts/Another_AWS_Account_ExternalId.png#thumbnail)
+6.	Select policy name **SecurityAudit**
+7.	Click **Next**
     ![Create Role](.././images/amazonWebServiceAccounts/Attatch_policies.png#thumbnail)
-7.	Click **Next: Tags**
-8.	Enter Role Name as **Cloudneeti-SecurityAudit**
-9.  Enter Role description
-9.	Click on **Create role**
+8.	Click **Next: Tags**
+9.	Enter **Role Name**, the same role name should be added while creating an AWS Cloud Account in Cloudneeti.
+11.	Click on **Create role**
      ![Create Role](.././images/amazonWebServiceAccounts/Role_Information.png#thumbnail)
 
 An AWS role will be created in the customer's account to mark Cloudneeti's account as a trusted entity with the SecurityAudit access policy.
@@ -68,9 +69,8 @@ Automation script can be used for creation of a role to mark Cloudneeti's accoun
 | Activity                                                                      | Description                                              |
 |-------------------------------------------------------------------------------|----------------------------------------------------------|
 | **Workstation:** Ensure you have the latest PowerShell version (v5 and above) | Verify PowerShell version by running the \$PSVersionTable.PSVersion command on the workstation where you will execute commands to add a role. If PowerShell version is lower than 5, then follow this link for installation of a later version: [Download Link](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-windows-powershell?view=powershell-6).                                                                                          |
-| **Workstation:** Install AWS Command Line Interface                           | To install AWS cli follow [link](https://docs.aws.amazon.com/cli/latest/userguide/install-windows.html) **AWS Command Line** Interface (CLI) is a unified tool to manage your AWS services.             |
-| **Workstation:** Install Nodejs                                               | Download latest stable version of nodejs from [here](https://nodejs.org/en/) and install on the workstation.                                                                                            |
-| **Workstation:** Install serverless npm module                                | Serverless Framework is a CLI tool to manage AWS deployments. Execute below command to install serverless module, \# npm install –g serverless                                                           |
+| **Workstation:** Install AWS Command Line Interface                           | To install AWS cli follow [link](https://docs.aws.amazon.com/cli/latest/userguide/install-windows.html) **AWS Command Line** Interface (CLI) is a unified tool to manage your AWS services.             |                                                      |
+|**Workstation:** Download script provision-datacollection-role.yml| To download provision-datacollection-role.yml script follow [link](https://raw.githubusercontent.com/Cloudneeti/docs_cloudneeti/master/scripts/provision-datacollection-role.yml) |
 
 #### Generate AWS account access key id and secret 
 
@@ -85,10 +85,8 @@ Automation script can be used for creation of a role to mark Cloudneeti's accoun
 Use serverless.yml file to create a role to mark Cloudneeti's account as a
 trusted entity with the SecurityAudit access policy.
 
-1.  **Open PowerShell** application as an administrator (right click on PowerShell
-    and select run as administrator)
-2.  In PowerShell application, navigate to folder location where you downloaded
-    the file “serverless.yml” (e.g. “cd C:\\Downloads”)
+1.  Open any termial which has AWS CLI configured
+2.  On terminal navigate to folder location where you downloaded the file “provision-datacollection-role.yml” (e.g. “cd C:\\Downloads”)
 3.  Type **aws configure** and enter
     
     a.  Account access key id and secret access key generated in [step](.././amazonWebServiceAccounts/#generate-aws-account-access-key-id-and-secret)
@@ -97,9 +95,19 @@ trusted entity with the SecurityAudit access policy.
     
     c.  Default output format as "json" only.
 
-4.  To add Cloudneeti data provisioning resource, execute the command
-    **serverless deploy**
-    ![Administrator Access](.././images/amazonWebServiceAccounts/Serverless_Deploy.png#thumbnail)
+4.  To add Cloudneeti data provisioning resource, execute the below command by providing values for
+        
+    stack-name : User friendly name 
+    
+    RoleName : Role name for Cloudneeti AWS account
+    
+    ExternalId : [License Id](.././amazonWebServiceAccounts/#cloudneeti-aws-account-id)
+    
+    CloudneetiAWSAccountId : [Cloudneeti AWS Account Id](.././amazonWebServiceAccounts/#cloudneeti-aws-account-id)
+
+
+        aws cloudformation deploy --template-file provision-datacollection-role.yml --stack-name <Stack Name> --parameter-overrides RoleName=<Role Name> ExternalId=<License Id> CloudneetiAWSAccountId=<Cloudneeti AWS Account Id> --capabilities CAPABILITY_NAMED_IAM
+
 5.  An AWS role will be created in the customer's account to mark Cloudneeti's
     account as a trusted entity with the SecurityAudit access policy.
 

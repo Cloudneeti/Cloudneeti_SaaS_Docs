@@ -1,4 +1,4 @@
-The Cloud Security & Risk Posture view provides a list of all security policies
+The Cloud Security Best Practices view provides a list of all security policies
 within the Cloudneeti application and their status.
 
 This page has the following sections.
