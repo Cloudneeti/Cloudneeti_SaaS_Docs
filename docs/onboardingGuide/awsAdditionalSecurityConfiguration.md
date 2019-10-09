@@ -7,7 +7,7 @@ within timeframe mentioned below
 
 | **Cloudneeti Product**                   | **Start date** | **End date** |
 |------------------------------------------|-----------------------------|----------------------------------------|
-| [Trial](https://trial.cloudneeti.com)    | 7 October 2019              | 21 October 2019                        |
+| [Trial](https://trial.cloudneeti.com)    | 9 October 2019              | 23 October 2019                        |
 | [Production](https://app.cloudneeti.com) | 14 October 2019             | 30 October 2019                        |
 
 To ensures a smooth transition, please follow below two steps for each AWS
@@ -77,12 +77,7 @@ Login to [AWS Console](https://aws.amazon.com/console/) with AWS **Administrato
                 ] 
             } 
 
-
-### **1.2 (Optional) Create a new role with external id**
-
-Please refer [step 1.1](https://cloudneeti.github.io/Cloudneeti_SaaS_Docs/onboardingGuide/amazonWebServiceAccounts/#11-manual) in onboarding document.
-
-**Step 2 Verify/update role name for Cloud Account**
+**Step 2 Re-scan Cloud Account to verify successful update to role**
 ----------------------------------------------------
 
 Login to Cloudneeti portal with License Admin role
@@ -91,12 +86,10 @@ Login to Cloudneeti portal with License Admin role
 
 2.  Click **Configure** (3)
 
-3.  Select **Update Cloud Account** (4)
+3.  Select **Re-scan** (4)
 
     ![Update Account](.././images/updateAWSConfiguration/UpdateCloudAccount.png#thumbnail_1)
 
-4.  Verify or update AWS Role Name
+4.  It will take sometime to complete the data scan. Verify that last scan time is updated. Please contact support@cloudneeti.com in case of any issues.
 
-5.  **Save**
-
-    ![Verify role name](.././images/updateAWSConfiguration/verifyRoleName.png#thumbnail_1)
+    ![Update Account](.././images/updateAWSConfiguration/verifyUpdatedRole.png#thumbnail_1)

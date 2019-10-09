@@ -67,8 +67,7 @@ Automation script can be used for creation of a role to mark Cloudneeti's accoun
 #### Workstation readiness
 
 | Activity                                                                      | Description                                              |
-|-------------------------------------------------------------------------------|----------------------------------------------------------|
-| **Workstation:** Ensure you have the latest PowerShell version (v5 and above) | Verify PowerShell version by running the \$PSVersionTable.PSVersion command on the workstation where you will execute commands to add a role. If PowerShell version is lower than 5, then follow this link for installation of a later version: [Download Link](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-windows-powershell?view=powershell-6).                                                                                          |
+|-------------------------------------------------------------------------------|----------------------------------------------------------|                                                
 | **Workstation:** Install AWS Command Line Interface                           | To install AWS cli follow [link](https://docs.aws.amazon.com/cli/latest/userguide/install-windows.html) **AWS Command Line** Interface (CLI) is a unified tool to manage your AWS services.             |                                                      |
 |**Workstation:** Download script provision-datacollection-role.yml| To download provision-datacollection-role.yml script follow [link](https://raw.githubusercontent.com/Cloudneeti/docs_cloudneeti/master/scripts/provision-datacollection-role.yml) |
 
@@ -159,13 +158,12 @@ Security audit role created during onboarding of a specific AWS account should b
 
 2.  Go to **IAM in Services**
 
-3.  Click on **Roles**
+3.  Click on **Roles** (1)
 
-4.  Select
-    [Cloudneeti-SecurityAudit](https://console.aws.amazon.com/iam/home?region=us-east-1#/roles/Cloudneeti-SecurityAudit)
+4.  Select role created for Cloudneeti's AWS account while onboarding AWS account (2)
 
-5.  Click on **Delete** to remove
-    [Cloudneeti-SecurityAudit](https://console.aws.amazon.com/iam/home?region=us-east-1#/roles/Cloudneeti-SecurityAudit)
+5.  Click on **Delete** to remove the role (3)
+   
 	![AWS Offboarding](.././images/amazonWebServiceAccounts/AWS_Offboarding.png#thumbnail)
 
 ### Delete cloud account in Cloudneeti application 

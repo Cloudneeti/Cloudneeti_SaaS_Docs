@@ -32,9 +32,9 @@ nav:
   - Introduction: gettingStarted/introduction.md
   - System Architecture: gettingStarted/systemArchitecture.md
 - Try and Buy:
-  - Buy on Azure Marketplace: azureMarketplace/Subscribe_on_Azure_Marketplace.md
+  - Buy on Azure Marketplace: azureMarketplace/subscribeOnAzureMarketplace.md
   - Request a License: gettingStarted/subscribe.md
-  #- Estimate Pricing: azureMarketplace/Subscribe_on_Azure_Marketplace.md
+  - Estimate Pricing: azureMarketplace/estimatePricing.md
 - Onboarding Guide:
    - Overview: onboardingGuide/onboardingGuideOverview.md
    - Azure Subscriptions: onboardingGuide/azureSubscriptions.md
