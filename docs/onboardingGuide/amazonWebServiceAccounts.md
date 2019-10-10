@@ -43,20 +43,35 @@ The following steps are executed by AWS **Administrator** role. AWS role for Clo
 #### Grant Permissions
 Login to [AWS portal](https://console.aws.amazon.com/) with AWS **Administrator** role.
 
-1.	Navigate to **Services > IAM**
+1.	Navigate to **Services** (1)
+
+2.  Click **IAM** (2)
+    
     ![AWS Portal](.././images/amazonWebServiceAccounts/AWS_Portal.png#thumbnail)
-2.	Click on **Roles** and **Create Role**
+
+3.	Click on **Roles** (1) and **Create Role** 
+    
     ![Create Role](.././images/amazonWebServiceAccounts/Roles.png#thumbnail)
-3.	Select **Another AWS account** (1) and enter Cloudneeti's AWS account ID (2)
-4.  Enter the license id as **External ID** (3)
-5.	Click **Next: Permissions** (4)
+
+4.	Select **Another AWS account** (1) and enter Cloudneeti's AWS account ID (2)
+
+5.  Enter the license id as **External ID** (3)
+
+6.	Click **Next: Permissions** (4)
+
      ![Activate License](.././images/amazonWebServiceAccounts/Another_AWS_Account_ExternalId.png#thumbnail)
-6.	Select policy name **SecurityAudit**
-7.	Click **Next**
+
+7.	Select policy name **SecurityAudit**
+
+8.	Click **Next**
+
     ![Create Role](.././images/amazonWebServiceAccounts/Attatch_policies.png#thumbnail)
-8.	Click **Next: Tags**
-9.	Enter **Role Name**, the same role name should be added while creating an AWS Cloud Account in Cloudneeti.
-11.	Click on **Create role**
+
+9.	Click **Next: Tags**
+
+10.	Enter **Role Name** (1), the same role name should be added while creating an AWS Cloud Account in Cloudneeti.
+
+11.	Click on **Create role** (2)
      ![Create Role](.././images/amazonWebServiceAccounts/Role_Information.png#thumbnail)
 
 An AWS role will be created in the customer's account to mark Cloudneeti's account as a trusted entity with the SecurityAudit access policy.
@@ -74,10 +89,15 @@ Automation script can be used for creation of a role to mark Cloudneeti's accoun
 #### Generate AWS account access key id and secret 
 
 1.	Click **your name** located on the top right navigation pane
+
 2.	Select **My Security** Credentials 
+
 3.	**Access key id** is under the section **Access keys for CLI, SDK, & API access**
+
     ![Create access key](.././images/amazonWebServiceAccounts/AWS_Account_Access_Key.png#thumbnail)
+
 4.	If access key secret is not available for this id, please create a new access key by clicking on **Create access key** button.
+
     ![Create access key](.././images/amazonWebServiceAccounts/Access_Key_Success.png#thumbnail)
 
 #### Create an AWS role for Cloudneeti using automation script
@@ -117,8 +137,11 @@ The following steps are executed by the AWS **Administrator** role.
 Sign into your AWS account.
 
 1.	Click **your name** located on the top right navigation pane
-2.	Select **My Account**
+
+2.	Select **My Account** 
+
 3.	Your AWS ID is the twelve-digit number located underneath the Account Settings section. Copy paste it to your notepad.
+
     ![SignIn AWS](.././images/amazonWebServiceAccounts/AWS_Management_Console.png#thumbnail)
 
 
@@ -128,10 +151,14 @@ The following steps are executed by Cloudneeti application **License Admin** rol
 ### 3.1 Add AWS Account
 Log into the Cloudneeti application.
 
-1.	Select **AWS connector**  
+1.	Select **AWS connector** (1) and click **Continue**(2)
+
     ![Add account](.././images/amazonWebServiceAccounts/Connector_Type.png#thumbnail)
+
 2.	Enter details: Account Name, AWS Account Id
+
 3.	Click **Add Account**
+
     ![Add account](.././images/amazonWebServiceAccounts/Add_Account.png#thumbnail)
 
 
@@ -139,7 +166,9 @@ Log into the Cloudneeti application.
 Once the AWS account is added to the cloud account under the Cloudneeti License, it requires about 5 minutes for the data to be collected and processed,before they can be displayed in Cloudneeti dashboards. 
 
 1.	Select **Dashboard** on the menu
+
 2.	Review the data on dashboard
+
     ![AWS Dashboard](.././images/amazonWebServiceAccounts/AWS-Account_Dashboard.png#thumbnail)
 
 Congratulations! You have added an AWS account to Cloudneeti application.
