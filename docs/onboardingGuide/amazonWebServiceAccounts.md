@@ -47,9 +47,9 @@ Login to [AWS portal](https://console.aws.amazon.com/) with AWS **Administrator*
     ![AWS Portal](.././images/amazonWebServiceAccounts/AWS_Portal.png#thumbnail)
 2.	Click on **Roles** and **Create Role**
     ![Create Role](.././images/amazonWebServiceAccounts/Roles.png#thumbnail)
-3.	Select **Another AWS account** and enter Cloudneeti's AWS account ID (1)
-4.  Enter the license id as **External ID** (2)
-5.	Click **Next: Permissions**
+3.	Select **Another AWS account** (1) and enter Cloudneeti's AWS account ID (2)
+4.  Enter the license id as **External ID** (3)
+5.	Click **Next: Permissions** (4)
      ![Activate License](.././images/amazonWebServiceAccounts/Another_AWS_Account_ExternalId.png#thumbnail)
 6.	Select policy name **SecurityAudit**
 7.	Click **Next**
