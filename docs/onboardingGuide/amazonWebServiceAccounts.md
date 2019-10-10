@@ -183,15 +183,15 @@ Congratulations! You have added an AWS account to Cloudneeti application.
 
 Security audit role created during onboarding of a specific AWS account should be removed. This step needs to be repeated for each AWS account.
 
-1.  Go to **AWS Console**
+Login to [AWS portal](https://console.aws.amazon.com/) with AWS **Administrator** role.
 
-2.  Go to **IAM in Services**
+1.  Go to **IAM in Services**
 
-3.  Click on **Roles** (1)
+2.  Click on **Roles** (1)
 
-4.  Select role created for Cloudneeti's AWS account while onboarding AWS account (2)
+3.  Select role created for Cloudneeti's AWS account while onboarding AWS account (2)
 
-5.  Click on **Delete** to remove the role (3)
+4.  Click on **Delete** to remove the role (3)
    
 	![AWS Offboarding](.././images/amazonWebServiceAccounts/AWS_Offboarding.png#thumbnail)
 
