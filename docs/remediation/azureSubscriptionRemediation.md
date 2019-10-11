@@ -97,6 +97,21 @@ Login to [Azure Portal](https://portal.azure.com/) with **Subscription Owner** r
 
     ![STEP 3: Assigning roles to MSI generated for remediation policies](.././images/cloudneetiRemediation/Azure_Remediation_Step3.png#thumbnail_1)
 
+3. Download Assign-RolesToRemediationPolicy script
+
+        wget https://raw.githubusercontent.com/Cloudneeti/docs_cloudneeti/master/scripts/Assign-RolesToRemediationPolicy.ps1 -O Assign-RolesToRemediationPolicy.ps1
+
+4.	Switch to the User directory
+
+        cd $user
+
+5.	Run role assignment script with inline parameters
+        
+        ./Assign-RolesToRemediationPolicy.ps1 `
+        -azureActiveDirectoryId <Azure active directory Id> `
+        -subscriptionId <Subscription Id >
+
+
 Azure will start evaluation of resources related to enabled policies.
 
 **Note:**
@@ -117,7 +132,7 @@ Login to Cloudneeti portal with **License Admin** role
 
 1. Select desired **License** (1) and **Cloud Account** (2)
 
-2. Click **Cloud Security and Risk Posture** (3)
+2. Click **Cloud Security Best Practices** (3)
 
 3. Click **Remediate** (4)
     
