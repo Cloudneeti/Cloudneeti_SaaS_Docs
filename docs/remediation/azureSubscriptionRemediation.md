@@ -109,7 +109,7 @@ Login to [Azure Portal](https://portal.azure.com/) with **Subscription Owner** r
         
         ./Assign-RolesToRemediationPolicy.ps1 `
         -azureActiveDirectoryId <Azure active directory Id> `
-        -subscriptionId <Subscription Id >
+        -subscriptionId <Subscription Id>
 
 
 Azure will start evaluation of resources related to enabled policies.
