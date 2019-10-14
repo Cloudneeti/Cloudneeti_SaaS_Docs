@@ -476,7 +476,7 @@ Switch to Azure AD with the Azure Subscription with pre-requisite access.
 6. Switch to the User directory
 	<pre>
 	<code>```
-		cd \$User
+		cd $User
 	```</code>
 	</pre>
 7. Run provisioning script with inline parameters
