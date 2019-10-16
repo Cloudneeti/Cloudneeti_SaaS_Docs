@@ -1,5 +1,14 @@
 #Sign In and Sign Out
 
+Single Sign On 
+--------------------
+
+Cloudneeti application users sign in using their corporate credentials over
+single sign on (SSO). Cloudneeti supports SAML based token authentication with
+Microsoft Azure AD, Office 365 AD Tenant and Microsoft Accounts (Outlook, Live,
+Hotmail). The assumption is that MFA is enabled as part of corporate policy for
+all users of Cloudneeti application (both administrator and reader roles).
+
 
 ##Sign In
 
