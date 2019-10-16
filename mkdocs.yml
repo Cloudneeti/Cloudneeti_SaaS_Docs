@@ -49,8 +49,8 @@ nav:
   - Reports: userGuide/reports.md
 - Administrator Guide:
   - Features and Quotas: administratorGuide/featuresAndQuatas.md
+  - Configure Integrations: administratorGuide/manageLicenses.md
   - Manage Accounts: administratorGuide/manageAccounts.md
-  - Manage Licenses: administratorGuide/manageLicenses.md
   - Manage Users: administratorGuide/manageUsers.md
   - Audit Log: administratorGuide/auditLog.md
 - Remediation:

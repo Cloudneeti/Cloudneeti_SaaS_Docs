@@ -1,58 +1,39 @@
-Manage Licenses
-===============
+Configure Integrations
+======================
 
-License Admins will have the rights to managed License level configurations.
+License Admins will have the rights to managed configure integrations.
 
-Select Settings on the left menu and click on Manage Accounts.
+Select Settings on the left menu and click on Configure Integrations.
 
-1. Select the required **License** from the dropdown menu
+1.  Select the required **License** from the dropdown menu
 
-2. You can view the License Name, License ID and License Status in the left
-    upper corner
+2.  Click **Update** to edit the License Name
 
-3. On the right upper side Enabled Cloud Connectors are shown
+3.  Click **Edit** to **Configure Data Feed Destinations** that specifies where
+    the data feeds provided by Cloudneeti application will be stored on the
+    customer side.
 
-4. **License Features**, the left bottom section, outlines possible
-    configurations at a License level
+4.  Turn **On / Off** to **Enable Reporting Data Feeds**
 
-5. The center bottom section Compliance Bundles displays enabled compliance
-    frameworks
+5.  Turn **On / Off** to **Enable Auditing Data Feeds**
 
-6. The right bottom section **Point of Contact** lists the primary and
-    secondary License Admin from the customer side and Cloudneeti points of
-    contact for this License.
-	![Manage Licenses](.././images/administratorGuide/Manage_Licenses.png#thumbnail)
+6.  Click **Edit** to **Configure Data Feed Scope & Frequency**.
 
-1. Click **Update** to edit the License Name
+7.  **Incident Management (Ticketing)** allows integrations with ticketing
+    systems such as ZenDesk and ServiceNow. Click **Edit** to configure Incident
+    Management.
 
-2. **Configure Data Feed Destinations** specifies where on the customer side
-    data feeds provided by Cloudneeti application will be stored.
-
-3. **Data Feed Scope & Frequency** specifies next level of details of data
-    feeds configuration
-
-4. **Configure reporting data feeds** specifies whether the reporting data
-    feeds functionality is enabled for this License or not.
-
-5. **Configure auditing data feeds** specifies whether the auditing data feeds
-    functionality is enabled for this License or not.
-
-6. **Incident Management (Ticketing)** allows integrations with ticketing
-    systems such as ZenDesk and ServiceNow.
-
-7. **Update Global Policies** allows configuration of security policies –
+8.  **Update Global Policies** allows configuration of security policies –
     enabling and disabling policies where data collection should occur.
 
-8. **Data Retention** displays the configured time period for retaining scan
-    and report data after the License expires.
+	![Manage Licenses](.././images/administratorGuide/Manage_Licenses.png#thumbnail)
 
-9. **Expiry / Renewal (UTC)** displays start and end date of the License.
-	![License Features](.././images/administratorGuide/License_Features.png#thumbnail)
 
-### License Name Update
+### License Name
 
-You can edit the **License Name** and click **Save**.
-	![License Name Update](.././images/administratorGuide/License_Name _Update.png#thumbnail)
+You can change the **License Name** and click **Save**.
+
+![License Name Update](.././images/administratorGuide/License_Name _Update.png#thumbnail)
 
 ### Data Feed – Reporting and Auditing
 ### STEP 1: Configure Data Feed Destinations
@@ -195,89 +176,99 @@ Auditing Data Sample
 Reporting Data Sample
 ![NoSql storage system](.././images/administratorGuide/Reporting_Data_Sample_NoSql.png#thumbnail)
 
-### Configure Incident Management system  
+Incident Management (Ticketing)
+-------------------------------
 
 Incident Management (Ticketing) allows integrations with ticketing systems such
-as ZenDesk and ServiceNow.Ticket prioritization based on policy categories. Tickets/incidents will be created for non-compliant policies from selected categories and for configured accounts.
+as ZenDesk and ServiceNow.
 
-1. Go to settings and click on **Configure Integrations** 
+1.  **Select Ticketing System** from dropdown (ServiceNow, ZenDesk).
 
-2. Click on **Edit** button of Incident Management (Ticketing). 
+2.  Select **Frequency of Ticket Creation**
 
-    ![Ticketing](.././images/administratorGuide/ConfigureIntegrations.png#thumbnail)
+3.  Select **All Accounts** or **Selected accounts**
 
-3. Select desired Ticketing system Zendesk or Service Now. 
+4.  Select **Included Accounts**
 
-4. Click on **Configure** button. 
+5.  Select **Azure, Office365 or AWS**
 
-    ![Ticketing](.././images/administratorGuide/ConfigureButton.png#thumbnail)
+6.  Select items in **Available Categories** section and click (6) to allocate
+    High Priority or move them back to Available Categories
 
-5. Enter Ticketing system configuration details
+7.  Select items in **Available Categories** section and click (7) to allocate
+    Medium Priority or move them back to Available Categories
 
-    #### Zendesk
+8.  Select items in **Available Categories** section and click (8) to allocate
+    Low Priority or move them back to Available Categories
 
-    Zendesk Sub-Domain  
+9.  Click **Save**
+    ![Incident Management (Ticketing)](.././images/administratorGuide/Incident_Management_Ticketing.png#thumbnail)
 
-    Zendesk User Id 
+### ServiceNow integration 
 
-    Choose and enter Zendesk Access Type: Password Access or Token Access 
+The following steps are required to configure ServiceNow integration in the
+Cloudneeti application.
 
-    Assign Ticket To (Email Id Tickets will be assigned to email@example.com) 
+1.  Select **Service Now** in the dropdown
 
-    ![Ticketing](.././images/administratorGuide/Zendesk.png#thumbnail)
+2.  Click **Configure**
 
-    #### Service Now
+![ServiceNow integration](.././images/administratorGuide/ServiceNow.png#thumbnail)
 
-    Service Now Instance 
+Configure ServiceNow integration.
 
-    Service Now User Id 
+1.  Enter **Instance Name**
 
-    ServiceNow Access Type: Password Access or Token Access 
+2.  Enter **Instance Username**
 
-    Assign Ticket To (Email Id, Tickets will be assigned to email@example.com) 
+3.  Select **ServiceNow Access Type**
 
-    ![Ticketing](.././images/administratorGuide/ServiceNow.png#thumbnail)
+4.  Select **Instance password**
 
-### Incident Management Scope & Frequency
+5.  Enter **Assign Ticket To**
 
-1. **Select Ticketing System** from dropdown (ZenDesk, ServiceNow).
+6.  Click **Save**
+![ServiceNow integration](.././images/administratorGuide/ServiceNow2.png#thumbnail)
 
-2. Select **Frequency of Ticket Creation**
+### ZenDesk integration 
 
-3. Select **All Accounts** or **Selected accounts**
+The following steps are required to configure ZenDesk integration in the
+Cloudneeti application.
 
-4. Select **Azure, Office365 or AWS**
+1.  Select **ZenDesk** in the dropdown
 
-5. Select items in **Available Categories** section and click (6), (7) or (8)
-    to allocate High Priority, Medium Priority or Low Priority to related
-    category of security policies. You can also select items in High Priority,
-    Medium Priority or Low Priority sections and click (6), (7) or (8) to move
-    them back to Available Categories and reallocate by moving into a different
-    category section.
+2.  Click **Configure**
 
-6. Click icon to move items between the **Available Categories** section and
-    High Priority section
+![ZenDesk integration](.././images/administratorGuide/Zendesk1.png#thumbnail)
 
-7. Click icon to move items between the **Available Categories** section and
-    Medium Priority section
+Configure ZenDesk integration.
 
-8. Click icon to move items between the **Available Categories** section and
-    Low Priority section
+1.  Enter **ZenDesk Subdomain**
 
-9. Click Save
-	![Incident Management](.././images/administratorGuide/Incident_Management.png#thumbnail)
+2.  Enter **ZenDesk User ID**
 
-### Update Global Policies
+3.  Select **ZenDesk Access Type**
+
+4.  Enter **ZenDesk password/token**
+
+5.  Enter **Assign Ticket To**
+
+6.  Click **Save**
+
+Update Global Policies
+-------------------------------
 
 Update Global Policies allows selection of security policies that should be
 excluded from data collection.
 
-1. Select Azure Policies, Office365 policies or AWS Policies
+1.  Select **Azure Policies, Office365 policies or AWS Policies**
 
-2. Select single or multiple security policies from the left section
+2.  Select single or multiple security policies from the Included Policies
+    section
 
-3. Click on icons to move security policies to the right section Excluded
-    Policies and back
+3.  Click on icons to move selected security policies to the right section
+    Excluded Policies and back
 
-4. Click Save
+4.  Click **Save**
+
 	![Update_Global_Policies](.././images/administratorGuide/Update_Global_Policies.png#thumbnail)
