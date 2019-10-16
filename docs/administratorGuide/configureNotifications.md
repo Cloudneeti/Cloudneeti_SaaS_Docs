@@ -2,9 +2,9 @@
 
 Scan notifications allow a cloud account user to subscribe to changes in security posture. To receive email notifications on a scan from Cloudneeti Bot, please refer following steps.
 
-1.	On Cloudneeti portal, navigate to **Settings**
+1.	On Cloudneeti portal, navigate to **Configurations**
 
-2.	Click on **Manage Cloud Accounts**
+2.	Click on **Cloud Accounts**
 
 3.  Select desired License and Account 
 
