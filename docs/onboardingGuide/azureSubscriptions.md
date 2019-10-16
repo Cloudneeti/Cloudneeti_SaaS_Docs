@@ -56,14 +56,14 @@ Cloudneeti application will not be able to collect the data for the related
 policies. Excluded security policies by permission are listed later in this
 document.
 
-| Information                                                 | Portal to use     | Role               | Step     | Type      | Policies     |
-|-------------------------------------------------------------|-------------------|--------------------|----------|-----------|--------------|
-| Directory Read All Microsoft Graph permissions              | Microsoft Azure   | Global AD Admin    | STEP 1   | optional  | 5            |
-| Reader role for Azure Subscription level scope              | Microsoft Azure   | Subscription Owner | STEP 2   | mandatory | 0            |
-| Backup reader role for Azure Subscription level scope       | Microsoft Azure   | Subscription Owner | STEP 2   | optional  | 4            |
-| Website contributor role for Azure Subscription level scope | Microsoft Azure   | Subscription Owner | STEP 2   | optional  | 15           |
-| Storage Account Contributor role for Azure Subscription level scope  | Microsoft Azure   | Subscription Owner | STEP 2   | optional  | 1            |
-| Key Vault access policies for specific managed Key Vaults   | Microsoft Azure   | Subscription Owner | STEP 2   | optional  | 1            |
+| Object | Role / Permission                                                 | Portal to use     | Role               | Step     | Type      | Policies     |
+|------|-------------------------------------------------------------|-------------------|--------------------|----------|-----------|--------------|
+| Azure Active Directory | Directory Read All Microsoft Graph              | Microsoft Azure   | Global AD Admin    | STEP 1   | optional  | 5            |
+| Azure Subscription | Reader              | Microsoft Azure   | Subscription Owner | STEP 2   | mandatory | 0            |
+| Azure Subscription | Backup reader        | Microsoft Azure   | Subscription Owner | STEP 2   | optional  | 4            |
+| Azure Subscription | Website contributor | Microsoft Azure   | Subscription Owner | STEP 2   | optional  | 15           |
+| Azure Subscription | Storage Account Contributor | Microsoft Azure   | Subscription Owner | STEP 2   | optional  | 1            |
+| Key Vault | Access Policy   | Microsoft Azure   | Subscription Owner | STEP 2   | optional  | 1            |
 
 ## STEP 1: Register Cloudneeti application Manually or using Azure powershell script
 
@@ -383,7 +383,7 @@ before they can be displayed in Cloudneeti dashboards.
 
 Congratulations! You have added an Azure subscription to Cloudneeti application.
 
-## Security Polices with Required Permissions
+## Security Polices with required roles, permissions
 
 The following Security Policies will be excluded if one or multiple roles are
 not assigned.
