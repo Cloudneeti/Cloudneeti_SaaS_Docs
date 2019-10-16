@@ -54,7 +54,8 @@ Select Settings on the left menu and click on Manage Accounts.
 You can edit the **License Name** and click **Save**.
 	![License Name Update](.././images/administratorGuide/License_Name _Update.png#thumbnail)
 
-### Configure Data Feed Destinations
+### Data Feed – Reporting and Auditing
+### STEP 1: Configure Data Feed Destinations
 
 Cloudneeti application supports two types of data feed destinations:
 
@@ -69,17 +70,27 @@ Please select the type of storage system you would like to use.
 CSV files will be streamed to the storage account after every successful data
 collection.
 
-1. Select **object storage system**
+1.  Select **Object storage system,** the customer’s Azure Storage Account with
+    Blob containers where Cloudneeti will continuously publish detailed data on
+    every successful scan.
 
-2. Enter **Azure Storage Account Connection String**
+2.  Enter **Azure Storage Account Connection String**, the connection string
+    required for Cloudneeti to connect to Customer’s Storage account.
 
-3. Enter **Container name for reporting**
+3.  Enter **Container name for reporting,** the name to the folder (aka
+    Container) under which scan data will be published. If the Container name
+    doesn’t exist, it’ll be created.
 
-4. Enter **Container name for auditing**
+4.  Enter **Container name for auditing**, the separate container name where
+    audit data will be published. If the Container name doesn’t exist, it’ll be
+    created.
 
-5. Click **Verify Connection** to verify connection status
+5.  **Select region** where the data will be sent to.
 
-6. Click **Save**
+6.  Click **Verify Connection**
+
+7.  Click **Save**
+
 	![Storage System](.././images/administratorGuide/Storage_System.png#thumbnail)
 
 #### NoSql storage system
@@ -87,26 +98,50 @@ collection.
 JSON files will be streamed to the storage account after every successful data
 collection.
 
-1. Select **NoSql storage system**
+1.  Select **NoSql storage system**, the customer’s Azure Cosmos DB account.
 
-2. Enter **Cosmos DB connection string**
+2.  Enter **Cosmos DB connection string**, the connection string required for
+    Cloudneeti to connect to Customer’s Cosmos DB.
 
-3. Enter **Database Name**
+3.  Enter **Database Name**, where the data feed will be published.
 
-4. Enter **Collection name for reporting**
+4.  Enter **Collection name for reporting**, the name of Cosmos DB collection
+    for storing scan data.
 
-5. Enter **TTL for reporting data**
+5.  Enter **TTL for reporting data**, the time-to-live (TTL) parameter for the
+    documents. TTL will affect how long the documents are to be retained in the
+    Cosmos DB, after which they will automatically expire.
 
-6. Enter **Collection name for auditing**
+6.  Enter **Collection name for auditing**, the name of Cosmos DB collection for
+    storing Audit data.
 
-7. Enter **TTL for auditing data**
+7.  Enter **TTL for auditing data,** the time-to-live (TTL) parameter for the
+    documents.
 
-8. Click **Verify Connection** to verify connection status
+8.  **Select Region** where the data will be sent to
 
-9. Click **Save**
+9.  Click **Verify Connection** to verify connection status
+
+ 10. Click **Save**
+
 	![NoSql storage system](.././images/administratorGuide/NoSql_Storage_System.png#thumbnail)
 
-### Data Feed Scope & Frequency
+
+### STEP 2: Enable Reporting Data Feeds
+
+Login to Cloudneeti portal with License Admin role. Navigate to Configure
+integrations to enable the Reporting Data Feeds.
+
+![STEP 2: Enable Reporting Data Feeds](.././images/administratorGuide/Enable_Reporting_Data_feeds.png#thumbnail)
+
+### STEP 3: Enable Auditing Data Feeds
+
+Login to Cloudneeti portal with License Admin role. Navigate to Configure
+integrations to enable the Reporting Data Feeds.
+![STEP 3: Enable Auditing Data Feeds](.././images/administratorGuide/Enable_Auditing_Data_Feeds.png#thumbnail)
+
+
+### STEP 4: Configure Data Feed Scope & Frequency
 
 **Data Feed Scope & Frequency** allows selection of reporting and / or auditing
 type of data feeds and the frequency of data feeds.
@@ -122,6 +157,43 @@ type of data feeds and the frequency of data feeds.
 
 The following settings can be updated at an individual benchmark level.
 	![Data Feed Scope](.././images/administratorGuide/Benchmark_Level.png#thumbnail)
+
+
+### STEP 5: Verify data feed 
+
+1.  Reporting data feed gets triggered as per frequency configured and after
+    every Cloud Account scan in Cloudneeti
+
+2.  Auditing data feed is triggered as per set frequency.
+
+#### Object storage system
+
+CSV files will be streamed to the storage account after every successful data
+collection.
+
+Login to Azure portal and navigate to the Storage account configured for Data
+Feed and verify the data.
+
+Auditing Data Sample
+
+![Object storage system](.././images/administratorGuide/Auditing_Data_Sample.png#thumbnail)
+
+Reporting Data Sample
+![Object storage system](.././images/administratorGuide/Reporting_Data_Sample.png#thumbnail)
+
+#### NoSql storage system
+
+JSON files will be streamed to the storage account after every successful data
+collection.
+
+Login to Azure portal and navigate to the Cosmos DB instance configured for Data
+Feed and verify the data.
+
+Auditing Data Sample
+![NoSql storage system](.././images/administratorGuide/Auditing_Data_Sample_NoSql.png#thumbnail)
+
+Reporting Data Sample
+![NoSql storage system](.././images/administratorGuide/Reporting_Data_Sample_NoSql.png#thumbnail)
 
 ### Configure Incident Management system  
 
