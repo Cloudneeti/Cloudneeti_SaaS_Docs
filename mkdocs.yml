@@ -48,6 +48,7 @@ nav:
   - Compliance Benchmarks: userGuide/complianceBenchmarks.md
   - Reports: userGuide/reports.md
 - Administrator Guide:
+  - Features and Quotas: administratorGuide/featuresAndQuatas.md
   - Manage Accounts: administratorGuide/manageAccounts.md
   - Manage Licenses: administratorGuide/manageLicenses.md
   - Manage Users: administratorGuide/manageUsers.md
