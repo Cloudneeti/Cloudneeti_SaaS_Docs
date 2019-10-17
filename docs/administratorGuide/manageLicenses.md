@@ -1,39 +1,30 @@
-Configure Integrations
+Integrations
 ======================
 
 License Admins will have the rights to managed configure integrations.
 
-Select Settings on the left menu and click on Configure Integrations.
+Select **Configurations** on the left menu and click on **Integrations**.
 
 1.  Select the required **License** from the dropdown menu
 
-2.  Click **Update** to edit the License Name
-
-3.  Click **Edit** to **Configure Data Feed Destinations** that specifies where
+2.  Click **Edit** to **Configure Data Feed Destinations** that specifies where
     the data feeds provided by Cloudneeti application will be stored on the
     customer side.
 
-4.  Turn **On / Off** to **Enable Reporting Data Feeds**
+3.  Turn **On / Off** to **Enable Reporting Data Feeds**
 
-5.  Turn **On / Off** to **Enable Auditing Data Feeds**
+4.  Turn **On / Off** to **Enable Auditing Data Feeds**
 
-6.  Click **Edit** to **Configure Data Feed Scope & Frequency**.
+5.  Click **Edit** to **Configure Data Feed Scope & Frequency**.
 
-7.  **Incident Management (Ticketing)** allows integrations with ticketing
+6.  **Incident Management (Ticketing)** allows integrations with ticketing
     systems such as ZenDesk and ServiceNow. Click **Edit** to configure Incident
     Management.
-
-8.  **Update Global Policies** allows configuration of security policies –
-    enabling and disabling policies where data collection should occur.
 
 	![Manage Licenses](.././images/administratorGuide/Manage_Licenses.png#thumbnail)
 
 
-### License Name
 
-You can change the **License Name** and click **Save**.
-
-![License Name Update](.././images/administratorGuide/License_Name _Update.png#thumbnail)
 
 ### Data Feed – Reporting and Auditing
 ### STEP 1: Configure Data Feed Destinations
