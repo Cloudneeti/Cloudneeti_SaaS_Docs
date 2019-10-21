@@ -246,20 +246,3 @@ Configure ZenDesk integration.
 
 6.  Click **Save**
 
-Update Global Policies
--------------------------------
-
-Update Global Policies allows selection of security policies that should be
-excluded from data collection.
-
-1.  Select **Azure Policies, Office365 policies or AWS Policies**
-
-2.  Select single or multiple security policies from the Included Policies
-    section
-
-3.  Click on icons to move selected security policies to the right section
-    Excluded Policies and back
-
-4.  Click **Save**
-
-	![Update_Global_Policies](.././images/administratorGuide/Update_Global_Policies.png#thumbnail)
