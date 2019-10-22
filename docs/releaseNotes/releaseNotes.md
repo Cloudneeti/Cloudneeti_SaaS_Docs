@@ -8,6 +8,7 @@
 1.  **User Experience Improvements**
     * Introducing partner co-branding feature:  Co-branding of UI and reports allow a partner to theme the end-user experiences with the partner portal’s look and feel.
     * Added documentation link in the left menu bar.
+    * Removed word report download functionality for further optimization.
     * Re-arranged following functionality of policy exclusion as below
 
         |  | **Previously** | **Updated** |
@@ -98,6 +99,24 @@
         | System Maintenance | Ensure permissions on /etc/passwd are configured |
         | System Maintenance | Ensure permissions on /etc/group are configured |
         | System Maintenance | Ensure root is the only UID 0 account |
+
+    *   Disabled the following security policies for Azure cloud accounts as there are updates from Microsoft API response. These policies are disabled temporarily.
+
+        | **Category** | **Policy Title** |
+        | --- | --- |
+        | Azure - Compute (PaaS and Serverless) | Ensure that &#39;Python version&#39; is latest, if used to run the web app |
+        | Azure - Compute (PaaS and Serverless) | Ensure that latest supported Java version is used for Web Application |
+        | Azure - Compute (PaaS and Serverless) | Ensure that &#39;.Net Framework&#39; version is latest, if used as a part of the web app |
+        | Azure - Compute (PaaS and Serverless) | Ensure that latest supported PHP version is used for Web Application |
+        | Azure - Compute (PaaS and Serverless) | Ensure that latest supported Node.js version is used for Web Application |
+        | Azure - Compute (PaaS and Serverless) | Ensure that latest supported Java version is used for Mobile Apps |
+        | Azure - Compute (PaaS and Serverless) | Ensure that latest supported PHP version is used for Mobile Apps |
+        | Azure - Compute (PaaS and Serverless) | Ensure that latest supported PHP version is used for API Apps |
+        | Azure - Compute (PaaS and Serverless) | Ensure that latest supported PHP version is used for Function Apps |
+        | Azure - Compute (PaaS and Serverless) | Ensure that latest supported Java version is used for API Apps |
+        | Azure - Compute (PaaS and Serverless) | Ensure that latest supported Node.js version is used for Function Apps |
+        | Azure - Compute (PaaS and Serverless) | Ensure that latest supported Node.js version is used for API Apps |
+        | Azure - Compute (PaaS and Serverless) | Ensure that latest supported Node.js version is used for Mobile Apps |
 
     *   Added the following new security policies for AWS cloud account
 
