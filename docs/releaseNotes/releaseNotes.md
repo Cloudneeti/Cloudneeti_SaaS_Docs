@@ -1,5 +1,6 @@
 ﻿﻿Releases in 2019
 ===============
+<div class="release_notes">
 
 **October 2019- v2.19.1**
 ----------------------------
@@ -11,8 +12,8 @@
 
         |  | **Previously** | **Updated** |
         | --- | --- | --- |
-        | Global policy exclusions | Left menu bar  SettingsConfigure IntegrationsUpdate Global Policies |  Left menu bar  Configurations  Security Policy Exclusion |
-        | Account-level policy exclusion | Left menu bar  SettingsManage Cloud AccountsConfigure AccountConfigure Security Policies |
+        | Global policy exclusions | Left menu bar -> Settings -> Configure Integrations -> Update Global Policies |  Left menu bar -> Configurations -> Security Policy Exclusion |
+        | Account-level policy exclusion | Left menu bar -> Settings -> Manage Cloud Accounts -> Configure Account -> Configure Security Policies |  Left menu bar -> Configurations -> Security Policy Exclusion |
 
 
     * Updated menu items as below for more appropriate meaning and location
