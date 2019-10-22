@@ -24,9 +24,7 @@ Select **Configurations** on the left menu and click on **Integrations**.
 	![Manage Licenses](.././images/administratorGuide/Manage_Licenses.png#thumbnail)
 
 
-
-
-### Data Feed – Reporting and Auditing
+## Data Feed – Reporting and Auditing
 ### STEP 1: Configure Data Feed Destinations
 
 Cloudneeti application supports two types of data feed destinations:
@@ -167,13 +165,71 @@ Auditing Data Sample
 Reporting Data Sample
 ![NoSql storage system](.././images/administratorGuide/Reporting_Data_Sample_NoSql.png#thumbnail)
 
+
 Incident Management (Ticketing)
 -------------------------------
 
+### STEP 1: Configure ticketing system integration for ServiceNow or Zendesk
 Incident Management (Ticketing) allows integrations with ticketing systems such
 as ZenDesk and ServiceNow.
 
-1.  **Select Ticketing System** from dropdown (ServiceNow, ZenDesk).
+#### ServiceNow 
+
+The following steps are required to configure ServiceNow integration in the
+Cloudneeti application.
+
+1.  Select **Service Now** in the dropdown
+
+2.  Click **Configure**
+
+    ![ServiceNow integration](.././images/administratorGuide/ServiceNow.png#thumbnail)
+
+3. Configure ServiceNow integration.
+
+4.  Enter **Instance Name**
+
+5.  Enter **Instance Username**
+
+6.  Select **ServiceNow Access Type**
+
+7.  Select **Instance password**
+
+8.  Enter **Assign Ticket To**
+
+9.  Click **Save**
+
+    ![ServiceNow integration](.././images/administratorGuide/ServiceNow2.png#thumbnail)
+
+
+#### ZenDesk 
+
+The following steps are required to configure ZenDesk integration in the
+Cloudneeti application.
+
+1.  Select **ZenDesk** in the dropdown
+
+2.  Click **Configure**
+
+    ![ZenDesk integration](.././images/administratorGuide/Zendesk1.png#thumbnail)
+
+3.  Configure ZenDesk integration.
+
+4.  Enter **ZenDesk Subdomain**
+
+5.  Enter **ZenDesk User ID**
+
+6.  Select **ZenDesk Access Type**
+
+7.  Enter **ZenDesk password/token**
+
+8.  Enter **Assign Ticket To**
+
+9.  Click **Save**
+
+
+### STEP 2: Configure Incident Management
+
+1.  Select **Ticketing System** from dropdown (ServiceNow, ZenDesk).
 
 2.  Select **Frequency of Ticket Creation**
 
@@ -193,56 +249,43 @@ as ZenDesk and ServiceNow.
     Low Priority or move them back to Available Categories
 
 9.  Click **Save**
+    
     ![Incident Management (Ticketing)](.././images/administratorGuide/Incident_Management_Ticketing.png#thumbnail)
 
-### ServiceNow integration 
 
-The following steps are required to configure ServiceNow integration in the
-Cloudneeti application.
+### STEP 3: Verify tickets created
+Tickets are created for non-compliant resources after every successful scan.
 
-1.  Select **Service Now** in the dropdown
+#### Zendisk Tikcet Sample
 
-2.  Click **Configure**
+Sample Zendisk Ticket List
 
-![ServiceNow integration](.././images/administratorGuide/ServiceNow.png#thumbnail)
+![ZenDesk integration sample1](.././images/administratorGuide/ZendeskTicketList.png#thumbnail)
 
-Configure ServiceNow integration.
+ Sample Zendisk Ticket 
+ 
+License and account details
 
-1.  Enter **Instance Name**
+![ZenDesk integration sample2](.././images/administratorGuide/ZendeskTicket_LicenseAccountDetails.png#thumbnail)
 
-2.  Enter **Instance Username**
+Policy Recommendation, Audit Procedure and Remediation 
 
-3.  Select **ServiceNow Access Type**
+![ZenDesk integration sample3](.././images/administratorGuide/ZendeskTicket_PolicySpecification.png#thumbnail)
 
-4.  Select **Instance password**
+#### ServiceNow Incident Sample
 
-5.  Enter **Assign Ticket To**
+Sample ServiceNow Incidents List
 
-6.  Click **Save**
-![ServiceNow integration](.././images/administratorGuide/ServiceNow2.png#thumbnail)
+![ServiceNow integration](.././images/administratorGuide/ServiceNow_IncidentList.png#thumbnail)
 
-### ZenDesk integration 
+Sample ServiceNow Incident
 
-The following steps are required to configure ZenDesk integration in the
-Cloudneeti application.
+![ServiceNow integration](.././images/administratorGuide/ServiceNow_Incident.png#thumbnail)
 
-1.  Select **ZenDesk** in the dropdown
+Sample ServiceNow Problem
 
-2.  Click **Configure**
+![ServiceNow integration](.././images/administratorGuide/ServiceNow_Incident_RelatedProblems.png#thumbnail)
 
-![ZenDesk integration](.././images/administratorGuide/Zendesk1.png#thumbnail)
+Sample ServiceNow Problem Task
 
-Configure ZenDesk integration.
-
-1.  Enter **ZenDesk Subdomain**
-
-2.  Enter **ZenDesk User ID**
-
-3.  Select **ZenDesk Access Type**
-
-4.  Enter **ZenDesk password/token**
-
-5.  Enter **Assign Ticket To**
-
-6.  Click **Save**
-
+![ZenDesk integration](.././images/administratorGuide/ServiceNow_ProblemTask_LicenseDetails.png#thumbnail)
