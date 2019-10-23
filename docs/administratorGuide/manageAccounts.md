@@ -1,4 +1,4 @@
-Manage Cloud Accounts
+Cloud Accounts
 ===============
 
 License Admins and Account Admins will have the rights to manage Account level
