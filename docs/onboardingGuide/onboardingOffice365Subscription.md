@@ -84,6 +84,7 @@ this document.
 |-------------------------------------------------|----------------|-------------------|------|
 | Azure Active Directory | Directory Read All Microsoft Graph permissions       | Microsoft Azure   | Global AD Admin    | 
 | Azure Active Directory | Security Events Read All Microsoft Graph permissions | Microsoft Azure   | Global AD Admin    | 
+| Azure Active Directory | DeviceManagementConfiguration.Read.All Microsoft Graph permissions | Microsoft Azure   | Global AD Admin    | 
 | Cloudneeti Agent | Office 365 Global Administrator Access Permission | Microsoft Azure   | Subscription Owner | 
 
 ## STEP 1: Register Cloudneeti Application
@@ -144,6 +145,7 @@ permission [here](https://docs.microsoft.com/en-us/graph/permissions-reference)
 |-----------------|---------------------------------------------------------------------------------------------------------------------|-------------|
 | Microsoft.Graph | Directory.Read.All [Refer here](https://docs.microsoft.com/en-us/graph/permissions-reference#directory-permissions) | Application |
 | Microsoft.Graph | SecurityEvents.Read.All [Refer here](https://docs.microsoft.com/en-us/graph/permissions-reference#security-permissions)                                                                                           | Application |
+| Microsoft.Graph | DeviceManagementConfiguration.Read.All [Refer here](https://docs.microsoft.com/en-us/graph/permissions-reference#intune-device-management-permissions)                                                                                           | Application |
 
 5. Click **Grant admin consent** in the Grant consent section (2)
 	![API Permission](.././images/onboardingOffice365Subscription/Grant_Admin_Consent.png#thumbnail)
@@ -204,6 +206,7 @@ Cloudneeti application to be able to collect the Azure AD data.
 |-----------------|---------------------------------------------------------------------------------------------------------------------|-------------|
 | Microsoft.Graph | Directory.Read.All [Refer here](https://docs.microsoft.com/en-us/graph/permissions-reference#directory-permissions) | Application |
 | Microsoft.Graph | SecurityEvents.Read.All [Refer here](https://docs.microsoft.com/en-us/graph/permissions-reference#security-permissions)  | Application |
+| Microsoft.Graph | DeviceManagementConfiguration.Read.All [Refer here](https://docs.microsoft.com/en-us/graph/permissions-reference#intune-device-management-permissions)                                                                                           | Application |
 
 6. Click **Grant admin consent** in the Grant consent section (2)
 	![Grant_Admin_Consent](.././images/onboardingOffice365Subscription/Grant_Admin_Consent.png#thumbnail)
@@ -330,41 +333,67 @@ Login to Cloudneeti portal as a License Admin.
 
 ##### License id
 
-1. Navigate to **Features and Quota​s** under **Settings**
+1. Navigate to **Features and Quota​s** under **Configurations**
 2. Copy license ID and paste to notepad.
 	![License id](.././images/onboardingOffice365Subscription/License_Id.png#thumbnail)
 
 ##### Account id
-1. Navigate to **Manage Cloud Accounts** in **Settings**
+1. Navigate to **Cloud Accounts** in **Configurations**
 2. Copy account ID and paste to notepad.
 	![Manage Accounts](.././images/onboardingOffice365Subscription/Manage_Accounts.png#thumbnail)
 
-#### Cloudneeti artifacts and data collector details
-Contact Cloudneeti Team for:
+#### Office 365 details
 
--   Cloudneeti environment
+Office Admin id and office domain can be retrieved from the user id used for
+signing-in like userid\@domain.com.
 
--   ArtifactsName
+Cloudneeti platform queries and processes Office 365 meta-data using a
+non-interactive login credential. As the background job processing is
+non-interactive it’ll require a service account credential. The following is the
+process outlined to create a secure service account credential.
 
--   DataCollectorVersion
+Sign into your Office 365 portal (e.g. <https://outlook.office.com/mail/inbox>)
+as global administrator.
 
--   ArtifactsAccessKey.
+##### Create Office 365 user
+Create Office 365 user with roles **SharePoint Administrator** and **Exchange Administrator**
 
-##### Azure details
+1. Login to [office portal](https://www.office.com)
+2. Click **Admin** to go to **M365 Admin center**
+	
+	![Admin Center](.././images/onboardingOffice365Subscription/M365AdminCenter.png#thumbnail)
 
-Login to Azure portal <https://portal.azure.com> as subscription owner.
+3. Select **Users** 
+4. Click **Add a user**
+5. Fill in Basics and Product License details
 
-##### Azure Subscription ID
+	![Basic info](.././images/onboardingOffice365Subscription/addUser.png#thumbnail)
 
-1. Choose your Azure AD tenant by selecting your **Azure subscription** in the
-    top right corner of the page
-2. Select **Default Directory**
-	![Default Directory](.././images/onboardingOffice365Subscription/Default_Directory.png#thumbnail)
-3. Click on **Subscriptions** (1) on the primary menu
-4. Select the desired **Azure subscription** (2)
-	![Azure subscription](.././images/onboardingOffice365Subscription/Azure_Subscription.png#thumbnail)
-5. Copy **Subscription ID** to a notepad
-	![Subscription ID](.././images/onboardingOffice365Subscription/Subscription_Id.png#thumbnail)
+6. Select **SharePoint Administrator** and **Exchange Administrator** from Common specialist roles
+7. Click **Finish adding**
+
+	![Basic info](.././images/onboardingOffice365Subscription/AdminRoles_Save.png#thumbnail)
+
+
+##### Enable MFA and create application password
+
+Follow [link](https://docs.microsoft.com/en-us/office365/admin/security-and-compliance/set-up-multi-factor-authentication?view=o365-worldwide#set-up-multi-factor-authentication-in-the-new-microsoft-365-admin-center) to enable MFA
+
+
+Sign into your Office 365 portal (e.g. <https://outlook.office.com/mail/inbox>)
+as user created above [step](.././onboardingOffice365Subscription/#create-office-365-user)
+
+1. Choose **My Account Settings**
+	![My Account Settings](.././images/onboardingOffice365Subscription/My_Account_Settings.png#thumbnail)
+2. Select **Security & privacy**
+3. Select **Additional security verification**
+    Note : If you do not see additional security configuration them make sure you have enabled MFA for your user. 
+4. Click **Create and manage app passwords**
+	![Create and manage app passwords](.././images/onboardingOffice365Subscription/Manage_Password.png#thumbnail)
+5. Select **app passwords**
+6. Click **create**
+7. Get an app password
+	![App Password](.././images/onboardingOffice365Subscription/App_Password.png#thumbnail)
 
 #### Generate Cloudneeti API key
 
@@ -404,54 +433,37 @@ Once you receive the confirmation, proceed with the following steps.
 4. Copy the **Primary key** to your notepad.
 	![Primary key](.././images/onboardingOffice365Subscription/Primary_key.png#thumbnail)
 
-#### Office 365 details
-
-Office Admin id and office domain can be retrieved from the user id used for
-signing-in like userid\@domain.com.
-
-Cloudneeti platform queries and processes Office 365 meta-data using a
-non-interactive login credential. As the background job processing is
-non-interactive it’ll require a service account credential. The following is the
-process outlined to create a secure service account credential.
-
-Sign into your Office 365 portal (e.g. <https://outlook.office.com/mail/inbox>)
-as global administrator.
-
-##### Create Office 365 user
-Create Office 365 user with roles **SharePoint Administrator** and **Exchange Administrator**
-
-1. Login to [office portal](https://www.office.com)
-2. Click **Admin** to go to **M365 Admin center**
-	
-	![Admin Center](.././images/onboardingOffice365Subscription/M365AdminCenter.png#thumbnail)
-
-3. Select **Users** 
-4. Click **Add a user**
-5. Fill in Basics and Product License details
-
-	![Basic info](.././images/onboardingOffice365Subscription/addUser.png#thumbnail)
-
-6. Select **SharePoint Administrator** and **Exchange Administrator** from Common specialist roles
-7. Click **Finish adding**
-
-	![Basic info](.././images/onboardingOffice365Subscription/AdminRoles_Save.png#thumbnail)
 
 
-##### Enable MFA and create application password
+#### Cloudneeti artifacts and data collector details
+Contact Cloudneeti Team for:
 
-Sign into your Office 365 portal (e.g. <https://outlook.office.com/mail/inbox>)
-as user created above [step](.././onboardingOffice365Subscription/#create-office-365-user)
+-   Cloudneeti environment
 
-1. Choose **My Account Settings**
-	![My Account Settings](.././images/onboardingOffice365Subscription/My_Account_Settings.png#thumbnail)
-2. Select **Security & privacy**
-3. Select **Additional security verification**
-4. Click **Create and manage app passwords**
-	![Create and manage app passwords](.././images/onboardingOffice365Subscription/Manage_Password.png#thumbnail)
-5. Select **app passwords**
-6. Click **create**
-7. Get an app password
-	![App Password](.././images/onboardingOffice365Subscription/App_Password.png#thumbnail)
+-   ArtifactsName
+
+-   DataCollectorVersion
+
+-   ArtifactsAccessKey
+
+
+##### Azure details
+
+Login to Azure portal <https://portal.azure.com> as subscription owner.
+
+##### Azure Subscription ID
+
+1. Choose your Azure AD tenant by selecting your **Azure subscription** in the
+    top right corner of the page
+2. Select **Default Directory**
+	![Default Directory](.././images/onboardingOffice365Subscription/Default_Directory.png#thumbnail)
+3. Click on **Subscriptions** (1) on the primary menu
+4. Select the desired **Azure subscription** (2)
+	![Azure subscription](.././images/onboardingOffice365Subscription/Azure_Subscription.png#thumbnail)
+5. Copy **Subscription ID** to a notepad
+	![Subscription ID](.././images/onboardingOffice365Subscription/Subscription_Id.png#thumbnail)
+
+
 
 ### 3.2 Provision Office 365 data collector 
 
@@ -476,7 +488,7 @@ Switch to Azure AD with the Azure Subscription with pre-requisite access.
 6. Switch to the User directory
 	<pre>
 	<code>```
-		cd \$User
+		cd $User
 	```</code>
 	</pre>
 7. Run provisioning script with inline parameters
@@ -553,6 +565,24 @@ Cloudneeti portal will show details for policies from next scan.
 The following Security Policies will be excluded if advanced security
 configuration is not done.
 
+### Micorosft graph permission - DeviceManagementConfiguration.Read.All
+Microsoft graph permission DeviceManagementConfiguration.Read.All is required to collect data for device related security policies listed below.
+
+| **Policy-Id** | **Policy Name**                                                                                                                                                    | **Category**                     |
+|---------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------|
+| M300.1        | 1. Ensure that mobile devices require complex passwords with atleast two character sets to prevent brute force attacks                                                                                      | Device         |
+| M300.2          | 1. Ensure that mobile device encryption is enabled to prevent unauthorized access to mobile data                                                                                      | Device         |
+| M300.3          | 1. Require mobile devices to manage email profile                                                                                      | Device         |
+| M300.4          | 1. Ensure that mobile devices require a complex password with a minimum password length to prevent brute force attacks                                                                                     | Device         |
+| M300.6          | 2. Ensure that mobile devices are set to never expire passwords                                                                                      | Device         |
+| M300.7          | 1. Require mobile devices to use a password                                                                                     | Device         |
+| M300.8          | 1. Ensure that users cannot connect from devices that are jail broken or rooted                                                                                       | Device         |
+| M300.9         | 1. Ensure that mobile devices require complex passwords to prevent brute force attacks                                                                                     | Device         |
+| M300.10          | 1. Enable mobile devices to wipe on multiple sign-in failures to prevent brute force compromise                                                                                    | Device         |
+| M300.12          | 1. Ensure that settings are enable to lock multiple devices after a period of inactivity to prevent unauthorized access                                                                                       | Device         |
+| M300.13          | 1. Ensure that mobile device password reuse is prohibited                                                                                       | Device         |
+| M300.35          | 1. Ensure that devices connecting have local firewall enabled                                                                                     | Device         |
+
 ### Advanced security configuration
 
 The advanced security policy data collector enables the following 19 policies as
@@ -562,25 +592,26 @@ available in the Center for Internet Security (CIS) Microsoft 365 benchmark
 
 | **Policy-Id** | **Policy Name**                                                                                                                                                    | **Category**                     |
 |---------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------|
-| 1.6           | 1. (L1) Ensure modern authentication for SharePoint applications is required                                                                                       | Account / Authentication         |
-| 2.2           | 2. (L2) Ensure calendar details sharing with external users is disabled                                                                                            | Application Permissions          |
-| 2.3           | 3. (L2) Ensure Office 365 ATP SafeLinks for Office Applications is Enabled                                                                                         | Application Permissions          |
-| 2.4           | 4. (L2) Ensure Office 365 ATP for SharePoint, OneDrive, and Microsoft Teams is Enabled                                                                             | Application Permissions          |
-| 3.5           | 5. (L2) Ensure that external users cannot share files, folders, and sites they do not own                                                                          | Data Management                  |
-| 4.10          | 6. (L1) Ensure that DKIM is enabled for all Exchange Online Domains                                                                                                | Email Security / Exchange Online |
-| 4.1           | 7. (L1) Ensure Common Attachment Types Filter is set to ON                                                                                                         | Email Security / Exchange Online |
-| 4.11          | 8. (L1) Ensure that SPF records are published for all Exchange Domains                                                                                             | Email Security / Exchange Online |
-| 4.12          | 9. (L1) Ensure DMARC Records for all Exchange Online domains are published                                                                                         | Email Security / Exchange Online |
-| 4.13          | 10. (L1) Ensure notifications for internal users sending malware is Enabled                                                                                        | Email Security / Exchange Online |
-| 4.2           | 11. (L1) Ensure Exchange Online Spam Policies is set to copy and notify someone when a sender in your tenant has been blocked for sending excessive or spam emails | Email Security / Exchange Online |
-| 4.4           | 12. (L1) Ensure Exchange Online mail transport rules do not whitelist specific domains                                                                             | Email Security / Exchange Online |
-| 4.5           | 13. (L2) Ensure Client Rules Forwarding Block is enabled                                                                                                           | Email Security / Exchange Online |
-| 4.9           | 14. (L1) Ensure that an anti-phishing policy has been created                                                                                                      | Email Security / Exchange Online |
-| 5.1           | 15. (L1) Enable Microsoft 365 audit log search                                                                                                                     | Auditing                         |
-| 5.10          | 16. (L1) Ensure account provisioning activity report is reviewed weekly                                                                                            | Auditing                         |
-| 5.12          | 17. (L1) Ensure the spoofed domains report is review weekly                                                                                                        | Auditing                         |
-| 5.6           | 18. (L1) Ensure user role group changes is reviewed at least every week                                                                                            | Auditing                         |
-| 6.1           | 19. (L2) Ensure that document sharing is being controlled by domains with white/blacklist                                                                          | Storage                          |
+| M500.01         | 1. (L1) Ensure modern authentication for SharePoint applications is required                                                                                       | Account / Authentication         |
+| M600.01           | 2. (L2) Ensure calendar details sharing with external users is disabled                                                                                            | Application Permissions          |
+| M600.02           | 3. (L2) Ensure Office 365 ATP SafeLinks for Office Applications is Enabled                                                                                         | Application Permissions          |
+| M600.03           | 4. (L2) Ensure Office 365 ATP for SharePoint, OneDrive, and Microsoft Teams is Enabled                                                                             | Application Permissions          |
+| M700.02          | 5. (L2) Ensure that external users cannot share files, folders, and sites they do not own                                                                          | Data Management                  |
+| M800.01         | 6. (L1) Ensure that DKIM is enabled for all Exchange Online Domains                                                                                                | Email Security / Exchange Online |
+| M800.09          | 7. (L1) Ensure Common Attachment Types Filter is set to ON                                                                                                         | Email Security / Exchange Online |
+| M800.02          | 8. (L1) Ensure that SPF records are published for all Exchange Domains                                                                                             | Email Security / Exchange Online |
+| M800.03          | 9. (L1) Ensure DMARC Records for all Exchange Online domains are published                                                                                         | Email Security / Exchange Online |
+| M800.04          | 10. (L1) Ensure notifications for internal users sending malware is Enabled                                                                                        | Email Security / Exchange Online |
+| M800.05           | 11. (L1) Ensure Exchange Online Spam Policies is set to copy and notify someone when a sender in your tenant has been blocked for sending excessive or spam emails | Email Security / Exchange Online |
+| M800.06          | 12. (L1) Ensure Exchange Online mail transport rules do not whitelist specific domains                                                                             | Email Security / Exchange Online |
+| M800.07           | 13. (L2) Ensure Client Rules Forwarding Block is enabled                                                                                                           | Email Security / Exchange Online |
+| M800.08           | 14. (L1) Ensure that an anti-phishing policy has been created                                                                                                      | Email Security / Exchange Online |
+| M009.01           | 15. (L1) Enable Microsoft 365 audit log search                                                                                                                     | Auditing                         |
+| M009.02          | 16. (L1) Ensure account provisioning activity report is reviewed weekly                                                                                            | Auditing                         |
+| M009.03         | 17. (L1) Ensure the spoofed domains report is review weekly                                                                                                        | Auditing                         |
+| M009.04           | 18. (L1) Ensure user role group changes is reviewed at least every week                                                                                            | Auditing                         |
+| M010.1           | 19. (L2) Ensure that document sharing is being controlled by domains with white/blacklist                                                                          | Storage                          |
+
 
 <div class="policy-json-code">
 <pre>

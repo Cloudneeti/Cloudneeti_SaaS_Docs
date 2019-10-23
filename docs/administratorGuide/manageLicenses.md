@@ -1,60 +1,31 @@
-Manage Licenses
-===============
+Integrations
+======================
 
-License Admins will have the rights to managed License level configurations.
+License Admins will have the rights to managed configure integrations.
 
-Select Settings on the left menu and click on Manage Accounts.
+Select **Configurations** on the left menu and click on **Integrations**.
 
-1. Select the required **License** from the dropdown menu
+1.  Select the required **License** from the dropdown menu
 
-2. You can view the License Name, License ID and License Status in the left
-    upper corner
+2.  Click **Edit** to **Configure Data Feed Destinations** that specifies where
+    the data feeds provided by Cloudneeti application will be stored on the
+    customer side.
 
-3. On the right upper side Enabled Cloud Connectors are shown
+3.  Turn **On / Off** to **Enable Reporting Data Feeds**
 
-4. **License Features**, the left bottom section, outlines possible
-    configurations at a License level
+4.  Turn **On / Off** to **Enable Auditing Data Feeds**
 
-5. The center bottom section Compliance Bundles displays enabled compliance
-    frameworks
+5.  Click **Edit** to **Configure Data Feed Scope & Frequency**.
 
-6. The right bottom section **Point of Contact** lists the primary and
-    secondary License Admin from the customer side and Cloudneeti points of
-    contact for this License.
+6.  **Incident Management (Ticketing)** allows integrations with ticketing
+    systems such as ZenDesk and ServiceNow. Click **Edit** to configure Incident
+    Management.
+
 	![Manage Licenses](.././images/administratorGuide/Manage_Licenses.png#thumbnail)
 
-1. Click **Update** to edit the License Name
 
-2. **Configure Data Feed Destinations** specifies where on the customer side
-    data feeds provided by Cloudneeti application will be stored.
-
-3. **Data Feed Scope & Frequency** specifies next level of details of data
-    feeds configuration
-
-4. **Configure reporting data feeds** specifies whether the reporting data
-    feeds functionality is enabled for this License or not.
-
-5. **Configure auditing data feeds** specifies whether the auditing data feeds
-    functionality is enabled for this License or not.
-
-6. **Incident Management (Ticketing)** allows integrations with ticketing
-    systems such as ZenDesk and ServiceNow.
-
-7. **Update Global Policies** allows configuration of security policies –
-    enabling and disabling policies where data collection should occur.
-
-8. **Data Retention** displays the configured time period for retaining scan
-    and report data after the License expires.
-
-9. **Expiry / Renewal (UTC)** displays start and end date of the License.
-	![License Features](.././images/administratorGuide/License_Features.png#thumbnail)
-
-### License Name Update
-
-You can edit the **License Name** and click **Save**.
-	![License Name Update](.././images/administratorGuide/License_Name _Update.png#thumbnail)
-
-### Configure Data Feed Destinations
+## Data Feed – Reporting and Auditing
+### STEP 1: Configure Data Feed Destinations
 
 Cloudneeti application supports two types of data feed destinations:
 
@@ -69,17 +40,27 @@ Please select the type of storage system you would like to use.
 CSV files will be streamed to the storage account after every successful data
 collection.
 
-1. Select **object storage system**
+1.  Select **Object storage system,** the customer’s Azure Storage Account with
+    Blob containers where Cloudneeti will continuously publish detailed data on
+    every successful scan.
 
-2. Enter **Azure Storage Account Connection String**
+2.  Enter **Azure Storage Account Connection String**, the connection string
+    required for Cloudneeti to connect to Customer’s Storage account.
 
-3. Enter **Container name for reporting**
+3.  Enter **Container name for reporting,** the name to the folder (aka
+    Container) under which scan data will be published. If the Container name
+    doesn’t exist, it’ll be created.
 
-4. Enter **Container name for auditing**
+4.  Enter **Container name for auditing**, the separate container name where
+    audit data will be published. If the Container name doesn’t exist, it’ll be
+    created.
 
-5. Click **Verify Connection** to verify connection status
+5.  **Select region** where the data will be sent to.
 
-6. Click **Save**
+6.  Click **Verify Connection**
+
+7.  Click **Save**
+
 	![Storage System](.././images/administratorGuide/Storage_System.png#thumbnail)
 
 #### NoSql storage system
@@ -87,26 +68,50 @@ collection.
 JSON files will be streamed to the storage account after every successful data
 collection.
 
-1. Select **NoSql storage system**
+1.  Select **NoSql storage system**, the customer’s Azure Cosmos DB account.
 
-2. Enter **Cosmos DB connection string**
+2.  Enter **Cosmos DB connection string**, the connection string required for
+    Cloudneeti to connect to Customer’s Cosmos DB.
 
-3. Enter **Database Name**
+3.  Enter **Database Name**, where the data feed will be published.
 
-4. Enter **Collection name for reporting**
+4.  Enter **Collection name for reporting**, the name of Cosmos DB collection
+    for storing scan data.
 
-5. Enter **TTL for reporting data**
+5.  Enter **TTL for reporting data**, the time-to-live (TTL) parameter for the
+    documents. TTL will affect how long the documents are to be retained in the
+    Cosmos DB, after which they will automatically expire.
 
-6. Enter **Collection name for auditing**
+6.  Enter **Collection name for auditing**, the name of Cosmos DB collection for
+    storing Audit data.
 
-7. Enter **TTL for auditing data**
+7.  Enter **TTL for auditing data,** the time-to-live (TTL) parameter for the
+    documents.
 
-8. Click **Verify Connection** to verify connection status
+8.  **Select Region** where the data will be sent to
 
-9. Click **Save**
+9.  Click **Verify Connection** to verify connection status
+
+ 10. Click **Save**
+
 	![NoSql storage system](.././images/administratorGuide/NoSql_Storage_System.png#thumbnail)
 
-### Data Feed Scope & Frequency
+
+### STEP 2: Enable Reporting Data Feeds
+
+Login to Cloudneeti portal with License Admin role. Navigate to Configure
+integrations to enable the Reporting Data Feeds.
+
+![STEP 2: Enable Reporting Data Feeds](.././images/administratorGuide/Enable_Reporting_Data_feeds.png#thumbnail)
+
+### STEP 3: Enable Auditing Data Feeds
+
+Login to Cloudneeti portal with License Admin role. Navigate to Configure
+integrations to enable the Reporting Data Feeds.
+![STEP 3: Enable Auditing Data Feeds](.././images/administratorGuide/Enable_Auditing_Data_Feeds.png#thumbnail)
+
+
+### STEP 4: Configure Data Feed Scope & Frequency
 
 **Data Feed Scope & Frequency** allows selection of reporting and / or auditing
 type of data feeds and the frequency of data feeds.
@@ -123,89 +128,164 @@ type of data feeds and the frequency of data feeds.
 The following settings can be updated at an individual benchmark level.
 	![Data Feed Scope](.././images/administratorGuide/Benchmark_Level.png#thumbnail)
 
-### Configure Incident Management system  
 
+### STEP 5: Verify data feed 
+
+1.  Reporting data feed gets triggered as per frequency configured and after
+    every Cloud Account scan in Cloudneeti
+
+2.  Auditing data feed is triggered as per set frequency.
+
+#### Object storage system
+
+CSV files will be streamed to the storage account after every successful data
+collection.
+
+Login to Azure portal and navigate to the Storage account configured for Data
+Feed and verify the data.
+
+Auditing Data Sample
+
+![Object storage system](.././images/administratorGuide/Auditing_Data_Sample.png#thumbnail)
+
+Reporting Data Sample
+![Object storage system](.././images/administratorGuide/Reporting_Data_Sample.png#thumbnail)
+
+#### NoSql storage system
+
+JSON files will be streamed to the storage account after every successful data
+collection.
+
+Login to Azure portal and navigate to the Cosmos DB instance configured for Data
+Feed and verify the data.
+
+Auditing Data Sample
+![NoSql storage system](.././images/administratorGuide/Auditing_Data_Sample_NoSql.png#thumbnail)
+
+Reporting Data Sample
+![NoSql storage system](.././images/administratorGuide/Reporting_Data_Sample_NoSql.png#thumbnail)
+
+
+Incident Management (Ticketing)
+-------------------------------
+
+### STEP 1: Configure ticketing system integration for ServiceNow or Zendesk
 Incident Management (Ticketing) allows integrations with ticketing systems such
-as ZenDesk and ServiceNow.Ticket prioritization based on policy categories. Tickets/incidents will be created for non-compliant policies from selected categories and for configured accounts.
+as ZenDesk and ServiceNow.
 
-1. Go to settings and click on **Configure Integrations** 
+#### ServiceNow 
 
-2. Click on **Edit** button of Incident Management (Ticketing). 
+The following steps are required to configure ServiceNow integration in the
+Cloudneeti application.
 
-    ![Ticketing](.././images/administratorGuide/ConfigureIntegrations.png#thumbnail)
+1.  Select **Service Now** in the dropdown
 
-3. Select desired Ticketing system Zendesk or Service Now. 
+2.  Click **Configure**
 
-4. Click on **Configure** button. 
+    ![ServiceNow integration](.././images/administratorGuide/ServiceNow.png#thumbnail)
 
-    ![Ticketing](.././images/administratorGuide/ConfigureButton.png#thumbnail)
+3. Configure ServiceNow integration.
 
-5. Enter Ticketing system configuration details
+4.  Enter **Instance Name**
 
-    #### Zendesk
+5.  Enter **Instance Username**
 
-    Zendesk Sub-Domain  
+6.  Select **ServiceNow Access Type**
 
-    Zendesk User Id 
+7.  Select **Instance password**
 
-    Choose and enter Zendesk Access Type: Password Access or Token Access 
+8.  Enter **Assign Ticket To**
 
-    Assign Ticket To (Email Id Tickets will be assigned to email@example.com) 
+9.  Click **Save**
 
-    ![Ticketing](.././images/administratorGuide/Zendesk.png#thumbnail)
+    ![ServiceNow integration](.././images/administratorGuide/ServiceNow2.png#thumbnail)
 
-    #### Service Now
 
-    Service Now Instance 
+#### ZenDesk 
 
-    Service Now User Id 
+The following steps are required to configure ZenDesk integration in the
+Cloudneeti application.
 
-    ServiceNow Access Type: Password Access or Token Access 
+1.  Select **ZenDesk** in the dropdown
 
-    Assign Ticket To (Email Id, Tickets will be assigned to email@example.com) 
+2.  Click **Configure**
 
-    ![Ticketing](.././images/administratorGuide/ServiceNow.png#thumbnail)
+    ![ZenDesk integration](.././images/administratorGuide/Zendesk1.png#thumbnail)
 
-### Incident Management Scope & Frequency
+3.  Configure ZenDesk integration.
 
-1. **Select Ticketing System** from dropdown (ZenDesk, ServiceNow).
+4.  Enter **ZenDesk Subdomain**
 
-2. Select **Frequency of Ticket Creation**
+5.  Enter **ZenDesk User ID**
 
-3. Select **All Accounts** or **Selected accounts**
+6.  Select **ZenDesk Access Type**
 
-4. Select **Azure, Office365 or AWS**
+7.  Enter **ZenDesk password/token**
 
-5. Select items in **Available Categories** section and click (6), (7) or (8)
-    to allocate High Priority, Medium Priority or Low Priority to related
-    category of security policies. You can also select items in High Priority,
-    Medium Priority or Low Priority sections and click (6), (7) or (8) to move
-    them back to Available Categories and reallocate by moving into a different
-    category section.
+8.  Enter **Assign Ticket To**
 
-6. Click icon to move items between the **Available Categories** section and
-    High Priority section
+9.  Click **Save**
 
-7. Click icon to move items between the **Available Categories** section and
-    Medium Priority section
 
-8. Click icon to move items between the **Available Categories** section and
-    Low Priority section
+### STEP 2: Configure Incident Management
 
-9. Click Save
-	![Incident Management](.././images/administratorGuide/Incident_Management.png#thumbnail)
+1.  Select **Ticketing System** from dropdown (ServiceNow, ZenDesk).
 
-### Update Global Policies
+2.  Select **Frequency of Ticket Creation**
 
-Update Global Policies allows selection of security policies that should be
-excluded from data collection.
+3.  Select **All Accounts** or **Selected accounts**
 
-1. Select Azure Policies, Office365 policies or AWS Policies
+4.  Select **Included Accounts**
 
-2. Select single or multiple security policies from the left section
+5.  Select **Azure, Office365 or AWS**
 
-3. Click on icons to move security policies to the right section Excluded
-    Policies and back
+6.  Select items in **Available Categories** section and click (6) to allocate
+    High Priority or move them back to Available Categories
 
-4. Click Save
-	![Update_Global_Policies](.././images/administratorGuide/Update_Global_Policies.png#thumbnail)
+7.  Select items in **Available Categories** section and click (7) to allocate
+    Medium Priority or move them back to Available Categories
+
+8.  Select items in **Available Categories** section and click (8) to allocate
+    Low Priority or move them back to Available Categories
+
+9.  Click **Save**
+    
+    ![Incident Management (Ticketing)](.././images/administratorGuide/Incident_Management_Ticketing.png#thumbnail)
+
+
+### STEP 3: Verify tickets created
+Tickets are created for non-compliant resources after every successful scan.
+
+#### Zendisk Tikcet Sample
+
+Sample Zendisk Ticket List
+
+![ZenDesk integration sample1](.././images/administratorGuide/ZendeskTicketList.png#thumbnail)
+
+ Sample Zendisk Ticket 
+ 
+License and account details
+
+![ZenDesk integration sample2](.././images/administratorGuide/ZendeskTicket_LicenseAccountDetails.png#thumbnail)
+
+Policy Recommendation, Audit Procedure and Remediation 
+
+![ZenDesk integration sample3](.././images/administratorGuide/ZendeskTicket_PolicySpecification.png#thumbnail)
+
+#### ServiceNow Incident Sample
+
+Sample ServiceNow Incidents List
+
+![ServiceNow integration](.././images/administratorGuide/ServiceNow_IncidentList.png#thumbnail)
+
+Sample ServiceNow Incident
+
+![ServiceNow integration](.././images/administratorGuide/ServiceNow_Incident.png#thumbnail)
+
+Sample ServiceNow Problem
+
+![ServiceNow integration](.././images/administratorGuide/ServiceNow_Incident_RelatedProblems.png#thumbnail)
+
+Sample ServiceNow Problem Task
+
+![ZenDesk integration](.././images/administratorGuide/ServiceNow_ProblemTask_LicenseDetails.png#thumbnail)

@@ -48,9 +48,11 @@ nav:
   - Compliance Benchmarks: userGuide/complianceBenchmarks.md
   - Reports: userGuide/reports.md
 - Administrator Guide:
-  - Manage Accounts: administratorGuide/manageAccounts.md
-  - Manage Licenses: administratorGuide/manageLicenses.md
-  - Manage Users: administratorGuide/manageUsers.md
+  - Features and Quotas: administratorGuide/featuresAndQuatas.md
+  - Integrations: administratorGuide/manageLicenses.md
+  - Cloud Accounts: administratorGuide/manageAccounts.md
+  - Users & Roles: administratorGuide/manageUsers.md
+  - Security Policy Configuration: administratorGuide/securityPolicyExclusions.md
   - Audit Log: administratorGuide/auditLog.md
 - Remediation:
   - Overview: remediation/overview.md

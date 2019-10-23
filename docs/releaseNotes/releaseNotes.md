@@ -1,5 +1,136 @@
 ﻿﻿Releases in 2019
 ===============
+<div class="release_notes">
+
+**October 2019- v2.19.1**
+----------------------------
+
+1.  **User Experience Improvements**
+    * Introducing partner co-branding feature:  Co-branding of UI and reports allow a partner to theme the end-user experiences with the partner portal’s look and feel.
+    * Added documentation link in the left menu bar.
+    * Removed word report download functionality for further optimization.
+    * Re-arranged following functionality of policy exclusion as below
+
+        |  | **Previously** | **Updated** |
+        | --- | --- | --- |
+        | Global policy exclusions | Left menu bar -> Settings -> Configure Integrations -> Update Global Policies |  Left menu bar -> Configurations -> Security Policy Exclusion |
+        | Account-level policy exclusion | Left menu bar -> Settings -> Manage Cloud Accounts -> Configure Account -> Configure Security Policies |  Left menu bar -> Configurations -> Security Policy Exclusion |
+
+
+    * Updated menu items as below for more appropriate meaning and location
+
+        |  | **Previously** | **Updated** |
+        | --- | --- | --- |
+        | Left menu | Settings | Configurations |
+        | Left sub menu | Configure Integrations | Integrations |
+        | Left sub menu | Manage Cloud Accounts | Cloud Accounts |
+        | Left sub menu | Manage Users | Users &amp; Roles |
+        | Update License Details | Configure Integrations | Features and Quota​s |
+
+    * Updated static text as below for more appropriate meaning and location
+
+        |  | **Previously** | **Updated** |
+        | --- | --- | --- |
+        | Compliance Dashboard text for trend charts | Daily Trend | Compliance Trend |
+        | Features &amp; Quotas | Enabled Cloud Connectors - Quota | Quota for Cloud Accounts |
+        | Features &amp; Quotas | Total | Quota |
+        | Features &amp; Quotas | Compliance Bundles | Compliance Frameworks |
+        | Features &amp; Quotas | Point of Contact | Points of Contact |
+
+2.	**Platform & Stability Improvements**
+    *	Added feature to allow a weekly scan frequency for free trial licenses from Azure Marketplace.
+    *   Improved stability for meta-data collection intermittent job execution failures
+    *   Fixed following bugs
+        -   License name missing in the subject line for Email Template.
+        -   Some cloud accounts were not displaying the correct last scan data time.
+        -   Getting error &#39;Account already exists&#39; when trying to add a new Microsoft Azure Subscription
+
+3.	**Policies & Benchmarks Additions/Updates**
+    *   Added the following new security policies for Azure cloud account
+
+        | **Category** | **Policy Title** |
+        | --- | --- |
+        | Azure - Compute (IaaS) | Ensure that data disks are encrypted for Linux Virtual Machines |
+
+    *   Introducing a new security benchmark
+        - Center for Internet Security Ubuntu Linux 18.04 LTS Benchmark v1.0.0 [preview] 
+    
+    *   Added the following new security policies for Ubuntu 18.04 LTS running on Microsoft Azure.
+
+        | **Category** | **Policy Title** |
+        | --- | --- |
+        | Access, Authentication and Authorization | Ensure cron daemon is enabled |
+        | Access, Authentication and Authorization | Ensure SSH PermitUserEnvironment is disabled |
+        | Access, Authentication and Authorization | Ensure SSH Protocol is set to 2 |
+        | Access, Authentication and Authorization | Ensure SSH IgnoreRhosts is enabled |
+        | Access, Authentication and Authorization | Ensure SSH HostbasedAuthentication is disabled |
+        | Access, Authentication and Authorization | Ensure SSH PermitEmptyPasswords is disabled |
+        | Initial Setup | Ensure nodev option set on removable media partitions |
+        | Initial Setup | Ensure nosuid option set on removable media partitions |
+        | Initial Setup | Ensure noexec option set on removable media partitions |
+        | Initial Setup | Ensure XD/NX support is enabled |
+        | Initial Setup | Ensure address space layout randomization (ASLR) is enabled |
+        | Logging and Auditing | Ensure rsyslog Service is enabled |
+        | Logging and Auditing | Ensure rsyslog default file permissions configured |
+        | Logging and Auditing | Ensure remote rsyslog messages are only accepted on designated log hosts |
+        | Logging and Auditing | Ensure rsyslog or syslog-ng is installed |
+        | Logging and Auditing | Ensure logrotate is configured |
+        | Network Configuration | Ensure IP forwarding is disabled |
+        | Network Configuration | Ensure source routed packets are not accepted |
+        | Network Configuration | Ensure broadcast ICMP requests are ignored |
+        | Network Configuration | Ensure bogus ICMP responses are ignored |
+        | Network Configuration | Ensure Reverse Path Filtering is enabled |
+        | Network Configuration | Ensure TCP SYN Cookies is enabled |
+        | Network Configuration | Ensure RDS is disabled |
+        | Network Configuration | Ensure wireless interfaces are disabled |
+        | Services | Ensure xinetd is not enabled |
+        | Services | Ensure rsh server is not enabled |
+        | Services | Ensure telnet server is not enabled |
+        | Services | Ensure tftp server is not enabled |
+        | Services | Ensure IMAP and POP3 server is not enabled |
+        | Services | Ensure Avahi Server is not enabled |
+        | Services | Ensure CUPS is not enabled |
+        | Services | Ensure DHCP Server is not enabled |
+        | Services | Ensure LDAP server is not enabled |
+        | Services | Ensure DNS Server is not enabled |
+        | Services | Ensure NIS Client is not installed |
+        | Services | Ensure rsh client is not installed |
+        | Services | Ensure telnet client is not installed |
+        | System Maintenance | Ensure permissions on /etc/passwd are configured |
+        | System Maintenance | Ensure permissions on /etc/group are configured |
+        | System Maintenance | Ensure root is the only UID 0 account |
+
+    *   Disabled the following security policies for Azure cloud accounts as there are updates from Microsoft API response. These policies are disabled temporarily.
+
+        | **Category** | **Policy Title** |
+        | --- | --- |
+        | Azure - Compute (PaaS and Serverless) | Ensure that &#39;Python version&#39; is latest, if used to run the web app |
+        | Azure - Compute (PaaS and Serverless) | Ensure that latest supported Java version is used for Web Application |
+        | Azure - Compute (PaaS and Serverless) | Ensure that &#39;.Net Framework&#39; version is latest, if used as a part of the web app |
+        | Azure - Compute (PaaS and Serverless) | Ensure that latest supported PHP version is used for Web Application |
+        | Azure - Compute (PaaS and Serverless) | Ensure that latest supported Node.js version is used for Web Application |
+        | Azure - Compute (PaaS and Serverless) | Ensure that latest supported Java version is used for Mobile Apps |
+        | Azure - Compute (PaaS and Serverless) | Ensure that latest supported PHP version is used for Mobile Apps |
+        | Azure - Compute (PaaS and Serverless) | Ensure that latest supported PHP version is used for API Apps |
+        | Azure - Compute (PaaS and Serverless) | Ensure that latest supported PHP version is used for Function Apps |
+        | Azure - Compute (PaaS and Serverless) | Ensure that latest supported Java version is used for API Apps |
+        | Azure - Compute (PaaS and Serverless) | Ensure that latest supported Node.js version is used for Function Apps |
+        | Azure - Compute (PaaS and Serverless) | Ensure that latest supported Node.js version is used for API Apps |
+        | Azure - Compute (PaaS and Serverless) | Ensure that latest supported Node.js version is used for Mobile Apps |
+
+    *   Added the following new security policies for AWS cloud account
+
+        | **Category** | **Policy Title** |
+        | --- | --- |
+        | AWS - Audit and Logging | Ensure that Event Subscription is enabled for RDS Aurora Postgres Serverless Cluster |
+        | AWS - Business Continuity | Ensure that sufficient backup retention period is applied to RDS Aurora Postgres Serverless Cluster |
+        | AWS - Data Protection | Ensure that Deletion Protection feature is enabled for RDS Aurora Postgres Serverless Cluster |
+        | AWS - Data Protection | Ensure that encryption for storage done with KMS CMKs for RDS Aurora Postgres Serverless Cluster |
+        | AWS - Governance | Ensure that Copy Tags to Snapshots feature is enabled for RDS Aurora Postgres Serverless Cluster |
+        | AWS - Governance | Ensure that unique master username is used for RDS Aurora Postgres Serverless Cluster |
+        | AWS - Governance | Ensure that AutoPause feature is enabled for RDS Aurora Postgres Serverless Cluster |
+        | AWS - Identity and Access Management | Ensure data-tier security group are configured for RDS Aurora Postgres Serverless Cluster |
+        | AWS - Networking | Ensure that public subnets is not assigned to RDS Aurora Postgres Serverless Cluster |
 
 **October 2019- v2.18.1**
 ----------------------------
