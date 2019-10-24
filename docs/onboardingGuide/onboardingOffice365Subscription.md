@@ -571,17 +571,17 @@ Microsoft graph permission DeviceManagementConfiguration.Read.All is required to
 | **Policy-Id** | **Policy Name**                                                                                                                                                    | **Category**                     |
 |---------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------|
 | M300.1        | 1. Ensure that mobile devices require complex passwords with atleast two character sets to prevent brute force attacks                                                                                      | Device         |
-| M300.2          | 1. Ensure that mobile device encryption is enabled to prevent unauthorized access to mobile data                                                                                      | Device         |
-| M300.3          | 1. Require mobile devices to manage email profile                                                                                      | Device         |
-| M300.4          | 1. Ensure that mobile devices require a complex password with a minimum password length to prevent brute force attacks                                                                                     | Device         |
-| M300.6          | 2. Ensure that mobile devices are set to never expire passwords                                                                                      | Device         |
-| M300.7          | 1. Require mobile devices to use a password                                                                                     | Device         |
-| M300.8          | 1. Ensure that users cannot connect from devices that are jail broken or rooted                                                                                       | Device         |
-| M300.9         | 1. Ensure that mobile devices require complex passwords to prevent brute force attacks                                                                                     | Device         |
-| M300.10          | 1. Enable mobile devices to wipe on multiple sign-in failures to prevent brute force compromise                                                                                    | Device         |
-| M300.12          | 1. Ensure that settings are enable to lock multiple devices after a period of inactivity to prevent unauthorized access                                                                                       | Device         |
-| M300.13          | 1. Ensure that mobile device password reuse is prohibited                                                                                       | Device         |
-| M300.35          | 1. Ensure that devices connecting have local firewall enabled                                                                                     | Device         |
+| M300.2          | 2. Ensure that mobile device encryption is enabled to prevent unauthorized access to mobile data                                                                                      | Device         |
+| M300.3          | 3. Require mobile devices to manage email profile                                                                                      | Device         |
+| M300.4          | 4. Ensure that mobile devices require a complex password with a minimum password length to prevent brute force attacks                                                                                     | Device         |
+| M300.6          | 5. Ensure that mobile devices are set to never expire passwords                                                                                      | Device         |
+| M300.7          | 6. Require mobile devices to use a password                                                                                     | Device         |
+| M300.8          | 7. Ensure that users cannot connect from devices that are jail broken or rooted                                                                                       | Device         |
+| M300.9         | 8. Ensure that mobile devices require complex passwords to prevent brute force attacks                                                                                     | Device         |
+| M300.10          | 9. Enable mobile devices to wipe on multiple sign-in failures to prevent brute force compromise                                                                                    | Device         |
+| M300.12          | 10. Ensure that settings are enable to lock multiple devices after a period of inactivity to prevent unauthorized access                                                                                       | Device         |
+| M300.13          | 11. Ensure that mobile device password reuse is prohibited                                                                                       | Device         |
+| M300.35          | 12. Ensure that devices connecting have local firewall enabled                                                                                     | Device         |
 
 ### Advanced security configuration
 
@@ -594,23 +594,23 @@ available in the Center for Internet Security (CIS) Microsoft 365 benchmark
 |---------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------|
 | M500.01         | 1. (L1) Ensure modern authentication for SharePoint applications is required                                                                                       | Account / Authentication         |
 | M600.01           | 2. (L2) Ensure calendar details sharing with external users is disabled                                                                                            | Application Permissions          |
-| M600.02           | 3. (L2) Ensure Office 365 ATP SafeLinks for Office Applications is Enabled                                                                                         | Application Permissions          |
+| M600.02           | 3. (L2) Ensure O365 ATP SafeLinks for Office Applications is Enabled                                                                                         | Application Permissions          |
 | M600.03           | 4. (L2) Ensure Office 365 ATP for SharePoint, OneDrive, and Microsoft Teams is Enabled                                                                             | Application Permissions          |
 | M700.02          | 5. (L2) Ensure that external users cannot share files, folders, and sites they do not own                                                                          | Data Management                  |
 | M800.01         | 6. (L1) Ensure that DKIM is enabled for all Exchange Online Domains                                                                                                | Email Security / Exchange Online |
-| M800.09          | 7. (L1) Ensure Common Attachment Types Filter is set to ON                                                                                                         | Email Security / Exchange Online |
+| M800.09          | 7. (L1) Ensure the Common Attachment Types Filter is enabled                                                                                                        | Email Security / Exchange Online |
 | M800.02          | 8. (L1) Ensure that SPF records are published for all Exchange Domains                                                                                             | Email Security / Exchange Online |
 | M800.03          | 9. (L1) Ensure DMARC Records for all Exchange Online domains are published                                                                                         | Email Security / Exchange Online |
 | M800.04          | 10. (L1) Ensure notifications for internal users sending malware is Enabled                                                                                        | Email Security / Exchange Online |
-| M800.05           | 11. (L1) Ensure Exchange Online Spam Policies is set to copy and notify someone when a sender in your tenant has been blocked for sending excessive or spam emails | Email Security / Exchange Online |
-| M800.06          | 12. (L1) Ensure Exchange Online mail transport rules do not whitelist specific domains                                                                             | Email Security / Exchange Online |
+| M800.05           | 11. (L1) Ensure Exchange Online Spam Policies are set correctly | Email Security / Exchange Online |
+| M800.06          | 12. (L1) Ensure mail transport rules do not whitelist specific domains                                                                              | Email Security / Exchange Online |
 | M800.07           | 13. (L2) Ensure Client Rules Forwarding Block is enabled                                                                                                           | Email Security / Exchange Online |
 | M800.08           | 14. (L1) Ensure that an anti-phishing policy has been created                                                                                                      | Email Security / Exchange Online |
 | M009.01           | 15. (L1) Enable Microsoft 365 audit log search                                                                                                                     | Auditing                         |
 | M009.02          | 16. (L1) Ensure account provisioning activity report is reviewed weekly                                                                                            | Auditing                         |
-| M009.03         | 17. (L1) Ensure the spoofed domains report is review weekly                                                                                                        | Auditing                         |
+| M009.03         | 17. (L1) Ensure the spoofed domains report is reviewed weekly                                                                                                        | Auditing                         |
 | M009.04           | 18. (L1) Ensure user role group changes is reviewed at least every week                                                                                            | Auditing                         |
-| M010.1           | 19. (L2) Ensure that document sharing is being controlled by domains with white/blacklist                                                                          | Storage                          |
+| M010.1           | 19. (L2) Ensure document sharing is being controlled by domains with whitelist or blacklist                                                                         | Storage                          |
 
 
 <div class="policy-json-code">
