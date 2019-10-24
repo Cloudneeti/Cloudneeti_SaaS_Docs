@@ -56,7 +56,7 @@ nav:
   - Audit Log: administratorGuide/auditLog.md
 - Remediation:
   - Overview: remediation/overview.md
-  - Azure Subscription: remediation/azureSubscriptionRemediation.md
-  - AWS Account: remediation/awsRemediation.md
+  - Azure: remediation/azureSubscriptionRemediation.md
+  - AWS: remediation/awsRemediation.md
 - Release Notes:
   - Releases in 2019: releaseNotes/releaseNotes.md

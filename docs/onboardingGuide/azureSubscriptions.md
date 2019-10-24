@@ -472,6 +472,118 @@ listed below.
 
 [Configure Notifications](../../administratorGuide/configureNotifications/)
 
+
+
+## Automatically add Key Vault access policy for Key Vaults within Azure subscriptions
+
+### Register Cloudneeti Application 
+
+Login to [Azure Portal](https://portal.azure.com/) with **Global AD
+Administrator** role.
+
+1.  Select **Azure Active Directory** in the primary menu
+
+2.  Select **App Registrations** in the secondary menu
+
+3.  Click on **New Registration**
+
+    ![Service Principal - Azure Portal](.././images/azureSubscriptions/AzureManual_AddSP.png#thumbnail)
+
+4. Enter the name, for example "Cloudneeti"
+5. Click **Register**     
+    
+     ![Service Principal - Azure Portal](.././images/azureSubscriptions/Keyvault_Register.png#thumbnail)
+
+6.	**Copy to clipboard** and paste the Application id to your notepad
+
+    ![Service Principal - Azure Portal](.././images/azureSubscriptions/Keyvault_AppId.png#thumbnail)
+
+#### Add Client Secret
+
+1.	Click on **new client secret** in **Certificates & secrets** section
+2.	Add **Description** and select expiry time 
+3.	Click on **Add** 
+4.	**Copy** to clipboard and paste the Client Secret to your notepad. **Note:** You will not be able to copy this value after you move away from this screen.
+
+    ![Client Secret](.././images/azureSubscriptions/Keyvault_Secret.png#thumbnail)
+
+#### Grant Azure Subscription Contributor role
+
+Add contributor role for Cloudneeti application in Azure Subscription.
+
+Login to [Azure Portal](https://portal.azure.com/) with Microsoft Azure **Subscription Owner** role.
+
+1.	Go to the subscription’s **Access control (IAM)** in the third level menu
+2.	Click on the **Add** button and select **Add role assignment**
+3.	Select **Contributor** role and Cloudneeti
+4.	Select **Save** to complete the role assignment
+
+    ![Assign role](.././images/azureSubscriptions/KeyVault_ContributorRole.png#thumbnail)
+
+#### Provision automation account 
+Provision automation account to check and assign List permissions to key-vaults within given subscriptions, at scheduled time.
+
+Login to Azure portal <https://portal.azure.com> as Subscription Contributor or
+Subscription Owner access.
+
+Switch to Azure AD with the Azure Subscription with pre-requisite access.
+
+1. Open **CloudShell**
+
+2. Click on **Cloudshell** icon on the navigation bar to open Cloudshell
+
+3. Choose PowerShell from shell drop down
+
+4. Select **storage**
+	
+    ![CloudShell](.././images/azureSubscriptions/Keyvault_Cloudshell.png#thumbnail)
+
+5. Execute below command in Cloudshell to download the Cloudneeti data
+    collector provisioning script.
+	<pre>
+	<code>```
+		wget https://raw.githubusercontent.com/Cloudneeti/docs_cloudneeti/master/scripts/Provision-KeyVaultAccessAutomation.ps1 -O Provision-KeyVaultAccessAutomation.ps1
+	```</code>
+	</pre>
+
+    <pre>
+	<code>```
+        wget https://raw.githubusercontent.com/Cloudneeti/docs_cloudneeti/master/scripts/AutoAssign-PermissionsToKeyvault.ps1 -O AutoAssign-PermissionsToKeyvault.ps1
+	```</code>
+	</pre>
+
+6. Switch to the User directory
+	<pre>
+	<code>```
+		cd $User
+	```</code>
+	</pre>
+7. Run provisioning script with inline parameters
+	<pre>
+	<code>```
+		./Provision-M365DataCollector.ps1 `
+		-Cloudneeti ServicePrincipal ObjectId `
+        -ServicePrincipal  Id `
+        -SubscriptionId `
+        -TenantId `
+        -AutomationAccountName `
+        -Location 
+    ```</code>
+	</pre>
+Note: Contact Cloudneeti Team for ArtifactsName, DataCollectorVersion and
+ArtifactsAccessKey
+
+8. The script will execute and prompt you for below details:
+   Cloudneeti data collector Service Principal secret </br>
+
+9. This will create a runbook inside automation account with a schedule to start the runbook which will assign List permissions to all key-vaults.
+
+10. To add Key Vault access policy for Key Vaults within different Azure subscriptions in Azure Active Directory, please update the variable **Subscription Id" with comma sepearted list of subscription ids.
+
+    ![CloudShell](.././images/azureSubscriptions/Keyvault_Variable.png#thumbnail)
+
+
+
 ##	OFFBOARDING
 
 ### Delete App Registration for each Azure Subscription
