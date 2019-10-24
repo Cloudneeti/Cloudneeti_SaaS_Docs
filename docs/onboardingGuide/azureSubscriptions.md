@@ -505,7 +505,7 @@ Administrator** role.
 3.	Click on **Add** 
 4.	**Copy** to clipboard and paste the Client Secret to your notepad. **Note:** You will not be able to copy this value after you move away from this screen.
 
-    ![Client Secret](.././images/azureSubscriptions/Keyvault_Secret.png#thumbnail)
+    ![Client Secret](.././images/azureSubscriptions/Keyvault_AppSecret.png#thumbnail)
 
 #### Grant Azure Subscription Contributor role
 
