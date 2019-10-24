@@ -498,12 +498,12 @@ Switch to Azure AD with the Azure Subscription with pre-requisite access.
 			-CloudneetiLicenseId <Cloudneeti License Id> `
 			-CloudneetiAccountId <Cloudneeti Account Id> `
 			-CloudneetiEnvironment <Cloudneeti Environment> `
-			-ServicePrincipalId <Cloudneeti Data Collector Service Principal Id> `
+			-CloudneetiApplicationId <Cloudneeti Data Collector Registered Application Id> `
 			-ArtifactsName <Cloudneeti office 365 Data Collector Artifact Name> `
 			-DataCollectorVersion <Cloudneeti Office 365 Data Collector Version> `
 			-OfficeDomain <Office 365 Domain Name> `
-			-OfficeTenantId <Office 365 Tenant Id> `
-			-OfficeAdminId <Office 365 Administator Id> `
+			-OfficeDirectoryId <Office 365 Directory Id> `
+			-OfficeAdminEmailId <Office 365 Administator Email Id> `
 			-AzureSubscriptionId <Azure Subscription Id where office 365 datacollector resouces will be created> `
 			-DataCollectorName <Office 365 Data Collector Name> `
 			-Location <Default EastUs2>
@@ -513,9 +513,9 @@ Note: Contact Cloudneeti Team for ArtifactsName, DataCollectorVersion and
 ArtifactsAccessKey
 8. The script will execute and prompt you for below details:
    Cloudneeti API key </br>
-   Cloudneeti data collector Service Principal secret </br>
-   Cloudneeti M365 data collector artifacts storage access Key </br>
-   Office 365 App Password </br>
+   Cloudneeti Data collector application secret </br>
+   Cloudneeti Office 365 data collector artifacts storage access Key </br>
+   Office 365 App Password or User Password</br>
 9. This will create a runbook inside automation account
 
 ### 3.3 Apply delete lock
@@ -753,3 +753,45 @@ available in the Center for Internet Security (CIS) Microsoft 365 benchmark
 </code>
 </pre>
 </div>
+
+
+##	OFFBOARDING
+
+### Delete registered Cloudneeti Application
+
+Cloudneeti Application within Customer’s Active Directory is removed which eventually will remove permissions, roles assigned on subscription/subscriptions. This will stop data collection for related cloud
+accounts – Azure subscriptions related to Office 365 accounts in Cloudneeti.
+
+1.  Go to **Azure Active Directory**
+
+2.  Click on **App Registration**
+
+3.  Select **Cloudneeti Application**
+
+4.  Click on **Delete** to remove Cloudneeti Application registration
+
+    ![Apply Delete Lock](.././images/onboardingOffice365Subscription/DeleteAppReg.png#thumbnail)
+
+### Delete Office365 Advanced Security Policy Data Collector
+
+Deletion of the advanced security policy data collector within Customer’s Active
+Directory is removed which eventually will remove permissions, roles assigned on
+subscription/subscriptions. This will stop data collection for related cloud
+accounts in Cloudneeti
+
+1.  Navigate to M365 data collector resource group
+    (**cloudneeti-m365-datacollector-rg**).
+
+2.  Click **Locks** (1)
+
+3.  **Delete** lock “DoNotDelete” (2)
+
+4.  **Select** and **Delete Automation account** within resource group
+    **cloudneeti-m365-datacollector-rg**
+
+    ![Apply Delete Lock](.././images/onboardingOffice365Subscription/DeleteRGLock.png#thumbnail)
+
+### Delete cloud account in Cloudneeti application
+
+Please send a request to <support@cloudneeti.com> to delete this cloud account
+under your license.

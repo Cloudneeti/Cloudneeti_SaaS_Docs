@@ -472,7 +472,9 @@ listed below.
 
 [Configure Notifications](../../administratorGuide/configureNotifications/)
 
-## Automatically add Key Vault access policy for specific managed Key Vaults
+
+
+## Automatically add Key Vault access policy for Key Vaults within Azure subscriptions
 
 ### Register Cloudneeti Application 
 
@@ -490,11 +492,11 @@ Administrator** role.
 4. Enter the name, for example "Cloudneeti"
 5. Click **Register**     
     
-     ![Service Principal - Azure Portal](.././images/azureSubscriptions/AzureManual_Register.png#thumbnail)
+     ![Service Principal - Azure Portal](.././images/azureSubscriptions/Keyvault_Register.png#thumbnail)
 
 6.	**Copy to clipboard** and paste the Application id to your notepad
 
-    ![Service Principal - Azure Portal](.././images/azureSubscriptions/Azure_AppReg_App_ID.png#thumbnail)
+    ![Service Principal - Azure Portal](.././images/azureSubscriptions/Keyvault_AppId.png#thumbnail)
 
 #### Add Client Secret
 
@@ -503,7 +505,7 @@ Administrator** role.
 3.	Click on **Add** 
 4.	**Copy** to clipboard and paste the Client Secret to your notepad. **Note:** You will not be able to copy this value after you move away from this screen.
 
-    ![Client Secret](.././images/azureSubscriptions/AzureSP_CaptureClientSecret.png#thumbnail)
+    ![Client Secret](.././images/azureSubscriptions/Keyvault_Secret.png#thumbnail)
 
 #### Grant Azure Subscription Contributor role
 
@@ -516,7 +518,7 @@ Login to [Azure Portal](https://portal.azure.com/) with Microsoft Azure **Subscr
 3.	Select **Contributor** role and Cloudneeti
 4.	Select **Save** to complete the role assignment
 
-   # ![Assign role](.././images/azureSubscriptions/Azure_Assign_Role.png#thumbnail)
+    ![Assign role](.././images/azureSubscriptions/KeyVault_ContributorRole.png#thumbnail)
 
 #### Provision automation account 
 Provision automation account to check and assign List permissions to key-vaults within given subscriptions, at scheduled time.
@@ -527,10 +529,15 @@ Subscription Owner access.
 Switch to Azure AD with the Azure Subscription with pre-requisite access.
 
 1. Open **CloudShell**
+
 2. Click on **Cloudshell** icon on the navigation bar to open Cloudshell
+
 3. Choose PowerShell from shell drop down
+
 4. Select **storage**
-	![CloudShell](.././images/onboardingOffice365Subscription/CloudShell.png#thumbnail)
+	
+    ![CloudShell](.././images/azureSubscriptions/Keyvault_Cloudshell.png#thumbnail)
+
 5. Execute below command in Cloudshell to download the Cloudneeti data
     collector provisioning script.
 	<pre>
@@ -538,6 +545,13 @@ Switch to Azure AD with the Azure Subscription with pre-requisite access.
 		wget https://raw.githubusercontent.com/Cloudneeti/docs_cloudneeti/master/scripts/Provision-KeyVaultAccessAutomation.ps1 -O Provision-KeyVaultAccessAutomation.ps1
 	```</code>
 	</pre>
+
+    <pre>
+	<code>```
+        wget https://raw.githubusercontent.com/Cloudneeti/docs_cloudneeti/master/scripts/AutoAssign-PermissionsToKeyvault.ps1 -O AutoAssign-PermissionsToKeyvault.ps1
+	```</code>
+	</pre>
+
 6. Switch to the User directory
 	<pre>
 	<code>```
@@ -548,15 +562,13 @@ Switch to Azure AD with the Azure Subscription with pre-requisite access.
 	<pre>
 	<code>```
 		./Provision-M365DataCollector.ps1 `
-		- Cloudneeti ServicePrincipal ObjectId `
-        - ServicePrincipal  Id `
-        - ServicePrincipal Secret `
-        - SubscriptionId `
-        - TenantId `
-        - AutomationAccountName `
-        - Location 
-
-	```</code>
+		-Cloudneeti ServicePrincipal ObjectId `
+        -ServicePrincipal  Id `
+        -SubscriptionId `
+        -TenantId `
+        -AutomationAccountName `
+        -Location 
+    ```</code>
 	</pre>
 Note: Contact Cloudneeti Team for ArtifactsName, DataCollectorVersion and
 ArtifactsAccessKey
@@ -564,7 +576,13 @@ ArtifactsAccessKey
 8. The script will execute and prompt you for below details:
    Cloudneeti data collector Service Principal secret </br>
 
-9. This will create a runbook inside automation account
+9. This will create a runbook inside automation account with a schedule to start the runbook which will assign List permissions to all key-vaults.
+
+10. To add Key Vault access policy for Key Vaults within different Azure subscriptions in Azure Active Directory, please update the variable **Subscription Id" with comma sepearted list of subscription ids.
+
+    ![CloudShell](.././images/azureSubscriptions/Keyvault_Variable.png#thumbnail)
+
+
 
 ##	OFFBOARDING
 
