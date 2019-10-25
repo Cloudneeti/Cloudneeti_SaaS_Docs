@@ -28,9 +28,12 @@ extra_javascript:
   - 'javascripts/custom.js'
   
 nav:
-- Getting Started: 
-  - Introduction: gettingStarted/introduction.md
-  - System Architecture: gettingStarted/systemArchitecture.md
+- Introduction: 
+  - Getting Started: gettingStarted/introduction.md
+  - Product Features: gettingStarted/productFeatures.md
+  - Deployment Architecture: gettingStarted/deploymentArchitecture.md
+  - Customer Data Security: gettingStarted/customerDataSecurity.md
+  - Glossary: gettingStarted/glossary.md
 - Try and Buy:
   - Buy on Azure Marketplace: azureMarketplace/subscribeOnAzureMarketplace.md
   - Request a License: gettingStarted/subscribe.md
