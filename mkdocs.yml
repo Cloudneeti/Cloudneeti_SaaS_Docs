@@ -52,13 +52,14 @@ nav:
   - Reports: userGuide/reports.md
 - Administrator Guide:
   - Features and Quotas: administratorGuide/featuresAndQuatas.md
-  - Configure Integrations: administratorGuide/manageLicenses.md
-  - Manage Cloud Accounts: administratorGuide/manageAccounts.md
-  - Manage Users: administratorGuide/manageUsers.md
+  - Integrations: administratorGuide/manageLicenses.md
+  - Cloud Accounts: administratorGuide/manageAccounts.md
+  - Users & Roles: administratorGuide/manageUsers.md
+  - Security Policy Configuration: administratorGuide/securityPolicyExclusions.md
   - Audit Log: administratorGuide/auditLog.md
 - Remediation:
   - Overview: remediation/overview.md
-  - Azure Subscription: remediation/azureSubscriptionRemediation.md
-  - AWS Account: remediation/awsRemediation.md
+  - Azure: remediation/azureSubscriptionRemediation.md
+  - AWS: remediation/awsRemediation.md
 - Release Notes:
   - Releases in 2019: releaseNotes/releaseNotes.md

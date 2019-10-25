@@ -207,6 +207,9 @@ table thead th {
     font-weight: 700;
     color: #000 !important;
 }
+.release_notes .md-typeset__table {
+    width: 100%;
+}
 .policy-json-code code {
     height: 300px;
     overflow-y: auto;
