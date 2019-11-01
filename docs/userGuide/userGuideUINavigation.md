@@ -19,29 +19,24 @@ application.
 6.  This **collapse icon** will narrow the left menu to icon level in order to
     increase the visible area for the dashboards.
 	![UI Navigation](.././images/userGuideUINavigation/UINavigation_Homepage.png#thumbnail)
-The left menu provides access to Dashboards (1), Views (2) and Settings (3).
+The left menu provides access to Dashboards (1), Views (2) and Configurations (3).
 
 1.  The menu item **Dashboard** brings the user to the Compliance, Security,
     Risk and Assets dashboards.
 
-2.  The menu item **Cloud Security Best Practices** provides access to a view of
-    the complete list of cloud security best practices within the Cloudneeti
-    application.
+2.  The menu item **Cloud Security Best Practices** provides access to a view of the complete list of cloud security best practices within the Cloudneeti application.
 
-3.  The menu items **Cybersecurity Benchmarks, Laws and Regulations, and
-    Industry Benchmarks** provide access to views of individual compliance
-    frameworks.
+3.  The menu items **Cybersecurity Benchmarks, Laws and Regulations, and Industry Benchmarks** provide access to views of individual compliance frameworks.
 
-4.  The **Settings** menu item provides access to Manage Accounts, Manage
-    Features and Manage Users and the Audit Log.
+4.  The **Configurations** menu item provides access to Features and Quotas, Integrations, Cloud Accounts, Users and Roles, and Security Policy Exclusion.
 
-5.  The **Release Notes** menu item redirects to the documentation portal with
-    information about features and security policies added in the most recent
-    product releases.
+5.  The **Audit logs** menu item shows all user actions logs.
 
-6.  The **Disclaimer** states the legal disclaimer information about the
-    product.
-	![UI Navigation](.././images/userGuideUINavigation/Left_Menu_Items.png#thumbnail)
+6. The **Release Notes** menu item redirects to the documentation portal with information about features and security policies added in the most recent product releases.
+
+7.  The **Disclaimer** states the legal disclaimer information about the product.
+	
+    ![UI Navigation](.././images/userGuideUINavigation/Left_Menu_Items.png#thumbnail)
 
 The following sections introduce each of these capabilities of Cloudneeti
 product.
@@ -86,14 +81,16 @@ Release Notes
 
 The Release Notes (1) menu item redirects you to the Cloudneeti documentation
 portal.
-	![UI Navigation](.././images/userGuideUINavigation/Release_Notes.png#thumbnail)
+	
+![UI Navigation](.././images/userGuideUINavigation/Release_Notes.png#thumbnail)
 
 1.  Select **Release Notes** period
 
 2.  Select specific release number from **Table of Contents**
 
 3.  View the **Release Notes** for that specific release
-	![UI Navigation](.././images/userGuideUINavigation/Release_Notes_Details.png#thumbnail)
+	
+    [UI Navigation](.././images/userGuideUINavigation/Release_Notes_Details.png#thumbnail)
 
 Disclaimer
 ----------
