@@ -552,8 +552,6 @@ Switch to Azure AD with the Azure Subscription with pre-requisite access.
 3. Choose PowerShell from shell drop down
 
 4. Select **storage**
-	
-    ![CloudShell](.././images/azureSubscriptions/Keyvault_Cloudshell.png#thumbnail)
 
 5. Execute below command in Cloudshell to download the Cloudneeti data
     collector provisioning script.
@@ -589,14 +587,11 @@ Switch to Azure AD with the Azure Subscription with pre-requisite access.
 	</pre>
 
 8. The script will execute and prompt you for below details:
-   Cloudneeti data collector Contributor Application secret </br>
+   Cloudneeti data collector Contributor Application secret
+
+    ![CloudShell](.././images/azureSubscriptions/Keyvault_Cloudshell.png#thumbnail)
 
 9. This will create a runbook inside automation account with a schedule to start the runbook which will assign List permissions to all key-vaults.
-
-10. To add Key Vault access policy for Key Vaults within different Azure subscriptions in Azure Active Directory, please update the variable **Subscription Id** with comma sepearted list of subscription ids.
-
-    ![CloudShell](.././images/azureSubscriptions/Keyvault_Variable.png#thumbnail)
-
 
 
 ##	OFFBOARDING

@@ -30,11 +30,13 @@ The left menu provides access to Dashboards (1), Views (2) and Configurations (3
 
 4.  The **Configurations** menu item provides access to Features and Quotas, Integrations, Cloud Accounts, Users and Roles, and Security Policy Exclusion.
 
-5.  The **Audit logs** menu item shows all user actions logs.
+5.  The **Audit logs** menu provides an overview of the most recent audit logs. Every user transaction such as adding or removing users, downloading reports, and configurations changes.
 
-6. The **Release Notes** menu item redirects to the documentation portal with information about features and security policies added in the most recent product releases.
+6. The **Documentation** menu item redirects to the product documentation portal.
 
-7.  The **Disclaimer** states the legal disclaimer information about the product.
+7. The **Release Notes** menu item redirects to the documentation portal with information about features and security policies added in the most recent product releases.
+
+8.  The **Disclaimer** states the legal disclaimer information about the product.
 	
     ![UI Navigation](.././images/userGuideUINavigation/Left_Menu_Items.png#thumbnail)
 
@@ -44,10 +46,9 @@ product.
 Dashboards
 ----------
 
-The dashboards menu item navigates to four different dashboards: Compliance,
-Security, Risk, and Assets. For more information please refer to [Dashboards]()
-section.
-	![UI Navigation](.././images/userGuideUINavigation/Dashboard_Section.png#thumbnail)
+The dashboards menu item navigates to four different dashboards: Compliance, Security, Risk, and Assets. For more information please refer to [Dashboards](../dashboards/) section.
+	
+![UI Navigation](.././images/userGuideUINavigation/Dashboard_Section.png#thumbnail)
 
 Security Policies
 -----------------
@@ -57,24 +58,34 @@ within the Cloudneeti application and their compliance status. The status is
 displayed as number of resources that are adhering to the security policy
 standard out of the total number of resources. For more information please refer
 to [Security Policies]() section.
-	![UI Navigation](.././images/userGuideUINavigation/Security_Policies.png#thumbnail)
+	
+![UI Navigation](.././images/userGuideUINavigation/Security_Policies.png#thumbnail)
 
 Compliance Benchmarks
 ---------------------
 
 The Cybersecurity Benchmarks, Laws and Regulations, Industry Benchmarks section
 on the left menu can be expanded to select the required benchmark view. For more
-information please refer to [Compliance Benchmarks]() section.
-	![UI Navigation](.././images/userGuideUINavigation/Compliance_Benchmarks.png#thumbnail)
+information please refer to [Compliance Benchmarks](../complianceBenchmarks/) section.
+	
+![UI Navigation](.././images/userGuideUINavigation/Compliance_Benchmarks.png#thumbnail)
 
-Settings
---------
+Configurations
+--------------
 
-The settings section (1) on the left menu provides access to Manage Accounts,
-Manage Features, Manage Users and Audit Log. License Admin and Account Admin can
-review and update License level and Cloud Account level configurations. For more
-information please refer to [Compliance Benchmarks]() section.
-	![UI Navigation](.././images/userGuideUINavigation/Settings_Panel.png#thumbnail)
+The configurations section (1) on the left menu provides access to access to Features and Quotas, Integrations, Cloud Accounts, Users and Roles, and Security Policy Exclusion. License Admin and Account Admin can review and update License level and Cloud Account level configurations. 
+	
+![UI Navigation](.././images/userGuideUINavigation/Settings_Panel.png#thumbnail)
+
+
+Audit Logs
+----------
+
+The Audit Log section provides an overview of the most recent audit logs. Every
+user transaction such as adding or removing users, downloading reports, and
+configurations changes.
+
+![UI Navigation](.././images/userGuideUINavigation/AuditLogs.png#thumbnail)
 
 Release Notes
 -------------
@@ -88,23 +99,17 @@ portal.
 
 2.  Select specific release number from **Table of Contents**
 
-3.  View the **Release Notes** for that specific release
-	
-    [UI Navigation](.././images/userGuideUINavigation/Release_Notes_Details.png#thumbnail)
+3.  View the **Release Notes** for that specific release	
+
+    ![Release Notes](.././images/userGuideUINavigation/Release_Notes_Details.png#thumbnail)
 
 Disclaimer
 ----------
 
 Click on **Disclaimer** (1) to view the legal terms of providing this security
 and compliance posture information.
-	![UI Navigation](.././images/userGuideUINavigation/Disclaimer.png#thumbnail)
+	
+![UI Navigation](.././images/userGuideUINavigation/Disclaimer.png#thumbnail)
 
-**Disclaimer:** Security and compliance benchmarks provide the necessary
-standards to safeguard systems, software, and networks against today's evolving
-cyber threats. Cloudneeti application analyzes configurations of your cloud
-infrastructure and presents the security and compliance posture of your cloud
-implementation in form of dashboards, views and reports. The individual security
-policies and their mapping to various compliance controls are an interpretation
-of related cybersecurity benchmarks, laws and regulations, and industry specific
-compliance benchmarks. Information provided by Cloudneeti application cannot be
-interpreted as a guarantee of compliance.
+**Disclaimer:** Security and compliance benchmarks provide the necessary standards to safeguard systems, software, and networks against today's evolving cyber threats. Cloudneeti application analyzes configurations of your cloud infrastructure and presents the security and compliance posture of your cloud
+implementation in form of dashboards, views and reports. The individual security policies and their mapping to various compliance controls are an interpretation of related cybersecurity benchmarks, laws and regulations, and industry specific compliance benchmarks. Information provided by Cloudneeti application cannot be interpreted as a guarantee of compliance.
