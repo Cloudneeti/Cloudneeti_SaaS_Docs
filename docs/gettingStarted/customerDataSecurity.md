@@ -66,40 +66,10 @@ The table below provides a high-level overview of the metadata collected.
 
 | **CSP**                                   | **Amazon Web Services** | **Microsoft Azure**   | **Microsoft Office 365**          |
 |-------------------------------------------|-------------------------|-----------------------|-----------------------------------|
-| Cloud accounts                            | AWS Billing ID          | Azure subscription ID | Azure AD Tenant (ID, domain name) |
-| Cloud Resource Configurations (meta-data) | Resource name, id, Tags | Resource name, id     | Azure AD Users (summary count)    |
+| Cloud accounts                            | AWS Billing ID     <br>  	AWS ID / AWS External ID roles    | Azure subscription ID <br>	Azure AD Tenant (ID, domain name)<br>	Azure App Registration (encrypted)| Azure AD Tenant (ID, domain name) <br> 	Azure App Registration (encrypted)|
+| Cloud Resource Configurations (meta-data)  | Resource name,id,Tags <br> Tags<br>  Location<br>  [AWS Resource and Property Types](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html)<br>[AWS Resource attributes](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-product-attribute-reference.html)| Resource name,id <br>Resource groups<br>Location<br>[Azure Resource Providers and Types](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-manager-supported-services)<br>Azure Resource Manager (ARM) [Resources meta-data](https://docs.microsoft.com/en-us/azure/templates/)| Azure AD Users (summary count)    |
 
--   AWS ID / AWS External ID roles
 
--   Azure AD Tenant (ID, domain name)
-
--   Azure App Registration (encrypted)
-
--   Azure App Registration (encrypted)
-
--   Tags
-
--   Location
-
--   [AWS Resource and Property
-    Types](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html)
-
--   [AWS Resource
-    attributes](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-product-attribute-reference.html)
-
--   Resource groups
-
--   Location
-
--   [Azure Resource Providers and
-    Types](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-manager-supported-services)
-
--   Azure Resource Manager (ARM) [Resources
-    meta-data](https://docs.microsoft.com/en-us/azure/templates/)
-
--   Application Registration (Summary counts)
-
--   O365 policy configurations for Devices, Applications
 
 Data Encryption
 ---------------
@@ -152,7 +122,7 @@ Cloudneeti application users.
 | **CSP**                      | **Amazon Web Services**            | **Microsoft Azure**                                         | **Microsoft Office 365**                                    |
 |------------------------------|------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------|
 | Cloud Users                  | IAM user counts and configurations | Counts (Configuration information processed but not stored) | Counts (Configuration information processed but not stored) |
-| Cloudneeti Application Users | Name , Email| Name , Email    | Name ,Email|
+| Cloudneeti Application Users | Name <br> Email| Name <br> Email    | Name <br> Email|
 
 
 The users provide an explicit consent for storing their personal data in
