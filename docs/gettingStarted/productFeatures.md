@@ -197,10 +197,10 @@ The Risk Impact five-point scale is defined below.
 
 | Risk Impact | Objective: Cost Increase | Objective: Time Increase | Objective: Reputation Damage               |
 |-------------|--------------------------|--------------------------|--------------------------------------------|
-| Critical    | \>40%                    | 20-40%                   | Possibly rendering project useless         |
+| Critical    | >40%                    | 20-40%                   | Possibly rendering project useless         |
 | High        | 20-40%                   | 10-20%                   | Unacceptable to sponsors & stakeholders    |
 | Moderate    | 10-20%                   | 10-20%                   | Might require additional sponsor approvals |
-| Low         | \<10%                    | \<5%                     | Noticeable reduction in project quality    |
+| Low         | <10%                    | <5%                     | Noticeable reduction in project quality    |
 | Very Low    | insignificant            | insignificant            | Barely noticeable                          |
 
 **Note:** Please consult with your Risk Advisor / Information Security team to
@@ -217,11 +217,11 @@ The Risk Likelihood five-point scale is defined below.
 
 | Risk Likelihood | Definition                                                    |
 |-----------------|---------------------------------------------------------------|
-| Certain         | Highly likely to occur with a probability \>90%.              |
+| Certain         | Highly likely to occur with a probability >90%.              |
 | High            | Likely to occur with a probability of 60-90%.                 |
 | Moderate        | Possible to occur with a probability of 30-60%.               |
 | Low             | Will most likely not occur. Probability to occur is 10 - 30%. |
-| Not Likely      | Highly unlikely to occur with a probability \<10%             |
+| Not Likely      | Highly unlikely to occur with a probability <10%             |
 
 **Note:** Please consult with your Risk Advisor / Information Security team to
 review the Cloudneeti’s assigned Risk Likelihood in the context of your
