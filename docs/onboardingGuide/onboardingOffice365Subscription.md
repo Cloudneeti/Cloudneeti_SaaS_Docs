@@ -314,8 +314,8 @@ the Cloudneeti API key generation.
 |-------------------------------------------------------------------------------------------------|----------------------------|-------------------------|
 | [Cloudneeti License Id](.././onboardingOffice365Subscription/#license-id)                        | Cloudneeti                 | License Admin           |
 | [Cloudneeti Account Id ](.././onboardingOffice365Subscription/#account-id)                         | Cloudneeti                 | License Admin           |
-| [Office Tenant Id ](.././onboardingOffice365Subscription/#azure-subscription-id)                     | Cloudneeti                 | License Admin           |
-| [Service Principal Id ](.././onboardingOffice365Subscription/#registered-cloudneeti-application-id)    | Cloudneeti                 | License Admin           |
+| [Office Directory Id  ](.././onboardingOffice365Subscription/#azure-subscription-id)                     | Cloudneeti                 | License Admin           |
+| [Cloudneeti Application Id ](.././onboardingOffice365Subscription/#registered-cloudneeti-application-id)    | Cloudneeti                 | License Admin           |
 | [Cloudneeti Environment ](.././onboardingOffice365Subscription/#cloudneeti-artifacts-and-data-collector-details)  | Cloudneeti Team            | License Admin           |
 | [Cloudneeti API key](.././onboardingOffice365Subscription/#generate-cloudneeti-api-key)   | Cloudneeti Team            | License Admin           |
 | [Artifacts Name ](.././onboardingOffice365Subscription/#cloudneeti-artifacts-and-data-collector-details) | Cloudneeti Team            | License Admin           |
@@ -324,7 +324,7 @@ the Cloudneeti API key generation.
 | [Cloudneeti data collector Service Principal secret](.././onboardingOffice365Subscription/#registered-cloudneeti-application-secret)  | Microsoft Azure            | Subscription Owner      |
 | [Azure Subscription Id ](.././onboardingOffice365Subscription/#azure-subscription-id)    | Microsoft Azure            | Subscription Owner      |
 | [Office Domain ](.././onboardingOffice365Subscription/#office-365-details)       | Office 365 portal          | Office 365 user with Exchnage Admin and SharePoint Admin role |
-| [Office Admin Id ](.././onboardingOffice365Subscription/#enable-mfa-and-create-application-password)     | Office 365 portal          | Office 365 user with Exchnage Admin and SharePoint Admin role |
+| [Office Admin Email Id  ](.././onboardingOffice365Subscription/#enable-mfa-and-create-application-password)     | Office 365 portal          | Office 365 user with Exchnage Admin and SharePoint Admin role |
 | [Office 365 App Password](.././onboardingOffice365Subscription/#enable-mfa-and-create-application-password)   | Office 365 portal          | Office 365 user with Exchnage Admin and SharePoint Admin role|
 
 #### Cloudneeti license and account details
