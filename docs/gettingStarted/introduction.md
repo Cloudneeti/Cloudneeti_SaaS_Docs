@@ -1,105 +1,32 @@
-Introduction
-------------
+Welcome to Cloudneeti!
+----------------------
 
-### Product
+Cloudneeti is a multi-tenant software as a service (SaaS) product for cloud
+security and compliance assurance. It protects customer’s environments in the
+public cloud from misconfigurations - the primary reason for data breaches in
+the cloud.
 
-Cloudneeti is a SaaS product (“Cloud Service”) for security and compliance
-assurance. The Cloud Service has out-of-the-box definitions of security policies
-and mapping of these policies to various industry compliance frameworks, laws
-and regulations. The Cloud Service will collect cloud workload configuration
-information for onboarded cloud accounts and provide dashboards and reports
-comparing these actual cloud workload configurations against cloud security best
-practices, compliance frameworks, laws and regulations.
+Cloudneeti application connects over APIs to the customer’s cloud
+infrastructure, collects actual cloud workload configurations, compares it with
+security policies and provides compliance status at a cloud resource and
+security policy level in form of dashboards, views and reports. It delivers
+compliance evidence for multiple cybersecurity benchmarks, industry benchmarks,
+laws and regulations. The platform provides remediation guidance and enables
+auto-remediation, integrates with CI/CD DevOps automation and ticketing systems,
+and sends notifications. Users sign in using their corporate credentials over
+Single Sign On.
 
-The Cloud Service enables management of security policies and user and cloud
-account administration; provides remediation guidance and allows
-auto-remediation for a subset of security policies; allows integrations with
-ticketing systems and data feeds; and sends notifications.
+This online documentation provides an overview of the product, explains how to
+use the product, how to integrate with cloud service providers (CSPs) for data
+collection, how to configure the product and integrate it with customer’s IT
+systems.
 
-Customers will nominate users for the license admin role who will have the
-ability to access information across all onboarded cloud accounts, configure the
-product and add additional users who will have access only to dashboards and
-reports.
-
-You can find additional information about the product, solutions and customers
-on Cloudneeti [website](https://www.cloudneeti.com/).
-
-### Subscribe
-
-Customers can request a free trial or a paid subscription License. This section
-also outlines the steps to determine the number of resources in each Cloud
-Account. This information will be used to estimate the product Subscription Fee.
-
-[Subscribe](../subscribe/)
-
-### System Architecture
-
-Please review the terminology we use in this guide, such as cloud accounts,
-resources, Cloudneeti application License and Cloud Account, Onboarding and
-other. This will help you understand the meaning of each term used in this guide
-for configuring and using the Cloudneeti product.
-
-[System Architecture](../systemArchitecture/)
-
-### Sign in and Sign Out
-
-The License Admin can sign in to the Cloudneeti application and add additional
-users with admin or reader roles.
-
-Please follow the sign-in steps to access the Cloudneeti application using your
-single sign on (SSO) credentials. This section also describes the full sign out
-steps.
-
-[Sign in and Sign out](../signInAndSignOut/)
-
-Onboarding Guide
-----------------
-
-The Cloudneeti application integrates with CSPs for data collection over APIs in
-read only mode. Cloudneeti has connectors to Microsoft Azure, Amazon Web
-Services (AWS), and Office 365. Google Cloud Platform (GCP) is on product
-roadmap. Licenses are activated by License Admin during onboarding of the first
-Cloud Account to a License.
-
-Please follow the onboarding steps to connect Cloudneeti application to your
-cloud infrastructure.
-
-[Azure Subscriptions](../../onboardingGuide/azureSubscriptions/)
-
-[AWS Accounts](../../onboardingGuide/amazonWebServiceAccounts/)
-
-[Office 365 Subscriptions](../../onboardingGuide/onboardingOffice365Subscription/)
-
-User Guide
-----------
-
-Sign in to the Cloudneeti application to review dashboards, views and reports
-about your security posture. You can see your aggregated compliance score for
-each benchmark, compliance statistics for each security policy and drill down
-into the compliance status of each individual resource where this security
-policy is applicable.
-
-[UI Navigation](../../userGuide/userGuideUINavigation/)
-
-[Dashboards](../../userGuide/dashboards/)
-
-[Security Policies](../../userGuide/securityPolicies/)
-
-[Compliance Benchmarks](../../userGuide/complianceBenchmarks/)
-
-[Reports](../../userGuide/reports/)
-
-Administrator Guide
--------------------
-
-License Admin and Account Admin can change Settings of the Cloudneeti
-application. This includes management of users, configuration of integrations
-with other systems, and management of security policies.
-
-[Manage Accounts](../../administratorGuide/manageAccounts/)
-
-[Manage Licenses](../../administratorGuide/manageLicenses/)
-
-[Manage Users](../../administratorGuide/manageUsers/)
-
-[Audit Log](../../administratorGuide/auditLog/)
+| Section               | Content                                                                                                                                                                                                                                                                      |
+|-----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Introduction        | Familiarize yourself with product features, application organization, system architecture, data security practices and terminology used in this documentation.                                                                                                               |
+| Try and Buy         | Register for a free trial to explore the product. Estimate your subscription fee. Buy a full version of the product (subscribe to the product) on Azure Marketplace. Alternatively, request a custom configured license directly from Cloudneeti.                            |
+| User Guide          | Navigation guide to the Cloudneeti application to access dashboards, views and reports about your security, compliance and risk posture. See the aggregated compliance status for each compliance framework, drill down to an individual security policy and resource level. |
+| Onboarding         | Follow the onboarding steps to integrate the Cloudneeti application with your cloud infrastructure for data collection. Understand the prerequisites, steps required on the CSP portal and additional steps within the Cloudneeti application.                               |
+| Remediations       | Follow the steps on the CSP portal and within the Cloudneeti application to setup auto-remediations for your cloud infrastructure.                                                                                                                                           |
+| Administrator Guide | Add and remove users, onboard cloud accounts, configure data collection, integrate Cloudneeti application with other systems, and review the audit logs.                                                                                                                     |
+| Release Notes       | Cloudneeti application is following a bi-weekly release cycle. Review the newly added and modified features, security policies and compliance frameworks.                                                                                                                    |

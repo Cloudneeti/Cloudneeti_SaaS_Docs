@@ -1,6 +1,8 @@
 Integrations
 ======================
 
+## Overview
+
 License Admins will have the rights to managed configure integrations.
 
 Select **Configurations** on the left menu and click on **Integrations**.
@@ -25,16 +27,31 @@ Select **Configurations** on the left menu and click on **Integrations**.
 
 
 ## Data Feed – Reporting and Auditing
-### STEP 1: Configure Data Feed Destinations
-
 Cloudneeti application supports two types of data feed destinations:
 
 1. Object storage system
 
 2. NoSql storage system
 
-Please select the type of storage system you would like to use.
 
+| S. No. | Step                                   | Portal to use     | Role                    |
+|--------|------------------------------------|-------------------|-------------------------|
+| 1      | Create Object or NoSQL storage system    | Microsoft Azure   | Subscription Owner  |
+| 2      | Configure Data Feed Destinations    | Cloudneeti   | Subscription Owner  |
+| 3      | Enable Data Feeds | Cloudneeti   | License Admin      |
+| 4      | Configure Data Feed Scope & Frequency        | Cloudneeti        | License Admin           |
+| 5      | Verify Data Feeds        | Microsoft Azure        | Subscription Owner           |
+
+### STEP 1: Create Object or NoSQL storage system
+
+Please select the type of storage system you would like to use and create it in Azure Subscription.
+
+1. Object storage system  - Follow this [link](https://docs.microsoft.com/en-us/azure/storage/common/storage-quickstart-create-account?tabs=azure-portal) to create a Object storage system.
+
+2. NoSQL storage system - Follow this [link](https://docs.microsoft.com/en-us/azure/cosmos-db/how-to-manage-database-account#create-an-account) to create a NoSQL storage system.
+
+
+### STEP 2: Configure Data Feed Destinations
 #### Object storage system
 
 CSV files will be streamed to the storage account after every successful data
@@ -97,17 +114,17 @@ collection.
 	![NoSql storage system](.././images/administratorGuide/NoSql_Storage_System.png#thumbnail)
 
 
-### STEP 2: Enable Reporting Data Feeds
+### STEP 3: Enable Data Feeds
 
 Login to Cloudneeti portal with License Admin role. Navigate to Configure
-integrations to enable the Reporting Data Feeds.
+integrations to enable the Data Feeds.
+
+Enable Reporting Data Feeds
 
 ![STEP 2: Enable Reporting Data Feeds](.././images/administratorGuide/Enable_Reporting_Data_feeds.png#thumbnail)
 
-### STEP 3: Enable Auditing Data Feeds
+Enable Auditing Data Feeds
 
-Login to Cloudneeti portal with License Admin role. Navigate to Configure
-integrations to enable the Reporting Data Feeds.
 ![STEP 3: Enable Auditing Data Feeds](.././images/administratorGuide/Enable_Auditing_Data_Feeds.png#thumbnail)
 
 
@@ -168,15 +185,22 @@ Reporting Data Sample
 
 Incident Management (Ticketing)
 -------------------------------
-
-### STEP 1: Configure ticketing system integration for ServiceNow or Zendesk
 Incident Management (Ticketing) allows integrations with ticketing systems such
 as ZenDesk and ServiceNow.
 
-#### ServiceNow 
 
-The following steps are required to configure ServiceNow integration in the
+| S. No. | Step                                   | Portal to use     | Role                    |
+|--------|------------------------------------|-------------------|-------------------------|
+| 1      | Configure ticketing system integration for ServiceNow or Zendesk    | Cloudneeti   | License Admin  |
+| 2      | Configure Incident Management   | Cloudneeti   | Subscription Owner  |
+| 3      | Verify tickets created | ServiceNow or Zendesk   | Admin      |
+
+
+### STEP 1: Configure ticketing system integration for ServiceNow or Zendesk
+The following steps are required to configure ticketing system integration in the
 Cloudneeti application.
+
+#### ServiceNow 
 
 1.  Select **Service Now** in the dropdown
 
@@ -205,6 +229,7 @@ Cloudneeti application.
 
 The following steps are required to configure ZenDesk integration in the
 Cloudneeti application.
+
 
 1.  Select **ZenDesk** in the dropdown
 
@@ -256,22 +281,6 @@ Cloudneeti application.
 ### STEP 3: Verify tickets created
 Tickets are created for non-compliant resources after every successful scan.
 
-#### Zendisk Tikcet Sample
-
-Sample Zendisk Ticket List
-
-![ZenDesk integration sample1](.././images/administratorGuide/ZendeskTicketList.png#thumbnail)
-
- Sample Zendisk Ticket 
- 
-License and account details
-
-![ZenDesk integration sample2](.././images/administratorGuide/ZendeskTicket_LicenseAccountDetails.png#thumbnail)
-
-Policy Recommendation, Audit Procedure and Remediation 
-
-![ZenDesk integration sample3](.././images/administratorGuide/ZendeskTicket_PolicySpecification.png#thumbnail)
-
 #### ServiceNow Incident Sample
 
 Sample ServiceNow Incidents List
@@ -288,4 +297,21 @@ Sample ServiceNow Problem
 
 Sample ServiceNow Problem Task
 
-![ZenDesk integration](.././images/administratorGuide/ServiceNow_ProblemTask_LicenseDetails.png#thumbnail)
+![ServiceNow integration](.././images/administratorGuide/ServiceNow_ProblemTask_LicenseDetails.png#thumbnail)
+
+
+#### Zendisk Tikcet Sample
+
+Sample Zendisk Ticket List
+
+![ZenDesk integration sample1](.././images/administratorGuide/ZendeskTicketList.png#thumbnail)
+
+Sample Zendisk Ticket 
+ 
+1. License and account details
+
+    ![ZenDesk integration sample2](.././images/administratorGuide/ZendeskTicket_LicenseAccountDetails.png#thumbnail)
+
+2. Policy Recommendation, Audit Procedure and Remediation 
+
+    ![ZenDesk integration sample3](.././images/administratorGuide/ZendeskTicket_PolicySpecification.png#thumbnail)

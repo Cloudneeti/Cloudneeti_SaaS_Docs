@@ -1,4 +1,4 @@
-Manage Users
+Users and Roles
 ============
 
 License Admins and Account Admins will have the rights to manage License users and Account users.
