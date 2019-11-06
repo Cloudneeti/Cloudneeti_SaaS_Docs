@@ -5,7 +5,7 @@ The Cloudneeti application provides Single Sign On (SSO) for user
 authentication, integrates with cloud service providers (CSPs) for meta-data
 collection and remediations, enables integrations with customer’s IT systems.
 
- ![Overview](.././images/introduction/DeploymentArchitecture.png#thumbnail)
+ ![Overview](.././images/introduction/DeploymentArchitecture.png#thumbnail_1)
 
  **Single Sign On:** Users of the Cloudneeti application sign in with their
 corporate credentials using Single Sign On (SSO). The product integrates with
@@ -37,7 +37,7 @@ API calls to the management plane of the CSP. Configuration information for
 Office 365 is collected using API calls and an Office 365 agent typically
 installed inside customer’s Azure subscription.
 
- ![Cloud Connectors](.././images/introduction/CloudConnectors.png#thumbnail)
+ ![Cloud Connectors](.././images/introduction/CloudConnectors.png#thumbnail_1)
 
  AWS Connector is implemented using AWS Lambda functions running in Cloudneeti’s
 AWS account. Azure Connector and Office 365 Connector are implemented using
@@ -56,7 +56,7 @@ application leverages Azure Policy for cloud native enforcement of security
 policies on Microsoft Azure. Customers can turn on or off auto-remediation for
 specific security policies.
 
- ![Remediation](.././images/introduction/Remediation.png#thumbnail)
+ ![Remediation](.././images/introduction/Remediation.png#thumbnail_1)
 
  Integrations
 ------------
@@ -66,7 +66,7 @@ data feeds to customers storage account or a NoSQL database. Cloudneeti
 application integrates with ticketing (incident management) systems and CI/CD
 tools for DevOps automation.
 
- ![Integrations](.././images/introduction/Integrations.png#thumbnail)
+ ![Integrations](.././images/introduction/Integrations.png#thumbnail_1)
 
  Single Sign On
 --------------
@@ -76,6 +76,6 @@ Single Sign On using SAML based token authentication with Microsoft Azure AD,
 Office 365 AD Tenant and Microsoft Accounts (Outlook, Live, Hotmail).
 
 
- ![Single Sign On](.././images/introduction/SingleSignOn.png#thumbnail)
+ ![Single Sign On](.././images/introduction/SingleSignOn.png#thumbnail_1)
 
  

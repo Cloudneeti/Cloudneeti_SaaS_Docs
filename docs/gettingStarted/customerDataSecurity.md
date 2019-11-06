@@ -11,7 +11,7 @@ Meta-data collection for AWS happens using serverless Lambda functions running
 within Cloudneeti’s AWS account. Meta-data collection for Azure is part of
 microservices tier and runs within Cloudneeti’s Azure subscription.
 
- ![Platform Architecture](.././images/introduction/PlatformArchitecture.png#thumbnail)
+ ![Platform Architecture](.././images/introduction/PlatformArchitecture.png#thumbnail_1)
 
  The Cloudneeti application enables data security for all data types imported, stored and exported during data collection, data analysis, remediations, single sign on and integrations. Data protection, high-availability and resiliency is considered from the very outset. All traffic to and from Cloudneeti is always encrypted and access controlled. Cloudneeti uses TLS1.2 for data-in-transit encryption and AES 256-bit encryption for data at rest. Architecture includes Single Sign On with the customer’s preferred ID provider.
 
@@ -21,7 +21,7 @@ microservices tier and runs within Cloudneeti’s Azure subscription.
 The data flow diagram outlines the data exchange between the Cloudneeti
 application and external systems.
 
- ![Data Flow](.././images/introduction/DataFlow.png#thumbnail)
+ ![Data Flow](.././images/introduction/DataFlow.png#thumbnail_1)
 
 Access Permissions
 ------------------
@@ -52,7 +52,7 @@ password (MFA with App Password). Cloudneeti connects to the agent using
 separate secure ID and credentials.
 
 
- ![Access Permissions](.././images/introduction/AzureAccessPermission.png#thumbnail)
+ ![Access Permissions](.././images/introduction/AzureAccessPermission.png#thumbnail_1)
 
 Configuration Metadata
 ----------------------
@@ -136,5 +136,5 @@ Cloudneeti’s data protection and operational processes were assessed by a
 third-party auditor and Cloudneeti received SOC 2 Type 1 attestation. The SOC 2
 Type 1 report can be provided on request.
 
- ![SOC 2 Type 1 Attestation](.././images/introduction/SOC2.png#thumbnail)
+ ![SOC 2 Type 1 Attestation](.././images/introduction/SOC2.png#thumbnail_1)
 
