@@ -401,7 +401,7 @@ not assigned.
 Microsoft graph permissions are needed to collect data for Azure AD related
 security policies listed below.
 
-| Policy-Id | Policy Name   | AAD Entity Used for Evaluating Misconfiguration  | Data Stored in Cloudneeti Data Store   |
+| Policy Id | Policy Title   | AAD Entity Used for Evaluating Misconfiguration  | Data Stored in Cloudneeti Data Store   |
 |-----------|---------------|--------------------------------------------------|----------------------------------------|
 | 1800.1    | Ensure that AD Application Keys are Rotated Before They Expire   |*passwordCredentials*<br><br>Metadata information contained within the data entity will be key start-date, end-date, and expiry policies. No actual values are retrievable.| <ul><li>AD Application Name</li><li>AD Application ID</li><li>Expiry Date</li></ul> |       
 | 1100.11   | Ensure that the Service Principal Certificate is Renewed Before It Expires | *keyCredentials*<br><br>Metadata information contained within the data involves start-date and end-date. Refer to documentation [here](https://docs.microsoft.com/en-us/powershell/module/azuread/new-azureadserviceprincipalkeycredential?view=azureadps-2.0).| <ul><li>AD Application Name</li><li>AD Application ID</li><li>Expiry Date</li></ul> |
@@ -419,7 +419,7 @@ from Azure subscriptions.
 Backup Reader role access is needed to collect data for security policies listed
 below.
 
-| Policy-Id  | Policy Name   | Category               |
+| Policy Id  | Policy Title   | Category               |
 |------------|---------------|------------------------|
 | 1700.10       | Ensure that Backup feature is configured for App Service deployed on Standard and above App Service Plan   | Business continuity and DR |
 | 1700.11       | Ensure that Backup feature is configured for API Apps deployed on Standard and above App Service Plan      | Business continuity and DR |
@@ -431,7 +431,7 @@ below.
 Website Contributor role access is needed to collect data for security policies
 listed below.
 
-| Policy ID     | Policy Name                                                                          | Category                              |
+| Policy Id     | Policy Title                                                                          | Category                              |
 |---------------|--------------------------------------------------------------------------------------|---------------------------------------|
 | 1900.42       | Ensure that 'App Insights' are configured for Azure Web Apps                         | Azure - Compute (PaaS and Serverless) |
 | 1900.43       | Ensure that WEBSITE_LOAD_CERTIFICATES parameter is not set to '\*' for Mobile Apps   | Azure - Compute (PaaS and Serverless) |
@@ -454,7 +454,7 @@ listed below.
 Storage Account Contributor role or Storage Account Key Operator Servic role access is needed to collect data for security policies
 listed below.
 
-| Policy ID     | Policy Name                                                                          | Category                              |
+| Policy Id     | Policy Title                                                                          | Category                              |
 |---------------|--------------------------------------------------------------------------------------|---------------------------------------|
 | 1600.13       | Ensure that 'Public access level' is set to Private for Blob Containers                         | Storage Accounts |
 
@@ -463,7 +463,7 @@ listed below.
 Special permission on key vaults is needed to collect data for security policies
 listed below.
 
-| Policy-Id     | Policy Name                                                      | Category       |
+| Policy Id     | Policy Title                                                      | Category       |
 |---------------|------------------------------------------------------------------|----------------|
 | 1800.2        | Ensure that the expiry date is set on all Secrets in a Key Vault | Key Management |
 

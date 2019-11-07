@@ -20,7 +20,7 @@ The Cloudneeti application has the following product features:
     provide data feeds and send notifications.
 
 
-![Overview](.././images/introduction/ProductFeatures.png#thumbnail)
+![Overview](.././images/introduction/ProductFeatures.png#thumbnail_1)
 
 Licenses
 --------
@@ -32,7 +32,7 @@ portfolio of different business units and security assurance should be
 segregated by business unit. With multiple Licenses, a customer can manage
 security and compliance for each business unit individually.
 
-![Licenses](.././images/introduction/Licenses.png#thumbnail)
+![Licenses](.././images/introduction/Licenses.png#thumbnail_1)
 
 Cloud Accounts
 --------------
@@ -44,7 +44,7 @@ application with the cloud service provider (CSP) for cloud infrastructure
 configurations metadata collection. Security posture analysis happens primarily
 at a Cloud Account level.
 
-![Cloud Accounts](.././images/introduction/CloudAccounts.png#thumbnail)
+![Cloud Accounts](.././images/introduction/CloudAccounts.png#thumbnail_1)
 
 User Roles
 ----------
@@ -55,7 +55,7 @@ License Admin has access to dashboards, views and reports and can configure the
 Cloudneeti application. A License Reader can only access dashboards, views and
 reports.
 
-![User Roles](.././images/introduction/UserRoles.png#thumbnail)
+![User Roles](.././images/introduction/UserRoles.png#thumbnail_1)
 
 Access Permissions
 ------------------
@@ -68,7 +68,7 @@ In the example below, License User has access to all Cloud Accounts under
 License 1. Account User has access to Cloud Account 2 under License 1 and Cloud
 Account 4 under License 2.
 
-![Access Permissions](.././images/introduction/AccessPermission.png#thumbnail)
+![Access Permissions](.././images/introduction/AccessPermission.png#thumbnail_1)
 
 Assets Inventory
 ----------------
@@ -79,7 +79,7 @@ these configurations in the data store. Assets Inventory includes Cloud
 Connector (AWS, Azure, Office 365), Cloud Account, Resource Group for Azure and
 Tags for AWS, Resource Name and Resource Configurations (meta-data).
 
-![Assets Inventory](.././images/introduction/AccessInventory.png#thumbnail)
+![Assets Inventory](.././images/introduction/AccessInventory.png#thumbnail_1)
 
 Security Posture
 ----------------
@@ -111,15 +111,15 @@ resources:
 fully compliant security policies (all resources under this security policy are
 compliant).
 
-![Security Posture](.././images/introduction/SecurityPosture1.png#thumbnail)
+![Security Posture](.././images/introduction/SecurityPosture1.png#thumbnail_1)
 
 Security Posture is displayed in the Cloudneeti application as views. A view shows Categories and category level number of Polices Pass/Total. Under each Category, a list of Security Policies is displayed with Security Policy Status and number of Resources Pass/Total.
 
-![Security Posture](.././images/introduction/SecurityPosture2.png#thumbnail)
+![Security Posture](.././images/introduction/SecurityPosture2.png#thumbnail_1)
 
 % Compliance and Policy Compliance Trends are also available within the view.
 
-![Security Posture](.././images/introduction/SecurityPosture3.png#thumbnail)
+![Security Posture](.././images/introduction/SecurityPosture3.png#thumbnail_1)
 
 Compliance Posture
 ------------------
@@ -143,11 +143,11 @@ resources.
 compliant security policies (all resources under this security policy are
 compliant).
 
-![Compliance Posture](.././images/introduction/CompliancePosture.png#thumbnail)
+![Compliance Posture](.././images/introduction/CompliancePosture.png#thumbnail_1)
 
 An aggregated Compliance % per Compliance Framework is displayed across multiple compliance frameworks in the compliance dashboard. It is calculated as a share of fully compliant cloud security policies out of the total number of security policies with data. 
 
-![Compliance Posture](.././images/introduction/ComplianceDashboard.png#thumbnail)
+![Compliance Posture](.././images/introduction/ComplianceDashboard.png#thumbnail_1)
 
 Risk Posture
 ------------
@@ -160,7 +160,7 @@ policy for risk impact and risk likelihood. Risk impact can be “Not Likely”,
 security policy. Risk likelihood is calculated each time based on multiple
 metrics using machine learning algorithms.
 
-![Risk Posture](.././images/introduction/RiskPosture1.png#thumbnail)
+![Risk Posture](.././images/introduction/RiskPosture1.png#thumbnail_1)
 
 Risk matrix has X-axis and Y-axis showing the number of security policies in
 each X / Y segment. Accordingly, Security Policies with high risk impact and
@@ -183,7 +183,7 @@ following inputs:
 Cloudneeti is continuously optimizing its Machine Learning algorithms to deliver
 a high accuracy risk analytics.
 
-![Risk Posture](.././images/introduction/RiskPosture2.png#thumbnail)
+![Risk Posture](.././images/introduction/RiskPosture2.png#thumbnail_1)
 
 ### Risk Impact
 
