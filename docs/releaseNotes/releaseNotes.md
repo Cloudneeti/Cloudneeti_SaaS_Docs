@@ -56,7 +56,7 @@
         | Logging and Auditing | Ensure logrotate is configured |
         | Logging and Auditing | Ensure rsyslog Service is enabled |
         | Logging and Auditing | Ensure rsyslog default file permissions configured |
-        | Logging and Auditing | Ensure remote rsyslog messages are only accepted on designated log hosts. |
+        | Logging and Auditing | Ensure remote rsyslog messages are only accepted on designated log hosts |
         | Logging and Auditing | Ensure rsyslog or syslog-ng is installed |
         | Network Configuration | Ensure wireless interfaces are disabled |
         | Network Configuration | Ensure IP forwarding is disabled |
