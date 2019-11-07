@@ -31,8 +31,14 @@ Cloudneeti application **License Admin** is assigned to an individual in the cus
 
 AWS **Administrator** role is required for granting Cloudneeti application access rights to AWS account(s). The administrator must have enough permissions to create a role as a trusted entity with the [SecurityAudit access policy.](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_job-functions.html#jf_security-auditor)
 
-### Cloudneeti AWS account id
-Cloudneeti AWS account id can be retrived from email notification recieved by License Admin on License creation sent by Cloudneeti Notification Bot. 
+### Collect information
+
+Information can be retrived from email notification recieved by License Admin on License creation sent by Cloudneeti Notification Bot
+
+#### Cloudneeti AWS account id (1)
+
+#### License id (2) to be added as **External Id** in [step 1](.././amazonWebServiceAccounts/#step-1-create-an-aws-role-for-cloudneeti-manually-or-using-automated-script) 
+
 
 ![AWS Portal](.././images/amazonWebServiceAccounts/Welcome_Email.png#thumbnail)
 
@@ -55,23 +61,25 @@ Login to [AWS portal](https://console.aws.amazon.com/) with AWS **Administrator*
 
 4.	Select **Another AWS account** (1) and enter Cloudneeti's AWS account ID (2)
 
-5.  Enter the license id as **External ID** (3)
+5.  Select **Options** for Require external ID (Best practice when a third party will assume this role) (3)
 
-6.	Click **Next: Permissions** (4)
+6.  Enter the license id as **External ID** (4)
+
+7.	Click **Next: Permissions** (5)
 
      ![Activate License](.././images/amazonWebServiceAccounts/Another_AWS_Account_ExternalId.png#thumbnail)
 
-7.	Select policy name **SecurityAudit**
+8.	Select policy name **SecurityAudit**
 
-8.	Click **Next**
+9.	Click **Next**
 
     ![Create Role](.././images/amazonWebServiceAccounts/Attatch_policies.png#thumbnail)
 
-9.	Click **Next: Tags**
+10.	Click **Next: Tags**
 
-10.	Enter **Role Name** (1), the same role name should be added while creating an AWS Cloud Account in Cloudneeti.
+11.	Enter **Role Name** (1), the same role name should be added while creating an AWS Cloud Account in Cloudneeti.
 
-11.	Click on **Create role** (2)
+12.	Click on **Create role** (2)
      ![Create Role](.././images/amazonWebServiceAccounts/Role_Information.png#thumbnail)
 
 An AWS role will be created in the customer's account to mark Cloudneeti's account as a trusted entity with the SecurityAudit access policy.
