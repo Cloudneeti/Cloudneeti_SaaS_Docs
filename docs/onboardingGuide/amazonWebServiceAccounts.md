@@ -33,11 +33,13 @@ AWS **Administrator** role is required for granting Cloudneeti application acces
 
 ### Collect information
 
-Information can be retrived from email notification recieved by License Admin on License creation sent by Cloudneeti Notification Bot
+Information can be retrived from email notification recieved by License Admin on License creation sent by Cloudneeti Notification Bot. This information is required in [step 1](.././amazonWebServiceAccounts/#step-1-create-an-aws-role-for-cloudneeti-manually-or-using-automated-script) 
 
-#### Cloudneeti AWS account id (1)
+#### Cloudneeti AWS account id (1) 
+To be added as **Another AWS account**
 
-#### License id (2) to be added as **External Id** in [step 1](.././amazonWebServiceAccounts/#step-1-create-an-aws-role-for-cloudneeti-manually-or-using-automated-script) 
+#### License id (2) 
+To be added as **External Id** 
 
 
 ![AWS Portal](.././images/amazonWebServiceAccounts/Welcome_Email.png#thumbnail)
