@@ -568,7 +568,7 @@ configuration is not done.
 ### Micorosft graph permission - DeviceManagementConfiguration.Read.All
 Microsoft graph permission DeviceManagementConfiguration.Read.All is required to collect data for device related security policies listed below.
 
-| **Policy-Id** | **Policy Name**                                                                                                                                                    | **Category**                     |
+| **Policy Id** | **Policy Title**                                                                                                                                                    | **Category**                     |
 |---------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------|
 | M300.1        | 1. Ensure that mobile devices require complex passwords with atleast two character sets to prevent brute force attacks                                                                                      | Device         |
 | M300.2          | 2. Ensure that mobile device encryption is enabled to prevent unauthorized access to mobile data                                                                                      | Device         |
@@ -590,7 +590,7 @@ available in the Center for Internet Security (CIS) Microsoft 365 benchmark
 (Reference
 [here](https://www.cloudneeti.com/2019/01/assure-microsoft-365-security-and-compliance-with-cloudneeti/)).
 
-| **Policy-Id** | **Policy Name**                                                                                                                                                    | **Category**                     |
+| **Policy Id** | **Policy Title**                                                                                                                                                    | **Category**                     |
 |---------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------|
 | M500.01         | 1. (L1) Ensure modern authentication for SharePoint applications is required                                                                                       | Account / Authentication         |
 | M600.01           | 2. (L2) Ensure calendar details sharing with external users is disabled                                                                                            | Application Permissions          |
