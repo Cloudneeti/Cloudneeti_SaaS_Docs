@@ -48,8 +48,7 @@ Login to [AWS Console](https://aws.amazon.com/console/) with AWS **Administrato
 
     ![EditRole](.././images/updateAWSConfiguration/AWS_IAM.png#thumbnail_1)
 
-6.  **Update Trust Policy** by overriding the existing content with the below
-    .json after replacing
+6.  **Update Trust Policy** by overriding the existing content with the below .json after replacing
 
     1.  Cloudneeti AWS Account Id
 
@@ -63,19 +62,22 @@ Login to [AWS Console](https://aws.amazon.com/console/) with AWS **Administrato
                         "Effect": "Allow", 
                         "Principal": 
                         { 
-                            "AWS": "arn:aws:iam:: <Cloudneeti AWS Account Id>:root" 
+                            "AWS": "arn:aws:iam::<Cloudneeti AWS Account Id>:root" 
                         }, 
                         "Action": "sts:AssumeRole", 
                         "Condition": 
                         { 
                             "StringEquals": 
                             { 
-                                "sts:ExternalId": "\<License Id\>" 
+                                "sts:ExternalId":"<License Id>" 
                             } 
                         } 
                     } 
                 ] 
             } 
+
+
+        ![EditRole](.././images/updateAWSConfiguration/AWS_Trusted_Entities.png#thumbnail_1)
 
 **Step 2 Re-scan Cloud Account to verify successful update to role**
 ----------------------------------------------------
