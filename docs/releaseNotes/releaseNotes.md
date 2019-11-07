@@ -2,6 +2,81 @@
 ===============
 <div class="release_notes">
 
+**October 2019- v2.20.1**
+----------------------------
+
+1.  **User Experience Improvements**
+    * None
+
+2.	**Platform & Stability Improvements**
+    *   Fixed following bugs
+        -   UI/UX: Policy Details blade does not show all the columns for the policies with more no of columns.
+        -   UI: Long category title in Security Dashboard was distorting the tiles.
+
+3.	**Policies & Benchmarks Additions/Updates**
+    *   Added the following 16 new security policies for AWS cloud account
+
+        | **Category** | **Policy Title** |
+        | --- | --- |
+        | AWS - Business Continuity | Ensure Multi-AZ feature is Enabled for RDS SQL Instance |
+        | AWS - Business Continuity | Ensure Multi-AZ feature is Enabled for RDS MariaDB Instance |
+        | AWS - Business Continuity | Ensure Multi-AZ feature is Enabled for RDS Oracle Instances |
+        | AWS - Business Continuity | Ensure Multi-AZ feature is Enabled for RDS SQLServer Instances |
+        | AWS - Business Continuity | Ensure Multi-AZ feature is Enabled for RDS Aurora Cluster |
+        | AWS - Data Protection | Ensure that encryption is enabled for RDS SQL Instances |
+        | AWS - Data Protection | Ensure that encryption for storage done with KMS CMKs for each RDS SQL Instance |
+        | AWS - Data Protection | Ensure that encryption is enabled for RDS MariaDB Instances |
+        | AWS - Data Protection | Ensure that encryption for storage done with KMS CMKs for each RDS MariaDB Instance |
+        | AWS - Data Protection | Ensure that encryption is enabled for RDS Oracle Instances |
+        | AWS - Data Protection | Ensure that encryption for storage done with KMS CMKs for each RDS Oracle Instances |
+        | AWS - Data Protection | Ensure that encryption is enabled for RDS RDS SQLServer Instances |
+        | AWS - Data Protection | Ensure that encryption for storage done with KMS CMKs for each RDS SQLServer Instances |
+        | AWS - Data Protection | Ensure that encryption for storage done with KMS CMKs for RDS Aurora MySQL Serverless Cluster |
+        | AWS - Data Protection | Ensure that encryption is enabled for Aurora SQL Instances |
+        | AWS - Data Protection | Ensure that encryption for storage done with KMS CMKs for Aurora SQL Instances |
+
+    *   Introducing a new security benchmark
+        - Center for Internet Security CentOS Linux 7 Benchmark v2.2.0 [preview]
+        
+    *   Added the following new security policies for CentOS Linux 7 running on Microsoft Azure.
+
+        | **Category** | **Policy Title** |
+        | --- | --- |
+        | Access, Authentication and Authorization | Ensure cron daemon is enabled |
+        | Access, Authentication and Authorization | Ensure SSH PermitUserEnvironment is disabled |
+        | Access, Authentication and Authorization | Ensure SSH Protocol is set to 2 |
+        | Access, Authentication and Authorization | Ensure SSH IgnoreRhosts is enabled |
+        | Access, Authentication and Authorization | Ensure SSH HostbasedAuthentication is disabled |
+        | Access, Authentication and Authorization | Ensure SSH PermitEmptyPasswords is disabled |
+        | Initial Setup | Ensure nodev option set on removable media partitions |
+        | Initial Setup | Ensure nosuid option set on removable media partitions |
+        | Initial Setup | Ensure noexec option set on removable media partitions |
+        | Initial Setup | Ensure XD/NX support is enabled |
+        | Initial Setup | Ensure address space layout randomization (ASLR) is enabled |
+        | Logging and Auditing | Ensure logrotate is configured |
+        | Logging and Auditing | Ensure rsyslog Service is enabled |
+        | Logging and Auditing | Ensure rsyslog default file permissions configured |
+        | Logging and Auditing | Ensure remote rsyslog messages are only accepted on designated log hosts |
+        | Logging and Auditing | Ensure rsyslog or syslog-ng is installed |
+        | Network Configuration | Ensure wireless interfaces are disabled |
+        | Network Configuration | Ensure IP forwarding is disabled |
+        | Network Configuration | Ensure source routed packets are not accepted |
+        | Network Configuration | Ensure broadcast ICMP requests are ignored |
+        | Network Configuration | Ensure bogus ICMP responses are ignored |
+        | Network Configuration | Ensure Reverse Path Filtering is enabled |
+        | Network Configuration | Ensure TCP SYN Cookies is enabled |
+        | Network Configuration | Ensure RDS is disabled |
+        | Services | Ensure rsh server is not enabled |
+        | Services | Ensure telnet server is not enabled |
+        | Services | Ensure Avahi Server is not enabled |
+        | Services | Ensure CUPS is not enabled |
+        | Services | Ensure DHCP Server is not enabled |
+        | Services | Ensure rsh client is not installed |
+        | Services | Ensure telnet client is not installed |
+        | System Maintenance | Ensure permissions on /etc/passwd are configured |
+        | System Maintenance | Ensure permissions on /etc/group are configured |
+        | System Maintenance | Ensure root is the only UID 0 account |
+
 **October 2019- v2.19.1**
 ----------------------------
 
