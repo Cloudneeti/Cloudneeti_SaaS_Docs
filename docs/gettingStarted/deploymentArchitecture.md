@@ -27,6 +27,16 @@ to enable closed loop remediation process. The product enables data feeds for
 reporting and audit logs, integrates with ticketing systems and CI/CD
 automation.
 
+ Single Sign On
+--------------
+
+The Cloudneeti application doesn’t store user password information. It enables
+Single Sign On using SAML based token authentication with Microsoft Azure AD,
+Office 365 AD Tenant and Microsoft Accounts (Outlook, Live, Hotmail).
+
+
+ ![Single Sign On](.././images/introduction/SingleSignOn.png#thumbnail_1)
+
 Cloud Connectors
 ----------------
 
@@ -68,14 +78,6 @@ tools for DevOps automation.
 
  ![Integrations](.././images/introduction/Integrations.png#thumbnail_1)
 
- Single Sign On
---------------
 
-The Cloudneeti application doesn’t store user password information. It enables
-Single Sign On using SAML based token authentication with Microsoft Azure AD,
-Office 365 AD Tenant and Microsoft Accounts (Outlook, Live, Hotmail).
-
-
- ![Single Sign On](.././images/introduction/SingleSignOn.png#thumbnail_1)
 
  
