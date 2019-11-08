@@ -51,9 +51,15 @@ completion and about major configuration changes at a License or Account level.
 
 ### Configure Data Collection
 
-Configure Data Collection allows users to set the frequency of data collection
-and other configurations.
-	![Configure Data Collection](.././images/administratorGuide/Configure_Data_Collection.png#thumbnail)
+Configure Data Collection allows users to set the frequency of data collection to daily or weekly for chosen day.
+
+#### Cloud Account Data Collection Frequency Daily
+
+![Configure Data Collection](.././images/administratorGuide/Configure_Data_Collection.png#thumbnail)
+
+#### Cloud Account Data Collection Frequency Weekly
+
+![Configure Data Collection](.././images/administratorGuide/Configure_Data_Collection_Weekly.png#thumbnail)
 
 ### Update Cloud Account
 
