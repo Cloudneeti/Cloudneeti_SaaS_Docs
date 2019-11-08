@@ -159,24 +159,24 @@ Configure Activity Log to remediate policies [listed here](.././azureSubscriptio
 
 6.  OR In case of custom tags, script can be executed using below options. List of all tags are
     given in the documentation examples inside the script
-    <pre>
-	    <code>```  
-        .\configure-ActivityLogProfile.ps1 `
-        -SubscriptionId <SubscriptionId> `
-        -ResourceGroupName <ResourceGroupName> `
-        -StorageAccountName <StorageAccountName> `
-        -StorageAccountSku <StorageAccountSku> `
-        -Location <Location> `
-        -ApplicationOwnerTag <ApplicationOwnerTag> `
-        -ServiceNameTag <ServiceNameTag> `
-        -BusinessUnitTag <BusinessUnitTag> `
-        -ProjectOwnerTag <ProjectOwnerTag> `
-        -ApplicationTag <ApplicationTag> `
-        -DepartmentTag <DepartmentTag> `
-        -ProjectNameTag <ProjectNameTag> `
-        -CostCenterTag <CostCenterTag> `
-        -DataProfileTag <DataProfileTag>
-        ```</code>
+    <pre>
+    <code>```  
+    .\configure-ActivityLogProfile.ps1 `
+    -SubscriptionId <SubscriptionId> `
+    -ResourceGroupName <ResourceGroupName> `
+    -StorageAccountName <StorageAccountName> `
+    -StorageAccountSku <StorageAccountSku> `
+    -Location <Location> `
+    -ApplicationOwnerTag <ApplicationOwnerTag> `
+    -ServiceNameTag <ServiceNameTag> `
+    -BusinessUnitTag <BusinessUnitTag> `
+    -ProjectOwnerTag <ProjectOwnerTag> `
+    -ApplicationTag <ApplicationTag> `
+    -DepartmentTag <DepartmentTag> `
+    -ProjectNameTag <ProjectNameTag> `
+    -CostCenterTag <CostCenterTag> `
+    -DataProfileTag <DataProfileTag>
+    ```</code>
     </pre>
 
 ### Configure Storage Account
