@@ -78,8 +78,7 @@ script.
 
 #### Register Cloudneeti Application 
 
-Login to [Azure Portal](https://portal.azure.com/) with **Global AD
-Administrator** role.
+Login to [Azure Portal](https://portal.azure.com/) with **Global AD Administrator** role.
 
 1.  Select **Azure Active Directory** in the primary menu
 
@@ -263,11 +262,12 @@ If the Storage Account Contributor or Storage Account Key Operator Service role 
 
     ![Assign role](.././images/azureSubscriptions/Storage_Account_Key_Operator_Service_Role.png#thumbnail)
 
-### 2.5 Add Key Vault access policy to Key Vaults
+### 2.5 Add Key Vault access policy
 **This step is optional** 
-Access policy can be added using either an automation account or manual steps.
+Access policy can be added using either an automation account or manual steps.  
 
-#### [Automation Steps](.././azureSubscriptions/#automatically-add-key-vault-access-policy-for-key-vaults-within-azure-subscriptions)
+#### [Automation Steps](.././azureSubscriptions/#automatically-add-key-vault-access-policy-for-key-vaults-within-azure-subscriptions) 
+Please follow [section](.././azureSubscriptions/#automatically-add-key-vault-access-policy-for-key-vaults-within-azure-subscriptions) for creation of automation account to add Key Vault access policy.
 
 #### Manual Steps
 
