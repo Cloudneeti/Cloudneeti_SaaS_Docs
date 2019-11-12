@@ -263,8 +263,13 @@ If the Storage Account Contributor or Storage Account Key Operator Service role 
 
     ![Assign role](.././images/azureSubscriptions/Storage_Account_Key_Operator_Service_Role.png#thumbnail)
 
-### 2.5 Add Key Vault access policy for specific managed Key Vaults
-**This step is optional**
+### 2.5 Add Key Vault access policy to Key Vaults
+**This step is optional** 
+Access policy can be added using either an automation account or manual steps.
+
+#### [Automation Steps](.././azureSubscriptions/#automatically-add-key-vault-access-policy-for-key-vaults-within-azure-subscriptions)
+
+#### Manual Steps
 
 The Cloudneeti application requires special permission on desired key vaults to get policy data related to secrets. 
 If the Key Vault access policy is not added, Cloudneeti application will not be able to collect data of security policies [listed here](.././azureSubscriptions/#backup-reader-role).
