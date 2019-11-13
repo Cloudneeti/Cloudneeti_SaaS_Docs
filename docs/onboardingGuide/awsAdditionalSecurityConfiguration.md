@@ -76,8 +76,9 @@ Login to [AWS Console](https://aws.amazon.com/console/) with AWS **Administrato
                 ] 
             } 
 
-
-        ![EditRole](.././images/updateAWSConfiguration/AWS_Trusted_Entities.png#thumbnail_1)
+Sample updated trusted entities with External Id
+    
+![EditRole](.././images/updateAWSConfiguration/AWS_Trusted_Entities.png#thumbnail_1)
 
 **Step 2 Re-scan Cloud Account to verify successful update to role**
 ----------------------------------------------------

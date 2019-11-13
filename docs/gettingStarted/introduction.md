@@ -1,32 +1,17 @@
-Welcome to Cloudneeti!
-----------------------
+# Welcome to Cloudneeti!
 
-Cloudneeti is a multi-tenant software as a service (SaaS) product for cloud
-security and compliance assurance. It protects customer’s environments in the
-public cloud from misconfigurations - the primary reason for data breaches in
-the cloud.
+Cloudneeti is a multi-tenant software as a service (SaaS) product for cloud security and compliance assurance. It protects customer’s environments in the public cloud from misconfigurations - the primary reason for data breaches in the cloud.
 
-Cloudneeti application connects over APIs to the customer’s cloud
-infrastructure, collects actual cloud workload configurations, compares it with
-security policies and provides compliance status at a cloud resource and
-security policy level in form of dashboards, views and reports. It delivers
-compliance evidence for multiple cybersecurity benchmarks, industry benchmarks,
-laws and regulations. The platform provides remediation guidance and enables
-auto-remediation, integrates with CI/CD DevOps automation and ticketing systems,
-and sends notifications. Users sign in using their corporate credentials over
-Single Sign On.
+Cloudneeti application connects over APIs to the customer’s cloud infrastructure, collects actual cloud workload configurations, compares it with security policies and provides compliance status at a cloud resource and security policy level in form of dashboards, views and reports. It delivers compliance evidence for multiple cybersecurity benchmarks, industry benchmarks, laws and regulations. The platform provides remediation guidance and enables auto-remediation, integrates with CI/CD DevOps automation and ticketing systems, and sends notifications. Users sign in using their corporate credentials over Single Sign On.
 
-This online documentation provides an overview of the product, explains how to
-use the product, how to integrate with cloud service providers (CSPs) for data
-collection, how to configure the product and integrate it with customer’s IT
-systems.
+This online documentation provides an overview of the product, explains how to use the product, how to integrate with cloud service providers (CSPs) for data collection, how to configure the product and integrate it with customer’s IT systems.
 
 | Section               | Content                                                                                                                                                                                                                                                                      |
 |-----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Introduction        | Familiarize yourself with product features, application organization, system architecture, data security practices and terminology used in this documentation.                                                                                                               |
-| Try and Buy         | Register for a free trial to explore the product. Estimate your subscription fee. Buy a full version of the product (subscribe to the product) on Azure Marketplace. Alternatively, request a custom configured license directly from Cloudneeti.                            |
-| User Guide          | Navigation guide to the Cloudneeti application to access dashboards, views and reports about your security, compliance and risk posture. See the aggregated compliance status for each compliance framework, drill down to an individual security policy and resource level. |
-| Onboarding         | Follow the onboarding steps to integrate the Cloudneeti application with your cloud infrastructure for data collection. Understand the prerequisites, steps required on the CSP portal and additional steps within the Cloudneeti application.                               |
-| Remediations       | Follow the steps on the CSP portal and within the Cloudneeti application to setup auto-remediations for your cloud infrastructure.                                                                                                                                           |
-| Administrator Guide | Add and remove users, onboard cloud accounts, configure data collection, integrate Cloudneeti application with other systems, and review the audit logs.                                                                                                                     |
-| Release Notes       | Cloudneeti application is following a bi-weekly release cycle. Review the newly added and modified features, security policies and compliance frameworks.                                                                                                                    |
+| [Introduction](../../gettingStarted/productFeatures/)        | Familiarize yourself with product features, application organization, system architecture, data security practices and terminology used in this documentation.                                                                                                               |
+| [Try and Buy](../../azureMarketplace/subscribeOnAzureMarketplace/)         | Register for a free trial to explore the product. Estimate your subscription fee. Buy a full version of the product (subscribe to the product) on Azure Marketplace. Alternatively, request a custom configured license directly from Cloudneeti.                            |
+| [Onboarding](../../onboardingGuide/onboardingGuideOverview/)           | Follow the onboarding steps to integrate the Cloudneeti application with your cloud infrastructure for data collection. Understand the prerequisites, steps required on the CSP portal and additional steps within the Cloudneeti application.                               |                                                                                                                                       |
+| [User Guide](../../gettingStarted/signInAndSignOut/)           | Navigation guide to the Cloudneeti application to access dashboards, views and reports about your security, compliance and risk posture. See the aggregated compliance status for each compliance framework, drill down to an individual security policy and resource level. |
+| [Administrator Guide](../../azureMarketplace/subscribeOnAzureMarketplace/)   | Add and remove users, onboard cloud accounts, configure data collection, integrate Cloudneeti application with other systems, and review the audit logs.                                                                                                                     |
+| [Remediations](../../remediation/overview/)         | Follow the steps on the CSP portal and within the Cloudneeti application to setup auto-remediations for your cloud infrastructure.   
+| [Release Notes](../../releaseNotes/releaseNotes/)         | Cloudneeti application is following a bi-weekly release cycle. Review the newly added and modified features, security policies and compliance frameworks.                                                                                                                    |
