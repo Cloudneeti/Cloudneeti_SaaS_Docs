@@ -8,15 +8,14 @@ Remediation of Azure Resources that are non-compliant to a security policy can b
 
 Guided Remediation
 ------------------
-User can follow Remediation Procedure on [security policy](../../userGuide/securityPolicies/). Remediation procedure can be avaiable for Azure Console (1) and Azure Command Line Interface (2).
+Every [security policy](../../userGuide/securityPolicies/) has **Remediation Procedure** (1), can be  avaiable for Azure Console (2) and Azure Command Line Interface (3). Using **Remediation Procedure** (1) non-complaint resources (4) can be put in compliant mode.
 
 ![Remediation of Azure Resources](.././images/cloudneetiRemediation/Azure_Guided_Remediation.png#thumbnail_1)
 
 
 Quick Wins 
 --------------------
-Remediation policies from **Azure Security center, Logging and Monitoring** and
-**Storage and Databases** can be done using quick wins scripts. These scripts will update configurations and settings to make the Cloud account compliant for listed policies.
+Remediation policies from **Azure Security center, Logging and Monitoring** and **Storage and Databases** can be done using quick wins scripts. These scripts will update configurations and settings to make the Cloud account compliant for listed policies.
 
 | **Configuration script**       | **Category**                  | **Number of policies remediated** |
 |--------------------------------|-------------------------------|-----------------------------------|
@@ -215,29 +214,29 @@ Configure Storage Account to remediate policies [listed here ](.././azureSubscri
         </pre>
 
 
-OR To enable only https on storage account, then
-        <pre>
-	        <code>```
-                .\configure-StorageAccounts.ps1 -SubscriptionId <subscriptionId> -EnableHttps
-             ```</code>
-        </pre>
+    OR To enable only https on storage account, 
+            <pre>
+                <code>```
+                    .\configure-StorageAccounts.ps1 -SubscriptionId <subscriptionId> -EnableHttps
+                ```</code>
+            </pre>
 
-OR To enable only geo-replication setting then,
-        <pre>
-	        <code>```
-                .\configure-StorageAccounts.ps1 -SubscriptionId <subscriptionId> -EnableGeoReplication
-             ```</code>
-        </pre>
+    OR To enable only geo-replication setting,
+            <pre>
+                <code>```
+                    .\configure-StorageAccounts.ps1 -SubscriptionId <subscriptionId> -EnableGeoReplication
+                ```</code>
+            </pre>
 
-In case few storage accounts to be excluded then provide **ExcludeStorageAccounts** parameter with comma separated storage account names.
-    <pre>
-        <code>```
-        .\configure-StorageAccounts.ps1 `
-        -SubscriptionId <subscriptionId> `
-        -ExcludeStorageAccounts <excludeStorageAccounts> `
-        -All
-        ```</code>
-    </pre>
+    In case few storage accounts to be excluded then provide **ExcludeStorageAccounts** parameter with comma separated storage account names.
+        <pre>
+            <code>```
+            .\configure-StorageAccounts.ps1 `
+            -SubscriptionId <subscriptionId> `
+            -ExcludeStorageAccounts <excludeStorageAccounts> `
+            -All
+            ```</code>
+        </pre>
 
 
 Auto Remediation
