@@ -190,7 +190,7 @@ Use the Create-ServicePrincipal-AzureOnboarding.ps1 script to create and registe
 
     ![Grant permission ](.././images/azureSubscriptions/Azure_API_Permissions.png#thumbnail)
 
-## STEP 2: Grant access to Cloudneeti registered app
+## STEP 2: Grant access to Cloudneeti registered app 
 
 The following roles need to be granted to the Cloudneeti App registered in the previous step
 
@@ -262,7 +262,21 @@ If the Storage Account Contributor or Storage Account Key Operator Service role 
 
     ![Assign role](.././images/azureSubscriptions/Storage_Account_Key_Operator_Service_Role.png#thumbnail)
 
-### 2.5 Add Key Vault access policy
+### 2.5 Grant Azure Subscription Network Contributor Role
+**This step is optional**
+
+The Cloudneeti application requires Website Contributor role access to the Subscription in order to view application settings. 
+
+If the Website Contributor Role is not assigned, Cloudneeti application will not be able to collect data of security policies [listed here.](.././azureSubscriptions/#network-contributor-role)
+
+1.	Go to the subscription’s **Access control (IAM)** in the menu
+2.	Click **Add** and select **Add role assignment**
+3.	Select **Network Contributor** role and Cloudneeti application
+4.	Click **Save** to complete the role assignment
+
+    ![Assign role](.././images/azureSubscriptions/Network_Contributor_Role.png#thumbnail)
+
+### 2.6 Add Key Vault access policy
 **This step is optional** 
 Access policy can be added using either an automation account or manual steps.  
 
@@ -472,6 +486,13 @@ listed below.
 |---------------|------------------------------------------------------------------|----------------|
 | 1800.2        | Ensure that the expiry date is set on all Secrets in a Key Vault | Key Management |
 
+### Network Contributor Role
+
+Network Account Contributor role is needed to collect data for security policies listed below.
+
+| Policy Id     | Policy Title                                                                          | Category                              |
+|---------------|--------------------------------------------------------------------------------------|---------------------------------------|
+| 2000.11       | Ensure that Flow Log Status is set to On for Network Security Groups                         | Azure - Networking |
 
 ## Configuration
 
