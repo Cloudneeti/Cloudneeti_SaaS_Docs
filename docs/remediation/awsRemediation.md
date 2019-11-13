@@ -52,8 +52,7 @@ Azure onboarding process.
     in user to be assigned the **License Admin** role in the Cloudneeti
     application.
 
--   The Microsoft Azure **AWS Account Admin** role is required for provision
-    required roles, remediation framework.
+-   **AWS Account Admin** role is required for provisioning the required roles and remediation framework.
 
 Required Permissions
 --------------------
