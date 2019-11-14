@@ -35,23 +35,24 @@ nav:
   - Customer Data Security: gettingStarted/customerDataSecurity.md
   - Glossary: gettingStarted/glossary.md
 - Try and Buy:
+  - Free Trial: azureMarketplace/freeTrial.md
   - Buy on Azure Marketplace: azureMarketplace/subscribeOnAzureMarketplace.md
   - Request a License: gettingStarted/subscribe.md
   - Estimate Pricing: azureMarketplace/estimatePricing.md
 - Onboarding Guide:
    - Overview: onboardingGuide/onboardingGuideOverview.md
-   - Azure Subscriptions: onboardingGuide/azureSubscriptions.md
-   - AWS Accounts: onboardingGuide/amazonWebServiceAccounts.md
-   - Office 365 Subscriptions: onboardingGuide/onboardingOffice365Subscription.md
+   - Micorsoft Azure: onboardingGuide/azureSubscriptions.md
+   - Amazon Web Services: onboardingGuide/amazonWebServiceAccounts.md
+   - Office 365: onboardingGuide/office365Subscription.md
 - User Guide:
   - Sign In and Sign Out: gettingStarted/signInAndSignOut.md
-  - UI Navigation: userGuide/userGuideUINavigation.md
+  - User Interface: userGuide/userInterface.md
   - Dashboards: userGuide/dashboards.md
   - Security Policies: userGuide/securityPolicies.md
   - Compliance Benchmarks: userGuide/complianceBenchmarks.md
   - Reports: userGuide/reports.md
 - Administrator Guide:
-  - Features and Quotas: administratorGuide/featuresAndQuatas.md
+  - Features and Quotas: administratorGuide/featuresAndQuotas.md
   - Integrations: administratorGuide/manageLicenses.md
   - Cloud Accounts: administratorGuide/manageAccounts.md
   - Users & Roles: administratorGuide/manageUsers.md

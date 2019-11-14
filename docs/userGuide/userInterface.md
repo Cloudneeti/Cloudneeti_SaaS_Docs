@@ -1,5 +1,5 @@
-UI Navigation
-=============
+User Interface
+==============
 
 Home Page
 ---------
