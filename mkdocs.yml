@@ -35,6 +35,7 @@ nav:
   - Customer Data Security: gettingStarted/customerDataSecurity.md
   - Glossary: gettingStarted/glossary.md
 - Try and Buy:
+  - Free Trial: azureMarketplace/freeTrial.md
   - Buy on Azure Marketplace: azureMarketplace/subscribeOnAzureMarketplace.md
   - Request a License: gettingStarted/subscribe.md
   - Estimate Pricing: azureMarketplace/estimatePricing.md
@@ -45,7 +46,7 @@ nav:
    - Office 365: onboardingGuide/office365Subscription.md
 - User Guide:
   - Sign In and Sign Out: gettingStarted/signInAndSignOut.md
-  - UI Navigation: userGuide/userGuideUINavigation.md
+  - User Interface: userGuide/userInterface.md
   - Dashboards: userGuide/dashboards.md
   - Security Policies: userGuide/securityPolicies.md
   - Compliance Benchmarks: userGuide/complianceBenchmarks.md

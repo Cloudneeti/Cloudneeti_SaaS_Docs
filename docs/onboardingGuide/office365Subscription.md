@@ -1,4 +1,4 @@
-# Office 365 Subscription Onboarding Guide
+# Office 365 Onboarding Guide
 
 ## Onboarding Steps
 

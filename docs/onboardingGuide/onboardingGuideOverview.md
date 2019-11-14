@@ -12,5 +12,5 @@ Please follow links for details:
 
 ### [Amazon Web Services (AWS) account](../amazonWebServiceAccounts/)
 
-### [Office 365 cloud account](../onboardingOffice365Subscription/)
+### [Office 365 cloud account](../office365Subscription/)
 
