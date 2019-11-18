@@ -2,6 +2,43 @@
 ===============
 <div class="release_notes">
 
+**November 2019 - Release 2.21.1**
+----------------------------
+
+1.  **User Experience Improvements**
+    -   Updated color codes for RISK matrix for RISK Dashboard and Security Best
+    practices as below 
+
+    | **Existing**                             | **New**                                  |
+    |------------------------------------------|------------------------------------------|
+    |  ![November 2019 - Release 2.21.1](.././images/releaseNotes/ExistingRiskLevel.png) | ![November 2019 - Release 2.21.1](.././images/releaseNotes/NewRiskLevel.png) |
+
+2.  **Platform & Stability Improvements**
+    * Updated API version and processing logic for following Azure security
+    policies as per recent updates from Microsoft Azure
+
+         -   Ensure that Flow Log Status is set to On for Network Security Groups
+
+         -   Ensure that backup feature is configured for Virtual Machines
+
+    * Fixed following bugs
+
+         -   Welcome email contains special characters
+
+         -   Notification for account user addition missing
+
+3. **Policies & Benchmarks Additions/Updates**
+
+    * Introducing a new security benchmark for AWS
+
+        -   Cloud Security Alliance's Cloud Control Matrix (CCM v3.0.1)
+
+    * Updated CSA CCM v3.0.1 benchmark for Azure and M365 policies.
+
+    * Updated NIST CSF v1.1, PCI DSS 3.2, HIPAA, and ISO/IEC 27001 benchmark for
+    newly added/updated Azure policies.
+
+
 **November 2019- v2.20.1**
 ----------------------------
 
