@@ -2,7 +2,7 @@
 ===============
 <div class="release_notes">
 
-**November 2019 - Release 2.21.1**
+**November 2019 - v2.21.1**
 ----------------------------
 
 1.  **User Experience Improvements**
