@@ -8,18 +8,23 @@
 1.  **User Experience Improvements**
     -   Updated color codes for RISK matrix for RISK Dashboard and Security Best
     practices as below 
-
-    | **Existing**                             | **New**                                  |
-    |------------------------------------------|------------------------------------------|
-    |  ![November 2019 - Release 2.21.1](.././images/releaseNotes/ExistingRiskLevel.png) | ![November 2019 - Release 2.21.1](.././images/releaseNotes/NewRiskLevel.png) |
+    <table style="width:100px ;border: solid 1px black"><thead>
+    <th style="width:100px ;border: solid .5px black; padding-left: 11px">Existing</th>
+    <th style="width:100px ;border: solid .5px black; padding-left: 11px">New</th>
+    </thead>
+    <tbody>
+    <td style="width:100px ;border: solid .5px black">![November 2019 - Release 2.21.1](.././images/releaseNotes/ExistingRiskLevel.png) </td>
+    <td style="width:100px ;border: solid .5px black">![November 2019 - Release 2.21.1](.././images/releaseNotes/NewRiskLevel.png)  </td>
+    </tbody>
+    </table>
 
 2.  **Platform & Stability Improvements**
     * Updated API version and processing logic for following Azure security
     policies as per recent updates from Microsoft Azure
 
-         -   Ensure that Flow Log Status is set to On for Network Security Groups
+        - Ensure that Flow Log Status is set to On for Network Security Groups
 
-         -   Ensure that backup feature is configured for Virtual Machines
+        - Ensure that backup feature is configured for Virtual Machines
 
     * Fixed following bugs
 
