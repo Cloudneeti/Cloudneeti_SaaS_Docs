@@ -125,14 +125,13 @@ Administrator** associated to your Office 365 Subscription role.
 
 Add Microsoft Graph permissions and grant admin consent
 
-The Microsoft graph permission **Directory.Read.All** allows the app to read
-data in the organization's directory, such as user attributes, groups, and
-applications, without a signed-in user.
+The Microsoft graph permission **Directory.Read.All** allows the app to read data in the organization's directory, such as user attributes, groups, and applications, without a signed-in user.
 
-Microsoft graph permission **SecurityEvents.Read.All** allows the app to read
-Office 365 Secure Score data. You can find more details about the Microsoft
-Graph API
-permission [here](https://docs.microsoft.com/en-us/graph/permissions-reference).
+Microsoft graph permission **SecurityEvents.Read.All** allows the app to read Office 365 Secure Score data. 
+
+Microsoft graph **DeviceManagementConfiguration.Read.All** allows the app to read properties of Microsoft Intune-managed device configuration and device compliance policies and their assignment to groups.
+
+You can find more details about the Microsoft Graph API permission [here](https://docs.microsoft.com/en-us/graph/permissions-reference).
 
 1. Click **API Permissions**
 2. Select **Microsoft Graph**
