@@ -42,7 +42,8 @@
 
     * Updated NIST CSF v1.1, PCI DSS 3.2, HIPAA, and ISO/IEC 27001 benchmark for
     newly added/updated Azure policies.
-
+    
+    *	Updated 51 AWS security policies for Auto remediation. 
 
 **November 2019- v2.20.1**
 ----------------------------
