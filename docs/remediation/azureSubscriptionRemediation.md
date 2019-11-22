@@ -469,9 +469,9 @@ Login to Cloudneeti portal with **License Admin** role
     ![Remove “Policy Resource Contributor (Preview)” access](.././images/cloudneetiRemediation/Azure_Remediation_Step5.6.png#thumbnail_1)
 
 ## Annexure
-### Roles as per policies enabled for remediation
+### Roles enabled for remediation 
 
-| **Policy-Id** | **Information**   | **Portal to use** | **Role**                                         | **Step** |
+| **Policy-Id** | **Element**   | **Portal to use** | **Role Assigned**                                         | **Step** |
 |---------------|-------------------|-------------------|--------------------------------------------------|----------|
 | **1300.8**    | Azure Assignments | Microsoft Azure   | Network Contributor                              | STEP 4   |
 | **1600.2**    | Azure Assignments | Microsoft Azure   | SQL DB Contributor                               | STEP 4   |
