@@ -45,6 +45,15 @@
     
     *	Updated 51 AWS security policies for Auto remediation. 
 
+    -   Deprecated following policies from Azure security best practices as those
+    setting are updated in the Azure portal
+
+        | **Category**           | **Policy Title**                                                                               |
+        |------------------------|------------------------------------------------------------------------------------------------|
+        | Azure - Networking     | Ensure that Virtual Network Gateway(VPN/ExpressRoute) access is restricted for Virtual Network |
+        | Azure - Compute (IaaS) | Ensure that antivirus mechanism is actively running on the Virtual Machines                    |
+
+
 **November 2019- v2.20.1**
 ----------------------------
 
