@@ -402,6 +402,13 @@ before they can be displayed in Cloudneeti dashboards.
 
 Congratulations! You have added an Azure subscription to Cloudneeti application.
 
+**Note:**
+Cloudneeti uses the App Registration (aka service principal) to register Cloudneeti’s MPN ID (4758633) as a Partner to your Azure subscription. It usually takes about a month for Microsoft to reflect this association on the Customer's Partner Admin Link (PAL) portal page.
+ 
+Microsoft’s PAL program makes it easier for Cloudneeti to be recognized as a cloud partner to the customer. This allows Microsoft to share information to Cloudneeti on the health of Azure Subscription (Active/Disabled) and Account Management Support (Technical/Billing) as and when requested by Customer.
+For more information, refer to the documentation link here Link a Partner ID to your Azure accounts.
+
+
 ## Security Polices with required roles, permissions
 
 The following Security Policies will be excluded if one or multiple roles are
