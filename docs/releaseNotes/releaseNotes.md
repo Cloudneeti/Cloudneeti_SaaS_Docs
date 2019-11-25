@@ -18,6 +18,8 @@
     </tbody>
     </table>
 
+    - Links Cloudneeti Partner id on creation/update of Azure Cloud Account. Please refer to the documentation link here [Link a Partner ID to your Azure accounts](https://docs.microsoft.com/en-us/azure/billing/billing-partner-admin-link-started).
+
 2.  **Platform & Stability Improvements**
     * Updated API version and processing logic for following Azure security
     policies as per recent updates from Microsoft Azure
