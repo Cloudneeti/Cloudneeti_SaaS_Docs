@@ -2,6 +2,60 @@
 ===============
 <div class="release_notes">
 
+**November 2019 - v2.21.1**
+----------------------------
+
+1.  **User Experience Improvements**
+    -   Updated color codes for RISK matrix for RISK Dashboard and Security Best
+    practices as below 
+    <table style="width:100px ;border: solid 1px black"><thead>
+    <th style="width:100px ;border: solid .5px black; padding-left: 11px">Existing</th>
+    <th style="width:100px ;border: solid .5px black; padding-left: 11px">New</th>
+    </thead>
+    <tbody>
+    <td style="width:100px ;border: solid .5px black">![November 2019 - Release 2.21.1](.././images/releaseNotes/ExistingRiskLevel.png) </td>
+    <td style="width:100px ;border: solid .5px black">![November 2019 - Release 2.21.1](.././images/releaseNotes/NewRiskLevel.png)  </td>
+    </tbody>
+    </table>
+
+    - Links Cloudneeti Partner id on creation/update of Azure Cloud Account. Please refer to the documentation link here [Link a Partner ID to your Azure accounts](https://docs.microsoft.com/en-us/azure/billing/billing-partner-admin-link-started).
+
+2.  **Platform & Stability Improvements**
+    * Updated API version and processing logic for following Azure security
+    policies as per recent updates from Microsoft Azure
+
+        - Ensure that Flow Log Status is set to On for Network Security Groups
+
+        - Ensure that backup feature is configured for Virtual Machines
+
+    * Fixed following bugs
+
+         -   Welcome email contains special characters
+
+         -   Notification for account user addition missing
+
+3. **Policies & Benchmarks Additions/Updates**
+
+    * Introducing a new security benchmark for AWS
+
+        -   Cloud Security Alliance's Cloud Control Matrix (CCM v3.0.1)
+
+    * Updated CSA CCM v3.0.1 benchmark for Azure and M365 policies.
+
+    * Updated NIST CSF v1.1, PCI DSS 3.2, HIPAA, and ISO/IEC 27001 benchmark for
+    newly added/updated Azure policies.
+    
+    *	Updated 51 AWS security policies for Auto remediation. 
+
+    -   Deprecated following policies from Azure security best practices as those
+    setting are updated in the Azure portal
+
+        | **Category**           | **Policy Title**                                                                               |
+        |------------------------|------------------------------------------------------------------------------------------------|
+        | Azure - Networking     | Ensure that Virtual Network Gateway(VPN/ExpressRoute) access is restricted for Virtual Network |
+        | Azure - Compute (IaaS) | Ensure that antivirus mechanism is actively running on the Virtual Machines                    |
+
+
 **November 2019- v2.20.1**
 ----------------------------
 

@@ -456,3 +456,89 @@ The remediation framework uses CloudTrail, CloudWatch log group, the remediation
 ### Multi Account Remediation
 
 ![Multi Account Remediation](.././images/cloudneetiRemediation/AWS_RemediationMulti.png#thumbnail_1)
+
+
+## Annexure
+### Permissions assigned for remediation 
+
+Remediation lambda functions are assigned with permissions listed as per policies for related AWS services.
+
+| **Policy Id** | **Policy Title**                                                                                                        | **Category**                | **Permission Assigned**                           |
+|---------------|-------------------------------------------------------------------------------------------------------------------------|-----------------------------|---------------------------------------------------|
+| 1400.24       | Ensure Deletion Protection feature is enabled for RDS Postgre Instances                                                 | AWS - Data Protection       | rds:ModifyDBInstance                              |
+| 1400.28       | Ensure Deletion Protection feature is enabled for RDS MariaDB Instances                                                 | AWS - Data Protection       | rds:ModifyDBInstance                              |
+| 1400.33       | Ensure Deletion Protection feature is enabled for AWS RDS Oracle Instances                                              | AWS - Data Protection       | rds:ModifyDBInstance                              |
+| 1400.37       | Ensure Deletion Protection feature is enabled for RDS SQL Server Instances                                              | AWS - Data Protection       | rds:ModifyDBInstance                              |
+| 1400.32       | Ensure that Deletion Protection feature is enabled for RDS Aurora Cluster                                               | AWS - Data Protection       | rds:ModifyDBCluster                               |
+| 1400.45       | Ensure that Deletion Protection feature is enabled for RDS Aurora MySQL Serverless Cluster                              | AWS - Data Protection       | rds:ModifyDBCluster                               |
+| 1400.47       | Ensure that Deletion Protection feature is enabled for RDS Aurora Postgres Serverless Cluster                           | AWS - Data Protection       | rds:ModifyDBCluster                               |
+| 1500.27       | Ensure backup retention policy is set for RDS Postgre Instances                                                         | AWS - Business Continuity   | rds:ModifyDBInstance                              |
+| 1500.29       | Ensure that sufficient backup retention period is applied to RDS Postgre Instances                                      | AWS - Business Continuity   | rds:ModifyDBInstance                              |
+| 1500.31       | Ensure backup retention policy is set for RDS MariaDB Instances                                                         | AWS - Business Continuity   | rds:ModifyDBInstance                              |
+| 1500.33       | Ensure that sufficient backup retention period is applied to RDS MariaDB Instances                                      | AWS - Business Continuity   | rds:ModifyDBInstance                              |
+| 1500.39       | Ensure backup retention policy is set for RDS Oracle Instances                                                          | AWS - Business Continuity   | rds:ModifyDBInstance                              |
+| 1500.41       | Ensure that sufficient backup retention period is applied to RDS Oracle Instances                                       | AWS - Business Continuity   | rds:ModifyDBInstance                              |
+| 1500.43       | Ensure backup retention policy is set for RDS SQL Server Instance                                                       | AWS - Business Continuity   | rds:ModifyDBInstance                              |
+| 1500.44       | Ensure that sufficient backup retention period is applied to RDS SQL Server Instances                                   | AWS - Business Continuity   | rds:ModifyDBInstance                              |
+| 1500.34       | Ensure backup retention policy is set for RDS Aurora Cluster                                                            | AWS - Business Continuity   | rds:ModifyDBCluster                               |
+| 1500.36       | Ensure that sufficient backup retention period is applied to RDS Aurora Cluster                                         | AWS - Business Continuity   | rds:ModifyDBCluster                               |
+| 1500.47       | Ensure that sufficient backup retention period is applied to RDS Aurora MySQL Serverless Cluster                        | AWS - Business Continuity   | rds:ModifyDBCluster                               |
+| 1500.48       | Ensure that sufficient backup retention period is applied to RDS Aurora Postgres Serverless Cluster                     | AWS - Business Continuity   | rds:ModifyDBCluster                               |
+| 1300.157       | Ensure that public access is not given to RDS Postgre Instance                                                          | AWS - Networking            | rds:ModifyDBInstance                              |
+| 1300.159       | Ensure that public access is not given to RDS MariaDB Instance                                                          | AWS - Networking            | rds:ModifyDBInstance                              |
+| 1300.161       | Ensure that public access is not given to RDS Oracle Instances                                                          | AWS - Networking            | rds:ModifyDBInstance                              |
+| 1300.163       | Ensure that public access is not given to RDS SQL Server Instances                                                      | AWS - Networking            | rds:ModifyDBInstance                              |
+| 1300.165       | Ensure that public access is not given to RDS Aurora SQL Instances                                                      | AWS - Networking            | rds:ModifyDBInstance                              |
+| 1500.26       | Ensure Auto Minor Version Upgrade feature is Enabled for RDS Postgre Instances                                          | AWS - Business Continuity   | rds:ModifyDBInstance                              |
+| 1500.30      | Ensure Auto Minor Version Upgrade feature is Enabled for RDS MariaDB Instances                                          | AWS - Business Continuity   | rds:ModifyDBInstance                              |
+| 1500.38       | Ensure Auto Minor Version Upgrade feature is Enabled for RDS Oracle Instances                                           | AWS - Business Continuity   | rds:ModifyDBInstance                              |
+| 1500.42       | Ensure Auto Minor Version Upgrade feature is Enabled for RDS SQL Server Instances                                       | AWS - Business Continuity   | rds:ModifyDBInstance                              |
+| 1500.46       | Ensure Auto Minor Version Upgrade feature is Enabled for RDS Aurora SQL Instances                                       | AWS - Business Continuity   | rds:ModifyDBInstance                              |
+| 1500.28       | Ensure Multi-AZ feature is Enabled for RDS SQL Instance                                                                 | AWS - Business Continuity   | rds:ModifyDBInstance                              |
+| 1500.32       | Ensure Multi-AZ feature is Enabled for RDS MariaDB Instance                                                             | AWS - Business Continuity   | rds:ModifyDBInstance                              |
+| 1500.40      | Ensure Multi-AZ feature is Enabled for RDS Oracle Instances                                                             | AWS - Business Continuity   | rds:ModifyDBInstance                              |
+| 1500.45       | Ensure Multi-AZ feature is Enabled for RDS SQL Server Instances                                                         | AWS - Business Continuity   | rds:ModifyDBInstance                              |
+| 2100.7        | Ensure that Copy Tags to Snapshots feature is enabled for RDS Postgre Instances                                         | AWS - Governance            | rds:ModifyDBInstance                              |
+| 2100.9        | Ensure that Copy Tags to Snapshots feature is enabled for RDS MariaDB Instances                                         | AWS - Governance            | rds:ModifyDBInstance                              |
+| 2100.12       | Ensure that Copy Tags to Snapshots feature is enabled for RDS Oracle Instances                                          | AWS - Governance            | rds:ModifyDBInstance                              |
+| 2100.14       | Ensure that Copy Tags to Snapshots feature is enabled for RDS SQL Server Instances                                      | AWS - Governance            | rds:ModifyDBInstance                              |
+| 2100.11       | Ensure that Copy Tags to Snapshots feature is enabled for RDS Aurora Cluster                                            | AWS - Governance            | rds:ModifyDBCluster                               |
+| 2100.17       | Ensure that Copy Tags to Snapshots feature is enabled for RDS Aurora MySQL Serverless Cluster                           | AWS - Governance            | rds:ModifyDBCluster                               |
+| 2100.20        | Ensure that Copy Tags to Snapshots feature is enabled for RDS Aurora Postgres Serverless Cluster                        | AWS - Governance            | rds:ModifyDBCluster                               |
+| 2100.19       | Ensure that AutoPause feature is enabled for RDS Aurora MySQL Serverless Cluster                                        | AWS - Governance            | rds:ModifyDBCluster                               |
+| 2100.21       | Ensure that AutoPause feature is enabled for RDS Aurora Postgres Serverless Cluster                                     | AWS - Governance            | rds:ModifyDBCluster                               |
+| 1400.26       | Ensure Performance Insights feature is enabled for RDS Postgre Instances                                                | AWS - Data Protection       | rds:ModifyDBInstance                              |
+| 1400.30        | Ensure Performance Insights feature is enabled for RDS MariaDB Instances                                                | AWS - Data Protection       | rds:ModifyDBInstance                              |
+| 1400.35       | Ensure Performance Insights feature is enabled for RDS Oracle Instances                                                 | AWS - Data Protection       | rds:ModifyDBInstance                              |
+| 1400.39       | Ensure Performance Insights feature is enabled for RDS SQL Server Instances                                             | AWS - Data Protection       | rds:ModifyDBInstance                              |
+| 1400.42       | Ensure Performance Insights feature is enabled for Aurora SQL Instances                                                 | AWS - Data Protection       | rds:ModifyDBInstance                              |
+| 2000.45       | Ensure enhanced monitoring is enabled for your AWS Kinesis streams using shard-level metrics                            | AWS - Storage and Databases | kinesis:EnableEnhancedMonitoring                  |
+| 1300.111       | Ensure Connection Draining is enabled for your AWS Classic Load Balancer                                                | AWS - Networking            | elasticloadbalancing:ModifyLoadBalancerAttributes |
+| 1300.83       | Ensure Deletion Protection feature is enabled for your AWS Application load balancers to follow security best practices | AWS - Networking            | elasticloadbalancing:ModifyLoadBalancerAttributes |
+| 1300.89       | Ensure Deletion Protection feature is enabled for your AWS Network load balancers to follow security best practices     | AWS - Networking            | elasticloadbalancing:ModifyLoadBalancerAttributes |
+| 1100.2    | Ensure CloudTrail log file validation is enabled                                                                        | AWS - Audit and Logging     | cloudtrail:UpdateTrail          |
+| 1000.3    | Ensure IAM password policy requires at least one uppercase letter                                                       | AWS - Audit and Logging     | iam:UpdateAccountPasswordPolicy |
+| 1000.4    | Ensure IAM password policy require at least one lowercase letter                                                        | AWS - Audit and Logging     | iam:UpdateAccountPasswordPolicy |
+| 1000.5    | Ensure IAM password policy require at least one symbol                                                                  | AWS - Audit and Logging     | iam:UpdateAccountPasswordPolicy |
+| 1000.6    | Ensure IAM password policy require at least one number                                                                  | AWS - Audit and Logging     | iam:UpdateAccountPasswordPolicy |
+| 1000.7    | Ensure IAM password policy requires minimum length of 14 or greater                                                     | AWS - Audit and Logging     | iam:UpdateAccountPasswordPolicy |
+| 1000.8    | Ensure IAM password policy prevents password reuse                                                                      | AWS - Audit and Logging     | iam:UpdateAccountPasswordPolicy |
+| 1000.9    | Ensure IAM password policy expires passwords within 90 days or less                                                     | AWS - Audit and Logging     | iam:UpdateAccountPasswordPolicy |
+| 1100.1    | Ensure CloudTrail is enabled in all regions                                                                             | AWS - Audit and Logging     | cloudtrail:UpdateTrail          |
+| 1500.7    | Ensure S3 buckets have versioning enabled                                                                               | AWS - Business Continuity   | s3:PutBucketVersioning          |
+| 1700.1    | Ensure rotation for customer created CMKs is enabled                                                                    | AWS - Key Management        | kms:EnableKeyRotation           |
+| 2000.5    | Ensure Amazon S3 buckets have Default Encryption feature enabled                                                        | AWS - Storage and Databases | s3:PutEncryptionConfiguration   |
+| 2000.7    | Ensure that your AWS S3 buckets are not publicly exposed to the Internet                                                | AWS - Storage and Databases | s3:PutBucketAcl                 |
+| 2000.8    | Ensure AWS S3 buckets do not allow public READ access                                                                   | AWS - Storage and Databases | s3:PutBucketAcl                 |
+| 2000.9    | Ensure AWS S3 buckets do not allow public READ_ACP access                                                               | AWS - Storage and Databases | s3:PutBucketAcl                 |
+| 2000.10   | Ensure AWS S3 buckets do not allow public WRITE_ACP access                                                              | AWS - Storage and Databases | s3:PutBucketAcl                 |
+| 2000.11   | Ensure AWS S3 buckets do not allow public WRITE access                                                                  | AWS - Storage and Databases | s3:PutBucketAcl                 |
+| 2000.17   | Ensure S3 buckets do not allow FULL_CONTROL access to AWS authenticated users via S3 ACLs                               | AWS - Storage and Databases | s3:PutBucketAcl                 |
+| 2000.18   | Ensure S3 buckets do not allow READ access to AWS authenticated users through ACLs                                      | AWS - Storage and Databases | s3:PutBucketAcl                 |
+| 2000.19   | Ensure AWS S3 buckets do not allow READ_ACP access to AWS authenticated users using ACLs                                | AWS - Storage and Databases | s3:PutBucketAcl                 |
+| 2000.20   | Ensure S3 buckets do not allow WRITE access to AWS authenticated users through S3 ACLs                                  | AWS - Storage and Databases | s3:PutBucketAcl                 |
+| 2000.21   | Ensure S3 buckets do not allow WRITE_ACP access to AWS authenticated users using S3 ACLs                                | AWS - Storage and Databases | s3:PutBucketAcl                 |
+| 2000.36   | Ensure Redshift clusters are not publicly accessible to minimize security risks                                         | AWS - Storage and Databases | redshift:ModifyCluster          |
+| 2000.42   | Ensure Version Upgrade is enabled for Redshift clusters to automatically receive upgrades during the maintenance window | AWS - Storage and Databases | redshift:ModifyCluster          |
+| 2000.43   | Ensure that retention period is enabled for Amazon Redshift automated snapshots                                         | AWS - Storage and Databases | redshift:ModifyCluster          |
+

@@ -31,8 +31,9 @@ options.
 
 3.  **Update Cloud Account** allows users to update the Cloud Account name
 
-4.  **Re-Scan** allows users to initiate a new scan of the cloud account
-    separately from scheduled scans.
+4.  **Configure Account Remediation** allows configurations of AWS Cloud Account remediation settings.
+
+5.  **Re-Scan** allows users to initiate a new scan of the cloud account separately from scheduled scans.
 	
     ![Configure Account](.././images/administratorGuide/Configure_Account.png#thumbnail)
 
