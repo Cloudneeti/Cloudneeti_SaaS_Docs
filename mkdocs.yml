@@ -60,7 +60,11 @@ nav:
   - Audit Log: administratorGuide/auditLog.md
 - Remediation:
   - Overview: remediation/overview.md
-  - Azure: remediation/azureSubscriptionRemediation.md
+  - Azure:
+    - Guided: remediation/azureGuidedRemediation.md
+    - Quick Wins: remediation/azureQuickWins.md
+    - Auto Remediation: remediation/azureAutoRemediation.md
+    - Decommission of remediation: remediation/azureDecommissionofRemediation.md
   - AWS: remediation/awsRemediation.md
 - Release Notes:
   - Releases in 2019: releaseNotes/releaseNotes.md
