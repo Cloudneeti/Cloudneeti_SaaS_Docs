@@ -300,7 +300,7 @@ Sample ServiceNow Problem Task
 ![ServiceNow integration](.././images/administratorGuide/ServiceNow_ProblemTask_LicenseDetails.png#thumbnail)
 
 
-#### Zendisk Tikcet Sample
+#### Zendisk Ticket Sample
 
 Sample Zendisk Ticket List
 
