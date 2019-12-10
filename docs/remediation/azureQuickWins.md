@@ -1,6 +1,3 @@
-Quick Wins
-------------------
-
 Remediation policies from **Azure Security center, Logging and Monitoring** and **Storage and Databases** can be done using quick wins scripts. These scripts will update configurations and settings to make the Cloud account compliant for listed policies.
 
 | **Configuration script**       | **Category**                  | **Number of policies remediated** |
@@ -16,7 +13,7 @@ Access Needed on Subscription: **Contributor**
 
 ### Configure ASC policies 
 
-Configure ASC policies to remediate policies [listed here ](.././azureSubscriptionRemediation/#configure-azure-security-center-policies-azure-security-center) using below steps.
+Configure ASC policies to remediate policies [listed here ](.././azureQuickWins/#configure-azure-security-center-policies-azure-security-center) using below steps.
 
 #### Category Subscription Governance Policies [Increase compliance Score 30-50%]
 
@@ -52,7 +49,7 @@ Configure ASC policies to remediate policies [listed here ](.././azureSubscripti
 
 ### Configure Activity Alerts 
 
-Configure Activity Alerts to remediate policies [listed here](.././azureSubscriptionRemediation/#configure-activity-alerts-logging-and-auditing) using below steps.
+Configure Activity Alerts to remediate policies [listed here](.././azureQuickWins/#configure-activity-alerts-logging-and-auditing) using below steps.
 
 #### Category: Logging and Auditing [Increase compliance score by 5-10%]
 
@@ -104,7 +101,7 @@ Configure Activity Alerts to remediate policies [listed here](.././azureSubscrip
 
 ### Configure Activity Log Profile
 
-Configure Activity Log to remediate policies [listed here](.././azureSubscriptionRemediation/#configure-activity-log-profile-logging-and-auditing) using below steps.
+Configure Activity Log to remediate policies [listed here](.././azureQuickWins/#configure-activity-log-profile-logging-and-auditing) using below steps.
 
 #### Category: Logging and Auditing
 
@@ -167,7 +164,7 @@ Configure Activity Log to remediate policies [listed here](.././azureSubscriptio
 ### Configure Storage Account
 
 
-Configure Storage Account to remediate policies [listed here ](.././azureSubscriptionRemediation/#configure-activity-alerts-logging-and-auditing) using below steps.
+Configure Storage Account to remediate policies [listed here ](.././azureQuickWins/#configure-storage-account-storage-and-databases) using below steps.
 
 #### Category: Storage and Databases
 

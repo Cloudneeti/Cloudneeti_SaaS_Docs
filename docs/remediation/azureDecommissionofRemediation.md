@@ -1,4 +1,3 @@
-## Decommission of remediation
 To decommission the remediation functionality in Azure subscription,
 
 **Disable all the remediation policies**- Azure account security policy remediation functionality can be disabled from Cloudneeti portal. On disabling the remediation policies stops the auto-remediation of new resources whenever deployed.

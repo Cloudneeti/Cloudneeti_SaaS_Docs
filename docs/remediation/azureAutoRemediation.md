@@ -1,5 +1,3 @@
-Auto Remediation
-----------------
 Remediation is accomplished by instructing Security Policy to update the configuration of your existing resources and is effective for new resource deployment. This article shows the steps needed to understand and accomplish remediation with Cloudneeti.  
 
 ![Remediation of Azure Resources](.././images/cloudneetiRemediation/Azure_Remediation_Steps.png#thumbnail_1)
@@ -44,7 +42,7 @@ The **Cloudneeti Application registered** while onboarding the Azure Account to 
 | **Information**                   | **Portal to use** | **Role**                                                                                                                                                                | **Step** |
 |-----------------------------------|-------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
 | Registered Cloudneeti Application | Microsoft Azure   | Resource Policy Contributor (Preview) [Refer here](https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#resource-policy-contributor-preview) | STEP 1   |
-| Azure Assignments                 | Microsoft Azure   | Roles as per policies enabled for remediation [Refer here](../azureSubscriptionRemediation/#roles-as-per-policies-enabled-for-remediation) | STEP 4   |
+| Azure Assignments                 | Microsoft Azure   | Roles as per policies enabled for remediation [Refer here](../azureAutoRemediation/#roles-enabled-for-remediation) | STEP 4   |
 
 
 ### STEP 1: Assign permission to Service Principal
