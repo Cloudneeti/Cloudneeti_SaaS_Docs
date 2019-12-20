@@ -1,3 +1,5 @@
+# Auto Remediation of Azure Resources
+
 Remediation is accomplished by instructing Security Policy to update the configuration of your existing resources and is effective for new resource deployment. This article shows the steps needed to understand and accomplish remediation with Cloudneeti.  
 
 ![Remediation of Azure Resources](.././images/cloudneetiRemediation/Azure_Remediation_Steps.png#thumbnail_1)
