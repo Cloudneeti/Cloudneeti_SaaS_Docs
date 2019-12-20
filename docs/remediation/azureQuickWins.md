@@ -1,3 +1,5 @@
+# Azure Quick Wins
+
 Remediation policies from **Azure Security center, Logging and Monitoring** and **Storage and Databases** can be done using quick wins scripts. These scripts will update configurations and settings to make the Cloud account compliant for listed policies.
 
 | **Configuration script**       | **Category**                  | **Number of policies remediated** |
