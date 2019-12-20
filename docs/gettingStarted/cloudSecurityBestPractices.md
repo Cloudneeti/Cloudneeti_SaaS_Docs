@@ -1,5 +1,5 @@
 
-The Cloud Security Best Practices view provides a list of all security policies within the Cloudneeti application and their status. Following is the count, please refer [Release Notes](../../releaseNotes/2019/) for latest updates.
+The Cloud Security Best Practices view provides a list of all security policies within the Cloudneeti application and their status. Following is the count of security policies within the Cloudneeti application, please refer [Release Notes](../../releaseNotes/2019/) for latest updates.
 
 | **Connector Type​**        | **Policy Count​** | **Auto Remediation Policy​ Count ** | **Quick Wins Policy Count**|
 |---------------------------|------------------|------------------------|------------------------|
