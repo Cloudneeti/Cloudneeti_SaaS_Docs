@@ -6,21 +6,21 @@ Remediation is accomplished by instructing Security Policy to update the configu
 
 1.	**Assign permission to Cloudneeti Application** includes giving the Cloudneeti application access to the Azure subscription, assigning a Resource Policy Contributor
 
-2. **Create policy Definitions** includes provisioning policy definitions to use with Cloudneeti Remediation.
+<!-- 2. **Create policy Definitions** includes provisioning policy definitions to use with Cloudneeti Remediation. -->
 
-3.	**Configure Policy Remediation** includes configuring security policies in the respective cloud account, upon enabling policy remediation triggers creation of policy assignments in Azure subscription.
+2.	**Configure Policy Remediation** includes configuring security policies in the respective cloud account, upon enabling policy remediation triggers creation of policy assignments in Azure subscription.
 
-4.	**Assign permissions to Assignments** includes assigning required roles to policy assignments in Azure. 
+3.	**Assign permissions to Assignments** includes assigning required roles to policy assignments in Azure. 
 
-5.	**Initiate Remediation** includes triggering remediation feature to remediate resources that are non-compliant to a security policy.
+4.	**Initiate Remediation** includes triggering remediation feature to remediate resources that are non-compliant to a security policy.
 
-6.	**Verify results** includes verifying policy result post next data scan on Cloudneeti.
+5.	**Verify results** includes verifying policy result post next data scan on Cloudneeti.
+<!-- | Create policy Definitions              | Azure Portal     | Resource Policy Contributor or Contributor         | -->
 
 
 | **Step**                               | **Product**      | **Role**                     |
 |----------------------------------------|------------------|------------------------------|
 | Assign permission to Service Principal | Azure Portal     | Subscription Owner           |
-| Create policy Definitions              | Azure Portal     | Resource Policy Contributor/ Contributor         |
 | Configure Policy Remediation           | Cloudneeti       | License Admin/ Account Admin |
 | Assign permissions to Assignments      | Azure CloudShell | Subscription Owner           |
 | Initiate Remediation                   | Cloudneeti       | License Admin/ Account Admin |
@@ -67,7 +67,7 @@ Login to [Azure Portal](https://portal.azure.com/)  with Subscription Owner rol
 
     ![STEP 1: Assign permission to Service Principal](.././images/cloudneetiRemediation/Azure_Remediation_Step1.png#thumbnail_1)
 
-### Step 2: Create policy Definitions (to use with Cloudneeti Remediation)
+<!-- ### Step 2: Create policy Definitions (to use with Cloudneeti Remediation)
 1. Open **Cloud Shell** and choose **PowerShell** from shell drop 
 
 2. Clone Azure Remediation Policy repository
@@ -87,9 +87,9 @@ Login to [Azure Portal](https://portal.azure.com/)  with Subscription Owner rol
         .\provision-PolicyDefinitions.ps1 -SubscriptionId <Subscription Id>
 
 **Note:**
-* Create policy definitions at the Azure management group level, so that they can be shared across multiple subscriptions.
+* Create policy definitions at the Azure management group level, so that they can be shared across multiple subscriptions. -->
 
-### STEP 3: Configure remediation policies
+### STEP 2: Configure remediation policies
 Login to Cloudneeti portal with **License Admin** role 
 
 1. Navigate to **Configurations** (1) and **Security Policy Exclusion** (2)
@@ -116,7 +116,7 @@ Login to Cloudneeti portal with **License Admin** role
 
 * Assigning **Resource Policy Contributor (Preview)** role to Cloudneeti Application in Azure is prerequisite for this step.
 
-### STEP 4: Assigning roles to MSI generated for remediation policies
+### STEP 3: Assigning roles to MSI generated for remediation policies
 Login to [Azure Portal](https://portal.azure.com/) with **Subscription Owner** role.
 
 1. Open **Cloud Shell**
@@ -148,7 +148,7 @@ Azure will start evaluation of resources related to enabled policies.
 
 * Perform this step whenever user adds new or configures existing remediation policies.
 
-### STEP 5: Initiate Remediation
+### STEP 4: Initiate Remediation
 Cloudneeti supports two ways to remediate non-compliant resources.
 
 **Auto Remediation [for new resources]**- Cloudneeti remediation functionality make use of policy framework provided by Azure. Once we enable the remediation policies in Cloudneeti, the new resources get remediated at the time of deployment. It means all the resource are by default remediated. 
@@ -184,7 +184,7 @@ Login to Cloudneeti portal with **License Admin** role
 
 *	If Azure policy evaluation is done, the remediation process for selected policies will start. It will take some time to change resource configuration as per policy. This will change configuration for existing resources.
 
-### STEP 6: Verify Resource Remediation
+### STEP 5: Verify Resource Remediation
 On remediation of non-compliant resources using manually triggered or auto-remediation will not show the updated resource configuration in Cloudneeti immediately. Verification of latest resource configurations can be done after next scan in the Cloudneeti portal. To get the latest configuration perform an on-demand re-scan the in Cloudneeti portal using below steps,
 
 Login to Cloudneeti portal with **License Admin** role
