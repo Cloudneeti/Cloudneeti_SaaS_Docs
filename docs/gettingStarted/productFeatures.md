@@ -226,3 +226,5 @@ The Risk Likelihood five-point scale is defined below.
 **Note:** Please consult with your Risk Advisor / Information Security team to
 review the Cloudneeti’s assigned Risk Likelihood in the context of your
 application architecture.
+
+
