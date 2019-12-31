@@ -62,14 +62,14 @@ nav:
 - Remediation:
   - Overview: remediation/overview.md
   - Azure:
-    - Guided: remediation/azureGuidedRemediation.md
+    - Guided Remediation: remediation/azureGuidedRemediation.md
     - Quick Wins: remediation/azureQuickWins.md
     - Auto Remediation: remediation/azureAutoRemediation.md
     - Decommission of remediation: remediation/azureDecommissionofRemediation.md
   - AWS:
-    - Guided: remediation/awsGuidedRemediation.md
+    - Guided Remediation: remediation/awsGuidedRemediation.md
     - Auto Remediation: remediation/awsRemediation.md
-    - Decommission of remediation: remediation/awsDecommissionofRemediation.md
+    - Decommission Remediation framework: remediation/awsDecommissionofRemediation.md
 - Release Notes:
   - Releases in 2019: releaseNotes/2019.md
 # - Parent:
