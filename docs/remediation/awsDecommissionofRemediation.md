@@ -1,6 +1,6 @@
-To decommission the remediation functionality in Azure subscription,
+To decommission the remediation functionality in AWS Account,
 
-**Disable all the remediation policies** - Azure account security policy
+**Disable all the remediation policies** - AWS cloud account security policy
 remediation functionality can be disabled from Cloudneeti portal. On disabling
 the remediation policies stops the auto-remediation of new resources whenever
 deployed.
