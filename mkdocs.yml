@@ -52,6 +52,11 @@ nav:
   - Security Policies: userGuide/securityPolicies.md
   - Compliance Benchmarks: userGuide/complianceBenchmarks.md
   - Reports: userGuide/reports.md
+  - Cloudneeti REST APIs: 
+    - Get Token API: userGuide/commingSoon.md
+    - Summary Report API: userGuide/benchmarkSummaryReport.md
+    - Initiate Scan API: userGuide/commingSoon.md
+    - API User Scenarios: userGuide/commingSoon.md
 - Administrator Guide:
   - Features and Quotas: administratorGuide/featuresAndQuotas.md
   - Integrations: administratorGuide/manageLicenses.md
@@ -59,6 +64,7 @@ nav:
   - Users & Roles: administratorGuide/manageUsers.md
   - Security Policy Configuration: administratorGuide/securityPolicyExclusions.md
   - Audit Log: administratorGuide/auditLog.md
+  - Configure Cloudneeti API Access: userGuide/commingSoon.md
 - Remediation:
   - Overview: remediation/overview.md
   - Azure:
