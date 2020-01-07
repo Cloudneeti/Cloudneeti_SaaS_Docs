@@ -64,7 +64,7 @@ nav:
   - Users & Roles: administratorGuide/manageUsers.md
   - Security Policy Configuration: administratorGuide/securityPolicyExclusions.md
   - Audit Log: administratorGuide/auditLog.md
-  - Configure Cloudneeti API Access: userGuide/commingSoon.md
+  - Configure Cloudneeti API Access: administratorGuide/configureCloudneetiAPIAccess.md
 - Remediation:
   - Overview: remediation/overview.md
   - Azure:

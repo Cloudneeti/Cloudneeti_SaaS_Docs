@@ -1,4 +1,4 @@
- Benchmark Audit Report API (Preview)
+ Audit Report API (Preview)
 =====================================
 
 Cloudneeti offers Benchmark Audit report API to get access to views presenting pass/fail/warn status at a category level and passed/total resource coint at policy level for provided Benchmark.
@@ -14,6 +14,9 @@ Cloudneeti offers Benchmark Audit report API to get access to views presenting p
 | BENCHMARK |        [Benchmark Id​](#cloudneeti-supported-benchmarks)        | Required|
 | CONNECTOR |        Cloud account connector type like Azure, AWS or M365​        | Required|
 
+
+## Configure Cloudneeti API Access
+Please refer page [Configure Cloudneeti API Access](../../administratorGuide/configureCloudneetiAPIAccess)
 
 ## How to use
 
@@ -51,7 +54,7 @@ benchmark summary report.
 
 3.  Execute below command
 
-        .\Get-BenchmarkSummary.ps1 -CloudneetiLicenseId <Cloudneeti License Id> `
+    .\Get-BenchmarkSummary.ps1 -CloudneetiLicenseId <Cloudneeti License Id> `
 						   -CloudneetiAccountId <Cloudneeti Account Id> `
 						   -CloudneetiEnvironment prod `
 						   -BenchmarkId <Benchmark Id> 
