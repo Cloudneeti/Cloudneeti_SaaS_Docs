@@ -1,8 +1,23 @@
- Benchmark Summary Report
-=========================
+ Benchmark Audit Report API (Preview)
+=====================================
 
-Cloudneeti offers Benchmark Summary report download in JSON format using
-PowerShell.
+Cloudneeti offers Benchmark Audit report API to get access to views presenting pass/fail/warn status at a category level and passed/total resource coint at policy level for provided Benchmark.
+
+        https://api.cloudneeti.com/api/license/<LICENSE>/account/<ACCOUNT>/benchmark/<BENCHMARK>/summary?connector=<CONNECTOR>
+
+### GET
+
+| Parameter           |           Description                                |           Required/Optional  |
+|-----------|----------------------------------------------------------------|----------------------------|
+| LICENSE   |          [Cloudneeti License Id​](#license-id)                  | Required|
+| ACCOUNT   |          [Cloud Account Id​](#account-id)                          | Required|
+| BENCHMARK |        [Benchmark Id​](#cloudneeti-supported-benchmarks)        | Required|
+| CONNECTOR |        Cloud account connector type like Azure, AWS or M365​        | Required|
+
+
+## How to use
+
+ Cloudneeti Benchmark Audit Report API can be called using Powershell script with below steps.
 
 Prerequisites​
 -------------
@@ -18,7 +33,7 @@ Collect Information​
 
 [Cloudneeti License Id​](#license-id)
 
-[Cloud Account Id​](#section)
+[Cloud Account Id​](#account-id)
 
 [Cloudneeti API key (API management) ​](#generate-cloudneeti-api-key)
 
