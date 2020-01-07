@@ -54,7 +54,7 @@ nav:
   - Reports: userGuide/reports.md
   - Cloudneeti REST APIs: 
     - Get Token API: userGuide/getAccessTokenAPI.md
-    - Audit Report API: userGuide/benchmarkSummaryReport.md
+    - Audit Report API: userGuide/auditReportAPI.md
     - Initiate Scan API: userGuide/initiateScanAPI.md
     - API User Scenarios: userGuide/apiUserScenarios.md
 - Administrator Guide:
