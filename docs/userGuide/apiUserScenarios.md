@@ -4,12 +4,13 @@
 
 ##### Use case : Get compliance summary result against configuration metadata for current infrastructure.
 
+![Auditor Use Case](.././images/customerAPI/apiUseCaseAuditor.png#thumbnail_1)
+
 ##### Prerequisites
 
 1. Cloudneeti has the Cloud Account onboarded.
 
 2. [Configure Cloudneeti API Access](../../administratorGuide/configureCloudneetiAPIAccess)
-
 
 ##### Description
 
@@ -21,6 +22,8 @@
 ### Actors: Customer Dev-ops
 
 ##### Use Case : Scan configuration metadata for recently deployed infrastructure changes
+
+![Devops Use Case](.././images/customerAPI/apiUseCaseDevops.png#thumbnail_1)
 
 ##### Prerequisites
 
