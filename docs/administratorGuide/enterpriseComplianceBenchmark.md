@@ -10,14 +10,13 @@ own internal Information Security benchmark by either deriving from an existing
 baseline of Cloudneeti supported benchmarks or by creating completely on your
 own.
 
-(following image is available in \\SaaS\\Documentation\\Content\\Enterprise
-Benchmark.pptx)
+![Configure Notifications](.././images/enterpriseBenchmark/enterpriseBenchmarkOverview.png#thumbnail1)
 
 
 
 The following steps are done by Cloudneeti application **License Admin** role.
 
-Create Enterprise Benchmark
+STEP 1 Create Enterprise Benchmark
 ---------------------------
 
 Add basic details for Enterprise Benchmark.
@@ -36,19 +35,19 @@ chosen connector type only.
 
 >   **\<Screenshot Here\>**
 
-Configure Enterprise Benchmark
+STEP 2 Configure Enterprise Benchmark
 ------------------------------
 
 Enterprise Benchmark can be configured mapping policies to existing or new
 categories. Cloudneeti allows custom control ids for mapping policies into a
 category.
 
-### Category Configuration
+### 2.1 Category Configuration
 
 Enterprise Benchmark can be configured by adding new categories and/or existing
 from baseline benchmarks.
 
-#### Create category
+#### 2.1.1 Create category
 
 1.  Click “Benchmark category” to add a category
 
@@ -56,26 +55,26 @@ from baseline benchmarks.
 
 >   **\<Screenshot Here\>**
 
-#### Select baseline benchmark to drag and drop existing categories
+#### 2.1.2 Select baseline benchmark to drag and drop existing categories
 
 1.  Drag and drop categories
 
 >   **\<Screenshot Here or Gif here\>**
 
-### Policy Configuration
+### 2.2 Policy Configuration
 
-#### Add control number
+#### 2.2.1 Add control number
 
 Control number created can be mapped with one or more policies using below
 steps.
 
 >   **\<Steps and Screenshot Here\>**
 
-#### Select policies from baseline benchmark and drag and drop policies
+#### 2.2.2 Select policies from baseline benchmark and drag and drop policies
 
 >   **\<Steps and Screenshot Here\>**
 
-Association of Enterprise Benchmark with License/Licenses
+STEP 3 Association of Enterprise Benchmark with License/Licenses
 ---------------------------------------------------------
 
 Enterprise Benchmark can be associated with License/Licenses User is License
@@ -84,14 +83,14 @@ Admin for.
 Note : Enterprise Benchmark summary will be effective for Cloud Accounts of
 connector type chosen on Benchmark creation.
 
-### Associate with an active License 
+### 3.1 Associate with an active License 
 
 Enterprise benchmark once associated with Cloudneeti License, Enterprise
 benchmark summary of Cloud Account will be available post next successful scan.
 
 >   **\<Steps and Screenshot Here\>**
 
-### Disassociate from an active License
+### 3.2 Disassociate from an active License
 
 Enterprise benchmark once de-associated with Cloudneeti License, Enterprise
 benchmark summary of Cloud Account will not be available post next successful
