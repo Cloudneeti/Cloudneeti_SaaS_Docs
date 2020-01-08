@@ -1,9 +1,9 @@
  Audit Report API (Preview)
 =====================================
 
-Cloudneeti offers Benchmark Audit report API to get access to views presenting pass/fail/warn status at a category level and passed/total resource coint at policy level for provided Benchmark.
+Cloudneeti offers audit report API to get access to views presenting pass/fail/warn status at a category level and passed/total resource count at policy level for provided Benchmark.
 
-        https://api.cloudneeti.com/api/license/<LICENSE>/account/<ACCOUNT>/benchmark/<BENCHMARK>/summary?connector=<CONNECTOR>
+        https://api.cloudneeti.com/api/license/<LICENSE>/account/<ACCOUNT>/benchmark/<BENCHMARK>/summary
 
 ### GET
 
@@ -12,7 +12,6 @@ Cloudneeti offers Benchmark Audit report API to get access to views presenting p
 | LICENSE   |          [Cloudneeti License Id​](#license-id)                  | Required|
 | ACCOUNT   |          [Cloud Account Id​](#account-id)                          | Required|
 | BENCHMARK |        [Benchmark Id​](#cloudneeti-supported-benchmarks)        | Required|
-| CONNECTOR |        Cloud account connector type like Azure, AWS or M365​        | Required|
 
 
 ## Configure Cloudneeti API Access
@@ -20,14 +19,14 @@ Please refer page [Configure Cloudneeti API Access](../../administratorGuide/con
 
 ## How to use
 
- Cloudneeti Benchmark Audit Report API can be called using Powershell script with below steps.
+ Cloudneeti audit report API can be called using Powershell script with below steps.
 
 Prerequisites​
 -------------
 
 | **Activity**                                                                                                          | **Description**                                                                                                                                                                                                                                                                                                                                                                                                  |
 |-----------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1. Download and review **PowerShell script** for Benchmark Summary report download                                    | The PowerShell script is used to downnload Benchmark Summary report download: [Download Link.](https://raw.githubusercontent.com/Cloudneeti/docs_cloudneeti/master/scripts/Get-BenchmarkSummary.ps1)                                                                                                                                                                                                  |
+| 1. Download and review **PowerShell script** for audit report download                                    | The PowerShell script is used to downnload audit report of a account for given Benchmark: [Download Link.](https://raw.githubusercontent.com/Cloudneeti/docs_cloudneeti/master/scripts/Get-BenchmarkSummary.ps1)                                                                                                                                                                                                  |
 | 2.	**Workstation**: Ensure you have the latest PowerShell version (v5 and above) | Verify PowerShell version by running the following command<br>`$PSVersionTable.PSVersion`<br>on the workstation where you will run the ServicePrincipal creation script. If PowerShell version is lower than 5, then follow this link for installation of a later version: [Download Link.](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-windows-powershell?view=powershell-6) |
 | 3.	**Workstation:** Before executing the script, make sure there are no restrictions in running the PowerShell script  | Use this PowerShell command:<br>``Set-ExecutionPolicy ` ``<br>``-Scope Process ` ``<br>``-ExecutionPolicy Bypass``<br>PowerShell contains built-in execution policies that limit its use as an attack vector. By default, the execution policy is set to Restricted, which is the primary policy for script execution. The bypass allows for running scripts and keeps the lowered permissions isolated to just the current running process. |
 
