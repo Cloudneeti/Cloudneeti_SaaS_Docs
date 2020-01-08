@@ -3,7 +3,7 @@
 
 Cloudneeti offers audit report API to get access to views presenting pass/fail/warn status at a category level and passed/total resource count at policy level for provided Benchmark.
 
-        https://api.cloudneeti.com/api/license/<LICENSE>/account/<ACCOUNT>/benchmark/<BENCHMARK>/summary?connector=<CONNECTOR>
+        https://api.cloudneeti.com/api/license/<LICENSE>/account/<ACCOUNT>/benchmark/<BENCHMARK>/summary
 
 ### GET
 
@@ -12,7 +12,6 @@ Cloudneeti offers audit report API to get access to views presenting pass/fail/w
 | LICENSE   |          [Cloudneeti License Id​](#license-id)                  | Required|
 | ACCOUNT   |          [Cloud Account Id​](#account-id)                          | Required|
 | BENCHMARK |        [Benchmark Id​](#cloudneeti-supported-benchmarks)        | Required|
-| CONNECTOR |        Cloud account connector type like Azure, AWS or M365​        | Required|
 
 
 ## Configure Cloudneeti API Access
