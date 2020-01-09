@@ -1,7 +1,7 @@
  Audit Report API (Preview)
 =====================================
 
-Cloudneeti offers audit report API to get access to views presenting pass/fail/warn status at a category level and passed/total resource count at policy level for provided Benchmark.
+Cloudneeti offers audit report API to get access to views presenting pass/fail/warn status at a compliance/benchmark category level and passed/total resource count at policy level for provided Benchmark.
 
         https://api.cloudneeti.com/api/license/<LICENSE>/account/<ACCOUNT>/benchmark/<BENCHMARK>/summary
 
@@ -11139,12 +11139,12 @@ Once you receive the confirmation, proceed with the following steps.
 
 | **Benchmark Name**                                  | **Benchmark Id**                |
 |-----------------------------------------------------|---------------------------------|
-| CIS Foundations Benchmark1.0.0                      | AZFDCIS1_0_0                    |
-| CIS Foundations Benchmark1.1.0                      | AZFDCIS1_1_0                    |
+| CIS Azure Foundations Benchmark1.0.0                | AZFDCIS1_0_0                    |
+| CIS Azure Foundations Benchmark1.1.0                | AZFDCIS1_1_0                    |
 | CIS Microsoft Windows Server 2012 R2 Benchmark1.0.0 | AZMSWIN12R2CIS1_0_0             |
 | CIS Microsoft Windows Server 2016 Benchmark1.0.0    | AZMSWIN16CIS1_0_0               |
 | PCI_DSS_3.2                                         | PCI3_2                          |
-| General Data Protection Regulation                  | GDPR2016_679                    |
+| General Data Protection Regulation 2016-679         | GDPR2016_679                    |
 | HIPAA Safeguards                                    | HIPAA                           |
 | FFIEC                                               | FFIEC                           |
 | NIST Cybersecurity Framework1.1                     | NISTCSF1_1                      |
@@ -11153,33 +11153,10 @@ Once you receive the confirmation, proceed with the following steps.
 | ISO-IEC 27001-2013                                  | ISO27001_2013                   |
 | Cloud Security Best Practices                       | CSBP                            |
 | UK NCSC                                             | UKNCSC                          |
-| Reserve Bank of India                               | RBI2015_16_418                  |
+| Reserve Bank of India 2015-16-418                   | RBI2015_16_418                  |
 | SOC2 - AICPA TSC 2017                               | SOC2_AICPA_TSC_2017             |
 | GxP Life Science 21 CFR PART 11                     | GxP_Life_Science_21_CFR_PART_11 |
 | CIS Ubuntu Linux 18.04 LTS Benchmark v1.0.0         | AZLinux18CIS1_1_0               |
 | CIS CentOS Linux 7 Benchmark v2.2.0                 | AZCentOSCIS2_2_0                |
-| CIS Foundations Benchmarks                          | AWSFDCIS1_2_0                   |
-| Cloud Security Best Practices                       | CSBP                            |
-| HIPAA Safeguards                                    | HIPAA                           |
-| PCI_DSS_3.2                                         | PCI3_2                          |
-| General Data Protection Regulation                  | GDPR2016_679                    |
-| NIST SP 800-53 Rev. 4                               | NIST800_53Rev4                  |
-| ISO-IEC 27001-2013                                  | ISO27001_2013                   |
-| SOC2 - AICPA TSC 2017                               | SOC2_AICPA_TSC_2017             |
-| NIST Cybersecurity Framework1.1                     | NISTCSF1_1                      |
-| FFIEC                                               | FFIEC                           |
-| GxP Life Science 21 CFR PART 11                     | GxP_Life_Science_21_CFR_PART_11 |
-| CSA CCM V.3.0.1                                     | CSACCM3_0_1                     |
-| Cloud Security Best Practices                       | CSBP                            |
-| CSA CCM V.3.0.1                                     | CSACCM3_0_1                     |
+| CIS AWS Foundations Benchmarks 1.2.0                | AWSFDCIS1_2_0                   |
 | CIS M365 Foundations Benchmark1.0.0                 | M365CIS1_0_0                    |
-| PCI_DSS_3.2                                         | PCI3_2                          |
-| General Data Protection Regulation                  | GDPR2016_679                    |
-| HIPAA Safeguards                                    | HIPAA                           |
-| FFIEC                                               | FFIEC                           |
-| NIST Cybersecurity Framework1.1                     | NISTCSF1_1                      |
-| NIST SP 800-53 Rev. 4                               | NIST800_53Rev4                  |
-| ISO-IEC 27001-2013                                  | ISO27001_2013                   |
-| UK NCSC                                             | UKNCSC                          |
-| Reserve Bank of India                               | RBI2015_16_418                  |
-| GxP Life Science 21 CFR PART 11                     | GxP_Life_Science_21_CFR_PART_11 |
