@@ -1,5 +1,8 @@
 Acquire an access token
 
+## Configure Cloudneeti API Access
+Please refer page [Configure Cloudneeti API Access](../../administratorGuide/configureCloudneetiAPIAccess)
+
         https://api.cloudneeti.com/api/token
 
 ### GET
@@ -15,5 +18,7 @@ Acquire an access token
 |----------------|----------------------|-----------------------|
 | 200 OK	     |           Access Token     | Cloudneeti API access token      |
 | Other Status Codes |      Error     | Error response describing why the operation failed.     |
+
+
 
 
