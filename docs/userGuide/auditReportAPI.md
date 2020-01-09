@@ -14,6 +14,14 @@ Cloudneeti offers audit report API to get access to views presenting pass/fail/w
 | BENCHMARK |        [Benchmark Id​](#cloudneeti-supported-benchmarks)        | Required|
 
 
+### Responses
+
+| Name           |           Type       |          Description  |
+|----------------|----------------------|-----------------------|
+| 200 OK	     |           Audit Report     | Cloudneeti cloud account audit report for provided Benchmark      |
+| Other Status Codes |      Error     | Error response describing why the operation failed.     |
+
+
 ## Configure Cloudneeti API Access
 Please refer page [Configure Cloudneeti API Access](../../administratorGuide/configureCloudneetiAPIAccess)
 
