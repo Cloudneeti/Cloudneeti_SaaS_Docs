@@ -14,7 +14,7 @@ Cloudneeti offers scan API to get scan status in Cloudneeti for provided cloud a
 
 | Name           |           Type       |          Description  |
 |----------------|----------------------|-----------------------|
-| 200 OK	     |           Scan Status     | Cloudneeti cloud account scan job id      |
+| 200 OK	     |           Scan Status     | Cloudneeti cloud account scan job status      |
 | Other Status Codes |      Error     | Error response describing why the operation failed.     |
 
 
