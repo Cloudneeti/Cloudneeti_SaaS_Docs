@@ -56,8 +56,8 @@ Collect Information​
 
 [Benchmark Id​](#cloudneeti-supported-benchmarks)
 
-Download Benchmark summary report
----------------------------------
+Steps
+-----
 
 The following steps are done by Cloudneeti application user ​to download
 benchmark summary report.

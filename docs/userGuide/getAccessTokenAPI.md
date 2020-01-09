@@ -1,5 +1,8 @@
 Acquire an access token
 
+## Configure Cloudneeti API Access
+Please refer page [Configure Cloudneeti API Access](../../administratorGuide/configureCloudneetiAPIAccess)
+
         https://api.cloudneeti.com/api/token
 
 ### GET
@@ -8,4 +11,14 @@ Acquire an access token
 |-----------|----------------------------------------------------------------|----------------------------|
 | Connected App Id   |          [Cloudneeti Connected App Id​](#license-id)                  | Required|
 | Connected App Secret   |          [Cloud Connected App Secret](#account-id)                          | Required|
+
+### Responses
+
+| Name           |           Type       |          Description  |
+|----------------|----------------------|-----------------------|
+| 200 OK	     |           Access Token     | Cloudneeti API access token      |
+| Other Status Codes |      Error     | Error response describing why the operation failed.     |
+
+
+
 
