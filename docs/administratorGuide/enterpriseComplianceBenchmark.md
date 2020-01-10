@@ -152,7 +152,9 @@ scan.
 
     ![Enterprise Benchmark](.././images/enterpriseBenchmark/associate_3.png#thumbnail)
 
- 
+5. Benchmark summary page will appear on next successful scan
+
+    ![Enterprise Benchmark](.././images/enterpriseBenchmark/summary.png#thumbnail)
 
 Collaboration for Enterprise Benchmark
 --------------------------------------
@@ -183,9 +185,9 @@ Collaborated License Admins can update, configure, associate and collaborate Ent
 
     ![Enterprise Benchmark](.././images/enterpriseBenchmark/collaborate_3.png#thumbnail)
 
-5. Benchmark summary page will appear on next successful scan
 
-    
+
+
 
 
 <!-- Update Enterprise Benchmark
