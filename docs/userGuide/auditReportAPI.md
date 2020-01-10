@@ -3,15 +3,20 @@
 
 Cloudneeti offers audit report API to get access to views presenting pass/fail/warn status at a compliance/benchmark category level and passed/total resource count at policy level for provided Benchmark.
 
-        get https://api.cloudneeti.com/api/license/<LICENSE>/account/<ACCOUNT>/benchmark/<BENCHMARK>/summary
+        get https://<CLOUDNEETI API DOMAIN>/api/license/<LICENSE ID>/account/<ACCOUNT ID>/benchmark/<BENCHMARK ID>/summary
+
+| Environment	| Values for CLOUDNEETI API DOMAIN |
+|---------------|--------------------------------------|
+| PROD 	        |   api.cloudneeti.com                 |
+| TRIAL 	    | trialapi.cloudneeti.com              |
 
 ### URI Parameters
 
 | Parameter           |           Description                                |           Required/Optional  |
 |-----------|----------------------------------------------------------------|----------------------------|
-| LICENSE   |          [Cloudneeti License Id​](#license-id)                  | Required|
-| ACCOUNT   |          [Cloud Account Id​](#account-id)                          | Required|
-| BENCHMARK |        [Benchmark Id​](#cloudneeti-supported-benchmarks)        | Required|
+| LICENSE ID  |          [Cloudneeti License Id​](#license-id)                  | Required|
+| ACCOUNT ID  |          [Cloud Account Id​](#account-id)                          | Required|
+| BENCHMARK ID|        [Benchmark Id​](#cloudneeti-supported-benchmarks)        | Required|
 
 
 ### Responses
@@ -27,10 +32,6 @@ Cloudneeti offers audit report API to get access to views presenting pass/fail/w
 #### Sample Request
 
         get https://api.cloudneeti.com/api/license/9085e05b-c5fe-49e1-9511-af4002aad6c4/account/7b227c87-2fb2-4fe4-bbab-c7318de12f5e/summary
-
-
-## Configure Cloudneeti API Access
-Please refer page [Configure Cloudneeti API Access](../../administratorGuide/configureCloudneetiAPIAccess)
 
 ## How to use
 

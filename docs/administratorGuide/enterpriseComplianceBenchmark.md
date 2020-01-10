@@ -25,6 +25,8 @@ Add basic details for Enterprise Benchmark.
 
 2.  Navigate to **Private Benchmarks**
 
+![Configure Notifications](.././images/enterpriseBenchmark/enterpriseBenchmarkCreate.png#thumbnail)
+
 3.  Give **Name, Title, Long Name, Logo** and choose **connector type** for
     Benchmark to be created
 
