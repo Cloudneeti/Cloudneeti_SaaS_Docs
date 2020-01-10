@@ -3,7 +3,7 @@
 
 Cloudneeti offers audit report API to get access to views presenting pass/fail/warn status at a compliance/benchmark category level and passed/total resource count at policy level for provided Benchmark.
 
-        get https://<CLOUDNEETI API DOMAIN>/api/license/<LICENSE ID>/account/<ACCOUNT ID>/benchmark/<BENCHMARK ID>/summary
+        GET https://<CLOUDNEETI API DOMAIN>/api/audit/license/<LICENSE ID>/account/<ACCOUNT ID>/benchmark/<BENCHMARK ID>/summary
 
 | Environment	| Values for CLOUDNEETI API DOMAIN |
 |---------------|--------------------------------------|
@@ -31,7 +31,7 @@ Cloudneeti offers audit report API to get access to views presenting pass/fail/w
 
 #### Sample Request
 
-        get https://api.cloudneeti.com/api/license/9085e05b-c5fe-49e1-9511-af4002aad6c4/account/7b227c87-2fb2-4fe4-bbab-c7318de12f5e/summary
+        get https://api.cloudneeti.com/api/audit/license/9085e05b-c5fe-49e1-9511-af4002aad6c4/account/7b227c87-2fb2-4fe4-bbab-c7318de12f5e/summary
 
 ## How to use
 

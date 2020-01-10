@@ -1,6 +1,6 @@
 Cloudneeti offers scan API to initiate scan in Cloudneeti for provided cloud account.
 
-       get https://<CLOUDNEETI API DOMAIN>/api/license/<LICENSE ID>/account/<ACCOUNT ID>/scan
+       get https://<CLOUDNEETI API DOMAIN>/api/compliance/license/<LICENSE ID>/account/<ACCOUNT ID>/scan
 
 | Environment	| Values for CLOUDNEETI API DOMAIN |
 |---------------|--------------------------------------|
@@ -27,7 +27,7 @@ Cloudneeti offers scan API to initiate scan in Cloudneeti for provided cloud acc
 
 #### Sample Request
 
-        get https://api.cloudneeti.com/api/license/9085e05b-c5fe-49e1-9511-af4002aad6c4/account/7b227c87-2fb2-4fe4-bbab-c7318de12f5e/scan
+        GET https://api.cloudneeti.com/api/compliance/license/9085e05b-c5fe-49e1-9511-af4002aad6c4/account/7b227c87-2fb2-4fe4-bbab-c7318de12f5e/scan
 
 #### Sample Response
 Status code: 200
