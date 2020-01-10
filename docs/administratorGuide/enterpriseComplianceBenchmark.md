@@ -25,17 +25,19 @@ Add basic details for Enterprise Benchmark.
 
 2.  Navigate to **Private Benchmarks**
 
-![Configure Notifications](.././images/enterpriseBenchmark/enterpriseBenchmarkCreate.png#thumbnail)
+    ![Configure Notifications](.././images/enterpriseBenchmark/enterpriseBenchmarkCreate.png#thumbnail)
 
 3.  Give **Name, Title, Long Name, Logo** and choose **connector type** for
     Benchmark to be created
 
-Note : Benchmark configuration can be done using categories and policies for
-chosen connector type only.
+    ![Configure Notifications](.././images/enterpriseBenchmark/enterpriseBenchmarkBasic.png#thumbnail)
 
-1.  **Save and Continue** to configure the benchmark.
+    Note : Benchmark configuration can be done using categories and policies for
+    chosen connector type only.
 
->   **\<Screenshot Here\>**
+4.  **Save** and continue to configure the benchmark.
+
+
 
 STEP 2 Configure Enterprise Benchmark
 ------------------------------
@@ -44,24 +46,48 @@ Enterprise Benchmark can be configured mapping policies to existing or new
 categories. Cloudneeti allows custom control ids for mapping policies into a
 category.
 
+Repeat below steps to map, update categories and policies from baseline benchmarks.
+
 ### 2.1 Category Configuration
 
 Enterprise Benchmark can be configured by adding new categories and/or existing
 from baseline benchmarks.
 
-#### 2.1.1 Create category
-
-1.  Click “Benchmark category” to add a category
-
-2.  Enter **Category Name**
-
->   **\<Screenshot Here\>**
-
-#### 2.1.2 Select baseline benchmark to drag and drop existing categories
+#### 2.1.1 Select baseline benchmark to drag and drop existing categories
 
 1.  Drag and drop categories
 
->   **\<Screenshot Here or Gif here\>**
+    ![Enterprise Benchmark](.././images/enterpriseBenchmark/mapCreateCategories.gif)
+
+#### 2.1.2 Create category
+
+1.  Click **Add** to create a Benchmark category
+
+    ![Enterprise Benchmark](.././images/enterpriseBenchmark/addCategory.png#thumbnail)
+
+2.  Enter **Category Name**
+
+    ![Enterprise Benchmark](.././images/enterpriseBenchmark/addCategory_1.png#thumbnail)
+
+3. Category will be added in the private benchmark
+
+    ![Enterprise Benchmark](.././images/enterpriseBenchmark/addCategory_2.png#thumbnail)
+
+#### 2.1.3 Update mapped categories
+
+1. Click on **edit icon**
+
+    ![Enterprise Benchmark](.././images/enterpriseBenchmark/editCategory_1.png#thumbnail)
+
+2. Update benchmark category name
+
+    ![Enterprise Benchmark](.././images/enterpriseBenchmark/editCategory_2.png#thumbnail)
+
+#### 2.1.3 Delete category 
+
+Click on **bin icon** to delete benchmark category
+
+![Enterprise Benchmark](.././images/enterpriseBenchmark/deleteCategory.png#thumbnail)
 
 ### 2.2 Policy Configuration
 
@@ -70,35 +96,63 @@ from baseline benchmarks.
 Control number created can be mapped with one or more policies using below
 steps.
 
->   **\<Steps and Screenshot Here\>**
+1. Select category
+
+2. **Add** control number
+
+    ![Enterprise Benchmark](.././images/enterpriseBenchmark/addControl_1.png#thumbnail)
+
+3. Enter control number
+
+    ![Enterprise Benchmark](.././images/enterpriseBenchmark/addControl_2.png#thumbnail)
 
 #### 2.2.2 Select policies from baseline benchmark and drag and drop policies
 
->   **\<Steps and Screenshot Here\>**
+1. Select baseline benchmark and expand category to select policy.
 
-STEP 3 Association of Enterprise Benchmark with License/Licenses
+2. Drag and drop policies in desired control id to map with private benchmark.
+
+    ![Enterprise Benchmark](.././images/enterpriseBenchmark/mapPolicies.gif)
+
+
+Association of Enterprise Benchmark with License/Licenses
 ---------------------------------------------------------
 
-Enterprise Benchmark can be associated with License/Licenses User is License
-Admin for.
+Enterprise Benchmark can be associated with License/Licenses having private benchmark feature, User is License Admin for.
 
 Note : Enterprise Benchmark summary will be effective for Cloud Accounts of
 connector type chosen on Benchmark creation.
 
-### 3.1 Associate with an active License 
+### Associate with an active License 
 
 Enterprise benchmark once associated with Cloudneeti License, Enterprise
 benchmark summary of Cloud Account will be available post next successful scan.
 
->   **\<Steps and Screenshot Here\>**
 
-### 3.2 Disassociate from an active License
+### Disassociate from an active License
 
 Enterprise benchmark once de-associated with Cloudneeti License, Enterprise
 benchmark summary of Cloud Account will not be available post next successful
 scan.
 
->   **\<Steps and Screenshot Here\>**
+#### Steps
+
+1. Navigate to **Private Benchmark** page 
+
+2. Click **Associate**
+
+    ![Enterprise Benchmark](.././images/enterpriseBenchmark/associate_1.png#thumbnail)
+
+3. Select and move license to section **Associate with Licenses** to associate and move to **Disassociate with Licenses**
+
+    Example : Move license Cloudneeti Demo and Cloudneeti Test to associate
+    ![Enterprise Benchmark](.././images/enterpriseBenchmark/associate_2.png#thumbnail)
+
+4. **Save**
+
+    ![Enterprise Benchmark](.././images/enterpriseBenchmark/associate_3.png#thumbnail)
+
+ 
 
 Collaboration for Enterprise Benchmark
 --------------------------------------
@@ -109,31 +163,56 @@ De-associate Enterprise Benchmark.
 
 ### Collaboration with users
 
-License Admins can collaborate for configuration of Enterprise Benchmark using
-below steps.
+License Admin can collaborate with other License Admins of License having private benchmark feature, User is License Admin for. 
 
->   **\<Steps and Screenshot Here\>**
+Collaborated License Admins can update, configure, associate and collaborate Enterprise Benchmark.
 
-### Remove collaboration
+### Steps
 
-Collaborated users can be removed using below steps.
+1. Navigate to **Private Benchmark** page 
 
->   **\<Steps and Screenshot Here\>**
+2. Click **Collaborate**
 
-Update Enterprise Benchmark
+    ![Enterprise Benchmark](.././images/enterpriseBenchmark/collaborate_1.png#thumbnail)
+
+3. Select and move users to section **Collaborate with** to collaborate and move to **Available for collaboration** to remove collaboration.
+
+    ![Enterprise Benchmark](.././images/enterpriseBenchmark/collaborate_2.png#thumbnail)
+
+4. Click **Collaborate Now** 
+
+    ![Enterprise Benchmark](.././images/enterpriseBenchmark/collaborate_3.png#thumbnail)
+
+5. Benchmark summary page will appear on next successful scan
+
+    
+
+
+<!-- Update Enterprise Benchmark
 ---------------------------
 
 Enterprise benchmark can be updated for basic details as well as configurations.
 
 ### Update Enterprise Benchmark basic details
 
+1. Navigate to **Private Benchmark** page 
+
+2. Click **Update**
+
 >   **\<Steps and Screenshot Here\>**
 
+3. 
+
 ### Update Enterprise Benchmark configuration 
+
+
+1. Navigate to **Private Benchmark** page 
+
+2. Click **Configure**
 
 >   **\<Steps and Screenshot Here\>**
 
 Clone Benchmark
 ---------------
 
->   **\<Steps and Screenshot Here\>**
+>   **\<Steps and Screenshot Here\>** -->
