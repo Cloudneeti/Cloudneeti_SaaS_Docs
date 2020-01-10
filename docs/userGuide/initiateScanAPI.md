@@ -1,13 +1,18 @@
 Cloudneeti offers scan API to initiate scan in Cloudneeti for provided cloud account.
 
-       get https://api.cloudneeti.com/api/license/<LICENSE>/account/<ACCOUNT>/scan
+       get https://<CLOUDNEETI API DOMAIN>/api/license/<LICENSE ID>/account/<ACCOUNT ID>/scan
+
+| Environment	| Values for CLOUDNEETI API DOMAIN |
+|---------------|--------------------------------------|
+| PROD 	        |   api.cloudneeti.com                 |
+| TRIAL 	| trialapi.cloudneeti.com              |
 
 ### URI Parameters
 
 | Parameter           |           Description                                |           Required/Optional  |
 |-----------|----------------------------------------------------------------|----------------------------|
-| LICENSE   |          [Cloudneeti License Id​](#license-id)                  | Required|
-| ACCOUNT   |          [Cloud Account Id​](#account-id)                          | Required|
+| LICENSE ID  |          [Cloudneeti License Id​](#license-id)                  | Required|
+| ACCOUNT ID  |          [Cloud Account Id​](#account-id)                          | Required|
 
 
 ### Responses

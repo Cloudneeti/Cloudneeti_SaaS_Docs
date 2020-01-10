@@ -1,12 +1,19 @@
 Cloudneeti offers scan API to get scan status in Cloudneeti for provided cloud account.
 
-        get https://api.cloudneeti.com/api/jobId/<JOBID>/scanStatus
+        get https://<CLOUDNEETI API DOMAIN>/api/jobId/<JOB ID>/scanStatus
+
+
+| Environment	| Values for CLOUDNEETI API DOMAIN |
+|---------------|--------------------------------------|
+| PROD 	        |   api.cloudneeti.com                 |
+| TRIAL 	| trialapi.cloudneeti.com              |
+
 
 ### URI Parameters 
 
 | Parameter           |           Description                                |           Required/Optional  |
 |-----------|----------------------------------------------------------------|----------------------------|
-| JOBID     |          [Cloud Account Scan Job Id](#account-id)              | Required|
+| JOB ID     |          [Cloud Account Scan Job Id](#account-id)              | Required|
 
 ### Responses
 
@@ -20,7 +27,7 @@ Cloudneeti offers scan API to get scan status in Cloudneeti for provided cloud a
 
 #### Sample Request
 
-        get https://api.cloudneeti.com/api/license/9085e05b-c5fe-49e1-9511-af4002aad6c4/account/7b227c87-2fb2-4fe4-bbab-c7318de12f5e/scanStatus
+        get https://api.cloudneeti.com/api/jobId/7b227c87-2fb2-4fe4-bbab-c7318de12f5e/scanStatus
 
 #### Sample Response
 Status code: 200

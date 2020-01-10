@@ -3,7 +3,13 @@ Acquire an access token
 ## Configure Cloudneeti API Access
 Please refer page [Configure Cloudneeti API Access](../../administratorGuide/configureCloudneetiAPIAccess)
 
-        https://api.cloudneeti.com/api/token
+        https://<CLOUDNEETI API DOMAIN>/api/token
+
+
+| Environment	| Values for CLOUDNEETI API DOMAIN |
+|---------------|--------------------------------------|
+| PROD 	        |   api.cloudneeti.com                 |
+| TRIAL 	| trialapi.cloudneeti.com              |
 
 ### GET
 
