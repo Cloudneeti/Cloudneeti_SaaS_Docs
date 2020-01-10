@@ -154,7 +154,7 @@ scan.
 
 5. Benchmark summary page will appear on next successful scan
 
-    ![Enterprise Benchmark](.././images/enterpriseBenchmark/summary.png#thumbnail)
+    <!-- ![Enterprise Benchmark](.././images/enterpriseBenchmark/summary.png#thumbnail) -->
 
 Collaboration for Enterprise Benchmark
 --------------------------------------
