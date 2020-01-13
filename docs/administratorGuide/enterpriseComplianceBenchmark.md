@@ -27,7 +27,7 @@ Add basic details for Enterprise Benchmark.
 
     ![Configure Notifications](.././images/enterpriseBenchmark/enterpriseBenchmarkCreate.png#thumbnail)
 
-3.  Give **Name, Title, Long Name, Logo** and choose **connector type** for
+3.  Give **Name, Title, Long Name, Logo** and choose **Connector Type** for
     Benchmark to be created
 
     ![Configure Notifications](.././images/enterpriseBenchmark/enterpriseBenchmarkBasic.png#thumbnail)
@@ -154,7 +154,7 @@ scan.
 
 5. Benchmark summary page will appear on next successful scan
 
-    <!-- ![Enterprise Benchmark](.././images/enterpriseBenchmark/summary.png#thumbnail) -->
+    ![Enterprise Benchmark](.././images/enterpriseBenchmark/summary.png#thumbnail)
 
 Collaboration for Enterprise Benchmark
 --------------------------------------
@@ -186,11 +186,7 @@ Collaborated License Admins can update, configure, associate and collaborate Ent
     ![Enterprise Benchmark](.././images/enterpriseBenchmark/collaborate_3.png#thumbnail)
 
 
-
-
-
-
-<!-- Update Enterprise Benchmark
+Update Enterprise Benchmark
 ---------------------------
 
 Enterprise benchmark can be updated for basic details as well as configurations.
@@ -201,12 +197,15 @@ Enterprise benchmark can be updated for basic details as well as configurations.
 
 2. Click **Update**
 
->   **\<Steps and Screenshot Here\>**
+    ![Enterprise Benchmark](.././images/enterpriseBenchmark/update_1.png#thumbnail)
 
-3. 
+3. Update benchmark long name, title logo and **Save**
 
-### Update Enterprise Benchmark configuration 
+    ![Enterprise Benchmark](.././images/enterpriseBenchmark/update_2.png#thumbnail)
 
+
+
+<!-- ### Update Enterprise Benchmark configuration 
 
 1. Navigate to **Private Benchmark** page 
 
