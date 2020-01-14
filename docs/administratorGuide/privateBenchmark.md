@@ -1,5 +1,5 @@
-Private Benchmark
-====================
+Private Compliance Benchmark
+============================
 
 Overview
 --------
@@ -219,6 +219,10 @@ Update Private Benchmark
 
 Private benchmark can be updated for basic details as well as configurations.
 
+### Update Private Benchmark configuration 
+
+Please follow  [steps under Step 2](.././administratorGuide/privateBenchmark/#backup-reader-role)
+
 ### Update Private Benchmark basic details
 
 1. Navigate to **Private Benchmark** page 
@@ -233,9 +237,7 @@ Private benchmark can be updated for basic details as well as configurations.
 
 
 
-### Update Private Benchmark configuration 
 
-Please follow  [steps under Step 2](.././administratorGuide/#step-2-configure-private-benchmark)
 
 
 
