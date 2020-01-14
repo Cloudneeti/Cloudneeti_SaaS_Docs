@@ -63,7 +63,7 @@ nav:
   - Integrations: administratorGuide/manageLicenses.md
   - Cloud Accounts: administratorGuide/manageAccounts.md
   - Users & Roles: administratorGuide/manageUsers.md
-  - Enterprise Compliance Benchmark: administratorGuide/enterpriseComplianceBenchmark.md
+  - Private Compliance Benchmark: administratorGuide/privateBenchmark.md
   - Security Policy Configuration: administratorGuide/securityPolicyExclusions.md
   - Audit Log: administratorGuide/auditLog.md
   - Configure Cloudneeti API Access (Preview): administratorGuide/configureCloudneetiAPIAccess.md
