@@ -83,8 +83,8 @@ nav:
     - Auto Remediation: remediation/awsRemediation.md
     - Decommission Remediation framework: remediation/awsDecommissionofRemediation.md
 - Release Notes:
-  - Releases in 2019: releaseNotes/2019.md
   - Releases in 2020: releaseNotes/2020.md
+  - Releases in 2019: releaseNotes/2019.md
 # - Parent:
 #     - Child 1:
 #         - Child 2: 'releaseNotes/releaseNotes.md'
