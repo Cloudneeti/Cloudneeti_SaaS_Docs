@@ -41,10 +41,14 @@ nav:
   - Request a License: gettingStarted/subscribe.md
   - Estimate Pricing: azureMarketplace/estimatePricing.md
 - Onboarding Guide:
-   - Overview: onboardingGuide/onboardingGuideOverview.md
-   - Micorsoft Azure: onboardingGuide/azureSubscriptions.md
-   - Amazon Web Services: onboardingGuide/amazonWebServiceAccounts.md
-   - Office 365: onboardingGuide/office365Subscription.md
+  - Overview: onboardingGuide/onboardingGuideOverview.md
+  - Micorsoft Azure: onboardingGuide/azureSubscriptions.md
+    # - Onboarding steps: onboardingGuide/azureSubscriptions.md
+    # - Azure subscription additional roles: onboardingGuide/azureSubscriptionsOptionalRoles.md
+    # - Azure subscription key vault permissions: onboardingGuide/azureSubscriptionsKeyVaultPermissions.md
+    # - Azure Advanced Security Configurations: onboardingGuide/azureAdvanceSecurityConfiguration.md
+  - Amazon Web Services: onboardingGuide/amazonWebServiceAccounts.md
+  - Office 365: onboardingGuide/office365Subscription.md
 - User Guide:
   - Sign In and Sign Out: gettingStarted/signInAndSignOut.md
   - User Interface: userGuide/userInterface.md
@@ -63,7 +67,7 @@ nav:
   - Integrations: administratorGuide/manageLicenses.md
   - Cloud Accounts: administratorGuide/manageAccounts.md
   - Users & Roles: administratorGuide/manageUsers.md
-  - Private Compliance Benchmark: administratorGuide/privateBenchmark.md
+  - Private Benchmark: administratorGuide/privateBenchmark.md
   - Security Policy Configuration: administratorGuide/securityPolicyExclusions.md
   - Audit Log: administratorGuide/auditLog.md
   - Configure Cloudneeti API Access (Preview): administratorGuide/configureCloudneetiAPIAccess.md
@@ -79,8 +83,8 @@ nav:
     - Auto Remediation: remediation/awsRemediation.md
     - Decommission Remediation framework: remediation/awsDecommissionofRemediation.md
 - Release Notes:
-  - Releases in 2019: releaseNotes/2019.md
   - Releases in 2020: releaseNotes/2020.md
+  - Releases in 2019: releaseNotes/2019.md
 # - Parent:
 #     - Child 1:
 #         - Child 2: 'releaseNotes/releaseNotes.md'

@@ -10,4 +10,4 @@ The Cloud Security Best Practices view provides a list of all security policies 
 |  Azure VM baseline Win 16​       | 227​              | ​-                      |   - |
 |  Azure VM baseline Ubuntu 18.04​ | 40​               | ​-                      |   - |
 |  Azure VM baseline CentOS​       | 34​               | ​-                      |   - |
-| **Grand Total**​           | **1375**​         | **102**​                 |   - |
+| **Grand Total**​           | **1375**​         | **102**​                 |   **137** |
