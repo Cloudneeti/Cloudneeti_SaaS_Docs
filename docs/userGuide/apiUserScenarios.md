@@ -36,8 +36,10 @@
 
 2. [Get Cloudneeti access token](../../userGuide/getAccessTokenAPI/).
 
-3. [Scan Cloudneeti Cloud Account for recently deployed infrastructure](../../userGuide/getAccessTokenAPI/)
+3. [Scan Cloudneeti Cloud Account for recently deployed infrastructure](../../userGuide/initiateScanAPI/)
 
-4. [Download audit report of Cloud Account for given Benhcmark](../../userGuide/auditReportAPI/)
+4. [Check Cloudneeti Cloud Account scan status](../../userGuide/scanStatusAPI/)
 
-5. Verify compliance status, promote or roll back recently deployed infrastructure changes.
+5. [Download audit report of Cloud Account for given Benhcmark](../../userGuide/auditReportAPI/)
+
+6. Verify compliance status, promote or roll back recently deployed infrastructure changes.
