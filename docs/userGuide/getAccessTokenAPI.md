@@ -1,9 +1,9 @@
 Acquire an access token
 
 ## Configure Cloudneeti API Access
-Please refer page [Configure Cloudneeti API Access](../../administratorGuide/configureCloudneetiAPIAccess)
+Please refer page [Configure Cloudneeti API Access](../../administratorGuide/configureCloudneetiAPIAccess/)
 
-        **POST** https://<CLOUDNEETI API DOMAIN>/api/token
+        POST https://<CLOUDNEETI API DOMAIN>/api/token
 
 
 
