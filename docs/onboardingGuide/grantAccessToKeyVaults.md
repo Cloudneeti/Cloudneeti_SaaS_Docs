@@ -1,14 +1,11 @@
-# Add Key Vault access policy
+# STEP 4: Grant access to key vaults
 **This step is optional** 
 Access policy can be added using either an automation account or manual steps.  
 
-#### [Automation Steps](.././azureSubscriptions/#automatically-add-key-vault-access-policy-for-key-vaults-within-azure-subscriptions) 
-Please follow [section](.././azureSubscriptions/#automatically-add-key-vault-access-policy-for-key-vaults-within-azure-subscriptions) for creation of automation account to add Key Vault access policy.
-
-## Manual Steps
+## 4.1 Manual Steps
 
 The Cloudneeti application requires special permission on desired key vaults to get policy data related to secrets. 
-If the Key Vault access policy is not added, Cloudneeti application will not be able to collect data of security policies [listed here](.././azureSubscriptions/#backup-reader-role).
+If the Key Vault access policy is not added, Cloudneeti application will not be able to collect data of security policies [listed here](.././grantAccessToKeyVaults/#key-vault-list).
 
 1.	Login to Azure portal.
 2.	Go to the **Key vaults** (1)
@@ -25,11 +22,11 @@ Note: Perform this step on all the key vaults present in your subscription.
 
 
 
-## Automatically add Key Vault access policy for Key Vaults within Azure subscriptions
+## 4.2 Automatically add Key Vault access policy for Key Vaults within Azure subscriptions
 
-### STEP 1 Register Contributor Application 
+### 4.2.1 Register Contributor Application 
 
-#### 1.1 Register Contributor Application
+#### Register Contributor Application
 Login to [Azure Portal](https://portal.azure.com/) with **Global AD
 Administrator** role.
 
@@ -50,7 +47,7 @@ Administrator** role.
 
     ![Service Principal - Azure Portal](.././images/azureSubscriptions/Keyvault_AppId.png#thumbnail)
 
-#### 1.2 Add Client Secret
+#### Add Client Secret
 
 1.	Click on **new client secret** in **Certificates & secrets** section
 2.	Add **Description** and select expiry time 
@@ -59,7 +56,7 @@ Administrator** role.
 
     ![Client Secret](.././images/azureSubscriptions/Keyvault_AppSecret.png#thumbnail)
 
-#### 1.3 Grant admin consent for API permissions
+#### Grant admin consent for API permissions
 
 Add Read All Microsoft Graph permissions and grant admin consent
 
@@ -75,7 +72,7 @@ The Contributor Application should have "Azure Active Directory Graph - Applicat
 3. Click on **Grant admin consent for …** button in the Grant consent section. 
 
 
-#### 1.4 Grant Azure Subscription Contributor role
+#### Grant Azure Subscription Contributor role
 
 Add [contributor role](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-secure-your-key-vault#data-plane-and-access-policies) for Cloudneeti application in Azure Subscription.
 
@@ -88,7 +85,7 @@ Login to [Azure Portal](https://portal.azure.com/) with Microsoft Azure **Subscr
 
     ![Assign role](.././images/azureSubscriptions/KeyVault_ContributorRole.png#thumbnail)
 
-### STEP 2 Provision automation account 
+### 4.2.2 Provision automation account 
 Provision automation account to check and assign List permissions to key-vaults within given subscriptions, at scheduled time.
 
 Login to Azure portal <https://portal.azure.com> as Subscription Contributor or
@@ -154,7 +151,7 @@ not assigned.
 Special permission on key vaults is needed to collect data for security policies
 listed below.
 
-| Policy Id     | Policy Title                                                      | Category       |
+| Control Id    | Policy Title                                                      | Category       |
 |---------------|------------------------------------------------------------------|----------------|
 | 1800.2        | Ensure that the expiry date is set on all Secrets in a Key Vault | Key Management |
 

@@ -5,33 +5,29 @@ The following steps are required to onboard Microsoft Azure to the Cloudneeti ap
 
 ![Onboarding Steps](.././images/azureSubscriptions/Onboarding_Steps.png#thumbnail_1)
 
-1.  **Registering the Cloudneeti application** includes registering the
+1.  [**Registering the Cloudneeti application**](.././azureSubscriptions/#step-1-register-cloudneeti-application-manually-or-using-azure-powershell-script) includes registering the
     Cloudneeti application with Azure tenant, providing access to Microsoft
     Graph and granting admin consent to the Cloudneeti application.
 
-2.  **Granting access to the Azure subscription** includes giving the Cloudneeti
-    application reader access to the Azure subscription and collecting Subscription ID, Directory ID, Domain Name
-    information.
+2.  [**Granting access to the Azure subscription**](.././azureSubscriptions/#step-2-grant-access-to-cloudneeti-registered-app) includes giving the Cloudneeti
+    application reader access to the Azure subscription and collecting Subscription ID, Directory ID, Domain Name information.
 
-3. **Grant access to Azure subscription additional roles (Optional)** includes giving the Cloudneeti
+3. [**Grant access to Azure subscription additional roles (Optional)**](../../onboardingGuide/grantAccessToAzureSubscriptionAdditionalRoles/) includes giving the Cloudneeti
     application access to the Azure subscription, assigning below roles:
     Backup Reader Role
     Website Contributor Role
     Storage Account Contributor Role
     Network Contributor Role
 
-4. **Grant access to key vaults (Optional)** includes giving the Cloudneeti
-    application special permission on desired key vaults to get policy data related to secrets.
+4. [**Grant access to key vaults (Optional)**](../../onboardingGuide/grantAccessToKeyVaults/) includes giving the Cloudneeti application special permission on desired key vaults to get policy data related to secrets.
 
-5. **Advance Security configuration (Optional)** includes adding a script to the customer’s Azure account and granting the required access rights.
+5. [**Advance Security configuration (Optional)**](../../onboardingGuide/azureAdvanceSecurityConfiguration/) includes adding a script to the customer’s Azure account and granting the required access rights.
 
-Advanced security configuration (step 5) requires a Cloudneeti PowerShell agent to be installed in an Azure subscription under the same tenant where the Azure subscription is located. The Cloudneeti PowerShell agent retrieves (A) additional configuration information from the Azure Active Directory  (there are no Azure APIs to retrieve this information) and pushes (B) this information as a JSON file to the Cloudneeti application.
+    Advanced security configuration (step 5) requires a Cloudneeti PowerShell agent to be installed in an Azure subscription under the same tenant where the Azure subscription is located. The Cloudneeti PowerShell agent retrieves (A) additional configuration information from the Azure Active Directory  (there are no Azure APIs to retrieve this information) and pushes (B) this information as a JSON file to the Cloudneeti application.
 
-6. **Configure quick wins (Optional)** includes updating configurations and settings to make the Azure Cloud account compliant for listed policies using scripts.
+6. [**Configure quick wins (Optional)**](../../onboardingGuide/azureQuickWins/) includes updating configurations and settings to make the Azure Cloud account compliant for listed policies using scripts.
 
-7. **Adding Azure subscription** includes adding Azure subscription information
-    to the respective Cloud Account and waiting until the first data collection
-    is complete.
+7. [**Adding Azure subscription**](.././azureSubscriptions/#step-7-add-azure-subscription) includes adding Azure subscription information to the respective Cloud Account and waiting until the first data collection is complete.
 
 | S. No. | Step                                      | Portal to use  | Role                    | Type      | Policies     |
 |---|-------------------------------------------|----------------|-------------------------|-------------------|-------------------------|
@@ -311,11 +307,11 @@ The Cloudneeti application **License Admin** requires this information to add an
     screen.
     ![Application Secret](.././images/azureSubscriptions/AzureSP_CaptureClientSecret.png#thumbnail)
 
-## STEP 3: [Grant access to Azure subscription additional roles](../../onboardingGuide/azureSubscriptionsOptionalRoles/)
+## [STEP 3: Grant access to Azure subscription additional roles](../../onboardingGuide/grantAccessToAzureSubscriptionAdditionalRoles/)
 
-## STEP 4: [Grant access to key vaults](../../onboardingGuide/azureSubscriptionsKeyVaultPermissions/) 
+## [STEP 4: Grant access to key vaults](../../onboardingGuide/grantAccessToKeyVaults/) 
 
-## STEP 5: [Advance Security configuration](../../onboardingGuide/azureAdvanceSecurityConfiguration/) 
+## [STEP 5: Advance Security configuration](../../onboardingGuide/azureAdvanceSecurityConfiguration/) 
 
 ## [STEP 6: Configure quick wins](../../remediation/azureQuickWins/)
 
@@ -323,13 +319,13 @@ The Cloudneeti application **License Admin** requires this information to add an
 
 The following steps are done by Cloudneeti application **License Admin** role.
 
-### 3.1 Activate the License
+### 7.1 Activate the License
 
 1.  Log in to the Cloudneeti application with **License Admin** role.
 2.  Click on **Activate License**
     ![Activate License](.././images/azureSubscriptions/Activate_License.png#thumbnail)
 
-### 3.2 Add Cloud Account
+### 7.2 Add Cloud Account
 
 1.  Select cloud connector for **Microsoft Azure**
     ![Add Account](.././images/azureSubscriptions/Azure_Select_Connector_Type.png#thumbnail)
@@ -346,7 +342,7 @@ The following steps are done by Cloudneeti application **License Admin** role.
 6.  You will receive a confirmation that the Azure subscription has been added.
     ![Add Account](.././images/azureSubscriptions/Account_Success.png#thumbnail)
 
-### 3.3 Data Collection
+### 7.3 Data Collection
 
 Once the Azure subscription is added to the cloud account under Cloudneeti
 License, it requires about 5 minutes for the data to be collected and processed,

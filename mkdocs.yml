@@ -44,9 +44,10 @@ nav:
   - Overview: onboardingGuide/onboardingGuideOverview.md
   - Micorsoft Azure:
     - Onboarding steps: onboardingGuide/azureSubscriptions.md
-    - Azure subscription additional roles: onboardingGuide/azureSubscriptionsOptionalRoles.md
-    - Azure subscription key vault permissions: onboardingGuide/azureSubscriptionsKeyVaultPermissions.md
-    - Azure Advanced Security Configurations: onboardingGuide/azureAdvanceSecurityConfiguration.md
+    - Grant access to Azure subscription additional roles: onboardingGuide/grantAccessToAzureSubscriptionAdditionalRoles.md
+    - Grant access to key vaults: onboardingGuide/grantAccessToKeyVaults.md
+    - Advanced Security Configurations: onboardingGuide/azureAdvanceSecurityConfiguration.md
+    - Configure quick wins: onboardingGuide/azureQuickWins.md
   - Amazon Web Services: onboardingGuide/amazonWebServiceAccounts.md
   - Office 365: onboardingGuide/office365Subscription.md
 - User Guide:

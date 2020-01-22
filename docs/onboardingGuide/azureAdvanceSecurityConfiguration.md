@@ -1,20 +1,20 @@
-# Azure Advanced security configuration
+# STEP 5: Azure Advanced security configuration
 **This step is optional.**
 
 The following steps are done by Microsoft Azure **Subscription Owner (or
 Subscription Contributor)** role.
 
 An Azure Automation Account resource is deployed to collect data for additional
-security policies. The Azure Active Directory control plane exposes the data only through
-PowerShell that needs to run under a Global AD administrator credential.
+security policies [listed here ](.././azureAdvanceSecurityConfiguration/#advanced-security-configuration). The Azure Active Directory control plane exposes the data only through
+PowerShell that needs to run under a Global AD reader credential.
 
 To ensure that Cloudneeti does not ever store/have access to a global AD
-administrator, it is recommended to deploy a small PowerShell script under
+reader, it is recommended to deploy a small PowerShell script under
 customer’s control in their own Azure subscription. The metadata collected after
 running a script is then pushed to a Cloudneeti API that you registered during
 the Cloudneeti API key generation.
 
-## 1 Collect Information
+## 5.1 Collect Information
 
 | **Information**                                                                                 | **Source / Portal to use** | **User**                |
 |-------------------------------------------------------------------------------------------------|----------------------------|-------------------------|
@@ -45,7 +45,7 @@ Login to Cloudneeti portal as a License Admin.
 #### Account id
 1. Navigate to **Cloud Accounts** in **Configurations**
 2. Copy account ID and paste to notepad.
-	![Manage Accounts](.././images/onboardingOffice365Subscription/Manage_Accounts.png#thumbnail)
+	![Manage Accounts](.././images/azureSubscriptions/Manage_Accounts_ID.png#thumbnail)
 
 ### Generate Cloudneeti API key
 
@@ -71,7 +71,7 @@ Retrieve and activate your API key using the Cloudneeti API portal
 2. Select **Unlimited**
 	![Cloudneeti API](.././images/onboardingOffice365Subscription/Cloudneeti_API.png#thumbnail)
 3. Click on **Subscribe**
-	![Subscribe](.././images/onboardingOffice365Subscription/API_Subscribe.png#thumbnail)
+	![Subscribe](.././images/azureSubscriptions/API_Subscribe.png#thumbnail)
 
 This will notify Cloudneeti to activate your API subscription access. Please
 wait for activation to be done. When Cloudneeti activates your subscription, you
@@ -120,7 +120,7 @@ Login to Azure portal <https://portal.azure.com> as subscription owner.
 #### Registered Cloudneeti Application ID 
 1. Select **Azure Active Directory** in the primary menu
 2. Select **App Registrations** in the secondary menu
-3. Select Cloudneeti Application registered in [Step 1](.././onboardingOffice365Subscription/#step-1-register-cloudneeti-application)
+3. Select Cloudneeti Application registered in [Step 1](.././onboardingGuide/azureSubscriptions/#step-1-register-cloudneeti-application-manually-or-using-azure-powershell-script)
 	![Registered Cloudneeti Application ID](.././images/onboardingOffice365Subscription/Cloudneeti_Application_ID.png#thumbnail)
 4. Copy the Cloudneeti Application id
 	![Cloudneeti Application id](.././images/onboardingOffice365Subscription/Copy_AppID.png#thumbnail)
@@ -129,7 +129,7 @@ Login to Azure portal <https://portal.azure.com> as subscription owner.
 
 1. Select **Azure Active Directory** in the primary menu
 2. Select **App Registrations** in the secondary menu
-3. Select Cloudneeti Application registered in [Step 1](.././onboardingOffice365Subscription/#step-1-register-cloudneeti-application)
+3. Select Cloudneeti Application registered in [Step 1](.././onboardingGuide/azureSubscriptions/#step-1-register-cloudneeti-application-manually-or-using-azure-powershell-script)
 4. Click on **new client secret** in **Certificates & secrets** section (1)
 5. Add **Description** and select expiry time
 6. Click on **Add** (2)
@@ -139,7 +139,7 @@ Login to Azure portal <https://portal.azure.com> as subscription owner.
 	![Registered Cloudneeti Application Secret](.././images/onboardingOffice365Subscription/Copy_to_Clipboard.png#thumbnail)
 
 
-## 2 Provision Azure IAM data collector 
+## 5.2 Provision Azure IAM data collector 
 
 
 Login to Azure portal <https://portal.azure.com> as Subscription Contributor or
@@ -188,11 +188,11 @@ ArtifactsAccessKey
    Cloudneeti API key </br>
    Cloudneeti Data Collector Service Principal Secret </br>
    Cloudneeti Azure IAM Data Collector Artifacts Storage Access Key </br>
-   Azure Active Directory Administrator password</br>
+   Azure Active Directory reader password</br>
 
 9. This will create a runbook inside automation account
 
-## 3 Apply delete lock
+## 5.3 Apply delete lock
 
 Apply delete lock to prevent accidental deletion of the data collection resource
 group in your Azure Subscription.
@@ -212,7 +212,7 @@ group in your Azure Subscription.
 7. Click **OK** (6)
 	![Apply Delete Lock](.././images/azureSubscriptions/Locks.png#thumbnail)
 
-## 4 Modify the data collection schedule
+## 5.4 Modify the data collection schedule
 
 Set the automation account schedule before the daily Cloudneeti data collection
 time.
@@ -234,7 +234,7 @@ Cloudneeti portal will show details for policies from next scan.
 The advanced security policy data collector enables the following 18 policies as
 available in the Center for Internet Security (CIS) Azure benchmark
 (Reference
-[here](https://www.cisecurity.org/partner/cloudneeti/)).
+[here](https://www.cloudneeti.com/2018/03/cloudneeti-delivers-industry-first-automation-for-cis-azure-foundations-benchmark/)).
 
 | Control Id | Policy Title                                                                                                         | Category                    |
 |------------|----------------------------------------------------------------------------------------------------------------------|-----------------------------|
