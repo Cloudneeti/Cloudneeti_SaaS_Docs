@@ -35,7 +35,7 @@ The following steps are required to onboard Microsoft Azure to the Cloudneeti ap
 | 2  | Grant access to Azure subscription        | Microsoft Azure| Subscription Owner      | mandatory | 0            |
 | 3  | Grant access to Azure subscription additional roles | Microsoft Azure| Subscription Owner           | optional  | 39            |
 | 4 | Grant access to key vaults                | Microsoft Azure| Subscription Owner          | optional  | 1            |
-| 5 | Advance Security configuration            | Microsoft Azure| Subscription Owner          | optional  | 18            |
+| 5 | Advance Security configuration            | Microsoft Azure| Subscription Owner, Global AD Reader          | optional  | 18            |
 | 6 | Configure quick wins                      | Microsoft Azure| Subscription Owner           | optional  | 137            |
 | 7 | Add Azure subscription                    | Cloudneeti     | License Admin           | mandatory | 0            |
 
