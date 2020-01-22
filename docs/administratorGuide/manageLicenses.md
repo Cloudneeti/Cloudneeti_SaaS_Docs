@@ -300,13 +300,13 @@ Sample ServiceNow Problem Task
 ![ServiceNow integration](.././images/administratorGuide/ServiceNow_ProblemTask_LicenseDetails.png#thumbnail)
 
 
-#### Zendisk Ticket Sample
+#### Zendesk Ticket Sample
 
-Sample Zendisk Ticket List
+Sample Zendesk Ticket List
 
 ![ZenDesk integration sample1](.././images/administratorGuide/ZendeskTicketList.png#thumbnail)
 
-Sample Zendisk Ticket 
+Sample Zendesk Ticket 
  
 1. License and account details
 
