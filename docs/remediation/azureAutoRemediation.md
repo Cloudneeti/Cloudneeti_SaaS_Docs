@@ -205,7 +205,7 @@ Login to Cloudneeti portal with **License Admin** role
 ## Annexure
 ### Policies enabled for auto-remediation 
 
-| Policy Id | Policy Title                                                            | Element           | Role                                              | Portal to use   |
+| Control No | Policy Title                                                            | Element           | Role                                              | Portal to use   |
 |-----------|-------------------------------------------------------------------------|-------------------|---------------------------------------------------|-----------------|
 | 1200.14   | Ensure Web Sockets are disabled for App Services                        | Azure Assignments | Website Contributor                               | Microsoft Azure |
 | 1200.16   | Ensure Web Sockets are disabled for API Apps                            | Azure Assignments | Website Contributor                               | Microsoft Azure |

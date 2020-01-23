@@ -363,7 +363,7 @@ The remediation framework uses CloudTrail, CloudWatch log group, the remediation
 
 Remediation lambda functions are assigned with permissions listed as per policies for related AWS services.
 
-| **Policy Id** | **Policy Title**                                                                                                        | **Category**                | **Permission Assigned**                           |
+| **Control No** | **Policy Title**                                                                                                        | **Category**                | **Permission Assigned**                           |
 |---------------|-------------------------------------------------------------------------------------------------------------------------|-----------------------------|---------------------------------------------------|
 | 1400.24       | Ensure Deletion Protection feature is enabled for RDS Postgre Instances                                                 | AWS - Data Protection       | rds:ModifyDBInstance                              |
 | 1400.28       | Ensure Deletion Protection feature is enabled for RDS MariaDB Instances                                                 | AWS - Data Protection       | rds:ModifyDBInstance                              |
