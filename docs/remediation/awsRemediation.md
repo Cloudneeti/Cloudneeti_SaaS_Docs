@@ -359,7 +359,7 @@ The remediation framework uses CloudTrail, CloudWatch log group, the remediation
 
 
 ## Annexure
-### Permissions assigned for remediation 
+### Policies enabled for auto-remediation  
 
 Remediation lambda functions are assigned with permissions listed as per policies for related AWS services.
 

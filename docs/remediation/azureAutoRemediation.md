@@ -202,8 +202,8 @@ Login to Cloudneeti portal with **License Admin** role
 
     ![STEP 5: Verify Resource Remediation](.././images/cloudneetiRemediation/Azure_Remediation_Step5.2.png#thumbnail_1)
 
-
-### Roles enabled for remediation 
+## Annexure
+### Policies enabled for auto-remediation 
 
 | Policy Id | Policy Title                                                            | Element           | Role                                              | Portal to use   |
 |-----------|-------------------------------------------------------------------------|-------------------|---------------------------------------------------|-----------------|

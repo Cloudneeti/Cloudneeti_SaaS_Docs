@@ -151,7 +151,7 @@ not assigned.
 Special permission on key vaults is needed to collect data for security policies
 listed below.
 
-| Control Id    | Policy Title                                                      | Category       |
+| Control No    | Policy Title                                                      | Category       |
 |---------------|------------------------------------------------------------------|----------------|
 | 1800.2        | Ensure that the expiry date is set on all Secrets in a Key Vault | Key Management |
 
