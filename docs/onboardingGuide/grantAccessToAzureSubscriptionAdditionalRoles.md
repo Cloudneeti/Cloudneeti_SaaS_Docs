@@ -88,7 +88,7 @@ not assigned.
 Backup Reader role access is needed to collect data for security policies listed
 below.
 
-| Control Id  | Policy Title   | Category               |
+| Control No  | Policy Title   | Category               |
 |------------|---------------|------------------------|
 | 1700.10       | Ensure that Backup feature is configured for App Service deployed on Standard and above App Service Plan   | Business continuity and DR |
 | 1700.11       | Ensure that Backup feature is configured for API Apps deployed on Standard and above App Service Plan      | Business continuity and DR |
@@ -100,7 +100,7 @@ below.
 Website Contributor role access is needed to collect data for security policies
 listed below.
 
-| Control Id     | Policy Title                                                                          | Category                              |
+| Control No     | Policy Title                                                                          | Category                              |
 |---------------|--------------------------------------------------------------------------------------|---------------------------------------|
 | 1900.42       | Ensure that 'App Insights' are configured for Azure Web Apps                         | Azure - Compute (PaaS and Serverless) |
 | 1900.43       | Ensure that WEBSITE_LOAD_CERTIFICATES parameter is not set to '\*' for Mobile Apps   | Azure - Compute (PaaS and Serverless) |
@@ -123,7 +123,7 @@ listed below.
 Storage Account Contributor role or Storage Account Key Operator Servic role access is needed to collect data for security policies
 listed below.
 
-| Control Id     | Policy Title                                                                          | Category                              |
+| Control No     | Policy Title                                                                          | Category                              |
 |---------------|--------------------------------------------------------------------------------------|---------------------------------------|
 | 1600.13       | Ensure that 'Public access level' is set to Private for Blob Containers                         | Storage Accounts |
 
@@ -131,6 +131,6 @@ listed below.
 
 Network Account Contributor role is needed to collect data for security policies listed below.
 
-| Control Id     | Policy Title                                                                          | Category                              |
+| Control No     | Policy Title                                                                          | Category                              |
 |---------------|--------------------------------------------------------------------------------------|---------------------------------------|
 | 2000.11       | Ensure that Flow Log Status is set to On for Network Security Groups                         | Azure - Networking |

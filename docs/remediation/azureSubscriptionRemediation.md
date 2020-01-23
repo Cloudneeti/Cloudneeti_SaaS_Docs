@@ -471,7 +471,7 @@ Login to Cloudneeti portal with **License Admin** role
 ## Annexure
 ### Roles enabled for remediation 
 
-| **Policy-Id** | **Element**   | **Portal to use** | **Role Assigned**                                         | **Step** |
+| *Control No** | **Element**   | **Portal to use** | **Role Assigned**                                         | **Step** |
 |---------------|-------------------|-------------------|--------------------------------------------------|----------|
 | **1300.8**    | Azure Assignments | Microsoft Azure   | Network Contributor                              | STEP 4   |
 | **1600.2**    | Azure Assignments | Microsoft Azure   | SQL DB Contributor                               | STEP 4   |

@@ -236,7 +236,7 @@ available in the Center for Internet Security (CIS) Azure benchmark
 (Reference
 [here](https://www.cloudneeti.com/2018/03/cloudneeti-delivers-industry-first-automation-for-cis-azure-foundations-benchmark/)).
 
-| Control Id | Policy Title                                                                                                         | Category                    |
+| Control No | Policy Title                                                                                                         | Category                    |
 |------------|----------------------------------------------------------------------------------------------------------------------|-----------------------------|
 | 1600.13    | Ensure that 'Users can consent to apps accessing company data on their behalf' is set to 'No'                        | Azure - Identity and Access |
 | 1600.14    | Ensure that 'Users can add gallery apps to their Access Panel' is set to 'No'                                        | Azure - Identity and Access |
