@@ -311,20 +311,20 @@ the Cloudneeti API key generation.
 
 | **Information**                                                                                 | **Source / Portal to use** | **User**                |
 |-------------------------------------------------------------------------------------------------|----------------------------|-------------------------|
-| [Cloudneeti License Id](.././onboardingOffice365Subscription/#license-id)                        | Cloudneeti                 | License Admin           |
-| [Cloudneeti Account Id ](.././onboardingOffice365Subscription/#account-id)                         | Cloudneeti                 | License Admin           |
-| [Office Directory Id  ](.././onboardingOffice365Subscription/#azure-subscription-id)                     | Cloudneeti                 | License Admin           |
-| [Cloudneeti Application Id ](.././onboardingOffice365Subscription/#registered-cloudneeti-application-id)    | Cloudneeti                 | License Admin           |
-| [Cloudneeti Environment ](.././onboardingOffice365Subscription/#cloudneeti-artifacts-and-data-collector-details)  | Cloudneeti Team            | License Admin           |
-| [Cloudneeti API key](.././onboardingOffice365Subscription/#generate-cloudneeti-api-key)   | Cloudneeti Team            | License Admin           |
-| [Artifacts Name ](.././onboardingOffice365Subscription/#cloudneeti-artifacts-and-data-collector-details) | Cloudneeti Team            | License Admin           |
-| [Data Collector Version ](.././onboardingOffice365Subscription/#cloudneeti-artifacts-and-data-collector-details) | Cloudneeti Team            | License Admin           |
-| [Cloudneeti M365 data collector artifacts storage access Key](.././onboardingOffice365Subscription/#cloudneeti-artifacts-and-data-collector-details) | Cloudneeti Team            | License Admin           |
-| [Cloudneeti data collector Service Principal secret](.././onboardingOffice365Subscription/#registered-cloudneeti-application-secret)  | Microsoft Azure            | Subscription Owner      |
-| [Azure Subscription Id ](.././onboardingOffice365Subscription/#azure-subscription-id)    | Microsoft Azure            | Subscription Owner      |
-| [Office Domain ](.././onboardingOffice365Subscription/#office-365-details)       | Office 365 portal          | Office 365 user with Exchnage Admin and SharePoint Admin role |
-| [Office Admin Email Id  ](.././onboardingOffice365Subscription/#enable-mfa-and-create-application-password)     | Office 365 portal          | Office 365 user with Exchnage Admin and SharePoint Admin role |
-| [Office 365 App Password](.././onboardingOffice365Subscription/#enable-mfa-and-create-application-password)   | Office 365 portal          | Office 365 user with Exchnage Admin and SharePoint Admin role|
+| [Cloudneeti License Id](.././office365Subscription/#license-id)                        | Cloudneeti                 | License Admin           |
+| [Cloudneeti Account Id ](.././office365Subscription/#account-id)                         | Cloudneeti                 | License Admin           |
+| [Office Directory Id  ](.././office365Subscription/#azure-directory-id)                     | Cloudneeti                 | License Admin           |
+| [Cloudneeti Application Id ](.././office365Subscription/#registered-cloudneeti-application-id)    | Cloudneeti                 | License Admin           |
+| [Cloudneeti Environment ](.././office365Subscription/#cloudneeti-artifacts-and-data-collector-details)  | Cloudneeti Team            | License Admin           |
+| [Cloudneeti API key](.././office365Subscription/#generate-cloudneeti-api-key)   | Cloudneeti Team            | License Admin           |
+| [Artifacts Name ](.././office365Subscription/#cloudneeti-artifacts-and-data-collector-details) | Cloudneeti Team            | License Admin           |
+| [Data Collector Version ](.././office365Subscription/#cloudneeti-artifacts-and-data-collector-details) | Cloudneeti Team            | License Admin           |
+| [Cloudneeti M365 data collector artifacts storage access Key](.././office365Subscription/#cloudneeti-artifacts-and-data-collector-details) | Cloudneeti Team            | License Admin           |
+| [Cloudneeti data collector Service Principal secret](.././office365Subscription/#registered-cloudneeti-application-secret)  | Microsoft Azure            | Subscription Owner      |
+| [Azure Subscription Id ](.././office365Subscription/#azure-subscription-id)    | Microsoft Azure            | Subscription Owner      |
+| [Office Domain ](.././office365Subscription/#office-365-details)       | Office 365 portal          | Office 365 user with Exchnage Admin and SharePoint Admin role |
+| [Office Admin Email Id  ](.././office365Subscription/#enable-mfa-and-create-application-password)     | Office 365 portal          | Office 365 user with Exchnage Admin and SharePoint Admin role |
+| [Office 365 App Password](.././office365Subscription/#enable-mfa-and-create-application-password)   | Office 365 portal          | Office 365 user with Exchnage Admin and SharePoint Admin role|
 
 #### Cloudneeti license and account details
 
@@ -567,7 +567,7 @@ configuration is not done.
 ### Micorosft graph permission - DeviceManagementConfiguration.Read.All
 Microsoft graph permission DeviceManagementConfiguration.Read.All is required to collect data for device related security policies listed below.
 
-| **Policy Id** | **Policy Title**                                                                                                                                                    | **Category**                     |
+| **Control No** | **Policy Title**                                                                                                                                                    | **Category**                     |
 |---------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------|
 | M300.1        | 1. Ensure that mobile devices require complex passwords with atleast two character sets to prevent brute force attacks                                                                                      | Device         |
 | M300.2          | 2. Ensure that mobile device encryption is enabled to prevent unauthorized access to mobile data                                                                                      | Device         |
@@ -589,7 +589,7 @@ available in the Center for Internet Security (CIS) Microsoft 365 benchmark
 (Reference
 [here](https://www.cloudneeti.com/2019/01/assure-microsoft-365-security-and-compliance-with-cloudneeti/)).
 
-| **Policy Id** | **Policy Title**                                                                                                                                                    | **Category**                     |
+| **Control No** | **Policy Title**                                                                                                                                                    | **Category**                     |
 |---------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------|
 | M500.01         | 1. (L1) Ensure modern authentication for SharePoint applications is required                                                                                       | Account / Authentication         |
 | M600.01           | 2. (L2) Ensure calendar details sharing with external users is disabled                                                                                            | Application Permissions          |

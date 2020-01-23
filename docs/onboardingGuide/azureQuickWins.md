@@ -1,20 +1,5 @@
-Remediation of Azure Resources that are non-compliant to a security policy can be put into a compliant state through remediation. Cloudneeti provides below ways to remediate
+# STEP 6: Configure quick wins
 
-**1. [Guided remediation](.././azureSubscriptionRemediation/#guided-remediation)**
-
-**2. [Quick Wins](.././azureSubscriptionRemediation/#quick-wins)**
-
-**3. [Auto Remediation](.././azureSubscriptionRemediation/#auto-remediation)**
-
-Guided Remediation
-------------------
-Every [security policy](../../userGuide/securityPolicies/) has **Remediation Procedure** (1), can be  avaiable for Azure Console (2) and Azure Command Line Interface (3). Using **Remediation Procedure** (1) non-complaint resources (4) can be put in compliant mode.
-
-![Remediation of Azure Resources](.././images/cloudneetiRemediation/Azure_Guided_Remediation.png#thumbnail_1)
-
-
-Quick Wins 
---------------------
 Remediation policies from **Azure Security center, Logging and Monitoring** and **Storage and Databases** can be done using quick wins scripts. These scripts will update configurations and settings to make the Cloud account compliant for listed policies.
 
 | **Configuration script**       | **Category**                  | **Number of policies remediated** |
@@ -24,17 +9,17 @@ Remediation policies from **Azure Security center, Logging and Monitoring** and 
 | Configure Activity Log Profile | Azure - Logging and Auditing  | 5                                 |
 | Configure Storage Account      | Azure - Storage and Databases | 2                                 |
 
-### Prerequisite 
+## Prerequisite 
 
 Access Needed on Subscription: **Contributor**
 
-### Configure ASC policies 
+## 6.1 Configure ASC policies 
 
-Configure ASC policies to remediate policies [listed here ](.././azureSubscriptionRemediation/#configure-azure-security-center-policies-azure-security-center) using below steps.
+Configure ASC policies to remediate policies [listed here ](.././azureQuickWins/#configure-azure-security-center-policies-azure-security-center) using below steps.
 
-#### Category Subscription Governance Policies [Increase compliance Score 30-50%]
+### Category Subscription Governance Policies [Increase compliance Score 30-50%]
 
-#### Remediation Steps
+### Remediation Steps
 
 1.  Login to Azure portal
 
@@ -64,13 +49,13 @@ Configure ASC policies to remediate policies [listed here ](.././azureSubscripti
     ```</code>
 	</pre>
 
-### Configure Activity Alerts 
+## 6.2 Configure Activity Alerts 
 
-Configure Activity Alerts to remediate policies [listed here](.././azureSubscriptionRemediation/#configure-activity-alerts-logging-and-auditing) using below steps.
+Configure Activity Alerts to remediate policies [listed here](.././azureQuickWins/#configure-activity-alerts-logging-and-auditing) using below steps.
 
-#### Category: Logging and Auditing [Increase compliance score by 5-10%]
+### Category: Logging and Auditing [Increase compliance score by 5-10%]
 
-##### Remediation Steps
+### Remediation Steps
 
 1.  Login to Azure portal
 
@@ -116,13 +101,13 @@ Configure Activity Alerts to remediate policies [listed here](.././azureSubscrip
         ```</code>
     </pre>
 
-### Configure Activity Log Profile
+## 6.3 Configure Activity Log Profile
 
-Configure Activity Log to remediate policies [listed here](.././azureSubscriptionRemediation/#configure-activity-log-profile-logging-and-auditing) using below steps.
+Configure Activity Log to remediate policies [listed here](.././azureQuickWins/#configure-activity-log-profile-logging-and-auditing) using below steps.
 
-#### Category: Logging and Auditing
+### Category: Logging and Auditing
 
-#### Remediation Steps
+### Remediation Steps
 
 1.  Login to Azure portal
 
@@ -178,14 +163,14 @@ Configure Activity Log to remediate policies [listed here](.././azureSubscriptio
     ```</code>
     </pre>
 
-### Configure Storage Account
+## 6.4 Configure Storage Account
 
 
-Configure Storage Account to remediate policies [listed here ](.././azureSubscriptionRemediation/#configure-activity-alerts-logging-and-auditing) using below steps.
+Configure Storage Account to remediate policies [listed here ](.././azureQuickWins/#configure-storage-account-storage-and-databases) using below steps.
 
-#### Category: Storage and Databases
+### Category: Storage and Databases
 
-#### Remediation Steps
+### Remediation Steps
 
 1.  Login to Azure portal
 
@@ -239,251 +224,14 @@ Configure Storage Account to remediate policies [listed here ](.././azureSubscri
         </pre>
 
 
-Auto Remediation
-----------------
-Remediation is accomplished by instructing Security Policy to update the configuration of your existing resources and is effective for new resource deployment. This article shows the steps needed to understand and accomplish remediation with Cloudneeti.  
 
-![Remediation of Azure Resources](.././images/cloudneetiRemediation/Azure_Remediation_Steps.png#thumbnail_1)
-
-1.	**Assign permission to Cloudneeti Application** includes giving the Cloudneeti application access to the Azure subscription, assigning a Resource Policy Contributor (Preview)
-
-2.	**Configure Policy Remediation** includes configuring security policies in the respective cloud account, upon enabling policy remediation triggers creation of policy assignments in Azure subscription.
-
-3.	**Assign permissions to Assignments** includes assigning required roles to policy assignments in Azure. 
-
-4.	**Initiate Remediation** includes triggering remediation feature to remediate resources that are non-compliant to a security policy.
-
-5.	**Verify results** includes verifying policy result post next data scan on Cloudneeti.
-
-
-| **Step**                               | **Product**      | **Role**                     |
-|----------------------------------------|------------------|------------------------------|
-| Assign permission to Service Principal | Azure Portal     | Subscription Owner           |
-| Configure Policy Remediation           | Cloudneeti       | License Admin/ Account Admin |
-| Assign permissions to Assignments      | Azure CloudShell | Subscription Owner           |
-| Initiate Remediation                   | Cloudneeti       | License Admin/ Account Admin |
-| Verify results                         | Cloudneeti       | License Admin/ Account Admin |
-
-
-### Required Roles
-One or more people with the following roles are required to complete Azure Remediation process.
-
-| **Pre-requisite Role**      | **Portal to use**      |
-|-----------------------------|------------------------|
-| License Admin/Account Admin | Cloudneeti application |
-| Subscription Owner          | Microsoft Azure        |
-
-
-* Enabling policy remediation and initializing remediation requires the logged in user to be assigned the **License Admin** role in the Cloudneeti application.
-
-* The Microsoft Azure **Subscription Owner** role is required for providing Cloudneeti application required access to the Subscription and Assignments in Azure.
-
-### Required Permissions
-
-The **Cloudneeti Application registered** while onboarding the Azure Account to Cloudneeti needs to be granted a Resource Policy Contributor (Preview) role. 
-
-| **Information**                   | **Portal to use** | **Role**                                                                                                                                                                | **Step** |
-|-----------------------------------|-------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
-| Registered Cloudneeti Application | Microsoft Azure   | Resource Policy Contributor (Preview) [Refer here](https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#resource-policy-contributor-preview) | STEP 1   |
-| Azure Assignments                 | Microsoft Azure   | Roles as per policies enabled for remediation [Refer here](../azureSubscriptionRemediation/#roles-as-per-policies-enabled-for-remediation) | STEP 4   |
-
-
-### STEP 1: Assign permission to Service Principal
-Login to [Azure Portal](https://portal.azure.com/)  with Subscription Owner role.
-
-1.	Click **Subscriptions in primary menu** (1)
-2.	Select desired **Subscription**
-3.	Click on **Access Control (IAM)** (2)
-4.	Click **Add** (3)
-5.	Select **Add role assignment** (4)
-6.	Select **Resource Policy Contributor (Preview)** role (5)
-7.	Select **Cloudneeti Application** (6)
-8.	**Save** (7)
-
-    ![STEP 1: Assign permission to Service Principal](.././images/cloudneetiRemediation/Azure_Remediation_Step1.png#thumbnail_1)
-
-### STEP 2: Configure remediation policies
-Login to Cloudneeti portal with **License Admin** role 
-
-1.	Select desired **License** (1) and **Cloud Account** (2)
-2.	Click **Configure** 
-3.	Select **Configure security policies**
-
-    ![STEP 2: Configure remediation policies](.././images/cloudneetiRemediation/Azure_Remediation_Step2.png#thumbnail_1)
-
-4. Select **Remediation available** in filter (1)
-
-5. **Enable** policies for remediation (2) (3)
-
-6. Click **Save** (4)
-
-    ![STEP 2: Configure remediation policies](.././images/cloudneetiRemediation/Azure_Remediation_Step2.1.png#thumbnail_1)
-
-7. Confirm by hitting “Yes Please” on confirmation message box.
-
-    ![STEP 2: Configure remediation policies](.././images/cloudneetiRemediation/Azure_Remediation_Step2.2.png#thumbnail_1)
-
-**Note:**
-
-* If Resource Policy Contributor (Preview) role is not assigned as mentioned in step1, enabling policy remediation will fail. Email notification to configured email ids will be sent.
-
-* Assigning **Resource Policy Contributor (Preview)** role to Cloudneeti Application in Azure is prerequisite for this step.
-
-### STEP 3: Assigning roles to MSI generated for remediation policies
-Login to [Azure Portal](https://portal.azure.com/) with **Subscription Owner** role.
-
-1. Open **Cloud Shell**
-
-2. Choose **PowerShell** from shell drop 
-
-    ![STEP 3: Assigning roles to MSI generated for remediation policies](.././images/cloudneetiRemediation/Azure_Remediation_Step3.png#thumbnail_1)
-
-3. Download Assign-RolesToRemediationPolicy script
-
-        wget https://raw.githubusercontent.com/Cloudneeti/docs_cloudneeti/master/scripts/Assign-RolesToRemediationPolicy.ps1 -O Assign-RolesToRemediationPolicy.ps1
-
-4.	Switch to the User directory
-
-        cd $user
-
-5.	Run role assignment script with inline parameters
-        
-        ./Assign-RolesToRemediationPolicy.ps1 `
-        -azureActiveDirectoryId <Azure active directory Id> `
-        -subscriptionId <Subscription Id>
-
-
-Azure will start evaluation of resources related to enabled policies.
-
-**Note:**
-
-* Azure policy framework takes some time to evaluate the state of the resources internally. It may vary depending on the number of resources present in Azure subscription.
-
-* Perform this step whenever user adds new or configures existing remediation policies.
-
-### STEP 4: Initiate Remediation
-Cloudneeti supports two ways to remediate non-compliant resources.
-
-**Auto Remediation [for new resources]**- Cloudneeti remediation functionality make use of policy framework provided by Azure. Once we enable the remediation policies in Cloudneeti, the new resources get remediated at the time of deployment. It means all the resource are by default remediated. 
-
-**Manually Triggered [for existing resources]**- To remediate all the existing non-compliant resources, follow below procedure.
-
-#### Manually Triggered [for existing resources]
-Login to Cloudneeti portal with **License Admin** role
-
-1. Select desired **License** (1) and **Cloud Account** (2)
-
-2. Click **Cloud Security Best Practices** (3)
-
-3. Click **Remediate** (4)
-    
-    ![Manually Triggered [for existing resources]](.././images/cloudneetiRemediation/Manually_Triggered1.png#thumbnail_1)
-
-4. All remediation enabled policies will appear. If the selection checkbox is disable state please check all prerequisites are met.
-
-5. Select desired **policy/policies** (1) (2)
-
-6. Click **Remediate Now** (3)
-
-    ![Manually Triggered [for existing resources]](.././images/cloudneetiRemediation/Manually_Triggered2.png#thumbnail_1)
-
-7. Remediation will change the configuration for resources to make them compliant with the policy with deploy if not exist.
-
-    ![Manually Triggered [for existing resources]](.././images/cloudneetiRemediation/Manually_Triggered3.png#thumbnail_1)
-
- **Note:**
-
-*	In case Azure evaluation is not complete a message will appear “Evaluation in progress, please try after sometime”
-
-*	If Azure policy evaluation is done, the remediation process for selected policies will start. It will take some time to change resource configuration as per policy. This will change configuration for existing resources.
-
-### STEP 5: Verify Resource Remediation
-On remediation of non-compliant resources using manually triggered or auto-remediation will not show the updated resource configuration in Cloudneeti immediately. Verification of latest resource configurations can be done after next scan in the Cloudneeti portal. To get the latest configuration perform an on-demand re-scan the in Cloudneeti portal using below steps,
-
-Login to Cloudneeti portal with **License Admin** role
-
-1.	Select desired **License** (1) and **Cloud Account** (2)
-
-2.	Click **Configure** (3)
-
-3.	Select **Re-scan** (4)
-
-    ![STEP 5: Verify Resource Remediation](.././images/cloudneetiRemediation/Azure_Remediation_Step5.1.png#thumbnail_1)
-
-4. It will take a few minutes to scan and process data. On Dashboards **Last Scanned On** will be updated once data scan and processing is done.
-
-5. Verify data on **Dashboard**
-
-    ![STEP 5: Verify Resource Remediation](.././images/cloudneetiRemediation/Azure_Remediation_Step5.2.png#thumbnail_1)
-
-## Decommission of remediation
-To decommission the remediation functionality in Azure subscription,
-
-**Disable all the remediation policies**- Azure account security policy remediation functionality can be disabled from Cloudneeti portal. On disabling the remediation policies stops the auto-remediation of new resources whenever deployed.
-
-**Remove Resource Policy Contributor (Preview) role** access of Cloudneeti application from the subscription.
-
-### 1. Disable Remediation policies
-Login to Cloudneeti portal with **License Admin** role
-
-1. Select desired License and Account 
-
-2. Click **Configure**
-
-3. Select **Configure security policies**
-
-    ![Disable Remediation policies](.././images/cloudneetiRemediation/Azure_Remediation_Step5.3.png#thumbnail_1)
-
-4. Select **Remediation Available** in filter to see only the policies with remediation available.
-
-5. Disable the policy remediation 
-
-6. Click **Save**
-
-    ![Disable Remediation policies](.././images/cloudneetiRemediation/Azure_Remediation_Step5.4.png#thumbnail_1)
-
-**Note:**
-
-* Disabling remediation of security policies does not immediately effective, it will take some time to delete internal assignment present in Azure policy framework.
-
-* The resource configuration updated during remediation will remain the same after disabling the remediation policies.
-
-### 2. Remove “Policy Resource Contributor (Preview)” access
-
-1. Click **Subscriptions** in primary menu (1)
-
-2. Select desired **Subscription**
-
-3. Click on **Access Control (IAM)** (2)
-
-4. Select **Roles** tab
-
-5. Select **Resource Policy Contributor (Preview)**
-
-    ![Remove “Policy Resource Contributor (Preview)” access](.././images/cloudneetiRemediation/Azure_Remediation_Step5.5.png#thumbnail_1)
-
-6. Select **Cloudneeti Application** (1)
-
-7. Click **Remove** (2)
-
-    ![Remove “Policy Resource Contributor (Preview)” access](.././images/cloudneetiRemediation/Azure_Remediation_Step5.6.png#thumbnail_1)
-
-## Annexure
-### Roles enabled for remediation 
-
-| *Control No** | **Element**   | **Portal to use** | **Role Assigned**                                         | **Step** |
-|---------------|-------------------|-------------------|--------------------------------------------------|----------|
-| **1300.8**    | Azure Assignments | Microsoft Azure   | Network Contributor                              | STEP 4   |
-| **1600.2**    | Azure Assignments | Microsoft Azure   | SQL DB Contributor                               | STEP 4   |
-| **1600.6**    | Azure Assignments | Microsoft Azure   | SQL Security Manager                             | STEP 4   |
-| **1600.23**   | Azure Assignments | Microsoft Azure   | SQL Security Manager Storage Account Contributor | STEP 4   |
 
 Remediation policy list
 -----------------------
 
 ### Configure Azure Security Center policies : Azure - Security Center
 
-| **Policy Id** | **Policy Title**                                                                                                      | **Category**            |
+| **Control No** | **Policy Title**                                                                                                      | **Category**            |
 |---------------|-----------------------------------------------------------------------------------------------------------------------|-------------------------|
 | 2100.1        | Ensure that AAD authentication in Service Fabric is set to enabled in ASC                                             | Azure - Security Center |
 | 2100.101      | Ensure that required diagnostic logs retention period in days for Batch accounts is set in ASC                        | Azure - Security Center |
@@ -608,7 +356,7 @@ Remediation policy list
 
 ### Configure Activity Alerts : Logging and Auditing
 
-| **Policy Id** | **Policy Title**                                                                       | **Category**                 |
+| **Control No** | **Policy Title**                                                                       | **Category**                 |
 |---------------|--------------------------------------------------------------------------------------------|------------------------------|
 | 1900.5        | Ensure that Activity Log Alert exists for Create Policy Assignment                         | Azure - Logging and Auditing |
 | 1900.6        | Ensure Activity Log Alert exists for Create or Update Network Security Group               | Azure - Logging and Auditing |
@@ -623,7 +371,7 @@ Remediation policy list
 
 ### Configure Activity Log Profile : Logging and Auditing
 
-| **Policy Id** | **Policy Title**                                                             | **Category**                 |
+| **Control No** | **Policy Title**                                                             | **Category**                 |
 |---------------|------------------------------------------------------------------------------|------------------------------|
 | 1900.3        | Ensure that a Log Profile exists for Azure Monitor                           | Azure - Logging and Auditing |
 | 1900.4        | Ensure that retention period is set to 365 days or greater for Activity Logs | Azure - Logging and Auditing |
@@ -634,7 +382,7 @@ Remediation policy list
 
 ### Configure Storage Account : Storage and Databases
 
-| **Policy Id** | **Policy Title**                                                        | **Category**                  |
+| **Control No** | **Policy Title**                                                        | **Category**                  |
 |---------------|-------------------------------------------------------------------------|-------------------------------|
 | 2200.10       | Ensure that 'Secure transfer required' is 'Enabled' for Storage Account | Azure - Storage and Databases |
 | 2200.14       | Ensure that 'Geo-redundant' is enabled for Azure Storage                | Azure - Storage and Databases |

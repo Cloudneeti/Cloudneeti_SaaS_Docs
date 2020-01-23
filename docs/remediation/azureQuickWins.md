@@ -224,14 +224,13 @@ Configure Storage Account to remediate policies [listed here ](.././azureQuickWi
         </pre>
 
 
+## Annexure
 
+### Remediation policy list
 
-Remediation policy list
------------------------
+#### Configure Azure Security Center policies : Azure - Security Center
 
-### Configure Azure Security Center policies : Azure - Security Center
-
-| **Policy Id** | **Policy Title**                                                                                                      | **Category**            |
+| **Control No** | **Policy Title**                                                                                                      | **Category**            |
 |---------------|-----------------------------------------------------------------------------------------------------------------------|-------------------------|
 | 2100.1        | Ensure that AAD authentication in Service Fabric is set to enabled in ASC                                             | Azure - Security Center |
 | 2100.101      | Ensure that required diagnostic logs retention period in days for Batch accounts is set in ASC                        | Azure - Security Center |
@@ -354,9 +353,9 @@ Remediation policy list
 | 2100.80       | Ensure that monitoring of web sockets for Web App is enabled in ASC                                                   | Azure - Security Center |
 | 2100.90       | Ensure that monitoring of PHP version in the API App is enabled in ASC                                                | Azure - Security Center |
 
-### Configure Activity Alerts : Logging and Auditing
+#### Configure Activity Alerts : Logging and Auditing
 
-| **Policy Id** | **Policy Title**                                                                       | **Category**                 |
+| **Control No** | **Policy Title**                                                                       | **Category**                 |
 |---------------|--------------------------------------------------------------------------------------------|------------------------------|
 | 1900.5        | Ensure that Activity Log Alert exists for Create Policy Assignment                         | Azure - Logging and Auditing |
 | 1900.6        | Ensure Activity Log Alert exists for Create or Update Network Security Group               | Azure - Logging and Auditing |
@@ -369,9 +368,9 @@ Remediation policy list
 | 1900.13       | Ensure Activity Log Alert exists for Delete SQL Server Firewall Rule                       | Azure - Logging and Auditing |
 | 1900.14       | Ensure Activity Log Alert exists for Update Security Policy                                | Azure - Logging and Auditing |
 
-### Configure Activity Log Profile : Logging and Auditing
+#### Configure Activity Log Profile : Logging and Auditing
 
-| **Policy Id** | **Policy Title**                                                             | **Category**                 |
+| **Control No** | **Policy Title**                                                             | **Category**                 |
 |---------------|------------------------------------------------------------------------------|------------------------------|
 | 1900.3        | Ensure that a Log Profile exists for Azure Monitor                           | Azure - Logging and Auditing |
 | 1900.4        | Ensure that retention period is set to 365 days or greater for Activity Logs | Azure - Logging and Auditing |
@@ -380,9 +379,9 @@ Remediation policy list
 | 1900.23       | Ensure Storage Container storing activity logs is not Publicly accessible    | Azure - Logging and Auditing |
 
 
-### Configure Storage Account : Storage and Databases
+#### Configure Storage Account : Storage and Databases
 
-| **Policy Id** | **Policy Title**                                                        | **Category**                  |
+| **Control No** | **Policy Title**                                                        | **Category**                  |
 |---------------|-------------------------------------------------------------------------|-------------------------------|
 | 2200.10       | Ensure that 'Secure transfer required' is 'Enabled' for Storage Account | Azure - Storage and Databases |
 | 2200.14       | Ensure that 'Geo-redundant' is enabled for Azure Storage                | Azure - Storage and Databases |
