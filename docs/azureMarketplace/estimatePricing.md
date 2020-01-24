@@ -86,7 +86,7 @@ Login to [AWS console](https://console.aws.amazon.com) with security audit role
 |-----------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Workstation:** Python 3.7                       | [Download python web based installer](https://www.python.org/downloads/).</br> Install python and make sure to check Add python to Path setting|
 | **Workstation:** boto3 package | Amazon Web Services (AWS) Software Development Kit (SDK) for Python </br> # python -m pip install boto3 |
-| Download and review **PowerShell script**  | The PowerShell script is used to to get Resource Count for given AWS Account: [Download Link.](https://raw.githubusercontent.com/Cloudneeti/docs_cloudneeti/master/scripts/count_aws_resources.py) |
+| Download and review **Python script**  | The Python script is used to to get Resource Count for given AWS Account: [Download Link.](https://raw.githubusercontent.com/Cloudneeti/docs_cloudneeti/master/scripts/count_aws_resources.py) |
 
 #### Required permissions
 
@@ -100,7 +100,7 @@ Login to [AWS console](https://console.aws.amazon.com) with security audit role
 
         python .\count_aws_resources.py --accessKey <aws_access_key> --secretKey <aws_secret_key>
 
-2. Output will have resource categories listed along with count.
+2. Output will have resource services listed along with count.
 
     ![AWS Resources](.././images/azureMarketplace/AWS_Resource_Count_Script_OP.png#thumbnail)
 
