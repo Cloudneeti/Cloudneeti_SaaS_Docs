@@ -17,6 +17,8 @@ an Azure subscription.
 
 Login to [Azure portal](https://portal.azure.com) as Subscription Reader/Owner.
 
+### Manual Steps
+
 1.  Click on **Subscriptions** (1)
 
 2.  Select desired subscription
@@ -28,12 +30,31 @@ Login to [Azure portal](https://portal.azure.com) as Subscription Reader/Owner.
 
     ![Azure Resources](.././images/Subscribe/Azure_Resources.png#thumbnail)
 
+### Automated Script
+
+1.	Open Cloudshell with bash
+
+2.	Enable resource graph query extension using 
+
+        az extension add --name resource-graph
+
+3.	Get resource counts [put the subscriptionid in below command]
+
+        az graph query -q "summarize count() by type| project resource=type , total=count_ | order by total desc" --subscriptions <subscriptionID> --output table
+
+4.	Output will have resource categories listed along with count.
+
+    ![Azure Resources](.././images/azureMarketplace/Azure_Resource_Count_Auot.png#thumbnail)
+
+
+
 Resources in AWS account
 ------------------------
 
 Please the follow below steps to determine the total number of resources within
 an AWS account.
 
+### Manual Steps
 Login to [AWS console](https://console.aws.amazon.com) with security audit role
 
 1.  Click on **Resource Group**
@@ -54,7 +75,33 @@ Login to [AWS console](https://console.aws.amazon.com) with security audit role
 
 7.  Resource count will appear next to **Resource search results**
 
-    ![Azure Resources](.././images/Subscribe/Resource_Search_Result.png#thumbnail)
+    ![AWS Resources](.././images/Subscribe/Resource_Search_Result.png#thumbnail)
+
+
+### Automated Steps
+
+#### Workstation Readiness
+
+| **Activity**                                        | **Description**                                                                                                                                                                             |
+|-----------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Workstation:** Python 3.7                       | [Download python web based installer](https://www.python.org/downloads/).</br> Install python and make sure to check Add python to Path setting|
+| **Workstation:** boto3 package | Amazon Web Services (AWS) Software Development Kit (SDK) for Python </br> # python -m pip install boto3 |
+| Download and review **PowerShell script**  | The PowerShell script is used to to get Resource Count for given AWS Account: [Download Link.](https://raw.githubusercontent.com/Cloudneeti/docs_cloudneeti/master/scripts/count_aws_resources.py) |
+
+#### Required permissions
+
+| **Pre-requisite**       |      **Role**          |  **Referense**
+|-------------------------|------------------------|------------------------|
+|AWS access and secret key| Root User, Security Audit| [AWS access and secret key](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html#Using_CreateAccessKey)|
+
+
+1. Run below command to get the count
+
+        python .\count_aws_resources.py --accessKey <aws_access_key> --secretKey <aws_secret_key>
+
+2. Output will have resource categories listed along with count.
+
+    ![AWS Resources](.././images/azureMarketplace/AWS_Resource_Count_Script_OP.png#thumbnail)
 
 
 Users in Office 365
