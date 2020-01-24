@@ -17,7 +17,7 @@ an Azure subscription.
 
 Login to [Azure portal](https://portal.azure.com) as Subscription Reader/Owner.
 
-### Manual Steps
+### Manual 
 
 1.  Click on **Subscriptions** (1)
 
@@ -30,7 +30,7 @@ Login to [Azure portal](https://portal.azure.com) as Subscription Reader/Owner.
 
     ![Azure Resources](.././images/Subscribe/Azure_Resources.png#thumbnail)
 
-### Automated Script
+### Automated 
 
 1.	Open Cloudshell with bash
 
@@ -54,7 +54,7 @@ Resources in AWS account
 Please the follow below steps to determine the total number of resources within
 an AWS account.
 
-### Manual Steps
+### Manual 
 Login to [AWS console](https://console.aws.amazon.com) with security audit role
 
 1.  Click on **Resource Group**
@@ -78,7 +78,7 @@ Login to [AWS console](https://console.aws.amazon.com) with security audit role
     ![AWS Resources](.././images/Subscribe/Resource_Search_Result.png#thumbnail)
 
 
-### Automated Steps
+### Automated Script
 
 #### Workstation Readiness
 
@@ -95,6 +95,7 @@ Login to [AWS console](https://console.aws.amazon.com) with security audit role
 |AWS access and secret key| Root User, Security Audit| [AWS access and secret key](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html#Using_CreateAccessKey)|
 
 
+#### Get resource count
 1. Run below command to get the count
 
         python .\count_aws_resources.py --accessKey <aws_access_key> --secretKey <aws_secret_key>
