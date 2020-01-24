@@ -42,7 +42,7 @@ Login to [Azure portal](https://portal.azure.com) as Subscription Reader/Owner.
 
         az graph query -q "summarize count() by type| project resource=type , total=count_ | order by total desc" --subscriptions <subscriptionID> --output table
 
-4.	Output will have resource categories listed along with count.
+4.	Output will have categories listed along with resource count.
 
     ![Azure Resources](.././images/azureMarketplace/Azure_Resource_Count_Auot.png#thumbnail)
 
@@ -100,7 +100,7 @@ Login to [AWS console](https://console.aws.amazon.com) with security audit role
 
         python .\count_aws_resources.py --accessKey <aws_access_key> --secretKey <aws_secret_key>
 
-2. Output will have resource services listed along with count.
+2. Output will have services listed along with resource count.
 
     ![AWS Resources](.././images/azureMarketplace/AWS_Resource_Count_Script_OP.png#thumbnail)
 
@@ -108,5 +108,7 @@ Login to [AWS console](https://console.aws.amazon.com) with security audit role
 Users in Office 365
 -------------------------
 
-Please log into the Office 365 portal to look up the number of users in your
+Please log into the [Office 365 portal](https://admin.microsoft.com) to look up the number of users in your
 Office 365 subscription.
+
+![Office 365 Resources](.././images/azureMarketplace/M365_Users.png#thumbnail)
