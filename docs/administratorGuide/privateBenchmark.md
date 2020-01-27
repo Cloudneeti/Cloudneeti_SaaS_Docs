@@ -201,14 +201,6 @@ Private benchmark need to be associated with specific Cloudneeti License(s). Pri
 
     ![Private Benchmark](.././images/enterpriseBenchmark/summary.png#thumbnail)
 
-
-Collaborate with users for Private Benchmark configuration
-----------------------------------------------------------
-
-License Admins can collaborate for configuration of Private Benchmark.
-Collaborated users can Edit, Collaborate, remove Collaboration, Associate and
-De-associate Private Benchmark.
-
 ## STEP 4: Collaboration with users
 
 License Admins can collaborate with other License Admins for configuring Private Benchmark and associating it with different Licenses. Added License Admins can do all the same operations (Edit, Collaborate, remove Collaboration, Associate and Disassociate) on Private Benchmarks as the License Admin who created Private Benchmark. 
