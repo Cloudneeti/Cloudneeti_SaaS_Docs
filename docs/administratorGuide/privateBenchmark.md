@@ -4,7 +4,7 @@ Private Compliance Benchmark
 Overview
 --------
 
-Cloudneeti License Admin can create a Private Benchmark. Companies can use Private Benchmark to define and manage a set of security policies relevant for their organization. Private benchmark can be defined from individual security policies, but it can also be based on an existing compliance benchmark as a starting point and then modified as appropriate.
+Cloudneeti License Admin can create a Private Benchmark. Companies can use Private Benchmark to select security policies relevant for their organization. Private benchmark can be defined from individual security policies, but it can also be based on an existing compliance benchmark as a starting point and then modified as appropriate.
 
 The following steps are done by Cloudneeti application **License Admin** role.
 
@@ -200,14 +200,6 @@ Private benchmark need to be associated with specific Cloudneeti License(s). Pri
 6. Benchmark summary page will appear on next successful scan
 
     ![Private Benchmark](.././images/enterpriseBenchmark/summary.png#thumbnail)
-
-
-Collaborate with users for Private Benchmark configuration
-----------------------------------------------------------
-
-License Admins can collaborate for configuration of Private Benchmark.
-Collaborated users can Edit, Collaborate, remove Collaboration, Associate and
-De-associate Private Benchmark.
 
 ## STEP 4: Collaboration with users
 
