@@ -27,8 +27,8 @@ extra_css:
 extra_javascript:
   - 'javascripts/custom.js'
 extra_templates:
-  - 'releaseNotes/currentVersion.md'
-  
+  - 'releaseNotes/currentVersion.html'
+
 nav:
 - Introduction: 
   - Getting Started: gettingStarted/introduction.md
