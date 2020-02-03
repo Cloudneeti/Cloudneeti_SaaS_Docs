@@ -5,6 +5,11 @@ Partner co-branding
 
 Cloudneeti offers partner co-branding feature, using Customer provided details for co-branded user experience.
 
+The customer’s primary point of contact (who will become the License Admin)
+requests Cloudneeti to provision a License enabled for partner co-branding. In case you don’t have a point of contact from Cloudneeti, please use the contact us form on Cloudneeti website.
+
+[Contact Us](https://www.cloudneeti.com/contact_us)
+
 ## Co-branded experience
 
 ### Domain and Landing Page
