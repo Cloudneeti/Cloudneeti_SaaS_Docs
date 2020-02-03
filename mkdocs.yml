@@ -38,10 +38,11 @@ nav:
   - Customer Data Security: gettingStarted/customerDataSecurity.md
   - Glossary: gettingStarted/glossary.md
 - Try and Buy:
-  - Free Trial: azureMarketplace/freeTrial.md
-  - Buy on Azure Marketplace: azureMarketplace/subscribeOnAzureMarketplace.md
-  - Request a License: gettingStarted/subscribe.md
-  - Estimate Pricing: azureMarketplace/estimatePricing.md
+  - Free Trial: tryAndBuy/freeTrial.md
+  - Buy on Azure Marketplace: tryAndBuy/subscribeOnAzureMarketplace.md
+  - Request a License: tryAndBuy/subscribe.md
+  - Partner co-branding: tryAndBuy/partnerCobranding.md
+  - Estimate Pricing: tryAndBuy/estimatePricing.md
 - Onboarding Guide:
   - Overview: onboardingGuide/onboardingGuideOverview.md
   - Micorsoft Azure:
