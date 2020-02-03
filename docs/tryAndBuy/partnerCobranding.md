@@ -20,6 +20,16 @@ Cloudneeti application portal with co-branded logo.
 ![Partner co-branding](.././images/partnerCobranding/Home_Page_Logo.png#thumbnail)
 
 
+### Reports
+
+#### PDF
+
+![Partner co-branding](.././images/partnerCobranding/PDF_Report.png#thumbnail)
+
+#### Word
+
+![Partner co-branding](.././images/partnerCobranding/Word_Report.png#thumbnail)
+
 ### Email 
 Co-branding experience for email notifications Cloudneeti sends to the Customers.
 
