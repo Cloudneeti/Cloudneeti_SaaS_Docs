@@ -41,7 +41,6 @@ Switch to Azure AD with the Azure Subscription with pre-requisite access.
 
 8. The script will execute and prompt you for below details:
    Cloudneeti Office 365 data collector artifacts storage access Key </br>
-   Office 365 App Password or User Password</br>
 
 9. This will update a runbook inside automation account
 
