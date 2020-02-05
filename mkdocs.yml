@@ -52,7 +52,9 @@ nav:
     - Advanced Security Configurations: onboardingGuide/azureAdvanceSecurityConfiguration.md
     - Configure quick wins: onboardingGuide/azureQuickWins.md
   - Amazon Web Services: onboardingGuide/amazonWebServiceAccounts.md
-  - Office 365: onboardingGuide/office365Subscription.md
+  - Office 365: 
+    - Onboarding steps: onboardingGuide/office365Subscription.md
+    - Update Advanced Security Configurations: onboardingGuide/office365AdvanceSecurityConfigurationUpdate.md
 - User Guide:
   - Sign In and Sign Out: gettingStarted/signInAndSignOut.md
   - User Interface: userGuide/userInterface.md

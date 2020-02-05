@@ -32,15 +32,14 @@ Switch to Azure AD with the Azure Subscription with pre-requisite access.
             -ArtifactsName <Cloudneeti office 365 Data Collector Artifact Name> `
             -DataCollectorVersion <Cloudneeti Office 365 Data Collector Version> `
             -AzureSubscriptionId <Azure Subscription Id where office 365 datacollector resouces will be created> `
-            -DataCollectorName <Office 365 Data Collector Name> `
+            -DataCollectorName <Office 365 Data Collector Name>
 	```</code>
 	</pre>
-Note: Contact Cloudneeti Team for ArtifactsName, DataCollectorVersion and
-ArtifactsAccessKey
+**Note:** 
+**Enter name of existing data collector automation account**
+**Contact Cloudneeti Team for ArtifactsName, DataCollectorVersion and ArtifactsAccessKey**
 
 8. The script will execute and prompt you for below details:
-   Cloudneeti API key </br>
-   Cloudneeti Data collector application secret </br>
    Cloudneeti Office 365 data collector artifacts storage access Key </br>
    Office 365 App Password or User Password</br>
 
