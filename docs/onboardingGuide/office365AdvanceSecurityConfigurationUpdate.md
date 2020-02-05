@@ -36,10 +36,10 @@ Switch to Azure AD with the Azure Subscription with pre-requisite access.
 	```</code>
 	</pre>
 **Note:** 
-**Enter name of existing data collector automation account**
+**Enter name of existing data collector automation account**</br>
 **Contact Cloudneeti Team for ArtifactsName, DataCollectorVersion and ArtifactsAccessKey**
 
-8. The script will execute and prompt you for below details:
+8. The script will execute and prompt you for below details:</br>
    Cloudneeti Office 365 data collector artifacts storage access Key </br>
 
 9. This will update a runbook inside automation account
