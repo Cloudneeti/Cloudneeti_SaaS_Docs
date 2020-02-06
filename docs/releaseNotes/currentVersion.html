@@ -1,257 +1,61 @@
 <div class='release_notes'>
-    <h2 id='january-2020-v2241'><strong>January 2020 - v2.24.1</strong></h2>
+    <h2 id="february-2020-v2251"><strong>February 2020 - v2.25.1</strong></h2>
     <ol>
         <li>
-            <p><strong>User Experience Improvements</strong></p>
-            <ul>
-                <li>Added email notifications to collaborators of private benchmark</li>
-            </ul>
+        <p><strong>User Experience Improvements</strong></p>
+        <ul>
+        <li>Added audit log, reports, and email notifications for an association of private benchmarks</li>
+        </ul>
         </li>
         <li>
-            <p><strong>Platform &amp; Stability Improvements</strong></p>
-            <ul>
-                <li>Fixed following bugs
-                    <ul>
-                        <li>Private benchmark: Associated/Dissociated benchmarks are not visible under Private Benchmark tab unless user refreshes the UI</li>
-                        <li>Private benchmark: Private benchmark details are not opening in single click on navigating to the benchmark list page</li>
-                        <li>Private benchmark: Incorrect total count of policies in a category on Configure Benchmark</li>
-                        <li>Private benchmark: Arrow button is inconsistent for Private Benchmark 'configurations'</li>
-                        <li>Manage Users: Email notification not received on adding Account user</li>
-                        <li>Duplicate policies found for SQL Server for NIST-CSF benchmark</li>
-                    </ul>
-                </li>
-            </ul>
+        <p><strong>Platform &amp; Stability Improvements</strong></p>
+        <ul>
+        <li>Fixed following bugs<ul>
+        <li>Extra categories are visible in the Baseline benchmark list</li>
+        <li>Incorrect x/y count found for policy -&gt; Ensure that 'Send alerts to' in Advanced Threat Protection Settings is set for SQL database</li>
+        <li>'Ensure Log Exports feature is enabled for Oracle instances' policy audit/remediation procedure is incorrect</li>
+        <li>'Ensure Log Exports feature is enabled for RDS MySQL Instance': Audit log is invalid for latest versions of mySQL instances</li>
+        </ul>
+        </li>
+        </ul>
         </li>
         <li>
-            <p><strong>Policies &amp; Benchmarks Additions/Updates</strong></p>
-            <ul>
-                <li>
-                    <p>Added the following 20 new security policies for Azure cloud account</p>
-                    <div class='md-typeset__scrollwrap'>
-                        <div class='md-typeset__table'>
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th><strong>Category</strong></th>
-                                        <th><strong>Policy Title</strong></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Azure - Logging and Auditing</td>
-                                        <td>Ensure that 'Send scan reports to' is set for SQL Server</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Azure - Logging and Auditing</td>
-                                        <td>Ensure that 'Send scan reports to' is set for SQL database</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Identity &amp; Access Management</td>
-                                        <td>Ensure that 'Number of methods required to reset' is set to '2'</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Identity &amp; Access Management</td>
-                                        <td>Ensure that 'Number of days before users are asked to re-confirm their authentication information' is not set to '0'</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Identity &amp; Access Management</td>
-                                        <td>Ensure that 'Notify users on password resets?' is set to 'Yes</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Identity &amp; Access Management</td>
-                                        <td>Ensure that 'Notify all admins when other admins reset their password?' is set to 'Yes'</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Identity &amp; Access Management</td>
-                                        <td>Ensure that 'Users can consent to apps accessing company data on their behalf' is set to 'No'</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Identity &amp; Access Management</td>
-                                        <td>Ensure that 'Users can add gallery apps to their Access Panel' is set to 'No'</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Identity &amp; Access Management</td>
-                                        <td>Ensure that 'Users can register applications' is set to 'No'</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Identity &amp; Access Management</td>
-                                        <td>Ensure that 'Guest user permissions are limited' is set to 'Yes'</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Identity &amp; Access Management</td>
-                                        <td>Ensure that 'Members can invite' is set to 'No'</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Identity &amp; Access Management</td>
-                                        <td>Ensure that 'Guests can invite' is set to 'No'</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Identity &amp; Access Management</td>
-                                        <td>Ensure that 'Restrict access to Azure AD administration portal' is set to 'Yes'</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Identity &amp; Access Management</td>
-                                        <td>Ensure that 'Self-service group management enabled' is set to 'No'</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Identity &amp; Access Management</td>
-                                        <td>Ensure that 'Users can create security groups' is set to 'No'</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Identity &amp; Access Management</td>
-                                        <td>Ensure that 'Users who can manage security groups' is set to 'None'</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Identity &amp; Access Management</td>
-                                        <td>Ensure that 'Users can create Office 365 groups' is set to 'No'</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Identity &amp; Access Management</td>
-                                        <td>Ensure that 'Users who can manage Office 365 groups' is set to 'None'</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Identity &amp; Access Management</td>
-                                        <td>Ensure that 'Enable 'All Users' group' is set to 'Yes'</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Identity &amp; Access Management</td>
-                                        <td>Ensure that 'Require Multi-Factor Auth to join devices' is set to 'Yes'</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <p>Added the following 28 new security policies for AWS cloud account</p>
-                    <div class='md-typeset__scrollwrap'>
-                        <div class='md-typeset__table'>
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th><strong>Category</strong></th>
-                                        <th><strong>Policy Title</strong></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>AWS - Audit and Logging</td>
-                                        <td>Ensure to enable unsafe statement transaction logging for RDS MySQL Instance</td>
-                                    </tr>
-                                    <tr>
-                                        <td>AWS - Data Protection</td>
-                                        <td>Ensure that latest block encryption algorithms is used for RDS MySQL Instance</td>
-                                    </tr>
-                                    <tr>
-                                        <td>AWS - Data Protection</td>
-                                        <td>Ensure that server loads the validate password plugin at startup for RDS MySQL Instance</td>
-                                    </tr>
-                                    <tr>
-                                        <td>AWS - Data Protection</td>
-                                        <td>Ensure to enable FIPS standards on the server side for RDS MySQL Instance</td>
-                                    </tr>
-                                    <tr>
-                                        <td>AWS - Audit and Logging</td>
-                                        <td>Ensure Log Exports feature is enabled for RDS MySQL Instance</td>
-                                    </tr>
-                                    <tr>
-                                        <td>AWS - Audit and Logging</td>
-                                        <td>Ensure Log Exports feature is enabled for RDS Mariadb Instance</td>
-                                    </tr>
-                                    <tr>
-                                        <td>AWS - Audit and Logging</td>
-                                        <td>Ensure Log Exports feature is enabled for Aurora cluster</td>
-                                    </tr>
-                                    <tr>
-                                        <td>AWS - Audit and Logging</td>
-                                        <td>Ensure Log Exports feature is enabled for Oracle instances</td>
-                                    </tr>
-                                    <tr>
-                                        <td>AWS - Business Continuity</td>
-                                        <td>Ensure Auto Minor Version Upgrade feature is Enabled for RDS MySQL Instances</td>
-                                    </tr>
-                                    <tr>
-                                        <td>AWS - Business Continuity</td>
-                                        <td>Ensure backup retention policy is set for RDS MySQL Instances</td>
-                                    </tr>
-                                    <tr>
-                                        <td>AWS - Governance</td>
-                                        <td>Ensure that Copy Tags to Snapshots feature is enabled for RDS MySQL Instances</td>
-                                    </tr>
-                                    <tr>
-                                        <td>AWS - Data Protection</td>
-                                        <td>Ensure Deletion Protection feature is enabled for RDS MySQL Instances</td>
-                                    </tr>
-                                    <tr>
-                                        <td>AWS - Identity and Access Management</td>
-                                        <td>Ensure IAM Database Authentication feature is enabled for RDS MySQL Instances</td>
-                                    </tr>
-                                    <tr>
-                                        <td>AWS - Audit and Logging</td>
-                                        <td>Ensure that Event Subscription is enabled for RDS MySQL Instance</td>
-                                    </tr>
-                                    <tr>
-                                        <td>AWS - Data Protection</td>
-                                        <td>Ensure Performance Insights feature is enabled for RDS MySQL Instances</td>
-                                    </tr>
-                                    <tr>
-                                        <td>AWS - Networking</td>
-                                        <td>Ensure that public access is not given to RDS MySQL Instance</td>
-                                    </tr>
-                                    <tr>
-                                        <td>AWS - Storage and Databases</td>
-                                        <td>Ensure that port number should not be set as default port number for RDS MySQL Instances</td>
-                                    </tr>
-                                    <tr>
-                                        <td>AWS - Networking</td>
-                                        <td>Ensure that public subnets are not assigned to RDS MySQL Instances</td>
-                                    </tr>
-                                    <tr>
-                                        <td>AWS - Governance</td>
-                                        <td>Ensure that unique master user name is used for each RDS MySQL Instance</td>
-                                    </tr>
-                                    <tr>
-                                        <td>AWS - Identity and Access Management</td>
-                                        <td>Ensure data-tier security group are configured for RDS MySQL Instances</td>
-                                    </tr>
-                                    <tr>
-                                        <td>AWS - Business Continuity</td>
-                                        <td>Ensure that sufficient backup retention period is applied to RDS MySQL Instances</td>
-                                    </tr>
-                                    <tr>
-                                        <td>AWS - Data Protection</td>
-                                        <td>Ensure that encryption is enabled for RDS MySQL Instances</td>
-                                    </tr>
-                                    <tr>
-                                        <td>AWS - Business Continuity</td>
-                                        <td>Ensure Multi-AZ feature is Enabled for RDS MySQL Instance</td>
-                                    </tr>
-                                    <tr>
-                                        <td>AWS - Data Protection</td>
-                                        <td>Ensure that encryption for storage done with KMS CMKs for each RDS MySQL Instance</td>
-                                    </tr>
-                                    <tr>
-                                        <td>AWS - Audit and Logging</td>
-                                        <td>Ensure that CloudTrail trail have logging enabled</td>
-                                    </tr>
-                                    <tr>
-                                        <td>AWS - Monitoring</td>
-                                        <td>Ensure a log metric filter and alarm exist for S3 bucket object read operations</td>
-                                    </tr>
-                                    <tr>
-                                        <td>AWS - Monitoring</td>
-                                        <td>Ensure a log metric filter and alarm exist for S3 bucket object write operations</td>
-                                    </tr>
-                                    <tr>
-                                        <td>AWS - Monitoring</td>
-                                        <td>Ensure that S3 buckets are not publicly accessible</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </li>
-            </ul>
+        <p><strong>Policies &amp; Benchmarks Additions/Updates</strong></p>
+        <ul>
+        <li>
+        <p>Added the following 5 new security policies for M365 cloud account. For upgrading the existing M365 account, refer &lt;&lt; M365 adv sec doc link &gt;&gt; to get data for the below policies. Please provide version &lt;&lt;&gt;&gt; while executing the script</p>
+        <div class="md-typeset__scrollwrap"><div class="md-typeset__table"><table>
+        <thead>
+        <tr>
+        <th><strong>Category</strong></th>
+        <th><strong>Policy Title</strong></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+        <td>M365 - Account / Authentication</td>
+        <td>Ensure modern authentication for Exchange Online is enabled</td>
+        </tr>
+        <tr>
+        <td>M365 - Data Management</td>
+        <td>Use custom sensitive infromation type classification for information protection</td>
+        </tr>
+        <tr>
+        <td>M365 - Email Security / Exchange Online</td>
+        <td>Ensure MailTips are enabled for end users</td>
+        </tr>
+        <tr>
+        <td>M365 - Email Security / Exchange Online</td>
+        <td>Ensure basic authentication for Exchange Online is disabled</td>
+        </tr>
+        <tr>
+        <td>M365 - Storage</td>
+        <td>Block OneDrive for Business sync from unmanaged devices</td>
+        </tr>
+        </tbody>
+        </table></div></div>
         </li>
-    </ol>
+        </ul>
+        </li>
+        </ol>
 </div>
