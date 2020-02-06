@@ -26,7 +26,9 @@ extra_css:
   - 'stylesheets/extra.css'
 extra_javascript:
   - 'javascripts/custom.js'
-  
+extra_templates:
+  - 'releaseNotes/currentVersion.html'
+
 nav:
 - Introduction: 
   - Getting Started: gettingStarted/introduction.md
@@ -36,10 +38,11 @@ nav:
   - Customer Data Security: gettingStarted/customerDataSecurity.md
   - Glossary: gettingStarted/glossary.md
 - Try and Buy:
-  - Free Trial: azureMarketplace/freeTrial.md
-  - Buy on Azure Marketplace: azureMarketplace/subscribeOnAzureMarketplace.md
-  - Request a License: gettingStarted/subscribe.md
-  - Estimate Pricing: azureMarketplace/estimatePricing.md
+  - Free Trial: tryAndBuy/freeTrial.md
+  - Buy on Azure Marketplace: tryAndBuy/subscribeOnAzureMarketplace.md
+  - Request a License: tryAndBuy/subscribe.md
+  - Partner co-branding: tryAndBuy/partnerCobranding.md
+  - Estimate Pricing: tryAndBuy/estimatePricing.md
 - Onboarding Guide:
   - Overview: onboardingGuide/onboardingGuideOverview.md
   - Micorsoft Azure:
@@ -49,7 +52,9 @@ nav:
     - Advanced Security Configurations: onboardingGuide/azureAdvanceSecurityConfiguration.md
     - Configure quick wins: onboardingGuide/azureQuickWins.md
   - Amazon Web Services: onboardingGuide/amazonWebServiceAccounts.md
-  - Office 365: onboardingGuide/office365Subscription.md
+  - Office 365: 
+    - Onboarding steps: onboardingGuide/office365Subscription.md
+    - Update Advanced Security Configurations: onboardingGuide/office365AdvanceSecurityConfigurationUpdate.md
 - User Guide:
   - Sign In and Sign Out: gettingStarted/signInAndSignOut.md
   - User Interface: userGuide/userInterface.md
