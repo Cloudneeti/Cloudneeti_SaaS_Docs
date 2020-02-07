@@ -610,6 +610,11 @@ available in the Center for Internet Security (CIS) Microsoft 365 benchmark
 | M009.03         | 17. (L1) Ensure the spoofed domains report is reviewed weekly                                                                                                        | Auditing                         |
 | M009.04           | 18. (L1) Ensure user role group changes is reviewed at least every week                                                                                            | Auditing                         |
 | M010.1           | 19. (L2) Ensure document sharing is being controlled by domains with whitelist or blacklist                                                                         | Storage                          |
+|   M500.03     |  Ensure modern authentication for Exchange Online is enabled |M365 - Account / Authentication |
+|   M700.03     | Use custom sensitive infromation type classification for information protection | M365 - Data Management |
+|   M800.10     |  Ensure MailTips are enabled for end users |M365 - Email Security / Exchange Online |
+|  M800.11      |  Ensure basic authentication for Exchange Online is disabled |M365 - Email Security / Exchange Online |
+|    M010.2    |  Block OneDrive for Business sync from unmanaged devices |M365 - Storage |
 
 
 <div class="policy-json-code">

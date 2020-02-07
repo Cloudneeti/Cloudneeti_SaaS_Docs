@@ -54,7 +54,7 @@ nav:
   - Amazon Web Services: onboardingGuide/amazonWebServiceAccounts.md
   - Office 365: 
     - Onboarding steps: onboardingGuide/office365Subscription.md
-    - Update Advanced Security Configurations: onboardingGuide/office365AdvanceSecurityConfigurationUpdate.md
+    - Upgrade Advanced Security Configurations: onboardingGuide/office365AdvanceSecurityConfigurationUpgrade.md
 - User Guide:
   - Sign In and Sign Out: gettingStarted/signInAndSignOut.md
   - User Interface: userGuide/userInterface.md
