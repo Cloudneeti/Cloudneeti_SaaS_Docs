@@ -1,6 +1,7 @@
-# Office 365 - Update Advance Security Configuration
+# Office 365 - Upgrade Advance Security Configuration
+Upgrading Office 365 advance secuirty configuration to DataCollectorVersion 1.3 includes updating runbook inside automation account provisioned for Office 365 cloud account to get data for new security policies.
 
-Update runbook inside automation account provisioned for Office 365 cloud account to get data for new security policies, please contact Cloudneeti team or refer [Release Notes](../../releaseNotes/2020/) for latest security policy addition and DataCollectorVersion.
+Please refer [Release Notes](../../releaseNotes/2020/#february-2020-v2251) for latest security policy addition.
 
 Login to Azure portal <https://portal.azure.com> as Subscription Contributor or
 Subscription Owner access.
@@ -30,7 +31,7 @@ Switch to Azure AD with the Azure Subscription with pre-requisite access.
 	<code>```
 		./Upgrade-M365DataCollector.ps1 `
             -ArtifactsName <Cloudneeti office 365 Data Collector Artifact Name> `
-            -DataCollectorVersion <Cloudneeti Office 365 Data Collector Version> `
+            -DataCollectorVersion 1.3 `
             -AzureSubscriptionId <Azure Subscription Id where office 365 datacollector resouces will be created> `
             -DataCollectorName <Office 365 Data Collector Name>
 	```</code>
