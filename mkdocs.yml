@@ -28,7 +28,9 @@ extra_javascript:
   - 'javascripts/custom.js'
 extra_templates:
   - 'releaseNotes/currentVersion.html'
-
+markdown_extensions:
+  - markdown==3.1.1
+  
 nav:
 - Introduction: 
   - Getting Started: gettingStarted/introduction.md
