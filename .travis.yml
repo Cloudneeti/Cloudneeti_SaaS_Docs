@@ -1,6 +1,6 @@
 language: python # Set the build language to Python
 
-python: 3.6 # Set the version of Python to use
+python: 3.7 # Set the version of Python to use
 
 # blacklist : Set the branch to restrict build from
 branches:
@@ -15,7 +15,7 @@ branches:
   - staging
 
 install:
-    - pip install mkdocs mkdocs-material pymdown-extensions==6.2.1 pygments # Install the required dependencies
+    - pip install mkdocs mkdocs-material pymdown-extensions pygments # Install the required dependencies
 
 script: true # Skip script (Don't use this if one already exists)
 
