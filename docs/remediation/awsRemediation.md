@@ -244,17 +244,15 @@ Login to Cloudneeti portal with **License Admin** role
 
 1. Select desired **License** (1) and **Cloud Account** (2)
 
-2. Click **Configure**
+2. Navigate to **Configurations** (3) and **Security Policy Exclusion** (4)
 
-3. Select **Configure Security Policies**
+3.  Select **Account Level** (5)
 
-    ![STEP 3: Configure policy remediation ](.././images/cloudneetiRemediation/AWS_RemediationStep3.1.png#thumbnail_1)
+4. Select **Remediation available** in filter (6)
 
-4. Select **Remediation available** in filter (1)
+5. **Enable** policies for remediation (7)
 
-5. **Enable** policies for remediation (2) (3)
-
-6. Click **Save (4)**
+6. Click **Save** (8)
 
     ![STEP 3: Configure policy remediation ](.././images/cloudneetiRemediation/AWS_RemediationStep3.2.png#thumbnail_1)
 
