@@ -45,13 +45,13 @@ nav:
   - Estimate Pricing: tryAndBuy/estimatePricing.md
 - Onboarding Guide:
   - Overview: onboardingGuide/onboardingGuideOverview.md
+  - Amazon Web Services: onboardingGuide/amazonWebServiceAccounts.md
   - Micorsoft Azure:
     - Onboarding steps: onboardingGuide/azureSubscriptions.md
     - Grant access to Azure subscription additional roles: onboardingGuide/grantAccessToAzureSubscriptionAdditionalRoles.md
     - Grant access to key vaults: onboardingGuide/grantAccessToKeyVaults.md
     - Advanced Security Configurations: onboardingGuide/azureAdvanceSecurityConfiguration.md
     - Configure quick wins: onboardingGuide/azureQuickWins.md
-  - Amazon Web Services: onboardingGuide/amazonWebServiceAccounts.md
   - Office 365: 
     - Onboarding steps: onboardingGuide/office365Subscription.md
     - Upgrade Advanced Security Configurations: onboardingGuide/office365AdvanceSecurityConfigurationUpgrade.md
