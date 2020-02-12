@@ -3,9 +3,10 @@
 
 The following roles need to be granted to the Cloudneeti App registered in the previous step
 
-1.	Backup reader role for Azure Subscription level scope.
-2.	Website contributor role for Azure Subscription level scope.
-3.  Key Vault access policies for specific managed Key Vaults.
+1.	Website contributor role for Azure Subscription level scope.
+2.  Storage Account Contributor role for Azure Subscription level scope.
+3.  Network Contributor role for Azure Subscription level scope.
+4.  Key Vault access policies for specific managed Key Vaults.
 
 The following steps are done by Microsoft Azure **Subscription Owner** role.
 
@@ -65,7 +66,6 @@ not assigned.
 |--------------------------------------------------------------|------------------------------------------|
 | Read All Microsoft Graph permissions                         | 5                                        |
 | Reader role for Azure Subscription level scope.              | 0                                        |
-| Backup reader role for Azure Subscription level scope.       | 4                                        |
 | Website contributor role for Azure Subscription level scope. | 15                                       |
 | Key Vault access policies for specific managed Key Vaults    | 1                                        |
 
