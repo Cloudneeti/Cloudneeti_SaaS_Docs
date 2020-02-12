@@ -75,10 +75,9 @@ document.
 |------|-------------------------------------------------------------|-------------------|--------------------|----------|-----------|--------------|
 | Azure Active Directory | Directory Read All Microsoft Graph              | Microsoft Azure   | Global AD Admin    | STEP 1   | optional  | 5            |
 | Azure Subscription | Reader              | Microsoft Azure   | Subscription Owner | STEP 2   | mandatory | 0            |
-| Azure Subscription | Backup reader        | Microsoft Azure   | Subscription Owner | STEP 3   | optional  | 4            |
 | Azure Subscription | Website contributor | Microsoft Azure   | Subscription Owner | STEP 3   | optional  | 15           |
 | Azure Subscription | Storage Account Contributor | Microsoft Azure   | Subscription Owner | STEP 3   | optional  | 1            |
-| Azure Subscription | Network Contributor Role | Microsoft Azure   | Subscription Owner | STEP 3   | optional  | 1           |
+| Azure Subscription | Network Contributor Role  | Microsoft Azure   | Subscription Owner | STEP 3   | optional  | 1           |
 | Key Vault | Access Policy   | Microsoft Azure   | Subscription Owner | STEP 4   | optional  | 1            |
 
 ## STEP 1: Register Cloudneeti application Manually or using Azure powershell script
