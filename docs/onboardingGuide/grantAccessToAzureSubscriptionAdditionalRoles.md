@@ -66,7 +66,9 @@ not assigned.
 |--------------------------------------------------------------|------------------------------------------|
 | Read All Microsoft Graph permissions                         | 5                                        |
 | Reader role for Azure Subscription level scope.              | 0                                        |
-| Website contributor role for Azure Subscription level scope. | 15                                       |
+| Website contributor role for Azure Subscription level scope. | 1           |
+| Storage Account Contributor role for Azure Subscription level scope. | 15                                       |
+| Network Contributor role for Azure Subscription level scope. | 1           |
 | Key Vault access policies for specific managed Key Vaults    | 1                                        |
 
 ### Website Contributor role
