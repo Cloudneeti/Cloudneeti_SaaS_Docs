@@ -9,21 +9,7 @@ The following roles need to be granted to the Cloudneeti App registered in the p
 
 The following steps are done by Microsoft Azure **Subscription Owner** role.
 
-### 3.1 Grant Azure Subscription Backup Reader Role 
-**This step is optional**
-
-The Cloudneeti application requires Backup Reader role access to the Subscription in order to view application settings. 
-
-If the Backup Reader Role is not assigned,the Cloudneeti application will not be able to collect data of security policies [listed here](.././grantAccessToAzureSubscriptionAdditionalRoles/#backup-reader-role).
-
-1.	Go to the subscription’s **Access control (IAM)** in the third level menu
-2.	Click on the **Add** button and select **Add role assignment**
-3.	Select **Reader** role and Cloudneeti
-4.	Select **Save** to complete the role assignment
- 
-     ![Assign role](.././images/azureSubscriptions/Backup_Reader_Role.png#thumbnail)
-
-### 3.2 Grant Azure Subscription Website Contributor Role
+### 3.1 Grant Azure Subscription Website Contributor Role
 **This step is optional**
 
 The Cloudneeti application requires Website Contributor role access to the Subscription in order to view application settings. 
@@ -37,7 +23,7 @@ If the Website Contributor Role is not assigned, Cloudneeti application will not
 
     ![Assign role](.././images/azureSubscriptions/Website_Contributor_Role.png#thumbnail)
 
-### 3.3 Grant Azure Subscription Storage Account Contributor Role
+### 3.2 Grant Azure Subscription Storage Account Contributor Role
 **This step is optional**
 
 The Cloudneeti application requires Storage Account Contributor or Storage Account Key Operator Service role access to the Subscription in order to view application settings. 
@@ -55,7 +41,7 @@ If the Storage Account Contributor or Storage Account Key Operator Service role 
 
     ![Assign role](.././images/azureSubscriptions/Storage_Account_Key_Operator_Service_Role.png#thumbnail)
 
-### 3.4 Grant Azure Subscription Network Contributor Role
+### 3.3 Grant Azure Subscription Network Contributor Role
 **This step is optional**
 
 The Cloudneeti application requires Website Contributor role access to the Subscription in order to view application settings. 
@@ -82,18 +68,6 @@ not assigned.
 | Backup reader role for Azure Subscription level scope.       | 4                                        |
 | Website contributor role for Azure Subscription level scope. | 15                                       |
 | Key Vault access policies for specific managed Key Vaults    | 1                                        |
-
-### Backup Reader Role
-
-Backup Reader role access is needed to collect data for security policies listed
-below.
-
-| Control No  | Policy Title   | Category               |
-|------------|---------------|------------------------|
-| 1700.10       | Ensure that Backup feature is configured for App Service deployed on Standard and above App Service Plan   | Business continuity and DR |
-| 1700.11       | Ensure that Backup feature is configured for API Apps deployed on Standard and above App Service Plan      | Business continuity and DR |
-| 1700.12       | Ensure that Backup feature is configured for Function Apps deployed on Standard and above App Service Plan | Business continuity and DR |
-| 1700.13       | Ensure that Backup feature is configured for Mobile Apps deployed on Standard and above App Service Plan   | Business continuity and DR |
 
 ### Website Contributor role
 
