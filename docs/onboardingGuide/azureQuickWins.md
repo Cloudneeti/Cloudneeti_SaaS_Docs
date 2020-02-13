@@ -13,6 +13,8 @@ Remediation policies from **Azure Security center, Logging and Monitoring** and 
 
 Access Needed on Subscription: **Contributor**
 
+Note : Please note that it is advised to have only one ASC initiative. If there are multiple initiatives created, Cloud account compliance results in Cloudneeti may vary. 
+
 ## 6.1 Configure ASC default policies 
 
 Configure ASC policies to remediate policies [listed here ](.././azureQuickWins/#configure-azure-security-center-policies-azure-security-center) using below steps.
