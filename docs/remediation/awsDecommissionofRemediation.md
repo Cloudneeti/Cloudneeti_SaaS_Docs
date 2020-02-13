@@ -53,6 +53,8 @@ Login to Cloudneeti portal with **License Admin** role
 
 Decommission of remediation framework take place in two phases.
 
+<!-- Delete deployment bucket using AWS console -->
+
 ### Remove remediation configuration of multi-account remediation
 
 1.  Open bash

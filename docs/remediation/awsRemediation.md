@@ -100,6 +100,8 @@ STEP 1: Provision Remediation framework on same or different AWS Account
 4.  Configure AWS account where remediation framework is to be deployed
 
         aws configure
+<!-- 
+        TODO : confirm region -->
 
 5.  Deploy remediation framework in AWS account which need to be remediated.
 
@@ -142,6 +144,7 @@ STEP 1: Provision Remediation framework on same or different AWS Account
 
     b. Deploy remediation framework in AWS account which will be used as the remediator in multi-mode: 
 
+    <!-- TODO : Simplify the below stmt -->
     (Optional if you have provisioned the remediation framework earlier)
 
         bash deploy-remediation-framework.sh -a <12-digit-account-id> -e <environment-prefix> -v <1.0>
@@ -170,6 +173,9 @@ STEP 1: Provision Remediation framework on same or different AWS Account
     b.  Execute below command to configure your aws account where remediation is to be enabled: (Enter the requested values)
 
         aws configure
+
+        
+    <!-- TODO : confirm region same as remediation framework deployed in step 2 or 3 -->
 
     c.  Deploy automatic remediation invoker resources and associated role on AWS account which is to be remediated.
 

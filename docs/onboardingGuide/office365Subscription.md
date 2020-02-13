@@ -380,7 +380,7 @@ Follow [link](https://docs.microsoft.com/en-us/office365/admin/security-and-comp
 
 
 Sign into your Office 365 portal (e.g. <https://outlook.office.com/mail/inbox>)
-as user created above [step](.././onboardingOffice365Subscription/#create-office-365-user)
+as user created above [step](.././office365Subscription/#create-office-365-user)
 
 1. Choose **My Account Settings**
 	![My Account Settings](.././images/onboardingOffice365Subscription/My_Account_Settings.png#thumbnail)
@@ -511,10 +511,15 @@ Switch to Azure AD with the Azure Subscription with pre-requisite access.
 Note: Contact Cloudneeti Team for ArtifactsName, DataCollectorVersion and
 ArtifactsAccessKey
 8. The script will execute and prompt you for below details:
-   Cloudneeti API key </br>
-   Cloudneeti Data collector application secret </br>
-   Cloudneeti Office 365 data collector artifacts storage access Key </br>
-   Office 365 App Password or User Password</br>
+   - Cloudneeti API key </br>
+   - Cloudneeti Data collector application secret </br>
+   - Cloudneeti Office 365 data collector artifacts storage access Key </br>
+   - User Password or Office 365 App Password  
+    - User Password </br>
+      Advanced security configuration done using **User Password** will enable all 44 policies listed [here.](.././office365Subscription/#advanced-security-configuration))
+    - Office 365 App Password </br>
+      Advanced security configuration done using **Office 365 App Password** will **not enable 19 policies** of category M365 - Identity listed [here.](.././office365Subscription/#advanced-security-configuration))
+   
 9. This will create a runbook inside automation account
 
 ### 3.3 Apply delete lock
@@ -584,10 +589,12 @@ Microsoft graph permission DeviceManagementConfiguration.Read.All is required to
 
 ### Advanced security configuration
 
-The advanced security policy data collector enables the following 19 policies as
+The advanced security policy data collector enables the following 43 policies as
 available in the Center for Internet Security (CIS) Microsoft 365 benchmark
 (Reference
 [here](https://www.cloudneeti.com/2019/01/assure-microsoft-365-security-and-compliance-with-cloudneeti/)).
+
+Advanced security configuration done using Office 365 App Password will not enable 19 policies of category M365 - Identity listed in below table.
 
 | **Control No** | **Policy Title**                                                                                                                                                    | **Category**                     |
 |---------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------|
@@ -610,11 +617,33 @@ available in the Center for Internet Security (CIS) Microsoft 365 benchmark
 | M009.03         | 17. (L1) Ensure the spoofed domains report is reviewed weekly                                                                                                        | Auditing                         |
 | M009.04           | 18. (L1) Ensure user role group changes is reviewed at least every week                                                                                            | Auditing                         |
 | M010.1           | 19. (L2) Ensure document sharing is being controlled by domains with whitelist or blacklist                                                                         | Storage                          |
-|   M500.03     |  Ensure modern authentication for Exchange Online is enabled |M365 - Account / Authentication |
-|   M700.03     | Use custom sensitive infromation type classification for information protection | M365 - Data Management |
-|   M800.10     |  Ensure MailTips are enabled for end users |M365 - Email Security / Exchange Online |
-|  M800.11      |  Ensure basic authentication for Exchange Online is disabled |M365 - Email Security / Exchange Online |
-|    M010.2    |  Block OneDrive for Business sync from unmanaged devices |M365 - Storage |
+|   M500.03     |  20. Ensure modern authentication for Exchange Online is enabled |M365 - Account / Authentication |
+|   M700.03     | 21. Use custom sensitive infromation type classification for information protection | M365 - Data Management |
+|   M800.10     |  22. Ensure MailTips are enabled for end users |M365 - Email Security / Exchange Online |
+|  M800.11      |  23. Ensure basic authentication for Exchange Online is disabled |M365 - Email Security / Exchange Online |
+|    M010.2    |  24. Block OneDrive for Business sync from unmanaged devices |M365 - Storage |
+| M400.32 | Ensure that 'Number of methods required to reset' is set to '2'                                                      | M365 - Identity |
+| M400.33 | Ensure that 'Number of days before users are asked to re-confirm their authentication information' is not set to '0' | M365 - Identity |
+| M400.34 | Ensure that 'Notify all admins when other admins reset their password?' is set to 'Yes'                              | M365 - Identity |
+| M400.35 | Ensure that 'Notify users on password resets?' is set to 'Yes'                                                       | M365 - Identity |
+| M400.36 | Ensure that 'Users can consent to apps accessing company data on their behalf' is set to 'No'                        | M365 - Identity |
+| M400.37 | Ensure that 'Users can add gallery apps to their Access Panel' is set to 'No'                                        | M365 - Identity |
+| M400.38 | Ensure that 'Users can register applications' is set to 'No'                                                         | M365 - Identity |
+| M400.39 | Ensure that 'Guest user permissions are limited' is set to 'Yes'                                                     | M365 - Identity |
+| M400.40 | Ensure that 'Members can invite' is set to 'No'                                                                      | M365 - Identity |
+| M400.41 | Ensure that 'Guests can invite' is set to 'No'                                                                       | M365 - Identity |
+| M400.42 | Ensure that 'Restrict access to Azure AD administration portal' is set to 'Yes'                                      | M365 - Identity |
+| M400.43 | Ensure that 'Self-service group management enabled' is set to 'No'                                                   | M365 - Identity |
+| M400.44 | Ensure that 'Users can create security groups' is set to 'No'                                                        | M365 - Identity |
+| M400.45 | Ensure that 'Users who can manage security groups' is set to 'None'                                                  | M365 - Identity |
+| M400.46 | Ensure that 'Users can create Office 365 groups' is set to 'No'                                                      | M365 - Identity |
+| M400.47 | Ensure that 'Users who can manage Office 365 groups' is set to 'None'                                                | M365 - Identity |
+| M400.48 | Ensure that 'Enable All Users group' is set to 'Yes'                                                                 | M365 - Identity |
+| M400.49 | Ensure that 'Require Multi-Factor Auth to join devices' is set to 'Yes'                                              | M365 - Identity |
+| M400.50 | Ensure the Azure AD 'Risky sign-ins' report is reviewed at least weekly                                              | M365 - Identity |
+
+
+
 
 
 <div class="policy-json-code">
