@@ -5,7 +5,7 @@ remediation functionality can be disabled from Cloudneeti portal. On disabling
 the remediation policies stops the auto-remediation of new resources whenever
 deployed.
 
-## Disable Remediation policies
+## STEP 1 Disable Remediation policies
 
 Login to Cloudneeti portal with **License Admin** role
 
@@ -31,7 +31,7 @@ Login to Cloudneeti portal with **License Admin** role
 -   The resource configuration updated during remediation will remain the same
     after disabling the remediation policies.
 
-## Disable AWS account Remediation
+## STEP 2 Disable AWS account Remediation
 
 1.  Select desired **License** (1) and **Cloud Account** (2)
 
@@ -49,13 +49,30 @@ Login to Cloudneeti portal with **License Admin** role
   In case remediation policies are to be enabled again then policies
   remediation needs to be reconfigured.
 
-## Decommission Remediation framework
+
+## STEP 3 Delete deployment bucket
+ 
+Delete remediation framework deployment bucket using AWS console.
+
+1. Login to AWS console
+
+2. Search for deployment bucket with name **cn-awsrem-$env** having below tags
+
+    | S. No. | Tag Name                      | Tag Value                                                                                                                                                                                             |
+|--------|-------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1      | aws:cloudformation:stack-name | ptreg-< stack name >                                                                                                                    |
+| 2      | aws:cloudformation:logical-id | S3Bucket                                                                                                                                                                                              |
+| 3      | Description                   | Cloudneeti automatic remediation solution for making cloud resource compliant                                                                                                                         |
+| 4      | aws:cloudformation:stack-id   | arn:aws:cloudformation:us-west-1:< AWSAccountID >:stack/ptreg-< stack id >  |
+| 5      | ServiceName                   | auto-remediation-deployment-bucket       
+
+3. Delete deployment bucket
+
+## STEP 4 Decommission Remediation framework
 
 Decommission of remediation framework take place in two phases.
 
-<!-- Delete deployment bucket using AWS console -->
-
-### Remove remediation configuration of multi-account remediation
+### 4.1 Remove remediation configuration of multi-account remediation
 
 1.  Open bash
 
@@ -65,7 +82,7 @@ Decommission of remediation framework take place in two phases.
 
 3.  Go to remediation framework repository
 
-        cd aws-auto-remediation
+        cd aws-auto-remediation/multi-mode-remediation
 
 4.	Remove remediation configuration of multi-account remediation
 
@@ -76,7 +93,7 @@ Decommission of remediation framework take place in two phases.
  
 
 
-## Remove remediation framework
+### 4.2 Remove remediation framework
 
 1.  Open bash
 
@@ -88,7 +105,7 @@ Decommission of remediation framework take place in two phases.
 
         cd aws-auto-remediation 
 
-4.  Deploy remediation framework in AWS account which need to be remediated.
+4.  Decommission remediation framework in AWS account which need to be remediated.
 
         bash decommission-remediation-framework.sh [-a <12-digit-account-id>] [-e <environment-prefix>]
 
