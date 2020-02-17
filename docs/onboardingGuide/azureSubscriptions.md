@@ -231,22 +231,7 @@ Login to [Azure Portal](https://portal.azure.com/) with Microsoft Azure **Subscr
 
     ![Assign role](.././images/azureSubscriptions/Azure_Assign_Role.png#thumbnail)
  
-### 2.2 Grant Azure Subscription Backup Reader Role 
-**This step is optional**
-
-The Cloudneeti application requires Backup Reader role access to the Subscription in order to view application settings. 
-
-If the Backup Reader Role is not assigned,the Cloudneeti application will not be able to collect data of security policies [listed here](.././azureSubscriptions/#backup-reader-role).
-
-1.	Go to the subscription’s **Access control (IAM)** in the third level menu
-2.	Click on the **Add** button and select **Add role assignment**
-3.	Select **Reader** role and Cloudneeti
-4.	Select **Save** to complete the role assignment
- 
-     ![Assign role](.././images/azureSubscriptions/Backup_Reader_Role.png#thumbnail)
-
-
-### 2.6 Collect information
+### 2.3 Collect information
 
 The Cloudneeti application **License Admin** requires this information to add an Azure subscription as a cloud account.
 
