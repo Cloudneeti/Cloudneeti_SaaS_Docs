@@ -518,7 +518,7 @@ ArtifactsAccessKey
     - User Password </br>
       Advanced security configuration done using **User Password** will enable all 44 policies listed [here.](.././office365Subscription/#advanced-security-configuration))
     - Office 365 App Password </br>
-      Advanced security configuration done using **Office 365 App Password** will **not enable 19 policies** of category M365 - Identity listed [here.](.././office365Subscription/#advanced-security-configuration))
+      Advanced security configuration done using **Office 365 App Password** will **not enable 18 policies** of category M365 - Identity listed [here.](.././office365Subscription/#advanced-security-configuration))
    
 9. This will create a runbook inside automation account
 
@@ -594,7 +594,7 @@ available in the Center for Internet Security (CIS) Microsoft 365 benchmark
 (Reference
 [here](https://www.cloudneeti.com/2019/01/assure-microsoft-365-security-and-compliance-with-cloudneeti/)).
 
-Advanced security configuration done using Office 365 App Password will not enable 19 policies of category M365 - Identity listed in below table.
+Advanced security configuration done using Office 365 App Password will not enable 18 policies of category M365 - Identity listed in below table.
 
 | **Control No** | **Policy Title**                                                                                                                                                    | **Category**                     |
 |---------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------|
@@ -640,7 +640,6 @@ Advanced security configuration done using Office 365 App Password will not enab
 | M400.47 | Ensure that 'Users who can manage Office 365 groups' is set to 'None'                                                | M365 - Identity |
 | M400.48 | Ensure that 'Enable All Users group' is set to 'Yes'                                                                 | M365 - Identity |
 | M400.49 | Ensure that 'Require Multi-Factor Auth to join devices' is set to 'Yes'                                              | M365 - Identity |
-| M400.50 | Ensure the Azure AD 'Risky sign-ins' report is reviewed at least weekly                                              | M365 - Identity |
 
 
 

@@ -4,10 +4,11 @@ The Cloud Security Best Practices view provides a list of all security policies 
 | **Connector Type​**        | **Policy Count​** | **Auto Remediation Policy​ Count ** | **Quick Wins Policy Count**|
 |---------------------------|------------------|------------------------|------------------------|
 |  AWS​                      | 424              | [76​](../../remediation/awsRemediation/)                       |    - |
-|  Office365​                | 100​               | -                      |   - |
-|  Azure​                    | 390              | [26](../../remediation/azureAutoRemediation/)                     |   [137](../../remediation/azureQuickWins/) |
+|  AWS​ VM baseline RHEL     | 81               |                        |    - |
+|  Office365​                | 118​               | -                      |   - |
+|  Azure​                    | 393              | [26](../../remediation/azureAutoRemediation/)                     |   [137](../../remediation/azureQuickWins/) |
 |  Azure VM baseline Win 12 R2​    | 212​              | ​-                      |   - |
 |  Azure VM baseline Win 16​       | 227​              | ​-                      |   - |
 |  Azure VM baseline Ubuntu 18.04​ | 40​               | ​-                      |   - |
 |  Azure VM baseline CentOS​       | 34​               | ​-                      |   - |
-| **Grand Total**​           | **1427**​         | **102**​                 |   **137** |
+| **Grand Total**​           | **1529**​         | **102**​                 |   **137** |
