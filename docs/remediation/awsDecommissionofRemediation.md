@@ -56,7 +56,7 @@ Delete remediation framework deployment bucket using AWS console.
 
 1. Login to AWS console
 
-2. Search for deployment bucket with name **cn-awsrem-$env** having below tags
+2. Search for deployment bucket with name **cn-rem-$env** having below tags
 
     | S. No. | Tag Name                      | Tag Value                                                                                                                                                                                             |
 |--------|-------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
