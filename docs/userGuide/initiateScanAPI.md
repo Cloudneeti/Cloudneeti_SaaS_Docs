@@ -1,6 +1,7 @@
-Cloudneeti offers scan API to initiate scan in Cloudneeti for provided cloud account.
+Cloudneeti offers scan API to initiate scan in Cloudneeti for given cloud account.
 
-       get https://<CLOUDNEETI API DOMAIN>/api/compliance/license/<LICENSE ID>/account/<ACCOUNT ID>/scan
+       GET https://<CLOUDNEETI API DOMAIN>/api/compliance/license/<LICENSE ID>/account/<ACCOUNT ID>/rescan
+
 
 | Environment	| Values for CLOUDNEETI API DOMAIN |
 |---------------|--------------------------------------|
@@ -14,6 +15,11 @@ Cloudneeti offers scan API to initiate scan in Cloudneeti for provided cloud acc
 | LICENSE ID  |          [Cloudneeti License Id​](#license-id)                  | Required|
 | ACCOUNT ID  |          [Cloud Account Id​](#account-id)                          | Required|
 
+### Header
+
+| Key	        | Value                                |
+|---------------|--------------------------------------|
+| Ocp-Apim-Subscription-Key 	| [Cloudneeti API key generated](../../administratorGuide/configureCloudneetiAPIAccess/)             |
 
 ### Responses
 
@@ -30,8 +36,11 @@ Cloudneeti offers scan API to initiate scan in Cloudneeti for provided cloud acc
         GET https://api.cloudneeti.com/api/compliance/license/9085e05b-c5fe-49e1-9511-af4002aad6c4/account/7b227c87-2fb2-4fe4-bbab-c7318de12f5e/scan
 
 #### Sample Response
-Status code: 200
-
-        {
-            "jobId" : "5d64408e-4ca3-41f7-b725-6914f3012afa"
-        }
+{
+    "result": {
+        "accountId": "7b227c87-2fb2-4fe4-bbab-c7318de12f5e",
+        "jobId": "\"8e2ca002-cb1c-4344-966b-1053d09642c5\""
+    },
+    "statusCode": 200,
+    "message": "Request Successful"
+}

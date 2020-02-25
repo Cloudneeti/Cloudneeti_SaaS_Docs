@@ -43,3 +43,28 @@
 5. [Download audit report of Cloud Account for given Benhcmark](../../userGuide/auditReportAPI/)
 
 6. Verify compliance status, promote or roll back recently deployed infrastructure changes.
+
+### Actors: Customer Dev-ops
+
+##### Use Case : Onboard and audit configuration metadata for recently deployed infrastructure changes
+
+![Devops Use Case](.././images/customerAPI/apiUseCaseOnboard.png#thumbnail_1)
+
+##### Prerequisites
+
+1. Cloudneeti has the license onboarded and activated in Cloudneeti.
+
+2. [Configure Cloudneeti API Access](../../administratorGuide/configureCloudneetiAPIAccess/)
+
+##### Description
+1. Dev-ops pipeline deploys new infrastructure changes.
+
+2. [Get Cloudneeti access token for License](../../administratorGuide/configureCloudneetiAPIAccess/#license-token/).
+
+3. [Onboard Cloud Account in Cloudneeti for recently deployed infrastructure](../../userGuide/onboardAzureAccount/)
+
+4. [Check Cloudneeti Cloud Account scan status](../../userGuide/scanStatusAPI/)
+
+5. [Download audit report of Cloud Account for given Benhcmark](../../userGuide/auditReportAPI/)
+
+6. Verify compliance status, promote or roll back recently deployed infrastructure changes.
