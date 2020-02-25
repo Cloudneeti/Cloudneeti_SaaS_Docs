@@ -50,3 +50,15 @@ dashboard that provides insights into the total number of resources, users, AD
 admins and other metrics. By clicking on the bar (2) in the chart, the map shows
 locations (3) of this resource category.
 	![Assets_Dashboard](.././images/userGuide/Assets_Dashboard.png#thumbnail)
+
+
+## Assets Security (Preview)
+
+By clicking on the **Assets Security** tab (1) on the top, users gain access to an assets
+dashboard that provides insights into the resources compliance status. By clicking on the region (2) in the chart, list of resources listed gropued in resource category (3) for selected region. 
+
+![Assets_Dashboard](.././images/userGuide/Assets_Security_Dashboard.png#thumbnail)
+
+Resource compliance status can be seen by expanding resource category (1) and clicking on a resource (2) for resource related policies (3)
+
+![Assets_Dashboard](.././images/userGuide/Assets_Security_Dashboard_ResourceDetails.png#thumbnail)

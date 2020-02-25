@@ -75,10 +75,9 @@ document.
 |------|-------------------------------------------------------------|-------------------|--------------------|----------|-----------|--------------|
 | Azure Active Directory | Directory Read All Microsoft Graph              | Microsoft Azure   | Global AD Admin    | STEP 1   | optional  | 5            |
 | Azure Subscription | Reader              | Microsoft Azure   | Subscription Owner | STEP 2   | mandatory | 0            |
-| Azure Subscription | Backup reader        | Microsoft Azure   | Subscription Owner | STEP 3   | optional  | 4            |
 | Azure Subscription | Website contributor | Microsoft Azure   | Subscription Owner | STEP 3   | optional  | 15           |
 | Azure Subscription | Storage Account Contributor | Microsoft Azure   | Subscription Owner | STEP 3   | optional  | 1            |
-| Azure Subscription | Network Contributor Role | Microsoft Azure   | Subscription Owner | STEP 3   | optional  | 1           |
+| Azure Subscription | Network Contributor Role  | Microsoft Azure   | Subscription Owner | STEP 3   | optional  | 1           |
 | Key Vault | Access Policy   | Microsoft Azure   | Subscription Owner | STEP 4   | optional  | 1            |
 
 ## STEP 1: Register Cloudneeti application Manually or using Azure powershell script
@@ -232,22 +231,7 @@ Login to [Azure Portal](https://portal.azure.com/) with Microsoft Azure **Subscr
 
     ![Assign role](.././images/azureSubscriptions/Azure_Assign_Role.png#thumbnail)
  
-### 2.2 Grant Azure Subscription Backup Reader Role 
-**This step is optional**
-
-The Cloudneeti application requires Backup Reader role access to the Subscription in order to view application settings. 
-
-If the Backup Reader Role is not assigned,the Cloudneeti application will not be able to collect data of security policies [listed here](.././azureSubscriptions/#backup-reader-role).
-
-1.	Go to the subscription’s **Access control (IAM)** in the third level menu
-2.	Click on the **Add** button and select **Add role assignment**
-3.	Select **Reader** role and Cloudneeti
-4.	Select **Save** to complete the role assignment
- 
-     ![Assign role](.././images/azureSubscriptions/Backup_Reader_Role.png#thumbnail)
-
-
-### 2.6 Collect information
+### 2.3 Collect information
 
 The Cloudneeti application **License Admin** requires this information to add an Azure subscription as a cloud account.
 
@@ -383,11 +367,11 @@ security policies listed below.
 
 | Control No | Policy Title   | AAD Entity Used for Evaluating Misconfiguration  | Data Stored in Cloudneeti Data Store   |
 |-----------|---------------|--------------------------------------------------|----------------------------------------|
-| 1800.1    | Ensure that AD Application Keys are Rotated Before They Expire   |*passwordCredentials*<br><br>Metadata information contained within the data entity will be key start-date, end-date, and expiry policies. No actual values are retrievable.| <ul><li>AD Application Name</li><li>AD Application ID</li><li>Expiry Date</li></ul> |       
-| 1100.11   | Ensure that the Service Principal Certificate is Renewed Before It Expires | *keyCredentials*<br><br>Metadata information contained within the data involves start-date and end-date. Refer to documentation [here](https://docs.microsoft.com/en-us/powershell/module/azuread/new-azureadserviceprincipalkeycredential?view=azureadps-2.0).| <ul><li>AD Application Name</li><li>AD Application ID</li><li>Expiry Date</li></ul> |
-| 1100.12   | Ensure that There are No Guest Users | *userType*<br><br>Member or guest. | <ul><li>No data is stored in the Cloudneeti database. This policy only retrieves the count of total users and how many are guest users.</li></ul> |
-| 1100.4    | Enforce the Policy to Set Password to ‘Always’ Expire in Azure Active Directory for All Organization Users | *passwordPolicies*<br><br>Metadata involving the length of the password, password strength, and password restrictions. Refer to documentation [here](https://docs.microsoft.com/en-us/azure/active-directory/authentication/concept-sspr-policy#password-policies-that-only-apply-to-cloud-user-accounts). | <ul><li>No data is stored in the Cloudneeti database. This policy only retrieves the count of all organization users and how many of them have set ‘Password always expired’ to ‘On’.</li></ul>  |
-| 1100.8    | Ensure that Azure Resources are Accessible Only Through the Organization Account | *userType*<br><br>Member or [guest](https://docs.microsoft.com/en-us/azure/active-directory/b2b/what-is-b2b). | <ul><li>No data is stored in the Cloudneeti database. This policy only retrieves the count of external users in an organization who can access resources under the Azure Subscription.</ul></li> |
+| 1700.1   | Ensure that AD Application keys are rotated before they expires   |*passwordCredentials*<br><br>Metadata information contained within the data entity will be key start-date, end-date, and expiry policies. No actual values are retrievable.| <ul><li>AD Application Name</li><li>AD Application ID</li><li>Expiry Date</li></ul> |       
+| 1600.11   | Ensure that Service Principal Certificate are renewed before it expires | *keyCredentials*<br><br>Metadata information contained within the data involves start-date and end-date. Refer to documentation [here](https://docs.microsoft.com/en-us/powershell/module/azuread/new-azureadserviceprincipalkeycredential?view=azureadps-2.0).| <ul><li>AD Application Name</li><li>AD Application ID</li><li>Expiry Date</li></ul> |
+| 1600.12   | Ensure that there are no guest users | *userType*<br><br>Member or guest. | <ul><li>No data is stored in the Cloudneeti database. This policy only retrieves the count of total users and how many are guest users.</li></ul> |
+| 1600.4    | Enforce the policy to set Password to ‘always' expire in Azure Active Directory for all Organization Users | *passwordPolicies*<br><br>Metadata involving the length of the password, password strength, and password restrictions. Refer to documentation [here](https://docs.microsoft.com/en-us/azure/active-directory/authentication/concept-sspr-policy#password-policies-that-only-apply-to-cloud-user-accounts). | <ul><li>No data is stored in the Cloudneeti database. This policy only retrieves the count of all organization users and how many of them have set ‘Password always expired’ to ‘On’.</li></ul>  |
+| 1600.8    | Ensure that Azure resources are accessible only through Organization Accoun | *userType*<br><br>Member or [guest](https://docs.microsoft.com/en-us/azure/active-directory/b2b/what-is-b2b). | <ul><li>No data is stored in the Cloudneeti database. This policy only retrieves the count of external users in an organization who can access resources under the Azure Subscription.</ul></li> |
 
 ## Configuration
 

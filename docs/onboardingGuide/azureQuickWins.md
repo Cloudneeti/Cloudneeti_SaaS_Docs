@@ -13,13 +13,15 @@ Remediation policies from **Azure Security center, Logging and Monitoring** and 
 
 Access Needed on Subscription: **Contributor**
 
-## 6.1 Configure ASC policies 
+Note : Please note that it is advised to have only one ASC initiative. If there are multiple initiatives created, Cloud account compliance results in Cloudneeti may vary. 
+
+## 6.1 Configure ASC default policies 
 
 Configure ASC policies to remediate policies [listed here ](.././azureQuickWins/#configure-azure-security-center-policies-azure-security-center) using below steps.
 
-### Category Subscription Governance Policies [Increase compliance Score 30-50%]
+#### Category Subscription Governance Policies [Increase compliance Score 30-50%]
 
-### Remediation Steps
+#### Remediation Steps
 
 1.  Login to Azure portal
 
@@ -42,14 +44,51 @@ Configure ASC policies to remediate policies [listed here ](.././azureQuickWins/
         ```</code>
 	</pre>
 
-5.  Execute script
+5.  Configure ASC default policies
     <pre>
 	    <code>```
             .\configure-ASCPolicies.ps1 -SubscriptionId <subscriptionId>
     ```</code>
 	</pre>
 
-## 6.2 Configure Activity Alerts 
+## 6.2 Configure ASC policies at Management Group level
+
+Configure ASC policies to remediate policies [listed here ](.././azureQuickWins/#configure-azure-security-center-policies-azure-security-center) using below steps.
+
+#### Category Subscription Governance Policies [Increase compliance Score 30-50%]
+
+#### Remediation Steps
+
+1.  Login to Azure portal
+
+2.  Open Cloud shell in PowerShell mode
+
+3.  Download configuration script
+
+    <pre>
+	    <code>```
+          wget https://raw.githubusercontent.com/Cloudneeti/docs_cloudneeti/master/scripts/subscription-governance/configure-ASCPolicies.ps1 -O configure-ASCPolicies.ps1
+        ```
+        </code>
+	</pre>
+
+4.  Switch directory
+    
+    <pre>
+	    <code>```
+            cd $user
+        ```</code>
+	</pre>
+
+5.  Configure ASC Policies at Management Group level
+        <pre>
+	        <code>```
+                .\configure-ASCPolicies.ps1 -EnableManagementGroup -ManagementGroupId <ManagementGroupId>
+            ```</code>
+	</pre>
+
+
+## 6.3 Configure Activity Alerts 
 
 Configure Activity Alerts to remediate policies [listed here](.././azureQuickWins/#configure-activity-alerts-logging-and-auditing) using below steps.
 
@@ -101,7 +140,7 @@ Configure Activity Alerts to remediate policies [listed here](.././azureQuickWin
         ```</code>
     </pre>
 
-## 6.3 Configure Activity Log Profile
+## 6.4 Configure Activity Log Profile
 
 Configure Activity Log to remediate policies [listed here](.././azureQuickWins/#configure-activity-log-profile-logging-and-auditing) using below steps.
 
@@ -163,7 +202,7 @@ Configure Activity Log to remediate policies [listed here](.././azureQuickWins/#
     ```</code>
     </pre>
 
-## 6.4 Configure Storage Account
+## 6.5 Configure Storage Account
 
 
 Configure Storage Account to remediate policies [listed here ](.././azureQuickWins/#configure-storage-account-storage-and-databases) using below steps.
@@ -278,16 +317,11 @@ Remediation policy list
 | 2100.34       | Ensure that next generation firewall is set to enabled in ASC                                                         | Azure - Security Center |
 | 2100.35       | Ensure that monitoring of OS vulnerabilities is set to enabled in ASC                                                 | Azure - Security Center |
 | 2100.36       | Ensure that secure transfer to storage account is set to enabled in ASC                                               | Azure - Security Center |
-| 2100.37       | Ensure that security contact email is provided in ASC                                                                 | Azure - Security Center |
-| 2100.38       | Ensure that phone number is provided in ASC                                                                           | Azure - Security Center |
-| 2100.39       | Ensure that alert notification is set to On in ASC                                                                    | Azure - Security Center |
-| 2100.4        | Ensure that Automatic Provisioning of monitoring agent is set to On in ASC                                            | Azure - Security Center |
 | 2100.41       | Ensure that monitoring of SQL auditing is set to enabled in ASC                                                       | Azure - Security Center |
 | 2100.42       | Ensure that SqlDb Vulnerability Assesment is set to enabled in ASC                                                    | Azure - Security Center |
 | 2100.43       | Ensure that monitor SQL encryption is set to enabled in ASC                                                           | Azure - Security Center |
 | 2100.44       | Ensure that monitor storage blob encryption is set to enabled in ASC                                                  | Azure - Security Center |
 | 2100.45       | Ensure that monitor system updates is set to enabled in ASC                                                           | Azure - Security Center |
-| 2100.46       | Ensure that in ASC standard tier is selected                                                                          | Azure - Security Center |
 | 2100.47       | Ensure that vulnerability assessment is set to enabled in ASC                                                         | Azure - Security Center |
 | 2100.48       | Ensure that web application firewall is set to enabled in ASC                                                         | Azure - Security Center |
 | 2100.49       | Ensure that monitoring of permissive network access to app-services is enabled in ASC                                 | Azure - Security Center |
@@ -344,7 +378,6 @@ Remediation policy list
 | 2100.120      | Ensure that Vulnerability Assessment on your SQL managed instances is enabled in ASC                                  | Azure - Security Center |
 | 2100.16       | Ensure that diagnostics logs in Logic Apps is set to enabled in ASC                                                   | Azure - Security Center |
 | 2100.30       | Ensure that JIT network access policy is set to enabled in ASC                                                        | Azure - Security Center |
-| 2100.40       | Ensure that email notification is set to On to subscription owners in ASC                                             | Azure - Security Center |
 | 2100.50       | Ensure that monitoring of SQL managed instances without Advanced Data Security is enabled in ASC                      | Azure - Security Center |
 | 2100.52       | Ensure that all Advanced Threat Protection types on SQL managed instance is enabled in ASC                            | Azure - Security Center |
 | 2100.56       | Ensure that monitoring of auditing policy Action-Groups and Actions setting is enabled in ASC                         | Azure - Security Center |
