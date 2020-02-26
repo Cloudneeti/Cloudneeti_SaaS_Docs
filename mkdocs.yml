@@ -63,7 +63,9 @@ nav:
   - Compliance Benchmarks: userGuide/complianceBenchmarks.md
   - Reports: userGuide/reports.md
   - Cloudneeti REST APIs: 
-    - Get Token API (Preview): userGuide/getAccessTokenAPI.md
+    - Rest APIs (Preview): userGuide/restAPIs.md
+    - Onboard (Preview): userGuide/onboardAzureAccount.md
+    - Update API App Access Scope (Preview): userGuide/updateAPIAppAccessScope.md
     - Initiate Scan API (Preview): userGuide/initiateScanAPI.md
     - Scan status API (Preview): userGuide/scanStatusAPI.md
     - Audit Report API: userGuide/auditReportAPI.md

@@ -18,6 +18,11 @@ Cloudneeti offers audit report API to get access to views presenting pass/fail/w
 | ACCOUNT ID  |          [Cloud Account Id​](#account-id)                          | Required|
 | BENCHMARK ID|        [Benchmark Id​](#cloudneeti-supported-benchmarks)        | Required|
 
+### Header
+
+| Key	        | Value                                |
+|---------------|--------------------------------------|
+| Ocp-Apim-Subscription-Key 	| [Cloudneeti API key generated](../../administratorGuide/configureCloudneetiAPIAccess/)             |
 
 ### Responses
 
@@ -31,9 +36,9 @@ Cloudneeti offers audit report API to get access to views presenting pass/fail/w
 
 #### Sample Request
 
-        get https://api.cloudneeti.com/api/audit/license/9085e05b-c5fe-49e1-9511-af4002aad6c4/account/7b227c87-2fb2-4fe4-bbab-c7318de12f5e/summary
+        GET https://api.cloudneeti.com/api/audit/license/9085e05b-c5fe-49e1-9511-af4002aad6c4/account/7b227c87-2fb2-4fe4-bbab-c7318de12f5e/summary
 
-## How to use
+<!-- ## How to use
 
  Cloudneeti audit report API can be called using Powershell script with below steps.
 
@@ -82,7 +87,7 @@ access Cloudneeti.
 5. Given benchmark report in json format will be downloaded and saved at
 location where the script is executed.
     
-    ![compliance Status](.././images/benchmarkSummaryReport/SummaryReport_Json_Output.png#thumbnail)
+    ![compliance Status](.././images/benchmarkSummaryReport/SummaryReport_Json_Output.png#thumbnail) -->
 
 Sample Report
 -------------
@@ -11101,7 +11106,7 @@ Login to Cloudneeti portal as a License Admin.
     ![Manage Accounts](.././images/onboardingOffice365Subscription/Manage_Accounts.png#thumbnail)
 
 
-### Generate Cloudneeti API key
+<!-- ### Generate Cloudneeti API key
 
 ##### SIGN-UP ON CLOUDNEETI API PORTAL
 
@@ -11149,7 +11154,7 @@ Once you receive the confirmation, proceed with the following steps.
 
     ![Primary key](.././images/onboardingOffice365Subscription/Primary_key.png#thumbnail)
 
-    >   Primary key
+    >   Primary key -->
 
 ### Cloudneeti supported benchmarks 
 
