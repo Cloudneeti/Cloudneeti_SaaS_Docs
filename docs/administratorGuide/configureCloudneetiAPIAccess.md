@@ -1,4 +1,4 @@
-To access the CLoundeeti API, it is required to have valid API access key, Cloudneeti API Application id and secret to generate the authoriztion token.
+To access the Cloudneeti API, it is required to have valid API access key, Cloudneeti API Application id and secret to generate the authorization token.
 
 ![Cloudneeti API Access Overview](.././images/cloudneetiAPIAccess/Cloudneeti_API_Access_Overview.png#thumbnail_1)
 
