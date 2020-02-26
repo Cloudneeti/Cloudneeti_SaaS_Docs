@@ -85,6 +85,7 @@ For prerequisites for AWS cloud account onboarding, please refer [Amazon Web Ser
 ### Request body
 
 For prerequisites for Azure cloud account onboarding, please refer [Microsoft Azure Subscription](../azureSubscriptions/)
+
         {
                 "AccountName": "<ACCOUNT NAME>",
                 "DomainName": "<ACTIVE DIRECTORY DOMAIN NAME>",
@@ -105,6 +106,7 @@ For prerequisites for Azure cloud account onboarding, please refer [Microsoft Az
 | message |      String     | Response describing operation result as success or failed.     |
 
 ### Sample Response
+
         {
                 "result": {
                         "accountId": "5fc68c34-1225-413d-879b-02ff5e9c4d9c",
