@@ -14,14 +14,14 @@
 
 ##### Description
 
-1. [Get Cloudneeti access token](../../userGuide/getAccessTokenAPI/)
+1. [Get Cloudneeti access token for Cloud Account](../../administratorGuide/configureCloudneetiAPIAccess/#account-token/)
 
 2. [Download audit report of Cloud Account for given Benhcmark](../../userGuide/auditReportAPI/)
  
 
 ### Actors: Customer Dev-ops
 
-##### Use Case : Scan configuration metadata for recently deployed infrastructure changes
+##### Use Case 1 : Scan configuration metadata for recently deployed infrastructure changes
 
 ![Devops Use Case](.././images/customerAPI/apiUseCaseDevops.png#thumbnail_1)
 
@@ -34,7 +34,7 @@
 ##### Description
 1. Dev-ops pipeline deploys new infrastructure changes.
 
-2. [Get Cloudneeti access token](../../userGuide/getAccessTokenAPI/).
+2. [Get Cloudneeti access token for Cloud Account](../../administratorGuide/configureCloudneetiAPIAccess/#account-token/).
 
 3. [Scan Cloudneeti Cloud Account for recently deployed infrastructure](../../userGuide/initiateScanAPI/)
 
@@ -44,9 +44,9 @@
 
 6. Verify compliance status, promote or roll back recently deployed infrastructure changes.
 
-### Actors: Customer Dev-ops
 
-##### Use Case : Onboard and audit configuration metadata for recently deployed infrastructure changes
+
+##### Use Case 2: Onboard and audit configuration metadata for recently deployed infrastructure changes
 
 ![Devops Use Case](.././images/customerAPI/apiUseCaseOnboard.png#thumbnail_1)
 
@@ -61,9 +61,14 @@
 
 2. [Get Cloudneeti access token for License](../../administratorGuide/configureCloudneetiAPIAccess/#license-token/).
 
-3. [Onboard Cloud Account in Cloudneeti for recently deployed infrastructure](../../userGuide/onboardAzureAccount/)
+3. [Onboard Cloud Account in Cloudneeti for recently deployed infrastructure](../../administratorGuide/configureCloudneetiAPIAccess/#account-token/)
 
-4. [Check Cloudneeti Cloud Account scan status](../../userGuide/scanStatusAPI/)
+4. [Add Cloud Account to Cloudneeti API application access scope](../../administratorGuide/configureCloudneetiAPIAccess/#license-token/).
+
+
+5. [Get Cloudneeti access token for Cloud Account](../../userGuide/updateAPIAppAccessScope/).
+
+5. [Check Cloudneeti Cloud Account scan status](../../userGuide/scanStatusAPI/)
 
 5. [Download audit report of Cloud Account for given Benhcmark](../../userGuide/auditReportAPI/)
 
