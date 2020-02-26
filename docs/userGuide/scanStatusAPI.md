@@ -23,30 +23,35 @@ Cloudneeti offers scan API to get scan status in Cloudneeti for provided cloud a
 | Ocp-Apim-Subscription-Key 	| [Cloudneeti API key generated](../../administratorGuide/configureCloudneetiAPIAccess/)             |
 
 
-### Responses
+### Response
 
-| Name           |           Type       |          Description  |
-|----------------|----------------------|-----------------------|
-| 200 OK	     |           Scan Status     | Cloudneeti cloud account scan job status      |
-| Other Status Codes |      Error     | Error response describing why the operation failed.     |
+        | Name           |           Type       |          Description  |
+        |----------------|----------------------|-----------------------|
+        | jobStatus	 |           String     | Cloudneeti cloud account scan job status       |
+        | statusCode |     Integer      | Cloudneeti API response status code      |
+        | message	 |           String     | Response describing operation result as success or failed.      |
 
 
-### Examples
+<!-- ### Examples
 
 #### Sample Request
 
-        GET https://api.cloudneeti.com/api/compliance/jobId/7b227c87-2fb2-4fe4-bbab-c7318de12f5e/scanStatus
+        GET https://api.cloudneeti.com/api/compliance/jobId/7b227c87-2fb2-4fe4-bbab-c7318de12f5e/scanStatus -->
 
-#### Sample Response
-Status code: 200
+
+### Sample Response
 
         {
-            "jobStatus" : "Completed"
+                "result": {
+                        "jobStatus": "Success"
+                },
+                "statusCode": 200,
+                "message": "Request Successful"
         }
 
-#### Definations
+### Definations
 
-##### JobStatus
+#### JobStatus
 | Name           |           Type       |
 |----------------|----------------------|
 | New    	     |      String          |

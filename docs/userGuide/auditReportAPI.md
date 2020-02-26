@@ -3,7 +3,7 @@
 
 Cloudneeti offers audit report API to get access to views presenting pass/fail/warn status at a compliance/benchmark category level and passed/total resource count at policy level for provided Benchmark.
 
-        GET https://<CLOUDNEETI API DOMAIN>/api/audit/license/<LICENSE ID>/account/<ACCOUNT ID>/benchmark/<BENCHMARK ID>/summary
+        GET https://<CLOUDNEETI API DOMAIN>/api/audit/license/<LICENSE ID>/account/<ACCOUNT ID>/job/<JOBID>/benchmark/<BENCHMARK ID>/summary
 
 | Environment	| Values for CLOUDNEETI API DOMAIN |
 |---------------|--------------------------------------|
@@ -14,9 +14,10 @@ Cloudneeti offers audit report API to get access to views presenting pass/fail/w
 
 | Parameter           |           Description                                |           Required/Optional  |
 |-----------|----------------------------------------------------------------|----------------------------|
-| LICENSE ID  |          [Cloudneeti License Id​](#license-id)                  | Required|
-| ACCOUNT ID  |          [Cloud Account Id​](#account-id)                          | Required|
-| BENCHMARK ID|        [Benchmark Id​](#cloudneeti-supported-benchmarks)        | Required|
+| license  |          [Cloudneeti License Id​](#license-id)                  | Required|
+| account  |          [Cloud Account Id​](#account-id)                          | Required|
+| job       |        Cloud Account scan job id          | Required|
+| benchmark |        [Benchmark Id​](#cloudneeti-supported-benchmarks)        | Required|
 
 ### Header
 
@@ -24,19 +25,22 @@ Cloudneeti offers audit report API to get access to views presenting pass/fail/w
 |---------------|--------------------------------------|
 | Ocp-Apim-Subscription-Key 	| [Cloudneeti API key generated](../../administratorGuide/configureCloudneetiAPIAccess/)             |
 
-### Responses
 
-| Name           |           Type       |          Description  |
-|----------------|----------------------|-----------------------|
-| 200 OK	     |           Audit Report     | Cloudneeti cloud account audit report for provided Benchmark      |
-| Other Status Codes |      Error     | Error response describing why the operation failed.     |
+#### Response
+
+        | Name           |           Type       |          Description  |
+        |----------------|----------------------|-----------------------|
+        | result 	 |           Object     | Cloudneeti cloud account audit report       |
+        | statusCode |     Integer      | Cloudneeti API response status code      |
+        | message	 |           String     | Response describing operation result as success or failed.      |
 
 
-### Examples
+
+<!-- ### Examples
 
 #### Sample Request
 
-        GET https://api.cloudneeti.com/api/audit/license/9085e05b-c5fe-49e1-9511-af4002aad6c4/account/7b227c87-2fb2-4fe4-bbab-c7318de12f5e/summary
+        GET https://api.cloudneeti.com/api/audit/license/9085e05b-c5fe-49e1-9511-af4002aad6c4/account/7b227c87-2fb2-4fe4-bbab-c7318de12f5e/summary -->
 
 <!-- ## How to use
 

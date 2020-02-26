@@ -8,12 +8,6 @@ Cloudneeti offers scan API to initiate scan in Cloudneeti for given cloud accoun
 | PROD 	        |   api.cloudneeti.com                 |
 | TRIAL 	| trialapi.cloudneeti.com              |
 
-### URI Parameters
-
-| Parameter           |           Description                                |           Required/Optional  |
-|-----------|----------------------------------------------------------------|----------------------------|
-| LICENSE ID  |          [Cloudneeti License Id​](#license-id)                  | Required|
-| ACCOUNT ID  |          [Cloud Account Id​](#account-id)                          | Required|
 
 ### Header
 
@@ -21,26 +15,35 @@ Cloudneeti offers scan API to initiate scan in Cloudneeti for given cloud accoun
 |---------------|--------------------------------------|
 | Ocp-Apim-Subscription-Key 	| [Cloudneeti API key generated](../../administratorGuide/configureCloudneetiAPIAccess/)             |
 
-### Responses
-
-| Name           |           Type       |          Description  |
-|----------------|----------------------|-----------------------|
-| 200 OK	     |           Job Id     | Cloudneeti cloud account scan job id      |
-| Other Status Codes |      Error     | Error response describing why the operation failed.     |
 
 
-### Examples
+### URI Parameters
 
-#### Sample Request
+| Parameter           |           Description                                |           Required/Optional  |
+|-----------|----------------------------------------------------------------|----------------------------|
+| license  |          [Cloudneeti License Id​](#license-id)                  | Required|
+| account  |          [Cloud Account Id​](#account-id)                          | Required|
 
-        GET https://api.cloudneeti.com/api/compliance/license/9085e05b-c5fe-49e1-9511-af4002aad6c4/account/7b227c87-2fb2-4fe4-bbab-c7318de12f5e/scan
+### Response
 
-#### Sample Response
-{
-    "result": {
-        "accountId": "7b227c87-2fb2-4fe4-bbab-c7318de12f5e",
-        "jobId": "\"8e2ca002-cb1c-4344-966b-1053d09642c5\""
-    },
-    "statusCode": 200,
-    "message": "Request Successful"
-}
+        | Name           |           Type       |          Description  |
+        |----------------|----------------------|-----------------------|
+        | jobId 	 |           String     | Cloudneeti cloud account scan job id       |
+        | statusCode |     Integer      | Cloudneeti API response status code      |
+        | message	 |           String     | Response describing operation result as success or failed.      |
+
+
+<!-- ### Examples -->
+
+<!-- #### Sample Request
+
+        GET https://api.cloudneeti.com/api/compliance/license/9085e05b-c5fe-49e1-9511-af4002aad6c4/account/7b227c87-2fb2-4fe4-bbab-c7318de12f5e/scan -->
+
+### Sample Response
+    {
+        "result": {
+            "jobId": "15723a00-bbb3-4279-b48c-2bb8c1e78283"
+        },
+        "statusCode": 200,
+        "message": "Request Successful"
+    }
