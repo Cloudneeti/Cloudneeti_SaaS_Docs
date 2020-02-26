@@ -10,6 +10,12 @@ Cloudneeti offers onboard API for Cloud Account onboarding in Cloudneeti for giv
 | TRIAL 	| trialapi.cloudneeti.com              |
 
 
+### URI Parameters
+
+| Parameter           |           Description                                |           Required/Optional  |
+|-----------|----------------------------------------------------------------|----------------------------|
+| license   |          [Cloudneeti License Id​](#license-id)                  | Required|
+
 ### Header
 
 | Key	        | Value                                |
@@ -27,12 +33,6 @@ For prerequisites for AWS cloud account onboarding, please refer [Amazon Web Ser
                 "AWSAccountId": "<AWS ACCOUNT ID>",
                 "AWSRoleName": "<AWS ROLE NAME>"
         }
-
-### URI Parameters
-
-| Parameter           |           Description                                |           Required/Optional  |
-|-----------|----------------------------------------------------------------|----------------------------|
-| license   |          [Cloudneeti License Id​](#license-id)                  | Required|
 
 ### Response
 
@@ -67,6 +67,13 @@ For prerequisites for AWS cloud account onboarding, please refer [Amazon Web Ser
 | TRIAL 	| trialapi.cloudneeti.com              |
 
 
+### URI Parameters
+
+
+| Parameter           |           Description                                |           Required/Optional  |
+|-----------|----------------------------------------------------------------|----------------------------|
+| license   |          [Cloudneeti License Id​](#license-id)                  | Required|
+
 ### Header
 
 | Key	        | Value                                |
@@ -86,13 +93,6 @@ For prerequisites for Azure cloud account onboarding, please refer [Microsoft Az
                 "ADApplicationClientSecret": "<AD APPLICATION CLIENT SECRET>",
                 "SubscriptionId":"<AZURE SUBSCRIPTION ID>"
         }
-
-### URI Parameters
-
-
-| Parameter           |           Description                                |           Required/Optional  |
-|-----------|----------------------------------------------------------------|----------------------------|
-| license   |          [Cloudneeti License Id​](#license-id)                  | Required|
 
 
 ### Response
@@ -125,6 +125,11 @@ For prerequisites for Azure cloud account onboarding, please refer [Microsoft Az
 | PROD 	        |   api.cloudneeti.com                 |
 | TRIAL 	| trialapi.cloudneeti.com              |
 
+### URI Parameters
+
+| Parameter           |           Description                                |           Required/Optional  |
+|-----------|----------------------------------------------------------------|----------------------------|
+| license   |          [Cloudneeti License Id​](#license-id)                  | Required|
 
 ### Header
 
@@ -145,12 +150,6 @@ For prerequisites for Office365 cloud account onboarding, please refer [Office 3
                 "ADApplicationClientId": "<AD APPLICATION CLIENT ID>",
                 "ADApplicationClientSecret": "<AD APPLICATION CLIENT SECRET>"
         }
-
-### URI Parameters
-
-| Parameter           |           Description                                |           Required/Optional  |
-|-----------|----------------------------------------------------------------|----------------------------|
-| license   |          [Cloudneeti License Id​](#license-id)                  | Required|
 
 
 ### Response

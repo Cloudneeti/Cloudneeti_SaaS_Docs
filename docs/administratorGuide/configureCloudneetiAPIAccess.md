@@ -97,6 +97,11 @@ Once you receive the confirmation, proceed with the following steps.
 | PROD 	        |   api.cloudneeti.com                 |
 | TRIAL 	| trialapi.cloudneeti.com              |
 
+#### URI Parameters
+
+| Parameter           |           Description                                |           Required/Optional  |
+|-----------|----------------------------------------------------------------|----------------------------|
+| license   |          Cloudneeti License Id​              | Required|
 
 #### Header
 
@@ -108,23 +113,17 @@ Once you receive the confirmation, proceed with the following steps.
 
 #### Request body
         {
-            appId:<API App Id>,
+            appId:<API App Id>, 
             secret:<API App Secret>
         }
-
-
-
-| Parameter           |           Description                                |           Required/Optional  |
-|-----------|----------------------------------------------------------------|----------------------------|
-| appId   |          [Cloudneeti API App Id​](../../administratorGuide/configureCloudneetiAPIAccess/#step-1-create-cloudneeti-api-application)                  | Required|
-| secret   |          [Cloudneeti API App Secret](../../administratorGuide/configureCloudneetiAPIAccess/#step-1-create-cloudneeti-api-application)                          | Required|
 
 #### Responses
 
 | Name           |           Type       |          Description  |
 |----------------|----------------------|-----------------------|
-| 200 OK	     |     Access Token     | Cloudneeti API access token      |
-| Other Status Codes |      Error     | Error response describing why the operation failed.     |
+| token	     |     Access Token     | Cloudneeti API access token      |
+| statusCode |      Integer     | Cloudneeti API status code      |
+| message    |      String     | Response describing operation result as success or failed.     |
 
 
 ### Account token
@@ -137,6 +136,13 @@ Once you receive the confirmation, proceed with the following steps.
 | TRIAL 	| trialapi.cloudneeti.com              |
 
 
+#### URI Parameters
+
+| Parameter           |           Description                                |           Required/Optional  |
+|-----------|----------------------------------------------------------------|----------------------------|
+| license   |          Cloudneeti License id              | Required|
+| account   |          Cloudneeti Cloud Account id              | Required|
+
 #### Header
 
 | Key	        | Value                                |
@@ -152,18 +158,13 @@ Once you receive the confirmation, proceed with the following steps.
         }
 
 
-
-| Parameter           |           Description                                |           Required/Optional  |
-|-----------|----------------------------------------------------------------|----------------------------|
-| appId  |          [Cloudneeti API App Id​](../../administratorGuide/configureCloudneetiAPIAccess/#step-1-create-cloudneeti-api-application)                  | Required|
-| secret   |          [Cloudneeti API App Secret](../../administratorGuide/configureCloudneetiAPIAccess/#step-1-create-cloudneeti-api-application)                          | Required|
-
 #### Responses
 
 | Name           |           Type       |          Description  |
 |----------------|----------------------|-----------------------|
-| 200 OK	     |           Access Token     | Cloudneeti API access token      |
-| Other Status Codes |      Error     | Error response describing why the operation failed.     |
+| token	     |     Access Token     | Cloudneeti API access token      |
+| statusCode |      Integer     | Cloudneeti API status code      |
+| message    |      String     | Response describing operation result as success or failed.     |
 
 
 ## Next Step

@@ -9,6 +9,13 @@ Cloudneeti offers config API to update API application access scope to add a Clo
 | TRIAL 	| trialapi.cloudneeti.com              |
 
 
+### URI Parameters
+
+| Parameter           |           Description                                |           Required/Optional  |
+|-----------|----------------------------------------------------------------|----------------------------|
+| license   |          [Cloudneeti API App Id​](#license-id)                  | Required|
+
+
 ### Header
 
 | Key	        | Value                                |
@@ -21,12 +28,6 @@ Cloudneeti offers config API to update API application access scope to add a Clo
         {
             "accountId": <Cloud Account Id>
         }
-
-### URI Parameters
-
-| Parameter           |           Description                                |           Required/Optional  |
-|-----------|----------------------------------------------------------------|----------------------------|
-| license   |          [Cloudneeti API App Id​](#license-id)                  | Required|
 
 
 ### Response
