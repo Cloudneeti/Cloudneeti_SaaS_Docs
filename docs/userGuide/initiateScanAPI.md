@@ -9,20 +9,19 @@ Cloudneeti offers scan API to initiate scan in Cloudneeti for given cloud accoun
 | TRIAL 	| trialapi.cloudneeti.com              |
 
 
-### Header
-
-| Key	        | Value                                |
-|---------------|--------------------------------------|
-| Ocp-Apim-Subscription-Key 	| [Cloudneeti API key generated](../../administratorGuide/configureCloudneetiAPIAccess/)             |
-
-
-
 ### URI Parameters
 
 | Parameter           |           Description                                |           Required/Optional  |
 |-----------|----------------------------------------------------------------|----------------------------|
 | license  |          [Cloudneeti License Id​](#license-id)                  | Required|
 | account  |          [Cloud Account Id​](#account-id)                          | Required|
+
+### Header
+
+| Key	        | Value                                |
+|---------------|--------------------------------------|
+| Ocp-Apim-Subscription-Key 	| [Cloudneeti API key generated](../../administratorGuide/configureCloudneetiAPIAccess/)             |
+
 
 ### Response
 
