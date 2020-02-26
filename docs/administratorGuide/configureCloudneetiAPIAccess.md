@@ -10,7 +10,7 @@ Creation of Cloudneeti API application includes configuring access to Cloudneeti
 
 The following steps are done by the Cloudneeti application License Admin role.
 
-1. Select **license** (1) to create Cloudneeti API application
+1. Select **license** (1) in which Cloudneeti API application is to be created.
 
 2. Navigate to **Configuration** (2) and **Cloudneeti API Access** (3)
 
@@ -24,7 +24,7 @@ The following steps are done by the Cloudneeti application License Admin role.
 
     ![Create API Application](.././images/cloudneetiAPIAccess/Create_API_Application_2.png#thumbnail)
 
-6. Select **Cloud Accounts** (1) for API scope
+6. Select **Cloud Accounts** (1) for API application scope
 
 7. Select **Token Expiry** duration
 
@@ -32,12 +32,12 @@ The following steps are done by the Cloudneeti application License Admin role.
 
     ![Create API Application](.././images/cloudneetiAPIAccess/Create_API_Application_3.png#thumbnail)
 
-9. Copy Cloudneeti API application secret (1) and click **Done** (2)
-    Note : Please record the API Application secret that appears in the dialog window because you will not be able to retrieve the secret again after leaving the page.
+9. Copy **Cloudneeti API application secret** (1) and click **Done** (2)
+    </br> Note : Please record the API Application secret that appears in the dialog window because you will not be able to retrieve the secret again after leaving the page.
 
     ![Create API Application](.././images/cloudneetiAPIAccess/Create_API_Application_4.png#thumbnail)
 
-10. Copy Cloudneeti API application id (1)
+10. Copy Cloudneeti **API application id** (1)
 
     ![Create API Application](.././images/cloudneetiAPIAccess/Create_API_Application_5.png#thumbnail)
 
@@ -103,7 +103,7 @@ Once you receive the confirmation, proceed with the following steps.
 | Key	        | Value                                |
 |---------------|--------------------------------------|
 | Content-Type 	                |   application/json                 |
-| Ocp-Apim-Subscription-Key 	| [Cloudneeti API key generated]()             |
+| Ocp-Apim-Subscription-Key 	| [Cloudneeti API key generated](../../administratorGuide/configureCloudneetiAPIAccess/#retrieve-cloudneeti-api-key)             |
 
 
 #### Request body
@@ -116,14 +116,14 @@ Once you receive the confirmation, proceed with the following steps.
 
 | Parameter           |           Description                                |           Required/Optional  |
 |-----------|----------------------------------------------------------------|----------------------------|
-| API App Id   |          [Cloudneeti API App Id​](#license-id)                  | Required|
-| API App Secret   |          [Cloudneeti API App Secret](#account-id)                          | Required|
+| appId   |          [Cloudneeti API App Id​](../../administratorGuide/configureCloudneetiAPIAccess/#step-1-create-cloudneeti-api-application)                  | Required|
+| secret   |          [Cloudneeti API App Secret](../../administratorGuide/configureCloudneetiAPIAccess/#step-1-create-cloudneeti-api-application)                          | Required|
 
 #### Responses
 
 | Name           |           Type       |          Description  |
 |----------------|----------------------|-----------------------|
-| 200 OK	     |           Access Token     | Cloudneeti API access token      |
+| 200 OK	     |     Access Token     | Cloudneeti API access token      |
 | Other Status Codes |      Error     | Error response describing why the operation failed.     |
 
 
@@ -142,7 +142,7 @@ Once you receive the confirmation, proceed with the following steps.
 | Key	        | Value                                |
 |---------------|--------------------------------------|
 | Content-Type 	                |   application/json                 |
-| Ocp-Apim-Subscription-Key 	| [Cloudneeti API key generated]()             |
+| Ocp-Apim-Subscription-Key 	| [Cloudneeti API key generated](../../administratorGuide/configureCloudneetiAPIAccess/#retrieve-cloudneeti-api-key)             |
 
 
 #### Request body
@@ -155,8 +155,8 @@ Once you receive the confirmation, proceed with the following steps.
 
 | Parameter           |           Description                                |           Required/Optional  |
 |-----------|----------------------------------------------------------------|----------------------------|
-| API App Id   |          [Cloudneeti API App Id​](#license-id)                  | Required|
-| API App Secret   |          [Cloudneeti API App Secret](#account-id)                          | Required|
+| appId  |          [Cloudneeti API App Id​](../../administratorGuide/configureCloudneetiAPIAccess/#step-1-create-cloudneeti-api-application)                  | Required|
+| secret   |          [Cloudneeti API App Secret](../../administratorGuide/configureCloudneetiAPIAccess/#step-1-create-cloudneeti-api-application)                          | Required|
 
 #### Responses
 

@@ -22,26 +22,25 @@ Cloudneeti offers config API to update API application access scope to add a Clo
             "accountId": <Cloud Account Id>
         }
 
-
+### URI Parameters
 
 | Parameter           |           Description                                |           Required/Optional  |
 |-----------|----------------------------------------------------------------|----------------------------|
-| API App Id   |          [Cloudneeti API App Id​](#license-id)                  | Required|
-| API App Secret   |          [Cloudneeti API App Secret](#account-id)                          | Required|
+| license   |          [Cloudneeti API App Id​](#license-id)                  | Required|
 
-### Responses
+
+### Response
 
 | Name           |           Type       |          Description  |
 |----------------|----------------------|-----------------------|
-| accountId	 |           String     | Cloudneeti API access token      |
-| jobId  	 |           String     | Cloudneeti API access token      |
-| 200 OK	 |     Access Token     | Cloudneeti API access token      |
-| Other Status Codes |      Error     | Error response describing why the operation failed.     |
+| result	 |           String     | On successful addition of Cloud Account to scope       |
+| statusCode |     Integer      | Cloudneeti API response status code      |
+| message	 |           String     | Response describing operation result as success or failed.      |
 
 ### Sample Response
-{
-    "result": "Account Added",
-    "statusCode": 200,
-    "message": "Request Successful"
-}
+    {
+        "result": "Account Added",
+        "statusCode": 200,
+        "message": "Request Successful"
+    }
 
