@@ -10,7 +10,7 @@ The following steps are required to onboard AWS to the Cloudneeti application.
 |----|------------------------------------------|--------------------------------|--------------------|
 | 1  | Create an AWS role for Cloudneeti        | AWS                            | Administrator      |
 | 2  | Collect AWS account information          | AWS                            | Administrator      |
-| 3  | AWS VM Baseline configuration (Optional) | AWS                            | Administrator      |
+| 3  | AWS inspector configuration (Optional) | AWS                            | Administrator      |
 | 4  | Add AWS Account                          | Cloudneeti                     | License Admin      |
 
 **1. Creating an AWS role for Cloudneeti** includes registering a new AWS role for the Cloudneeti application and granting the required access permissions.
