@@ -3,7 +3,7 @@ Cloudneeti offers scan API to get scan status in Cloudneeti for provided cloud a
         GET https://<CLOUDNEETI API DOMAIN>/api/compliance/license/<LICENSE ID>/account/<ACCOUNT ID>/job/<JOB ID>/status
 
 
-| Environment	| Values for CLOUDNEETI API DOMAIN |
+| Environment	| Values for Cloudneeti API domain     |
 |---------------|--------------------------------------|
 | PROD 	        |   api.cloudneeti.com                 |
 | TRIAL 	| trialapi.cloudneeti.com              |
@@ -25,11 +25,11 @@ Cloudneeti offers scan API to get scan status in Cloudneeti for provided cloud a
 
 ### Response
 
-        | Name           |           Type       |          Description  |
-        |----------------|----------------------|-----------------------|
-        | jobStatus	 |           String     | Cloudneeti cloud account scan job status       |
-        | statusCode |     Integer      | Cloudneeti API response status code      |
-        | message	 |           String     | Response describing operation result as success or failed.      |
+| Name           |           Type       |          Description  |
+|----------------|----------------------|-----------------------|
+| jobStatus	 |           String     | Cloudneeti cloud account scan job status       |
+| statusCode |     Integer      | Cloudneeti API response status code      |
+| message	 |           String     | Response describing operation result as success or failed.      |
 
 
 <!-- ### Examples
@@ -54,7 +54,7 @@ Cloudneeti offers scan API to get scan status in Cloudneeti for provided cloud a
 #### JobStatus
 | Name           |           Type       |
 |----------------|----------------------|
-| New    	     |      String          |
-| Running	     |      String          |
+| New            |      String          |
+| Running	 |      String          |
 | Completed      |      String          |
 | Failed         |      String          |
