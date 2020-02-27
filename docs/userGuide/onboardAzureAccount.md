@@ -4,7 +4,7 @@ Cloudneeti offers onboard API for Cloud Account onboarding in Cloudneeti for giv
 
         POST https://<CLOUDNEETI API DOMAIN>/api/onboarding/license/<LICENSE ID>/account/azure
 
-| Environment	| Values for CLOUDNEETI API DOMAIN     |
+| Environment	| Values for Cloudneeti API domain     |
 |---------------|--------------------------------------|
 | PROD 	        |   api.cloudneeti.com                 |
 | TRIAL 	| trialapi.cloudneeti.com              |
@@ -61,7 +61,7 @@ For prerequisites for AWS cloud account onboarding, please refer [Amazon Web Ser
 
 
         
-| Environment	| Values for CLOUDNEETI API DOMAIN     |
+| Environment	| Values for Cloudneeti API domain     |
 |---------------|--------------------------------------|
 | PROD 	        |   api.cloudneeti.com                 |
 | TRIAL 	| trialapi.cloudneeti.com              |
@@ -122,7 +122,7 @@ For prerequisites for Azure cloud account onboarding, please refer [Microsoft Az
 
         POST https://<CLOUDNEETI API DOMAIN>/api/onboarding/license/<LICENSE ID>/account/azure
 
-| Environment	| Values for CLOUDNEETI API DOMAIN     |
+| Environment	| Values for Cloudneeti API domain     |
 |---------------|--------------------------------------|
 | PROD 	        |   api.cloudneeti.com                 |
 | TRIAL 	| trialapi.cloudneeti.com              |

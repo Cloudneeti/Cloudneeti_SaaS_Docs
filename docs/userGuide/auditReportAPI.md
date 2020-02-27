@@ -5,7 +5,7 @@ Cloudneeti offers audit report API to get access to views presenting pass/fail/w
 
         GET https://<CLOUDNEETI API DOMAIN>/api/audit/license/<LICENSE ID>/account/<ACCOUNT ID>/job/<JOBID>/benchmark/<BENCHMARK ID>/summary
 
-| Environment	| Values for CLOUDNEETI API DOMAIN |
+| Environment	| Values for Cloudneeti API domain     |
 |---------------|--------------------------------------|
 | PROD 	        |   api.cloudneeti.com                 |
 | TRIAL 	    | trialapi.cloudneeti.com              |
@@ -26,13 +26,13 @@ Cloudneeti offers audit report API to get access to views presenting pass/fail/w
 | Ocp-Apim-Subscription-Key 	| [Cloudneeti API key generated](../../administratorGuide/configureCloudneetiAPIAccess/)             |
 
 
-#### Response
+### Response
 
-        | Name           |           Type       |          Description  |
-        |----------------|----------------------|-----------------------|
-        | result 	 |           Object     | Cloudneeti cloud account audit report       |
-        | statusCode |     Integer      | Cloudneeti API response status code      |
-        | message	 |           String     | Response describing operation result as success or failed.      |
+| Name           |           Type       |          Description  |
+|----------------|----------------------|-----------------------|
+| result 	 |           Object     | Cloudneeti cloud account audit report       |
+| statusCode |     Integer      | Cloudneeti API response status code      |
+| message	 |           String     | Response describing operation result as success or failed.      |
 
 
 
@@ -11096,7 +11096,7 @@ Login to Cloudneeti portal as a License Admin.
 
 1.  Navigate to **Features and Quota​s** under **Configurations**
 
-2.  Copy license ID and paste to notepad.
+2.  Copy License id and paste to notepad.
 
     ![License id](.././images/onboardingOffice365Subscription/License_Id.png#thumbnail)
 
@@ -11105,7 +11105,7 @@ Login to Cloudneeti portal as a License Admin.
 
 1.  Navigate to **Cloud Accounts** in **Configurations**
 
-2.  Copy account ID and paste to notepad.
+2.  Copy Cloud Account id and paste to notepad.
 
     ![Manage Accounts](.././images/onboardingOffice365Subscription/Manage_Accounts.png#thumbnail)
 

@@ -3,7 +3,7 @@ Cloudneeti offers config API to update API application access scope to add a Clo
 
         POST https://<CLOUDNEETI API DOMAIN>/api/onboarding/license/<LICENSE ID>/config
 
-| Environment	| Values for CLOUDNEETI API DOMAIN     |
+| Environment	| Values for Cloudneeti API domain      |
 |---------------|--------------------------------------|
 | PROD 	        |   api.cloudneeti.com                 |
 | TRIAL 	| trialapi.cloudneeti.com              |
@@ -39,9 +39,10 @@ Cloudneeti offers config API to update API application access scope to add a Clo
 | message	 |           String     | Response describing operation result as success or failed.      |
 
 ### Sample Response
-    {
-        "result": "Account Added",
-        "statusCode": 200,
-        "message": "Request Successful"
-    }
+    
+        {
+            "result": "Account Added",
+            "statusCode": 200,
+            "message": "Request Successful"
+        }
 
