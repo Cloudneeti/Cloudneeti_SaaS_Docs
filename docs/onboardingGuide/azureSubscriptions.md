@@ -101,14 +101,14 @@ Login to [Azure Portal](https://portal.azure.com/) with **Global AD Administra
 
 3.  Click on **New Registration**
 
-    ![Service Principal - Azure Portal](.././images/azureSubscriptions/AzureManual_AddSP.png#thumbnail)
+    ![Service Principal - Azure Portal](.././images/azureSubscriptions/AzureManual_AddSP.png)
 
 4. Enter the name, for example "Cloudneeti"
 5. Click **Register**     
     
     ![Service Principal - Azure Portal](.././images/azureSubscriptions/AzureManual_Register.png#thumbnail)
 
-6.	**Copy to clipboard** and paste the Application id to your notepad
+6. **Copy to clipboard** and paste the Application id to your notepad
 
     ![Service Principal - Azure Portal](.././images/azureSubscriptions/Azure_AppReg_App_ID.png#thumbnail)
 
@@ -354,8 +354,8 @@ not assigned.
 
 | Permissions                                                  | Number of Excluded Security Policies     |
 |--------------------------------------------------------------|------------------------------------------|
-| Read All Microsoft Graph permissions                         | 5                                        |
-| Reader role for Azure Subscription level scope.              | 0                                        |
+| Read All Microsoft Graph permissions                         | 5         |
+| Reader role for Azure Subscription level scope.              | 0         |
 | Backup reader role for Azure Subscription level scope.       | 4                                        |
 | Website contributor role for Azure Subscription level scope. | 15                                       |
 | Key Vault access policies for specific managed Key Vaults    | 1                                        |
