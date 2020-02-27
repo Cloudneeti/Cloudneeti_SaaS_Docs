@@ -45,7 +45,10 @@ nav:
   - Estimate Pricing: tryAndBuy/estimatePricing.md
 - Onboarding Guide:
   - Overview: onboardingGuide/onboardingGuideOverview.md
-  - Amazon Web Services: onboardingGuide/amazonWebServiceAccounts.md
+  - Amazon Web Services: 
+    - Onboarding steps: onboardingGuide/amazonWebServiceAccounts.md
+    - AWS VM baseline configuration (optional): onboardingGuide/awsVMBaselineConfiguration.md
+    # - Configure quick wins: onboardingGuide/azureQuickWins.md
   - Micorsoft Azure:
     - Onboarding steps: onboardingGuide/azureSubscriptions.md
     - Grant access to Azure subscription additional roles: onboardingGuide/grantAccessToAzureSubscriptionAdditionalRoles.md
