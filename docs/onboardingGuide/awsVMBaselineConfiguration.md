@@ -1,4 +1,4 @@
-AWS VM Baseline configuration (Optional)
+AWS inspector configuration (Optional)
 ========================================
 
 Includes installing and configuring AWS Inspector Agent to assess your assessment target EC2

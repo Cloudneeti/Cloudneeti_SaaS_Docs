@@ -88,6 +88,8 @@ Once you receive the confirmation, proceed with the following steps.
 
 ## STEP 3 Acquire an access token
 
+Cloudneeti advised not to store token in localstorage.
+
 ### License token
 
         POST https://<CLOUDNEETI API DOMAIN>/api/authorize/license
