@@ -5,6 +5,8 @@ Includes installing and configuring AWS Inspector Agent to assess your assessmen
 instances (collections of AWS resources) for potential security issues and
 vulnerabilities.
 
+Please follow [link](https://aws.amazon.com/inspector/pricing/) for Amazon Inspector pricing.
+
 Please skip this step if AWS inspector is already configured for all EC2 instances.
 
 STEP 1 Installing SSM agent
@@ -76,8 +78,22 @@ Login to [AWS portal](https://console.aws.amazon.com/) with AWS **Administrat
 
     ![AWS Inspector - AWS Console](.././images/amazonWebServiceAccounts/aws_Inspector_ReviewandCreate.png#thumbnail)
 
+### 2.4 Verify assessment target
 
-### 2.4 Run assessment template
+Once Assessment target is created, one can verify the status of the agents. AWS Inspector and therefore Cloudneeti, will only be able to generate/display data for instances where **Agent Status** is **Healthy**.
+
+1.  Expand the Assessment Target created (1)
+
+2.  Click **Preview Target** (2)
+
+3.  A list of all the instances connected to the assessment target will appear
+
+4.  Verify the Agent Status Column (3)
+
+    ![AWS Inspector - AWS Console](.././images/amazonWebServiceAccounts/aws_Inspector_preview_target.png#thumbnail)
+
+
+### 2.5 Run assessment template
 
 1. Run the Assessment Template if required, by default assesment template is run on creation.
 
@@ -121,7 +137,7 @@ Login to [AWS portal](https://console.aws.amazon.com/) with AWS **Administrat
 
 ### 2.2 Verify assessment target
 
-Once Assessment target is created, one can verify the status of the agents as follows:
+Once Assessment target is created, one can verify the status of the agents. AWS Inspector and therefore Cloudneeti, will only be able to generate/display data for instances where **Agent Status** is **Healthy**.
 
 1.  Expand the Assessment Target created (1)
 
@@ -133,7 +149,6 @@ Once Assessment target is created, one can verify the status of the agents as fo
 
     ![AWS Inspector - AWS Console](.././images/amazonWebServiceAccounts/aws_Inspector_preview.png#thumbnail)
 
-**Note :** AWS Inspector and therefore Cloudneeti, will only be able to generate/display data for instances where **Agent Status is Healthy.**
 
 ### 2.3 Create and run Assessment Template
 
