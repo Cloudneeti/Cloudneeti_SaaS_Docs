@@ -61,12 +61,11 @@
 
 2. [Get Cloudneeti access token for License](../../administratorGuide/configureCloudneetiAPIAccess/#license-token/).
 
-3. [Onboard Cloud Account in Cloudneeti for recently deployed infrastructure](../../administratorGuide/configureCloudneetiAPIAccess/#account-token/)
+3. [Onboard Cloud Account in Cloudneeti for recently deployed infrastructure](../../userGuide/onboardCloudAccount/)
 
-4. [Add Cloud Account to Cloudneeti API application access scope](../../administratorGuide/configureCloudneetiAPIAccess/#license-token/).
+4. [Add Cloud Account to Cloudneeti API application access scope](../../userGuide/updateAPIAppAccessScope/).
 
-
-5. [Get Cloudneeti access token for Cloud Account](../../userGuide/updateAPIAppAccessScope/).
+5. [Get Cloudneeti access token for Cloud Account](../../administratorGuide/configureCloudneetiAPIAccess/#account-token/).
 
 5. [Check Cloudneeti Cloud Account scan status](../../userGuide/scanStatusAPI/)
 

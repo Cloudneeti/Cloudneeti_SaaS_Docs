@@ -1,8 +1,11 @@
 
 
+## Prerequisites
+### [Configure Cloudneeti API Access](../../administratorGuide/configureCloudneetiAPIAccess/)
+
 ## License
 
-### [License.AddAccount](../../userGuide/onboardAzureAccount/)
+### [License.AddAccount](../../userGuide/onboardCloudAccount/)
 ### [License.UpdateAPIAccess](../../userGuide/updateAPIAppAccessScope/)
 
 ## Account
