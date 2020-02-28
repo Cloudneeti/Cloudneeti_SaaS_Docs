@@ -17,7 +17,7 @@ The following steps are required to onboard AWS to the Cloudneeti application.
 
 **2. Collecting AWS account information** involves taking a copy of the AWS account id and providing it to License Admin.
 
-**3. AWS VM Baseline configuration (Optional)** includes installing AWS Inspector Agent to assess your assessment target EC2 instances.
+**3. AWS inspector configuration (Optional)** includes installing AWS Inspector Agent to assess your assessment target EC2 instances.
 
 **3. Add AWS Account** to the Cloudneeti application includes adding AWS account information to the respective Cloudneeti cloud account and waiting until the first data collection is complete.
 
@@ -158,7 +158,7 @@ Sign into your AWS account.
     ![SignIn AWS](.././images/amazonWebServiceAccounts/AWS_Management_Console.png#thumbnail)
 
 
-## STEP 3: [AWS VM Baseline configuration (Optional)](../../onboardingGuide/awsVMBaselineConfiguration/)
+## STEP 3: [AWS inspector configuration (Optional)](../../onboardingGuide/awsVMBaselineConfiguration/)
 
 ## STEP 4: Add AWS Account
 The following steps are executed by Cloudneeti application **License Admin** role.
