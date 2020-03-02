@@ -67,7 +67,7 @@ Login to [AWS portal](https://console.aws.amazon.com/) with AWS **Administrat
 2. Select rules package **CIS Operating System Security Configuration Benchmarks-1.0** Reference link [Center for Internet Security (CIS) (2)
     Benchmarks](https://docs.aws.amazon.com/inspector/latest/userguide/inspector_cis)
 
-3. Set **Duration** (3)
+3. Set **Duration** (3), recommended is 1 hour
 
 4. Select **Schedule** (4)
 
@@ -105,8 +105,8 @@ Once Assessment target is created, one can verify the status of the agents. AWS 
 
 
 
-OR STEP 2 Creating Inspector Assessment target and template
------------------------------------------------------------
+OR STEP 2 Creating Inspector Assessment target and template existing
+--------------------------------------------------------------------
 
 Once, SSM agent is installed, users need to enable AWS Inspector in the regions
 where their instances reside and create assessment targets and templates.
@@ -162,7 +162,7 @@ Once Assessment target is created, one can verify the status of the agents. AWS 
 5.  Select rules package **CIS Operating System Security Configuration Benchmarks-1.0** Reference link [Center for Internet Security (CIS) (5)
     Benchmarks](https://docs.aws.amazon.com/inspector/latest/userguide/inspector_cis)
 
-6.  Set **Duration** (6) 
+6.  Set **Duration** (6), recommended is 1 hour
 
 7.  Create SNS topic for notifications of events(optional). (7)
 
