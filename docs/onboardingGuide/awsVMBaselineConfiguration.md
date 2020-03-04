@@ -201,6 +201,7 @@ The AWS inspector configuration enables the following 104 policies.
     | RHEL 7 - Access, Authentication and Authorization | Ensure at/cron is restricted to authorized users                                 |   |
     | RHEL 7 - Access, Authentication and Authorization | Ensure SSH Protocol is set to 2                                                  |   |
     | RHEL 7 - Access, Authentication and Authorization | Ensure SSH LogLevel is set to INFO                                               |   |
+    | RHEL 7 - Access, Authentication and Authorization | Ensure default user shell timeout is 900 seconds or less                                               |   |
     | RHEL 7 - Initial Setup                            | Ensure updates, patches, and additional security software are installed          |   |
     | RHEL 7 - Initial Setup                            | Ensure nodev option set on /tmp partition                                        |   |
     | RHEL 7 - Initial Setup                            | Ensure nosuid option set on /tmp partition                                       |   |
