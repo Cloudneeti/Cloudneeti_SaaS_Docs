@@ -48,16 +48,17 @@ nav:
   - Amazon Web Services: 
     - Onboarding steps: onboardingGuide/amazonWebServiceAccounts.md
     - AWS inspector configuration (optional): onboardingGuide/awsVMBaselineConfiguration.md
-    # - Configure quick wins: onboardingGuide/azureQuickWins.md
+    # - Configure quick wins: onboardingGuide/awsQuickWins.md
   - Micorsoft Azure:
     - Onboarding steps: onboardingGuide/azureSubscriptions.md
     - Grant access to Azure subscription additional roles: onboardingGuide/grantAccessToAzureSubscriptionAdditionalRoles.md
     - Grant access to key vaults: onboardingGuide/grantAccessToKeyVaults.md
-    - Advanced Security Configurations: onboardingGuide/azureAdvanceSecurityConfiguration.md
+    - Advanced security configurations: onboardingGuide/azureAdvanceSecurityConfiguration.md
     - Configure quick wins: onboardingGuide/azureQuickWins.md
+    # - Configure vulnerability scanning: onboardingGuide/azureVulnerability.md
   - Office 365: 
     - Onboarding steps: onboardingGuide/office365Subscription.md
-    - Upgrade Advanced Security Configurations: onboardingGuide/office365AdvanceSecurityConfigurationUpgrade.md
+    - Upgrade advanced security configurations: onboardingGuide/office365AdvanceSecurityConfigurationUpgrade.md
 - User Guide:
   - Sign In and Sign Out: gettingStarted/signInAndSignOut.md
   - User Interface: userGuide/userInterface.md
@@ -67,12 +68,13 @@ nav:
   - Reports: userGuide/reports.md
   - Cloudneeti REST APIs: 
     - Rest APIs: userGuide/restAPIs.md
+    - API User Scenarios: userGuide/apiUserScenarios.md
+    - Token API: userGuide/tokenAPI.md
     - Onboard cloud account API: userGuide/onboardCloudAccount.md
     - Update API app access scope API: userGuide/updateAPIAppAccessScope.md
     - Initiate scan API: userGuide/initiateScanAPI.md
     - Scan status API: userGuide/scanStatusAPI.md
     - Audit report API: userGuide/auditReportAPI.md
-    - API User Scenarios: userGuide/apiUserScenarios.md
 - Administrator Guide:
   - Features and Quotas: administratorGuide/featuresAndQuotas.md
   - Integrations: administratorGuide/manageLicenses.md
@@ -81,7 +83,7 @@ nav:
   - Private Benchmark: administratorGuide/privateBenchmark.md
   - Security Policy Configuration: administratorGuide/securityPolicyExclusions.md
   - Audit Log: administratorGuide/auditLog.md
-  - Configure Cloudneeti API Access (Preview): administratorGuide/configureCloudneetiAPIAccess.md
+  - Configure Cloudneeti API Access: administratorGuide/configureCloudneetiAPIAccess.md
 - Remediation:
   - Overview: remediation/overview.md
   - Azure:
