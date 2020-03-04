@@ -188,14 +188,13 @@ Once Assessment target is created, one can verify the status of the agents. AWS 
 
 STEP 3 Verify policy results on Cloudneeti 
 -------------------------------------------
-
 Cloudneeti will pick up latest analysis complete assessment run within last 30 days data from the AWS Inspector. Policies details will be available on Cloudneeti post next successful scan.
 
 ![AWS Inspector - AWS Console](.././images/amazonWebServiceAccounts/aws_RHEL_Results.png#thumbnail)
 
 
 ## AWS VM baseline policy list
-The AWS inspector configuration enables the following 66 policies.
+The AWS inspector configuration enables the following 104 policies.
 
  | **Category**                                      | **Policy Title**                                                        |
     |---------------------------------------------------|-------------------------------------------------------------------------|
@@ -264,5 +263,41 @@ The AWS inspector configuration enables the following 66 policies.
     | RHEL 7 - Services                                 | Ensure rsh client is not installed                                               |   |
     | RHEL 7 - Services                                 | Ensure talk client is not installed                                              |   |
     | RHEL 7 - Services                                 | Ensure telnet client is not installed                                            |   |
-    | RHEL 7 - Services                                 | Ensure LDAP client is not installed                                              |   |
-                              |
+    | RHEL 7 - Services                                 | Ensure LDAP client is not installed                                              |   | |
+    | RHEL 7 -  Initial Setup                            | Ensure address space layout randomization (ASLR) is enabled |
+    | RHEL 7 -  Initial Setup                            | Ensure prelink is disabled                                  |
+    | RHEL 7 -  Initial Setup                            | Ensure permissions on /etc/issue are configured             |
+    | RHEL 7 -  Network Configuration                    | Ensure TCP SYN Cookies is enabled                           |
+    | RHEL 7 -  Network Configuration                    | Ensure TCP Wrappers is installed                            |
+    | RHEL 7 -  Network Configuration                    | Ensure iptables is installed                                |
+    | RHEL 7 -  Network Configuration                    | Ensure firewall rules exist for all open ports              |
+    | RHEL 7 -  Access, Authentication and Authorization | Ensure SSH X11 forwarding is disabled                       |
+    | RHEL 7 -  Access, Authentication and Authorization | Ensure SSH MaxAuthTries is set to 4 or less                 |
+    | RHEL 7 -  Access, Authentication and Authorization | Ensure SSH IgnoreRhosts is enabled                          |
+    | RHEL 7 -  Access, Authentication and Authorization | Ensure SSH HostbasedAuthentication is disabled              |
+    | RHEL 7 -  Access, Authentication and Authorization | Ensure SSH root login is disabled                           |
+    | RHEL 7 -  Access, Authentication and Authorization | Ensure SSH PermitEmptyPasswords is disabled                 |
+    | RHEL 7 -  Access, Authentication and Authorization | Ensure SSH PermitUserEnvironment is disabled                |
+    | RHEL 7 -  Access, Authentication and Authorization | Ensure only approved MAC algorithms are used                |
+    | RHEL 7 -  Access, Authentication and Authorization | Ensure SSH Idle Timeout Interval is configured              |
+    | RHEL 7 -  Access, Authentication and Authorization | Ensure SSH LoginGraceTime is set to one minute or less      |
+    | RHEL 7 -  Access, Authentication and Authorization | Ensure SSH access is limited                                |
+    | RHEL 7 -  Access, Authentication and Authorization | Ensure SSH warning banner is configured                     |
+    | RHEL 7 -  Access, Authentication and Authorization | Ensure password reuse is limited                            |
+    | RHEL 7 -  Access, Authentication and Authorization | Ensure password hashing algorithm is SHA-512                |
+    | RHEL 7 -  Access, Authentication and Authorization | Ensure default group for the root account is GID 0          |
+    | RHEL 7 -  Access, Authentication and Authorization | Ensure minimum days between password changes is 7 or more   |
+    | RHEL 7 -  Access, Authentication and Authorization | Ensure password expiration warning days is 7 or more        |
+    | RHEL 7 -  Access, Authentication and Authorization | Ensure all users last password change date is in the past   |
+    | RHEL 7 -  System Maintenance                       | Ensure permissions on /etc/shadow- are configured           |
+    | RHEL 7 -  System Maintenance                       | Ensure permissions on /etc/group- are configured            |
+    | RHEL 7 -  System Maintenance                       | Ensure permissions on /etc/gshadow- are configured          |
+    | RHEL 7 -  System Maintenance                       | Ensure no world writable files exist                        |
+    | RHEL 7 -  System Maintenance                       | Ensure no unowned files or directories exist                |
+    | RHEL 7 -  System Maintenance                       | Ensure no ungrouped files or directories exist              |
+    | RHEL 7 -  System Maintenance                       | Ensure no legacy "+" entries exist in /etc/passwd           |
+    | RHEL 7 -  System Maintenance                       | Ensure no legacy "+" entries exist in /etc/shadow           |
+    | RHEL 7 -  System Maintenance                       | Ensure no legacy "+" entries exist in /etc/group            |
+    | RHEL 7 -  System Maintenance                       | Ensure root is the only UID 0 account                       |
+    | RHEL 7 -  System Maintenance                       | Ensure no users have .forward files                         |
+    | RHEL 7 -  System Maintenance                       | Ensure no users have .netrc files                           |

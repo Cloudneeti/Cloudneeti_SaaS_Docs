@@ -1,7 +1,7 @@
  Audit Report API 
 =================
 
-Cloudneeti offers audit report API to get access to views presenting pass/fail/warn status at a compliance/benchmark category level and passed/total resource count at policy level for provided Benchmark.
+The Audit Report API provide information related to your compliance posture across various compliance standards. The filters available through the API enable you to view your status across different cloud accounts and for different benchmarks [(list below)](../../userGuide/auditReportAPI/#cloudneeti-supported-benchmarks)
 
         GET https://<CLOUDNEETI API DOMAIN>/api/audit/license/<LICENSE ID>/account/<ACCOUNT ID>/job/<JOBID>/benchmark/<BENCHMARK ID>/summary
 
