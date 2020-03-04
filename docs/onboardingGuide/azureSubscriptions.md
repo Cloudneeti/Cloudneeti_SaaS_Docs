@@ -205,7 +205,7 @@ Use the Create-ServicePrincipal-AzureOnboarding.ps1 script to create and registe
 
     ![Grant permission ](.././images/azureSubscriptions/Azure_API_Permissions.png#thumbnail)
 
-## STEP 2: Grant access to Cloudneeti registered app 
+## STEP 2: Grant access to Cloudneeti registered app existing
 
 The following roles need to be granted to the Cloudneeti App registered in the previous step
 

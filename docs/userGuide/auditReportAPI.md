@@ -1,5 +1,5 @@
- Audit Report API (Preview)
-=====================================
+ Audit Report API 
+=================
 
 Cloudneeti offers audit report API to get access to views presenting pass/fail/warn status at a compliance/benchmark category level and passed/total resource count at policy level for provided Benchmark.
 

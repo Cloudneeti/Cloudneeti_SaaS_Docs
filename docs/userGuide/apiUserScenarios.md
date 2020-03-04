@@ -1,4 +1,4 @@
-# API User Scenarios (Preview)
+# API User Scenarios
 
 ## Actors: Customer Auditor
 
