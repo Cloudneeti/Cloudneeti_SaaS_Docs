@@ -1,11 +1,11 @@
- Audit Report API (Preview)
-=====================================
+ Audit Report API 
+=================
 
 Cloudneeti offers audit report API to get access to views presenting pass/fail/warn status at a compliance/benchmark category level and passed/total resource count at policy level for provided Benchmark.
 
-        GET https://<CLOUDNEETI API DOMAIN>/api/audit/license/<LICENSE ID>/account/<ACCOUNT ID>/benchmark/<BENCHMARK ID>/summary
+        GET https://<CLOUDNEETI API DOMAIN>/api/audit/license/<LICENSE ID>/account/<ACCOUNT ID>/job/<JOBID>/benchmark/<BENCHMARK ID>/summary
 
-| Environment	| Values for CLOUDNEETI API DOMAIN |
+| Environment	| Values for Cloudneeti API domain     |
 |---------------|--------------------------------------|
 | PROD 	        |   api.cloudneeti.com                 |
 | TRIAL 	    | trialapi.cloudneeti.com              |
@@ -14,26 +14,35 @@ Cloudneeti offers audit report API to get access to views presenting pass/fail/w
 
 | Parameter           |           Description                                |           Required/Optional  |
 |-----------|----------------------------------------------------------------|----------------------------|
-| LICENSE ID  |          [Cloudneeti License Id​](#license-id)                  | Required|
-| ACCOUNT ID  |          [Cloud Account Id​](#account-id)                          | Required|
-| BENCHMARK ID|        [Benchmark Id​](#cloudneeti-supported-benchmarks)        | Required|
+| license  |          [Cloudneeti License Id​](#license-id)                  | Required|
+| account  |          [Cloud Account Id​](#account-id)                          | Required|
+| job       |        Cloud Account scan job id          | Required|
+| benchmark |        [Benchmark Id​](#cloudneeti-supported-benchmarks)        | Required|
+
+### Header
+
+| Key	        | Value                                |
+|---------------|--------------------------------------|
+| Ocp-Apim-Subscription-Key 	| [Cloudneeti API key generated](../../administratorGuide/configureCloudneetiAPIAccess/)             |
 
 
-### Responses
+### Response
 
 | Name           |           Type       |          Description  |
 |----------------|----------------------|-----------------------|
-| 200 OK	     |           Audit Report     | Cloudneeti cloud account audit report for provided Benchmark      |
-| Other Status Codes |      Error     | Error response describing why the operation failed.     |
+| result 	 |           Object     | Cloudneeti cloud account audit report       |
+| statusCode |     Integer      | Cloudneeti API response status code      |
+| message	 |           String     | Response describing operation result as success or failed.      |
 
 
-### Examples
+
+<!-- ### Examples
 
 #### Sample Request
 
-        get https://api.cloudneeti.com/api/audit/license/9085e05b-c5fe-49e1-9511-af4002aad6c4/account/7b227c87-2fb2-4fe4-bbab-c7318de12f5e/summary
+        GET https://api.cloudneeti.com/api/audit/license/9085e05b-c5fe-49e1-9511-af4002aad6c4/account/7b227c87-2fb2-4fe4-bbab-c7318de12f5e/summary -->
 
-## How to use
+<!-- ## How to use
 
  Cloudneeti audit report API can be called using Powershell script with below steps.
 
@@ -82,7 +91,7 @@ access Cloudneeti.
 5. Given benchmark report in json format will be downloaded and saved at
 location where the script is executed.
     
-    ![compliance Status](.././images/benchmarkSummaryReport/SummaryReport_Json_Output.png#thumbnail)
+    ![compliance Status](.././images/benchmarkSummaryReport/SummaryReport_Json_Output.png#thumbnail) -->
 
 Sample Report
 -------------
@@ -11087,7 +11096,7 @@ Login to Cloudneeti portal as a License Admin.
 
 1.  Navigate to **Features and Quota​s** under **Configurations**
 
-2.  Copy license ID and paste to notepad.
+2.  Copy License id and paste to notepad.
 
     ![License id](.././images/onboardingOffice365Subscription/License_Id.png#thumbnail)
 
@@ -11096,12 +11105,12 @@ Login to Cloudneeti portal as a License Admin.
 
 1.  Navigate to **Cloud Accounts** in **Configurations**
 
-2.  Copy account ID and paste to notepad.
+2.  Copy Cloud Account id and paste to notepad.
 
     ![Manage Accounts](.././images/onboardingOffice365Subscription/Manage_Accounts.png#thumbnail)
 
 
-### Generate Cloudneeti API key
+<!-- ### Generate Cloudneeti API key
 
 ##### SIGN-UP ON CLOUDNEETI API PORTAL
 
@@ -11149,7 +11158,7 @@ Once you receive the confirmation, proceed with the following steps.
 
     ![Primary key](.././images/onboardingOffice365Subscription/Primary_key.png#thumbnail)
 
-    >   Primary key
+    >   Primary key -->
 
 ### Cloudneeti supported benchmarks 
 
