@@ -17,7 +17,7 @@ The following steps are required to onboard AWS to the Cloudneeti application.
 
 **2. Collecting AWS account information** involves taking a copy of the AWS account id and providing it to License Admin.
 
-**3. AWS inspector configuration (Optional)** includes installing AWS Inspector Agent to assess your assessment target EC2 instances.
+**3. AWS inspector configuration (Optional)** includes installing AWS Inspector Agent to assess your assessment target EC2 instances. 
 
 **3. Add AWS Account** to the Cloudneeti application includes adding AWS account information to the respective Cloudneeti cloud account and waiting until the first data collection is complete.
 
@@ -31,8 +31,6 @@ One or more people with the following roles are required to complete Amazon Web 
 | Administrator | AWS        |
 
 Cloudneeti application **License Admin** is assigned to an individual in the customer’s organization who will be responsible for configuration of the respective Cloudneeti application License.
-
-AWS **Administrator** role is required for granting Cloudneeti application access rights to AWS account(s). The administrator must have enough permissions to create a role as a trusted entity with the [SecurityAudit access policy.](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_job-functions.html#jf_security-auditor)
 
 ### Collect information
 
@@ -159,6 +157,7 @@ Sign into your AWS account.
 
 
 ## STEP 3: [AWS inspector configuration (Optional)](../../onboardingGuide/awsVMBaselineConfiguration/)
+AWS **Administrator** role is required for granting Cloudneeti application access rights to AWS account(s). The administrator must have enough permissions to create a role as a trusted entity with the [SecurityAudit access policy.](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_job-functions.html#jf_security-auditor)
 
 ## STEP 4: Add AWS Account
 The following steps are executed by Cloudneeti application **License Admin** role.
