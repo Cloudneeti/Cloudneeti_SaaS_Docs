@@ -4,460 +4,121 @@
     .release_notes tr:nth-child(even){background-color: #f2f2f2;}
     .release_notesth {padding-top: 12px; padding-bottom: 12px; text-align: left; background-color: #9e9d9d; color: white;}
 </style>
-<div class='release_notes'>
-    <h2 id="february-2020-v2261"><strong>February 2020 - v2.26.1</strong></h2>
-    <ol>
-        <li>
-        <p><strong>User Experience Improvements</strong></p>
-        <ul>
-        <li>
-        <p><strong>Asset Security Dashboard Preview</strong>: View protected Azure and AWS assets
-            per region. Refer documentation for more details <a href="https://docs.cloudneeti.com/userGuide/dashboards/#assets-security-preview">here</a>.</p>
-        </li>
-        <li>
-        <p><strong>Risk Dashboard</strong>: Updates to user interface.</p>
-        </li>
-        <li>
-        <p><strong>Release Notification:</strong> Users will be notified on a new Cloudneeti SaaS release.</p>
-        </li>
-        <li>
-        <p><strong>AWS Remediation:</strong> Support for deploying Cloudneeti Remediation Framework in selected
-            region.</p>
-        </li>
-        <li>
-        <p><strong>Auto Remediation:</strong> Added audit logs for successful configuration of Azure and AWS auto remediation.</p>
-        </li>
-        </ul>
-        </li>
-        <li>
-        <p><strong>Platform &amp; Stability Improvements</strong></p>
-        <ul>
-        <li>
-        <p>Fixed following bugs</p>
-        <ul>
-        <li>
-        <p>Subsequent AWS resources should get remediated in case one of the resources remediation fails from AWS</p>
-        </li>
-        <li>
-        <p>Authentication token enhancements</p>
-        </li>
-        </ul>
-        </li>
-        </ul>
-        </li>
-        <li>
-        <p><strong>Policies &amp; Benchmarks</strong></p>
-        <ul>
-        <li>Added following 66 AWS RHEL VM Baseline policies</li>
-        </ul>
-        <div class="md-typeset__scrollwrap"><div class="md-typeset__table"><table>
-        <thead>
-        <tr>
-        <th><strong>Category</strong></th>
-        <th><strong>Policy Title</strong></th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-        <td>RHEL 7 - Access, Authentication and Authorization</td>
-        <td>Ensure at/cron is restricted to authorized users</td>
-        </tr>
-        <tr>
-        <td>RHEL 7 - Access, Authentication and Authorization</td>
-        <td>Ensure SSH Protocol is set to 2</td>
-        </tr>
-        <tr>
-        <td>RHEL 7 - Access, Authentication and Authorization</td>
-        <td>Ensure SSH LogLevel is set to INFO</td>
-        </tr>
-        <tr>
-        <td>RHEL 7 - Initial Setup</td>
-        <td>Ensure updates, patches, and additional security software are installed</td>
-        </tr>
-        <tr>
-        <td>RHEL 7 - Initial Setup</td>
-        <td>Ensure nodev option set on /tmp partition</td>
-        </tr>
-        <tr>
-        <td>RHEL 7 - Initial Setup</td>
-        <td>Ensure nosuid option set on /tmp partition</td>
-        </tr>
-        <tr>
-        <td>RHEL 7 - Initial Setup</td>
-        <td>Ensure noexec option set on /tmp partition</td>
-        </tr>
-        <tr>
-        <td>RHEL 7 - Initial Setup</td>
-        <td>Ensure nodev option set on /dev/shm partition</td>
-        </tr>
-        <tr>
-        <td>RHEL 7 - Initial Setup</td>
-        <td>Ensure nosuid option set on /dev/shm partition</td>
-        </tr>
-        <tr>
-        <td>RHEL 7 - Initial Setup</td>
-        <td>Ensure noexec option set on /dev/shm partition</td>
-        </tr>
-        <tr>
-        <td>RHEL 7 - Initial Setup</td>
-        <td>Ensure mounting of cramfs filesystems is disabled</td>
-        </tr>
-        <tr>
-        <td>RHEL 7 - Initial Setup</td>
-        <td>Ensure mounting of freevxfs filesystems is disabled</td>
-        </tr>
-        <tr>
-        <td>RHEL 7 - Initial Setup</td>
-        <td>Ensure mounting of jffs2 filesystems is disabled</td>
-        </tr>
-        <tr>
-        <td>RHEL 7 - Initial Setup</td>
-        <td>Ensure mounting of hfs filesystems is disabled</td>
-        </tr>
-        <tr>
-        <td>RHEL 7 - Initial Setup</td>
-        <td>Ensure mounting of hfsplus filesystems is disabled</td>
-        </tr>
-        <tr>
-        <td>RHEL 7 - Initial Setup</td>
-        <td>Ensure mounting of squashfs filesystems is disabled</td>
-        </tr>
-        <tr>
-        <td>RHEL 7 - Initial Setup</td>
-        <td>Ensure mounting of udf filesystems is disabled</td>
-        </tr>
-        <tr>
-        <td>RHEL 7 - Initial Setup</td>
-        <td>Ensure gpgcheck is globally activated</td>
-        </tr>
-        <tr>
-        <td>RHEL 7 - Initial Setup</td>
-        <td>Ensure AIDE is installed</td>
-        </tr>
-        <tr>
-        <td>RHEL 7 - Initial Setup</td>
-        <td>Ensure filesystem integrity is regularly checked</td>
-        </tr>
-        <tr>
-        <td>RHEL 7 - Initial Setup</td>
-        <td>Ensure permissions on bootloader config are configured</td>
-        </tr>
-        <tr>
-        <td>RHEL 7 - Initial Setup</td>
-        <td>Ensure SELinux is installed</td>
-        </tr>
-        <tr>
-        <td>RHEL 7 - Initial Setup</td>
-        <td>Ensure SELinux is not disabled in bootloader configuration</td>
-        </tr>
-        <tr>
-        <td>RHEL 7 - Initial Setup</td>
-        <td>Ensure the SELinux state is enforcing</td>
-        </tr>
-        <tr>
-        <td>RHEL 7 - Initial Setup</td>
-        <td>Ensure SELinux policy is configured</td>
-        </tr>
-        <tr>
-        <td>RHEL 7 - Initial Setup</td>
-        <td>Ensure SETroubleshoot is not installed</td>
-        </tr>
-        <tr>
-        <td>RHEL 7 - Initial Setup</td>
-        <td>Ensure the MCS Translation Service (mcstrans) is not installed</td>
-        </tr>
-        <tr>
-        <td>RHEL 7 - Logging and Auditing</td>
-        <td>Ensure rsyslog or syslog-ng is installed</td>
-        </tr>
-        <tr>
-        <td>RHEL 7 - Logging and Auditing</td>
-        <td>Ensure permissions on all logfiles are configured</td>
-        </tr>
-        <tr>
-        <td>RHEL 7 - Logging and Auditing</td>
-        <td>Ensure rsyslog default file permissions configured</td>
-        </tr>
-        <tr>
-        <td>RHEL 7 - Logging and Auditing</td>
-        <td>Ensure rsyslog is configured to send logs to a remote log host</td>
-        </tr>
-        <tr>
-        <td>RHEL 7 - Logging and Auditing</td>
-        <td>Ensure syslog-ng default file permissions configured</td>
-        </tr>
-        <tr>
-        <td>RHEL 7 - Logging and Auditing</td>
-        <td>Ensure auditing for processes that start prior to auditd is enabled</td>
-        </tr>
-        <tr>
-        <td>RHEL 7 - Logging and Auditing</td>
-        <td>Ensure events that modify date and time information are collected</td>
-        </tr>
-        <tr>
-        <td>RHEL 7 - Logging and Auditing</td>
-        <td>Ensure events that modify user/group information are collected</td>
-        </tr>
-        <tr>
-        <td>RHEL 7 - Logging and Auditing</td>
-        <td>Ensure events that modify the system's network environment are collected</td>
-        </tr>
-        <tr>
-        <td>RHEL 7 - Logging and Auditing</td>
-        <td>Ensure events that modify the system's Mandatory Access Controls are collected</td>
-        </tr>
-        <tr>
-        <td>RHEL 7 - Logging and Auditing</td>
-        <td>Ensure login and logout events are collected</td>
-        </tr>
-        <tr>
-        <td>RHEL 7 - Logging and Auditing</td>
-        <td>Ensure session initiation information is collected</td>
-        </tr>
-        <tr>
-        <td>RHEL 7 - Logging and Auditing</td>
-        <td>Ensure discretionary access control permission modification events are collected</td>
-        </tr>
-        <tr>
-        <td>RHEL 7 - Logging and Auditing</td>
-        <td>Ensure unsuccessful unauthorized file access attempts are collected</td>
-        </tr>
-        <tr>
-        <td>RHEL 7 - Logging and Auditing</td>
-        <td>Ensure successful file system mounts are collected</td>
-        </tr>
-        <tr>
-        <td>RHEL 7 - Logging and Auditing</td>
-        <td>Ensure file deletion events by users are collected</td>
-        </tr>
-        <tr>
-        <td>RHEL 7 - Logging and Auditing</td>
-        <td>Ensure system administrator actions (sudolog) are collected</td>
-        </tr>
-        <tr>
-        <td>RHEL 7 - Logging and Auditing</td>
-        <td>Ensure the audit configuration is immutable</td>
-        </tr>
-        <tr>
-        <td>RHEL 7 - Logging and Auditing</td>
-        <td>Ensure audit log storage size is configured</td>
-        </tr>
-        <tr>
-        <td>RHEL 7 - Logging and Auditing</td>
-        <td>Ensure system is disabled when audit logs are full</td>
-        </tr>
-        <tr>
-        <td>RHEL 7 - Logging and Auditing</td>
-        <td>Ensure audit logs are not automatically deleted</td>
-        </tr>
-        <tr>
-        <td>RHEL 7 - Network Configuration</td>
-        <td>Ensure IP forwarding is disabled</td>
-        </tr>
-        <tr>
-        <td>RHEL 7 - Network Configuration</td>
-        <td>Ensure packet redirect sending is disabled</td>
-        </tr>
-        <tr>
-        <td>RHEL 7 - Network Configuration</td>
-        <td>Ensure source routed packets are not accepted</td>
-        </tr>
-        <tr>
-        <td>RHEL 7 - Network Configuration</td>
-        <td>Ensure ICMP redirects are not accepted</td>
-        </tr>
-        <tr>
-        <td>RHEL 7 - Network Configuration</td>
-        <td>Ensure secure ICMP redirects are not accepted</td>
-        </tr>
-        <tr>
-        <td>RHEL 7 - Network Configuration</td>
-        <td>Ensure suspicious packets are logged</td>
-        </tr>
-        <tr>
-        <td>RHEL 7 - Network Configuration</td>
-        <td>Ensure broadcast ICMP requests are ignored</td>
-        </tr>
-        <tr>
-        <td>RHEL 7 - Network Configuration</td>
-        <td>Ensure bogus ICMP responses are ignored</td>
-        </tr>
-        <tr>
-        <td>RHEL 7 - Network Configuration</td>
-        <td>Ensure Reverse Path Filtering is enabled</td>
-        </tr>
-        <tr>
-        <td>RHEL 7 - Services</td>
-        <td>Ensure X Window System is not installed</td>
-        </tr>
-        <tr>
-        <td>RHEL 7 - Services</td>
-        <td>Ensure time synchronization is in use</td>
-        </tr>
-        <tr>
-        <td>RHEL 7 - Services</td>
-        <td>Ensure ntp is configured</td>
-        </tr>
-        <tr>
-        <td>RHEL 7 - Services</td>
-        <td>Ensure chrony is configured</td>
-        </tr>
-        <tr>
-        <td>RHEL 7 - Services</td>
-        <td>Ensure NIS Client is not installed</td>
-        </tr>
-        <tr>
-        <td>RHEL 7 - Services</td>
-        <td>Ensure rsh client is not installed</td>
-        </tr>
-        <tr>
-        <td>RHEL 7 - Services</td>
-        <td>Ensure talk client is not installed</td>
-        </tr>
-        <tr>
-        <td>RHEL 7 - Services</td>
-        <td>Ensure telnet client is not installed</td>
-        </tr>
-        <tr>
-        <td>RHEL 7 - Services</td>
-        <td>Ensure LDAP client is not installed</td>
-        </tr>
-        <tr>
-        <td></td>
-        <td></td>
-        </tr>
-        </tbody>
-        </table></div></div>
-        <ul>
-        <li>Added following 3 Azure Data Lake policies</li>
-        </ul>
-        <div class="md-typeset__scrollwrap"><div class="md-typeset__table"><table>
-        <thead>
-        <tr>
-        <th><strong>Category</strong></th>
-        <th><strong>Policy Title</strong></th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-        <td>Azure - Storage and Databases</td>
-        <td>Ensure that firewall is enabled for Azure Data Lake Storage Gen1</td>
-        </tr>
-        <tr>
-        <td>Azure - Storage and Databases</td>
-        <td>Ensure that encryption of sensitive data is enabled for Azure Data Lake Storage Gen1</td>
-        </tr>
-        <tr>
-        <td>Azure - Storage and Databases</td>
-        <td>Ensure that diagnostics log is enabled for Azure Data Lake Storage Gen1</td>
-        </tr>
-        </tbody>
-        </table></div></div>
-        <ul>
-        <li>
-        <p>Added following 18 M365 IAM policies
-            To get data for these policies, please provide version 1.4 while executing the script for upgrade or creation of Office 365 advance security configuration.</p>
-        <ul>
-        <li>References <ul>
-        <li><a href="https://docs.cloudneeti.com/onboardingGuide/office365AdvanceSecurityConfigurationUpgrade">Upgrading the existing Office 365 account</a> </li>
-        <li><a href="https://docs.cloudneeti.com/onboardingGuide/office365Subscription">Onboarding new Office 365 account</a> and <a href="../../onboardingGuide/office365Subscription/#step-3-advanced-security-configuration/">Creation of Advanced security configuration.</a></li>
-        </ul>
-        </li>
-        </ul>
-        <div class="md-typeset__scrollwrap"><div class="md-typeset__table">
-        <table>
-        <thead>
-        <tr>
-        <th><strong>Category</strong></th>
-        <th><strong>Policy Title</strong></th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-        <td>Identity</td>
-        <td>Ensure that 'Number of methods required to reset' is set to '2'</td>
-        </tr>
-        <tr>
-        <td>Identity</td>
-        <td>Ensure that 'Number of days before users are asked to re-confirm their authentication information' is not set to '0'</td>
-        </tr>
-        <tr>
-        <td>Identity</td>
-        <td>Ensure that 'Notify users on password resets?' is set to 'Yes</td>
-        </tr>
-        <tr>
-        <td>Identity</td>
-        <td>Ensure that 'Notify all admins when other admins reset their password?' is set to 'Yes'</td>
-        </tr>
-        <tr>
-        <td>Identity</td>
-        <td>Ensure that 'Users can consent to apps accessing company data on their behalf' is set to 'No'</td>
-        </tr>
-        <tr>
-        <td>Identity</td>
-        <td>Ensure that 'Users can add gallery apps to their Access Panel' is set to 'No'</td>
-        </tr>
-        <tr>
-        <td>Identity</td>
-        <td>Ensure that 'Users can register applications' is set to 'No'</td>
-        </tr>
-        <tr>
-        <td>Identity</td>
-        <td>Ensure that 'Guest user permissions are limited' is set to 'Yes'</td>
-        </tr>
-        <tr>
-        <td>Identity</td>
-        <td>Ensure that 'Members can invite' is set to 'No'</td>
-        </tr>
-        <tr>
-        <td>Identity</td>
-        <td>Ensure that 'Guests can invite' is set to 'No'</td>
-        </tr>
-        <tr>
-        <td>Identity</td>
-        <td>Ensure that 'Restrict access to Azure AD administration portal' is set to 'Yes'</td>
-        </tr>
-        <tr>
-        <td>Identity</td>
-        <td>Ensure that 'Self-service group management enabled' is set to 'No'</td>
-        </tr>
-        <tr>
-        <td>Identity</td>
-        <td>Ensure that 'Users can create security groups' is set to 'No'</td>
-        </tr>
-        <tr>
-        <td>Identity</td>
-        <td>Ensure that 'Users who can manage security groups' is set to 'None'</td>
-        </tr>
-        <tr>
-        <td>Identity</td>
-        <td>Ensure that 'Users can create Office 365 groups' is set to 'No'</td>
-        </tr>
-        <tr>
-        <td>Identity</td>
-        <td>Ensure that 'Users who can manage Office 365 groups' is set to 'None'</td>
-        </tr>
-        <tr>
-        <td>Identity</td>
-        <td>Ensure that 'Enable All Users group' is set to 'Yes'</td>
-        </tr>
-        <tr>
-        <td>Identity</td>
-        <td>Ensure that 'Require Multi-Factor Auth to join devices' is set to 'Yes'</td>
-        </tr>
-        </tbody>
-        </table>
-        </div></div>
-        </li>
-        <li>
-        <p>Updated following 115 Azure security center policies to support Azure
-            Management Group level scope and show No Data as default behavior.</p>
-        <p>Refrences</p>
-        <p><a href="https://docs.cloudneeti.com/remediation/azureQuickWins/#configure-azure-security-center-policies-azure-security-center">Configure ASC policies at Management Group level</a> </p>
-        <div class="md-typeset__scrollwrap"><div class="md-typeset__table">
-        </div></div>
-        </li>
-        </ul>
-        </li>
-        </ol>
-</div>
+<div class="release_notes">
+
+    <h2 id="march-2020-v2271"><strong>March 2020 - v2.27.1</strong></h2>
+    <ul>
+    <li>
+    <p>User Experience Improvements</p>
+    <ul>
+    <li>
+    <p>Cloudneeti API access: Cloudneeti exposes API to access for Cloud Account
+        onboarding, audit report, scan etc&nbsp;. Refer documentation for more details
+        <a href="../../userGuide/restAPIs/">here</a>
+    </p>
+    </li>
+    <li>
+    <p>Added <em>Asset Security (Preview)</em> dashboard: View protected Azure and AWS
+        assets per region. Refer documentation for more
+        details&nbsp;<a href="../../userGuide/dashboards/#assets-security-preview">here</a>.
+        Added vulnerabilities for Azure VM</p>
+    </li>
+    <li>
+    <p>Deprecated Assets dashboard</p>
+    </li>
+    <li>
+    <p>Private Benchmarks: restrict user deletion, role changes in case
+        collaborated.</p>
+    </li>
+    <li>
+    <p>Updates in benchmark sequence&nbsp;on <em>Compliance</em> dashboard.</p>
+    </li>
+    </ul>
+    </li>
+    <li>
+    <p>Platform &amp; Stability Improvements</p>
+    <ul>
+    <li>
+    <p>Fixed following bugs</p>
+    <ul>
+    <li>Audit log not showing Initiated by when user tries to remediate
+        AWS/Azure policy.</li>
+    </ul>
+    </li>
+    <li>
+    <p>Updated implementation for following policies</p>
+    <ul>
+    <li>
+    <p>Ensure that Logging is enabled for Azure Key Vault</p>
+    </li>
+    <li>
+    <p>Ensure that Service Principal Certificates are renewed before it expires</p>
+    </li>
+    </ul>
+    </li>
+    <li>
+    <p>Audit and Remediation procedures commands are not properly given in the
+        below policies.</p>
+    <ul>
+    <li>
+    <p>Ensure discretionary access control permission modification events are
+        collected</p>
+    </li>
+    <li>
+    <p>Ensure unsuccessful unauthorized file access attempts are collected</p>
+    </li>
+    <li>
+    <p>Ensure successful file system mounts are collected</p>
+    </li>
+    <li>
+    <p>Ensure file deletion events by users are collected</p>
+    </li>
+    <li>
+    <p>Ensure changes to system administration scope (sudoers) is collected</p>
+    </li>
+    <li>
+    <p>Ensure kernel module loading and unloading is collected</p>
+    </li>
+    <li>
+    <p>Ensure events that modify date and time information are collected</p>
+    </li>
+    <li>
+    <p>Ensure events that modify user/group information are collected</p>
+    </li>
+    <li>
+    <p>Ensure events that modify the system's network environment are collected</p>
+    </li>
+    <li>
+    <p>Ensure login and logout events are collected</p>
+    </li>
+    <li>
+    <p>Ensure session initiation information is collected</p>
+    </li>
+    <li>
+    <p>Ensure Storage Container storing activity logs is not Publicly
+        accessible</p>
+    </li>
+    <li>
+    <p>'Ensure that monitoring of unencrypted SQL databases is enabled in ASC</p>
+    </li>
+    </ul>
+    </li>
+    </ul>
+    </li>
+    <li>
+    <p>Policies &amp; Benchmarks&nbsp;</p>
+    <ul>
+    <li>
+    <p>Added 3 Azure account related policies</p>
+    <div class="md-typeset__scrollwrap"><div class="md-typeset__table"><table>
+    </div></div>
+    </li>
+    <li>
+    <p>Added 38 AWS RHEL VM Baseline policies</p>
+    <div class="md-typeset__scrollwrap"><div class="md-typeset__table"><table>
+</div></div>
+    </li>
+    </ul>
+    </li>
+    </ul>
+    </div>

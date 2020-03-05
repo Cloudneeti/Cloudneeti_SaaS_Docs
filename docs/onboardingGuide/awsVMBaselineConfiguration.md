@@ -2,8 +2,9 @@ AWS inspector configuration (Optional)
 ========================================
 
 Includes installing and configuring AWS Inspector Agent to assess your assessment target EC2
-instances (collections of AWS resources) for potential security issues and
-vulnerabilities.
+instances (collections of AWS resources) for potential security issues and vulnerabilities.
+
+Amazon Inspector is a security assessment service for your Amazon EC2 instances and the applications running on those instances. Enabling AWS Inspector for a host assessment allows various OS baselines as defined by CIS automatically light up on the Cloudneeti dashboards.
 
 Please follow [link](https://aws.amazon.com/inspector/pricing/) for Amazon Inspector pricing.
 
@@ -27,11 +28,23 @@ Follow links for installation
 [Install SSM Agent](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-manual-agent-install.html)
 
 
-STEP 2 Creating Inspector Assessment target and template first time
--------------------------------------------------------------------
+STEP 2 Creating Inspector Assessment target and template 
+--------------------------------------------------------
+Once, SSM agent is installed, enable AWS Inspector in the regions where instances reside and create assessment targets and templates.
+
+Cloudneeti currently supports RHEL instances and in the near future many other Linux distributions and Windows server editions will be supported.
+
+Multiple assessment targets and templates can be created.  For exaple, create an assessment target is each of the Operating systems separately, and add to seperate template.
+- OS = RedHat Linux
+- Tags = All tags | None
+- Instances = All instances
+
 Login to [AWS portal](https://console.aws.amazon.com/) with AWS **Administrator** role.
 
-### 2.1 Get started for inspector advance setup
+
+### New to inspector
+
+#### 2.1 Get started for inspector advance setup
 
 1.  Navigate to the inspector page
 
@@ -44,7 +57,7 @@ Login to [AWS portal](https://console.aws.amazon.com/) with AWS **Administrat
     ![AWS Inspector - AWS Console](.././images/amazonWebServiceAccounts/aws_Inspector_AdvSetup.png#thumbnail)
 
 
-### 2.2 Creating assessment target
+#### 2.2 Creating assessment target
 
 1.  Add **Name** (1)
 
@@ -60,7 +73,7 @@ Login to [AWS portal](https://console.aws.amazon.com/) with AWS **Administrat
 4. Click **Next**
 
 
-### 2.3 Creating assessment template
+#### 2.3 Creating assessment template
 
 1. Add **Name**
 
@@ -69,7 +82,7 @@ Login to [AWS portal](https://console.aws.amazon.com/) with AWS **Administrat
 
 3. Set **Duration** (3), recommended is 1 hour
 
-4. Select **Schedule** (4)
+4. Select **Schedule** (4), recommned is 7 days
 
 5. Click **Next** (5)
     ![AWS Inspector - AWS Console](.././images/amazonWebServiceAccounts/aws_Inspector_TemplateConfig.png#thumbnail)
@@ -78,7 +91,7 @@ Login to [AWS portal](https://console.aws.amazon.com/) with AWS **Administrat
 
     ![AWS Inspector - AWS Console](.././images/amazonWebServiceAccounts/aws_Inspector_ReviewandCreate.png#thumbnail)
 
-### 2.4 Verify assessment target
+#### 2.4 Verify assessment target
 
 Once Assessment target is created, one can verify the status of the agents. AWS Inspector and therefore Cloudneeti, will only be able to generate/display data for instances where **Agent Status** is **Healthy**.
 
@@ -93,7 +106,7 @@ Once Assessment target is created, one can verify the status of the agents. AWS 
     ![AWS Inspector - AWS Console](.././images/amazonWebServiceAccounts/aws_Inspector_preview_target.png#thumbnail)
 
 
-### 2.5 Run assessment template
+#### 2.5 Run assessment template
 
 1. Run the Assessment Template if required, by default assesment template is run on creation.
 
@@ -104,17 +117,12 @@ Once Assessment target is created, one can verify the status of the agents. AWS 
     ![AWS Inspector - AWS Console](.././images/amazonWebServiceAccounts/aws_Inspector_run.png#thumbnail)
 
 
-
-OR STEP 2 Creating Inspector Assessment target and template existing
---------------------------------------------------------------------
-
-Once, SSM agent is installed, users need to enable AWS Inspector in the regions
-where their instances reside and create assessment targets and templates.
+### OR Already using inspector
 
 Login to [AWS portal](https://console.aws.amazon.com/) with AWS **Administrator** role.
 
 
-### 2.1 Creating Assessment target
+#### 2.1 Creating Assessment target
 
 1.  Navigate to the inspector page
 
@@ -135,7 +143,7 @@ Login to [AWS portal](https://console.aws.amazon.com/) with AWS **Administrat
 
     ![AWS Inspector - AWS Console](.././images/amazonWebServiceAccounts/aws_Inspector_create.png#thumbnail)
 
-### 2.2 Verify assessment target
+#### 2.2 Verify assessment target
 
 Once Assessment target is created, one can verify the status of the agents. AWS Inspector and therefore Cloudneeti, will only be able to generate/display data for instances where **Agent Status** is **Healthy**.
 
@@ -145,12 +153,12 @@ Once Assessment target is created, one can verify the status of the agents. AWS 
 
 3.  A list of all the instances connected to the assessment target will appear
 
-4.  Verify the Agent Status Column (3)
+4.  Verify the Agent Status Column shows healthy for targeted instances (3)
 
     ![AWS Inspector - AWS Console](.././images/amazonWebServiceAccounts/aws_Inspector_preview.png#thumbnail)
 
 
-### 2.3 Create and run Assessment Template
+#### 2.3 Create and run Assessment Template
 
 1.  In the side menu, click on **Assessment templates** (1)
 
@@ -169,13 +177,13 @@ Once Assessment target is created, one can verify the status of the agents. AWS 
     ![AWS Inspector - AWS Console](.././images/amazonWebServiceAccounts/aws_Inspector_template1.png#thumbnail)
 
 
-8.  Set **Assessment Schedule** (1)
+8.  Set **Assessment Schedule** (1), recommned is 7 days
 
 9.  Click **Create** or **Create and run** (2)
 
     ![AWS Inspector - AWS Console](.././images/amazonWebServiceAccounts/aws_Inspector_template2.png#thumbnail)
 
-### 2.4 Run assessment template
+#### 2.4 Run assessment template
 
 1. Run the Assessment Template or wait for their schedule as per their requirement
     
@@ -194,7 +202,10 @@ Cloudneeti will pick up latest analysis complete assessment run within last 30 d
 
 
 ## AWS VM baseline policy list
-The AWS inspector configuration enables the following 104 policies.
+
+The following Cloudneeti OS baseline policies get enabled due to AWS inspector integrations.
+
+### RedHat Linux OS baseline policies
 
  | **Category**                                      | **Policy Title**                                                        |
     |---------------------------------------------------|-------------------------------------------------------------------------|
