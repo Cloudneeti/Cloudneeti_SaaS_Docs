@@ -56,4 +56,4 @@ Resource compliance status can be seen by expanding resource category (1) and cl
 
 Azure Windows VM vulnerability assessment can be seen on **Vulnerability** tab on **Asset Security** dashboard
 
-![Azure vulnerability](.././images/vulnerability/vulnerabilityTab.png#thumbnail)
+![Azure vulnerability](.././images/vulnerability/vulnerabilityTab_Details.png#thumbnail)
