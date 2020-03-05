@@ -1,16 +1,14 @@
-AWS inspector configuration (Optional)
+STEP 3: AWS inspector configuration (Optional)
 ========================================
 
 Includes installing and configuring AWS Inspector Agent to assess your assessment target EC2
 instances (collections of AWS resources) for potential security issues and vulnerabilities.
 
-Amazon Inspector is a security assessment service for your Amazon EC2 instances and the applications running on those instances. Enabling AWS Inspector for a host assessment allows various OS baselines as defined by CIS automatically light up on the Cloudneeti dashboards.
-
-Please follow [link](https://aws.amazon.com/inspector/pricing/) for Amazon Inspector pricing.
+Amazon Inspector is a security assessment service for your Amazon EC2 instances and the applications running on those instances. Enabling AWS Inspector for a host assessment allows various OS baselines as defined by CIS automatically light up on the Cloudneeti dashboards. Please follow [link](https://aws.amazon.com/inspector/pricing/) for Amazon Inspector pricing.
 
 Please skip this step if AWS inspector is already configured for all EC2 instances.
 
-STEP 1 Installing SSM agent
+3.1 Installing SSM agent
 ---------------------------
 
 AWS Systems Manager Agent (SSM Agent) is Amazon software that can be
@@ -19,16 +17,14 @@ possible for Systems Manager to update, manage, and configure these
 resources.
 
 SSM Agent will be used by AWS Inspector to install the AWS Inspector Agent
-on the instances so that it can fetch the instance data.
-
-Follow links for installation
+on the instances so that it can fetch the instance data. Follow links for installation
 
 [SSM Agent is preinstalled, by default](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-install-ssm-agent.html)
 
 [Install SSM Agent](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-manual-agent-install.html)
 
 
-STEP 2 Creating Inspector Assessment target and template 
+3.2 Creating Inspector Assessment target and template 
 --------------------------------------------------------
 Once, SSM agent is installed, enable AWS Inspector in the regions where instances reside and create assessment targets and templates.
 
@@ -44,7 +40,7 @@ Login to [AWS portal](https://console.aws.amazon.com/) with AWS **Administrat
 
 ### New to inspector
 
-#### 2.1 Get started for inspector advance setup
+#### 3.2.1 Get started for inspector advance setup
 
 1.  Navigate to the inspector page
 
@@ -57,7 +53,7 @@ Login to [AWS portal](https://console.aws.amazon.com/) with AWS **Administrat
     ![AWS Inspector - AWS Console](.././images/amazonWebServiceAccounts/aws_Inspector_AdvSetup.png#thumbnail)
 
 
-#### 2.2 Creating assessment target
+#### 3.2.2 Creating assessment target
 
 1.  Add **Name** (1)
 
@@ -73,7 +69,7 @@ Login to [AWS portal](https://console.aws.amazon.com/) with AWS **Administrat
 4. Click **Next**
 
 
-#### 2.3 Creating assessment template
+#### 3.2.3 Creating assessment template
 
 1. Add **Name**
 
@@ -91,7 +87,7 @@ Login to [AWS portal](https://console.aws.amazon.com/) with AWS **Administrat
 
     ![AWS Inspector - AWS Console](.././images/amazonWebServiceAccounts/aws_Inspector_ReviewandCreate.png#thumbnail)
 
-#### 2.4 Verify assessment target
+#### 3.2.4 Verify assessment target
 
 Once Assessment target is created, one can verify the status of the agents. AWS Inspector and therefore Cloudneeti, will only be able to generate/display data for instances where **Agent Status** is **Healthy**.
 
@@ -106,7 +102,7 @@ Once Assessment target is created, one can verify the status of the agents. AWS 
     ![AWS Inspector - AWS Console](.././images/amazonWebServiceAccounts/aws_Inspector_preview_target.png#thumbnail)
 
 
-#### 2.5 Run assessment template
+#### 3.2.5 Run assessment template
 
 1. Run the Assessment Template if required, by default assesment template is run on creation.
 
@@ -122,7 +118,7 @@ Once Assessment target is created, one can verify the status of the agents. AWS 
 Login to [AWS portal](https://console.aws.amazon.com/) with AWS **Administrator** role.
 
 
-#### 2.1 Creating Assessment target
+#### 3.2.1 Creating Assessment target
 
 1.  Navigate to the inspector page
 
@@ -143,7 +139,7 @@ Login to [AWS portal](https://console.aws.amazon.com/) with AWS **Administrat
 
     ![AWS Inspector - AWS Console](.././images/amazonWebServiceAccounts/aws_Inspector_create.png#thumbnail)
 
-#### 2.2 Verify assessment target
+#### 3.2.2 Verify assessment target
 
 Once Assessment target is created, one can verify the status of the agents. AWS Inspector and therefore Cloudneeti, will only be able to generate/display data for instances where **Agent Status** is **Healthy**.
 
@@ -158,7 +154,7 @@ Once Assessment target is created, one can verify the status of the agents. AWS 
     ![AWS Inspector - AWS Console](.././images/amazonWebServiceAccounts/aws_Inspector_preview.png#thumbnail)
 
 
-#### 2.3 Create and run Assessment Template
+#### 3.2.3 Create and run Assessment Template
 
 1.  In the side menu, click on **Assessment templates** (1)
 
@@ -183,7 +179,7 @@ Once Assessment target is created, one can verify the status of the agents. AWS 
 
     ![AWS Inspector - AWS Console](.././images/amazonWebServiceAccounts/aws_Inspector_template2.png#thumbnail)
 
-#### 2.4 Run assessment template
+#### 3.2.4 Run assessment template
 
 1. Run the Assessment Template or wait for their schedule as per their requirement
     
@@ -194,8 +190,8 @@ Once Assessment target is created, one can verify the status of the agents. AWS 
     ![AWS Inspector - AWS Console](.././images/amazonWebServiceAccounts/aws_Inspector_run.png#thumbnail)
 
 
-STEP 3 Verify policy results on Cloudneeti 
--------------------------------------------
+## 3.3 Verify policy results on Cloudneeti (to be performed after [Step 4](/onboardingGuide/amazonWebServiceAccounts/#step-4-add-aws-account))
+
 Cloudneeti will pick up latest analysis complete assessment run within last 30 days data from the AWS Inspector. Policies details will be available on Cloudneeti post next successful scan.
 
 ![AWS Inspector - AWS Console](.././images/amazonWebServiceAccounts/aws_RHEL_Results.png#thumbnail)
