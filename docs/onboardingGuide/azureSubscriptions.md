@@ -27,20 +27,20 @@ The following steps are required to onboard Microsoft Azure to the Cloudneeti ap
 
 6. [**Configure quick wins (Optional)**](../../onboardingGuide/azureQuickWins/) includes updating configurations and settings to make the Azure Cloud account compliant for listed policies using scripts.
 
-7. [Configure OS baseline and vulnerability scanning](../../onboardingGuide/azureVulnerability/) inlcudes connecting VMs to OMS workspace. Optionally user can also deploy partner vulnerability scanning in Azure Security Center and installing the solution on multiple VMs allows to provide visibility into missing updates, misconfigured OS security settings, endpoint protection status, and health and threat protection
+7. [**Configure OS baseline and vulnerability scanning**](../../onboardingGuide/azureVulnerability/) inlcudes connecting VMs to OMS workspace. Optionally user can also deploy partner vulnerability scanning in Azure Security Center and installing the solution on multiple VMs allows to provide visibility into missing updates, misconfigured OS security settings, endpoint protection status, and health and threat protection
 
 8. [**Adding Azure subscription**](.././azureSubscriptions/#step-8-add-azure-subscription) includes adding Azure subscription information to the respective Cloud Account and waiting until the first data collection is complete.
 
 | S. No. | Step                                      | Portal to use  | Role                    | Type      | Policies     |
 |---|-------------------------------------------|----------------|-------------------------|-------------------|-------------------------|
-| 1  | Register Cloudneeti application           | Microsoft Azure| Global AD Administrator | mandatory | 0            |
-| 2  | Grant access to Azure subscription        | Microsoft Azure| Subscription Owner      | mandatory | 0            |
+| 1  | [Register Cloudneeti application](.././azureSubscriptions/#step-1-register-cloudneeti-application-manually-or-using-azure-powershell-script)           | Microsoft Azure| Global AD Administrator | mandatory | 0            |
+| 2  | [Grant access to Azure subscription](.././azureSubscriptions/#step-2-grant-access-to-cloudneeti-registered-app)        | Microsoft Azure| Subscription Owner      | mandatory | 0            |
 | 3  | [Grant access to Azure subscription additional roles](../../onboardingGuide/grantAccessToAzureSubscriptionAdditionalRoles/) | Microsoft Azure| Subscription Owner           | optional  | 39            |
 | 4 | [Grant access to key vaults](../../onboardingGuide/grantAccessToKeyVaults/)                 | Microsoft Azure| Subscription Owner          | optional  | 1            |
 | 5 | [Advance Security configuration](../../onboardingGuide/azureAdvanceSecurityConfiguration/)            | Microsoft Azure| Subscription Owner, Global AD Reader          | optional  | 18            |
 | 6 | [Configure quick wins](../../remediation/azureQuickWins/)                      | Microsoft Azure| Subscription Owner           | optional  | 137            |
 | 7 | [Configure OS baseline and vulnerability scanning](../../onboardingGuide/azureVulnerability/)                   | Microsoft Azure     | Subscription Owner           | optional | 513            |
-| 8 | [Add Azure subscription](../../#step-8-add-azure-subscription)                    | Cloudneeti     | License Admin           | mandatory | 0            |
+| 8 | [Add Azure subscription](../../onboardingGuide/azureSubscriptions/#step-8-add-azure-subscription)                    | Cloudneeti     | License Admin           | mandatory | 0            |
 
 ### Required Roles
 
