@@ -6,7 +6,7 @@ Cloudneeti offers an API to automate cloud account onboarding via this REST API.
 
 ## AWS
 
-        POST https://<CLOUDNEETI API DOMAIN>/api/onboarding/license/<LICENSE ID>/account/azure
+        POST https://<CLOUDNEETI API DOMAIN>/api/onboarding/license/<LICENSE ID>/account/aws
 
 | Environment	| Values for Cloudneeti API domain     |
 |---------------|--------------------------------------|
@@ -124,7 +124,7 @@ For prerequisites for Azure cloud account onboarding, please refer [Microsoft Az
 
 ## Office365
 
-        POST https://<CLOUDNEETI API DOMAIN>/api/onboarding/license/<LICENSE ID>/account/azure
+        POST https://<CLOUDNEETI API DOMAIN>/api/onboarding/license/<LICENSE ID>/account/office365
 
 | Environment	| Values for Cloudneeti API domain     |
 |---------------|--------------------------------------|
