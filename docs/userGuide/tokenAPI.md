@@ -4,7 +4,7 @@ Cloudneeti advised not to store token in localstorage.
 
 ### License token
 
-        POST https://<CLOUDNEETI API DOMAIN>/api/authorize/license
+        POST https://<CLOUDNEETI API DOMAIN>/api/authorize/license/<License Id>/token
 
 | Environment	| Values for CLOUDNEETI API DOMAIN     |
 |---------------|--------------------------------------|
@@ -27,8 +27,8 @@ Cloudneeti advised not to store token in localstorage.
 
 #### Request body
         {
-            appId:<API App Id>, 
-            secret:<API App Secret>
+            APIApplicationId:<API Application Id>, 
+            Secret:<API Application Secret>
         }
 
 #### Responses
@@ -67,8 +67,8 @@ Cloudneeti advised not to store token in localstorage.
 
 #### Request body
         {
-            appId:<API App Id>,
-            secret:<API App Secret>
+            APIApplicationId:<API Application Id>,
+            Secret:<API Application Secret>
         }
 
 
