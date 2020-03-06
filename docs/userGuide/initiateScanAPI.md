@@ -13,8 +13,8 @@ Cloudneeti offers scan API to initiate scan in Cloudneeti for given cloud accoun
 
 | Parameter           |           Description                                |           Required/Optional  |
 |-----------|----------------------------------------------------------------|----------------------------|
-| license  |          [Cloudneeti License Id​](#license-id)                  | Required|
-| account  |          [Cloud Account Id​](#account-id)                          | Required|
+| LICENSE ID  |          [Cloudneeti license id​](#license-id)                  | Required|
+| ACCOUNT ID  |          [Cloud account id​](#account-id)                          | Required|
 
 ### Header
 

@@ -3,7 +3,7 @@
 
 The Audit Report API provide information related to your compliance posture across various compliance standards. The filters available through the API enable you to view your status across different cloud accounts and for different benchmarks [(list below)](../../userGuide/auditReportAPI/#cloudneeti-supported-benchmarks)
 
-        GET https://<CLOUDNEETI API DOMAIN>/api/audit/license/<LICENSE ID>/account/<ACCOUNT ID>/job/<JOBID>/benchmark/<BENCHMARK ID>/summary
+        GET https://<CLOUDNEETI API DOMAIN>/api/audit/license/<LICENSE ID>/account/<ACCOUNT ID>/job/<JOB ID>/benchmark/<BENCHMARK ID>/summary
 
 | Environment	| Values for Cloudneeti API domain     |
 |---------------|--------------------------------------|
@@ -14,10 +14,10 @@ The Audit Report API provide information related to your compliance posture acro
 
 | Parameter           |           Description                                |           Required/Optional  |
 |-----------|----------------------------------------------------------------|----------------------------|
-| license  |          [Cloudneeti License Id​](#license-id)                  | Required|
-| account  |          [Cloud Account Id​](#account-id)                          | Required|
-| job       |        Cloud Account scan job id          | Required|
-| benchmark |        [Benchmark Id​](#cloudneeti-supported-benchmarks)        | Required|
+| LICENSE ID  |          [Cloudneeti license id​](#license-id)                  | Required|
+| ACCOUNT ID  |          [Cloud account id​](#account-id)                          | Required|
+| JOB ID       |         Cloud account scan job id                                | Required|
+| BENCHMARK ID |        [Benchmark id​](#cloudneeti-supported-benchmarks)        | Required|
 
 ### Header
 
@@ -11109,56 +11109,6 @@ Login to Cloudneeti portal as a License Admin.
 
     ![Manage Accounts](.././images/onboardingOffice365Subscription/Manage_Accounts.png#thumbnail)
 
-
-<!-- ### Generate Cloudneeti API key
-
-##### SIGN-UP ON CLOUDNEETI API PORTAL
-
-1.  Go to [API portal](https://portal.cloudneeti.com/) and Sign up.
-
-2.  Fill the required fields in the sign-up form
-
-3.  You will receive a confirmation mail for sign-up, Click on the confirmation
-    link.
-
-4.  The confirmation link will ask you for change password (info: You can use
-    the password your used when signing up)
-
-5.  You are signed up successfully
-
-##### RETRIEVE AND ACTIVATE API KEY
-
-Retrieve and activate your API key using the Cloudneeti API portal
-
-1.  Click on **PRODUCTS**
-
-2.  Select **Unlimited**
-
-    ![Cloudneeti API](.././images/onboardingOffice365Subscription/Cloudneeti_API.png#thumbnail)
-
-
-3.  Click on **Subscribe**
-
-    ![Subscribe](.././images/onboardingOffice365Subscription/API_Subscribe.png#thumbnail)
-
-
-This will notify Cloudneeti to activate your API subscription access. Please
-wait for activation to be done. When Cloudneeti activates your subscription, you
-will get an email notification.
-
-Once you receive the confirmation, proceed with the following steps.
-
-1.  Click on **Username**
-
-2.  Select **Profile**
-
-3.  Click on **Show**
-
-4.  Copy the **Primary key** to your notepad.
-
-    ![Primary key](.././images/onboardingOffice365Subscription/Primary_key.png#thumbnail)
-
-    >   Primary key -->
 
 ### Cloudneeti supported benchmarks 
 
