@@ -5,7 +5,7 @@ The following steps are done by Microsoft Azure **Subscription Owner (or
 Subscription Contributor)** role.
 
 An Azure Automation Account resource is deployed to collect data for additional
-security policies [listed here ](.././azureAdvanceSecurityConfiguration/#advanced-security-configuration). The Azure Active Directory control plane exposes the data only through
+security policies [listed here](.././azureAdvanceSecurityConfiguration/#advanced-security-configuration). The Azure Active Directory control plane exposes the data only through
 PowerShell that needs to run under a Global AD reader credential.
 
 To ensure that Cloudneeti does not ever store/have access to a global AD
@@ -74,7 +74,7 @@ Retrieve and activate your API key using the Cloudneeti API portal
 	![Subscribe](.././images/azureSubscriptions/API_Subscribe.png#thumbnail)
 
 This will notify Cloudneeti to activate your API subscription access. Please
-wait for activation to be done. When Cloudneeti activates your subscription, you
+wait for the activation to be done. When Cloudneeti activates your subscription, you
 will get an email notification.
 
 Once you receive the confirmation, proceed with the following steps.
@@ -97,7 +97,7 @@ Contact Cloudneeti Team for:
 
 ### Azure details
 
-Login to Azure portal <https://portal.azure.com> as subscription owner.
+Login to Azure portal <https://portal.azure.com> as a subscription owner.
 #### Azure Directory ID
 
 1. Click on **Azure Active Directory** on the primary menu
@@ -149,7 +149,7 @@ Switch to Azure AD with the Azure Subscription with pre-requisite access.
 
 1. Open **CloudShell**
 2. Click on **Cloudshell** icon on the navigation bar to open Cloudshell
-3. Choose PowerShell from shell drop down
+3. Choose PowerShell from shell dropdown
 4. Select **storage**
 	![CloudShell](.././images/onboardingOffice365Subscription/CloudShell.png#thumbnail)
 5. Execute below command in Cloudshell to download the Cloudneeti data
@@ -177,8 +177,8 @@ Switch to Azure AD with the Azure Subscription with pre-requisite access.
             -DataCollectorVersion <Cloudneeti Azure IAM Data Collector Version> `
             -AzureActiveDirectoryId <Azure Active Directory Id> `
             -AzureGlobalReaderEmailId <Azure Global Reader Email Id> `
-            -AzureSubscriptionId <Azure Subscription Id where Azure IAM datacollector resouces will be created> `
-            -DataCollectorName <Friendly name for Azure IAM Data Collector resouces>
+            -AzureSubscriptionId <Azure Subscription Id where Azure IAM datacollector resources will be created> `
+            -DataCollectorName <Friendly name for Azure IAM Data Collector resources>
 	```</code>
 	</pre>
 Note: Contact Cloudneeti Team for ArtifactsName, DataCollectorVersion and
@@ -194,7 +194,7 @@ ArtifactsAccessKey
 
 ## 5.3 Apply delete lock
 
-Apply delete lock to prevent accidental deletion of the data collection resource
+Apply a delete lock to prevent accidental deletion of the data collection resource
 group in your Azure Subscription.
 
 1. Navigate to Azure IAM data collector resource group
