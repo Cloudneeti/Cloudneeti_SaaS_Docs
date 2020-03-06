@@ -6,7 +6,7 @@ Subscription Contributor)** role.
 
 An Azure Automation Account resource is deployed to collect data for additional
 security policies [listed here](.././azureAdvanceSecurityConfiguration/#advanced-security-configuration). The Azure Active Directory control plane exposes the data only through
-PowerShell that needs to run under a Global AD reader credential.
+PowerShell that needs to run under a Global AD reader credential. Please note that the credential used should not have MFA enabled and if conditional access is used, exclude Global AD reader from the conditional access.
 
 To ensure that Cloudneeti does not ever store/have access to a global AD
 reader, it is recommended to deploy a small PowerShell script under
