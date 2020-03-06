@@ -13,7 +13,7 @@ Cloudneeti offers config API to update API application access scope to add a Clo
 
 | Parameter           |           Description                                |           Required/Optional  |
 |-----------|----------------------------------------------------------------|----------------------------|
-| license   |          [Cloudneeti API App Id​](#license-id)                  | Required|
+| LICENSE ID   |          Cloudneeti license id                    | Required|
 
 
 ### Header
@@ -26,7 +26,7 @@ Cloudneeti offers config API to update API application access scope to add a Clo
 
 ### Request body
         {
-            "accountId": <Cloud Account Id>
+            "accountId": <Cloud account id>
         }
 
 
