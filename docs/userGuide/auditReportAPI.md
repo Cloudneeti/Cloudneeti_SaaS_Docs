@@ -30,8 +30,6 @@ The Audit Report API provide information related to your compliance posture acro
 | Key	        | Value                                |
 |---------------|--------------------------------------|
 | Ocp-Apim-Subscription-Key 	| [Cloudneeti API key generated](../../administratorGuide/configureCloudneetiAPIAccess/)             |
-| Ocp-Apim-Subscription-Key 	| [Cloudneeti API key generated](../../administratorGuide/configureCloudneetiAPIAccess/)             |
-
 
 
 ### Response
