@@ -19,11 +19,19 @@ The Audit Report API provide information related to your compliance posture acro
 | JOB ID       |         Cloud account scan job id                                | Required|
 | BENCHMARK ID |        [Benchmark id​](#cloudneeti-supported-benchmarks)        | Required|
 
+
+### Authorization
+| Type           |           Description                                |           Required/Optional  |
+|-----------|----------------------------------------------------------------|----------------------------|
+| Bearer Token  |          [Account Token](../../userGuide/tokenAPI/#account-token)                   | Required|
+
 ### Header
 
 | Key	        | Value                                |
 |---------------|--------------------------------------|
 | Ocp-Apim-Subscription-Key 	| [Cloudneeti API key generated](../../administratorGuide/configureCloudneetiAPIAccess/)             |
+| Ocp-Apim-Subscription-Key 	| [Cloudneeti API key generated](../../administratorGuide/configureCloudneetiAPIAccess/)             |
+
 
 
 ### Response
@@ -36,62 +44,6 @@ The Audit Report API provide information related to your compliance posture acro
 
 
 
-<!-- ### Examples
-
-#### Sample Request
-
-        GET https://api.cloudneeti.com/api/audit/license/9085e05b-c5fe-49e1-9511-af4002aad6c4/account/7b227c87-2fb2-4fe4-bbab-c7318de12f5e/summary -->
-
-<!-- ## How to use
-
- Cloudneeti audit report API can be called using Powershell script with below steps.
-
-Prerequisites​
--------------
-
-| **Activity**                                                                                                          | **Description**                                                                                                                                                                                                                                                                                                                                                                                                  |
-|-----------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1. Download and review **PowerShell script** for audit report download                                    | The PowerShell script is used to downnload audit report of a account for given Benchmark: [Download Link.](https://raw.githubusercontent.com/Cloudneeti/docs_cloudneeti/master/scripts/Get-BenchmarkSummary.ps1)                                                                                                                                                                                                  |
-| 2.	**Workstation**: Ensure you have the latest PowerShell version (v5 and above) | Verify PowerShell version by running the following command<br>`$PSVersionTable.PSVersion`<br>on the workstation where you will run the ServicePrincipal creation script. If PowerShell version is lower than 5, then follow this link for installation of a later version: [Download Link.](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-windows-powershell?view=powershell-6) |
-| 3.	**Workstation:** Before executing the script, make sure there are no restrictions in running the PowerShell script  | Use this PowerShell command:<br>``Set-ExecutionPolicy ` ``<br>``-Scope Process ` ``<br>``-ExecutionPolicy Bypass``<br>PowerShell contains built-in execution policies that limit its use as an attack vector. By default, the execution policy is set to Restricted, which is the primary policy for script execution. The bypass allows for running scripts and keeps the lowered permissions isolated to just the current running process. |
-
-Collect Information​
--------------------
-
-[Cloudneeti License Id​](#license-id)
-
-[Cloud Account Id​](#account-id)
-
-[Cloudneeti API key (API management) ​](#generate-cloudneeti-api-key)
-
-[Benchmark Id​](#cloudneeti-supported-benchmarks)
-
-Steps
------
-
-The following steps are done by Cloudneeti application user ​to download
-benchmark summary report.
-
-1.  Open PowerShell in administrator mode.
-
-2.  Go to the directory where Get- BenchmarkSummary.ps1 was downloaded earlier.
-
-3.  Execute below command
-
-    .\Get-BenchmarkSummary.ps1 -CloudneetiLicenseId <Cloudneeti License Id> `
-						   -CloudneetiAccountId <Cloudneeti Account Id> `
-						   -CloudneetiEnvironment prod `
-						   -BenchmarkId <Benchmark Id> 
-
-4. The script will prompt browser window to login, use credentials used to
-access Cloudneeti.
-    
-    ![compliance Status](.././images/benchmarkSummaryReport/SummaryReport_LoginPopUp.png#thumbnail)
-
-5. Given benchmark report in json format will be downloaded and saved at
-location where the script is executed.
-    
-    ![compliance Status](.././images/benchmarkSummaryReport/SummaryReport_Json_Output.png#thumbnail) -->
 
 Sample Report
 -------------
