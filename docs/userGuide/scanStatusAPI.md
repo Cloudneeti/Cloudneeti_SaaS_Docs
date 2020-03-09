@@ -60,6 +60,7 @@ Cloudneeti offers scan API to get scan status in Cloudneeti for provided cloud a
 #### JobStatus
 | Name           |           Type       |
 |----------------|----------------------|
+| Pending            |      String          |
 | New            |      String          |
 | Running	 |      String          |
 | Completed      |      String          |
