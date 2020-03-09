@@ -16,6 +16,11 @@ Cloudneeti offers scan API to initiate scan in Cloudneeti for given cloud accoun
 | LICENSE ID  |          [Cloudneeti license id​](#license-id)                  | Required|
 | ACCOUNT ID  |          [Cloud account id​](#account-id)                          | Required|
 
+### Authorization
+| Type           |           Description                                |           Required/Optional  |
+|-----------|----------------------------------------------------------------|----------------------------|
+| Bearer Token  |          [Account Token](../../userGuide/tokenAPI/#account-token)                   | Required|
+
 ### Header
 
 | Key	        | Value                                |

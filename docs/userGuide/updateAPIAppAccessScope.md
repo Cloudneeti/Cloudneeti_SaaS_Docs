@@ -16,6 +16,11 @@ Cloudneeti offers config API to update API application access scope to add a Clo
 | LICENSE ID   |          Cloudneeti license id                    | Required|
 
 
+### Authorization
+| Type           |           Description                                |           Required/Optional  |
+|-----------|----------------------------------------------------------------|----------------------------|
+| Bearer Token  |          [License Token](../../userGuide/tokenAPI/##license-token)                   | Required|
+
 ### Header
 
 | Key	        | Value                                |

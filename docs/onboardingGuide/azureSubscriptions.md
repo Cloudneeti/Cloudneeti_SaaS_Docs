@@ -78,8 +78,8 @@ document.
 |------|-------------------------------------------------------------|-------------------|--------------------|----------|-----------|--------------|
 | Azure Active Directory | Directory Read All Microsoft Graph              | Microsoft Azure   | Global AD Admin    | STEP 1   | optional  | 5            |
 | Azure Subscription | Reader              | Microsoft Azure   | Subscription Owner | STEP 2   | mandatory | 0            |
-| Azure Subscription | Website contributor | Microsoft Azure   | Subscription Owner | STEP 3   | optional  | 15           |
-| Azure Subscription | Storage Account Contributor | Microsoft Azure   | Subscription Owner | STEP 3   | optional  | 1            |
+| Azure Subscription | Website Contributor | Microsoft Azure   | Subscription Owner | STEP 3   | optional  | 1           |
+| Azure Subscription | Storage Account Contributor | Microsoft Azure   | Subscription Owner | STEP 3   | optional  | 15            |
 | Azure Subscription | Network Contributor Role  | Microsoft Azure   | Subscription Owner | STEP 3   | optional  | 1           |
 | Key Vault | Access Policy   | Microsoft Azure   | Subscription Owner | STEP 4   | optional  | 1            |
 
@@ -393,7 +393,8 @@ not assigned.
 |--------------------------------------------------------------|------------------------------------------|
 | Read All Microsoft Graph permissions                         | 5         |
 | Reader role for Azure Subscription level scope.              | 0         |
-| Website contributor role for Azure Subscription level scope. | 15        |
+| Website Contributor role for Azure Subscription level scope. | 1        |
+| Storage Account Contributor role for Azure Subscription level scope. | 15        |
 | Key Vault access policies for specific managed Key Vaults    | 1         |
 
 ### Microsoft Graph

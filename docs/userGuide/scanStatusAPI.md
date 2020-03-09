@@ -17,6 +17,10 @@ Cloudneeti offers scan API to get scan status in Cloudneeti for provided cloud a
 | ACCOUNT ID   |          Cloudneeti cloud account id              | Required|
 | JOB ID       |          Cloud account scan job id                | Required|
 
+### Authorization
+| Type           |           Description                                |           Required/Optional  |
+|-----------|----------------------------------------------------------------|----------------------------|
+| Bearer Token  |          [Account Token](../../userGuide/tokenAPI/#account-token)                   | Required|
 
 ### Header
 

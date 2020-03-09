@@ -20,6 +20,11 @@ Cloudneeti offers an API to automate cloud account onboarding via this REST API.
 |-----------|----------------------------------------------------------------|----------------------------|
 | license   |          [Cloudneeti License Id​](#license-id)                  | Required|
 
+### Authorization
+| Type           |           Description                                |           Required/Optional  |
+|-----------|----------------------------------------------------------------|----------------------------|
+| Bearer Token  |          [License Token](../../userGuide/tokenAPI/##license-token)                   | Required|
+
 ### Header
 
 | Key	        | Value                                |
