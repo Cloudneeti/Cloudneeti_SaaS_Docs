@@ -43,15 +43,6 @@ users to better understand their risk exposure and prioritize remediation
 activities.
 	![Risk Dashboard](.././images/userGuide/Risk_Dashboard.png#thumbnail)
 
-<!-- ## Assets
-
-By clicking on the **Assets** tab (1) on the top, users gain access to an assets
-dashboard that provides insights into the total number of resources, users, AD
-admins and other metrics. By clicking on the bar (2) in the chart, the map shows
-locations (3) of this resource category.
-	![Assets_Dashboard](.././images/userGuide/Assets_Dashboard.png#thumbnail) -->
-
-
 ## Assets Security (Preview)
 
 By clicking on the **Assets Security** tab (1) on the top, users gain access to an assets
@@ -62,3 +53,7 @@ dashboard that provides insights into the resources compliance status. By clicki
 Resource compliance status can be seen by expanding resource category (1) and clicking on a resource (2) for resource related policies (3)
 
 ![Assets_Dashboard](.././images/userGuide/Assets_Security_Dashboard_ResourceDetails.png#thumbnail)
+
+Azure Windows VM vulnerability assessment can be seen on **Vulnerability** tab on **Asset Security** dashboard
+
+![Azure vulnerability](.././images/vulnerability/vulnerabilityTab_Details.png#thumbnail)

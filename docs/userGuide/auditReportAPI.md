@@ -1,9 +1,9 @@
  Audit Report API 
 =================
 
-Cloudneeti offers audit report API to get access to views presenting pass/fail/warn status at a compliance/benchmark category level and passed/total resource count at policy level for provided Benchmark.
+The Audit Report API provide information related to your compliance posture across various compliance standards. The filters available through the API enable you to view your status across different cloud accounts and for different benchmarks [(list below)](../../userGuide/auditReportAPI/#cloudneeti-supported-benchmarks)
 
-        GET https://<CLOUDNEETI API DOMAIN>/api/audit/license/<LICENSE ID>/account/<ACCOUNT ID>/job/<JOBID>/benchmark/<BENCHMARK ID>/summary
+        GET https://<CLOUDNEETI API DOMAIN>/api/audit/license/<LICENSE ID>/account/<ACCOUNT ID>/job/<JOB ID>/benchmark/<BENCHMARK ID>/summary
 
 | Environment	| Values for Cloudneeti API domain     |
 |---------------|--------------------------------------|
@@ -14,10 +14,16 @@ Cloudneeti offers audit report API to get access to views presenting pass/fail/w
 
 | Parameter           |           Description                                |           Required/Optional  |
 |-----------|----------------------------------------------------------------|----------------------------|
-| license  |          [Cloudneeti License Id​](#license-id)                  | Required|
-| account  |          [Cloud Account Id​](#account-id)                          | Required|
-| job       |        Cloud Account scan job id          | Required|
-| benchmark |        [Benchmark Id​](#cloudneeti-supported-benchmarks)        | Required|
+| LICENSE ID  |          [Cloudneeti license id​](#license-id)                  | Required|
+| ACCOUNT ID  |          [Cloud account id​](#account-id)                          | Required|
+| JOB ID       |         Cloud account scan job id                                | Required|
+| BENCHMARK ID |        [Benchmark id​](#cloudneeti-supported-benchmarks)        | Required|
+
+
+### Authorization
+| Type           |           Description                                |           Required/Optional  |
+|-----------|----------------------------------------------------------------|----------------------------|
+| Bearer Token  |          [Account Token](../../userGuide/tokenAPI/#account-token)                   | Required|
 
 ### Header
 
@@ -36,62 +42,6 @@ Cloudneeti offers audit report API to get access to views presenting pass/fail/w
 
 
 
-<!-- ### Examples
-
-#### Sample Request
-
-        GET https://api.cloudneeti.com/api/audit/license/9085e05b-c5fe-49e1-9511-af4002aad6c4/account/7b227c87-2fb2-4fe4-bbab-c7318de12f5e/summary -->
-
-<!-- ## How to use
-
- Cloudneeti audit report API can be called using Powershell script with below steps.
-
-Prerequisites​
--------------
-
-| **Activity**                                                                                                          | **Description**                                                                                                                                                                                                                                                                                                                                                                                                  |
-|-----------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1. Download and review **PowerShell script** for audit report download                                    | The PowerShell script is used to downnload audit report of a account for given Benchmark: [Download Link.](https://raw.githubusercontent.com/Cloudneeti/docs_cloudneeti/master/scripts/Get-BenchmarkSummary.ps1)                                                                                                                                                                                                  |
-| 2.	**Workstation**: Ensure you have the latest PowerShell version (v5 and above) | Verify PowerShell version by running the following command<br>`$PSVersionTable.PSVersion`<br>on the workstation where you will run the ServicePrincipal creation script. If PowerShell version is lower than 5, then follow this link for installation of a later version: [Download Link.](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-windows-powershell?view=powershell-6) |
-| 3.	**Workstation:** Before executing the script, make sure there are no restrictions in running the PowerShell script  | Use this PowerShell command:<br>``Set-ExecutionPolicy ` ``<br>``-Scope Process ` ``<br>``-ExecutionPolicy Bypass``<br>PowerShell contains built-in execution policies that limit its use as an attack vector. By default, the execution policy is set to Restricted, which is the primary policy for script execution. The bypass allows for running scripts and keeps the lowered permissions isolated to just the current running process. |
-
-Collect Information​
--------------------
-
-[Cloudneeti License Id​](#license-id)
-
-[Cloud Account Id​](#account-id)
-
-[Cloudneeti API key (API management) ​](#generate-cloudneeti-api-key)
-
-[Benchmark Id​](#cloudneeti-supported-benchmarks)
-
-Steps
------
-
-The following steps are done by Cloudneeti application user ​to download
-benchmark summary report.
-
-1.  Open PowerShell in administrator mode.
-
-2.  Go to the directory where Get- BenchmarkSummary.ps1 was downloaded earlier.
-
-3.  Execute below command
-
-    .\Get-BenchmarkSummary.ps1 -CloudneetiLicenseId <Cloudneeti License Id> `
-						   -CloudneetiAccountId <Cloudneeti Account Id> `
-						   -CloudneetiEnvironment prod `
-						   -BenchmarkId <Benchmark Id> 
-
-4. The script will prompt browser window to login, use credentials used to
-access Cloudneeti.
-    
-    ![compliance Status](.././images/benchmarkSummaryReport/SummaryReport_LoginPopUp.png#thumbnail)
-
-5. Given benchmark report in json format will be downloaded and saved at
-location where the script is executed.
-    
-    ![compliance Status](.././images/benchmarkSummaryReport/SummaryReport_Json_Output.png#thumbnail) -->
 
 Sample Report
 -------------
@@ -11109,56 +11059,6 @@ Login to Cloudneeti portal as a License Admin.
 
     ![Manage Accounts](.././images/onboardingOffice365Subscription/Manage_Accounts.png#thumbnail)
 
-
-<!-- ### Generate Cloudneeti API key
-
-##### SIGN-UP ON CLOUDNEETI API PORTAL
-
-1.  Go to [API portal](https://portal.cloudneeti.com/) and Sign up.
-
-2.  Fill the required fields in the sign-up form
-
-3.  You will receive a confirmation mail for sign-up, Click on the confirmation
-    link.
-
-4.  The confirmation link will ask you for change password (info: You can use
-    the password your used when signing up)
-
-5.  You are signed up successfully
-
-##### RETRIEVE AND ACTIVATE API KEY
-
-Retrieve and activate your API key using the Cloudneeti API portal
-
-1.  Click on **PRODUCTS**
-
-2.  Select **Unlimited**
-
-    ![Cloudneeti API](.././images/onboardingOffice365Subscription/Cloudneeti_API.png#thumbnail)
-
-
-3.  Click on **Subscribe**
-
-    ![Subscribe](.././images/onboardingOffice365Subscription/API_Subscribe.png#thumbnail)
-
-
-This will notify Cloudneeti to activate your API subscription access. Please
-wait for activation to be done. When Cloudneeti activates your subscription, you
-will get an email notification.
-
-Once you receive the confirmation, proceed with the following steps.
-
-1.  Click on **Username**
-
-2.  Select **Profile**
-
-3.  Click on **Show**
-
-4.  Copy the **Primary key** to your notepad.
-
-    ![Primary key](.././images/onboardingOffice365Subscription/Primary_key.png#thumbnail)
-
-    >   Primary key -->
 
 ### Cloudneeti supported benchmarks 
 

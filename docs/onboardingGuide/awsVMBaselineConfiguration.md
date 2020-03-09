@@ -1,15 +1,14 @@
-AWS inspector configuration (Optional)
+STEP 3: AWS inspector configuration (Optional)
 ========================================
 
 Includes installing and configuring AWS Inspector Agent to assess your assessment target EC2
-instances (collections of AWS resources) for potential security issues and
-vulnerabilities.
+instances (collections of AWS resources) for potential security issues and vulnerabilities.
 
-Please follow [link](https://aws.amazon.com/inspector/pricing/) for Amazon Inspector pricing.
+Amazon Inspector is a security assessment service for your Amazon EC2 instances and the applications running on those instances. Enabling AWS Inspector for a host assessment allows various OS baselines as defined by CIS automatically light up on the Cloudneeti dashboards. Please follow [link](https://aws.amazon.com/inspector/pricing/) for Amazon Inspector pricing.
 
 Please skip this step if AWS inspector is already configured for all EC2 instances.
 
-STEP 1 Installing SSM agent
+3.1 Installing SSM agent
 ---------------------------
 
 AWS Systems Manager Agent (SSM Agent) is Amazon software that can be
@@ -18,20 +17,30 @@ possible for Systems Manager to update, manage, and configure these
 resources.
 
 SSM Agent will be used by AWS Inspector to install the AWS Inspector Agent
-on the instances so that it can fetch the instance data.
-
-Follow links for installation
+on the instances so that it can fetch the instance data. Follow links for installation
 
 [SSM Agent is preinstalled, by default](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-install-ssm-agent.html)
 
 [Install SSM Agent](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-manual-agent-install.html)
 
 
-STEP 2 Creating Inspector Assessment target and template first time
--------------------------------------------------------------------
+3.2 Creating Inspector Assessment target and template 
+--------------------------------------------------------
+Once, SSM agent is installed, enable AWS Inspector in the regions where instances reside and create assessment targets and templates.
+
+Cloudneeti currently supports RHEL instances and in the near future many other Linux distributions and Windows server editions will be supported.
+
+Multiple assessment targets and templates can be created.  For exaple, create an assessment target is each of the Operating systems separately, and add to seperate template.
+- OS = RedHat Linux
+- Tags = All tags | None
+- Instances = All instances
+
 Login to [AWS portal](https://console.aws.amazon.com/) with AWS **Administrator** role.
 
-### 2.1 Get started for inspector advance setup
+
+### New to inspector
+
+#### 3.2.1 Get started for inspector advance setup
 
 1.  Navigate to the inspector page
 
@@ -44,7 +53,7 @@ Login to [AWS portal](https://console.aws.amazon.com/) with AWS **Administrat
     ![AWS Inspector - AWS Console](.././images/amazonWebServiceAccounts/aws_Inspector_AdvSetup.png#thumbnail)
 
 
-### 2.2 Creating assessment target
+#### 3.2.2 Creating assessment target
 
 1.  Add **Name** (1)
 
@@ -60,7 +69,7 @@ Login to [AWS portal](https://console.aws.amazon.com/) with AWS **Administrat
 4. Click **Next**
 
 
-### 2.3 Creating assessment template
+#### 3.2.3 Creating assessment template
 
 1. Add **Name**
 
@@ -69,7 +78,7 @@ Login to [AWS portal](https://console.aws.amazon.com/) with AWS **Administrat
 
 3. Set **Duration** (3), recommended is 1 hour
 
-4. Select **Schedule** (4)
+4. Select **Schedule** (4), recommned is 7 days
 
 5. Click **Next** (5)
     ![AWS Inspector - AWS Console](.././images/amazonWebServiceAccounts/aws_Inspector_TemplateConfig.png#thumbnail)
@@ -78,7 +87,7 @@ Login to [AWS portal](https://console.aws.amazon.com/) with AWS **Administrat
 
     ![AWS Inspector - AWS Console](.././images/amazonWebServiceAccounts/aws_Inspector_ReviewandCreate.png#thumbnail)
 
-### 2.4 Verify assessment target
+#### 3.2.4 Verify assessment target
 
 Once Assessment target is created, one can verify the status of the agents. AWS Inspector and therefore Cloudneeti, will only be able to generate/display data for instances where **Agent Status** is **Healthy**.
 
@@ -93,7 +102,7 @@ Once Assessment target is created, one can verify the status of the agents. AWS 
     ![AWS Inspector - AWS Console](.././images/amazonWebServiceAccounts/aws_Inspector_preview_target.png#thumbnail)
 
 
-### 2.5 Run assessment template
+#### 3.2.5 Run assessment template
 
 1. Run the Assessment Template if required, by default assesment template is run on creation.
 
@@ -104,17 +113,12 @@ Once Assessment target is created, one can verify the status of the agents. AWS 
     ![AWS Inspector - AWS Console](.././images/amazonWebServiceAccounts/aws_Inspector_run.png#thumbnail)
 
 
-
-OR STEP 2 Creating Inspector Assessment target and template existing
---------------------------------------------------------------------
-
-Once, SSM agent is installed, users need to enable AWS Inspector in the regions
-where their instances reside and create assessment targets and templates.
+### OR Already using inspector
 
 Login to [AWS portal](https://console.aws.amazon.com/) with AWS **Administrator** role.
 
 
-### 2.1 Creating Assessment target
+#### 3.2.1 Creating Assessment target
 
 1.  Navigate to the inspector page
 
@@ -135,7 +139,7 @@ Login to [AWS portal](https://console.aws.amazon.com/) with AWS **Administrat
 
     ![AWS Inspector - AWS Console](.././images/amazonWebServiceAccounts/aws_Inspector_create.png#thumbnail)
 
-### 2.2 Verify assessment target
+#### 3.2.2 Verify assessment target
 
 Once Assessment target is created, one can verify the status of the agents. AWS Inspector and therefore Cloudneeti, will only be able to generate/display data for instances where **Agent Status** is **Healthy**.
 
@@ -145,12 +149,12 @@ Once Assessment target is created, one can verify the status of the agents. AWS 
 
 3.  A list of all the instances connected to the assessment target will appear
 
-4.  Verify the Agent Status Column (3)
+4.  Verify the Agent Status Column shows healthy for targeted instances (3)
 
     ![AWS Inspector - AWS Console](.././images/amazonWebServiceAccounts/aws_Inspector_preview.png#thumbnail)
 
 
-### 2.3 Create and run Assessment Template
+#### 3.2.3 Create and run Assessment Template
 
 1.  In the side menu, click on **Assessment templates** (1)
 
@@ -169,13 +173,13 @@ Once Assessment target is created, one can verify the status of the agents. AWS 
     ![AWS Inspector - AWS Console](.././images/amazonWebServiceAccounts/aws_Inspector_template1.png#thumbnail)
 
 
-8.  Set **Assessment Schedule** (1)
+8.  Set **Assessment Schedule** (1), recommned is 7 days
 
 9.  Click **Create** or **Create and run** (2)
 
     ![AWS Inspector - AWS Console](.././images/amazonWebServiceAccounts/aws_Inspector_template2.png#thumbnail)
 
-### 2.4 Run assessment template
+#### 3.2.4 Run assessment template
 
 1. Run the Assessment Template or wait for their schedule as per their requirement
     
@@ -186,8 +190,7 @@ Once Assessment target is created, one can verify the status of the agents. AWS 
     ![AWS Inspector - AWS Console](.././images/amazonWebServiceAccounts/aws_Inspector_run.png#thumbnail)
 
 
-STEP 3 Verify policy results on Cloudneeti 
--------------------------------------------
+## 3.3 Verify policy results on Cloudneeti (to be performed after [Step 4](/onboardingGuide/amazonWebServiceAccounts/#step-4-add-aws-account))
 
 Cloudneeti will pick up latest analysis complete assessment run within last 30 days data from the AWS Inspector. Policies details will be available on Cloudneeti post next successful scan.
 
@@ -195,13 +198,17 @@ Cloudneeti will pick up latest analysis complete assessment run within last 30 d
 
 
 ## AWS VM baseline policy list
-The AWS inspector configuration enables the following 66 policies.
+
+The following Cloudneeti OS baseline policies get enabled due to AWS inspector integrations.
+
+### RedHat Linux OS baseline policies
 
  | **Category**                                      | **Policy Title**                                                        |
     |---------------------------------------------------|-------------------------------------------------------------------------|
     | RHEL 7 - Access, Authentication and Authorization | Ensure at/cron is restricted to authorized users                                 |   |
     | RHEL 7 - Access, Authentication and Authorization | Ensure SSH Protocol is set to 2                                                  |   |
     | RHEL 7 - Access, Authentication and Authorization | Ensure SSH LogLevel is set to INFO                                               |   |
+    | RHEL 7 - Access, Authentication and Authorization | Ensure default user shell timeout is 900 seconds or less                                               |   |
     | RHEL 7 - Initial Setup                            | Ensure updates, patches, and additional security software are installed          |   |
     | RHEL 7 - Initial Setup                            | Ensure nodev option set on /tmp partition                                        |   |
     | RHEL 7 - Initial Setup                            | Ensure nosuid option set on /tmp partition                                       |   |
@@ -264,5 +271,41 @@ The AWS inspector configuration enables the following 66 policies.
     | RHEL 7 - Services                                 | Ensure rsh client is not installed                                               |   |
     | RHEL 7 - Services                                 | Ensure talk client is not installed                                              |   |
     | RHEL 7 - Services                                 | Ensure telnet client is not installed                                            |   |
-    | RHEL 7 - Services                                 | Ensure LDAP client is not installed                                              |   |
-                              |
+    | RHEL 7 - Services                                 | Ensure LDAP client is not installed                                              |   | |
+    | RHEL 7 -  Initial Setup                            | Ensure address space layout randomization (ASLR) is enabled |
+    | RHEL 7 -  Initial Setup                            | Ensure prelink is disabled                                  |
+    | RHEL 7 -  Initial Setup                            | Ensure permissions on /etc/issue are configured             |
+    | RHEL 7 -  Network Configuration                    | Ensure TCP SYN Cookies is enabled                           |
+    | RHEL 7 -  Network Configuration                    | Ensure TCP Wrappers is installed                            |
+    | RHEL 7 -  Network Configuration                    | Ensure iptables is installed                                |
+    | RHEL 7 -  Network Configuration                    | Ensure firewall rules exist for all open ports              |
+    | RHEL 7 -  Access, Authentication and Authorization | Ensure SSH X11 forwarding is disabled                       |
+    | RHEL 7 -  Access, Authentication and Authorization | Ensure SSH MaxAuthTries is set to 4 or less                 |
+    | RHEL 7 -  Access, Authentication and Authorization | Ensure SSH IgnoreRhosts is enabled                          |
+    | RHEL 7 -  Access, Authentication and Authorization | Ensure SSH HostbasedAuthentication is disabled              |
+    | RHEL 7 -  Access, Authentication and Authorization | Ensure SSH root login is disabled                           |
+    | RHEL 7 -  Access, Authentication and Authorization | Ensure SSH PermitEmptyPasswords is disabled                 |
+    | RHEL 7 -  Access, Authentication and Authorization | Ensure SSH PermitUserEnvironment is disabled                |
+    | RHEL 7 -  Access, Authentication and Authorization | Ensure only approved MAC algorithms are used                |
+    | RHEL 7 -  Access, Authentication and Authorization | Ensure SSH Idle Timeout Interval is configured              |
+    | RHEL 7 -  Access, Authentication and Authorization | Ensure SSH LoginGraceTime is set to one minute or less      |
+    | RHEL 7 -  Access, Authentication and Authorization | Ensure SSH access is limited                                |
+    | RHEL 7 -  Access, Authentication and Authorization | Ensure SSH warning banner is configured                     |
+    | RHEL 7 -  Access, Authentication and Authorization | Ensure password reuse is limited                            |
+    | RHEL 7 -  Access, Authentication and Authorization | Ensure password hashing algorithm is SHA-512                |
+    | RHEL 7 -  Access, Authentication and Authorization | Ensure default group for the root account is GID 0          |
+    | RHEL 7 -  Access, Authentication and Authorization | Ensure minimum days between password changes is 7 or more   |
+    | RHEL 7 -  Access, Authentication and Authorization | Ensure password expiration warning days is 7 or more        |
+    | RHEL 7 -  Access, Authentication and Authorization | Ensure all users last password change date is in the past   |
+    | RHEL 7 -  System Maintenance                       | Ensure permissions on /etc/shadow- are configured           |
+    | RHEL 7 -  System Maintenance                       | Ensure permissions on /etc/group- are configured            |
+    | RHEL 7 -  System Maintenance                       | Ensure permissions on /etc/gshadow- are configured          |
+    | RHEL 7 -  System Maintenance                       | Ensure no world writable files exist                        |
+    | RHEL 7 -  System Maintenance                       | Ensure no unowned files or directories exist                |
+    | RHEL 7 -  System Maintenance                       | Ensure no ungrouped files or directories exist              |
+    | RHEL 7 -  System Maintenance                       | Ensure no legacy "+" entries exist in /etc/passwd           |
+    | RHEL 7 -  System Maintenance                       | Ensure no legacy "+" entries exist in /etc/shadow           |
+    | RHEL 7 -  System Maintenance                       | Ensure no legacy "+" entries exist in /etc/group            |
+    | RHEL 7 -  System Maintenance                       | Ensure root is the only UID 0 account                       |
+    | RHEL 7 -  System Maintenance                       | Ensure no users have .forward files                         |
+    | RHEL 7 -  System Maintenance                       | Ensure no users have .netrc files                           |

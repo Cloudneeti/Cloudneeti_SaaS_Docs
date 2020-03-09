@@ -21,23 +21,26 @@ The following steps are required to onboard Microsoft Azure to the Cloudneeti ap
 
 4. [**Grant access to key vaults (Optional)**](../../onboardingGuide/grantAccessToKeyVaults/) includes giving the Cloudneeti application special permission on desired key vaults to get policy data related to secrets.
 
-5. [**Advance Security configuration (Optional)**](../../onboardingGuide/azureAdvanceSecurityConfiguration/) includes adding a script to the customer’s Azure account and granting the required access rights.
+5. [**Advanced Security configuration (Optional)**](../../onboardingGuide/azureAdvancedSecurityConfiguration/) includes adding a script to the customer’s Azure account and granting the required access rights.
 
     Advanced security configuration (step 5) requires a Cloudneeti PowerShell agent to be installed in an Azure subscription under the same tenant where the Azure subscription is located. The Cloudneeti PowerShell agent retrieves (A) additional configuration information from the Azure Active Directory  (there are no Azure APIs to retrieve this information) and pushes (B) this information as a JSON file to the Cloudneeti application.
 
 6. [**Configure quick wins (Optional)**](../../onboardingGuide/azureQuickWins/) includes updating configurations and settings to make the Azure Cloud account compliant for listed policies using scripts.
 
-7. [**Adding Azure subscription**](.././azureSubscriptions/#step-7-add-azure-subscription) includes adding Azure subscription information to the respective Cloud Account and waiting until the first data collection is complete.
+7. [**Configure OS baseline and vulnerability scanning**](../../onboardingGuide/azureVulnerability/) inlcudes connecting VMs to OMS workspace. Also deploy partner vulnerability scanning in Azure Security Center and installing the solution on multiple VMs allows to provide visibility into missing updates, misconfigured OS security settings, endpoint protection status, and health and threat protection
+
+8. [**Adding Azure subscription**](.././azureSubscriptions/#step-8-add-azure-subscription) includes adding Azure subscription information to the respective Cloud Account and waiting until the first data collection is complete.
 
 | S. No. | Step                                      | Portal to use  | Role                    | Type      | Policies     |
 |---|-------------------------------------------|----------------|-------------------------|-------------------|-------------------------|
-| 1  | Register Cloudneeti application           | Microsoft Azure| Global AD Administrator | mandatory | 0            |
-| 2  | Grant access to Azure subscription        | Microsoft Azure| Subscription Owner      | mandatory | 0            |
-| 3  | Grant access to Azure subscription additional roles | Microsoft Azure| Subscription Owner           | optional  | 39            |
-| 4 | Grant access to key vaults                | Microsoft Azure| Subscription Owner          | optional  | 1            |
-| 5 | Advance Security configuration            | Microsoft Azure| Subscription Owner, Global AD Reader          | optional  | 18            |
-| 6 | Configure quick wins                      | Microsoft Azure| Subscription Owner           | optional  | 137            |
-| 7 | Add Azure subscription                    | Cloudneeti     | License Admin           | mandatory | 0            |
+| 1  | [Register Cloudneeti application](.././azureSubscriptions/#step-1-register-cloudneeti-application-manually-or-using-azure-powershell-script)           | Microsoft Azure| Global AD Administrator | mandatory | 0            |
+| 2  | [Grant access to Azure subscription](.././azureSubscriptions/#step-2-grant-access-to-cloudneeti-registered-app)        | Microsoft Azure| Subscription Owner      | mandatory | 0            |
+| 3  | [Grant access to Azure subscription additional roles](../../onboardingGuide/grantAccessToAzureSubscriptionAdditionalRoles/) | Microsoft Azure| Subscription Owner           | optional  | 39            |
+| 4 | [Grant access to key vaults](../../onboardingGuide/grantAccessToKeyVaults/)                 | Microsoft Azure| Subscription Owner          | optional  | 1            |
+| 5 | [Advanced Security configuration](../../onboardingGuide/azureAdvancedSecurityConfiguration/)            | Microsoft Azure| Subscription Owner, Global AD Reader          | optional  | 18            |
+| 6 | [Configure quick wins](../../remediation/azureQuickWins/)                      | Microsoft Azure| Subscription Owner           | optional  | 137            |
+| 7 | [Configure OS baseline and vulnerability scanning](../../onboardingGuide/azureVulnerability/)                   | Microsoft Azure     | Subscription Owner           | optional | 513            |
+| 8 | [Add Azure subscription](../../onboardingGuide/azureSubscriptions/#step-8-add-azure-subscription)                    | Cloudneeti     | License Admin           | mandatory | 0            |
 
 ### Required Roles
 
@@ -75,8 +78,8 @@ document.
 |------|-------------------------------------------------------------|-------------------|--------------------|----------|-----------|--------------|
 | Azure Active Directory | Directory Read All Microsoft Graph              | Microsoft Azure   | Global AD Admin    | STEP 1   | optional  | 5            |
 | Azure Subscription | Reader              | Microsoft Azure   | Subscription Owner | STEP 2   | mandatory | 0            |
-| Azure Subscription | Website contributor | Microsoft Azure   | Subscription Owner | STEP 3   | optional  | 15           |
-| Azure Subscription | Storage Account Contributor | Microsoft Azure   | Subscription Owner | STEP 3   | optional  | 1            |
+| Azure Subscription | Website Contributor | Microsoft Azure   | Subscription Owner | STEP 3   | optional  | 1           |
+| Azure Subscription | Storage Account Contributor | Microsoft Azure   | Subscription Owner | STEP 3   | optional  | 15            |
 | Azure Subscription | Network Contributor Role  | Microsoft Azure   | Subscription Owner | STEP 3   | optional  | 1           |
 | Key Vault | Access Policy   | Microsoft Azure   | Subscription Owner | STEP 4   | optional  | 1            |
 
@@ -243,23 +246,15 @@ The Cloudneeti application **License Admin** requires this information to add an
 | Registered Cloudneeti Application ID     | Microsoft Azure   | Subscription Owner |
 | Registered Cloudneeti Application Secret | Microsoft Azure   | Subscription Owner |
 
-#### Azure Directory ID
+#### Azure Directory Id and Domain Name
 
-1.  Click on **Azure Active Directory** on the primary menu
+1.  Navigate to **Azure Active Directory** (1)
 
-2.  Click on **Properties** on the secondary menu
+2.  Copy **Domain Name** (2) to a notepad
 
-3.  Copy **Directory ID** to a notepad
+3.  Copy **Directory ID** (3) to a notepad
+
     ![Azure Directory](.././images/azureSubscriptions/Azure_Directory_ID.png#thumbnail)
-
-#### Azure AD Domain Name
-
-1.  Click on **Azure Active Directory** on the primary menu
-
-2.  Click on **Overview** on the secondary menu
-
-3.  Copy **Domain name** to a notepad
-    ![Azure Domain](.././images/azureSubscriptions/Azure_Domain_Name.png#thumbnail)
 
 #### Registered Cloudneeti Application ID 
 
@@ -267,7 +262,8 @@ The Cloudneeti application **License Admin** requires this information to add an
 
 2.  Select **App Registrations** in the secondary menu
 
-3.  Select Cloudneeti Application registered in [step1](.././azureSubscriptions/#step-1-register-cloudneeti-application)
+3.  Select Cloudneeti Application registered in [step 1](.././azureSubscriptions/#step-1-register-cloudneeti-application-manually-or-using-azure-powershell-script)
+
     ![Azure Domain](.././images/azureSubscriptions/Grant_Permission.png#thumbnail)
 
 4.  Copy the Cloudneeti Application id
@@ -279,7 +275,7 @@ The Cloudneeti application **License Admin** requires this information to add an
 
 2.  Select **App Registrations** in the secondary menu
 
-3.  Select Cloudneeti Application registered in [step 1](.././azureSubscriptions/#step-1-register-cloudneeti-application)
+3.  Select Cloudneeti Application registered in [step 1](.././azureSubscriptions/#step-1-register-cloudneeti-application-manually-or-using-azure-powershell-script)
 
 4.  Click on **new client secret** in **Certificates & secrets** section
 
@@ -292,25 +288,59 @@ The Cloudneeti application **License Admin** requires this information to add an
     screen.
     ![Application Secret](.././images/azureSubscriptions/AzureSP_CaptureClientSecret.png#thumbnail)
 
-## [STEP 3: Grant access to Azure subscription additional roles](../../onboardingGuide/grantAccessToAzureSubscriptionAdditionalRoles/)
+## STEP 3: Grant access to Azure subscription additional roles
 
-## [STEP 4: Grant access to key vaults](../../onboardingGuide/grantAccessToKeyVaults/) 
+**This step is optional**
 
-## [STEP 5: Advance Security configuration](../../onboardingGuide/azureAdvanceSecurityConfiguration/) 
+The following roles need to be granted to the Cloudneeti App registered in the previous step. Please follow [link](../../onboardingGuide/grantAccessToAzureSubscriptionAdditionalRoles/) for steps.
 
-## [STEP 6: Configure quick wins](../../remediation/azureQuickWins/)
+- Website contributor role for Azure Subscription level scope.
+- Storage Account Contributor role for Azure Subscription level scope.
+- Network Contributor role for Azure Subscription level scope.
+- Key Vault access policies for specific managed Key Vaults.
+- The following steps are done by Microsoft Azure Subscription Owner role.
 
-## STEP 7: Add Azure Subscription
+## STEP 4: Grant access to key vaults 
+**This step is optional.**
+The Cloudneeti application requires special permission on desired key vaults to get policy data related to secrets. 
+If the Key Vault access policy is not added, Cloudneeti application will not be able to collect data of security policies [listed here](.././grantAccessToKeyVaults/#key-vault-list).
+
+Please follow [link](../../onboardingGuide/grantAccessToKeyVaults/) for steps.
+
+## STEP 5: Advanced Security configuration 
+**This step is optional.**
+An Azure Automation Account resource is deployed to collect data for additional security policies listed here . The Azure Active Directory control plane exposes the data only through PowerShell that needs to run under a Global AD reader credential.
+
+To ensure that Cloudneeti does not ever store/have access to a global AD reader, it is recommended to deploy a small PowerShell script under customer’s control in their own Azure subscription. The metadata collected after running a script is then pushed to a Cloudneeti API that you registered during the Cloudneeti API key generation.
+
+Please follow [link](../../onboardingGuide/azureAdvancedSecurityConfiguration/) for steps.
+
+## STEP 6: Configure quick wins
+**This step is optional.**
+
+Remediation policies from **Azure Security center, Logging and Monitoring** and **Storage and Databases** can be done using quick wins scripts. These scripts will update configurations and settings to make the cloud account compliant for the policies [listed here](../../onboardingGuide/azureQuickWins/#remediation-policy-list).
+
+Please follow [link](../../remediation/azureQuickWins/) for steps.
+
+## STEP 7: Configure OS baseline and vulnerability scanning
+**This step is optional.** 
+Enabling Auto Provisioning of Azure Security Center monitoring agent and connect VMs to OMS workspace allows various OS baselines as defined by CIS automatically light up on the Cloudneeti dashboards.
+
+Deploy partner vulnerability scanning in Azure Security Center and installing the solution on multiple VMs allows to provide visibility into protection status and threat protection.
+
+Please follow [link](../../onboardingGuide/azureVulnerability/) for steps.
+
+## STEP 8: Add Azure Subscription
 
 The following steps are done by Cloudneeti application **License Admin** role.
 
-### 7.1 Activate the License
+### 8.1 Activate the License
 
 1.  Log in to the Cloudneeti application with **License Admin** role.
 2.  Click on **Activate License**
     ![Activate License](.././images/azureSubscriptions/Activate_License.png#thumbnail)
 
-### 7.2 Add Cloud Account
+### 8.2 Add Cloud Account
 
 1.  Select cloud connector for **Microsoft Azure**
     ![Add Account](.././images/azureSubscriptions/Azure_Select_Connector_Type.png#thumbnail)
@@ -327,7 +357,7 @@ The following steps are done by Cloudneeti application **License Admin** role.
 6.  You will receive a confirmation that the Azure subscription has been added.
     ![Add Account](.././images/azureSubscriptions/Account_Success.png#thumbnail)
 
-### 7.3 Data Collection
+### 8.3 Data Collection
 
 Once the Azure subscription is added to the cloud account under Cloudneeti
 License, it requires about 5 minutes for the data to be collected and processed,
@@ -356,9 +386,9 @@ not assigned.
 |--------------------------------------------------------------|------------------------------------------|
 | Read All Microsoft Graph permissions                         | 5         |
 | Reader role for Azure Subscription level scope.              | 0         |
-| Backup reader role for Azure Subscription level scope.       | 4                                        |
-| Website contributor role for Azure Subscription level scope. | 15                                       |
-| Key Vault access policies for specific managed Key Vaults    | 1                                        |
+| Website Contributor role for Azure Subscription level scope. | 1        |
+| Storage Account Contributor role for Azure Subscription level scope. | 15        |
+| Key Vault access policies for specific managed Key Vaults    | 1         |
 
 ### Microsoft Graph
 

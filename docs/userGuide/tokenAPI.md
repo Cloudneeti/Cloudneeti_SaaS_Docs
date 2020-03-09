@@ -4,7 +4,7 @@ Cloudneeti advised not to store token in localstorage.
 
 ### License token
 
-        POST https://<CLOUDNEETI API DOMAIN>/api/authorize/license
+        POST https://<CLOUDNEETI API DOMAIN>/api/authorize/license/<LICENSE ID>/token
 
 | Environment	| Values for CLOUDNEETI API DOMAIN     |
 |---------------|--------------------------------------|
@@ -15,7 +15,7 @@ Cloudneeti advised not to store token in localstorage.
 
 | Parameter           |           Description                                |           Required/Optional  |
 |-----------|----------------------------------------------------------------|----------------------------|
-| license   |          Cloudneeti License Id​              | Required|
+| LICENSE ID   |          Cloudneeti license id​              | Required|
 
 #### Header
 
@@ -27,8 +27,8 @@ Cloudneeti advised not to store token in localstorage.
 
 #### Request body
         {
-            appId:<API App Id>, 
-            secret:<API App Secret>
+            APIApplicationId:<API Application Id>, 
+            Secret:<API Application Secret>
         }
 
 #### Responses
@@ -42,7 +42,7 @@ Cloudneeti advised not to store token in localstorage.
 
 ### Account token
 
-        POST https://<CLOUDNEETI API DOMAIN>/api/authorize/license/<License Id>/token?accountId=<AccountId>
+        POST https://<CLOUDNEETI API DOMAIN>/api/authorize/license/<LICENSE ID>/token?accountId=<ACCOUNT ID>
 
 | Environment	| Values for CLOUDNEETI API DOMAIN     |
 |---------------|--------------------------------------|
@@ -54,8 +54,8 @@ Cloudneeti advised not to store token in localstorage.
 
 | Parameter           |           Description                                |           Required/Optional  |
 |-----------|----------------------------------------------------------------|----------------------------|
-| license   |          Cloudneeti License id              | Required|
-| account   |          Cloudneeti Cloud Account id              | Required|
+| LICENSE ID   |          Cloudneeti license id                    | Required|
+| ACCOUNT ID   |          Cloudneeti cloud account id              | Required|
 
 #### Header
 
@@ -67,8 +67,8 @@ Cloudneeti advised not to store token in localstorage.
 
 #### Request body
         {
-            appId:<API App Id>,
-            secret:<API App Secret>
+            APIApplicationId:<API Application Id>,
+            Secret:<API Application Secret>
         }
 
 
@@ -76,7 +76,7 @@ Cloudneeti advised not to store token in localstorage.
 
 | Name           |           Type       |          Description  |
 |----------------|----------------------|-----------------------|
-| token	     |     Access Token     | Cloudneeti API access token      |
-| statusCode |      Integer     | Cloudneeti API status code      |
-| message    |      String     | Response describing operation result as success or failed.     |
+| token	     |     Access Token         | Cloudneeti API access token      |
+| statusCode |      Integer             | Cloudneeti API status code      |
+| message    |      String              | Response describing operation result as success or failed.     |
 

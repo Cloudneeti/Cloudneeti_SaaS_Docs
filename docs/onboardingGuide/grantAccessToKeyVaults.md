@@ -1,11 +1,12 @@
 # STEP 4: Grant access to key vaults
 **This step is optional** 
-Access policy can be added using either an automation account or manual steps.  
-
-## 4.1 Manual Steps
 
 The Cloudneeti application requires special permission on desired key vaults to get policy data related to secrets. 
 If the Key Vault access policy is not added, Cloudneeti application will not be able to collect data of security policies [listed here](.././grantAccessToKeyVaults/#key-vault-list).
+
+Access policy can be added using either an automation account or manual steps.  
+
+## 4.1 Manual Steps
 
 1.	Login to Azure portal.
 2.	Go to the **Key vaults** (1)

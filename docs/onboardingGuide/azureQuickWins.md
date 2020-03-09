@@ -1,6 +1,7 @@
 # STEP 6: Configure quick wins
+**This step is optional.**
 
-Remediation policies from **Azure Security center, Logging and Monitoring** and **Storage and Databases** can be done using quick wins scripts. These scripts will update configurations and settings to make the Cloud account compliant for listed policies.
+Remediation policies from **Azure Security center, Logging and Monitoring** and **Storage and Databases** can be done using quick wins scripts. These scripts will update configurations and settings to make the cloud account compliant for the policies [listed here](../../onboardingGuide/azureQuickWins/#remediation-policy-list).
 
 | **Configuration script**       | **Category**                  | **Number of policies remediated** |
 |--------------------------------|-------------------------------|-----------------------------------|
