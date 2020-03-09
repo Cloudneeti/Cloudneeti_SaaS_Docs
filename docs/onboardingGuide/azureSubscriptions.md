@@ -246,23 +246,15 @@ The Cloudneeti application **License Admin** requires this information to add an
 | Registered Cloudneeti Application ID     | Microsoft Azure   | Subscription Owner |
 | Registered Cloudneeti Application Secret | Microsoft Azure   | Subscription Owner |
 
-#### Azure Directory ID
+#### Azure Directory Id and Domain Name
 
-1.  Click on **Azure Active Directory** on the primary menu
+1.  Navigate to **Azure Active Directory** (1)
 
-2.  Click on **Properties** on the secondary menu
+2.  Copy **Domain Name** (2) to a notepad
 
-3.  Copy **Directory ID** to a notepad
+3.  Copy **Directory ID** (3) to a notepad
+
     ![Azure Directory](.././images/azureSubscriptions/Azure_Directory_ID.png#thumbnail)
-
-#### Azure AD Domain Name
-
-1.  Click on **Azure Active Directory** on the primary menu
-
-2.  Click on **Overview** on the secondary menu
-
-3.  Copy **Domain name** to a notepad
-    ![Azure Domain](.././images/azureSubscriptions/Azure_Domain_Name.png#thumbnail)
 
 #### Registered Cloudneeti Application ID 
 
@@ -270,7 +262,8 @@ The Cloudneeti application **License Admin** requires this information to add an
 
 2.  Select **App Registrations** in the secondary menu
 
-3.  Select Cloudneeti Application registered in [step1](.././azureSubscriptions/#step-1-register-cloudneeti-application)
+3.  Select Cloudneeti Application registered in [step 1](.././azureSubscriptions/#step-1-register-cloudneeti-application-manually-or-using-azure-powershell-script)
+
     ![Azure Domain](.././images/azureSubscriptions/Grant_Permission.png#thumbnail)
 
 4.  Copy the Cloudneeti Application id
@@ -282,7 +275,7 @@ The Cloudneeti application **License Admin** requires this information to add an
 
 2.  Select **App Registrations** in the secondary menu
 
-3.  Select Cloudneeti Application registered in [step 1](.././azureSubscriptions/#step-1-register-cloudneeti-application)
+3.  Select Cloudneeti Application registered in [step 1](.././azureSubscriptions/#step-1-register-cloudneeti-application-manually-or-using-azure-powershell-script)
 
 4.  Click on **new client secret** in **Certificates & secrets** section
 
