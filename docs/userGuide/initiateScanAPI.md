@@ -1,6 +1,6 @@
 Cloudneeti offers scan API to initiate scan in Cloudneeti for given cloud account.
 
-       GET https://<CLOUDNEETI API DOMAIN>/api/compliance/license/<LICENSE ID>/account/<ACCOUNT ID>/rescan
+       GET https://<CLOUDNEETI API DOMAIN>/compliance/license/<LICENSE ID>/account/<ACCOUNT ID>/rescan
 
 
 | Environment	| Values for Cloudneeti API domain     |

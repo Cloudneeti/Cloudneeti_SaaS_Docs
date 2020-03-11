@@ -1,6 +1,6 @@
 Cloudneeti offers scan API to get scan status in Cloudneeti for provided cloud account.
 
-        GET https://<CLOUDNEETI API DOMAIN>/api/compliance/license/<LICENSE ID>/account/<ACCOUNT ID>/job/<JOB ID>/status
+        GET https://<CLOUDNEETI API DOMAIN>/compliance/license/<LICENSE ID>/account/<ACCOUNT ID>/job/<JOB ID>/status
 
 
 | Environment	| Values for Cloudneeti API domain     |
