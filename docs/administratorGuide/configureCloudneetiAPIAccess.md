@@ -26,14 +26,16 @@ The following steps are done by the Cloudneeti application License Admin role.
 
 6. Select **Cloud Accounts** (1) for API application scope
 
-7. Select **Token Expiry** duration
+7. Select **Token Expiry** (2) duration
 
-8. **Save**
+8. **Save** (3)
 
     ![Create API Application](.././images/cloudneetiAPIAccess/Create_API_Application_3.png#thumbnail)
 
 9. Copy **Cloudneeti API application secret** (1) and click **Done** (2)
     </br> Note : Please record the API Application secret that appears in the dialog window because you will not be able to retrieve the secret again after leaving the page.
+
+    User can choose to regenrate the API secret, please follow steps.
 
     ![Create API Application](.././images/cloudneetiAPIAccess/Create_API_Application_4.png#thumbnail)
 
@@ -92,7 +94,7 @@ Cloudneeti advised not to store token in localstorage.
 
 ### License token
 
-        POST https://<CLOUDNEETI API DOMAIN>/api/authorize/license/<LICENSE ID>/token
+        POST https://<CLOUDNEETI API DOMAIN>/authorize/license/<LICENSE ID>/token
 
 | Environment	| Values for CLOUDNEETI API DOMAIN     |
 |---------------|--------------------------------------|
@@ -130,7 +132,7 @@ Cloudneeti advised not to store token in localstorage.
 
 ### Account token
 
-        POST https://<CLOUDNEETI API DOMAIN>/api/authorize/license/<LICENSE ID>/token?accountId=<ACCOUNT ID>
+        POST https://<CLOUDNEETI API DOMAIN>/authorize/license/<LICENSE ID>/token?accountId=<ACCOUNT ID>
 
 | Environment	| Values for CLOUDNEETI API DOMAIN     |
 |---------------|--------------------------------------|
@@ -171,3 +173,30 @@ Cloudneeti advised not to store token in localstorage.
 ## Next Step
 
 [API List](../../userGuide/restAPIs/)
+
+
+## Appendix
+
+### Regenearate API Secret 
+
+1. Select **license** in which Cloudneeti API application is to be created.
+
+2. Navigate to **Configuration** (1) and **Cloudneeti API Access** (2)
+
+    ![create API Applicationscribe](.././images/cloudneetiAPIAccess/Regenerate_1.png#thumbnail)
+
+3. Click **Configure App**
+
+4. Select **Regenerate Secret Key**
+
+    ![create API Applicationscribe](.././images/cloudneetiAPIAccess/Regenerate_2.png#thumbnail)
+
+5. **Confirm**
+
+    ![create API Applicationscribe](.././images/cloudneetiAPIAccess/Regenerate_3.png#thumbnail)
+
+6. Copy regenerated secret (1)
+
+7. Click **Done** (2)
+
+    ![create API Applicationscribe](.././images/cloudneetiAPIAccess/Regenerate_4.png#thumbnail)
