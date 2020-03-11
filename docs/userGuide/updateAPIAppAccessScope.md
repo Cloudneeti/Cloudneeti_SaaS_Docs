@@ -1,7 +1,7 @@
 Cloudneeti offers config API to update API application access scope to add a Cloud Account in Cloudneeti.
 
 
-        PUT https://<CLOUDNEETI API DOMAIN>/api/onboarding/license/<LICENSE ID>/config
+        PUT https://<CLOUDNEETI API DOMAIN>/onboarding/license/<LICENSE ID>/config
 
 | Environment	| Values for Cloudneeti API domain      |
 |---------------|--------------------------------------|
