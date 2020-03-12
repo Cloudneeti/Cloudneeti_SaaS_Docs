@@ -47,15 +47,16 @@ nav:
   - Overview: onboardingGuide/onboardingGuideOverview.md
   - Amazon Web Services: 
     - Onboarding steps: onboardingGuide/amazonWebServiceAccounts.md
-    - Configure OS baseline (optional): onboardingGuide/awsVMBaselineConfiguration.md
+    - OS baseline (optional): onboardingGuide/awsVMBaselineConfiguration.md
     # - Configure quick wins: onboardingGuide/awsQuickWins.md
   - Micorsoft Azure:
     - Onboarding steps: onboardingGuide/azureSubscriptions.md
-    - Grant access to Azure subscription additional roles: onboardingGuide/grantAccessToAzureSubscriptionAdditionalRoles.md
-    - Grant access to key vaults: onboardingGuide/grantAccessToKeyVaults.md
+    - Additional roles: onboardingGuide/grantAccessToAzureSubscriptionAdditionalRoles.md
+    - Key vaults: onboardingGuide/grantAccessToKeyVaults.md
     - Advanced security configurations: onboardingGuide/azureAdvancedSecurityConfiguration.md
-    - Configure quick wins: onboardingGuide/azureQuickWins.md
-    - Configure OS baseline and vulnerability scanning: onboardingGuide/azureVulnerability.md
+    - Quick wins: onboardingGuide/azureQuickWins.md
+    - OS baseline and vulnerability: onboardingGuide/azureVulnerability.md
+    - Kubernetes cluster: onboardingGuide/configureCloudneetiAgentInKubernetesCluster.md
   - Office 365: 
     - Onboarding steps: onboardingGuide/office365Subscription.md
     - Upgrade advanced security configurations: onboardingGuide/office365AdvanceSecurityConfigurationUpgrade.md

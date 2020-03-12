@@ -6,7 +6,7 @@ Cloudneeti offers scan API to initiate scan in Cloudneeti for given cloud accoun
 | Environment	| Values for Cloudneeti API domain     |
 |---------------|--------------------------------------|
 | PROD 	        |   api.cloudneeti.com                 |
-| TRIAL 	| trialapi.cloudneeti.com              |
+| TRIAL 	    | trialapi.cloudneeti.com              |
 
 
 ### URI Parameters
