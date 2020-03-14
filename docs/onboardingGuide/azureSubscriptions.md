@@ -27,9 +27,12 @@ The following steps are required to onboard Microsoft Azure to the Cloudneeti ap
 
 6. [**Configure quick wins (Optional)**](../../onboardingGuide/azureQuickWins/) includes updating configurations and settings to make the Azure Cloud account compliant for listed policies using scripts.
 
-7. [**Configure OS baseline and vulnerability scanning**](../../onboardingGuide/azureVulnerability/) inlcudes connecting VMs to OMS workspace. Also deploy partner vulnerability scanning in Azure Security Center and installing the solution on multiple VMs allows to provide visibility into missing updates, misconfigured OS security settings, endpoint protection status, and health and threat protection
+7. [**Configure OS baseline and vulnerability scanning**](../../onboardingGuide/azureVulnerability/) inlcudes connecting VMs to OMS workspace. Also deploy partner vulnerability scanning in Azure Security Center and installing the solution on multiple VMs allows to provide visibility into missing updates, misconfigured OS security settings, endpoint protection status, and health and threat protection.
 
-8. [**Adding Azure subscription**](.././azureSubscriptions/#step-8-add-azure-subscription) includes adding Azure subscription information to the respective Cloud Account and waiting until the first data collection is complete.
+8. [**Configure Cloudneeti agent on Kubernetes**](../../onboardingGuide/configureCloudneetiAgentInKubernetesCluster/) inlcudes Deploying Cloudneeti agent on Azure Kubernetes Service enables compliance monitoring of Kubernetes master node.
+An Azure docker agent is deployed to collect data for additional security policies.
+
+9. [**Adding Azure subscription**](.././azureSubscriptions/#step-8-add-azure-subscription) includes adding Azure subscription information to the respective Cloud Account and waiting until the first data collection is complete.
 
 | S. No. | Step                                      | Portal to use  | Role                    | Type      | Policies     |
 |---|-------------------------------------------|----------------|-------------------------|-------------------|-------------------------|
