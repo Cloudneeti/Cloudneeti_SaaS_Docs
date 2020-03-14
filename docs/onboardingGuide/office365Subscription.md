@@ -622,24 +622,24 @@ Advanced security configuration done using Office 365 App Password will not enab
 |   M800.10     |  22. Ensure MailTips are enabled for end users |M365 - Email Security / Exchange Online |
 |  M800.11      |  23. Ensure basic authentication for Exchange Online is disabled |M365 - Email Security / Exchange Online |
 |    M010.2    |  24. Block OneDrive for Business sync from unmanaged devices |M365 - Storage |
-| M400.32 | Ensure that 'Number of methods required to reset' is set to '2'                                                      | M365 - Identity |
-| M400.33 | 25. Ensure that 'Number of days before users are asked to re-confirm their authentication information' is not set to '0' | M365 - Identity |
-| M400.34 | 26. Ensure that 'Notify all admins when other admins reset their password?' is set to 'Yes'                              | M365 - Identity |
-| M400.35 | 27. Ensure that 'Notify users on password resets?' is set to 'Yes'                                                       | M365 - Identity |
-| M400.36 | 28. Ensure that 'Users can consent to apps accessing company data on their behalf' is set to 'No'                        | M365 - Identity |
-| M400.37 | 29. Ensure that 'Users can add gallery apps to their Access Panel' is set to 'No'                                        | M365 - Identity |
-| M400.38 | 30. Ensure that 'Users can register applications' is set to 'No'                                                         | M365 - Identity |
-| M400.39 | 31. Ensure that 'Guest user permissions are limited' is set to 'Yes'                                                     | M365 - Identity |
-| M400.40 | 32. Ensure that 'Members can invite' is set to 'No'                                                                      | M365 - Identity |
-| M400.41 | 33. Ensure that 'Guests can invite' is set to 'No'                                                                       | M365 - Identity |
-| M400.42 | 34. Ensure that 'Restrict access to Azure AD administration portal' is set to 'Yes'                                      | M365 - Identity |
-| M400.43 | 35. Ensure that 'Self-service group management enabled' is set to 'No'                                                   | M365 - Identity |
-| M400.44 | 36. Ensure that 'Users can create security groups' is set to 'No'                                                        | M365 - Identity |
-| M400.45 | 37. Ensure that 'Users who can manage security groups' is set to 'None'                                                  | M365 - Identity |
-| M400.46 | 38. Ensure that 'Users can create Office 365 groups' is set to 'No'                                                      | M365 - Identity |
-| M400.47 | 39. Ensure that 'Users who can manage Office 365 groups' is set to 'None'                                                | M365 - Identity |
-| M400.48 | 40. Ensure that 'Enable All Users group' is set to 'Yes'                                                                 | M365 - Identity |
-| M400.49 | 41. Ensure that 'Require Multi-Factor Auth to join devices' is set to 'Yes'                                              | M365 - Identity |
+| M400.32 | 25. Ensure that 'Number of methods required to reset' is set to '2'                                                      | M365 - Identity |
+| M400.33 | 26. Ensure that 'Number of days before users are asked to re-confirm their authentication information' is not set to '0' | M365 - Identity |
+| M400.34 | 27. Ensure that 'Notify all admins when other admins reset their password?' is set to 'Yes'                              | M365 - Identity |
+| M400.35 | 28. Ensure that 'Notify users on password resets?' is set to 'Yes'                                                       | M365 - Identity |
+| M400.36 | 29. Ensure that 'Users can consent to apps accessing company data on their behalf' is set to 'No'                        | M365 - Identity |
+| M400.37 | 30. Ensure that 'Users can add gallery apps to their Access Panel' is set to 'No'                                        | M365 - Identity |
+| M400.38 | 31. Ensure that 'Users can register applications' is set to 'No'                                                         | M365 - Identity |
+| M400.39 | 32. Ensure that 'Guest user permissions are limited' is set to 'Yes'                                                     | M365 - Identity |
+| M400.40 | 33. Ensure that 'Members can invite' is set to 'No'                                                                      | M365 - Identity |
+| M400.41 | 34. Ensure that 'Guests can invite' is set to 'No'                                                                       | M365 - Identity |
+| M400.42 | 35. Ensure that 'Restrict access to Azure AD administration portal' is set to 'Yes'                                      | M365 - Identity |
+| M400.43 | 36. Ensure that 'Self-service group management enabled' is set to 'No'                                                   | M365 - Identity |
+| M400.44 | 37. Ensure that 'Users can create security groups' is set to 'No'                                                        | M365 - Identity |
+| M400.45 | 38. Ensure that 'Users who can manage security groups' is set to 'None'                                                  | M365 - Identity |
+| M400.46 | 39. Ensure that 'Users can create Office 365 groups' is set to 'No'                                                      | M365 - Identity |
+| M400.47 | 40. Ensure that 'Users who can manage Office 365 groups' is set to 'None'                                                | M365 - Identity |
+| M400.48 | 41. Ensure that 'Enable All Users group' is set to 'Yes'                                                                 | M365 - Identity |
+| M400.49 | 42. Ensure that 'Require Multi-Factor Auth to join devices' is set to 'Yes'                                              | M365 - Identity |
 
 
 
