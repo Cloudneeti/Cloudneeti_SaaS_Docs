@@ -27,9 +27,12 @@ The following steps are required to onboard Microsoft Azure to the Cloudneeti ap
 
 6. [**Configure quick wins (Optional)**](../../onboardingGuide/azureQuickWins/) includes updating configurations and settings to make the Azure Cloud account compliant for listed policies using scripts.
 
-7. [**Configure OS baseline and vulnerability scanning**](../../onboardingGuide/azureVulnerability/) inlcudes connecting VMs to OMS workspace. Also deploy partner vulnerability scanning in Azure Security Center and installing the solution on multiple VMs allows to provide visibility into missing updates, misconfigured OS security settings, endpoint protection status, and health and threat protection
+7. [**Configure OS baseline and vulnerability scanning**](../../onboardingGuide/azureVulnerability/) inlcudes connecting VMs to OMS workspace. Also deploy partner vulnerability scanning in Azure Security Center and installing the solution on multiple VMs allows to provide visibility into missing updates, misconfigured OS security settings, endpoint protection status, and health and threat protection.
 
-8. [**Adding Azure subscription**](.././azureSubscriptions/#step-8-add-azure-subscription) includes adding Azure subscription information to the respective Cloud Account and waiting until the first data collection is complete.
+8. [**Configure Cloudneeti agent on Kubernetes**](../../onboardingGuide/configureCloudneetiAgentInKubernetesCluster/) inlcudes Deploying Cloudneeti agent on Azure Kubernetes Service enables compliance monitoring of Kubernetes master node.
+An Azure docker agent is deployed to collect data for additional security policies.
+
+9. [**Adding Azure subscription**](.././azureSubscriptions/#step-8-add-azure-subscription) includes adding Azure subscription information to the respective Cloud Account and waiting until the first data collection is complete.
 
 | S. No. | Step                                      | Portal to use  | Role                    | Type      | Policies     |
 |---|-------------------------------------------|----------------|-------------------------|-------------------|-------------------------|
@@ -40,7 +43,8 @@ The following steps are required to onboard Microsoft Azure to the Cloudneeti ap
 | 5 | [Advanced Security configuration](../../onboardingGuide/azureAdvancedSecurityConfiguration/)            | Microsoft Azure| Subscription Owner, Global AD Reader          | optional  | 18            |
 | 6 | [Configure quick wins](../../remediation/azureQuickWins/)                      | Microsoft Azure| Subscription Owner           | optional  | 137            |
 | 7 | [Configure OS baseline and vulnerability scanning](../../onboardingGuide/azureVulnerability/)                   | Microsoft Azure     | Subscription Owner           | optional | 513            |
-| 8 | [Add Azure subscription](../../onboardingGuide/azureSubscriptions/#step-8-add-azure-subscription)                    | Cloudneeti     | License Admin           | mandatory | 0            |
+| 8 | [Configure Cloudneeti agent on Kubernetes](../../onboardingGuide/configureCloudneetiAgentInKubernetesCluster/)                   | Microsoft Azure     | Subscription Owner           | optional | 30            |
+| 9 | [Add Azure subscription](../../onboardingGuide/azureSubscriptions/#step-8-add-azure-subscription)                    | Cloudneeti     | License Admin           | mandatory | 0            |
 
 ### Required Roles
 
@@ -330,17 +334,26 @@ Deploy partner vulnerability scanning in Azure Security Center and installing th
 
 Please follow [link](../../onboardingGuide/azureVulnerability/) for steps.
 
-## STEP 8: Add Azure Subscription
+
+## STEP 8: Configure Cloudneeti agent on Kubernetes
+**This step is optional.** 
+
+Deploying Cloudneeti agent on Azure Kubernetes Service enables compliance monitoring of Kubernetes master node.
+An Azure docker agent is deployed to collect data for additional security policies.
+
+Please follow [link](../../onboardingGuide/configureCloudneetiAgentInKubernetesCluster/) for steps.
+
+## STEP 9: Add Azure Subscription
 
 The following steps are done by Cloudneeti application **License Admin** role.
 
-### 8.1 Activate the License
+### 9.1 Activate the License
 
 1.  Log in to the Cloudneeti application with **License Admin** role.
 2.  Click on **Activate License**
     ![Activate License](.././images/azureSubscriptions/Activate_License.png#thumbnail)
 
-### 8.2 Add Cloud Account
+### 9.2 Add Cloud Account
 
 1.  Select cloud connector for **Microsoft Azure**
     ![Add Account](.././images/azureSubscriptions/Azure_Select_Connector_Type.png#thumbnail)
@@ -357,7 +370,7 @@ The following steps are done by Cloudneeti application **License Admin** role.
 6.  You will receive a confirmation that the Azure subscription has been added.
     ![Add Account](.././images/azureSubscriptions/Account_Success.png#thumbnail)
 
-### 8.3 Data Collection
+### 9.3 Data Collection
 
 Once the Azure subscription is added to the cloud account under Cloudneeti
 License, it requires about 5 minutes for the data to be collected and processed,

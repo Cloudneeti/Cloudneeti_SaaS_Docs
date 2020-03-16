@@ -47,12 +47,12 @@ STEP 2: Deploy Cloudneeti agent
 
 ### 2.1 Update agent configuration scripts
 
-    - **cloudneeti-namespace.yaml** metadata section with value for namespace name.
+- **cloudneeti-namespace.yaml** metadata section with value for namespace name.
 
                 metadata:
                     name: cloudneeti
     
-    - **cloudneeti-agent-config.yaml** data section with values **cloudneeti-agent-config** downloaded in [STEP 1.](../../onboardingGuide/configureCloudneetiAgentInKubernetesCluster/#step-1-associate-kubernetes-cluster-with-cloud-account-in-cloudneeti)
+- **cloudneeti-agent-config.yaml** data section with values **cloudneeti-agent-config** downloaded in [STEP 1.](../../onboardingGuide/configureCloudneetiAgentInKubernetesCluster/#step-1-associate-kubernetes-cluster-with-cloud-account-in-cloudneeti)
 
                 
                 data:
@@ -61,9 +61,9 @@ STEP 2: Deploy Cloudneeti agent
                     accountId: "<cloudneetiaccountid>"
                     cloudneetiEnvironment: "<prod/trial>"
 
-    -  **cloudneeti-agent-secret.yaml** set the below values.
-        -  **namespace** as given in cloudneeti-namespace.yaml.
-        -  **cloudneetiAPIKey** Please follow steps to generate the key and set the key in base64 format.
+-  **cloudneeti-agent-secret.yaml** set the below values.
+    -  **namespace** as given in cloudneeti-namespace.yaml.
+    -  **cloudneetiAPIKey** Please follow steps to generate the key and set the key in base64 format.
 
                 metadata:
                     name: cloudneeti-agent
@@ -71,13 +71,13 @@ STEP 2: Deploy Cloudneeti agent
                 data:
                     cloudneetiAPIKey: <cloudneetiapikey>
 
-    -  **cloudneeti-agent.yaml** update value for **schedule** in spec section, set cron job schedule as per your requirement.
+-  **cloudneeti-agent.yaml** update value for **schedule** in spec section, set cron job schedule as per your requirement.
 
                 spec:
                     schedule: "0 12 * * *"
                 
 
-    Note: It is recommended set the execution time of Cloudneeti agent once a day.
+Note: It is recommended set the execution time of Cloudneeti agent once a day.
 
 ### 2.2 Deploy Cloudneeti agent on Kubernetes master
 
