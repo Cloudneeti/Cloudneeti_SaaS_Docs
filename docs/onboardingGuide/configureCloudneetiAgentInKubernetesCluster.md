@@ -9,7 +9,8 @@ Prerequisites
 | 1.	Download and review **PowerShell script** scripts for configuration of Cloudneeti Agent | The PowerShell script is used to configure Cloudneeti Agent in Azure Kubernetes Cluster:<br>  [cloudneeti-namespace.yaml](https://github.com/Cloudneeti/docs_cloudneeti/blob/master/scripts/kubernetes-onboarding/cloudneeti-namespace.yaml)<br>[cloudneeti-agent-config.yaml](https://github.com/Cloudneeti/docs_cloudneeti/blob/master/scripts/kubernetes-onboarding/cloudneeti-agent-config.yaml)<br>[cloudneeti-agent-secret.yaml](https://github.com/Cloudneeti/docs_cloudneeti/blob/master/scripts/kubernetes-onboarding/cloudneeti-agent-secret.yaml)<br>[cloudneeti-agent.yaml](https://github.com/Cloudneeti/docs_cloudneeti/blob/master/scripts/kubernetes-onboarding/cloudneeti-agent.yaml) |
 | 2.	**Workstation**: Ensure you have the latest PowerShell version (v5 and above) | Verify PowerShell version by running the following command<br>`$PSVersionTable.PSVersion`<br>on the workstation where you will run the ServicePrincipal creation script. If PowerShell version is lower than 5, then follow this link for installation of a later version: [Download Link.](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-windows-powershell?view=powershell-6) |
 | 3.	**Workstation:** Before executing the script, make sure there are no restrictions in running the PowerShell script  | Use this PowerShell command:<br>``Set-ExecutionPolicy ` ``<br>``-Scope Process ` ``<br>``-ExecutionPolicy Bypass``<br>PowerShell contains built-in execution policies that limit its use as an attack vector. By default, the execution policy is set to Restricted, which is the primary policy for script execution. The bypass allows for running scripts and keeps the lowered permissions isolated to just the current running process. |                                                     
-| 4. **Workstation:** Install and set up kubectl to execute PowerShell commands within Cloudneeti Agent configuration script | Please follow [link](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-on-windows) to install and set up **kubectl** <br>``choco install kubernetes-cli``<br>      |
+| 4. **Workstation:** Azure CLI version 2.0.46 | Please follow [link](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest) to install Azure CLI version 2.0.46       |
+| 5. **Workstation:** Install and set up kubectl to execute PowerShell commands within Cloudneeti Agent configuration script | Please follow [link](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-on-windows) to install and set up **kubectl** <br>``choco install kubernetes-cli``<br>      |
 
 STEP 1: Associate Kubernetes cluster with Cloud account in Cloudneeti
 ---------------------------------------------------------------------
@@ -45,12 +46,26 @@ Sample JSON file
 STEP 2: Deploy Cloudneeti agent
 -------------------------------
 
-### 2.1 Update agent configuration scripts
+### 2.1 
+
+#### AKS
+
+Login to masternode with root account.
+
+
+#### AKS Engine
+
+Login to Kubernetes cluster with root account.
+
+        az aks get-credentials --name <cluster-name> --resource-group <cluster-resource-group> --overwrite-existing
+
+
+### 2.2 Update agent configuration scripts
 
 - **cloudneeti-namespace.yaml** metadata section with value for namespace name.
 
                 metadata:
-                    name: cloudneeti
+                    name: <Namespace>
     
 - **cloudneeti-agent-config.yaml** data section with values **cloudneeti-agent-config** downloaded in [STEP 1.](../../onboardingGuide/configureCloudneetiAgentInKubernetesCluster/#step-1-associate-kubernetes-cluster-with-cloud-account-in-cloudneeti)
 
@@ -67,7 +82,7 @@ STEP 2: Deploy Cloudneeti agent
 
                 metadata:
                     name: cloudneeti-agent
-                    namespace: cloudneeti
+                    namespace: <Namespace>
                 data:
                     cloudneetiAPIKey: <cloudneetiapikey>
 
@@ -79,7 +94,7 @@ STEP 2: Deploy Cloudneeti agent
 
 Note: It is recommended set the execution time of Cloudneeti agent once a day.
 
-### 2.2 Deploy Cloudneeti agent on Kubernetes master
+### 2.3 Deploy Cloudneeti agent on Kubernetes master
 
 Login to Kubernetes master with **administrator** role.
 
@@ -102,17 +117,38 @@ Login to Kubernetes master with **administrator** role.
 
 4.  Create Cloudneeti agent config
 
-        kubectl apply -f cloudneeti-agent-config.yaml
+        kubectl apply -f cloudneeti-agent-config.yaml --namespace <namespace name>
 
 5.  Deploy Cloudneeti agent
 
-        kubectl apply -f cloudneeti-agent.yaml
+        kubectl apply -f cloudneeti-agent.yaml --namespace <namespace name>
 
     ![Associate Kubernetes](.././images/kubernetes/Master_2.png#thumbnail)
 
-6.  Verify agent configuration
 
-STEP 3: Verify policy results
+STEP 3: Verify Cloudneeti agent installation
+--------------------------------------------
+
+Verify Cloudneeti agent installation using Kubernetes dashboard. Please follow [link](https://docs.microsoft.com/en-us/azure/aks/kubernetes-dashboard#start-the-kubernetes-dashboard)
+
+1. Verify namespace created
+
+    ![Associate Kubernetes](.././images/kubernetes/Verify_1.png#thumbnail)
+
+2. Navigate cron jobs
+
+    ![Associate Kubernetes](.././images/kubernetes/Verify_2.png#thumbnail)
+
+3. Select latest job 
+
+    ![Associate Kubernetes](.././images/kubernetes/Verify_3.png#thumbnail)
+
+4. Check if Cloudneeti agent has sent the data successfully.
+
+    ![Associate Kubernetes](.././images/kubernetes/Verify_4.png#thumbnail)    
+
+
+STEP 4: Verify policy results
 -----------------------------
 
 Login to Cloudneeti portal with **License Admin** role
