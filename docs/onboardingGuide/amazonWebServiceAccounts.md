@@ -50,7 +50,7 @@ The following steps are executed by AWS **Administrator** role. AWS role for Clo
 
 ### 1.1 Manual
 #### Grant Permissions
-Login to [AWS portal](https://console.aws.amazon.com/) with AWS **Administrator** role.
+Login to [AWS portal](https://console.aws.amazon.com/){target=_blank} with AWS **Administrator** role.
 
 1.	Navigate to **Services** (1)
 
