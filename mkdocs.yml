@@ -28,6 +28,8 @@ extra_javascript:
   - 'javascripts/custom.js'
 extra_templates:
   - 'releaseNotes/currentVersion.html'
+markdown_extensions:
+    - attr_list
 
 nav:
 - Introduction: 
