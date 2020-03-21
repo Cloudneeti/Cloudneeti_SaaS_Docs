@@ -42,6 +42,8 @@ Create metrices and alarms for various events in the AWS Account
     - awsaccountid: 12-digit AWS Account Id of the account where you need to set up the alarms
     - emailid: valid email id where to receive the notifications
 
+    <!-- <Todos> Screenshot here -->
+
 5. Once the script successfully creates all the resources and alarms. Please subscribe to the SNS using the link you will receive in the email mentioned while executing above script, to start receiving notificatins of the alarms.
 
 ## Annexure
