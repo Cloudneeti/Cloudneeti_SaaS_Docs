@@ -1,6 +1,10 @@
 Configuring Cloudneeti agent in Kubernetes cluster
 ==================================================
 
+Deploying Cloudneeti agent on Azure Kubernetes Service enables compliance monitoring of Kubernetes cluster.
+An Azure docker agent is deployed to collect data for additional security policies.
+
+
 Prerequisites
 -------------
 
@@ -46,11 +50,11 @@ Sample JSON file
 STEP 2: Deploy Cloudneeti agent
 -------------------------------
 
-### 2.1 
+### 2.1 Access Kubernetes cluster
 
 #### AKS
 
-Login to masternode with root account.
+Login to one of the master nodes with root account.
 
 
 #### AKS Engine
@@ -106,7 +110,6 @@ Login to Kubernetes master with **administrator** role.
 
     ![Associate Kubernetes](.././images/kubernetes/Master_1.png#thumbnail)
     
-
 2. Create a Cloudneeti namespace 
 
         kubectl apply -f cloudneeti-namespace.yaml
@@ -163,6 +166,94 @@ Login to Cloudneeti portal with **License Admin** role
 
 
 ## Appendix
+
+### Kubernetes policy list
+
+The following CIS Kubernetes policies get enabled due to Cloudneeti Kubernetes agent configuration.
+
+| **Category**                                                            | **Policy Title**                                                                                         |
+|-------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|
+| Kubernetes - Control Plane Components - Master Node Configuration Files | Ensure that the API server pod specification file permissions are set to 644 or more restrictive         |
+| Kubernetes - Control Plane Components - Master Node Configuration Files | Ensure that the API server pod specification file ownership is set to root:root                          |
+| Kubernetes - Control Plane Components - Master Node Configuration Files | Ensure that the controller manager pod specification file permissions are set to 644 or more restrictive |
+| Kubernetes - Control Plane Components - Master Node Configuration Files | Ensure that the controller manager pod specification file ownership is set to root:root                  |
+| Kubernetes - Control Plane Components - Master Node Configuration Files | Ensure that the scheduler pod specification file permissions are set to 644 or more restrictive          |
+| Kubernetes - Control Plane Components - Master Node Configuration Files | Ensure that the scheduler pod specification file ownership is set to root:root                           |
+| Kubernetes - Control Plane Components - Master Node Configuration Files | Ensure that the etcd pod specification file permissions are set to 644 or more restrictive               |
+| Kubernetes - Control Plane Components - Master Node Configuration Files | Ensure that the etcd pod specification file ownership is set to root:root                                |
+| Kubernetes - Control Plane Components - Master Node Configuration Files | Ensure that the etcd data directory permissions are set to 700 or more restrictive                       |
+| Kubernetes - Control Plane Components - Master Node Configuration Files | Ensure that the etcd data directory ownership is set to etcd:etcd                                        |
+| Kubernetes - Control Plane Components - Master Node Configuration Files | Ensure that the admin.conf file permissions are set to 644 or more restrictive                           |
+| Kubernetes - Control Plane Components - Master Node Configuration Files | Ensure that the admin.conf file ownership is set to root:root                                            |
+| Kubernetes - Control Plane Components - Master Node Configuration Files | Ensure that the scheduler.conf file permissions are set to 644 or more restrictive                       |
+| Kubernetes - Control Plane Components - Master Node Configuration Files | Ensure that the scheduler.conf file ownership is set to root:root                                        |
+| Kubernetes - Control Plane Components - Master Node Configuration Files | Ensure that the controller-manager.conf file permissions are set to 644 or more restrictive              |
+| Kubernetes - Control Plane Components - Master Node Configuration Files | Ensure that the controller-manager.conf file ownership is set to root:root                               |
+| Kubernetes - Control Plane Components - API Server                      | Ensure that the --basic-auth-file argument is not set                                                    |
+| Kubernetes - Control Plane Components - API Server                      | Ensure that the --token-auth-file argument is not set                                                    |
+| Kubernetes - Control Plane Components - API Server                      | Ensure that the --kubelet-https argument is set to true                                                  |
+| Kubernetes - Control Plane Components - API Server                      | Ensure that the --kubelet-client-certificate and --kubelet-client-key arguments are set as appropriate   |
+| Kubernetes - Control Plane Components - API Server                      | Ensure that the --kubelet-certificate-authority argument is set as appropriate                           |
+| Kubernetes - Control Plane Components - API Server                      | Ensure that the --authorization-mode argument is not set to AlwaysAllow                                  |
+| Kubernetes - Control Plane Components - API Server                      | Ensure that the --authorization-mode argument includes Node                                              |
+| Kubernetes - Control Plane Components - API Server                      | Ensure that the --authorization-mode argument includes RBAC                                              |
+| Kubernetes - Control Plane Components - API Server                      | Ensure that the admission control plugin AlwaysAdmit is not set                                          |
+| Kubernetes - Control Plane Components - API Server                      | Ensure that the admission control plugin ServiceAccount is set                                           |
+| Kubernetes - Control Plane Components - API Server                      | Ensure that the admission control plugin NamespaceLifecycle is set                                       |
+| Kubernetes - Control Plane Components - API Server                      | Ensure that the admission control plugin PodSecurityPolicy is set                                        |
+| Kubernetes - Control Plane Components - API Server                      | Ensure that the admission control plugin NodeRestriction is set                                          |
+| Kubernetes - Control Plane Components - API Server                      | Ensure that the --insecure-bind-address argument is not set                                              |
+| Kubernetes - Control Plane Components - API Server                      | Ensure that the --insecure-port argument is set to 0                                                     |
+| Kubernetes - Control Plane Components - API Server                      | Ensure that the --secure-port argument is not set to 0                                                   |
+| Kubernetes - Control Plane Components - API Server                      | Ensure that the --request-timeout argument is set as appropriate                                         |
+| Kubernetes - Control Plane Components - API Server                      | Ensure that the --service-account-lookup argument is set to true                                         |
+| Kubernetes - Control Plane Components - API Server                      | Ensure that the --service-account-key-file argument is set as appropriate                                |
+| Kubernetes - Control Plane Components - API Server                      | Ensure that the --etcd-certfile and --etcd-keyfile arguments are set as appropriate                      |
+| Kubernetes - Control Plane Components - API Server                      | Ensure that the --tls-cert-file and --tls-private-key-file arguments are set as appropriate              |
+| Kubernetes - Control Plane Components - API Server                      | Ensure that the --client-ca-file argument is set as appropriate                                          |
+| Kubernetes - Control Plane Components - API Server                      | Ensure that the --etcd-cafile argument is set as appropriate                                             |
+| Kubernetes - Control Plane Components - API Server                      | Ensure that the --encryption-provider-config argument is set as appropriate                              |
+| Kubernetes - Control Plane Components - API Server                      | Ensure that the --audit-log-path argument is set                                                         |
+| Kubernetes - Control Plane Components - API Server                      | Ensure that the --audit-log-maxage argument is set to 30 or as appropriate                               |
+| Kubernetes - Control Plane Components - API Server                      | Ensure that the --audit-log-maxbackup argument is set to 10 or as appropriate                            |
+| Kubernetes - Control Plane Components - API Server                      | Ensure that the --audit-log-maxsize argument is set to 100 or as appropriate                             |
+| Kubernetes - Control Plane Components - Controller Manager              | Ensure that the --terminated-pod-gc-threshold argument is set as appropriate                             |
+| Kubernetes - Control Plane Components - Controller Manager              | Ensure that the --profiling argument is set to false                                                     |
+| Kubernetes - Control Plane Components - Controller Manager              | Ensure that the --use-service-account-credentials argument is set to true                                |
+| Kubernetes - Control Plane Components - Controller Manager              | Ensure that the --service-account-private-key-file argument is set as appropriate                        |
+| Kubernetes - Control Plane Components - Controller Manager              | Ensure that the --root-ca-file argument is set as appropriate                                            |
+| Kubernetes - Control Plane Components - Controller Manager              | Ensure that the RotateKubeletServerCertificate argument is set to true                                   |
+| Kubernetes - Control Plane Components - Controller Manager              | Ensure that the --bind-address argument is set to 127.0.0.1                                              |
+| Kubernetes - Control Plane Components - Scheduler                       | Ensure that the --profiling argument is set to false                                                     |
+| Kubernetes - Control Plane Components - Scheduler                       | Ensure that the --bind-address argument is set to 127.0.0.1                                              |
+| Kubernetes - etcd                                                       | Ensure that the --cert-file and --key-file arguments are set as appropriate                              |
+| Kubernetes - etcd                                                       | Ensure that the --client-cert-auth argument is set to true                                               |
+| Kubernetes - etcd                                                       | Ensure that the --auto-tls argument is not set to true                                                   |
+| Kubernetes - etcd                                                       | Ensure that the --peer-cert-file and --peer-key-file arguments are set as appropriate                    |
+| Kubernetes - etcd                                                       | Ensure that the --peer-client-cert-auth argument is set to true                                          |
+| Kubernetes - etcd                                                       | Ensure that the --peer-auto-tls argument is not set to true                                              |
+| Kubernetes - etcd                                                       | Ensure that a unique Certificate Authority is used for etcd                                              |
+| Kubernetes - Worker Nodes - Worker Node Configuration Files             | Ensure that the kubelet service file has permissions of 644 or more restrictive                          |
+| Kubernetes - Worker Nodes - Worker Node Configuration Files             | Ensure that the kubelet service file ownership is set to root:root                                       |
+| Kubernetes - Worker Nodes - Worker Node Configuration Files             | Ensure that the proxy kubeconfig file permissions are set to 644 or more restrictive                     |
+| Kubernetes - Worker Nodes - Worker Node Configuration Files             | Ensure that the proxy kubeconfig file ownership is set to root:root                                      |
+| Kubernetes - Worker Nodes - Worker Node Configuration Files             | Ensure that the kubelet.conf file permissions are set to 644 or more restrictive                         |
+| Kubernetes - Worker Nodes - Worker Node Configuration Files             | Ensure that the kubelet.conf file ownership is set to root:root                                          |
+| Kubernetes - Worker Nodes - Worker Node Configuration Files             | Ensure that the client certificate authorities file ownership is set to root:root                        |
+| Kubernetes - Worker Nodes - Worker Node Configuration Files             | Ensure that the kubelet configuration file has permissions set to 644 or more restrictive                |
+| Kubernetes - Worker Nodes - Worker Node Configuration Files             | Ensure that the kubelet configuration file ownership is set to root:root                                 |
+| Kubernetes - Worker Nodes - Kubelet                                     | Ensure that the --anonymous-auth argument is set to false                                                |
+| Kubernetes - Worker Nodes - Kubelet                                     | Ensure that the --authorization-mode argument is not set to AlwaysAllow                                  |
+| Kubernetes - Worker Nodes - Kubelet                                     | Ensure that the --client-ca-file argument is set as appropriate                                          |
+| Kubernetes - Worker Nodes - Kubelet                                     | Ensure that the --read-only-port argument is set to 0                                                    |
+| Kubernetes - Worker Nodes - Kubelet                                     | Ensure that the --streaming-connection-idle-timeout argument is not set to 0                             |
+| Kubernetes - Worker Nodes - Kubelet                                     | Ensure that the --protect-kernel-defaults argument is set to true                                        |
+| Kubernetes - Worker Nodes - Kubelet                                     | Ensure that the --make-iptables-util-chains argument is set to true                                      |
+| Kubernetes - Worker Nodes - Kubelet                                     | Ensure that the --tls-cert-file and --tls-private-key-file arguments are set as appropriate              |
+| Kubernetes - Worker Nodes - Kubelet                                     | Ensure that the --rotate-certificates argument is not set to false                                       |
+| Kubernetes - Worker Nodes - Kubelet                                     | Ensure that the RotateKubeletServerCertificate argument is set to true                                   |
+
+
 
 ### Generate Cloudneeti API key
 
