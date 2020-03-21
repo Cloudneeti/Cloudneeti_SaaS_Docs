@@ -50,7 +50,7 @@ nav:
   - Amazon Web Services: 
     - Onboarding steps: onboardingGuide/amazonWebServiceAccounts.md
     - OS baseline (optional): onboardingGuide/awsVMBaselineConfiguration.md
-    # - Configure quick wins: onboardingGuide/awsQuickWins.md
+    - Configure quick wins: onboardingGuide/awsQuickWins.md
   - Micorsoft Azure:
     - Onboarding steps: onboardingGuide/azureSubscriptions.md
     - Additional roles: onboardingGuide/grantAccessToAzureSubscriptionAdditionalRoles.md
