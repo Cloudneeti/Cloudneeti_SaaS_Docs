@@ -17,7 +17,7 @@ Roles are required to complete Amazon Web Service Account onboarding process.
 | Activity                                                                      | Description                                              |
 |-------------------------------------------------------------------------------|----------------------------------------------------------|                                                
 | **Workstation:** Install AWS Command Line Interface                           | To install AWS cli follow [link](https://docs.aws.amazon.com/cli/latest/userguide/install-windows.html){target=_blank} **AWS Command Line** Interface (CLI) is a unified tool to manage your AWS services.             |                                                      |
-|**Workstation:** Download script remediate-monitoring-policies.yml| To download remediate-monitoring-policies.yml script follow [link](https://raw.githubusercontent.com/Cloudneeti/docs_cloudneeti/master/scripts/remediate-monitoring-policies.yml){target=_blank} |
+|**Workstation:** Download script remediate-monitoring-policies.yml| To download remediate-monitoring-policies.yml script follow [link](https://raw.githubusercontent.com/Cloudneeti/docs_cloudneeti/master/scripts/aws-alarms-quickwin/remediate-monitoring-policies.yml){target=_blank} |
 
 
 ## Monitoring
