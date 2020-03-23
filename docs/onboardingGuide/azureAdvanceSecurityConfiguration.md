@@ -51,7 +51,7 @@ Login to Cloudneeti portal as a License Admin.
 
 #### Sign-up on Cloudneeti API portal.
 
-1. Go to [API portal](https://portal.cloudneeti.com/) and Sign up.
+1. Go to [API portal](https://portal.cloudneeti.com/){target=_blank} and Sign up.
 
 2. Fill the required fields in the sign-up form
 
@@ -234,7 +234,7 @@ Cloudneeti portal will show details for policies from next scan.
 The advanced security policy data collector enables the following 18 policies as
 available in the Center for Internet Security (CIS) Azure benchmark
 (Reference
-[here](https://www.cloudneeti.com/2018/03/cloudneeti-delivers-industry-first-automation-for-cis-azure-foundations-benchmark/)).
+[here](https://www.cloudneeti.com/2018/03/cloudneeti-delivers-industry-first-automation-for-cis-azure-foundations-benchmark/){target=_blank}).
 
 | Control No | Policy Title                                                                                                         | Category                    |
 |------------|----------------------------------------------------------------------------------------------------------------------|-----------------------------|

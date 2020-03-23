@@ -32,7 +32,7 @@ License id can be retrived from Cloudneeti Portal **Features and Quotas** page
 **STEP 1: Link external id to Cloudneeti AWS account role Cloudneeti-SecurityAudit or Create a new role with external id**
 --------------------------------------------------------------------------------------------------------------------------
 
-Login to [AWS Console](https://aws.amazon.com/console/) with AWS **Administrator** role
+Login to [AWS Console](https://aws.amazon.com/console/){target=_blank} with AWS **Administrator** role
 
 ### **1.1 Link external id to Cloudneeti AWS account role Cloudneeti-SecurityAudit**
 

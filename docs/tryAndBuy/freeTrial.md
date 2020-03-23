@@ -9,7 +9,7 @@ Please follow the steps below to subscribe to Cloudneeti SaaS product on Azure
 Marketplace.
 
 1.  Go to [Azure
-    Marketplace](https://azuremarketplace.microsoft.com/en-us/marketplace/apps?filters=saas&search=clouneeti&page=1)
+    Marketplace](https://azuremarketplace.microsoft.com/en-us/marketplace/apps?filters=saas&search=clouneeti&page=1){target=_blank}
 
 2.  Select offer Cloudneeti Continuous Cloud Assurance - Free Trial
 
@@ -25,4 +25,4 @@ Marketplace.
 
     ![Form](.././images/azureMarketplace/FreeTrial_Form.png#thumbnail)
 
-7.  License can be activated by [adding a Cloud Account](../../onboardingGuide/onboardingGuideOverview/).
+7.  License can be activated by [adding a Cloud Account](../../onboardingGuide/onboardingGuideOverview/){target=_blank}.

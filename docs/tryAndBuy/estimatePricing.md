@@ -15,7 +15,7 @@ Resources in Azure subscription
 Please follow the below steps to determine the total number of resources within
 an Azure subscription.
 
-Login to [Azure portal](https://portal.azure.com) as Subscription Reader/Owner.
+Login to [Azure portal](https://portal.azure.com){target=_blank} as Subscription Reader/Owner.
 
 ### Manual 
 
@@ -55,7 +55,7 @@ Please the follow below steps to determine the total number of resources within
 an AWS account.
 
 ### Manual 
-Login to [AWS console](https://console.aws.amazon.com) with security audit role
+Login to [AWS console](https://console.aws.amazon.com){target=_blank} with security audit role
 
 1.  Click on **Resource Group**
 
@@ -84,15 +84,15 @@ Login to [AWS console](https://console.aws.amazon.com) with security audit role
 
 | **Activity**                                        | **Description**                                                                                                                                                                             |
 |-----------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Workstation:** Python 3.7                       | [Download python web based installer](https://www.python.org/downloads/).</br> Install python and make sure to check Add python to Path setting|
+| **Workstation:** Python 3.7                       | [Download python web based installer](https://www.python.org/downloads/){target=_blank}.</br> Install python and make sure to check Add python to Path setting|
 | **Workstation:** boto3 package | Amazon Web Services (AWS) Software Development Kit (SDK) for Python </br> # python -m pip install boto3 |
-| Download and review **Python script**  | The Python script is used to to get Resource Count for given AWS Account: [Download Link.](https://raw.githubusercontent.com/Cloudneeti/docs_cloudneeti/master/scripts/count_aws_resources.py) |
+| Download and review **Python script**  | The Python script is used to to get Resource Count for given AWS Account: [Download Link.](https://raw.githubusercontent.com/Cloudneeti/docs_cloudneeti/master/scripts/count_aws_resources.py){target=_blank} |
 
 #### Required permissions
 
 | **Pre-requisite**       |      **Role**          |  **Referense**
 |-------------------------|------------------------|------------------------|
-|AWS access and secret key| Root User, Security Audit| [AWS access and secret key](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html#Using_CreateAccessKey)|
+|AWS access and secret key| Root User, Security Audit| [AWS access and secret key](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html#Using_CreateAccessKey){target=_blank}|
 
 
 #### Get resource count
@@ -108,7 +108,7 @@ Login to [AWS console](https://console.aws.amazon.com) with security audit role
 Users in Office 365
 -------------------------
 
-Please log into the [Office 365 portal](https://admin.microsoft.com) to look up the number of users in your
+Please log into the [Office 365 portal](https://admin.microsoft.com){target=_blank} to look up the number of users in your
 Office 365 subscription.
 
 ![Office 365 Resources](.././images/azureMarketplace/M365_Users.png#thumbnail)

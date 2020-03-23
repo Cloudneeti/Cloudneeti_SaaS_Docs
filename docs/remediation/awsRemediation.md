@@ -77,7 +77,7 @@ Workstation Readiness
 | **Activity**                                        | **Description**                                                                                                                                                                             |
 |-----------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Workstation:** Install Bash                       | Either a Linux workstation or Windows Subsystem for Linux can be used.                                                                                                                      |
-| **Workstation:** Install AWS Command Line Interface | To install AWS cli follow [link](https://docs.aws.amazon.com/cli/latest/userguide/install-windows.html) **AWS Command Line** Interface (CLI) is a unified tool to manage your AWS services. |
+| **Workstation:** Install AWS Command Line Interface | To install AWS cli follow [link](https://docs.aws.amazon.com/cli/latest/userguide/install-windows.html){target=_blank} **AWS Command Line** Interface (CLI) is a unified tool to manage your AWS services. |
 | **Workstation:** Install Nodejs                     | Download latest stable version of nodejs from [here](https://nodejs.org/en/) and install on the workstation.                                                                                |
 | **Workstation:** Install serverless npm module      | Serverless Framework is a CLI tool to manage AWS deployments. Execute below command to install serverless module, \# npm install –g serverless                                              |
 

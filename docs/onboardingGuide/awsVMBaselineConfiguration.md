@@ -19,9 +19,9 @@ resources.
 SSM Agent will be used by AWS Inspector to install the AWS Inspector Agent
 on the instances so that it can fetch the instance data. Follow links for installation
 
-[SSM Agent is preinstalled, by default](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-install-ssm-agent.html)
+[SSM Agent is preinstalled, by default](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-install-ssm-agent.html){target=_blank}
 
-[Install SSM Agent](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-manual-agent-install.html)
+[Install SSM Agent](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-manual-agent-install.html){target=_blank}
 
 
 3.2 Creating Inspector Assessment target and template 
@@ -35,7 +35,7 @@ Multiple assessment targets and templates can be created.  For exaple, create an
 - Tags = All tags | None
 - Instances = All instances
 
-Login to [AWS portal](https://console.aws.amazon.com/) with AWS **Administrator** role.
+Login to [AWS portal](https://console.aws.amazon.com/){target=_blank} with AWS **Administrator** role.
 
 
 ### New to inspector
@@ -81,11 +81,11 @@ Login to [AWS portal](https://console.aws.amazon.com/) with AWS **Administrat
 4. Select **Schedule** (4), recommned is 7 days
 
 5. Click **Next** (5)
-    ![AWS Inspector - AWS Console](.././images/amazonWebServiceAccounts/aws_Inspector_TemplateConfig.png#thumbnail)
+    ![AWS Inspector - AWS Console](.././images/amazonWebServiceAccounts/aws_Inspector_TemplateConfig.png#thumbnail){target=_blank}
 
 6. Review details and **Create**
 
-    ![AWS Inspector - AWS Console](.././images/amazonWebServiceAccounts/aws_Inspector_ReviewandCreate.png#thumbnail)
+    ![AWS Inspector - AWS Console](.././images/amazonWebServiceAccounts/aws_Inspector_ReviewandCreate.png#thumbnail){target=_blank}
 
 #### 3.2.4 Verify assessment target
 
@@ -115,7 +115,7 @@ Once Assessment target is created, one can verify the status of the agents. AWS 
 
 ### OR Already using inspector
 
-Login to [AWS portal](https://console.aws.amazon.com/) with AWS **Administrator** role.
+Login to [AWS portal](https://console.aws.amazon.com/){target=_blank} with AWS **Administrator** role.
 
 
 #### 3.2.1 Creating Assessment target
@@ -164,7 +164,7 @@ Once Assessment target is created, one can verify the status of the agents. AWS 
 [Step 1](../../onboardingGuide/awsVMBaselineConfiguration/#step-1-installing-ssm-agent/)
 
 5.  Select rules package **CIS Operating System Security Configuration Benchmarks-1.0** Reference link [Center for Internet Security (CIS) (5)
-    Benchmarks](https://docs.aws.amazon.com/inspector/latest/userguide/inspector_cis)
+    Benchmarks](https://docs.aws.amazon.com/inspector/latest/userguide/inspector_cis){target=_blank}
 
 6.  Set **Duration** (6), recommended is 1 hour
 
