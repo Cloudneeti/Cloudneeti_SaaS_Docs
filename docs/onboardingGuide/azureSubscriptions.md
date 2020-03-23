@@ -296,7 +296,7 @@ The Cloudneeti application **License Admin** requires this information to add an
 
 **This step is optional**
 
-The following roles need to be granted to the Cloudneeti App registered in the previous step. Please follow [link](../../onboardingGuide/grantAccessToAzureSubscriptionAdditionalRoles/) for steps.
+The following roles need to be granted to the Cloudneeti App registered in the previous step. Please follow [link](../../onboardingGuide/grantAccessToAzureSubscriptionAdditionalRoles/){target=_blank} for steps.
 
 - Website contributor role for Azure Subscription level scope.
 - Storage Account Contributor role for Azure Subscription level scope.

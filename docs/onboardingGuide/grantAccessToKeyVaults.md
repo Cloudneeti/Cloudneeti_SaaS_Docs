@@ -89,7 +89,7 @@ Login to [Azure Portal](https://portal.azure.com/){target=_blank} with Microsoft
 ### 4.2.2 Provision automation account 
 Provision automation account to check and assign List permissions to key-vaults within given subscriptions, at scheduled time.
 
-Login to Azure portal <https://portal.azure.com> as Subscription Contributor or
+Login to Azure portal [https://portal.azure.com](https://portal.azure.com){target=_blank} as Subscription Contributor or
 Subscription Owner access.
 
 Switch to Azure AD with the Azure Subscription with pre-requisite access.
