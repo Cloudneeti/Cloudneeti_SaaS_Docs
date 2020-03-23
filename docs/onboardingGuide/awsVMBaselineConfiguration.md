@@ -74,7 +74,7 @@ Login to [AWS portal](https://console.aws.amazon.com/){target=_blank} with AWS
 1. Add **Name**
 
 2. Select rules package **CIS Operating System Security Configuration Benchmarks-1.0** Reference link [Center for Internet Security (CIS) (2)
-    Benchmarks](https://docs.aws.amazon.com/inspector/latest/userguide/inspector_cis)
+    Benchmarks](https://docs.aws.amazon.com/inspector/latest/userguide/inspector_cis){target=_blank}
 
 3. Set **Duration** (3), recommended is 1 hour
 

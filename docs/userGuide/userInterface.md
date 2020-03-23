@@ -46,7 +46,7 @@ product.
 Dashboards
 ----------
 
-The dashboards menu item navigates to four different dashboards: Compliance, Security, Risk, and Assets. For more information please refer to [Dashboards](../dashboards/) section.
+The dashboards menu item navigates to four different dashboards: Compliance, Security, Risk, and Assets. For more information please refer to [Dashboards](../dashboards/){target=_blank} section.
 	
 ![UI Navigation](.././images/userGuideUINavigation/Dashboard_Section.png#thumbnail)
 
@@ -66,7 +66,7 @@ Compliance Benchmarks
 
 The Cybersecurity Benchmarks, Laws and Regulations, Industry Benchmarks section
 on the left menu can be expanded to select the required benchmark view. For more
-information please refer to [Compliance Benchmarks](../complianceBenchmarks/) section.
+information please refer to [Compliance Benchmarks](../complianceBenchmarks/){target=_blank} section.
 	
 ![UI Navigation](.././images/userGuideUINavigation/Compliance_Benchmarks.png#thumbnail)
 

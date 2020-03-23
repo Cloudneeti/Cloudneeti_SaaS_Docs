@@ -116,7 +116,7 @@ Login to Cloudneeti portal with **License Admin** role
 * Assigning **Resource Policy Contributor (Preview)** role to Cloudneeti Application in Azure is prerequisite for this step.
 
 ### STEP 4: Assigning roles to MSI generated for remediation policies
-Login to [Azure Portal](https://portal.azure.com/) with **Subscription Owner** role.
+Login to [Azure Portal](https://portal.azure.com/){target=_blank} with **Subscription Owner** role.
 
 1. Open **Cloud Shell**
 

@@ -448,7 +448,7 @@ Contact Cloudneeti Team for:
 
 ##### Azure details
 
-Login to Azure portal <https://portal.azure.com> as subscription owner.
+Login to Azure portal [https://portal.azure.com](https://portal.azure.com){target=_blank} as subscription owner.
 
 ##### Azure Subscription ID
 
@@ -467,7 +467,7 @@ Login to Azure portal <https://portal.azure.com> as subscription owner.
 ### 3.2 Provision Office 365 data collector 
 
 
-Login to Azure portal <https://portal.azure.com> as Subscription Contributor or
+Login to Azure portal [https://portal.azure.com](https://portal.azure.com){target=_blank} as Subscription Contributor or
 Subscription Owner access.
 
 Switch to Azure AD with the Azure Subscription with pre-requisite access.

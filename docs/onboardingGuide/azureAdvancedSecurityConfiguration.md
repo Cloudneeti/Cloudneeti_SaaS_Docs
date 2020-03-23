@@ -97,7 +97,7 @@ Contact Cloudneeti Team for:
 
 ### Azure details
 
-Login to Azure portal <https://portal.azure.com> as a subscription owner.
+Login to Azure portal [https://portal.azure.com](https://portal.azure.com){target=_blank} as a subscription owner.
 #### Azure Directory ID
 
 1. Click on **Azure Active Directory** on the primary menu
@@ -142,7 +142,7 @@ Login to Azure portal <https://portal.azure.com> as a subscription owner.
 ## 5.2 Provision Azure IAM data collector 
 
 
-Login to Azure portal <https://portal.azure.com> as Subscription Contributor or
+Login to Azure portal [https://portal.azure.com](https://portal.azure.com){target=_blank} as Subscription Contributor or
 Subscription Owner access.
 
 Switch to Azure AD with the Azure Subscription with pre-requisite access.

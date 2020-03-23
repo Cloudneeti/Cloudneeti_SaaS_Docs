@@ -26,7 +26,7 @@ Cloudneeti application will be granted with Azure Subscription Contributor.
 Grant Azure Subscription contributor role to Cloudneeti application created while onboarding Micorsoft Azure cloud account.
 
 
-Login to [Azure Portal](https://portal.azure.com/) with Microsoft Azure **Subscription Owner** role.
+Login to [Azure Portal](https://portal.azure.com/){target=_blank} with Microsoft Azure **Subscription Owner** role.
 
 1.	Go to the subscription’s **Access control (IAM)** in the third level menu
 
