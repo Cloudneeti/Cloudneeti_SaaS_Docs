@@ -50,7 +50,6 @@ nav:
   - Amazon Web Services: 
     - Onboarding steps: onboardingGuide/amazonWebServiceAccounts.md
     - OS baseline (optional): onboardingGuide/awsVMBaselineConfiguration.md
-    - Configure quick wins: onboardingGuide/awsQuickWins.md
   - Micorsoft Azure:
     - Onboarding steps: onboardingGuide/azureSubscriptions.md
     - Additional roles: onboardingGuide/grantAccessToAzureSubscriptionAdditionalRoles.md
@@ -97,6 +96,7 @@ nav:
     - Decommission of remediation: remediation/azureDecommissionofRemediation.md
   - AWS:
     - Guided Remediation: remediation/awsGuidedRemediation.md
+    - Quick wins: remediation/awsQuickWins.md
     - Auto Remediation: remediation/awsRemediation.md
     - Decommission Remediation framework: remediation/awsDecommissionofRemediation.md
 - Release Notes:

@@ -42,9 +42,19 @@ Create metrices and alarms for various events in the AWS Account
     - awsaccountid: 12-digit AWS Account Id of the account where you need to set up the alarms
     - emailid: valid email id where to receive the notifications
 
-    <!-- <Todos> Screenshot here -->
+    ![AWS Quick Wins](.././images/cloudneetiRemediation/AWS_Quick_Wins.png#thumbnail_1)
 
-5. Once the script successfully creates all the resources and alarms. Please subscribe to the SNS using the link you will receive in the email mentioned while executing above script, to start receiving notificatins of the alarms.
+5. Script creates resources and alarms. 
+
+    ![AWS Quick Wins](.././images/cloudneetiRemediation/AWS_Quick_Wins_1.png#thumbnail_1)    
+
+6. Please subscribe to the SNS using the link you will receive in the email mentioned while executing above script, to start receiving notificatins of the alarms.
+
+    <!-- ![AWS Quick Wins](.././images/cloudneetiRemediation/AWS_Quick_Wins_2.png#thumbnail_1)  -->
+
+7. Verify policy results on Cloudneeti portal
+
+    ![AWS Quick Wins](.././images/cloudneetiRemediation/AWS_Quick_Wins_2.png#thumbnail_1)   
 
 ## Annexure
 ### Policies enabled with quick wins 
