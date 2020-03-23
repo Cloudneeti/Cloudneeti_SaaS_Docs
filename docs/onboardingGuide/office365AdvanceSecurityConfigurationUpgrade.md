@@ -3,7 +3,7 @@ Upgrading existing Office 365 advance secuirty configuration to DataCollectorVer
 
 Please refer [Release Notes](../../releaseNotes/2020/#february-2020-v2251){target=_blank} for latest security policy addition.
 
-Login to Azure portal <https://portal.azure.com> as Subscription Contributor or
+Login to Azure portal [https://portal.azure.com](https://portal.azure.com){target=_blank} as Subscription Contributor or
 Subscription Owner access.
 
 Switch to Azure AD with the Azure Subscription with pre-requisite access.
