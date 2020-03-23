@@ -47,7 +47,7 @@ The following steps are done by the Cloudneeti application License Admin role.
 
 ### Sign-up on Cloudneeti API portal.
 
-1. Go to [API portal](https://portal.cloudneeti.com/) and Sign up.
+1. Go to [API portal](https://portal.cloudneeti.com/){target=_blank} and Sign up.
 
 2. Fill the required fields in the sign-up form
 

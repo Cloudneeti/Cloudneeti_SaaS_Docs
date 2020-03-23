@@ -22,7 +22,7 @@ Cloudneeti advised not to store token in localstorage.
 | Key	        | Value                                |
 |---------------|--------------------------------------|
 | Content-Type 	                |   application/json                 |
-| Ocp-Apim-Subscription-Key 	| [Cloudneeti API key generated](../../administratorGuide/configureCloudneetiAPIAccess/#retrieve-cloudneeti-api-key)             |
+| Ocp-Apim-Subscription-Key 	| [Cloudneeti API key generated](../../administratorGuide/configureCloudneetiAPIAccess/#retrieve-cloudneeti-api-key){target=_blank}             |
 
 
 #### Request body

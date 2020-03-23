@@ -1,8 +1,8 @@
 Cloudneeti offers an API to automate cloud account onboarding via this REST API. The following Cloud Providers are supported
 
-- [Amazon Web Services (AWS)](../../userGuide/onboardCloudAccount/#aws) 
-- [Microsoft Azure](../../userGuide/onboardCloudAccount/#azure) 
-- [Microsoft Office365](../../userGuide/onboardCloudAccount/#office365) 
+- [Amazon Web Services (AWS)](../../userGuide/onboardCloudAccount/#aws){target=_blank} 
+- [Microsoft Azure](../../userGuide/onboardCloudAccount/#azure){target=_blank} 
+- [Microsoft Office365](../../userGuide/onboardCloudAccount/#office365){target=_blank} 
 
 ## AWS
 
