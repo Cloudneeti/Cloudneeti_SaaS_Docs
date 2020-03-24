@@ -1,8 +1,7 @@
-Configuring Cloudneeti agent in Kubernetes cluster
-==================================================
+Configuring Cloudneeti agent in Azure Kubernetes Service (AKS)
+==============================================================
 
-Deploying Cloudneeti agent on Azure Kubernetes Service enables compliance monitoring of Kubernetes cluster.
-An Azure docker agent is deployed to collect data for additional security policies.
+Deploying Cloudneeti agent on Azure Kubernetes Service enables compliance monitoring of Kubernetes cluster. An Azure docker agent is deployed to collect data for additional security policies.
 
 
 Prerequisites
@@ -217,6 +216,7 @@ The following CIS Kubernetes policies get enabled due to Cloudneeti Kubernetes a
 | Kubernetes - Control Plane Components - API Server                      | Ensure that the --audit-log-maxage argument is set to 30 or as appropriate                               |
 | Kubernetes - Control Plane Components - API Server                      | Ensure that the --audit-log-maxbackup argument is set to 10 or as appropriate                            |
 | Kubernetes - Control Plane Components - API Server                      | Ensure that the --audit-log-maxsize argument is set to 100 or as appropriate                             |
+| Kubernetes - Control Plane Components - API Server                      | Ensure that the --profiling argument is set to false is missing for API server                            |
 | Kubernetes - Control Plane Components - Controller Manager              | Ensure that the --terminated-pod-gc-threshold argument is set as appropriate                             |
 | Kubernetes - Control Plane Components - Controller Manager              | Ensure that the --profiling argument is set to false                                                     |
 | Kubernetes - Control Plane Components - Controller Manager              | Ensure that the --use-service-account-credentials argument is set to true                                |

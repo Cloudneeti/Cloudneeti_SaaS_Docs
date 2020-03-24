@@ -57,7 +57,7 @@ nav:
     - Advanced security configurations: onboardingGuide/azureAdvancedSecurityConfiguration.md
     - Quick wins: onboardingGuide/azureQuickWins.md
     - OS baseline and vulnerability: onboardingGuide/azureVulnerability.md
-    - Kubernetes cluster: onboardingGuide/configureCloudneetiAgentInKubernetesCluster.md
+    - Azure Kubernetes Service (AKS): onboardingGuide/configureCloudneetiAgentInKubernetesCluster.md
   - Office 365: 
     - Onboarding steps: onboardingGuide/office365Subscription.md
     - Upgrade advanced security configurations: onboardingGuide/office365AdvanceSecurityConfigurationUpgrade.md
