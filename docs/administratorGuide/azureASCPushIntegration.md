@@ -1,6 +1,6 @@
 # Azure Security Center Integration
 
-The following steps are required for configuration required to integrate with Microsoft Azure Security Center. Integration enables  Cloudneeti application to push assessment data of configured Azure cloud account to Microsoft Azure Security Center.
+The following steps are required to configure integration of Cloudneeti application with Microsoft Azure Security Center. Integration enables  Cloudneeti application to push assessment data of configured Azure cloud account to Microsoft Azure Security Center.
 
 ### Required Roles
 
@@ -67,10 +67,20 @@ The following steps are done by Cloudneeti **License Admin** role.
     ![Integrations](.././images/ascPush/integrations_3.png#thumbnail)
 
 
-
-
 ## Verify assessment data pushed at ASC
 
 1. Cloudneeti on successful integration will create custom policies
 
-2. Custom policies created will have recommendations with resources
+    ![assessment data ](.././images/ascPush/assessment_data_1.png#thumbnail)
+
+2. Custom policy description 
+
+    ![assessment data ](.././images/ascPush/assessment_data_2.png#thumbnail)
+
+3. Custom policy remediation steps
+
+    ![assessment data ](.././images/ascPush/assessment_data_3.png#thumbnail)
+
+4. Custom policy related resources state as Unhealthy, Healthy or Not Applicable
+
+    ![assessment data ](.././images/ascPush/assessment_data_4.png#thumbnail)
