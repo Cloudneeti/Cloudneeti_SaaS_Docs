@@ -1,6 +1,6 @@
 # Quick Wins
 
-Includes creation of metrices and alarms for various events in the AWS Account. Onces created user needs to subscribe to the SNS using the link you will receive in the email mentioned while executing above script, to start receiving notificatins of the alarms.
+Remediation of Monitoring policies can be done using quick wins scripts. These scripts will create metrics and alarms for various events in the AWS Account. This remediates below Monitoring [policies listed here.](.././remediation/awsQuickWins/#policies-enabled-with-quick-wins)
 
 ## Pre-requisites
 
@@ -22,9 +22,9 @@ Roles are required to complete Amazon Web Service Account onboarding process.
 
 ## Monitoring
 
-Create metrices and alarms for various events in the AWS Account
+Create metrics and alarms for various events in the AWS Account
 
-1. Open any termial which has AWS CLI configured
+1. Open any terminal which has AWS CLI configured
 
 2. On terminal navigate to folder location where you downloaded the file “remediate-monitoring-policies.yml” (e.g. “cd C:\Downloads”) 
 
@@ -48,9 +48,7 @@ Create metrices and alarms for various events in the AWS Account
 
     ![AWS Quick Wins](.././images/cloudneetiRemediation/AWS_Quick_Wins_1.png#thumbnail_1)    
 
-6. Please subscribe to the SNS using the link you will receive in the email mentioned while executing above script, to start receiving notificatins of the alarms.
-
-    <!-- ![AWS Quick Wins](.././images/cloudneetiRemediation/AWS_Quick_Wins_2.png#thumbnail_1)  -->
+6. Please subscribe to the SNS using the link you will receive in the email mentioned while executing above script, to start receiving notifications  of the alarms.
 
 7. Verify policy results on Cloudneeti portal
 
