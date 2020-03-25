@@ -39,6 +39,7 @@ nav:
   - Deployment Architecture: gettingStarted/deploymentArchitecture.md
   - Customer Data Security: gettingStarted/customerDataSecurity.md
   - Glossary: gettingStarted/glossary.md
+  - Security Policies: gettingStarted/securityPolicies.md
 - Try and Buy:
   - Free Trial: tryAndBuy/freeTrial.md
   - Buy on Azure Marketplace: tryAndBuy/subscribeOnAzureMarketplace.md
@@ -52,10 +53,10 @@ nav:
     - OS baseline (optional): onboardingGuide/awsVMBaselineConfiguration.md
   - Micorsoft Azure:
     - Onboarding steps: onboardingGuide/azureSubscriptions.md
+    - Enable ASC audit policies: onboardingGuide/enableASCAuditPolicies.md
     - Additional roles: onboardingGuide/grantAccessToAzureSubscriptionAdditionalRoles.md
     - Key vaults: onboardingGuide/grantAccessToKeyVaults.md
     - Advanced security configurations: onboardingGuide/azureAdvancedSecurityConfiguration.md
-    - Quick wins: onboardingGuide/azureQuickWins.md
     - OS baseline and vulnerability: onboardingGuide/azureVulnerability.md
     - Azure Kubernetes Service (AKS): onboardingGuide/configureCloudneetiAgentInKubernetesCluster.md
   - Office 365: 
@@ -85,6 +86,7 @@ nav:
   - Users & Roles: administratorGuide/manageUsers.md
   - Private Benchmark: administratorGuide/privateBenchmark.md
   - Security Policy Configuration: administratorGuide/securityPolicyExclusions.md
+  - Override Security Policy Status: administratorGuide/overrideSecurityPolicyStatus.md
   - Audit Log: administratorGuide/auditLog.md
   - Configure Cloudneeti API Access: administratorGuide/configureCloudneetiAPIAccess.md
 - Remediation:

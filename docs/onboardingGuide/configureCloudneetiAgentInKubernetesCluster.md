@@ -1,7 +1,7 @@
 Configuring Cloudneeti agent in Azure Kubernetes Service (AKS)
 ==============================================================
 
-Deploying Cloudneeti agent on Azure Kubernetes Service enables compliance monitoring of Kubernetes cluster. An Azure docker agent is deployed to collect data for additional security policies.
+Deploying Cloudneeti agent on Azure Kubernetes Service enables compliance monitoring of Kubernetes cluster. An Azure docker agent is deployed to collect data for security policies [listed here](../../onboardingGuide/configureCloudneetiAgentInKubernetesCluster/#kubernetes-policy-list).
 
 
 Prerequisites

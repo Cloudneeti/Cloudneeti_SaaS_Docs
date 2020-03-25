@@ -1,14 +1,6 @@
-# STEP 6: Configure quick wins
-**This step is optional.**
+# STEP 3: Enable Azure Security Center audit policies
 
 Remediation policies from **Azure Security center, Logging and Monitoring** and **Storage and Databases** can be done using quick wins scripts. These scripts will update configurations and settings to make the cloud account compliant for the policies [listed here](../../onboardingGuide/azureQuickWins/#remediation-policy-list).
-
-| **Configuration script**       | **Category**                  | **Number of policies remediated** |
-|--------------------------------|-------------------------------|-----------------------------------|
-| Configure ASC policies         | Azure – Security Center       | 120                               |
-| Configure Activity Alerts      | Azure - Logging and Auditing  | 10                                |
-| Configure Activity Log Profile | Azure - Logging and Auditing  | 5                                 |
-| Configure Storage Account      | Azure - Storage and Databases | 2                                 |
 
 ## Prerequisite 
 
@@ -16,13 +8,13 @@ Access Needed on Subscription: **Contributor**
 
 Note : Please note that it is advised to have only one ASC initiative. If there are multiple initiatives created, Cloud account compliance results in Cloudneeti may vary. 
 
-## 6.1 Configure ASC default policies 
+## 3.1 Configure ASC default policies 
 
 Configure ASC policies to remediate policies [listed here ](.././azureQuickWins/#configure-azure-security-center-policies-azure-security-center) using below steps.
 
 #### Category Subscription Governance Policies [Increase compliance Score 30-50%]
 
-#### Remediation Steps
+#### Configuration Steps
 
 1.  Login to Azure portal
 
@@ -52,13 +44,13 @@ Configure ASC policies to remediate policies [listed here ](.././azureQuickWins/
     ```</code>
 	</pre>
 
-## 6.2 Configure ASC policies at Management Group level
+## 3.2 Configure ASC policies at Management Group level
 
 Configure ASC policies to remediate policies [listed here ](.././azureQuickWins/#configure-azure-security-center-policies-azure-security-center) using below steps.
 
 #### Category Subscription Governance Policies [Increase compliance Score 30-50%]
 
-#### Remediation Steps
+#### #### Configuration Steps
 
 1.  Login to Azure portal
 
@@ -89,185 +81,8 @@ Configure ASC policies to remediate policies [listed here ](.././azureQuickWins/
 	</pre>
 
 
-## 6.3 Configure Activity Alerts 
-
-Configure Activity Alerts to remediate policies [listed here](.././azureQuickWins/#configure-activity-alerts-logging-and-auditing) using below steps.
-
-### Category: Logging and Auditing [Increase compliance score by 5-10%]
-
-### Remediation Steps
-
-1.  Login to Azure portal
-
-2.  Open Cloud shell in PowerShell mode
-
-3.  Download configuration script
-
-    <pre>
-	    <code>```
-            wget https://raw.githubusercontent.com/Cloudneeti/docs_cloudneeti/master/scripts/subscription-governance/configure-ActivityAlerts.ps1 -O configure-ActivityAlerts.ps1           
-            ```</code>
-    </pre>
-
-4.  Switch directory
-    
-    <pre>
-	    <code>```
-            cd $user 
-        ```</code>
-    </pre>
-
-5.  Execute script
-    
-    <pre>
-	    <code>```
-        ./configure-ActivityAlerts.ps1 `
-        -SubscriptionId <subscription Id> `
-        -ResourceGroupName <Resource Group Name> `
-        -ReceiverEmailIds <emailid1,emailid2>
-        ```</code>
-    </pre>
-
-6.  OR In case of custom tags, script can be executed using below options. List of all tags are given in the documentation examples inside the script
-
-    <pre>
-	    <code>```
-        ./configure-ActivityAlerts.ps1 `
-        -SubscriptionId <subscription Id> `
-        -ResourceGroupName <Resource Group Name> `
-        -ReceiverEmailIds <emailid1,emailid2> `
-        -ProjectOwnerTag <Owner> `
-        -CostCenterTag <CostCenter>
-        ```</code>
-    </pre>
-
-## 6.4 Configure Activity Log Profile
-
-Configure Activity Log to remediate policies [listed here](.././azureQuickWins/#configure-activity-log-profile-logging-and-auditing) using below steps.
-
-### Category: Logging and Auditing
-
-### Remediation Steps
-
-1.  Login to Azure portal
-
-2.  Open Cloud shell in PowerShell mode
-
-3.  Download configuration script
-    <pre>
-	    <code>```   
-            wget https://raw.githubusercontent.com/Cloudneeti/docs_cloudneeti/master/scripts/subscription-governance/configure-ActivityLogProfile.ps1 -O configure-ActivityLogProfile.ps1
-        ```</code>
-    </pre>
-
-4.  Switch directory
-
-    <pre>
-	    <code>```
-            cd $user
-        ```</code>
-    </pre>
-
-5.  Execute script
-
-    <pre>
-	    <code>```        
-        .\configure-ActivityLogProfile.ps1 `
-        -SubscriptionId <SubscriptionId> `
-        -ResourceGroupName <ResourceGroupName> `
-        -StorageAccountName <StorageAccountName> `
-        -StorageAccountSku <StorageAccountSku> `
-        -Location <Location>
-        ```</code>
-    </pre>
-
-6.  OR In case of custom tags, script can be executed using below options. List of all tags are
-    given in the documentation examples inside the script
-    <pre>
-    <code>```  
-    .\configure-ActivityLogProfile.ps1 `
-    -SubscriptionId <SubscriptionId> `
-    -ResourceGroupName <ResourceGroupName> `
-    -StorageAccountName <StorageAccountName> `
-    -StorageAccountSku <StorageAccountSku> `
-    -Location <Location> `
-    -ApplicationOwnerTag <ApplicationOwnerTag> `
-    -ServiceNameTag <ServiceNameTag> `
-    -BusinessUnitTag <BusinessUnitTag> `
-    -ProjectOwnerTag <ProjectOwnerTag> `
-    -ApplicationTag <ApplicationTag> `
-    -DepartmentTag <DepartmentTag> `
-    -ProjectNameTag <ProjectNameTag> `
-    -CostCenterTag <CostCenterTag> `
-    -DataProfileTag <DataProfileTag>
-    ```</code>
-    </pre>
-
-## 6.5 Configure Storage Account
-
-
-Configure Storage Account to remediate policies [listed here ](.././azureQuickWins/#configure-storage-account-storage-and-databases) using below steps.
-
-### Category: Storage and Databases
-
-### Remediation Steps
-
-1.  Login to Azure portal
-
-2.  Open Cloud shell in PowerShell mode
-
-3.  Download configuration script
-        <pre>
-            <code>```
-               wget https://raw.githubusercontent.com/Cloudneeti/docs_cloudneeti/master/scripts/subscription-governance/configure-ASCPolicies.ps1%20-O%20configure-ASCPolicies.ps1 -O configure-StorageAccounts.ps1
-             ```</code>
-        </pre>
-
-4.  Switch directory
-        <pre>
-	        <code>```
-                   cd $user
-             ```</code>
-        </pre>
-
-
-5. Execute script to configure https and geo replication
-        <pre>
-	        <code>```
-                .\configure-StorageAccounts.ps1 -SubscriptionId <subscriptionId> -All
-            ```</code>
-        </pre>
-
-
-    OR To enable only https on storage account, 
-            <pre>
-                <code>```
-                    .\configure-StorageAccounts.ps1 -SubscriptionId <subscriptionId> -EnableHttps
-                ```</code>
-            </pre>
-
-    OR To enable only geo-replication setting,
-            <pre>
-                <code>```
-                    .\configure-StorageAccounts.ps1 -SubscriptionId <subscriptionId> -EnableGeoReplication
-                ```</code>
-            </pre>
-
-    In case few storage accounts to be excluded then provide **ExcludeStorageAccounts** parameter with comma separated storage account names.
-        <pre>
-            <code>```
-            .\configure-StorageAccounts.ps1 `
-            -SubscriptionId <subscriptionId> `
-            -ExcludeStorageAccounts <excludeStorageAccounts> `
-            -All
-            ```</code>
-        </pre>
-
-
-
-
-Remediation policy list
------------------------
+ASC policy list
+---------------
 
 ### Configure Azure Security Center policies : Azure - Security Center
 
@@ -388,35 +203,3 @@ Remediation policy list
 | 2100.80       | Ensure that monitoring of web sockets for Web App is enabled in ASC                                                   | Azure - Security Center |
 | 2100.90       | Ensure that monitoring of PHP version in the API App is enabled in ASC                                                | Azure - Security Center |
 
-### Configure Activity Alerts : Logging and Auditing
-
-| **Control No** | **Policy Title**                                                                       | **Category**                 |
-|---------------|--------------------------------------------------------------------------------------------|------------------------------|
-| 1900.5        | Ensure that Activity Log Alert exists for Create Policy Assignment                         | Azure - Logging and Auditing |
-| 1900.6        | Ensure Activity Log Alert exists for Create or Update Network Security Group               | Azure - Logging and Auditing |
-| 1900.7        | Ensure Activity Log Alert exists for Delete Network Security Group                         | Azure - Logging and Auditing |
-| 1900.8        | Ensure Activity Log Alert exists for Create or Update Network Security Group Rule          | Azure - Logging and Auditing |
-| 1900.9        | Ensure Activity Log Alert exists for Delete Network Security Group Rule                    | Azure - Logging and Auditing |
-| 1900.10       | Ensure Activity Log Alert exists for Create or Update Security Solution                    | Azure - Logging and Auditing |
-| 1900.11       | Ensure Activity Log Alert exists for Delete Security Solution                              | Azure - Logging and Auditing |
-| 1900.12       | Ensure Activity Log Alert(s) have configured for Create or Update SQL Server Firewall Rule | Azure - Logging and Auditing |
-| 1900.13       | Ensure Activity Log Alert exists for Delete SQL Server Firewall Rule                       | Azure - Logging and Auditing |
-| 1900.14       | Ensure Activity Log Alert exists for Update Security Policy                                | Azure - Logging and Auditing |
-
-### Configure Activity Log Profile : Logging and Auditing
-
-| **Control No** | **Policy Title**                                                             | **Category**                 |
-|---------------|------------------------------------------------------------------------------|------------------------------|
-| 1900.3        | Ensure that a Log Profile exists for Azure Monitor                           | Azure - Logging and Auditing |
-| 1900.4        | Ensure that retention period is set to 365 days or greater for Activity Logs | Azure - Logging and Auditing |
-| 1900.21       | Ensure Audit Profile captures all the Activities                             | Azure - Logging and Auditing |
-| 1900.22       | Ensure Log Profile captures activity logs for all Regions including global   | Azure - Logging and Auditing |
-| 1900.23       | Ensure Storage Container storing activity logs is not Publicly accessible    | Azure - Logging and Auditing |
-
-
-### Configure Storage Account : Storage and Databases
-
-| **Control No** | **Policy Title**                                                        | **Category**                  |
-|---------------|-------------------------------------------------------------------------|-------------------------------|
-| 2200.10       | Ensure that 'Secure transfer required' is 'Enabled' for Storage Account | Azure - Storage and Databases |
-| 2200.14       | Ensure that 'Geo-redundant' is enabled for Azure Storage                | Azure - Storage and Databases |
