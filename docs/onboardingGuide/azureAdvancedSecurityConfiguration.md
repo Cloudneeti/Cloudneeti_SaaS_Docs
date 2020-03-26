@@ -1,4 +1,4 @@
-# STEP 6: Azure Advanced security configuration
+# STEP 5: Azure Advanced security configuration
 **This step is optional.**
 
 The following steps are done by Microsoft Azure **Subscription Owner (or
@@ -14,7 +14,7 @@ customer’s control in their own Azure subscription. The metadata collected aft
 running a script is then pushed to a Cloudneeti API that you registered during
 the Cloudneeti API key generation.
 
-## 6.1 Collect Information
+## 5.1 Collect Information
 
 | **Information**                                                                                 | **Source / Portal to use** | **User**                |
 |-------------------------------------------------------------------------------------------------|----------------------------|-------------------------|
@@ -139,7 +139,7 @@ Login to Azure portal [https://portal.azure.com](https://portal.azure.com){targe
 	![Registered Cloudneeti Application Secret](.././images/onboardingOffice365Subscription/Copy_to_Clipboard.png#thumbnail)
 
 
-## 6.2 Provision Azure IAM data collector 
+## 5.2 Provision Azure IAM data collector 
 
 
 Login to Azure portal [https://portal.azure.com](https://portal.azure.com){target=_blank} as Subscription Contributor or
@@ -192,7 +192,7 @@ ArtifactsAccessKey
 
 9. This will create a runbook inside automation account
 
-## 6.3 Apply delete lock
+## 5.3 Apply delete lock
 
 Apply a delete lock to prevent accidental deletion of the data collection resource
 group in your Azure Subscription.
@@ -212,7 +212,7 @@ group in your Azure Subscription.
 7. Click **OK** (6)
 	![Apply Delete Lock](.././images/azureSubscriptions/Locks.png#thumbnail)
 
-## 6.4 Modify the data collection schedule
+## 5.4 Modify the data collection schedule
 
 Set the automation account schedule before the daily Cloudneeti data collection
 time.

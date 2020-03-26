@@ -1,4 +1,4 @@
-# STEP 5: Grant access to key vaults
+# STEP 4: Grant access to key vaults
 **This step is optional** 
 
 The Cloudneeti application requires special permission on desired key vaults to get policy data related to secrets. 
@@ -6,7 +6,7 @@ If the Key Vault access policy is not added, Cloudneeti application will not be 
 
 Access policy can be added using either an automation account or manual steps.  
 
-## 5.1 Manual Steps
+## 4.1 Manual Steps
 
 1.	Login to Azure portal.
 2.	Go to the **Key vaults** (1)
@@ -23,9 +23,9 @@ Note: Perform this step on all the key vaults present in your subscription.
 
 
 
-## 5.2 Automatically add Key Vault access policy for Key Vaults within Azure subscriptions
+## 4.2 Automatically add Key Vault access policy for Key Vaults within Azure subscriptions
 
-### 5.2.1 Register Contributor Application 
+### 4.2.1 Register Contributor Application 
 
 #### Register Contributor Application
 Login to [Azure Portal](https://portal.azure.com/){target=_blank} with **Global AD
@@ -86,7 +86,7 @@ Login to [Azure Portal](https://portal.azure.com/){target=_blank} with Microsoft
 
     ![Assign role](.././images/azureSubscriptions/KeyVault_ContributorRole.png#thumbnail)
 
-### 5.2.2 Provision automation account 
+### 4.2.2 Provision automation account 
 Provision automation account to check and assign List permissions to key-vaults within given subscriptions, at scheduled time.
 
 Login to Azure portal [https://portal.azure.com](https://portal.azure.com){target=_blank} as Subscription Contributor or

@@ -1,4 +1,4 @@
-# STEP 4: Grant access to Azure subscription additional roles
+# STEP 3: Grant access to Azure subscription additional roles
 **This step is optional** 
 
 The following roles need to be granted to the Cloudneeti App registered in the previous step
@@ -10,7 +10,7 @@ The following roles need to be granted to the Cloudneeti App registered in the p
 
 The following steps are done by Microsoft Azure **Subscription Owner** role.
 
-### 4.1 Grant Azure Subscription Website Contributor Role
+### 3.1 Grant Azure Subscription Website Contributor Role
 **This step is optional**
 
 The Cloudneeti application requires Website Contributor role access to the Subscription in order to view application settings. 
@@ -24,7 +24,7 @@ If the Website Contributor Role is not assigned, Cloudneeti application will not
 
     ![Assign role](.././images/azureSubscriptions/Website_Contributor_Role.png#thumbnail)
 
-### 4.2 Grant Azure Subscription Storage Account Contributor Role
+### 3.2 Grant Azure Subscription Storage Account Contributor Role
 **This step is optional**
 
 The Cloudneeti application requires Storage Account Contributor or Storage Account Key Operator Service role access to the Subscription in order to view application settings. 
@@ -42,7 +42,7 @@ If the Storage Account Contributor or Storage Account Key Operator Service role 
 
     ![Assign role](.././images/azureSubscriptions/Storage_Account_Key_Operator_Service_Role.png#thumbnail)
 
-### 4.3 Grant Azure Subscription Network Contributor Role
+### 3.3 Grant Azure Subscription Network Contributor Role
 **This step is optional**
 
 The Cloudneeti application requires Website Contributor role access to the Subscription in order to view application settings. 
