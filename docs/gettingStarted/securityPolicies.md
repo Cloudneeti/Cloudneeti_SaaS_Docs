@@ -34,4 +34,4 @@ Configure security policies allows users to enable and disable data collection a
 
 ## Override security policy status
 
-Please [refer page](../../administratorGuide/securityPolicyExclusions/) to override security policies at account level. 
+Please [refer page](../../administratorGuide/overrideSecurityPolicyStatus/) to override security policies at account level. 

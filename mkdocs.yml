@@ -53,10 +53,10 @@ nav:
     - OS baseline (optional): onboardingGuide/awsVMBaselineConfiguration.md
   - Micorsoft Azure:
     - Onboarding steps: onboardingGuide/azureSubscriptions.md
-    - Enable ASC audit policies: onboardingGuide/enableASCAuditPolicies.md
     - Additional roles: onboardingGuide/grantAccessToAzureSubscriptionAdditionalRoles.md
     - Key vaults: onboardingGuide/grantAccessToKeyVaults.md
     - Advanced security configurations: onboardingGuide/azureAdvancedSecurityConfiguration.md
+    - Enable ASC audit policies: onboardingGuide/enableASCAuditPolicies.md
     - OS baseline and vulnerability: onboardingGuide/azureVulnerability.md
     - Azure Kubernetes Service (AKS): onboardingGuide/configureCloudneetiAgentInKubernetesCluster.md
   - Office 365: 
