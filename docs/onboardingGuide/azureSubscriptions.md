@@ -12,24 +12,23 @@ The following steps are required to onboard Microsoft Azure to the Cloudneeti ap
 2.  [**Granting access to the Azure subscription**](.././azureSubscriptions/#step-2-grant-access-to-cloudneeti-registered-app-existing){target=_blank} includes giving the Cloudneeti
     application reader access to the Azure subscription and collecting Subscription ID, Directory ID, Domain Name information.
 
-3. [**Enable Azure Security Center audit policies**](../../onboardingGuide/azureSubscriptions/#step-3-enable-azure-security-center-audit-policies){target=_blank} includes updating ASC configurations to make the Azure Cloud account compliant for listed policies using scripts.
-
-4. [**Grant access to Azure subscription additional roles (Optional)**](../../onboardingGuide/grantAccessToAzureSubscriptionAdditionalRoles/){target=_blank} includes giving the Cloudneeti
+3. [**Grant access to Azure subscription additional roles (Optional)**](../../onboardingGuide/grantAccessToAzureSubscriptionAdditionalRoles/){target=_blank} includes giving the Cloudneeti
     application access to the Azure subscription, assigning below roles:
-    Backup Reader Role
     Website Contributor Role
     Storage Account Contributor Role
     Network Contributor Role
 
-5. [**Grant access to key vaults (Optional)**](../../onboardingGuide/grantAccessToKeyVaults/){target=_blank} includes giving the Cloudneeti application special permission on desired key vaults to get policy data related to secrets.
+4. [**Grant access to key vaults (Optional)**](../../onboardingGuide/grantAccessToKeyVaults/){target=_blank} includes giving the Cloudneeti application special permission on desired key vaults to get policy data related to secrets.
 
-6. [**Advanced Security configuration (Optional)**](../../onboardingGuide/azureAdvancedSecurityConfiguration/){target=_blank} includes adding a script to the customer’s Azure account and granting the required access rights.
+5. [**Advanced Security configuration (Optional)**](../../onboardingGuide/azureAdvancedSecurityConfiguration/){target=_blank} includes adding a script to the customer’s Azure account and granting the required access rights.
 
     Advanced security configuration (step 5) requires a Cloudneeti PowerShell agent to be installed in an Azure subscription under the same tenant where the Azure subscription is located. The Cloudneeti PowerShell agent retrieves (A) additional configuration information from the Azure Active Directory  (there are no Azure APIs to retrieve this information) and pushes (B) this information as a JSON file to the Cloudneeti application.
 
+6. [**Enable Azure Security Center audit policies (Optional)**](../../onboardingGuide/azureSubscriptions/#step-3-enable-azure-security-center-audit-policies){target=_blank} includes updating ASC configurations to make the Azure Cloud account compliant for listed policies using scripts.
+
 7. [**Configure OS baseline and vulnerability scanning (Optional)**](../../onboardingGuide/azureVulnerability/){target=_blank} inlcudes connecting VMs to OMS workspace. Also deploy partner vulnerability scanning in Azure Security Center and installing the solution on multiple VMs allows to provide visibility into missing updates, misconfigured OS security settings, endpoint protection status, and health and threat protection.
 
-8. [**Configure Cloudneeti agent on Kubernetes (Optional)**](../../onboardingGuide/configureCloudneetiAgentInKubernetesCluster/){target=_blank} inlcudes Deploying Cloudneeti agent on Azure Kubernetes Service enables compliance monitoring of Kubernetes cluster.
+8. [**Configure Cloudneeti agent on AKS (Optional)**](../../onboardingGuide/configureCloudneetiAgentInKubernetesCluster/){target=_blank} inlcudes Deploying Cloudneeti agent on Azure Kubernetes Service enables compliance monitoring of Kubernetes cluster.
 An Azure docker agent is deployed to collect data for additional security policies.
 
 9. [**Adding Azure subscription**](.././azureSubscriptions/#step-9-add-azure-subscription){target=_blank} includes adding Azure subscription information to the respective Cloud Account and waiting until the first data collection is complete.
@@ -38,12 +37,12 @@ An Azure docker agent is deployed to collect data for additional security polici
 |---|-------------------------------------------|----------------|-------------------------|-------------------|-------------------------|
 | 1  | [Register Cloudneeti application](.././azureSubscriptions/#step-1-register-cloudneeti-application-manually-or-using-azure-powershell-script){target=_blank}           | Microsoft Azure| Global AD Administrator | mandatory | 0            |
 | 2  | [Grant access to Azure subscription](.././azureSubscriptions/#step-2-grant-access-to-cloudneeti-registered-app)        | Microsoft Azure| Subscription Owner      | mandatory | 0            |
-| 3 | [Enable Azure Security Center audit policies](../../onboardingGuide/enableASCAuditPolicies/){target=_blank}                      | Microsoft Azure| Subscription Owner           | mandatory  | 115            |
-| 4  | [Grant access to Azure subscription additional roles](../../onboardingGuide/grantAccessToAzureSubscriptionAdditionalRoles/){target=_blank} | Microsoft Azure| Subscription Owner           | optional  | 39            |
-| 5 | [Grant access to key vaults](../../onboardingGuide/grantAccessToKeyVaults/){target=_blank}                 | Microsoft Azure| Subscription Owner          | optional  | 1            |
-| 6 | [Advanced Security configuration](../../onboardingGuide/azureAdvancedSecurityConfiguration/){target=_blank}            | Microsoft Azure| Subscription Owner, Global AD Reader          | optional  | 18            |
+| 3  | [Grant access to Azure subscription additional roles](../../onboardingGuide/grantAccessToAzureSubscriptionAdditionalRoles/){target=_blank} | Microsoft Azure| Subscription Owner           | optional  | 39            |
+| 4 | [Grant access to key vaults](../../onboardingGuide/grantAccessToKeyVaults/){target=_blank}                 | Microsoft Azure| Subscription Owner          | optional  | 1            |
+| 5 | [Advanced Security configuration](../../onboardingGuide/azureAdvancedSecurityConfiguration/){target=_blank}            | Microsoft Azure| Subscription Owner, Global AD Reader          | optional  | 18            |
+| 6 | [Enable Azure Security Center audit policies](../../onboardingGuide/enableASCAuditPolicies/){target=_blank}                     | Microsoft Azure| Subscription Owner           | optional  | 115            |
 | 7 | [Configure OS baseline and vulnerability scanning](../../onboardingGuide/azureVulnerability/){target=_blank}                   | Microsoft Azure     | Subscription Owner           | optional | 513            |
-| 8 | [Configure Cloudneeti agent on Kubernetes](../../onboardingGuide/configureCloudneetiAgentInKubernetesCluster/){target=_blank}                   | Microsoft Azure     | Subscription Owner           | optional | 30            |
+| 8 | [Configure Cloudneeti agent on AKS](../../onboardingGuide/configureCloudneetiAgentInKubernetesCluster/){target=_blank}                   | Microsoft Azure     | Subscription Owner           | optional | 30            |
 | 9 | [Add Azure subscription](../../onboardingGuide/azureSubscriptions/#step-9-add-azure-subscription){target=_blank}                    | Cloudneeti     | License Admin           | mandatory | 0            |
 
 ### Required Roles
@@ -82,10 +81,10 @@ document.
 |------|-------------------------------------------------------------|-------------------|--------------------|----------|-----------|--------------|
 | Azure Active Directory | Directory Read All Microsoft Graph              | Microsoft Azure   | Global AD Admin    | STEP 1   | optional  | 5            |
 | Azure Subscription | Reader              | Microsoft Azure   | Subscription Owner | STEP 2   | mandatory | 0            |
-| Azure Subscription | Website Contributor | Microsoft Azure   | Subscription Owner | STEP 4   | optional  | 1           |
-| Azure Subscription | Storage Account Contributor | Microsoft Azure   | Subscription Owner | STEP 4   | optional  | 15            |
-| Azure Subscription | Network Contributor Role  | Microsoft Azure   | Subscription Owner | STEP 4   | optional  | 1           |
-| Key Vault | Access Policy   | Microsoft Azure   | Subscription Owner | STEP 5   | optional  | 1            |
+| Azure Subscription | Website Contributor | Microsoft Azure   | Subscription Owner | STEP 3   | optional  | 1           |
+| Azure Subscription | Storage Account Contributor | Microsoft Azure   | Subscription Owner | STEP 3   | optional  | 15            |
+| Azure Subscription | Network Contributor Role  | Microsoft Azure   | Subscription Owner | STEP 3   | optional  | 1           |
+| Key Vault | Access Policy   | Microsoft Azure   | Subscription Owner | STEP 4   | optional  | 1            |
 
 ## STEP 1: Register Cloudneeti application Manually or using Azure powershell script
 
@@ -217,9 +216,8 @@ Use the Create-ServicePrincipal-AzureOnboarding.ps1 script to create and registe
 The following roles need to be granted to the Cloudneeti App registered in the previous step
 
 1.	Reader role for Azure Subscription level scope.
-2.	Backup reader role for Azure Subscription level scope.
-3.	Website contributor role for Azure Subscription level scope.
-4.  Key Vault access policies for specific managed Key Vaults.
+2.	Website contributor role for Azure Subscription level scope.
+3.  Key Vault access policies for specific managed Key Vaults.
 
 The following steps are done by Microsoft Azure **Subscription Owner** role.
 
@@ -293,13 +291,7 @@ The Cloudneeti application **License Admin** requires this information to add an
     ![Application Secret](.././images/azureSubscriptions/AzureSP_CaptureClientSecret.png#thumbnail)
 
 
-## STEP 3: Enable Azure Security Center audit policies
-
-Enable policies from **Azure Security center** using script. This scripts will update configurations and settings to make the cloud account compliant for the policies [listed here](../../onboardingGuide/enableASCAuditPolicies/#asc-policy-list).
-
-Please follow [link](../../onboardingGuide/enableASCAuditPolicies/){target=_blank} for steps.
-
-## STEP 4: Grant access to Azure subscription additional roles
+## STEP 3: Grant access to Azure subscription additional roles
 
 **This step is optional**
 
@@ -311,20 +303,26 @@ The following roles need to be granted to the Cloudneeti App registered in the p
 - Key Vault access policies for specific managed Key Vaults.
 - The following steps are done by Microsoft Azure Subscription Owner role.
 
-## STEP 5: Grant access to key vaults 
+## STEP 4: Grant access to key vaults 
 **This step is optional.**
 The Cloudneeti application requires special permission on desired key vaults to get policy data related to secrets. 
 If the Key Vault access policy is not added, Cloudneeti application will not be able to collect data of security policies [listed here](.././grantAccessToKeyVaults/#key-vault-list){target=_blank}.
 
 Please follow [link](../../onboardingGuide/grantAccessToKeyVaults/){target=_blank} for steps.
 
-## STEP 6: Advanced Security configuration 
+## STEP 5: Advanced Security configuration 
 **This step is optional.**
 An Azure Automation Account resource is deployed to collect data for additional security policies listed here . The Azure Active Directory control plane exposes the data only through PowerShell that needs to run under a Global AD reader credential.
 
 To ensure that Cloudneeti does not ever store/have access to a global AD reader, it is recommended to deploy a small PowerShell script under customer’s control in their own Azure subscription. The metadata collected after running a script is then pushed to a Cloudneeti API that you registered during the Cloudneeti API key generation.
 
 Please follow [link](../../onboardingGuide/azureAdvancedSecurityConfiguration/){target=_blank} for steps.
+
+## STEP 6: Enable Azure Security Center audit policies
+
+Enable policies from **Azure Security center** using script. This scripts will update configurations and settings to make the cloud account compliant for the policies [listed here](../../onboardingGuide/enableASCAuditPolicies/#asc-policy-list){target=_blank}.
+
+Please follow [link](../../onboardingGuide/enableASCAuditPolicies/){target=_blank} for steps.
 
 ## STEP 7: Configure OS baseline and vulnerability scanning
 **This step is optional.** 

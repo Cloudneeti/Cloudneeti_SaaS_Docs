@@ -1,4 +1,4 @@
-# Security policy exclousions
+# Security policy exclusions
 
 By default, all the security policies are enabled. Update Global Policies allows selection of security policies that should be excluded from data collection. Exclusion can be done at license and cloud account level
 

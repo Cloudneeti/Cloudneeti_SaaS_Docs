@@ -1,6 +1,8 @@
-# STEP 3: Enable Azure Security Center audit policies
+# STEP 6: Enable Azure Security Center audit policies
 
-Remediation policies from **Azure Security center, Logging and Monitoring** and **Storage and Databases** can be done using quick wins scripts. These scripts will update configurations and settings to make the cloud account compliant for the policies [listed here](../../onboardingGuide/azureQuickWins/#remediation-policy-list).
+**This step is optional.**
+
+Enable policies from **Azure Security center** using script. This scripts will update configurations and settings to make the cloud account compliant for the policies [listed here](../../onboardingGuide/enableASCAuditPolicies/#asc-policy-list){target=_blank}
 
 ## Prerequisite 
 
@@ -8,7 +10,7 @@ Access Needed on Subscription: **Contributor**
 
 Note : Please note that it is advised to have only one ASC initiative. If there are multiple initiatives created, Cloud account compliance results in Cloudneeti may vary. 
 
-## 3.1 Configure ASC default policies 
+## 6.1 Configure ASC default policies 
 
 Configure ASC policies to remediate policies [listed here ](.././azureQuickWins/#configure-azure-security-center-policies-azure-security-center) using below steps.
 
@@ -44,13 +46,13 @@ Configure ASC policies to remediate policies [listed here ](.././azureQuickWins/
     ```</code>
 	</pre>
 
-## 3.2 Configure ASC policies at Management Group level
+## 6.2 Configure ASC policies at Management Group level
 
 Configure ASC policies to remediate policies [listed here ](.././azureQuickWins/#configure-azure-security-center-policies-azure-security-center) using below steps.
 
 #### Category Subscription Governance Policies [Increase compliance Score 30-50%]
 
-#### #### Configuration Steps
+#### Configuration Steps
 
 1.  Login to Azure portal
 
