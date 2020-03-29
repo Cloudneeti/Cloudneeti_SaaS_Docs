@@ -388,6 +388,96 @@ Microsoft’s PAL program makes it easier for Cloudneeti to be recognized as a c
 For more information, refer to the documentation link here [Link a Partner ID to your Azure accounts](https://docs.microsoft.com/en-us/azure/billing/billing-partner-admin-link-started){target=_blank}.
 
 
+## Next Steps
+
+### Onboard another Microsoft Azure Subscription to the Cloudneeti application
+
+Please follow [STEP 1](../../onboardingGuide/azureSubscriptions/#step-1-register-cloudneeti-application-manually-or-using-azure-powershell-script) to [STEP 8](../../onboardingGuide/azureSubscriptions/#step-8-configure-cloudneeti-agent-on-aks) for required prerequisites configurations. Then add Azure subscription to Cloudneeti Application using below steps:
+
+#### 1. Azure subscription is in same Azure Active Directory as of already added Cloud accounts.
+
+1. Navigate to **Cloud Accounts** (2) page in **Configutrations** (1)
+
+2. Click **Add Cloud Account** (3)
+
+    ![Add another account](.././images/azureSubscriptions/another_1.png#thumbnail)
+
+2. Select **License** to add a Cloud account 
+
+    ![Add another account](.././images/azureSubscriptions/another_2.png#thumbnail)
+
+3. Select cloud connector as **Azure**
+
+    ![Add another account](.././images/azureSubscriptions/another_3.png#thumbnail)
+
+4. **Select existing Tenant**
+
+    ![Add another account](.././images/azureSubscriptions/another_4a.png#thumbnail)
+
+5. Fill in the **Account Name**
+
+6. Click **Get Subscription**
+
+    ![Add another account](.././images/azureSubscriptions/another_4b.png#thumbnail)
+
+7. This will list subscriptions in the selected azure tenant. If your subscription does not exist in list then please check access to Cloudneeti Application is as stated in[prerequisite step 2](../../onboardingGuide/azureSubscriptions/#step-2-grant-access-to-cloudneeti-registered-app-existing) 
+
+8. Select **subscription** to onboard new cloud account.
+
+    ![Add another account](.././images/azureSubscriptions/another_4c.png#thumbnail)
+
+9. **Save**
+
+10. You will receive a confirmation that the Azure subscription has been added.
+    ![Add Account](.././images/azureSubscriptions/Account_Success.png#thumbnail)
+
+
+#### 2. Azure subscription is in different Azure Active Directory as of already added Cloud accounts.
+
+1. Navigate to **Cloud Accounts** (2) page in **Configutrations** (1)
+
+2. Click **Add Cloud Account** (3)
+
+    ![Add another account](.././images/azureSubscriptions/another_1.png#thumbnail)
+
+2. Select **License** to add a Cloud account 
+
+    ![Add another account](.././images/azureSubscriptions/another_2.png#thumbnail)
+
+3. Select cloud connector as **Azure**
+
+    ![Add another account](.././images/azureSubscriptions/another_3.png#thumbnail)
+
+4. Keep **Select existing Tenant** blank
+
+    ![Add another account](.././images/azureSubscriptions/another_4a.png#thumbnail)
+
+5. Fill in the 
+    **Account Name**
+    **Domain name**
+    **Azure Tenant Id (Domain ID)**, 
+    **Azure Application ID** 
+    and **Azure Application Password**
+
+6. Click **Get Subscription**
+
+    ![Add another account](.././images/azureSubscriptions/another_5.png#thumbnail)
+
+7. This will list subscriptions in the selected azure tenant. If your subscription does not exist in list then please check access to Cloudneeti Application is as stated in[prerequisite step 2](../../onboardingGuide/azureSubscriptions/#step-2-grant-access-to-cloudneeti-registered-app-existing) 
+
+8. Select **subscription** to onboard new cloud account.
+
+    ![Add another account](.././images/azureSubscriptions/another_6.png#thumbnail)
+
+9. **Add Account**
+
+    ![Add another account](.././images/azureSubscriptions/another_7.png#thumbnail)
+
+10. You will receive a confirmation that the Azure subscription has been added.
+    
+    ![Add Account](.././images/azureSubscriptions/Account_Success.png#thumbnail)
+
+
 ## Security Polices with required roles, permissions
 
 The following Security Policies will be excluded if one or multiple roles are

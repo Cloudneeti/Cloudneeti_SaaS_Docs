@@ -1,13 +1,43 @@
 # Override security policy status
 
-Cloudneeti allows users to override the security policy status. Overriding policy status indicates that you have completed resolution and if done without caution, it might carry an inherent security risk. New resolution status will take up to 24hrs to update.
+## Overview
+
+Cloudneeti allows users to override the security policy status. Overriding policy status indicates that you have completed resolution and if done without caution, it might carry an inherent security risk. New resolution status will be effective post next successful Cloud account scan.
+
+### Pass – 3rd Party
+
+### Pass – Manual override
+
+### Pass – Time bound exception
+
+### Exclude – Not applicable
 
 
-## Pass – 3rd Party
+## Override security policy at cloud account level
 
-## Pass – Manual override
+1. Navigate to Secuirty policy page
 
-## Pass – Time bound exception
 
-## Exclude – Not applicable
+2. Click Override
+
+
+
+3. Select new security policy status
+
+
+4. Add security policy new resolution notes
+
+
+5. Save
+
+6. Initiate cloud account scan ot wait for next scheduled scan
+
+7. Verify new resolution state for security policy
+
+
+## Undo override security policy 
+
+
+
+
 
