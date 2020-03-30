@@ -1,10 +1,10 @@
-# Azure Security Center Integration
+# Azure Security Center Integration (Preview)
 
 Integration enables Cloudneeti application to push custom recommendations with assessment data of Azure Cloud Account(s) to Microsoft Azure Security Center.
 
 **Custom Recommedation** includes policies with description and remediation steps.
 
-**Assessment data** includes listing policy related resources with their complince state with respect to policy defination.
+**Assessment data** includes listing policy related resources with their compliance state with respect to policy defination.
 
 The following steps are required to configure integration of Cloudneeti application with Microsoft Azure Security Center for Azure Subscription(s) added as Cloud account(s) in Cloudneeti. 
 
