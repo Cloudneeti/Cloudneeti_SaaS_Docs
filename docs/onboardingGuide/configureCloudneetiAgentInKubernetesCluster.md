@@ -52,6 +52,8 @@ Sample JSON file
 STEP 2: Deploy Cloudneeti agent
 -------------------------------
 
+Please use below steps to deploy Cloudneeti Agent on AKS, AKS engine.
+
 ### AKS
 
 #### 2.1 Login to Kubernetes cluster with root account.
@@ -191,9 +193,7 @@ Login to Kubernetes master with **administrator** role.
 
 5.  Deploy Cloudneeti agent
 
-        kubectl apply -f cloudneeti-agent.yaml --namespace <namespace name>
-
-    ![Associate Kubernetes](.././images/kubernetes/Master_2.png#thumbnail)
+        kubectl apply -f cloudneeti-agent-worker.yaml --namespace <namespace name>
 
 
 STEP 3: Verify Cloudneeti agent installation
