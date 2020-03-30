@@ -1,10 +1,12 @@
 # Azure Security Center Integration
 
-The following steps are required to configure integration of Cloudneeti application with Microsoft Azure Security Center. Integration enables Cloudneeti application to push custom recommendation in with assessment data of Cloud Account(s) to Microsoft Azure Security Center.
+Integration enables Cloudneeti application to push custom recommendations with assessment data of Azure Cloud Account(s) to Microsoft Azure Security Center.
 
 **Custom Recommedation** includes policies with description and remediation steps.
 
 **Assessment data** includes listing policy related resources with their complince state with respect to policy defination.
+
+The following steps are required to configure integration of Cloudneeti application with Microsoft Azure Security Center for Azure Subscription(s) added as Cloud account(s) in Cloudneeti. 
 
 ### Required Roles
 
@@ -47,7 +49,7 @@ Login to [Azure Portal](https://portal.azure.com/){target=_blank} with Microsoft
     ![Assign role](.././images/ascPush/role_assign_1.png#thumbnail)
 
 
-## Configure Azure Security Center Integration 
+## STEP 1: Configure Azure Security Center Integration 
 
 The following steps are done by Cloudneeti **License Admin** role.
 
@@ -71,9 +73,13 @@ The following steps are done by Cloudneeti **License Admin** role.
     ![Integrations](.././images/ascPush/integrations_3.png#thumbnail)
 
 
-## Verify assessment data pushed at ASC
+## STEP 2: Verify assessment data pushed at ASC
 
-1. Cloudneeti on successful integration will create custom policies
+Cloudneeti on successful integration will create recommendation and assesment.
+
+### Recommendations 
+
+1. custom policies 
 
     ![assessment data ](.././images/ascPush/assessment_data_1.png#thumbnail)
 
@@ -85,6 +91,8 @@ The following steps are done by Cloudneeti **License Admin** role.
 
     ![assessment data ](.././images/ascPush/assessment_data_3.png#thumbnail)
 
-4. Custom policy related resources state as Unhealthy, Healthy or Not Applicable
+### Assessment
 
-    ![assessment data ](.././images/ascPush/assessment_data_4.png#thumbnail)
+Custom policy related resources state as Unhealthy, Healthy or Not Applicable
+
+![assessment data ](.././images/ascPush/assessment_data_4.png#thumbnail)
