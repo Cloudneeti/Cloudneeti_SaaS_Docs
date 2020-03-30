@@ -90,13 +90,11 @@ Please use below steps to deploy Cloudneeti Agent on AKS, AKS engine.
 
 Note: The default value is set to scan the cluster every day at 12PM. It is recommended set the execution time of Cloudneeti agent once a day.
 
-#### 2.2 Login to Kubernetes cluster with root account.
+#### 2.2 Login to Kubernetes cluster with root account
 
         az aks get-credentials --name <cluster-name> --resource-group <cluster-resource-group> --overwrite-existing
 
 #### 2.3 Deploy Cloudneeti agent on Kubernetes cluster node
-
-Login to Kubernetes master with **administrator** role.
 
 1.  Create/copy below files on Kubernets master 
     - cloudneeti-namespace.yaml
@@ -159,14 +157,12 @@ Login to Kubernetes master with **administrator** role.
 
 Note: The default value is set to scan the cluster every day at 12PM. It is recommended set the execution time of Cloudneeti agent once a day.
 
-#### 2.2 Login to one of the master nodes with root account.
+#### 2.2 Login to one of the master nodes with root account
 
     ssh into the master node using below commmand
             ssh <master-node-vm-user>@<master-node-ip>
 
 #### 2.3 Deploy Cloudneeti agent on Kubernetes cluster node
-
-Login to Kubernetes master with **administrator** role.
 
 1.  Create/copy below files on Kubernets master 
     - cloudneeti-namespace.yaml
