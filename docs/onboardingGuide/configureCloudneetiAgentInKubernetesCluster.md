@@ -30,7 +30,7 @@ Login to Cloudneeti portal with **License Admin** role
 2.  Click **Configure** Accounts for the Cloud account where Kubernetes Cluster
     is to be associated.
 
-3.  Click **Manage K8 Clusters**
+3.  Click **Manage K8s Clusters**
 
     ![Associate Kubernetes](.././images/kubernetes/CN_ManageK8Cluster_2.png#thumbnail)
 
@@ -90,7 +90,7 @@ Please use below steps to deploy Cloudneeti Agent on AKS, AKS engine.
 
 Note: The default value is set to scan the cluster every day at 12PM. It is recommended set the execution time of Cloudneeti agent once a day.
 
-#### 2.2 Login to Kubernetes cluster with root account
+#### 2.2 Access Kubernetes cluster with root account from local machine
 
         az aks get-credentials --name <cluster-name> --resource-group <cluster-resource-group> --overwrite-existing
 
@@ -118,7 +118,7 @@ Note: The default value is set to scan the cluster every day at 12PM. It is reco
 
 5.  Deploy Cloudneeti agent
 
-        kubectl apply -f cloudneeti-agent.yaml --namespace <namespace name>
+        kubectl apply -f cloudneeti-agent-worker.yaml --namespace <namespace name>
 
 
 ### AKS Engine
@@ -149,7 +149,7 @@ Note: The default value is set to scan the cluster every day at 12PM. It is reco
                 data:
                     cloudneetiAPIKey: <cloudneetiapikey>
 
--  **cloudneeti-agent-worker.yaml** update value for **schedule** in spec section, set cron job schedule as per your requirement.
+-  **cloudneeti-agent.yaml** update value for **schedule** in spec section, set cron job schedule as per your requirement.
 
                 spec:
                     schedule: "0 12 * * *"
@@ -157,10 +157,22 @@ Note: The default value is set to scan the cluster every day at 12PM. It is reco
 
 Note: The default value is set to scan the cluster every day at 12PM. It is recommended set the execution time of Cloudneeti agent once a day.
 
-#### 2.2 Login to one of the master nodes with root account
+#### 2.2 Access Kubernetes cluster with root account
 
-    ssh into the master node using below commmand
-            ssh <master-node-vm-user>@<master-node-ip>
+1. Access the AKS-Engine cluster by using the kubeconfig generated for the cluster at the time of provisioning aks-engine in below directory.
+
+        	_output/<ResourceGroupName>/kubeconfig/
+
+    
+
+2. Copy kubeconfig. *region* .json file on local/dev machine at secure place.
+
+    aks-engine generates kubeconfig files for each possible region (for eastus location refer kubeconfig.eastus.json file)
+
+3. Verify K8S cluster access
+
+     ![Verify access to Kubernetes](.././images/kubernetes/K8_engine.png#thumbnail)
+
 
 #### 2.3 Deploy Cloudneeti agent on Kubernetes cluster node
 
