@@ -37,12 +37,12 @@ An Azure docker agent is deployed to collect data for additional security polici
 |---|-------------------------------------------|----------------|-------------------------|-------------------|-------------------------|
 | 1  | [Register Cloudneeti application](.././azureSubscriptions/#step-1-register-cloudneeti-application-manually-or-using-azure-powershell-script){target=_blank}           | Microsoft Azure| Global AD Administrator | mandatory | 0            |
 | 2  | [Grant access to Azure subscription](.././azureSubscriptions/#step-2-grant-access-to-cloudneeti-registered-app)        | Microsoft Azure| Subscription Owner      | mandatory | 0            |
-| 3  | [Grant access to Azure subscription additional roles](../../onboardingGuide/grantAccessToAzureSubscriptionAdditionalRoles/){target=_blank} | Microsoft Azure| Subscription Owner           | optional  | 39            |
+| 3  | [Grant access to Azure subscription additional roles](../../onboardingGuide/grantAccessToAzureSubscriptionAdditionalRoles/){target=_blank} | Microsoft Azure| Subscription Owner           | optional  | 18            |
 | 4 | [Grant access to key vaults](../../onboardingGuide/grantAccessToKeyVaults/){target=_blank}                 | Microsoft Azure| Subscription Owner          | optional  | 1            |
 | 5 | [Advanced Security configuration](../../onboardingGuide/azureAdvancedSecurityConfiguration/){target=_blank}            | Microsoft Azure| Subscription Owner, Global AD Reader          | optional  | 18            |
 | 6 | [Enable Azure Security Center audit policies](../../onboardingGuide/enableASCAuditPolicies/){target=_blank}                     | Microsoft Azure| Subscription Owner           | optional  | 115            |
 | 7 | [Configure OS baseline and vulnerability scanning](../../onboardingGuide/azureVulnerability/){target=_blank}                   | Microsoft Azure     | Subscription Owner           | optional | 513            |
-| 8 | [Configure Cloudneeti agent on AKS](../../onboardingGuide/configureCloudneetiAgentInKubernetesCluster/){target=_blank}                   | Microsoft Azure     | Subscription Owner           | optional | 30            |
+| 8 | [Configure Cloudneeti agent on AKS](../../onboardingGuide/configureCloudneetiAgentInKubernetesCluster/){target=_blank}                   | Microsoft Azure     | Subscription Owner           | optional | 80            |
 | 9 | [Add Azure subscription](../../onboardingGuide/azureSubscriptions/#step-9-add-azure-subscription){target=_blank}                    | Cloudneeti     | License Admin           | mandatory | 0            |
 
 ### Required Roles
@@ -81,8 +81,8 @@ document.
 |------|-------------------------------------------------------------|-------------------|--------------------|----------|-----------|--------------|
 | Azure Active Directory | Directory Read All Microsoft Graph              | Microsoft Azure   | Global AD Admin    | STEP 1   | optional  | 5            |
 | Azure Subscription | Reader              | Microsoft Azure   | Subscription Owner | STEP 2   | mandatory | 0            |
-| Azure Subscription | Website Contributor | Microsoft Azure   | Subscription Owner | STEP 3   | optional  | 1           |
-| Azure Subscription | Storage Account Contributor | Microsoft Azure   | Subscription Owner | STEP 3   | optional  | 15            |
+| Azure Subscription | Website Contributor | Microsoft Azure   | Subscription Owner | STEP 3   | optional  | 10           |
+| Azure Subscription | Storage Account Contributor | Microsoft Azure   | Subscription Owner | STEP 3   | optional  | 1            |
 | Azure Subscription | Network Contributor Role  | Microsoft Azure   | Subscription Owner | STEP 3   | optional  | 1           |
 | Key Vault | Access Policy   | Microsoft Azure   | Subscription Owner | STEP 4   | optional  | 1            |
 
@@ -487,8 +487,8 @@ not assigned.
 |--------------------------------------------------------------|------------------------------------------|
 | Read All Microsoft Graph permissions                         | 5         |
 | Reader role for Azure Subscription level scope.              | 0         |
-| Website Contributor role for Azure Subscription level scope. | 1        |
-| Storage Account Contributor role for Azure Subscription level scope. | 15        |
+| Website Contributor role for Azure Subscription level scope. | 10        |
+| Storage Account Contributor role for Azure Subscription level scope. | 1        |
 | Key Vault access policies for specific managed Key Vaults    | 1         |
 
 ### Microsoft Graph
@@ -496,18 +496,17 @@ not assigned.
 Microsoft graph permissions are needed to collect data for Azure AD related
 security policies listed below.
 
-| Control No | Policy Title   | AAD Entity Used for Evaluating Misconfiguration  | Data Stored in Cloudneeti Data Store   |
-|-----------|---------------|--------------------------------------------------|----------------------------------------|
-| 1700.1   | Ensure that AD Application keys are rotated before they expires   |*passwordCredentials*<br><br>Metadata information contained within the data entity will be key start-date, end-date, and expiry policies. No actual values are retrievable.| <ul><li>AD Application Name</li><li>AD Application ID</li><li>Expiry Date</li></ul> |       
-| 1600.11   | Ensure that Service Principal Certificate are renewed before it expires | *keyCredentials*<br><br>Metadata information contained within the data involves start-date and end-date. Refer to documentation [here](https://docs.microsoft.com/en-us/powershell/module/azuread/new-azureadserviceprincipalkeycredential?view=azureadps-2.0){target=_blank}.| <ul><li>AD Application Name</li><li>AD Application ID</li><li>Expiry Date</li></ul> |
-| 1600.12   | Ensure that there are no guest users | *userType*<br><br>Member or guest. | <ul><li>No data is stored in the Cloudneeti database. This policy only retrieves the count of total users and how many are guest users.</li></ul> |
-| 1600.4    | Enforce the policy to set Password to ‘always' expire in Azure Active Directory for all Organization Users | *passwordPolicies*<br><br>Metadata involving the length of the password, password strength, and password restrictions. Refer to documentation [here](https://docs.microsoft.com/en-us/azure/active-directory/authentication/concept-sspr-policy#password-policies-that-only-apply-to-cloud-user-accounts){target=_blank}. | <ul><li>No data is stored in the Cloudneeti database. This policy only retrieves the count of all organization users and how many of them have set ‘Password always expired’ to ‘On’.</li></ul>  |
-| 1600.8    | Ensure that Azure resources are accessible only through Organization Accoun | *userType*<br><br>Member or [guest](https://docs.microsoft.com/en-us/azure/active-directory/b2b/what-is-b2b){target=_blank}. | <ul><li>No data is stored in the Cloudneeti database. This policy only retrieves the count of external users in an organization who can access resources under the Azure Subscription.</ul></li> |
+| Policy Title   | AAD Entity Used for Evaluating Misconfiguration  | Data Stored in Cloudneeti Data Store   |
+|---------------|--------------------------------------------------|----------------------------------------|
+| Ensure that AD Application keys are rotated before they expires   |*passwordCredentials*<br><br>Metadata information contained within the data entity will be key start-date, end-date, and expiry policies. No actual values are retrievable.| <ul><li>AD Application Name</li><li>AD Application ID</li><li>Expiry Date</li></ul> |       
+| Ensure that Service Principal Certificate are renewed before it expires | *keyCredentials*<br><br>Metadata information contained within the data involves start-date and end-date. Refer to documentation [here](https://docs.microsoft.com/en-us/powershell/module/azuread/new-azureadserviceprincipalkeycredential?view=azureadps-2.0){target=_blank}.| <ul><li>AD Application Name</li><li>AD Application ID</li><li>Expiry Date</li></ul> |
+| Ensure that there are no guest users | *userType*<br><br>Member or guest. | <ul><li>No data is stored in the Cloudneeti database. This policy only retrieves the count of total users and how many are guest users.</li></ul> |
+| Enforce the policy to set Password to ‘always' expire in Azure Active Directory for all Organization Users | *passwordPolicies*<br><br>Metadata involving the length of the password, password strength, and password restrictions. Refer to documentation [here](https://docs.microsoft.com/en-us/azure/active-directory/authentication/concept-sspr-policy#password-policies-that-only-apply-to-cloud-user-accounts){target=_blank}. | <ul><li>No data is stored in the Cloudneeti database. This policy only retrieves the count of all organization users and how many of them have set ‘Password always expired’ to ‘On’.</li></ul>  |
+| Ensure that Azure resources are accessible only through Organization Accoun | *userType*<br><br>Member or [guest](https://docs.microsoft.com/en-us/azure/active-directory/b2b/what-is-b2b){target=_blank}. | <ul><li>No data is stored in the Cloudneeti database. This policy only retrieves the count of external users in an organization who can access resources under the Azure Subscription.</ul></li> |
 
 ## Configuration
 
 [Configure Notifications](../../administratorGuide/configureNotifications/){target=_blank}
-
 
 
 ##	OFFBOARDING

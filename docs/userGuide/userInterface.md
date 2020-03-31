@@ -46,7 +46,7 @@ product.
 Dashboards
 ----------
 
-The dashboards menu item navigates to four different dashboards: Compliance, Security, Risk, and Assets. For more information please refer to [Dashboards](../dashboards/){target=_blank} section.
+The dashboards menu item navigates to three different dashboards: Compliance, Risk, and Assets. For more information please refer to [Dashboards](../dashboards/){target=_blank} section.
 	
 ![UI Navigation](.././images/userGuideUINavigation/Dashboard_Section.png#thumbnail)
 
