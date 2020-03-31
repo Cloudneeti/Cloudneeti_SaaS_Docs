@@ -91,7 +91,7 @@ Login to [Azure Portal](https://portal.azure.com/){target=_blank}  with Subscri
 ### STEP 3: Configure remediation policies
 Login to Cloudneeti portal with **License Admin** role 
 
-1. Navigate to **Configurations** (1) and **Security Policy Exclusion** (2)
+1. Navigate to **Configurations** (1) and **Security Policies** (2)
 
 2. Select **Account Level** (3)
 

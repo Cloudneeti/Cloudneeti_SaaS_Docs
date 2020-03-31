@@ -28,7 +28,7 @@ The left menu provides access to Dashboards (1), Views (2) and Configurations (3
 
 3.  The menu items **Cybersecurity Benchmarks, Laws and Regulations, and Industry Benchmarks** provide access to views of individual compliance frameworks.
 
-4.  The **Configurations** menu item provides access to Features and Quotas, Integrations, Cloud Accounts, Users and Roles, and Security Policy Exclusion.
+4.  The **Configurations** menu item provides access to Features and Quotas, Integrations, Cloud Accounts, Users and Roles, and Security Policies.
 
 5.  The **Audit logs** menu provides an overview of the most recent audit logs. Every user transaction such as adding or removing users, downloading reports, and configurations changes.
 
@@ -73,7 +73,7 @@ information please refer to [Compliance Benchmarks](../complianceBenchmarks/){ta
 Configurations
 --------------
 
-The configurations section (1) on the left menu provides access to access to Features and Quotas, Integrations, Cloud Accounts, Users and Roles, and Security Policy Exclusion. License Admin and Account Admin can review and update License level and Cloud Account level configurations. 
+The configurations section (1) on the left menu provides access to access to Features and Quotas, Integrations, Cloud Accounts, Users and Roles, and Security Policies. License Admin and Account Admin can review and update License level and Cloud Account level configurations. 
 	
 ![UI Navigation](.././images/userGuideUINavigation/Settings_Panel.png#thumbnail)
 

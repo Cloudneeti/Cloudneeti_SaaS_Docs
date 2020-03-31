@@ -1,4 +1,4 @@
-# Security policy exclusions
+# Security policies
 
 By default, all the security policies are enabled. Update Global Policies allows selection of security policies that should be excluded from data collection. Exclusion can be done at license and cloud account level
 
@@ -14,7 +14,7 @@ License Admins and Account Admins will have the rights to manage License users a
 
 1. Click **Configurations**
 
-2. Navigate to **Security Policy Exclusion** 
+2. Navigate to **Security Policies** 
 
 3. Select **License level**
 
@@ -39,7 +39,7 @@ Configure security policies allows users to enable and disable data collection a
 
 ### Configure Security Policies
 
-1.  Navigate to **Security Policy Exclusion** in **Configurations**
+1.  Navigate to **Security Policies** in **Configurations**
 
 2.  Select **Account Level** (1)
 
@@ -58,7 +58,7 @@ Configure security policies allows users to enable and disable data collection a
 
 ### Configure Security Policies Using CSV File
 
-1.  Navigate to **Security Policy Exclusion** in **Configurations**
+1.  Navigate to **Security Policies** in **Configurations**
 
 2.  Select **Account Level** (1)
 

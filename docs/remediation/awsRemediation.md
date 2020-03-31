@@ -252,7 +252,7 @@ Login to Cloudneeti portal with **License Admin** role
 
 1. Select desired **License** (1) and **Cloud Account** (2)
 
-2. Navigate to **Configurations** (3) and **Security Policy Exclusion** (4)
+2. Navigate to **Configurations** (3) and **Security Policies** (4)
 
 3.  Select **Account Level** (5)
 
