@@ -10,25 +10,31 @@ Security Policy Status is determined based on the number of compliant resources.
 
 ### Pass
 
-**Pass** status is assigned when configurations of all resources have "Pass" status.
+Pass status is assigned when configurations of all resources have "Pass" status.
 
 ### Warn
 
-**Warn** status is assigned to a security policy when configurations of some resources have "Pass" status and the other resources have "Fail" status.
+Warn status is assigned to a security policy when configurations of some resources have "Pass" status and the other resources have "Fail" status.
 
 ### Manual
 
-**Manual** status is assigned to a security policy when automation is not available. User can override the policy status to Pass/NA/Fail.
+Manual status is assigned to a security policy when automation is not available. User can override the policy status to Pass/NA/Fail.
 
 ### Fail
 
-**Fail** status is assigned to a security policy when all Resources have "Fail" status.
+Fail status is assigned to a security policy when all Resources have "Fail" status.
 
 ### No resources
 
-**No resources** status is assigned to a security policy when onboarded cloud accounts don’t have any relevant resources for this security policy.
+No resources status is assigned to a security policy when onboarded cloud accounts don’t have any relevant resources for this security policy.
+
+-   "Prerequisite" status is assigned to a security policy when onboarded cloud
+    accounts don’t have prerequisite permissions/configurations done to get the configuration of all resources.
+
 
 ### Excluded
+
+Excluded status is assigned to a security policy when a security policy is excluded globally or at cloud account level
 
 Configure security policies allows users to enable and disable data collection at a security policy level. Please [refer page](../../administratorGuide/securityPolicyExclusions/) to exclude security policies at global and account level. 
 
