@@ -66,7 +66,7 @@ not assigned.
 |--------------------------------------------------------------|------------------------------------------|
 | Read All Microsoft Graph permissions                         | 5                                        |
 | Reader role for Azure Subscription level scope.              | 0                                        |
-| Website contributor role for Azure Subscription level scope. | 10           |
+| Website contributor role for Azure Subscription level scope. | 11           |
 | Storage Account Contributor role for Azure Subscription level scope. | 1                                       |
 | Network Contributor role for Azure Subscription level scope. | 1           |
 | Key Vault access policies for specific managed Key Vaults    | 1                                        |
@@ -81,6 +81,7 @@ listed below.
 | Ensure that WEBSITE_LOAD_CERTIFICATES parameter is not set to '\*' for Mobile Apps   | Azure - Compute (PaaS and Serverless) |
 | Ensure that WEBSITE_LOAD_CERTIFICATES parameter is not set to '\*' for API Apps      | Azure - Compute (PaaS and Serverless) |
 | Ensure that WEBSITE_LOAD_CERTIFICATES parameter is not set to '\*' for Function Apps | Azure - Compute (PaaS and Serverless) |
+| Ensure that WEBSITE_LOAD_CERTIFICATES parameter is not set to '\*' for Web Apps | Azure - Compute (PaaS and Serverless) |
 | Ensure that 'App Service Authentication' is enabled for Function apps                | Azure - Compute (PaaS and Serverless) |
 | Ensure that 'App Service Authentication' is enabled for API apps                     | Azure - Compute (PaaS and Serverless) |
 | Ensure that 'App Service Authentication' is enabled for Mobile apps                  | Azure - Compute (PaaS and Serverless) |

@@ -37,7 +37,7 @@ An Azure docker agent is deployed to collect data for additional security polici
 |---|-------------------------------------------|----------------|-------------------------|-------------------|-------------------------|
 | 1  | [Register Cloudneeti application](.././azureSubscriptions/#step-1-register-cloudneeti-application-manually-or-using-azure-powershell-script){target=_blank}           | Microsoft Azure| Global AD Administrator | mandatory | 0            |
 | 2  | [Grant access to Azure subscription](.././azureSubscriptions/#step-2-grant-access-to-cloudneeti-registered-app)        | Microsoft Azure| Subscription Owner      | mandatory | 0            |
-| 3  | [Grant access to Azure subscription additional roles](../../onboardingGuide/grantAccessToAzureSubscriptionAdditionalRoles/){target=_blank} | Microsoft Azure| Subscription Owner           | optional  | 18            |
+| 3  | [Grant access to Azure subscription additional roles](../../onboardingGuide/grantAccessToAzureSubscriptionAdditionalRoles/){target=_blank} | Microsoft Azure| Subscription Owner           | optional  | 19            |
 | 4 | [Grant access to key vaults](../../onboardingGuide/grantAccessToKeyVaults/){target=_blank}                 | Microsoft Azure| Subscription Owner          | optional  | 1            |
 | 5 | [Advanced Security configuration](../../onboardingGuide/azureAdvancedSecurityConfiguration/){target=_blank}            | Microsoft Azure| Subscription Owner, Global AD Reader          | optional  | 18            |
 | 6 | [Enable Azure Security Center audit policies](../../onboardingGuide/enableASCAuditPolicies/){target=_blank}                     | Microsoft Azure| Subscription Owner           | optional  | 115            |
@@ -81,7 +81,7 @@ document.
 |------|-------------------------------------------------------------|-------------------|--------------------|----------|-----------|--------------|
 | Azure Active Directory | Directory Read All Microsoft Graph              | Microsoft Azure   | Global AD Admin    | STEP 1   | optional  | 5            |
 | Azure Subscription | Reader              | Microsoft Azure   | Subscription Owner | STEP 2   | mandatory | 0            |
-| Azure Subscription | Website Contributor | Microsoft Azure   | Subscription Owner | STEP 3   | optional  | 10           |
+| Azure Subscription | Website Contributor | Microsoft Azure   | Subscription Owner | STEP 3   | optional  | 11           |
 | Azure Subscription | Storage Account Contributor | Microsoft Azure   | Subscription Owner | STEP 3   | optional  | 1            |
 | Azure Subscription | Network Contributor Role  | Microsoft Azure   | Subscription Owner | STEP 3   | optional  | 1           |
 | Key Vault | Access Policy   | Microsoft Azure   | Subscription Owner | STEP 4   | optional  | 1            |
@@ -487,7 +487,7 @@ not assigned.
 |--------------------------------------------------------------|------------------------------------------|
 | Read All Microsoft Graph permissions                         | 5         |
 | Reader role for Azure Subscription level scope.              | 0         |
-| Website Contributor role for Azure Subscription level scope. | 10        |
+| Website Contributor role for Azure Subscription level scope. | 11        |
 | Storage Account Contributor role for Azure Subscription level scope. | 1        |
 | Key Vault access policies for specific managed Key Vaults    | 1         |
 

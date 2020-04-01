@@ -28,9 +28,9 @@ Fail status is assigned to a security policy when all Resources have "Fail" stat
 
 No resources status is assigned to a security policy when onboarded cloud accounts don’t have any relevant resources for this security policy.
 
--   "Prerequisite" status is assigned to a security policy when onboarded cloud
-    accounts don’t have prerequisite permissions/configurations done to get the configuration of all resources.
+### Prerequisite 
 
+Prerequisite status is assigned to a security policy when onboarded cloud accounts don’t have prerequisite permissions/configurations done to get the configuration of all resources.
 
 ### Excluded
 

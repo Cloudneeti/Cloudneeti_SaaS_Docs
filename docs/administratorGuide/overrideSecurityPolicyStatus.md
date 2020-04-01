@@ -4,6 +4,18 @@
 
 Cloudneeti allows users to override the security policy status. Overriding policy status indicates that you have completed resolution and if done without caution, it might carry an inherent security risk. New resolution status will be effective post next successful Cloud account scan.
 
+
+## Required roles
+
+Following roles are required to override the security policy status.
+- **License Admin**
+- **Account Admin**
+
+
+## Override status options
+
+One of the below status can be chosen to override the security policy status
+
 ### Pass – 3rd Party
 
 ### Pass – Manual override
@@ -11,6 +23,8 @@ Cloudneeti allows users to override the security policy status. Overriding polic
 ### Pass – Time bound exception
 
 ### Exclude – Not applicable
+
+## Override state flow
 
 
 ## Override security policy at cloud account level
