@@ -28,7 +28,7 @@ Create metrics and alarms for various events in the AWS Account
 
 2. On terminal navigate to folder location where you downloaded the file “remediate-monitoring-policies.yml” (e.g. “cd C:\Downloads”) 
 
-3. Configure AWS account and region where remediation framework is to be deployed
+3. Configure AWS account and region where the monitoring alarms and metrics have to be deployed.
 
         aws configure
 
