@@ -46,28 +46,49 @@ User can override security policy status once policy status avaiable i.e. at lea
 
 ## Override security policy at cloud account level
 
-1. Navigate to Secuirty policy page
+### STEP 1: Navigate to security policy details page
+
+1. Navigate to Secuirty policy page from Benchamrk Summary page
+
+    ![Navigate](.././images/overridePolicyStatus/benchmark.png#thumbnail)
+
+    ![Policy details page](.././images/overridePolicyStatus/policy_details_page.png#thumbnail)
 
 
-2. Click Override
+### STEP 2: Override security policy at cloud account level 
+1. Click Override
+
+    ![Override](.././images/overridePolicyStatus/override.png#thumbnail)
+
+2. Select new security policy status
+
+    ![Override](.././images/overridePolicyStatus/override_1.png#thumbnail)
+
+3. Add security policy new resolution notes and resolve
+
+    ![Override](.././images/overridePolicyStatus/override_2.png#thumbnail_1)
+
+4. Check success message
+
+    ![Override](.././images/overridePolicyStatus/rescan_1.png#thumbnail_1)
+
+### STEP 3: Scan cloud account or wait for scheduled scan to happen
+
+1. Initiate cloud account scan ot wait for next scheduled scan
+
+    ![Sacn](.././images/overridePolicyStatus/rescan_2.png#thumbnail_1)
+
+2. Check success message
+
+    ![Sacn](.././images/overridePolicyStatus/rescan_3.png#thumbnail_1)
+
+### STEP 4: Verify overidden security policy status
+
+1. Verify new resolution state for security policy
+
+    ![Sacn](.././images/overridePolicyStatus/Overridden_1.png#thumbnail_1)
 
 
-
-3. Select new security policy status
-
-
-4. Add security policy new resolution notes
-
-
-5. Save
-
-6. Initiate cloud account scan ot wait for next scheduled scan
-
-7. Verify new resolution state for security policy
-
-
-
-## Verify overriden status
 
 ### Dashboards 
 
