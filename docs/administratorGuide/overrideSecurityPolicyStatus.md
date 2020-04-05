@@ -4,16 +4,13 @@
 
 Cloudneeti allows users to override security policy status. Overriding policy status indicates that you have completed resolution and if done without caution, it might carry an inherent security risk. New resolution status will be effective at a cloud account level across all benchmarks post next successful Cloud account scan.
 
-
 ![Override overview](.././images/overridePolicyStatus/overview.png#thumbnail_1)
-
 
 ## Required roles
 
 Following roles are required to override the security policy status.
 - **License Admin**
 - **Account Admin**
-
 
 ## Override status options
 
@@ -34,7 +31,9 @@ Security policy can be reviewed using audit procedure and if resources' configur
 
 ### Exclude – Not applicable
 
-Note: For bulk exclusion use [Security policies under configurations](../../securityPolicyExclusions/) to enable and disable data collection at a security policy level. Please refer page to exclude security policies at global and account level.
+**Exclude – Not applicable** disables data collection at a security policy level
+
+Note: For bulk exclusion use [Security policies under configurations](../../securityPolicyExclusions/) to exclude security policies at global and account level.
 
 
 ## Override state flow
@@ -55,6 +54,7 @@ User can override security policy status once policy status avaiable i.e. at lea
 
 
 ### STEP 2: Override security policy at cloud account level 
+
 1. Click Override
 
     ![Override](.././images/overridePolicyStatus/override.png#thumbnail)
@@ -70,6 +70,7 @@ User can override security policy status once policy status avaiable i.e. at lea
 4. Check success message
 
     ![Override](.././images/overridePolicyStatus/rescan_1.png#thumbnail_1)
+
 
 ### STEP 3: Scan cloud account or wait for scheduled scan to happen
 
@@ -87,8 +88,6 @@ User can override security policy status once policy status avaiable i.e. at lea
 
     ![Scan](.././images/overridePolicyStatus/Overridden_1.png#thumbnail_1)
 
-
-
 ### Dashboards 
 
  <!-- brief explanation of the Risk, policy compliance and trend charts. Just 1 image and highlight the override status on the dashboard -->
@@ -104,7 +103,7 @@ Increase in the number of passed policies and compliance percentage if polciies 
 
 Descrese in the number of policies if polciies overriden resolved as passed.
 
-![UI post override](.././images/overridePolicyStatus/Overridden_Asset.png#thumbnail_1)
+![UI post override](.././images/overridePolicyStatus/Overridden_Risk.png#thumbnail_1)
 
 #### Asset Security
 
