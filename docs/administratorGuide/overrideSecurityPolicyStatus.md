@@ -2,7 +2,7 @@
 
 ## Overview
 
-Cloudneeti allows users to override the security policy status. Overriding policy status indicates that you have completed resolution and if done without caution, it might carry an inherent security risk. New resolution status will be effective at clodu account level across all bechmarks post next successful Cloud account scan.
+Cloudneeti allows users to override security policy status. Overriding policy status indicates that you have completed resolution and if done without caution, it might carry an inherent security risk. New resolution status will be effective at a cloud account level across all benchmarks post next successful Cloud account scan.
 
 
 ![Override overview](.././images/overridePolicyStatus/overview.png#thumbnail_1)
@@ -20,20 +20,19 @@ Following roles are required to override the security policy status.
 One of the below status can be chosen to override the security policy status
 
 ### Pass – 3rd Party
-User can override a security policy to **Pass – 3rd Party** where there are compensating controls available. 
+Override a security policy to resolve status to **Pass – 3rd Party** where there are compensating controls available. 
 
 
 ### Pass – Manual override
 
-Security policy can be reviewed by customer using audit procedure and if resources' configuration are compliant, user can mark override policy status "Manual" and mark it **Pass – Manual override**. User is advised to periodically review resource configurations compliance state. 
+Security policy can be reviewed using audit procedure and if resources' configuration are compliant, user can mark override policy status "Manual" and mark it **Pass – Manual override**. User is advised to periodically review resource configurations compliance state. 
 
 
 ### Pass – Time bound exception
 
-**Pass – Time bound exception** can be used when there is a need to exceptionaly pass a policy with a time bound. Policy status will be overridden till given date. Once the time bound is over, next successful scan will show policy status compliance as per scan results.
+**Pass – Time bound exception** can be used when there is a need to exceptionaly pass a policy with a time bound date. Policy status will be overridden till given date. Once the time bound period is over, next successful scan will show policy status compliance as per scan results.
 
 ### Exclude – Not applicable
-
 
 Note: For bulk exclusion use [Security policies under configurations](../../securityPolicyExclusions/) to enable and disable data collection at a security policy level. Please refer page to exclude security policies at global and account level.
 
@@ -76,59 +75,101 @@ User can override security policy status once policy status avaiable i.e. at lea
 
 1. Initiate cloud account scan ot wait for next scheduled scan
 
-    ![Sacn](.././images/overridePolicyStatus/rescan_2.png#thumbnail_1)
+    ![Scan](.././images/overridePolicyStatus/rescan_2.png#thumbnail_1)
 
 2. Check success message
 
-    ![Sacn](.././images/overridePolicyStatus/rescan_3.png#thumbnail_1)
+    ![Scan](.././images/overridePolicyStatus/rescan_3.png#thumbnail_1)
 
 ### STEP 4: Verify overidden security policy status
 
 1. Verify new resolution state for security policy
 
-    ![Sacn](.././images/overridePolicyStatus/Overridden_1.png#thumbnail_1)
+    ![Scan](.././images/overridePolicyStatus/Overridden_1.png#thumbnail_1)
 
 
 
 ### Dashboards 
 
  <!-- brief explanation of the Risk, policy compliance and trend charts. Just 1 image and highlight the override status on the dashboard -->
+ New resolution status will be effective from the next data collection cycle in all dashboards.
 
 #### Compliance
 
+Increase in the number of passed policies and compliance percentage if polciies overriden resolved as passed.
+
+![UI post override](.././images/overridePolicyStatus/Overridden_Compliance.png#thumbnail_1)
+
 #### Risk
 
-#### Asset
+Descrese in the number of policies if polciies overriden resolved as passed.
+
+![UI post override](.././images/overridePolicyStatus/Overridden_Asset.png#thumbnail_1)
+
+#### Asset Security
+
+Related policy status is updated to Pass if polciies overriden resolved as passed.
+
+![UI post override](.././images/overridePolicyStatus/Overridden_Asset.png#thumbnail_1)
 
 
 ### UI (summary and details) 
 
-#### Summary
+#### Summary 
 
-#### Details
+​New resolution status will be effective from the next data collection cycle in all benchmarks. Please find below benchmark summary page.
+
+![UI post override](.././images/overridePolicyStatus/BenchmarkSummary.png#thumbnail_1)
+
+
+1. **Risk Matrix (based on ISO 27005)** will have descrese in number of polciies overriden resolved as passed.
+
+    ![UI post override](.././images/overridePolicyStatus/risk.png#thumbnail_1)
+
+2. **Compliance posture** will increase the passed policies and compliance percentage if polciies overriden resolved as passed.
+
+    ![UI post override](.././images/overridePolicyStatus/policyCompliance.png#thumbnail_1)
+
+3. **Policy Compliance Trend** will show updates polciies overriden resolved as passed.
+
+    ![UI post override](.././images/overridePolicyStatus/trend.png#thumbnail_1)
+
+#### Policy Details
+
+New resolution status will be effective from the next data collection cycle on Policy details page. Details like Policy status with details (1), Resolution Note (2), Override Initiated by (3) will appear.
+
+![UI post override](.././images/overridePolicyStatus/Overridden_1.png#thumbnail_1)
 
 
 ### Reports
 
-#### PDF
-
-#### CSV
-
+New resolution status will be effective in reports from the next data collection cycle.
 
 
 ### Audit Logs
 
-#### Override
-
-#### Update override
-
-#### Undo override
-
+![Audit Logs](.././images/overridePolicyStatus/AuditLog.png#thumbnail_1)
 
 
 ## Undo override security policy 
 
+1. Navigate to policy details page
 
+    ![Undo](.././images/overridePolicyStatus/undo_1.png#thumbnail_1)
+
+2. Click on **Undo Override**
+
+    ![Undo](.././images/overridePolicyStatus/undo_2.png#thumbnail_1)
+
+3. Confirm by clicking **Yes Please**
+
+    ![Undo](.././images/overridePolicyStatus/undo_3.png#thumbnail_1)
+
+4. A success message will appear
+
+    ![Undo](.././images/overridePolicyStatus/undo_4.png#thumbnail_1)
+
+5. Undone resolution status will be effective from the next data collection cycle.
 
 
 

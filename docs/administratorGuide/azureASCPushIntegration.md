@@ -2,16 +2,16 @@
 
 Integration enables Cloudneeti application to push custom recommendations with assessment data of Azure Cloud Account(s) to Microsoft Azure Security Center.
 
-**Custom Recommedation** includes policies with description and remediation steps.
+**Custom Recommendation ** includes policies with description and remediation steps.
 
-**Assessment data** includes listing policy related resources with their compliance state with respect to policy defination.
+**Assessment data** includes listing policy related resources with their compliance state with respect to policy definition.
 
 The following steps are required to configure integration of Cloudneeti application with Microsoft Azure Security Center for Azure Subscription(s) added as Cloud account(s) in Cloudneeti. 
 
 ### Required Roles
 
-One or more people with the following roles are required to complete Microsoft
-Azure onboarding process.
+One or more people with the following roles are required to complete the Microsoft
+Azure Security Center integration process.
 
 | **Pre-requisite Role**  | **Portal to use**      |
 |-------------------------|------------------------|
@@ -29,7 +29,7 @@ Cloudneeti application will be granted with Azure Subscription Contributor.
 
 ## Pre-requisites
 
-Grant Azure Subscription contributor role to Cloudneeti application created while onboarding Micorsoft Azure cloud account.
+Grant Azure Subscription contributor role to Cloudneeti application created while onboarding Micrsoft Azure cloud account.
 
 
 Login to [Azure Portal](https://portal.azure.com/){target=_blank} with Microsoft Azure **Subscription Owner** role.
@@ -44,7 +44,7 @@ Login to [Azure Portal](https://portal.azure.com/){target=_blank} with Microsoft
 
 4.  Select Cloudneeti application created while onboarding Azure Subscription in Cloudneeti.
 
-4.	Select **Save** to complete the role assignment
+5.	Select **Save** to complete the role assignment
 
     ![Assign role](.././images/ascPush/role_assign_1.png#thumbnail)
 
@@ -68,14 +68,14 @@ The following steps are done by Cloudneeti **License Admin** role.
 
     ![Integrations](.././images/ascPush/integrations_2.png#thumbnail)
 
-5. Configuration will be successfuly done if prerequisites are met.
+5.	The configuration will be successfully done if prerequisites are met.
 
     ![Integrations](.././images/ascPush/integrations_3.png#thumbnail)
 
 
 ## STEP 2: Verify assessment data pushed at ASC
 
-Cloudneeti on successful integration will create recommendation and assesment.
+Cloudneeti on successful integration will create recommendation and assessments.
 
 ### Recommendations 
 
