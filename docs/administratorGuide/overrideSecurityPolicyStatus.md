@@ -22,7 +22,7 @@ Override a security policy to resolve status to **Pass – 3rd Party** where the
 
 ### Pass – Manual override
 
-Security policy can be reviewed using audit procedure and if resources' configuration are compliant, user can mark override policy status "Manual" and mark it **Pass – Manual override**. User is advised to periodically review resource configurations compliance state. 
+Security policy can be reviewed using audit procedure and if resources' configurations are compliant, user can mark override policy status "Manual" and mark it **Pass – Manual override**. User is advised to periodically review resource configurations compliance state. 
 
 
 ### Pass – Time bound exception
@@ -38,22 +38,22 @@ Note: For bulk exclusion use [Security policies under configurations](../../secu
 
 ## Override state flow
 
-User can override security policy status once policy status avaiable i.e. at lease first scan is successful upon cloud account onboarding. Policy should not be exluded at account or license level.
+User can override security policy status once policy status available  i.e. at lease one scan is successful upon cloud account onboarding. Policy should not be excluded at account or license level.
 
 ![Override overview](.././images/overridePolicyStatus/OverrideFlow.png#thumbnail_1)
 
-## Override security policy at cloud account level
+## Override security policy at a cloud account level
 
 ### STEP 1: Navigate to security policy details page
 
-1. Navigate to Secuirty policy page from Benchamrk Summary page
+1. Navigate to Secuirty policy page from Benchmark Summary page
 
     ![Navigate](.././images/overridePolicyStatus/benchmark.png#thumbnail)
 
     ![Policy details page](.././images/overridePolicyStatus/policy_details_page.png#thumbnail)
 
 
-### STEP 2: Override security policy at cloud account level 
+### STEP 2: Override security policy at a cloud account level 
 
 1. Click Override
 
@@ -72,9 +72,9 @@ User can override security policy status once policy status avaiable i.e. at lea
     ![Override](.././images/overridePolicyStatus/rescan_1.png#thumbnail_1)
 
 
-### STEP 3: Scan cloud account or wait for scheduled scan to happen
+### STEP 3: Scan cloud account or wait for a scheduled scan to happen
 
-1. Initiate cloud account scan ot wait for next scheduled scan
+1. Initiate cloud account scan or wait for next scheduled scan
 
     ![Scan](.././images/overridePolicyStatus/rescan_2.png#thumbnail_1)
 
@@ -82,7 +82,7 @@ User can override security policy status once policy status avaiable i.e. at lea
 
     ![Scan](.././images/overridePolicyStatus/rescan_3.png#thumbnail_1)
 
-### STEP 4: Verify overidden security policy status
+### STEP 4: Verify overridden security policy status
 
 1. Verify new resolution state for security policy
 
@@ -95,19 +95,19 @@ User can override security policy status once policy status avaiable i.e. at lea
 
 #### Compliance
 
-Increase in the number of passed policies and compliance percentage if polciies overriden resolved as passed.
+Increase in the number of passed policies and compliance percentage if polcies overridden resolved as passed.
 
 ![UI post override](.././images/overridePolicyStatus/Overridden_Compliance.png#thumbnail_1)
 
 #### Risk
 
-Descrese in the number of policies if polciies overriden resolved as passed.
+Decrease in the number of policies if policies overridden resolved as passed.
 
 ![UI post override](.././images/overridePolicyStatus/Overridden_Risk.png#thumbnail_1)
 
 #### Asset Security
 
-Related policy status is updated to Pass if polciies overriden resolved as passed.
+Related policy status is updated to Pass if policies overridden resolved as passed.
 
 ![UI post override](.././images/overridePolicyStatus/Overridden_Asset.png#thumbnail_1)
 
@@ -121,15 +121,15 @@ Related policy status is updated to Pass if polciies overriden resolved as passe
 ![UI post override](.././images/overridePolicyStatus/BenchmarkSummary.png#thumbnail_1)
 
 
-1. **Risk Matrix (based on ISO 27005)** will have descrese in number of polciies overriden resolved as passed.
+1. **Risk Matrix (based on ISO 27005)** will have decrease  in number of policies overridden resolved as passed.
 
     ![UI post override](.././images/overridePolicyStatus/risk.png#thumbnail_1)
 
-2. **Compliance posture** will increase the passed policies and compliance percentage if polciies overriden resolved as passed.
+2. **Compliance posture** will increase the passed policies and compliance percentage if policies overridden resolved as passed.
 
     ![UI post override](.././images/overridePolicyStatus/policyCompliance.png#thumbnail_1)
 
-3. **Policy Compliance Trend** will show updates polciies overriden resolved as passed.
+3. **Policy Compliance Trend** will show updates policies overridden resolved as passed.
 
     ![UI post override](.././images/overridePolicyStatus/trend.png#thumbnail_1)
 
