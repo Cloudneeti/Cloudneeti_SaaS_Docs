@@ -35,6 +35,7 @@ nav:
 - Introduction: 
   - Getting Started: gettingStarted/introduction.md
   - Product Features: gettingStarted/productFeatures.md
+  - How it works: gettingStarted/howItWorks.md
   - Cloud Security Best Practices : gettingStarted/cloudSecurityBestPractices.md
   - Deployment Architecture: gettingStarted/deploymentArchitecture.md
   - Customer Data Security: gettingStarted/customerDataSecurity.md
