@@ -51,7 +51,7 @@ nav:
   - Amazon Web Services: 
     - Onboarding steps: onboardingGuide/amazonWebServiceAccounts.md
     - OS baseline (optional): onboardingGuide/awsVMBaselineConfiguration.md
-  - Micorsoft Azure:
+  - Microsoft Azure:
     - Onboarding steps: onboardingGuide/azureSubscriptions.md
     - Additional roles: onboardingGuide/grantAccessToAzureSubscriptionAdditionalRoles.md
     - Key vaults: onboardingGuide/grantAccessToKeyVaults.md
@@ -81,7 +81,7 @@ nav:
 - Administrator Guide:
   - Features and Quotas: administratorGuide/featuresAndQuotas.md
   - Integrations: administratorGuide/manageLicenses.md
-  - ASC Integration: administratorGuide/azureASCPushIntegration.md
+  - ASC Push Integration: administratorGuide/azureASCPushIntegration.md
   - Cloud Accounts: administratorGuide/manageAccounts.md
   - Users & Roles: administratorGuide/manageUsers.md
   - Private Benchmark: administratorGuide/privateBenchmark.md
