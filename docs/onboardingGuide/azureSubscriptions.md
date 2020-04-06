@@ -42,7 +42,7 @@ An Azure docker agent is deployed to collect data for additional security polici
 | 5 | [Advanced Security configuration](../../onboardingGuide/azureAdvancedSecurityConfiguration/){target=_blank}            | Microsoft Azure| Subscription Owner, Global AD Reader          | optional  | 18            |
 | 6 | [Enable Azure Security Center audit policies](../../onboardingGuide/enableASCAuditPolicies/){target=_blank}                     | Microsoft Azure| Subscription Owner           | optional  | 115            |
 | 7 | [Configure OS baseline and vulnerability scanning](../../onboardingGuide/azureVulnerability/){target=_blank}                   | Microsoft Azure     | Subscription Owner           | optional | 513            |
-| 8 | [Configure Cloudneeti agent on AKS](../../onboardingGuide/configureCloudneetiAgentInKubernetesCluster/){target=_blank}                   | Microsoft Azure     | Subscription Owner           | optional | 80            |
+| 8 | [Configure Cloudneeti agent on AKS](../../onboardingGuide/configureCloudneetiAgentInKubernetesCluster/){target=_blank}                   | Microsoft Azure     | Subscription Owner           | optional | 73            |
 | 9 | [Add Azure subscription](../../onboardingGuide/azureSubscriptions/#step-9-add-azure-subscription){target=_blank}                    | Cloudneeti     | License Admin           | mandatory | 0            |
 
 ### Required Roles
@@ -336,8 +336,7 @@ Please follow [link](../../onboardingGuide/azureVulnerability/){target=_blank} f
 ## STEP 8: Configure Cloudneeti agent on AKS
 **This step is optional.** 
 
-Deploying Cloudneeti agent on Azure Kubernetes Service enables compliance monitoring of Kubernetes cluster.
-An Azure docker agent is deployed to collect data for additional security policies.
+Cloudneeti includes and extends Azure Security center recommendations for AKS by deploying a Cloudneeti agent to Azure Kubernetes Cluster. A docker container agent is deployed to collect data for additional security policies. Cloudneeti then provides out-of-box mappings for all 13+ compliance frameworks included in the product. 
 
 Please follow [link](../../onboardingGuide/configureCloudneetiAgentInKubernetesCluster/){target=_blank} for steps.
 
