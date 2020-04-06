@@ -40,7 +40,6 @@ nav:
   - Deployment Architecture: gettingStarted/deploymentArchitecture.md
   - Customer Data Security: gettingStarted/customerDataSecurity.md
   - Glossary: gettingStarted/glossary.md
-  - Security Policies: gettingStarted/securityPolicies.md
 - Try and Buy:
   - Free Trial: tryAndBuy/freeTrial.md
   - Buy on Azure Marketplace: tryAndBuy/subscribeOnAzureMarketplace.md
