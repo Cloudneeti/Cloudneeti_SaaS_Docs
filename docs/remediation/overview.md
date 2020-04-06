@@ -19,6 +19,8 @@ remediation for resources in 3 different ways to remediate the non-compliant re
 
   [Azure](../azureQuickWins/){target=_blank}
 
+  [AWS](../awsQuickWins/){target=_blank}
+
 ## Manually Triggered Remediation 
 
  Admin manually triggers the remediation in Cloudneeti portal which internally makes use of remediation framework. This approach is used for remediating the existing non-compliant resources. 
