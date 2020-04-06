@@ -1,4 +1,4 @@
-# Azure Security Center Integration (Preview)
+# Azure Security Center Push Integration (Preview)
 
 The integration between Azure Security Center and Cloudneeti provides a seamless experience to customers in protecting their Azure environments against cyber-threats and mitigating compliance risks. Cloudneeti application will push custom recommendations with assessment data of Azure Cloud Account(s) to Microsoft Azure Security Center. 
 
