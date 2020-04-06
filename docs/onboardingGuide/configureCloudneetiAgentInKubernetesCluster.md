@@ -88,7 +88,7 @@ Please use below steps to deploy Cloudneeti Agent on AKS, AKS engine.
                     schedule: "0 12 * * *"
                 
 
-Note: The default value is set to scan the cluster every day at 12PM. It is recommended set the execution time of Cloudneeti agent once a day.
+Note: The default value is set to scan the cluster every day at 12PM. It is recommended to set the execution time of Cloudneeti agent once a day.
 
 #### 2.2 Access Kubernetes cluster with root account from local machine
 
@@ -234,7 +234,7 @@ Login to Cloudneeti portal with **License Admin** role
 
     ![Associate Kubernetes](.././images/kubernetes/CN_K8_Verify_1.png#thumbnail)
 
-2. On successful agent configuration , policy results will appear on Cloudneeti portal
+2. On successful agent configuration, policy results will appear on Cloudneeti portal
 
     ![Associate Kubernetes](.././images/kubernetes/CN_K8_Verify_2.png#thumbnail)
 
