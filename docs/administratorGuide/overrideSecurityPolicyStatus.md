@@ -168,7 +168,7 @@ New resolution status will be effective in reports from the next data collection
 
     ![Undo](.././images/overridePolicyStatus/undo_4.png#thumbnail_1)
 
-5. Undone resolution status will be effective from the next data collection cycle.
+5. Undone resolution makes policy scanned compliance status visible from the next data collection cycle.
 
 
 
