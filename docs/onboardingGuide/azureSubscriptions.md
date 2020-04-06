@@ -26,7 +26,7 @@ The following steps are required to onboard Microsoft Azure to the Cloudneeti ap
 
 6. [**Enable Azure Security Center audit policies (Optional)**](../../onboardingGuide/azureSubscriptions/#step-3-enable-azure-security-center-audit-policies){target=_blank} includes updating ASC configurations to make the Azure Cloud account compliant for listed policies using scripts.
 
-7. [**Configure OS baseline and vulnerability scanning (Optional)**](../../onboardingGuide/azureVulnerability/){target=_blank} inlcudes connecting VMs to OMS workspace. Also deploy partner vulnerability scanning in Azure Security Center and installing the solution on multiple VMs allows to provide visibility into missing updates, misconfigured OS security settings, endpoint protection status, and health and threat protection.
+7. [**Configure OS baseline and Vulnerability Assessment Solution (Optional)**](../../onboardingGuide/azureVulnerability/){target=_blank} inlcudes connecting VMs to OMS workspace. Also deploy partner Vulnerability Assessment Solution in Azure Security Center and installing the solution on multiple VMs allows to provide visibility into missing updates, misconfigured OS security settings, endpoint protection status, and health and threat protection.
 
 8. [**Configure Cloudneeti agent on AKS (Optional)**](../../onboardingGuide/configureCloudneetiAgentInKubernetesCluster/){target=_blank} inlcudes Deploying Cloudneeti agent on Azure Kubernetes Service enables compliance monitoring of Kubernetes cluster.
 An Azure docker agent is deployed to collect data for additional security policies.
@@ -41,7 +41,7 @@ An Azure docker agent is deployed to collect data for additional security polici
 | 4 | [Grant access to key vaults](../../onboardingGuide/grantAccessToKeyVaults/){target=_blank}                 | Microsoft Azure| Subscription Owner          | optional  | 1            |
 | 5 | [Advanced Security configuration](../../onboardingGuide/azureAdvancedSecurityConfiguration/){target=_blank}            | Microsoft Azure| Subscription Owner, Global AD Reader          | optional  | 18            |
 | 6 | [Enable Azure Security Center audit policies](../../onboardingGuide/enableASCAuditPolicies/){target=_blank}                     | Microsoft Azure| Subscription Owner           | optional  | 115            |
-| 7 | [Configure OS baseline and vulnerability scanning](../../onboardingGuide/azureVulnerability/){target=_blank}                   | Microsoft Azure     | Subscription Owner           | optional | 513            |
+| 7 | [Configure OS baseline and Vulnerability Assessment Solution](../../onboardingGuide/azureVulnerability/){target=_blank}                   | Microsoft Azure     | Subscription Owner           | optional | 513            |
 | 8 | [Configure Cloudneeti agent on AKS](../../onboardingGuide/configureCloudneetiAgentInKubernetesCluster/){target=_blank}                   | Microsoft Azure     | Subscription Owner           | optional | 73            |
 | 9 | [Add Azure subscription](../../onboardingGuide/azureSubscriptions/#step-9-add-azure-subscription){target=_blank}                    | Cloudneeti     | License Admin           | mandatory | 0            |
 
@@ -324,11 +324,11 @@ Enable policies from **Azure Security center** using script. This scripts will u
 
 Please follow [link](../../onboardingGuide/enableASCAuditPolicies/){target=_blank} for steps.
 
-## STEP 7: Configure OS baseline and vulnerability scanning
+## STEP 7: Configure OS baseline and Vulnerability Assessment Solution
 **This step is optional.** 
 Enabling Auto Provisioning of Azure Security Center monitoring agent and connect VMs to OMS workspace allows various OS baselines as defined by CIS automatically light up on the Cloudneeti dashboards.
 
-Deploy partner vulnerability scanning in Azure Security Center and installing the solution on multiple VMs allows to provide visibility into protection status and threat protection.
+Deploy partner Vulnerability Assessment Solution in Azure Security Center and installing the solution on multiple VMs allows to provide visibility into protection status and threat protection.
 
 Please follow [link](../../onboardingGuide/azureVulnerability/){target=_blank} for steps.
 
