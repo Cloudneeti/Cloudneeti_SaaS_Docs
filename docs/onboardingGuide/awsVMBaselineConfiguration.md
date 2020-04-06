@@ -309,3 +309,17 @@ The following Cloudneeti OS baseline policies get enabled due to AWS inspector i
     | RHEL 7 -  System Maintenance                       | Ensure root is the only UID 0 account                       |
     | RHEL 7 -  System Maintenance                       | Ensure no users have .forward files                         |
     | RHEL 7 -  System Maintenance                       | Ensure no users have .netrc files                           |
+    | RHEL 7 -  Initial Setup | Ensure local login warning banner is configured properly |
+    | RHEL 7 -  Initial Setup | Ensure remote login warning banner is configured properly |
+    | RHEL 7 -  Initial Setup | Ensure permissions on /etc/motd are configured |
+    | RHEL 7 -  Initial Setup | Ensure permissions on /etc/issue.net are configured |
+    | RHEL 7 -  Network Configuration | Ensure IPv6 router advertisements are not accepted |
+    | RHEL 7 -  Network Configuration | Ensure IPv6 redirects are not accepted |
+    | RHEL 7 -  Network Configuration | Ensure IPv6 is disabled |
+    | RHEL 7 -  Network Configuration | Ensure permissions on /etc/hosts.deny are 644 |
+    | RHEL 7 -  Network Configuration | Ensure DCCP is disabled |
+    | RHEL 7 -  Network Configuration | Ensure SCTP is disabled |
+    | RHEL 7 -  Network Configuration | Ensure RDS is disabled |
+    | RHEL 7 -  Network Configuration | Ensure TIPC is disabled |
+    | RHEL 7 -  Access, Authentication and Authorization | Ensure password expiration is 90 days or less |
+    | RHEL 7 -  Initial Setup | Ensure XD/NX support is enabled |
