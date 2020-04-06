@@ -53,12 +53,9 @@ Login to [Azure Portal](https://portal.azure.com/){target=_blank} with Microsoft
 
 The following steps are done by Cloudneeti **License Admin** role.
 
-1. Navigate to **Integrations** in **Configurations**
+1. Navigate to **Integrations** (2) in **Configurations** (1)
 
-    ![Integrations](.././images/ascPush/integrations_0.png#thumbnail)
-
-
-2. Click **edit** to configure **Azure Security Center Integration**
+2. Click **edit** (3) to configure **Azure Security Center Integration**
 
     ![Integrations](.././images/ascPush/integrations_1.png#thumbnail)
 
@@ -79,7 +76,7 @@ Cloudneeti on successful integration will create recommendations and assessments
 
 ### Recommendations 
 
-1. custom policies 
+1. Custom policies 
 
     ![assessment data ](.././images/ascPush/assessment_data_1.png#thumbnail)
 
