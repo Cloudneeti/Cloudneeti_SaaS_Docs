@@ -110,9 +110,9 @@ resources:
     accounts don’t have any relevant resources for this security policy.
 
 -   "Prerequisite" status is assigned to a security policy when onboarded cloud
-    accounts don’t have prerequisite permissions/configurations done to get the configuration of all resources.
+    accounts don’t have prerequisite permissions/configurations done to read the policy related resource configuration.
 
--   "Excluded" status is assigned to a security policy when a security policy is excluded globally or at cloud account level.
+-   "Excluded" status is assigned to a security policy when a security policy is excluded globally or at the cloud account level.
 
 
 **Compliance Percentage:** Compliance Percentage is an aggregated percentage of

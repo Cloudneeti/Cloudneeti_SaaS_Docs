@@ -27,13 +27,13 @@ Security policy can be reviewed using audit procedure and if resources' configur
 
 ### Pass – Time bound exception
 
-If there is a need to exceptionally pass a policy, **Pass – Time bound exception** can be used with a time bound date. Policy status will be overridden till the given date. Once the time bound period is over, next successful scan will show policy status compliance as per scan results.
+If there is a need to exceptionally pass a policy, **Pass – Time bound exception** can be used with a time bound date. Policy status will be overridden until the given date. Once the time bound period is over, next successful scan will show policy status compliance as per scan results.
 
 ### Exclude – Not applicable
 
 Disables data collection at a security policy level, if used **Exclude – Not applicable** as overridden resolution status.
 
-Note: For bulk exclusion use [Security policies under configurations](../../securityPolicyExclusions/) to exclude security policies at global and account level.
+Note: For bulk exclusion use [Security policies under configurations](../../securityPolicyExclusions/) to exclude security policies at the global and account level.
 
 
 <!-- ## Override state flow
@@ -46,7 +46,7 @@ User can override security policy status once policy status available  i.e. at l
 
 ### STEP 1: Navigate to security policy details page
 
-1. Navigate to Secuirty policy page from Benchmark Summary page
+1. Navigate to Security policy page from Benchmark Summary page
 
     ![Navigate](.././images/overridePolicyStatus/benchmark.png#thumbnail)
 
@@ -121,7 +121,7 @@ Related policy status is updated to Pass if policies overridden resolved as pass
 ![UI post override](.././images/overridePolicyStatus/BenchmarkSummary.png#thumbnail_1)
 
 
-1. **Risk Matrix (based on ISO 27005)** will have decrease  in number of policies overridden resolved as passed.
+1. **Risk Matrix (based on ISO 27005)** will have a decrease in the number of policies overridden resolved as passed.
 
     ![UI post override](.././images/overridePolicyStatus/risk.png#thumbnail_1)
 
@@ -135,7 +135,7 @@ Related policy status is updated to Pass if policies overridden resolved as pass
 
 #### Policy Details
 
-New resolution status will be effective from the next data collection cycle on Policy details page. Details like Policy status with details (1), Resolution Note (2), Override Initiated by (3) will appear.
+New resolution status will be effective from the next data collection cycle on the Policy details page. Details like Policy status with details (1), Resolution Note (2), Override Initiated by (3) will appear.
 
 ![UI post override](.././images/overridePolicyStatus/Overridden_1.png#thumbnail_1)
 
@@ -168,7 +168,7 @@ New resolution status will be effective in reports from the next data collection
 
     ![Undo](.././images/overridePolicyStatus/undo_4.png#thumbnail_1)
 
-5. Undone resolution makes policy scanned compliance status visible from the next data collection cycle.
+5. The undone resolution makes policy scanned compliance status visible instead of overridden status from the next data collection cycle.
 
 
 
