@@ -5,7 +5,7 @@ STEP 8: Configuring Cloudneeti agent in Azure Kubernetes Service (AKS)
 
 Cloudneeti includes and extends Azure Security center recommendations for AKS by deploying a Cloudneeti agent to Azure Kubernetes Cluster. A docker container agent is deployed to collect data for additional security policies. Cloudneeti then provides out-of-box mappings for all 13+ compliance frameworks included in the product. 
 
-Deploying Cloudneeti agent on Azure Kubernetes Service enables compliance monitoring of Kubernetes cluster. An Azure docker agent is deployed to collect data for security policies [listed here](../../onboardingGuide/configureCloudneetiAgentInKubernetesCluster/#kubernetes-policy-list).
+Deploying Cloudneeti agent on Azure Kubernetes Service enables compliance monitoring of Kubernetes cluster. An Azure docker agent is deployed to collect data for security policies [listed here](../../onboardingGuide/configureCloudneetiAgentInAKS/#kubernetes-policy-list).
 
 
 Prerequisites
@@ -65,7 +65,7 @@ Please use below steps to deploy Cloudneeti Agent on AKS, AKS engine.
                 metadata:
                     name: <Namespace>
     
-- **cloudneeti-agent-config.yaml** data section with values **cloudneeti-agent-config** downloaded in [STEP 1.](../../onboardingGuide/configureCloudneetiAgentInKubernetesCluster/#step-1-associate-kubernetes-cluster-with-cloud-account-in-cloudneeti)
+- **cloudneeti-agent-config.yaml** data section with values **cloudneeti-agent-config** downloaded in [STEP 1.](../../onboardingGuide/configureCloudneetiAgentInAKS/#step-1-associate-kubernetes-cluster-with-cloud-account-in-cloudneeti)
 
                 
                 data:
@@ -76,7 +76,7 @@ Please use below steps to deploy Cloudneeti Agent on AKS, AKS engine.
 
 -  **cloudneeti-agent-secret.yaml** set the below values.
     -  **namespace** as given in cloudneeti-namespace.yaml.
-    -  **cloudneetiAPIKey** Please follow [steps](../../onboardingGuide/configureCloudneetiAgentInKubernetesCluster/#set-api-key-in-base64) to generate the key and set the key in base64 format.
+    -  **cloudneetiAPIKey** Please follow [steps](../../onboardingGuide/configureCloudneetiAgentInAKS/#set-api-key-in-base64) to generate the key and set the key in base64 format.
 
                 metadata:
                     name: cloudneeti-agent
@@ -132,7 +132,7 @@ Note: The default value is set to scan the cluster every day at 12PM. It is reco
                 metadata:
                     name: <Namespace>
     
-- **cloudneeti-agent-config.yaml** data section with values **cloudneeti-agent-config** downloaded in [STEP 1.](../../onboardingGuide/configureCloudneetiAgentInKubernetesCluster/#step-1-associate-kubernetes-cluster-with-cloud-account-in-cloudneeti)
+- **cloudneeti-agent-config.yaml** data section with values **cloudneeti-agent-config** downloaded in [STEP 1.](../../onboardingGuide/configureCloudneetiAgentInAKS/#step-1-associate-kubernetes-cluster-with-cloud-account-in-cloudneeti)
 
                 
                 data:
@@ -143,7 +143,7 @@ Note: The default value is set to scan the cluster every day at 12PM. It is reco
 
 -  **cloudneeti-agent-secret.yaml** set the below values.
     -  **namespace** as given in cloudneeti-namespace.yaml.
-    -  **cloudneetiAPIKey** Please follow [steps](../../onboardingGuide/configureCloudneetiAgentInKubernetesCluster/#set-api-key-in-base64) to generate the key and set the key in base64 format.
+    -  **cloudneetiAPIKey** Please follow [steps](../../onboardingGuide/configureCloudneetiAgentInAKS/#set-api-key-in-base64) to generate the key and set the key in base64 format.
 
                 metadata:
                     name: cloudneeti-agent
