@@ -143,8 +143,7 @@ status means the Resource is compliant with the policy. “Fail” status means 
 Resource is not compliant with the policy.
 
 **Security Policy Status:** Security Policy Status is determined based on the
-number of compliant resources. The policy is assigned a “Pass”, “Warn”, “Fail”
-or “No data” status based on Resource Status for relevant to this cloud policy
+number of compliant resources. The policy is assigned a “Pass”, “Warn”, “Fail”, "Prerequisite", "Manual" or “No resources” status based on Resource Status for relevant to this cloud policy
 resources.
 
 **Compliance Percentage:** Compliance % is an aggregated percentage of fully
