@@ -29,10 +29,12 @@ Login to Cloudneeti portal with **License Admin** role
 
     ![Associate Kubernetes](.././images/kubernetes/CN_ManageAccounts_1.png#thumbnail)
 
-2.  Click **Configure** Accounts for the Cloud account where Kubernetes Cluster
+2.  Expand Azure (1) section
+
+3.  Click **Configure Accounts** (2) for the Cloud account where Kubernetes Cluster
     is to be associated.
 
-3.  Click **Manage K8s Clusters**
+3.  Click **Manage K8s Clusters** (3)
 
     ![Associate Kubernetes](.././images/kubernetes/CN_ManageK8Cluster_2.png#thumbnail)
 
