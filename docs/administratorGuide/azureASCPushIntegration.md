@@ -8,6 +8,8 @@ The integration between Azure Security Center and Cloudneeti provides a seamless
 
 The following steps are required to configure integration of Cloudneeti application with Microsoft Azure Security Center for Azure Subscription(s) added as Cloud account(s) in Cloudneeti. 
 
+Note: Cloudneeti pushes data on every successful Azure cloud account scan, this may take upto 48 hours to reflect the pushed data on ASC. 
+
 ### Required Roles
 
 One or more people with the following roles are required to complete the Microsoft
@@ -72,7 +74,7 @@ The following steps are done by Cloudneeti **License Admin** role.
 
 ## STEP 2: Verify assessment data pushed at ASC
 
-Cloudneeti on successful integration will create recommendations and assessments.
+Cloudneeti on successful integration will create recommendations and assessments. This may take upto 48 hours to reflect the pushed data on ASC. 
 
 ### Recommendations 
 
