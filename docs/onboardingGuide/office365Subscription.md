@@ -560,9 +560,9 @@ time.
 
 Cloudneeti portal will show details for policies from next scan.
 
-## NEXT STEPS
+<!-- ## NEXT STEPS
 
-[Configure Notifications](../../administratorGuide/configureNotifications/)
+[Configure Notifications](../../administratorGuide/configureNotifications/) -->
 
 ## Security Policies that Require Permissions
 

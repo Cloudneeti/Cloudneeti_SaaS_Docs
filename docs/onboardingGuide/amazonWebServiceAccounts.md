@@ -17,7 +17,9 @@ The following steps are required to onboard AWS to the Cloudneeti application.
 
 **2. Collecting AWS account information** involves taking a copy of the AWS account id and providing it to License Admin.
 
-**3. AWS inspector configuration (Optional)** includes installing AWS Inspector Agent to assess your assessment target EC2 instances. 
+**3. AWS inspector configuration (Optional)** includes installing AWS Inspector Agent to assess your assessment target EC2 instances. Amazon Inspector is a security assessment service for your Amazon EC2 instances and the applications running on those instances.
+Enabling AWS Inspector for a host assessment allows various OS baselines as defined by CIS automatically light up on the Cloudneeti dashboards.
+
 
 **3. Add AWS Account** to the Cloudneeti application includes adding AWS account information to the respective Cloudneeti cloud account and waiting until the first data collection is complete.
 
@@ -50,7 +52,7 @@ The following steps are executed by AWS **Administrator** role. AWS role for Clo
 
 ### 1.1 Manual
 #### Grant Permissions
-Login to [AWS portal](https://console.aws.amazon.com/){target=_blank} with AWS **Administrator** role.
+Login to [AWS portal](https://console.aws.amazon.com/) with AWS **Administrator** role.
 
 1.	Navigate to **Services** (1)
 
@@ -94,8 +96,8 @@ Automation script can be used for creation of a role to mark Cloudneeti's accoun
 
 | Activity                                                                      | Description                                              |
 |-------------------------------------------------------------------------------|----------------------------------------------------------|                                                
-| **Workstation:** Install AWS Command Line Interface                           | To install AWS cli follow [link](https://docs.aws.amazon.com/cli/latest/userguide/install-windows.html){target=_blank} **AWS Command Line** Interface (CLI) is a unified tool to manage your AWS services.             |                                                      |
-|**Workstation:** Download script provision-datacollection-role.yml| To download provision-datacollection-role.yml script follow [link](https://raw.githubusercontent.com/Cloudneeti/docs_cloudneeti/master/scripts/provision-datacollection-role.yml){target=_blank} |
+| **Workstation:** Install AWS Command Line Interface                           | To install AWS cli follow [link](https://docs.aws.amazon.com/cli/latest/userguide/install-windows.html) **AWS Command Line** Interface (CLI) is a unified tool to manage your AWS services.             |                                                      |
+|**Workstation:** Download script provision-datacollection-role.yml| To download provision-datacollection-role.yml script follow [link](https://raw.githubusercontent.com/Cloudneeti/docs_cloudneeti/master/scripts/provision-datacollection-role.yml) |
 
 #### Generate AWS account access key id and secret 
 
@@ -157,7 +159,7 @@ Sign into your AWS account.
 
 
 ## STEP 3: [AWS inspector configuration (Optional)](../../onboardingGuide/awsVMBaselineConfiguration/)
-AWS **Administrator** role is required for granting Cloudneeti application access rights to AWS account(s). The administrator must have enough permissions to create a role as a trusted entity with the [SecurityAudit access policy.](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_job-functions.html#jf_security-auditor){target=_blank}
+AWS **Administrator** role is required for granting Cloudneeti application access rights to AWS account(s). The administrator must have enough permissions to create a role as a trusted entity with the [SecurityAudit access policy.](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_job-functions.html#jf_security-auditor)
 
 ## STEP 4: Add AWS Account
 The following steps are executed by Cloudneeti application **License Admin** role.
@@ -193,9 +195,9 @@ Once the AWS account is added to the cloud account under the Cloudneeti License,
 
 Congratulations! You have added an AWS account to Cloudneeti application.
 
-## Configuration
+<!-- ## Configuration
 
-[Configure Notifications](../../administratorGuide/configureNotifications/)
+[Configure Notifications](../../administratorGuide/configureNotifications/) -->
 
 ## OFFBOARDING
 
@@ -203,7 +205,7 @@ Congratulations! You have added an AWS account to Cloudneeti application.
 
 Security audit role created during onboarding of a specific AWS account should be removed. This step needs to be repeated for each AWS account.
 
-Login to [AWS portal](https://console.aws.amazon.com/){target=_blank} with AWS **Administrator** role.
+Login to [AWS portal](https://console.aws.amazon.com/) with AWS **Administrator** role.
 
 1.  Go to **IAM in Services**
 
