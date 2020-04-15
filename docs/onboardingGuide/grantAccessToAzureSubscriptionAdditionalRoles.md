@@ -66,7 +66,7 @@ not assigned.
 |--------------------------------------------------------------|------------------------------------------|
 | Read All Microsoft Graph permissions                         | 5                                        |
 | Reader role for Azure Subscription level scope.              | 0                                        |
-| Website contributor role for Azure Subscription level scope. | 15           |
+| Website contributor role for Azure Subscription level scope. | 11           |
 | Storage Account Contributor role for Azure Subscription level scope. | 1                                       |
 | Network Contributor role for Azure Subscription level scope. | 1           |
 | Key Vault access policies for specific managed Key Vaults    | 1                                        |
@@ -76,37 +76,33 @@ not assigned.
 Website Contributor role access is needed to collect data for security policies
 listed below.
 
-| Control No     | Policy Title                                                                          | Category                              |
-|---------------|--------------------------------------------------------------------------------------|---------------------------------------|
-| 1900.42       | Ensure that 'App Insights' are configured for Azure Web Apps                         | Azure - Compute (PaaS and Serverless) |
-| 1900.43       | Ensure that WEBSITE_LOAD_CERTIFICATES parameter is not set to '\*' for Mobile Apps   | Azure - Compute (PaaS and Serverless) |
-| 1900.44       | Ensure that WEBSITE_LOAD_CERTIFICATES parameter is not set to '\*' for API Apps      | Azure - Compute (PaaS and Serverless) |
-| 1900.51       | Ensure that latest supported Node.js version is used for Web Application             | Azure - Compute (PaaS and Serverless) |
-| 1900.63       | Ensure that WEBSITE_LOAD_CERTIFICATES parameter is not set to '\*' for Function Apps | Azure - Compute (PaaS and Serverless) |
-| 1900.72       | Ensure that 'App Service Authentication' is enabled for Function apps                | Azure - Compute (PaaS and Serverless) |
-| 1900.73       | Ensure that 'App Service Authentication' is enabled for API apps                     | Azure - Compute (PaaS and Serverless) |
-| 1900.74       | Ensure that 'App Service Authentication' is enabled for Mobile apps                  | Azure - Compute (PaaS and Serverless) |
-| 1900.75       | Ensure that 'App Service Authentication' is enabled for Web apps                     | Azure - Compute (PaaS and Serverless) |
-| 1900.78       | Ensure that latest supported Node.js version is used for Function Apps               | Azure - Compute (PaaS and Serverless) |
-| 1900.79       | Ensure that latest supported Node.js version is used for API Apps                    | Azure - Compute (PaaS and Serverless) |
-| 1900.80       | Ensure that latest supported Node.js version is used for Mobile Apps                 | Azure - Compute (PaaS and Serverless) |
-| 1900.84       | Ensure that 'App Insights' are configured for Azure Mobile Apps                      | Azure - Compute (PaaS and Serverless) |
-| 1900.85       | Ensure that 'App Insights' are configured for Azure Function Apps                    | Azure - Compute (PaaS and Serverless) |
-| 1900.86       | Ensure that 'App Insights' are configured for Azure API Apps                         | Azure - Compute (PaaS and Serverless) |
+| Policy Title                                                                          | Category                              |
+|--------------------------------------------------------------------------------------|---------------------------------------|
+| Ensure that WEBSITE_LOAD_CERTIFICATES parameter is not set to '\*' for Mobile Apps   | Azure - Compute (PaaS and Serverless) |
+| Ensure that WEBSITE_LOAD_CERTIFICATES parameter is not set to '\*' for API Apps      | Azure - Compute (PaaS and Serverless) |
+| Ensure that WEBSITE_LOAD_CERTIFICATES parameter is not set to '\*' for Function Apps | Azure - Compute (PaaS and Serverless) |
+| Ensure that WEBSITE_LOAD_CERTIFICATES parameter is not set to '\*' for Web Apps | Azure - Compute (PaaS and Serverless) |
+| Ensure that 'App Service Authentication' is enabled for Function apps                | Azure - Compute (PaaS and Serverless) |
+| Ensure that 'App Service Authentication' is enabled for API apps                     | Azure - Compute (PaaS and Serverless) |
+| Ensure that 'App Service Authentication' is enabled for Mobile apps                  | Azure - Compute (PaaS and Serverless) |
+| Ensure that 'App Service Authentication' is enabled for Web apps                     | Azure - Compute (PaaS and Serverless) |
+| Ensure that 'App Insights' are configured for Azure Mobile Apps                      | Azure - Compute (PaaS and Serverless) |
+| Ensure that 'App Insights' are configured for Azure Function Apps                    | Azure - Compute (PaaS and Serverless) |
+| Ensure that 'App Insights' are configured for Azure API Apps                         | Azure - Compute (PaaS and Serverless) |
 
 ### Storage Account Contributor role 
 
 Storage Account Contributor role or Storage Account Key Operator Servic role access is needed to collect data for security policies
 listed below.
 
-| Control No     | Policy Title                                                                          | Category                              |
-|---------------|--------------------------------------------------------------------------------------|---------------------------------------|
-| 1600.13       | Ensure that 'Public access level' is set to Private for Blob Containers                         | Storage Accounts |
+| Policy Title                                                                          | Category                              |
+|--------------------------------------------------------------------------------------|---------------------------------------|
+| Ensure that 'Public access level' is set to Private for Blob Containers                         | Storage Accounts |
 
 ### Network Contributor Role
 
 Network Account Contributor role is needed to collect data for security policies listed below.
 
-| Control No     | Policy Title                                                                          | Category                              |
-|---------------|--------------------------------------------------------------------------------------|---------------------------------------|
-| 2000.11       | Ensure that Flow Log Status is set to On for Network Security Groups                         | Azure - Networking |
+| Policy Title                                                                          | Category                              |
+|--------------------------------------------------------------------------------------|---------------------------------------|
+| Ensure that Flow Log Status is set to On for Network Security Groups                         | Azure - Networking |

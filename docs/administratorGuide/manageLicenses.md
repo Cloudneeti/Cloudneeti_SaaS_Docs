@@ -46,9 +46,9 @@ Cloudneeti application supports two types of data feed destinations:
 
 Please select the type of storage system you would like to use and create it in Azure Subscription.
 
-1. Object storage system  - Follow this [link](https://docs.microsoft.com/en-us/azure/storage/common/storage-quickstart-create-account?tabs=azure-portal) to create a Object storage system.
+1. Object storage system  - Follow this [link](https://docs.microsoft.com/en-us/azure/storage/common/storage-quickstart-create-account?tabs=azure-portal){target=_blank} to create a Object storage system.
 
-2. NoSQL storage system - Follow this [link](https://docs.microsoft.com/en-us/azure/cosmos-db/how-to-manage-database-account#create-an-account) to create a NoSQL storage system.
+2. NoSQL storage system - Follow this [link](https://docs.microsoft.com/en-us/azure/cosmos-db/how-to-manage-database-account#create-an-account){target=_blank} to create a NoSQL storage system.
 
 
 ### STEP 2: Configure Data Feed Destinations

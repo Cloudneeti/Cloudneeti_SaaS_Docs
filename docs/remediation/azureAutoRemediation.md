@@ -45,15 +45,15 @@ The **Cloudneeti Application registered** while onboarding the Azure Account to 
 
 | **Information**                   | **Portal to use** | **Role**                                                                                                                                                                | **Step** |
 |-----------------------------------|-------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
-| Registered Cloudneeti Application | Microsoft Azure   | Resource Policy Contributor (Preview) [Refer here](https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#resource-policy-contributor-preview) | STEP 1   |
-| Azure Assignments                 | Microsoft Azure   | Roles as per policies enabled for remediation [Refer here](../azureAutoRemediation/#roles-enabled-for-remediation) | STEP 4   |
+| Registered Cloudneeti Application | Microsoft Azure   | Resource Policy Contributor (Preview) [Refer here](https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#resource-policy-contributor-preview){target=_blank} | STEP 1   |
+| Azure Assignments                 | Microsoft Azure   | Roles as per policies enabled for remediation [Refer here](../azureAutoRemediation/#roles-enabled-for-remediation){target=_blank} | STEP 4   |
 
 
 ### STEP 1: Assign permission to Cloudneeti Application registered
 
 The **Cloudneeti Application registered** while onboarding the Azure Account to Cloudneeti needs to be granted a Resource Policy Contributor (Preview) role.
 
-Login to [Azure Portal](https://portal.azure.com/)  with Subscription Owner role.
+Login to [Azure Portal](https://portal.azure.com/){target=_blank}  with Subscription Owner role.
 
 1.	Click **Subscriptions in primary menu** (1)
 2.	Select desired **Subscription**
@@ -91,7 +91,7 @@ Login to [Azure Portal](https://portal.azure.com/)  with Subscription Owner rol
 ### STEP 3: Configure remediation policies
 Login to Cloudneeti portal with **License Admin** role 
 
-1. Navigate to **Configurations** (1) and **Security Policy Exclusion** (2)
+1. Navigate to **Configurations** (1) and **Security Policies** (2)
 
 2. Select **Account Level** (3)
 
@@ -116,7 +116,7 @@ Login to Cloudneeti portal with **License Admin** role
 * Assigning **Resource Policy Contributor (Preview)** role to Cloudneeti Application in Azure is prerequisite for this step.
 
 ### STEP 4: Assigning roles to MSI generated for remediation policies
-Login to [Azure Portal](https://portal.azure.com/) with **Subscription Owner** role.
+Login to [Azure Portal](https://portal.azure.com/){target=_blank} with **Subscription Owner** role.
 
 1. Open **Cloud Shell**
 

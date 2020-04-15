@@ -7,7 +7,7 @@ Subscribe
 Please follow the steps below to subscribe to Cloudneeti SaaS product on Azure
 Marketplace.
 
-1.  Go to [Azure Marketplace](https://azuremarketplace.microsoft.com/en-us/marketplace/apps?filters=saas&search=clouneeti&page=1)
+1.  Go to [Azure Marketplace](https://azuremarketplace.microsoft.com/en-us/marketplace/apps?filters=saas&search=clouneeti&page=1){target=_blank}
 
 2.  Select desired offer
 
@@ -59,7 +59,7 @@ Please following the steps below to unsubscribe from Cloudneeti offer on Azure
 Marketplace. It will lead to decommission of the license and automatic clean-up
 of all collected data as per data retention period.
 
-1.  Go to [Azure Portal](https://portal.azure.com/)
+1.  Go to [Azure Portal](https://portal.azure.com/){target=_blank}
 
 2.  Select Active Directory and Subscription used to subscribe the Cloudneeti
     SaaS offer plan.

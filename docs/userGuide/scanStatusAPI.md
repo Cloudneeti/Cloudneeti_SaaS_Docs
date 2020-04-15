@@ -20,7 +20,7 @@ Cloudneeti offers scan API to get scan status in Cloudneeti for provided cloud a
 ### Authorization
 | Type           |           Description                                |           Required/Optional  |
 |-----------|----------------------------------------------------------------|----------------------------|
-| Bearer Token  |          [Account Token](../../userGuide/tokenAPI/#account-token)                   | Required|
+| Bearer Token  |          [Account Token](../../userGuide/tokenAPI/#account-token){target=_blank}                   | Required|
 
 ### Header
 

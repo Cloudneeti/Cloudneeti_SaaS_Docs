@@ -25,14 +25,6 @@ The left side of the screen also allows navigation.
     application.
 	![Compliance](.././images/userGuide/Compliance_Navigation_Dashboard.png#thumbnail)
 
-## Security
-
-By clicking on **Security** tab (1) on the top, users gain access to a security
-dashboard that provides a compliance score by resource category. By clicking on
-category header (2) user can navigate to a detailed security policy level report
-for further analysis.
-	![Security Dashboard](.././images/userGuide/Security_Dashboard.png#thumbnail)
-
 ## Risk
 
 By clicking on **risk** tab (1) on the top, users gain access to a risk

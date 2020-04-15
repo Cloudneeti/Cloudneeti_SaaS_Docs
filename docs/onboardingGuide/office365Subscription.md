@@ -97,7 +97,7 @@ script.
 ### 1.1 Manual
 #### Register Cloudneeti application
 
-Login to [Azure Portal](https://portal.azure.com/) with **Global AD
+Login to [Azure Portal](https://portal.azure.com/){target=_blank} with **Global AD
 Administrator** associated to your Office 365 Subscription role.
 
 1. Select **Azure Active Directory** associated to your Office 365 Subscription
@@ -131,7 +131,7 @@ Microsoft graph permission **SecurityEvents.Read.All** allows the app to read Of
 
 Microsoft graph **DeviceManagementConfiguration.Read.All** allows the app to read properties of Microsoft Intune-managed device configuration and device compliance policies and their assignment to groups.
 
-You can find more details about the Microsoft Graph API permission [here](https://docs.microsoft.com/en-us/graph/permissions-reference).
+You can find more details about the Microsoft Graph API permission [here](https://docs.microsoft.com/en-us/graph/permissions-reference){target=_blank}.
 
 1. Click **API Permissions**
 2. Select **Microsoft Graph**
@@ -142,9 +142,9 @@ You can find more details about the Microsoft Graph API permission [here](https
 
 | API             | Permission Name                                                                                                     | Type        |
 |-----------------|---------------------------------------------------------------------------------------------------------------------|-------------|
-| Microsoft.Graph | Directory.Read.All [Refer here](https://docs.microsoft.com/en-us/graph/permissions-reference#directory-permissions) | Application |
-| Microsoft.Graph | SecurityEvents.Read.All [Refer here](https://docs.microsoft.com/en-us/graph/permissions-reference#security-permissions)                                                                                           | Application |
-| Microsoft.Graph | DeviceManagementConfiguration.Read.All [Refer here](https://docs.microsoft.com/en-us/graph/permissions-reference#intune-device-management-permissions)                                                                                           | Application |
+| Microsoft.Graph | Directory.Read.All [Refer here](https://docs.microsoft.com/en-us/graph/permissions-reference#directory-permissions){target=_blank} | Application |
+| Microsoft.Graph | SecurityEvents.Read.All [Refer here](https://docs.microsoft.com/en-us/graph/permissions-reference#security-permissions){target=_blank}                                                                                           | Application |
+| Microsoft.Graph | DeviceManagementConfiguration.Read.All [Refer here](https://docs.microsoft.com/en-us/graph/permissions-reference#intune-device-management-permissions){target=_blank}                                                                                           | Application |
 
 5. Click **Grant admin consent** in the Grant consent section (2)
 	![API Permission](.././images/onboardingOffice365Subscription/Grant_Admin_Consent.png#thumbnail)
@@ -157,8 +157,8 @@ Tenant using PowerShell script.
 
 | Activity                                                                                                              | Description                                                                                                                                                                                                               |
 |-----------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1. Download and review **PowerShell script** for creation of the service principal                                    | The PowerShell script is used to create a service principal in Azure Tenant AD: [Download Link.](https://raw.githubusercontent.com/Cloudneeti/docs_cloudneeti/master/scripts/Create-ServicePrincipal-Office365Onboarding.ps1) |
-| 2. **Workstation:** Ensure you have the latest PowerShell version (v5 and above)                                      | Verify PowerShell version by running the following command<br>`$PSVersionTable.PSVersion`<br>on the workstation where you will run the ServicePrincipal creation script. If the PowerShell version is lower than 5, then follow this link for installation of a later version: [Download Link.](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-windows-powershell?view=powershell-6)|
+| 1. Download and review **PowerShell script** for creation of the service principal                                    | The PowerShell script is used to create a service principal in Azure Tenant AD: [Download Link.](https://raw.githubusercontent.com/Cloudneeti/docs_cloudneeti/master/scripts/Create-ServicePrincipal-Office365Onboarding.ps1){target=_blank} |
+| 2. **Workstation:** Ensure you have the latest PowerShell version (v5 and above)                                      | Verify PowerShell version by running the following command<br>`$PSVersionTable.PSVersion`<br>on the workstation where you will run the ServicePrincipal creation script. If the PowerShell version is lower than 5, then follow this link for installation of a later version: [Download Link.](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-windows-powershell?view=powershell-6){target=_blank}|
 | 3. **Workstation:** Before executing the script, make sure there are no restrictions in running the PowerShell script | Use this PowerShell command:<br>``Set-ExecutionPolicy ` ``<br>``-Scope Process ` ``<br>`-ExecutionPolicy Bypass`<br>PowerShell contains built-in execution policies that limit its use as an attack vector. By default, the execution policy is set to Restricted, which is the primary policy for script execution. The bypass allows for running scripts and keeps the lowered permissions isolated to just the current running process. |
 | 4. **Workstation:** Install Azure Modules to execute PowerShell commands within service principal automation script   | ``Install-Module ` ``<br>``-Name AzureAD ` ``<br>`-MinimumVersion 2.0.0.131`<br>It is a roll-up module for the Azure Resource Manager cmdlets. |
 
@@ -203,9 +203,9 @@ Cloudneeti application to be able to collect the Azure AD data.
 
 	| API             | Permission Name                                                                                                     | Type        |
 |-----------------|---------------------------------------------------------------------------------------------------------------------|-------------|
-| Microsoft.Graph | Directory.Read.All [Refer here](https://docs.microsoft.com/en-us/graph/permissions-reference#directory-permissions) | Application |
-| Microsoft.Graph | SecurityEvents.Read.All [Refer here](https://docs.microsoft.com/en-us/graph/permissions-reference#security-permissions)  | Application |
-| Microsoft.Graph | DeviceManagementConfiguration.Read.All [Refer here](https://docs.microsoft.com/en-us/graph/permissions-reference#intune-device-management-permissions)                                                                                           | Application |
+| Microsoft.Graph | Directory.Read.All [Refer here](https://docs.microsoft.com/en-us/graph/permissions-reference#directory-permissions){target=_blank} | Application |
+| Microsoft.Graph | SecurityEvents.Read.All [Refer here](https://docs.microsoft.com/en-us/graph/permissions-reference#security-permissions){target=_blank}  | Application |
+| Microsoft.Graph | DeviceManagementConfiguration.Read.All [Refer here](https://docs.microsoft.com/en-us/graph/permissions-reference#intune-device-management-permissions){target=_blank}                                                                                           | Application |
 
 6. Click **Grant admin consent** in the Grant consent section (2)
 	![Grant_Admin_Consent](.././images/onboardingOffice365Subscription/Grant_Admin_Consent.png#thumbnail)
@@ -357,7 +357,7 @@ as global administrator.
 ##### Create Office 365 user
 Create Office 365 user with roles **SharePoint Administrator** and **Exchange Administrator**
 
-1. Login to [office portal](https://www.office.com)
+1. Login to [office portal](https://www.office.com){target=_blank}
 2. Click **Admin** to go to **M365 Admin center**
 	
 	![Admin Center](.././images/onboardingOffice365Subscription/M365AdminCenter.png#thumbnail)
@@ -376,7 +376,7 @@ Create Office 365 user with roles **SharePoint Administrator** and **Exchange Ad
 
 ##### Enable MFA and create application password
 
-Follow [link](https://docs.microsoft.com/en-us/office365/admin/security-and-compliance/set-up-multi-factor-authentication?view=o365-worldwide#set-up-multi-factor-authentication-in-the-new-microsoft-365-admin-center) to enable MFA
+Follow [link](https://docs.microsoft.com/en-us/office365/admin/security-and-compliance/set-up-multi-factor-authentication?view=o365-worldwide#set-up-multi-factor-authentication-in-the-new-microsoft-365-admin-center){target=_blank} to enable MFA
 
 
 Sign into your Office 365 portal (e.g. <https://outlook.office.com/mail/inbox>)
@@ -398,7 +398,7 @@ as user created above [step](.././office365Subscription/#create-office-365-user)
 
 ##### Sign-up on Cloudneeti API portal.
 
-1. Go to [API portal](https://portal.cloudneeti.com/) and Sign up.
+1. Go to [API portal](https://portal.cloudneeti.com/){target=_blank} and Sign up.
 
 2. Fill the required fields in the sign-up form
 
@@ -448,7 +448,7 @@ Contact Cloudneeti Team for:
 
 ##### Azure details
 
-Login to Azure portal <https://portal.azure.com> as subscription owner.
+Login to Azure portal [https://portal.azure.com](https://portal.azure.com){target=_blank} as subscription owner.
 
 ##### Azure Subscription ID
 
@@ -467,7 +467,7 @@ Login to Azure portal <https://portal.azure.com> as subscription owner.
 ### 3.2 Provision Office 365 data collector 
 
 
-Login to Azure portal <https://portal.azure.com> as Subscription Contributor or
+Login to Azure portal [https://portal.azure.com](https://portal.azure.com){target=_blank} as Subscription Contributor or
 Subscription Owner access.
 
 Switch to Azure AD with the Azure Subscription with pre-requisite access.
@@ -560,9 +560,9 @@ time.
 
 Cloudneeti portal will show details for policies from next scan.
 
-## NEXT STEPS
+<!-- ## NEXT STEPS
 
-[Configure Notifications](../../administratorGuide/configureNotifications/)
+[Configure Notifications](../../administratorGuide/configureNotifications/) -->
 
 ## Security Policies that Require Permissions
 
@@ -592,54 +592,54 @@ Microsoft graph permission DeviceManagementConfiguration.Read.All is required to
 The advanced security policy data collector enables the following 43 policies as
 available in the Center for Internet Security (CIS) Microsoft 365 benchmark
 (Reference
-[here](https://www.cloudneeti.com/2019/01/assure-microsoft-365-security-and-compliance-with-cloudneeti/)).
+[here](https://www.cloudneeti.com/2019/01/assure-microsoft-365-security-and-compliance-with-cloudneeti/){target=_blank}).
 
 Advanced security configuration done using Office 365 App Password will not enable 18 policies of category M365 - Identity listed in below table.
 
 | **Control No** | **Policy Title**                                                                                                                                                    | **Category**                     |
 |---------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------|
-| M500.01         | 1. (L1) Ensure modern authentication for SharePoint applications is required                                                                                       | Account / Authentication         |
-| M600.01           | 2. (L2) Ensure calendar details sharing with external users is disabled                                                                                            | Application Permissions          |
-| M600.02           | 3. (L2) Ensure O365 ATP SafeLinks for Office Applications is Enabled                                                                                         | Application Permissions          |
-| M600.03           | 4. (L2) Ensure Office 365 ATP for SharePoint, OneDrive, and Microsoft Teams is Enabled                                                                             | Application Permissions          |
-| M700.02          | 5. (L2) Ensure that external users cannot share files, folders, and sites they do not own                                                                          | Data Management                  |
-| M800.01         | 6. (L1) Ensure that DKIM is enabled for all Exchange Online Domains                                                                                                | Email Security / Exchange Online |
-| M800.09          | 7. (L1) Ensure the Common Attachment Types Filter is enabled                                                                                                        | Email Security / Exchange Online |
-| M800.02          | 8. (L1) Ensure that SPF records are published for all Exchange Domains                                                                                             | Email Security / Exchange Online |
-| M800.03          | 9. (L1) Ensure DMARC Records for all Exchange Online domains are published                                                                                         | Email Security / Exchange Online |
-| M800.04          | 10. (L1) Ensure notifications for internal users sending malware is Enabled                                                                                        | Email Security / Exchange Online |
-| M800.05           | 11. (L1) Ensure Exchange Online Spam Policies are set correctly | Email Security / Exchange Online |
-| M800.06          | 12. (L1) Ensure mail transport rules do not whitelist specific domains                                                                              | Email Security / Exchange Online |
-| M800.07           | 13. (L2) Ensure Client Rules Forwarding Block is enabled                                                                                                           | Email Security / Exchange Online |
-| M800.08           | 14. (L1) Ensure that an anti-phishing policy has been created                                                                                                      | Email Security / Exchange Online |
-| M009.01           | 15. (L1) Enable Microsoft 365 audit log search                                                                                                                     | Auditing                         |
-| M009.02          | 16. (L1) Ensure account provisioning activity report is reviewed weekly                                                                                            | Auditing                         |
-| M009.03         | 17. (L1) Ensure the spoofed domains report is reviewed weekly                                                                                                        | Auditing                         |
-| M009.04           | 18. (L1) Ensure user role group changes is reviewed at least every week                                                                                            | Auditing                         |
-| M010.1           | 19. (L2) Ensure document sharing is being controlled by domains with whitelist or blacklist                                                                         | Storage                          |
+| M500.01         | 1.  Ensure modern authentication for SharePoint applications is required                                                                                       | Account / Authentication         |
+| M600.01           | 2.  Ensure calendar details sharing with external users is disabled                                                                                            | Application Permissions          |
+| M600.02           | 3.  Ensure O365 ATP SafeLinks for Office Applications is Enabled                                                                                         | Application Permissions          |
+| M600.03           | 4.  Ensure Office 365 ATP for SharePoint, OneDrive, and Microsoft Teams is Enabled                                                                             | Application Permissions          |
+| M700.02          | 5.  Ensure that external users cannot share files, folders, and sites they do not own                                                                          | Data Management                  |
+| M800.01         | 6.  Ensure that DKIM is enabled for all Exchange Online Domains                                                                                                | Email Security / Exchange Online |
+| M800.09          | 7.  Ensure the Common Attachment Types Filter is enabled                                                                                                        | Email Security / Exchange Online |
+| M800.02          | 8.  Ensure that SPF records are published for all Exchange Domains                                                                                             | Email Security / Exchange Online |
+| M800.03          | 9.  Ensure DMARC Records for all Exchange Online domains are published                                                                                         | Email Security / Exchange Online |
+| M800.04          | 10.  Ensure notifications for internal users sending malware is Enabled                                                                                        | Email Security / Exchange Online |
+| M800.05           | 11.  Ensure Exchange Online Spam Policies are set correctly | Email Security / Exchange Online |
+| M800.06          | 12.  Ensure mail transport rules do not whitelist specific domains                                                                              | Email Security / Exchange Online |
+| M800.07           | 13.  Ensure Client Rules Forwarding Block is enabled                                                                                                           | Email Security / Exchange Online |
+| M800.08           | 14.  Ensure that an anti-phishing policy has been created                                                                                                      | Email Security / Exchange Online |
+| M009.01           | 15.  Enable Microsoft 365 audit log search                                                                                                                     | Auditing                         |
+| M009.02          | 16.  Ensure account provisioning activity report is reviewed weekly                                                                                            | Auditing                         |
+| M009.03         | 17.  Ensure the spoofed domains report is reviewed weekly                                                                                                        | Auditing                         |
+| M009.04           | 18.  Ensure user role group changes is reviewed at least every week                                                                                            | Auditing                         |
+| M010.1           | 19.  Ensure document sharing is being controlled by domains with whitelist or blacklist                                                                         | Storage                          |
 |   M500.03     |  20. Ensure modern authentication for Exchange Online is enabled |M365 - Account / Authentication |
 |   M700.03     | 21. Use custom sensitive infromation type classification for information protection | M365 - Data Management |
 |   M800.10     |  22. Ensure MailTips are enabled for end users |M365 - Email Security / Exchange Online |
 |  M800.11      |  23. Ensure basic authentication for Exchange Online is disabled |M365 - Email Security / Exchange Online |
 |    M010.2    |  24. Block OneDrive for Business sync from unmanaged devices |M365 - Storage |
-| M400.32 | Ensure that 'Number of methods required to reset' is set to '2'                                                      | M365 - Identity |
-| M400.33 | 25. Ensure that 'Number of days before users are asked to re-confirm their authentication information' is not set to '0' | M365 - Identity |
-| M400.34 | 26. Ensure that 'Notify all admins when other admins reset their password?' is set to 'Yes'                              | M365 - Identity |
-| M400.35 | 27. Ensure that 'Notify users on password resets?' is set to 'Yes'                                                       | M365 - Identity |
-| M400.36 | 28. Ensure that 'Users can consent to apps accessing company data on their behalf' is set to 'No'                        | M365 - Identity |
-| M400.37 | 29. Ensure that 'Users can add gallery apps to their Access Panel' is set to 'No'                                        | M365 - Identity |
-| M400.38 | 30. Ensure that 'Users can register applications' is set to 'No'                                                         | M365 - Identity |
-| M400.39 | 31. Ensure that 'Guest user permissions are limited' is set to 'Yes'                                                     | M365 - Identity |
-| M400.40 | 32. Ensure that 'Members can invite' is set to 'No'                                                                      | M365 - Identity |
-| M400.41 | 33. Ensure that 'Guests can invite' is set to 'No'                                                                       | M365 - Identity |
-| M400.42 | 34. Ensure that 'Restrict access to Azure AD administration portal' is set to 'Yes'                                      | M365 - Identity |
-| M400.43 | 35. Ensure that 'Self-service group management enabled' is set to 'No'                                                   | M365 - Identity |
-| M400.44 | 36. Ensure that 'Users can create security groups' is set to 'No'                                                        | M365 - Identity |
-| M400.45 | 37. Ensure that 'Users who can manage security groups' is set to 'None'                                                  | M365 - Identity |
-| M400.46 | 38. Ensure that 'Users can create Office 365 groups' is set to 'No'                                                      | M365 - Identity |
-| M400.47 | 39. Ensure that 'Users who can manage Office 365 groups' is set to 'None'                                                | M365 - Identity |
-| M400.48 | 40. Ensure that 'Enable All Users group' is set to 'Yes'                                                                 | M365 - Identity |
-| M400.49 | 41. Ensure that 'Require Multi-Factor Auth to join devices' is set to 'Yes'                                              | M365 - Identity |
+| M400.32 | 25. Ensure that 'Number of methods required to reset' is set to '2'                                                      | M365 - Identity |
+| M400.33 | 26. Ensure that 'Number of days before users are asked to re-confirm their authentication information' is not set to '0' | M365 - Identity |
+| M400.34 | 27. Ensure that 'Notify all admins when other admins reset their password?' is set to 'Yes'                              | M365 - Identity |
+| M400.35 | 28. Ensure that 'Notify users on password resets?' is set to 'Yes'                                                       | M365 - Identity |
+| M400.36 | 29. Ensure that 'Users can consent to apps accessing company data on their behalf' is set to 'No'                        | M365 - Identity |
+| M400.37 | 30. Ensure that 'Users can add gallery apps to their Access Panel' is set to 'No'                                        | M365 - Identity |
+| M400.38 | 31. Ensure that 'Users can register applications' is set to 'No'                                                         | M365 - Identity |
+| M400.39 | 32. Ensure that 'Guest user permissions are limited' is set to 'Yes'                                                     | M365 - Identity |
+| M400.40 | 33. Ensure that 'Members can invite' is set to 'No'                                                                      | M365 - Identity |
+| M400.41 | 34. Ensure that 'Guests can invite' is set to 'No'                                                                       | M365 - Identity |
+| M400.42 | 35. Ensure that 'Restrict access to Azure AD administration portal' is set to 'Yes'                                      | M365 - Identity |
+| M400.43 | 36. Ensure that 'Self-service group management enabled' is set to 'No'                                                   | M365 - Identity |
+| M400.44 | 37. Ensure that 'Users can create security groups' is set to 'No'                                                        | M365 - Identity |
+| M400.45 | 38. Ensure that 'Users who can manage security groups' is set to 'None'                                                  | M365 - Identity |
+| M400.46 | 39. Ensure that 'Users can create Office 365 groups' is set to 'No'                                                      | M365 - Identity |
+| M400.47 | 40. Ensure that 'Users who can manage Office 365 groups' is set to 'None'                                                | M365 - Identity |
+| M400.48 | 41. Ensure that 'Enable All Users group' is set to 'Yes'                                                                 | M365 - Identity |
+| M400.49 | 42. Ensure that 'Require Multi-Factor Auth to join devices' is set to 'Yes'                                              | M365 - Identity |
 
 
 

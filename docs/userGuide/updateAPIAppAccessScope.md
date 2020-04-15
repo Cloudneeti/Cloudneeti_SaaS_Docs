@@ -19,14 +19,14 @@ Cloudneeti offers config API to update API application access scope to add a Clo
 ### Authorization
 | Type           |           Description                                |           Required/Optional  |
 |-----------|----------------------------------------------------------------|----------------------------|
-| Bearer Token  |          [License Token](../../userGuide/tokenAPI/##license-token)                   | Required|
+| Bearer Token  |          [License Token](../../userGuide/tokenAPI/##license-token){target=_blank}                   | Required|
 
 ### Header
 
 | Key	        | Value                                |
 |---------------|--------------------------------------|
 | Content-Type 	                |   application/json                 |
-| Ocp-Apim-Subscription-Key 	| [Cloudneeti API key generated](../../administratorGuide/configureCloudneetiAPIAccess/)             |
+| Ocp-Apim-Subscription-Key 	| [Cloudneeti API key generated](../../administratorGuide/configureCloudneetiAPIAccess/){target=_blank}             |
 
 
 ### Request body

@@ -28,11 +28,14 @@ extra_javascript:
   - 'javascripts/custom.js'
 extra_templates:
   - 'releaseNotes/currentVersion.html'
+markdown_extensions:
+    - attr_list
 
 nav:
 - Introduction: 
   - Getting Started: gettingStarted/introduction.md
   - Product Features: gettingStarted/productFeatures.md
+  - How it works: gettingStarted/howItWorks.md
   - Cloud Security Best Practices : gettingStarted/cloudSecurityBestPractices.md
   - Deployment Architecture: gettingStarted/deploymentArchitecture.md
   - Customer Data Security: gettingStarted/customerDataSecurity.md
@@ -47,15 +50,15 @@ nav:
   - Overview: onboardingGuide/onboardingGuideOverview.md
   - Amazon Web Services: 
     - Onboarding steps: onboardingGuide/amazonWebServiceAccounts.md
-    - Configure OS baseline (optional): onboardingGuide/awsVMBaselineConfiguration.md
-    # - Configure quick wins: onboardingGuide/awsQuickWins.md
-  - Micorsoft Azure:
+    - OS baseline (optional): onboardingGuide/awsVMBaselineConfiguration.md
+  - Microsoft Azure:
     - Onboarding steps: onboardingGuide/azureSubscriptions.md
-    - Grant access to Azure subscription additional roles: onboardingGuide/grantAccessToAzureSubscriptionAdditionalRoles.md
-    - Grant access to key vaults: onboardingGuide/grantAccessToKeyVaults.md
+    - Additional roles: onboardingGuide/grantAccessToAzureSubscriptionAdditionalRoles.md
+    - Key vaults: onboardingGuide/grantAccessToKeyVaults.md
     - Advanced security configurations: onboardingGuide/azureAdvancedSecurityConfiguration.md
-    - Configure quick wins: onboardingGuide/azureQuickWins.md
-    - Configure OS baseline and vulnerability scanning: onboardingGuide/azureVulnerability.md
+    - Enable ASC audit policies: onboardingGuide/enableASCAuditPolicies.md
+    - OS baseline and vulnerability: onboardingGuide/azureVulnerability.md
+    - Azure Kubernetes Service (AKS): onboardingGuide/configureCloudneetiAgentInAKS.md
   - Office 365: 
     - Onboarding steps: onboardingGuide/office365Subscription.md
     - Upgrade advanced security configurations: onboardingGuide/office365AdvanceSecurityConfigurationUpgrade.md
@@ -78,10 +81,12 @@ nav:
 - Administrator Guide:
   - Features and Quotas: administratorGuide/featuresAndQuotas.md
   - Integrations: administratorGuide/manageLicenses.md
+  - ASC Push Integration: administratorGuide/azureASCPushIntegration.md
   - Cloud Accounts: administratorGuide/manageAccounts.md
   - Users & Roles: administratorGuide/manageUsers.md
   - Private Benchmark: administratorGuide/privateBenchmark.md
   - Security Policy Configuration: administratorGuide/securityPolicyExclusions.md
+  - Override Security Policy Status: administratorGuide/overrideSecurityPolicyStatus.md
   - Audit Log: administratorGuide/auditLog.md
   - Configure Cloudneeti API Access: administratorGuide/configureCloudneetiAPIAccess.md
 - Remediation:
@@ -93,6 +98,7 @@ nav:
     - Decommission of remediation: remediation/azureDecommissionofRemediation.md
   - AWS:
     - Guided Remediation: remediation/awsGuidedRemediation.md
+    - Quick wins: remediation/awsQuickWins.md
     - Auto Remediation: remediation/awsRemediation.md
     - Decommission Remediation framework: remediation/awsDecommissionofRemediation.md
 - Release Notes:

@@ -28,7 +28,7 @@ Note: Perform this step on all the key vaults present in your subscription.
 ### 4.2.1 Register Contributor Application 
 
 #### Register Contributor Application
-Login to [Azure Portal](https://portal.azure.com/) with **Global AD
+Login to [Azure Portal](https://portal.azure.com/){target=_blank} with **Global AD
 Administrator** role.
 
 1.  Select **Azure Active Directory** in the primary menu
@@ -68,16 +68,16 @@ The Contributor Application should have "Azure Active Directory Graph - Applicat
 
     | API             | Permission Name                | Type        |
     |-----------------|--------------------------------|-------------|
-    | Microsoft.Graph | Application.ReadWrite.All [Refer here](https://docs.microsoft.com/en-us/graph/permissions-reference#application-permissions-4) | Application |
+    | Microsoft.Graph | Application.ReadWrite.All [Refer here](https://docs.microsoft.com/en-us/graph/permissions-reference#application-permissions-4){target=_blank} | Application |
 
 3. Click on **Grant admin consent for …** button in the Grant consent section. 
 
 
 #### Grant Azure Subscription Contributor role
 
-Add [contributor role](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-secure-your-key-vault#data-plane-and-access-policies) for Cloudneeti application in Azure Subscription.
+Add [contributor role](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-secure-your-key-vault#data-plane-and-access-policies){target=_blank} for Cloudneeti application in Azure Subscription.
 
-Login to [Azure Portal](https://portal.azure.com/) with Microsoft Azure **Subscription Owner** role.
+Login to [Azure Portal](https://portal.azure.com/){target=_blank} with Microsoft Azure **Subscription Owner** role.
 
 1.	Go to the subscription’s **Access control (IAM)** in the third level menu
 2.	Click on the **Add** button and select **Add role assignment**
@@ -89,7 +89,7 @@ Login to [Azure Portal](https://portal.azure.com/) with Microsoft Azure **Subscr
 ### 4.2.2 Provision automation account 
 Provision automation account to check and assign List permissions to key-vaults within given subscriptions, at scheduled time.
 
-Login to Azure portal <https://portal.azure.com> as Subscription Contributor or
+Login to Azure portal [https://portal.azure.com](https://portal.azure.com){target=_blank} as Subscription Contributor or
 Subscription Owner access.
 
 Switch to Azure AD with the Azure Subscription with pre-requisite access.
@@ -152,8 +152,8 @@ not assigned.
 Special permission on key vaults is needed to collect data for security policies
 listed below.
 
-| Control No    | Policy Title                                                      | Category       |
-|---------------|------------------------------------------------------------------|----------------|
-| 1800.2        | Ensure that the expiry date is set on all Secrets in a Key Vault | Key Management |
+| Policy Title                                                      | Category       |
+|------------------------------------------------------------------|----------------|
+| Ensure that the expiry date is set on all Secrets in a Key Vault | Key Management |
 
 

@@ -1,15 +1,15 @@
 
 
 ## Prerequisites
-### [Configure Cloudneeti API Access](../../administratorGuide/configureCloudneetiAPIAccess/)
+### [Configure Cloudneeti API Access](../../administratorGuide/configureCloudneetiAPIAccess/){target=_blank}
 
 ## License
-### [License.Authorize](../../userGuide/tokenAPI/#license-token)
-### [License.AddAccount](../../userGuide/onboardCloudAccount/)
-### [License.UpdateAPIAccess](../../userGuide/updateAPIAppAccessScope/)
+### [License.Authorize](../../userGuide/tokenAPI/#license-token){target=_blank}
+### [License.AddAccount](../../userGuide/onboardCloudAccount/){target=_blank}
+### [License.UpdateAPIAccess](../../userGuide/updateAPIAppAccessScope/){target=_blank}
 
 ## Account
-### [Account.Authorize](../../userGuide/tokenAPI/#account-token)
-### [Account.Audit](../../userGuide/auditReportAPI/)
-### [Account.Rescan](../../userGuide/initiateScanAPI/)
-### [Account.GetJobstatus](../../userGuide/scanStatusAPI/)
+### [Account.Authorize](../../userGuide/tokenAPI/#account-token){target=_blank}
+### [Account.Audit](../../userGuide/auditReportAPI/){target=_blank}
+### [Account.Rescan](../../userGuide/initiateScanAPI/){target=_blank}
+### [Account.GetJobstatus](../../userGuide/scanStatusAPI/){target=_blank}

@@ -6,7 +6,7 @@ Cloudneeti offers scan API to initiate scan in Cloudneeti for given cloud accoun
 | Environment	| Values for Cloudneeti API domain     |
 |---------------|--------------------------------------|
 | PROD 	        |   api.cloudneeti.com                 |
-| TRIAL 	| trialapi.cloudneeti.com              |
+| TRIAL 	    | trialapi.cloudneeti.com              |
 
 
 ### URI Parameters
@@ -19,13 +19,13 @@ Cloudneeti offers scan API to initiate scan in Cloudneeti for given cloud accoun
 ### Authorization
 | Type           |           Description                                |           Required/Optional  |
 |-----------|----------------------------------------------------------------|----------------------------|
-| Bearer Token  |          [Account Token](../../userGuide/tokenAPI/#account-token)                   | Required|
+| Bearer Token  |          [Account Token](../../userGuide/tokenAPI/#account-token){target=_blank}                   | Required|
 
 ### Header
 
 | Key	        | Value                                |
 |---------------|--------------------------------------|
-| Ocp-Apim-Subscription-Key 	| [Cloudneeti API key generated](../../administratorGuide/configureCloudneetiAPIAccess/)             |
+| Ocp-Apim-Subscription-Key 	| [Cloudneeti API key generated](../../administratorGuide/configureCloudneetiAPIAccess/){target=_blank}             |
 
 
 ### Response

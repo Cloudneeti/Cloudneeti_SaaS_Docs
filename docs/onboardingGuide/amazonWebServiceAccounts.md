@@ -17,7 +17,9 @@ The following steps are required to onboard AWS to the Cloudneeti application.
 
 **2. Collecting AWS account information** involves taking a copy of the AWS account id and providing it to License Admin.
 
-**3. AWS inspector configuration (Optional)** includes installing AWS Inspector Agent to assess your assessment target EC2 instances. 
+**3. AWS inspector configuration (Optional)** includes installing AWS Inspector Agent to assess your assessment target EC2 instances. Amazon Inspector is a security assessment service for your Amazon EC2 instances and the applications running on those instances.
+Enabling AWS Inspector for a host assessment allows various OS baselines as defined by CIS automatically light up on the Cloudneeti dashboards.
+
 
 **3. Add AWS Account** to the Cloudneeti application includes adding AWS account information to the respective Cloudneeti cloud account and waiting until the first data collection is complete.
 
@@ -193,9 +195,9 @@ Once the AWS account is added to the cloud account under the Cloudneeti License,
 
 Congratulations! You have added an AWS account to Cloudneeti application.
 
-## Configuration
+<!-- ## Configuration
 
-[Configure Notifications](../../administratorGuide/configureNotifications/)
+[Configure Notifications](../../administratorGuide/configureNotifications/) -->
 
 ## OFFBOARDING
 
