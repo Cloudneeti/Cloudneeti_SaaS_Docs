@@ -5,7 +5,7 @@ STEP 8: Configuring Cloudneeti agent in Azure Kubernetes Service (AKS)
 
 Cloudneeti includes and extends Azure Security center recommendations for AKS by deploying a Cloudneeti agent to Azure Kubernetes Cluster. A docker container agent is deployed to collect data for additional security policies. Cloudneeti then provides out-of-box mappings for all 13+ compliance frameworks included in the product. 
 
-Deploying Cloudneeti agent on Azure Kubernetes Service enables compliance monitoring of Kubernetes cluster. An Azure docker agent is deployed to collect data for security policies [listed here](../../onboardingGuide/configureCloudneetiAgentInAKS/#kubernetes-policy-list).
+Deploying Cloudneeti agent on Azure Kubernetes Service enables compliance monitoring of Kubernetes cluster for security policies [listed here](../../onboardingGuide/configureCloudneetiAgentInAKS/#kubernetes-policy-list).
 
 
 Prerequisites
@@ -13,7 +13,7 @@ Prerequisites
 
 | **Activity**                                                                                                               | **Description**                                                              |
 |----------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.	Download and review **PowerShell script** scripts for configuration of Cloudneeti Agent | The PowerShell script is used to configure Cloudneeti Agent in Azure Kubernetes Cluster:<br>  [cloudneeti-namespace.yaml](https://github.com/Cloudneeti/docs_cloudneeti/blob/master/scripts/kubernetes-onboarding/cloudneeti-namespace.yaml){target=_blank}<br>[cloudneeti-agent-config.yaml](https://github.com/Cloudneeti/docs_cloudneeti/blob/master/scripts/kubernetes-onboarding/cloudneeti-agent-config.yaml){target=_blank}<br>[cloudneeti-agent-secret.yaml](https://github.com/Cloudneeti/docs_cloudneeti/blob/master/scripts/kubernetes-onboarding/cloudneeti-agent-secret.yaml){target=_blank}<br>[cloudneeti-agent.yaml](https://github.com/Cloudneeti/docs_cloudneeti/blob/master/scripts/kubernetes-onboarding/cloudneeti-agent.yaml){target=_blank} (In case of AKS-engine) <br>[cloudneeti-agent-worker.yaml](https://github.com/Cloudneeti/docs_cloudneeti/blob/master/scripts/kubernetes-onboarding/cloudneeti-agent-worker.yaml){target=_blank} (In case of AKS) |
+| 1.	Download and review **yaml** files for configuration of Cloudneeti Agent | The yaml files are used to configure Cloudneeti Agent in Azure Kubernetes Cluster:<br>  [cloudneeti-namespace.yaml](https://github.com/Cloudneeti/docs_cloudneeti/blob/master/scripts/kubernetes-onboarding/cloudneeti-namespace.yaml){target=_blank}<br>[cloudneeti-agent-config.yaml](https://github.com/Cloudneeti/docs_cloudneeti/blob/master/scripts/kubernetes-onboarding/cloudneeti-agent-config.yaml){target=_blank}<br>[cloudneeti-agent-secret.yaml](https://github.com/Cloudneeti/docs_cloudneeti/blob/master/scripts/kubernetes-onboarding/cloudneeti-agent-secret.yaml){target=_blank}<br>[cloudneeti-agent.yaml](https://github.com/Cloudneeti/docs_cloudneeti/blob/master/scripts/kubernetes-onboarding/cloudneeti-agent.yaml){target=_blank} (In case of AKS-engine) <br>[cloudneeti-agent-worker.yaml](https://github.com/Cloudneeti/docs_cloudneeti/blob/master/scripts/kubernetes-onboarding/cloudneeti-agent-worker.yaml){target=_blank} (In case of AKS) |
 | 2.	**Workstation**: Ensure you have the latest PowerShell version (v5 and above) | Verify PowerShell version by running the following command<br>`$PSVersionTable.PSVersion`<br>on the workstation where you will run the ServicePrincipal creation script. If PowerShell version is lower than 5, then follow this link for installation of a later version: [Download Link.](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-windows-powershell?view=powershell-6){target=_blank} |
 | 3.	**Workstation:** Before executing the script, make sure there are no restrictions in running the PowerShell script  | Use this PowerShell command:<br>``Set-ExecutionPolicy ` ``<br>``-Scope Process ` ``<br>``-ExecutionPolicy Bypass``<br>PowerShell contains built-in execution policies that limit its use as an attack vector. By default, the execution policy is set to Restricted, which is the primary policy for script execution. The bypass allows for running scripts and keeps the lowered permissions isolated to just the current running process. |                                                     
 | 4. **Workstation:** Azure CLI version 2.0.46 | Please follow [link](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest){target=_blank} to install Azure CLI version 2.0.46       |
@@ -79,6 +79,7 @@ Please use below steps to deploy Cloudneeti Agent on AKS, AKS engine.
 -  **cloudneeti-agent-secret.yaml** set the below values.
     -  **namespace** as given in cloudneeti-namespace.yaml.
     -  **cloudneetiAPIKey** Please follow [steps](../../onboardingGuide/configureCloudneetiAgentInAKS/#set-api-key-in-base64) to generate the key and set the key in base64 format.
+    - **cloudneetiAPIAppSecret** Please follow [steps](../../administratorGuide/configureCloudneetiAPIAccess/#step-1-create-cloudneeti-api-application)
 
                 metadata:
                     name: cloudneeti-agent
@@ -146,12 +147,14 @@ Note: The default value is set to scan the cluster every day at 12PM. It is reco
 -  **cloudneeti-agent-secret.yaml** set the below values.
     -  **namespace** as given in cloudneeti-namespace.yaml.
     -  **cloudneetiAPIKey** Please follow [steps](../../onboardingGuide/configureCloudneetiAgentInAKS/#set-api-key-in-base64) to generate the key and set the key in base64 format.
+    -  **cloudneetiAPIAppSecret** Please follow [steps](../../administratorGuide/configureCloudneetiAPIAccess/#step-1-create-cloudneeti-api-application) to configure API access
 
                 metadata:
                     name: cloudneeti-agent
                     namespace: <Namespace>
                 data:
                     cloudneetiAPIKey: <cloudneetiapikey>
+                    cloudneetiAPIAppSecret: <cloudneetiapiappsecret>
 
 -  **cloudneeti-agent.yaml** update value for **schedule** in spec section, set cron job schedule as per your requirement.
 

@@ -45,6 +45,9 @@ Login to Cloudneeti portal with **License Admin** role
 
 5. **Save** (2)
 
+    ![Disable AWS account Remediation](.././images/cloudneetiRemediation/AWS_Decommission.png#thumbnail_1)
+
+
 6. After successful change in the configuration policies enabled earlier will get deleted.
   In case remediation policies are to be enabled again then policies
   remediation needs to be reconfigured.

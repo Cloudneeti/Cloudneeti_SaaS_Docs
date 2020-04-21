@@ -51,6 +51,7 @@ nav:
   - Amazon Web Services: 
     - Onboarding steps: onboardingGuide/amazonWebServiceAccounts.md
     - OS baseline (optional): onboardingGuide/awsVMBaselineConfiguration.md
+    - Amazon Elastic Kubernetes Service (Amazon EKS): onboardingGuide/configureCloudneetiAgentInEKS.md
   - Microsoft Azure:
     - Onboarding steps: onboardingGuide/azureSubscriptions.md
     - Additional roles: onboardingGuide/grantAccessToAzureSubscriptionAdditionalRoles.md
