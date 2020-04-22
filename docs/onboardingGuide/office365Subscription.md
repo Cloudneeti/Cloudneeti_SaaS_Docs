@@ -294,7 +294,7 @@ they can be displayed in Cloudneeti dashboards.
 2. Review the data on dashboard
 	![Dashboard](.././images/onboardingOffice365Subscription/Dashboard.png#thumbnail)
 
-## STEP 3: Advanced security configuration
+## STEP 3: Advanced security configurations
 **This step is optional.**
 
 The following steps are done by Microsoft Azure **Subscription Owner (or
