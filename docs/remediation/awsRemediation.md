@@ -122,7 +122,7 @@ STEP 1: Provision Remediation framework on same or different AWS Account
 6.  Verify the Remediation framework deployment. Run the below commands to validate remediation
     framework deployments and necessary permissions.
 
-        bash verify-remediation-setup.sh -a <12-digit-account-id> -p <primary-deployment-region> -e <environment-prefix> -s <list of regions where auto-remediation is to be verified>
+        bash verify-remediation-setup.sh -a <AWS-account-id> -p <primary-deployment-region> -e <environment-prefix> -s <list of regions where auto-remediation is to be verified>
     
     (-a) Account Id: 12-digit AWS account Id of the account for which you want
     to verify if remediation framework is deployed or not.
@@ -179,7 +179,7 @@ STEP 1: Provision Remediation framework on same or different AWS Account
     
     c. Update the role in the account with the remediation framework so that it is aware of the new account that is/ will be added for remediation. (Make sure you have configured the account with the       remediation framework until this step using “aws configure”)
 
-        bash update-remediation-role.sh -r <12-digit-account-id> -a <12-digit-account-id>
+        bash update-remediation-role.sh -r <AWS-account-id> -a <AWS-account-id>
 
     (-r) Remediation Account Id: 12-digit AWS account Id of the account where the remediation framework is deployed
 
@@ -226,7 +226,7 @@ STEP 1: Provision Remediation framework on same or different AWS Account
     commands to validate remediation invoker resources along with necessary
     permissions along with remediation framework.
 
-        bash verify-multi-mode-remediation-setup.sh -a <12-digit-account-id> -r <12-digit-account-id> -p <primary-deployment-region> -e <environment-prefix> -s <list of regions where auto-remediation is to be verified>
+        bash verify-multi-mode-remediation-setup.sh -a <AWS-account-id> -r <AWS-account-id> -p <primary-deployment-region> -e <environment-prefix> -s <list of regions where auto-remediation is to be verified>
 
 
     (-a) New AWS Account Id: 12-digit AWS Account Id of the account which is newly added to use the remediation framework. 

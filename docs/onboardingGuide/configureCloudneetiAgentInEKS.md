@@ -3,7 +3,7 @@ STEP 8: Configuring Cloudneeti agent in Amazon Elastic Kubernetes Service (Amazo
 
 **This step is optional.**
 
-Cloudneeti includes CIS recommendations for EKS by deploying a Cloudneeti agent to Azure Kubernetes Cluster. A docker container agent is deployed to collect data for additional security policies. Cloudneeti then provides out-of-box mappings for all 13+ compliance frameworks included in the product. 
+Cloudneeti includes CIS recommendations for EKS by deploying a Cloudneeti agent to Amazon Kubernetes Cluster. A docker container agent is deployed to collect data for additional security policies. Cloudneeti then provides out-of-box mappings for all 13+ compliance frameworks included in the product. 
 
 Deploying Cloudneeti agent on Amazon Elastic Kubernetes Service (Amazon EKS) enables compliance monitoring of Kubernetes cluster for security policies [listed here](../../onboardingGuide/configureCloudneetiAgentInEKS/#kubernetes-policy-list).
 
@@ -13,7 +13,7 @@ Prerequisites
 
 | **Activity**                                                                                                               | **Description**                                                              |
 |----------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.	Download and review **yaml** files for configuration of Cloudneeti Agent | The yaml files are used to configure Cloudneeti Agent in Azure Kubernetes Cluster:<br>  [cloudneeti-namespace.yaml](https://github.com/Cloudneeti/docs_cloudneeti/blob/master/scripts/kubernetes-onboarding/cloudneeti-namespace.yaml){target=_blank}<br>[cloudneeti-agent-config.yaml](https://github.com/Cloudneeti/docs_cloudneeti/blob/master/scripts/kubernetes-onboarding/cloudneeti-agent-config.yaml){target=_blank}<br>[cloudneeti-agent-secret.yaml](https://github.com/Cloudneeti/docs_cloudneeti/blob/master/scripts/kubernetes-onboarding/cloudneeti-agent-secret.yaml){target=_blank}<br>[cloudneeti-agent-worker.yaml](https://github.com/Cloudneeti/docs_cloudneeti/blob/master/scripts/kubernetes-onboarding/cloudneeti-agent-worker.yaml){target=_blank} (In case of AKS) |
+| 1.	Download and review **yaml** files for configuration of Cloudneeti Agent | The yaml files are used to configure Cloudneeti Agent in AWS Kubernetes Cluster:<br>  [cloudneeti-namespace.yaml](https://github.com/Cloudneeti/docs_cloudneeti/blob/master/scripts/kubernetes-onboarding/cloudneeti-namespace.yaml){target=_blank}<br>[cloudneeti-agent-config.yaml](https://github.com/Cloudneeti/docs_cloudneeti/blob/master/scripts/kubernetes-onboarding/cloudneeti-agent-config.yaml){target=_blank}<br>[cloudneeti-agent-secret.yaml](https://github.com/Cloudneeti/docs_cloudneeti/blob/master/scripts/kubernetes-onboarding/cloudneeti-agent-secret.yaml){target=_blank}<br>[cloudneeti-agent-worker.yaml](https://github.com/Cloudneeti/docs_cloudneeti/blob/master/scripts/kubernetes-onboarding/cloudneeti-agent-worker.yaml){target=_blank} (In case of AKS) |
 | 2. **Workstation:** Install AWS Command Line Interface                           | To install AWS cli follow [link](https://docs.aws.amazon.com/cli/latest/userguide/install-windows.html) **AWS Command Line** Interface (CLI) is a unified tool to manage your AWS services.             |                                                      |
 | 3. **Workstation:** Install and set up kubectl to execute PowerShell commands within Cloudneeti Agent configuration script | Please follow [link](https://kubernetes.io/docs/tasks/tools/install-kubectl/){target=_blank} to install and set up **kubectl** <br>``choco install kubernetes-cli``<br>      |                                                     
 
@@ -26,7 +26,7 @@ Login to Cloudneeti portal with **License Admin** role
 
     ![Associate Kubernetes](.././images/kubernetes/CN_ManageAccounts_AWS.png#thumbnail)
 
-2.  Expand Azure (1) section
+2.  Expand **AWS** (1) section
 
 3.  Click **Configure Accounts** (2) for the Cloud account where Kubernetes Cluster
     is to be associated.
@@ -132,11 +132,11 @@ Verify Cloudneeti agent installation using Kubernetes dashboard. Please follow [
 
     ![Associate Kubernetes](.././images/kubernetes/Verify_1.png#thumbnail)
 
-2. Navigate cron jobs
+2. Navigate to a cron jobs
 
     ![Associate Kubernetes](.././images/kubernetes/Verify_2.png#thumbnail)
 
-3. Select latest job 
+3. Select a latest job 
 
     ![Associate Kubernetes](.././images/kubernetes/Verify_3.png#thumbnail)
 

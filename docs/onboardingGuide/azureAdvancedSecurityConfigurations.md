@@ -1,11 +1,11 @@
-# STEP 5: Azure Advanced security configuration
+# STEP 5: Azure Advanced security configurations
 **This step is optional.**
 
 The following steps are done by Microsoft Azure **Subscription Owner (or
 Subscription Contributor)** role.
 
 An Azure Automation Account resource is deployed to collect data for additional
-security policies [listed here](.././azureAdvancedSecurityConfiguration/#advanced-security-configuration). The Azure Active Directory control plane exposes the data only through
+security policies [listed here](.././azureAdvancedSecurityConfigurations/#advanced-security-configuration). The Azure Active Directory control plane exposes the data only through
 PowerShell that needs to run under a Global AD reader credential. Please note that the credential used should not have MFA enabled and if conditional access is used, exclude Global AD reader from the conditional access.
 
 To ensure that Cloudneeti does not ever store/have access to a global AD
@@ -18,19 +18,19 @@ the Cloudneeti API key generation.
 
 | **Information**                                                                                 | **Source / Portal to use** | **User**                |
 |-------------------------------------------------------------------------------------------------|----------------------------|-------------------------|
-| [Cloudneeti License Id](.././azureAdvancedSecurityConfiguration/#license-id)                        | Cloudneeti                 | License Admin           |
-| [Cloudneeti Account Id ](.././azureAdvancedSecurityConfiguration/#account-id)                         | Cloudneeti                 | License Admin           |
-| [Azure Active Directory Id  ](.././azureAdvancedSecurityConfiguration/#azure-directory-id)                     | Cloudneeti                 | License Admin           |
-| [Azure Subscription Id ](.././azureAdvancedSecurityConfiguration/#azure-subscription-id)    | Cloudneeti            | License Admin      |
+| [Cloudneeti License Id](.././azureAdvancedSecurityConfigurations/#license-id)                        | Cloudneeti                 | License Admin           |
+| [Cloudneeti Account Id ](.././azureAdvancedSecurityConfigurations/#account-id)                         | Cloudneeti                 | License Admin           |
+| [Azure Active Directory Id  ](.././azureAdvancedSecurityConfigurations/#azure-directory-id)                     | Cloudneeti                 | License Admin           |
+| [Azure Subscription Id ](.././azureAdvancedSecurityConfigurations/#azure-subscription-id)    | Cloudneeti            | License Admin      |
 | Azure Active Directory Global Reader Id    |  Microsoft Azure                 | Global Reader          |
 | Azure Active Directory Global Reader password  | Microsoft Azure            | Global Reader     |
-| [Cloudneeti data collector Application Id](.././azureAdvancedSecurityConfiguration/#registered-cloudneeti-application-id)  | Microsoft Azure            | Subscription Owner      |
-| [Cloudneeti data collector Application secret](.././azureAdvancedSecurityConfiguration/#registered-cloudneeti-application-secret)  | Microsoft Azure            | Subscription Owner      |
-| [Cloudneeti Environment ](.././azureAdvancedSecurityConfiguration/#cloudneeti-artifacts-and-data-collector-details)  | Cloudneeti Team            | License Admin           |
-| [Cloudneeti API key](.././azureAdvancedSecurityConfiguration/#generate-cloudneeti-api-key)   | Cloudneeti Team            | License Admin           |
+| [Cloudneeti data collector Application Id](.././azureAdvancedSecurityConfigurations/#registered-cloudneeti-application-id)  | Microsoft Azure            | Subscription Owner      |
+| [Cloudneeti data collector Application secret](.././azureAdvancedSecurityConfigurations/#registered-cloudneeti-application-secret)  | Microsoft Azure            | Subscription Owner      |
+| [Cloudneeti Environment ](.././azureAdvancedSecurityConfigurations/#cloudneeti-artifacts-and-data-collector-details)  | Cloudneeti Team            | License Admin           |
+| [Cloudneeti API key](.././azureAdvancedSecurityConfigurations/#generate-cloudneeti-api-key)   | Cloudneeti Team            | License Admin           |
 | [Cloudneeti Azure IAM Data Collector Artifacts Storage Name ](.././azureAdvancedSecurityConfiguration/#cloudneeti-artifacts-and-data-collector-details) | Cloudneeti Team            | License Admin           |
-| [Cloudneeti Azure IAM Data Collector Version ](.././azureAdvancedSecurityConfiguration/#cloudneeti-artifacts-and-data-collector-details) | Cloudneeti Team            | License Admin           |
-| [Cloudneeti Azure data collector artifacts storage access Key](.././azureAdvancedSecurityConfiguration/#cloudneeti-artifacts-and-data-collector-details) | Cloudneeti Team            | License Admin           |
+| [Cloudneeti Azure IAM Data Collector Version ](.././azureAdvancedSecurityConfigurations/#cloudneeti-artifacts-and-data-collector-details) | Cloudneeti Team            | License Admin           |
+| [Cloudneeti Azure data collector artifacts storage access Key](.././azureAdvancedSecurityConfigurations/#cloudneeti-artifacts-and-data-collector-details) | Cloudneeti Team            | License Admin           |
 
 ### Cloudneeti license and account details
 
