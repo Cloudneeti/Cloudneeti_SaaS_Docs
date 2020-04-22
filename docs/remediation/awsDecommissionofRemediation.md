@@ -59,14 +59,14 @@ Delete remediation framework deployment bucket using AWS console.
 
 1. Login to AWS console
 
-2. Search for deployment bucket with name **cn-rem-$env** having below tags
+2. Search for deployment bucket with name **cn-rem-$env-$acc_sha** having below tags
 
     | S. No. | Tag Name                      | Tag Value                                                                                                                                                                                             |
 |--------|-------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1      | aws:cloudformation:stack-name | ptreg-< stack name >                                                                                                                    |
+| 1      | aws:cloudformation:stack-name | cn-rem-$env-$acc_sha >                                                                                                                    |
 | 2      | aws:cloudformation:logical-id | S3Bucket                                                                                                                                                                                              |
 | 3      | Description                   | Cloudneeti automatic remediation solution for making cloud resource compliant                                                                                                                         |
-| 4      | aws:cloudformation:stack-id   | arn:aws:cloudformation:us-west-1:< AWSAccountID >:stack/ptreg-< stack id >  |
+| 4      | aws:cloudformation:stack-id   | arn:aws:cloudformation:us-west-1:< AWSAccountID >:stack/cn-rem-$env-$acc_sha   |
 | 5      | ServiceName                   | auto-remediation-deployment-bucket       
 
 3. Delete deployment bucket
@@ -77,7 +77,7 @@ Decommission of remediation framework take place in two phases.
 
 ### 4.1 Remove remediation configuration of multi-account remediation
 
-1.  Open bash
+1.  Open bash terminal
 
 2.  Clone the aws-remediation framework from the git
 
@@ -89,16 +89,21 @@ Decommission of remediation framework take place in two phases.
 
 4.	Remove remediation configuration of multi-account remediation
 
-        bash decommission-multi-mode-remediation.sh -a <12-digit-account-id> -e <environment-prefix>
+        bash decommission-multi-mode-remediation.sh -a <AWS-account-id> -p <primary-deployment-region> -e <Cloudneeti-environment-prefix> -s <list of regions from where the auto-remediation is to be decommissioned>
 
 (-a) Account Id: 12-digit AWS account Id of the account for which you want to disable remediation 
+
+(-p) Primary AWS Region where main framework is deployed
+
 (-e) Environment prefix: Enter any suitable prefix for your deployment
- 
+
+(-s) Secondary Region(s): List of region(s) from where the auto-remediation is to be decommissioned it should be in programmatic format e.g. us-east-1 or you can provide  ‘all’ for all regions or ‘na’ if you do not want to decommission auto-remediation from other regions.
+
 
 
 ### 4.2 Remove remediation framework
 
-1.  Open bash
+1.  Open bash terminal
 
 2.  Clone the aws-remediation framework from the git
 
@@ -110,7 +115,12 @@ Decommission of remediation framework take place in two phases.
 
 4.  Decommission remediation framework in AWS account which need to be remediated.
 
-        bash decommission-remediation-framework.sh [-a <12-digit-account-id>] [-e <environment-prefix>]
+        bash decommission-remediation-framework.sh -a <AWS-account-id> -p <primary-deployment-region> -e < Cloudneeti-environment-prefix> -s <list of regions from where the auto-remediation is to be decommissioned>
 
-    (-a) Account Id: 12-digit AWS account Id of the account where the remediation framework is deployed
-    (-e) Environment prefix: Enter any suitable prefix for your deployment
+(-a) Account Id: 12-digit AWS account Id of the account where the remediation framework is deployed 
+
+(-p) Primary AWS Region where main framework is deployed
+
+(-e) Environment prefix: Enter any suitable prefix for your deployment
+
+(-s) Secondary Region(s): List of region(s) from where the auto-remediation is to be decommissioned it should be in programmatic format e.g. us-east-1 or you can provide  ‘all’ for all regions or ‘na’ if you do not want to decommission auto-remediation from other regions.
