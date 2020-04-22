@@ -17,7 +17,7 @@ first data collection is complete.
 **3. Advanced security configuration** includes adding a script to the
 customer’s Azure account and granting the required access rights.
 
-Advanced security configuration (step 3) requires a Cloudneeti PowerShell agent
+Advanced security configurations (step 3) requires a Cloudneeti PowerShell agent
 to be installed in an Azure subscription under the same tenant where the Office
 365 subscription is located. The Cloudneeti PowerShell agent retrieves (A)
 additional configuration information from the Office 365 subscription (there are
@@ -29,7 +29,7 @@ as a JSON file to the Cloudneeti application.
 |--------|--------------------------------------------------------------|------------------------------|------------------------------------------------------|
 | 1      | Register Cloudneeti application                              | Microsoft Azure AD           | Global AD Administrator                              |
 | 2      | Add Office 365 subscription                                  | Cloudneeti                   | License Admin                                        |
-| 3      | Advanced security configuration (optional)                   |                              |                                                      |
+| 3      | Advanced security configurations (optional)                   |                              |                                                      |
 |        | a. Create application password                               | Office 365 My Account portal | Global AD Administrator                              |
 |        | b. Generate Cloudneeti API key                               | Cloudneeti API portal        | License Admin                                        |
 |        | c. Provision M365 Data Collector to your Azure Subscription  | Microsoft Azure              | Subscription Owner or Azure Subscription Contributor |
@@ -59,7 +59,7 @@ Microsoft Office 365 **Global Administrator** role is required for App
 Registration of the Cloudneeti application and granting access rights to the
 Cloudneeti application.
 
-For Advanced security configuration (optional) the following roles are required.
+For Advanced security configurations (optional) the following roles are required.
 
 | **Role**                                                   | **Product**            |
 |------------------------------------------------------------|------------------------|
@@ -80,12 +80,16 @@ provided, Cloudneeti application will not collect the data for the related
 policies. Security policies that require such permissions are listed later in
 this document.
 
-| Object                                          | Permission     | Portal to use     | Required Role |               
-|-------------------------------------------------|----------------|-------------------|------|
-| Azure Active Directory | Directory Read All Microsoft Graph permissions       | Microsoft Azure   | Global AD Admin    | 
-| Azure Active Directory | Security Events Read All Microsoft Graph permissions | Microsoft Azure   | Global AD Admin    | 
-| Azure Active Directory | DeviceManagementConfiguration.Read.All Microsoft Graph permissions | Microsoft Azure   | Global AD Admin    | 
-| Cloudneeti Agent | Office 365 Global Administrator Access Permission | Microsoft Azure   | Subscription Owner | 
+| **Object**             | **Permission**                                                     | **Portal to use** | **Required Role**  | **Step** | **Type**  | **Policies** |
+|------------------------|--------------------------------------------------------------------|-------------------|--------------------|----------|-----------|--------------|
+| Azure Active Directory | Organisation Read All Microsoft Graph permissions                  | Microsoft Azure   | Global AD Admin    | STEP 1   | mandatory | NA           |
+| Azure Active Directory | Security Events Read All Microsoft Graph permissions               | Microsoft Azure   | Global AD Admin    | STEP 1   | mandatory | 60           |
+| Azure Active Directory | DeviceManagementConfiguration.Read.All Microsoft Graph permissions | Microsoft Azure   | Global AD Admin    | STEP 1   | Optional  | 23           |
+| Azure Active Directory | Application Read All Microsoft Graph permissions                   | Microsoft Azure   | Global AD Admin    | STEP 1   | Optional  | 2            |
+| Azure Active Directory | User Read All Microsoft Graph permissions                          | Microsoft Azure   | Global AD Admin    | STEP 1   | Optional  | 2            |
+| Azure Active Directory | DeviceManagementApps.Read.All Microsoft Graph permissions          | Microsoft Azure   | Global AD Admin    | STEP 1   | Optional  | 3            |
+| Cloudneeti Agent       | Office 365 Global Administrator Access Permission                  | Microsoft Azure   | Subscription Owner | STEP 3   | Optional  | 42           |
+
 
 ## STEP 1: Register Cloudneeti Application
 
@@ -290,7 +294,7 @@ they can be displayed in Cloudneeti dashboards.
 2. Review the data on dashboard
 	![Dashboard](.././images/onboardingOffice365Subscription/Dashboard.png#thumbnail)
 
-## STEP 3: Advanced security configuration
+## STEP 3: Advanced security configurations
 **This step is optional.**
 
 The following steps are done by Microsoft Azure **Subscription Owner (or
@@ -567,7 +571,7 @@ Cloudneeti portal will show details for policies from next scan.
 ## Security Policies that Require Permissions
 
 The following Security Policies will be excluded if advanced security
-configuration is not done.
+configurations are not done.
 
 ### Micorosft graph permission - DeviceManagementConfiguration.Read.All
 Microsoft graph permission DeviceManagementConfiguration.Read.All is required to collect data for device related security policies listed below.

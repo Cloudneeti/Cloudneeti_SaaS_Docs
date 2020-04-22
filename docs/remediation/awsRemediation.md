@@ -70,6 +70,7 @@ additions in remediation framework.
 |------------------------|-------------------|--------------------------------|----------|
 | Cloudneeti AWS Account | AWS Console       | CN-Remediation-Invocation-Role | STEP 3   |
 | Remediation Framework  | AWS Console       | CN-Auto-Remediation-Role       | STEP 1   |
+| Remediation Framework  | AWS Console       | CN-Auto-Remediation-Invoker    | STEP 1   |
 
 Workstation Readiness
 ---------------------
@@ -78,8 +79,9 @@ Workstation Readiness
 |-----------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Workstation:** Install Bash                       | Either a Linux workstation or Windows Subsystem for Linux can be used.                                                                                                                      |
 | **Workstation:** Install AWS Command Line Interface | To install AWS cli follow [link](https://docs.aws.amazon.com/cli/latest/userguide/install-windows.html){target=_blank} **AWS Command Line** Interface (CLI) is a unified tool to manage your AWS services. |
-| **Workstation:** Install Nodejs                     | Download latest stable version of nodejs from [here](https://nodejs.org/en/) and install on the workstation.                                                                                |
+| **Workstation:** Install Nodejs                     | Download latest stable version of nodejs from [here](https://nodejs.org/en/){target=_blank} and install on the workstation.                                                                                |
 | **Workstation:** Install serverless npm module      | Serverless Framework is a CLI tool to manage AWS deployments. Execute below command to install serverless module, \# npm install –g serverless                                              |
+| **Workstation:** Install JQ for bash terminal     | Download latest stable version of JQ from [here](https://stedolan.github.io/jq/){target=_blank} and install on the workstation                                              |
 
 
 STEP 1: Provision Remediation framework on same or different AWS Account
@@ -87,7 +89,7 @@ STEP 1: Provision Remediation framework on same or different AWS Account
 
 ### 1.1 Local Account Remediation
 
-1.  Open bash
+1.  Open bash terminal
 
 2.  Clone the aws-remediation framework from the git
 
@@ -97,15 +99,13 @@ STEP 1: Provision Remediation framework on same or different AWS Account
 
         cd aws-auto-remediation 
 
-4.  Configure AWS account and region where remediation framework is to be deployed
+4.  Configure AWS account where remediation framework is to be deployed
 
         aws configure
 
-    <!-- TODO : confirm region -->
-
 5.  Deploy remediation framework in AWS account which need to be remediated.
 
-        bash deploy-remediation-framework.sh -a <AWS-acount-id> -e <Cloudneeti-environment-prefix> -v 1.0 
+        bash deploy-remediation-framework.sh -a <AWS-acount-id> -e <Cloudneeti-environment-prefix> -v 2.0 -s <list of regions where auto-remediation is to be enabled>
 
     (-a) Account Id: 12-digit AWS account Id of the account where you want the remediation framework to be deployed
 
@@ -113,20 +113,33 @@ STEP 1: Provision Remediation framework on same or different AWS Account
 
     (-v) Version: Enter the remediation framework version (Would be provided by Cloudneeti)
 
+    (-s) Secondary Region(s): List of Region(s) where auto-remediation is to be
+    enabled it should be in programmatic format e.g. us-east-1 or you can
+    provide ‘all’ for all regions deployment or ‘na’ if you do not want to
+    configure auto-remediation in other regions.
+
 
 6.  Verify the Remediation framework deployment. Run the below commands to validate remediation
     framework deployments and necessary permissions.
 
-        bash verify-remediation-setup.sh -a <12-digit-account-id> -e <environment-prefix> 
+        bash verify-remediation-setup.sh -a <AWS-account-id> -p <primary-deployment-region> -e <environment-prefix> -s <list of regions where auto-remediation is to be verified>
     
-    (-a) Account Id: 12-digit AWS account Id of the account for which you want to verify if remediation framework is deployed or not.
-    
+    (-a) Account Id: 12-digit AWS account Id of the account for which you want
+    to verify if remediation framework is deployed or not.
+
+    (-p) Primary AWS Region where main framework is be deployed
+
     (-e) Environment prefix: Enter any suitable prefix for your deployment
+
+    (-s) Secondary Region(s): List of Region(s) where auto-remediation is to be
+    verified it should be in programmatic format e.g. us-east-1 or you can
+    provide ‘all’ for all regions verification or ‘na’ if you do not want to
+    verify regions where auto-remediation is enabled or not.
 
 
 ### 1.2 (Optional) Multi Account Remediation
 
-1.  Open bash
+1.  Open bash terminal
 
 2.  Clone the aws-remediation framework from the git
 
@@ -144,21 +157,29 @@ STEP 1: Provision Remediation framework on same or different AWS Account
 
     b. Deploy remediation framework in AWS account which will be used as the remediator in multi-mode: 
 
-    <!-- TODO : Simplify the below stmt -->
     This step is optional if framework is already provisioned using [step 1.1](.././awsRemediation/#11-local-account-remediation)
     
-        bash deploy-remediation-framework.sh -a <12-digit-account-id> -e <environment-prefix> -v <1.0>
+        bash deploy-remediation-framework.sh -a <AWS-account-id> -p <primary-deployment-region> -e <Cloudneeti-environment-prefix> -v <2.0> -s <list of regions where auto-remediation is to be enabled>
 
-    (-a) Account Id: 12-digit AWS account Id of the account where you want the remediation framework to be deployed
+    (-a) Account Id: 12-digit AWS account Id of the account where you want the
+    remediation framework to be deployed
+
+    (-p) Primary AWS Region where main framework will be deployed
 
     (-e) Environment prefix: Enter any suitable prefix for your deployment
-    
-    (-v) Version: Enter the remediation framework version (Would be provided by Cloudneeti)
+
+    (-v) Version: Enter the remediation framework version (Would be provided by
+    Cloudneeti)
+
+    (-s) Secondary Region(s): List of Region(s) where auto-remediation is to be
+    enabled it should be in programmatic format e.g. us-east-1 or you can
+    provide ‘all’ for all regions deployment or ‘na’ if you do not want to
+    configure auto-remediation in other regions.
  
     
     c. Update the role in the account with the remediation framework so that it is aware of the new account that is/ will be added for remediation. (Make sure you have configured the account with the       remediation framework until this step using “aws configure”)
 
-        bash update-remediation-role.sh -r <12-digit-account-id> -a <12-digit-account-id>
+        bash update-remediation-role.sh -r <AWS-account-id> -a <AWS-account-id>
 
     (-r) Remediation Account Id: 12-digit AWS account Id of the account where the remediation framework is deployed
 
@@ -176,38 +197,50 @@ STEP 1: Provision Remediation framework on same or different AWS Account
 
         aws configure
 
-        
-    <!-- TODO : confirm region same as remediation framework deployed in step 2 or 3 -->
 
     c.  Deploy automatic remediation invoker resources and associated role on AWS account which is to be remediated.
 
-        bash configure-multi-mode-remediation.sh -a <12-digit-account-id> -r <12-digit-account-id> [-e <environment-prefix> -v <1.0>]
+        bash configure-multi-mode-remediation.sh -a <AWS-account-id> -r <AWS-account-id> -p <primary-deployment-region> -e <Cloudneeti-environment-prefix> -v <2.0> -s <list of regions where auto-remediation is to be enabled>
 
     
-    (-a) Account Id: 12-digit AWS account Id of the account for which you want to enable the remediation
-    
-    (-r) Remediation Account Id: 12-digit AWS account Id of the account where the remediation framework is deployed.
-    
+    (-a) Account Id: 12-digit AWS account Id of the account for which you want
+    to enable the remediation
+
+    (-r) Remediation Account Id: 12-digit AWS account Id of the account where
+    the remediation framework is deployed.
+
+    (-p) Primary AWS Region where main framework will be deployed
+
     (-e) Environment prefix: Enter any suitable prefix for your deployment
-    
-    (-v) Version: Enter the remediation framework version (Would be provided by Cloudneeti)
 
+    (-v) Version: Enter the remediation framework version (Would be provided by
+    Cloudneeti)
 
+    (-s) Secondary Region(s): List of Region(s) where auto-remediation is to be
+    enabled it should be in programmatic format e.g us-east-1 or you can provide
+    ‘all’ for all regions deployment or ‘na’ if you do not want to configure
+    auto-remediation in other regions.
 
 6.  Verify the Remediation framework deployment. After deployment of remediation
     invoker resources on AWS account which is to be remediate, run the below
     commands to validate remediation invoker resources along with necessary
     permissions along with remediation framework.
 
-        bash verify-multi-mode-remediation-setup.sh -a <12-digit-account-id> -r <12-digit-account-id>] -e <environment-prefix>
+        bash verify-multi-mode-remediation-setup.sh -a <AWS-account-id> -r <AWS-account-id> -p <primary-deployment-region> -e <environment-prefix> -s <list of regions where auto-remediation is to be verified>
 
 
     (-a) New AWS Account Id: 12-digit AWS Account Id of the account which is newly added to use the remediation framework. 
 
     (-r) Remediation Account Id: 12-digit AWS account Id of the account where the remediation framework is deployed
 
+    (-p) Primary AWS Region where main framework will be deployed
+
     (-e) Environment prefix: Enter any suitable prefix for your deployment
  
+    (-s) Secondary Region(s): List of Region(s) where auto-remediation is to be
+    verified it should be in programmatic format e.g. us-east-1 or you can
+    provide ‘all’ for all regions verification or ‘na’ if you do not want to
+    verify regions where auto-remediation is enabled or not.
 
 
 STEP 2: Configure Cloud Account for remediation 
@@ -345,17 +378,17 @@ Cloudneeti Remediation Framework
 
 ### Local Account Remediation
 
-The remediation framework uses CloudTrail, CloudWatch log group, the remediation lambda functions, and the appropriate IAM roles.
+The remediation framework uses CloudTrail, CloudWatch event rules, the remediation lambda functions, Invoker lambda function in multiple regions, and the appropriate IAM roles.
 
 ![Local Account Remediation](.././images/cloudneetiRemediation/AWS_RemediationLocal1.png#thumbnail_1)
 
 1. AWS account administrator creates/updates/reconfigure resources in aws account
 
-2. CloudTrail and CloudWatch logs group collects the events occurred in AWS account
+2. CloudTrail and CloudWatch event bus collects the events occurred in AWS account and trigger appropriate event rule
 
-3. CloudWatch triggered the auto-remediation invoker in near real-time
+3. CloudWatch event rule trigger the auto-remediation invoker in near real-time in its region
 
-4. Auto-remediation invoker lambda calls the appropriate remediation functions present in the remediation framework
+4. From different aws region Auto-remediation-invoker lambda calls the orchestrator which then call appropriate remediation functions present in the remediation framework
 
 5. Remediation functions setup required security configuration on the resources
 
@@ -369,82 +402,115 @@ The remediation framework uses CloudTrail, CloudWatch log group, the remediation
 
 Remediation lambda functions are assigned with permissions listed as per policies for related AWS services.
 
-| **Policy                                       Title**                                                                                                        | **Category**                            | **Permission Assigned**         |
-|-------------------------------------------------------------------------------------------------------|-----------------------------------------|-----------------------------------|
-| Ensure Deletion Protection feature is enabled for RDS PostgreSQL Instances                                                 | AWS - Data Protection       | rds:ModifyDBInstance                              |
-| Ensure Deletion Protection feature is enabled for RDS MariaDB Instances                                                 | AWS - Data Protection       | rds:ModifyDBInstance                              |
-| Ensure Deletion Protection feature is enabled for RDS Oracle Instances                                    | AWS - Data Protection       | rds:ModifyDBInstance                              |
-| Ensure Deletion Protection feature is enabled for RDS SQL Server Instances                                              | AWS - Data Protection       | rds:ModifyDBInstance                              |
-| Ensure that Deletion Protection feature is enabled for RDS Aurora Cluster                                               | AWS - Data Protection       | rds:ModifyDBCluster                               |
-| Ensure that Deletion Protection feature is enabled for RDS Aurora MySQL Serverless Cluster                              | AWS - Data Protection       | rds:ModifyDBCluster                               |
-| Ensure that Deletion Protection feature is enabled for RDS Aurora Postgres Serverless Cluster                           | AWS - Data Protection       | rds:ModifyDBCluster                               |
-| Ensure that Deletion Protection feature is enabled for RDS Aurora PostgreSQL Serverless Cluster                                  | AWS - Business Continuity   | rds:ModifyDBInstance                              |
-| Ensure that sufficient backup retention period is applied to RDS PostgreSQL Instances                            | AWS - Business Continuity   | rds:ModifyDBInstance                              |
-| Ensure backup retention policy is set for RDS MariaDB Instances                                                         | AWS - Business Continuity   | rds:ModifyDBInstance                              |
-| Ensure that sufficient backup retention period is applied to RDS MariaDB Instances                                      | AWS - Business Continuity   | rds:ModifyDBInstance                              |
-| Ensure backup retention policy is set for RDS Oracle Instances                                                          | AWS - Business Continuity   | rds:ModifyDBInstance                              |
-| Ensure that sufficient backup retention period is applied to RDS Oracle Instances                                       | AWS - Business Continuity   | rds:ModifyDBInstance                              |
-| Ensure backup retention policy is set for RDS SQL Server Instance                                                       | AWS - Business Continuity   | rds:ModifyDBInstance                              |
-| Ensure that sufficient backup retention period is applied to RDS SQL Server Instances                                   | AWS - Business Continuity   | rds:ModifyDBInstance                              |
-| Ensure backup retention policy is set for RDS Aurora Cluster                                                            | AWS - Business Continuity   | rds:ModifyDBCluster                               |
-| Ensure that sufficient backup retention period is applied to RDS Aurora Cluster                                         | AWS - Business Continuity   | rds:ModifyDBCluster                               |
-| Ensure that sufficient backup retention period is applied to RDS Aurora MySQL Serverless Cluster                        | AWS - Business Continuity   | rds:ModifyDBCluster                               |
-| Ensure that sufficient backup retention period is applied to RDS Aurora PostgreSQL Serverless Cluster                      | AWS - Business Continuity   | rds:ModifyDBCluster                               |
-| Ensure that public access is not given to RDS PostgreSQL Instance                                               | AWS - Networking            | rds:ModifyDBInstance                              |
-| Ensure that public access is not given to RDS MariaDB Instance                                                          | AWS - Networking            | rds:ModifyDBInstance                              |
-| Ensure that public access is not given to RDS Oracle Instances                                                          | AWS - Networking            | rds:ModifyDBInstance                              |
-| Ensure that public access is not given to RDS SQL Server Instances                                                      | AWS - Networking            | rds:ModifyDBInstance                              |
-| Ensure that public access is not given to RDS Aurora SQL Instances                                                      | AWS - Networking            | rds:ModifyDBInstance                              |
-| Ensure Auto Minor Version Upgrade feature is Enabled for RDS PostgreSQl Instances                                 | AWS - Business Continuity   | rds:ModifyDBInstance                              |
-| Ensure Auto Minor Version Upgrade feature is Enabled for RDS MariaDB Instances                                          | AWS - Business Continuity   | rds:ModifyDBInstance                              |
-| Ensure Auto Minor Version Upgrade feature is Enabled for RDS Oracle Instances                                           | AWS - Business Continuity   | rds:ModifyDBInstance                              |
-| Ensure Auto Minor Version Upgrade feature is Enabled for RDS SQL Server Instances                                       | AWS - Business Continuity   | rds:ModifyDBInstance                              |
-| Ensure Auto Minor Version Upgrade feature is Enabled for RDS Aurora SQL Instances                                       | AWS - Business Continuity   | rds:ModifyDBInstance                              |
-| Ensure Multi-AZ feature is Enabled for RDS PostgreSQL Instance                                                                 | AWS - Business Continuity   | rds:ModifyDBInstance                              |
-| Ensure Multi-AZ feature is Enabled for RDS MariaDB Instance                                                             | AWS - Business Continuity   | rds:ModifyDBInstance                              |
-| Ensure Multi-AZ feature is Enabled for RDS Oracle Instances                                                             | AWS - Business Continuity   | rds:ModifyDBInstance                              |
-| Ensure Multi-AZ feature is Enabled for RDS SQL Server Instances                                                         | AWS - Business Continuity   | rds:ModifyDBInstance                              |
-| Ensure that Copy Tags to Snapshots feature is enabled for RDS PostgreSQL Instances                                         | AWS - Governance            | rds:ModifyDBInstance                              |
-| Ensure that Copy Tags to Snapshots feature is enabled for RDS MariaDB Instances                                         | AWS - Governance            | rds:ModifyDBInstance                              |
-| Ensure that Copy Tags to Snapshots feature is enabled for RDS Oracle Instances                                          | AWS - Governance            | rds:ModifyDBInstance                              |
-| Ensure that Copy Tags to Snapshots feature is enabled for RDS SQL Server Instances                                      | AWS - Governance            | rds:ModifyDBInstance                              |
-| Ensure that Copy Tags to Snapshots feature is enabled for RDS Aurora PostgreSQL Serverless Cluster                                            | AWS - Governance            | rds:ModifyDBCluster                               |
-| Ensure that Copy Tags to Snapshots feature is enabled for RDS Aurora MySQL Serverless Cluster                           | AWS - Governance            | rds:ModifyDBCluster                               |
-| Ensure that Copy Tags to Snapshots feature is enabled for RDS Aurora PostgreSQL Serverless Cluster                        | AWS - Governance            | rds:ModifyDBCluster                               |
-| Ensure that AutoPause feature is enabled for RDS Aurora MySQL Serverless Cluster                                        | AWS - Governance            | rds:ModifyDBCluster                               |
-| Ensure that AutoPause feature is enabled for RDS Aurora PostgreSQL Serverless Cluster                                     | AWS - Governance            | rds:ModifyDBCluster                               |
-| Ensure Performance Insights feature is enabled for RDS PostgreSQL Instances                                                | AWS - Data Protection       | rds:ModifyDBInstance                              |
-| Ensure Performance Insights feature is enabled for RDS MariaDB Instances                                                | AWS - Data Protection       | rds:ModifyDBInstance                              |
-| Ensure Performance Insights feature is enabled for RDS Oracle Instances                                                 | AWS - Data Protection       | rds:ModifyDBInstance                              |
-| Ensure Performance Insights feature is enabled for RDS SQL Server Instances                                             | AWS - Data Protection       | rds:ModifyDBInstance                              |
-| Ensure Performance Insights feature is enabled for Aurora SQL Instances                                                 | AWS - Data Protection       | rds:ModifyDBInstance                              |
-| Ensure enhanced monitoring is enabled for your AWS Kinesis streams using shard-level metrics                            | AWS - Storage and Databases | kinesis:EnableEnhancedMonitoring                  |
-| Ensure Connection Draining is enabled for your AWS Classic Load Balancer                                                | AWS - Networking            | elasticloadbalancing:ModifyLoadBalancerAttributes |
-| Ensure Deletion Protection feature is enabled for your AWS Application load balancers to follow security best practices | AWS - Networking            | elasticloadbalancing:ModifyLoadBalancerAttributes |
-| Ensure Deletion Protection feature is enabled for your AWS Network load balancers to follow security best practices     | AWS - Networking            | elasticloadbalancing:ModifyLoadBalancerAttributes |
- Ensure CloudTrail log file validation is enabled                                                                        | AWS - Audit and Logging     | cloudtrail:UpdateTrail          |
-| Ensure IAM password policy requires at least one uppercase letter                                                       | AWS - Audit and Logging     | iam:UpdateAccountPasswordPolicy |
-| Ensure IAM password policy require at least one lowercase letter                                                        | AWS - Audit and Logging     | iam:UpdateAccountPasswordPolicy |
-| Ensure IAM password policy require at least one symbol                                                                  | AWS - Audit and Logging     | iam:UpdateAccountPasswordPolicy |
-| Ensure IAM password policy require at least one number                                                                  | AWS - Audit and Logging     | iam:UpdateAccountPasswordPolicy |
-| Ensure IAM password policy requires minimum length of 14 or greater                                                     | AWS - Audit and Logging     | iam:UpdateAccountPasswordPolicy |
-| Ensure IAM password policy prevents password reuse                                                                      | AWS - Audit and Logging     | iam:UpdateAccountPasswordPolicy |
-| Ensure IAM password policy expires passwords within 90 days or less                                                     | AWS - Audit and Logging     | iam:UpdateAccountPasswordPolicy |
-| Ensure CloudTrail is enabled in all regions                                                                             | AWS - Audit and Logging     | cloudtrail:UpdateTrail          |
-| Ensure S3 buckets have versioning enabled                                                                               | AWS - Business Continuity   | s3:PutBucketVersioning          |
-| Ensure rotation for customer created CMKs is enabled                                                                    | AWS - Key Management        | kms:EnableKeyRotation           |
-| Ensure Amazon S3 buckets have Default Encryption feature enabled                                                        | AWS - Storage and Databases | s3:PutEncryptionConfiguration   |
-| Ensure that your AWS S3 buckets are not publicly exposed to the Internet                                                | AWS - Storage and Databases | s3:PutBucketAcl                 |
-| Ensure AWS S3 buckets do not allow public READ access                                                                   | AWS - Storage and Databases | s3:PutBucketAcl                 |
-| Ensure AWS S3 buckets do not allow public READ_ACP access                                                               | AWS - Storage and Databases | s3:PutBucketAcl                 |
-| Ensure AWS S3 buckets do not allow public WRITE_ACP access                                                              | AWS - Storage and Databases | s3:PutBucketAcl                 |
-| Ensure AWS S3 buckets do not allow public WRITE access                                                                  | AWS - Storage and Databases | s3:PutBucketAcl                 |
-| Ensure S3 buckets do not allow FULL_CONTROL access to AWS authenticated users via S3 ACLs                               | AWS - Storage and Databases | s3:PutBucketAcl                 |
-| Ensure S3 buckets do not allow READ access to AWS authenticated users through ACLs                                      | AWS - Storage and Databases | s3:PutBucketAcl                 |
-| Ensure AWS S3 buckets do not allow READ_ACP access to AWS authenticated users using ACLs                                | AWS - Storage and Databases | s3:PutBucketAcl                 |
-| Ensure S3 buckets do not allow WRITE access to AWS authenticated users through S3 ACLs                                  | AWS - Storage and Databases | s3:PutBucketAcl                 |
-| Ensure S3 buckets do not allow WRITE_ACP access to AWS authenticated users using S3 ACLs                                | AWS - Storage and Databases | s3:PutBucketAcl                 |
-| Ensure Redshift clusters are not publicly accessible to minimize security risks                                         | AWS - Storage and Databases | redshift:ModifyCluster          |
-| Ensure Version Upgrade is enabled for Redshift clusters to automatically receive upgrades during the maintenance window | AWS - Storage and Databases | redshift:ModifyCluster          |
-| Ensure that retention period is enabled for Amazon Redshift automated snapshots                                         | AWS - Storage and Databases | redshift:ModifyCluster          |
+| Category_Name                        | Policy_Title                                                                                                            |
+|--------------------------------------|-------------------------------------------------------------------------------------------------------------------------|
+| AWS - Identity and Access Management | Ensure IAM password policy requires at least one uppercase letter                                                       |
+| AWS - Identity and Access Management | Ensure IAM password policy require at least one lowercase letter                                                        |
+| AWS - Identity and Access Management | Ensure IAM password policy require at least one symbol                                                                  |
+| AWS - Identity and Access Management | Ensure IAM password policy require at least one number                                                                  |
+| AWS - Identity and Access Management | Ensure IAM password policy requires minimum length of 14 or greater                                                     |
+| AWS - Identity and Access Management | Ensure IAM password policy prevents password reuse                                                                      |
+| AWS - Identity and Access Management | Ensure IAM password policy expires passwords within 90 days or less                                                     |
+| AWS - Identity and Access Management | Ensure IAM Database Authentication feature is enabled for Amazon Neptune clusters                                       |
+| AWS - Identity and Access Management | Ensure IAM Database Authentication feature is enabled for RDS PostgreSQL Instances                                      |
+| AWS - Identity and Access Management | Ensure IAM Database Authentication feature is enabled for RDS Aurora Cluster                                            |
+| AWS - Identity and Access Management | Ensure that Amazon RDS database snapshots are not accessible to all AWS accounts                                        |
+| AWS - Identity and Access Management | Ensure IAM Database Authentication feature is enabled for RDS MySQL Instances                                           |
+| AWS - Audit and Logging              | Ensure CloudTrail is enabled in all regions                                                                             |
+| AWS - Audit and Logging              | Ensure CloudTrail log file validation is enabled                                                                        |
+| AWS - Audit and Logging              | Ensure Global resources are included into Amazon Config service configuration                                           |
+| AWS - Audit and Logging              | Ensure Log Exports feature is enabled for RDS Aurora MySQL Serverless Cluster                                           |
+| AWS - Audit and Logging              | Ensure Log Exports feature is enabled for RDS MySQL Instance                                                            |
+| AWS - Audit and Logging              | Ensure Log Exports feature is enabled for RDS Mariadb Instance                                                          |
+| AWS - Audit and Logging              | Ensure Log Exports feature is enabled for Aurora cluster                                                                |
+| AWS - Audit and Logging              | Ensure Log Exports feature is enabled for Oracle instances                                                              |
+| AWS - Audit and Logging              | Ensure that CloudTrail trail have logging enabled                                                                       |
+| AWS - Monitoring                     | Ensure that S3 buckets are not publicly accessible                                                                      |
+| AWS - Networking                     | Ensure Deletion Protection feature is enabled for your AWS Application load balancers to follow security best practices |
+| AWS - Networking                     | Ensure Deletion Protection feature is enabled for your AWS Network load balancers to follow security best practices     |
+| AWS - Networking                     | Ensure Connection Draining is enabled for your AWS Classic Load Balancer                                                |
+| AWS - Networking                     | Ensure that public access is not given to RDS PostgreSQL Instance                                                       |
+| AWS - Networking                     | Ensure that public access is not given to RDS MariaDB Instance                                                          |
+| AWS - Networking                     | Ensure that public access is not given to RDS Oracle Instances                                                          |
+| AWS - Networking                     | Ensure that public access is not given to RDS SQL Server Instances                                                      |
+| AWS - Networking                     | Ensure that public access is not given to RDS Aurora SQL Instances                                                      |
+| AWS - Networking                     | Ensure that public access is not given to RDS MySQL Instance                                                            |
+| AWS - Data Protection                | Ensure that Server-Side Encryption is enabled for Amazon SQS queues                                                     |
+| AWS - Data Protection                | Ensure Deletion Protection feature is enabled for RDS PostgreSQL Instances                                              |
+| AWS - Data Protection                | Ensure Performance Insights feature is enabled for RDS PostgreSQL Instances                                             |
+| AWS - Data Protection                | Ensure Deletion Protection feature is enabled for RDS MariaDB Instances                                                 |
+| AWS - Data Protection                | Ensure Performance Insights feature is enabled for RDS MariaDB Instances                                                |
+| AWS - Data Protection                | Ensure that Deletion Protection feature is enabled for RDS Aurora Cluster                                               |
+| AWS - Data Protection                | Ensure Deletion Protection feature is enabled for RDS Oracle Instances                                                  |
+| AWS - Data Protection                | Ensure Performance Insights feature is enabled for RDS Oracle Instances                                                 |
+| AWS - Data Protection                | Ensure Deletion Protection feature is enabled for RDS SQL Server Instances                                              |
+| AWS - Data Protection                | Ensure Performance Insights feature is enabled for RDS SQL Server Instances                                             |
+| AWS - Data Protection                | Ensure Performance Insights feature is enabled for Aurora SQL Instances                                                 |
+| AWS - Data Protection                | Ensure that Deletion Protection feature is enabled for RDS Aurora MySQL Serverless Cluster                              |
+| AWS - Data Protection                | Ensure that Deletion Protection feature is enabled for RDS Aurora PostgreSQL Serverless Cluster                         |
+| AWS - Data Protection                | Ensure that latest block encryption algorithms is used for RDS MySQL Instance                                           |
+| AWS - Data Protection                | Ensure to enable FIPS standards on the server side for RDS MySQL Instance                                               |
+| AWS - Data Protection                | Ensure Deletion Protection feature is enabled for RDS MySQL Instances                                                   |
+| AWS - Data Protection                | Ensure Performance Insights feature is enabled for RDS MySQL Instances                                                  |
+| AWS - Business Continuity            | Ensure S3 buckets have versioning enabled                                                                               |
+| AWS - Business Continuity            | Ensure Amazon Auto Scaling Groups are utilizing cooldown periods                                                        |
+| AWS - Business Continuity            | Ensure that Termination Protection feature is enabled for AWS CloudFormation stacks                                     |
+| AWS - Business Continuity            | Ensure Amazon Neptune instances have Auto Minor Version Upgrade feature enabled                                         |
+| AWS - Business Continuity            | Ensure AWS Neptune clusters have a sufficient backup retention period set for compliance purposes                       |
+| AWS - Business Continuity            | Ensure Auto Minor Version Upgrade feature is Enabled for RDS PostgreSQL Instances                                       |
+| AWS - Business Continuity            | Ensure backup retention policy is set for RDS PostgreSQL Instances                                                      |
+| AWS - Business Continuity            | Ensure Multi-AZ feature is Enabled for RDS PostgreSQL Instance                                                          |
+| AWS - Business Continuity            | Ensure that sufficient backup retention period is applied to RDS PostgreSQL Instances                                   |
+| AWS - Business Continuity            | Ensure Auto Minor Version Upgrade feature is Enabled for RDS MariaDB Instances                                          |
+| AWS - Business Continuity            | Ensure backup retention policy is set for RDS MariaDB Instances                                                         |
+| AWS - Business Continuity            | Ensure Multi-AZ feature is Enabled for RDS MariaDB Instance                                                             |
+| AWS - Business Continuity            | Ensure that sufficient backup retention period is applied to RDS MariaDB Instances                                      |
+| AWS - Business Continuity            | Ensure backup retention policy is set for RDS Aurora Cluster                                                            |
+| AWS - Business Continuity            | Ensure that sufficient backup retention period is applied to RDS Aurora Cluster                                         |
+| AWS - Business Continuity            | Ensure Auto Minor Version Upgrade feature is Enabled for RDS Oracle Instances                                           |
+| AWS - Business Continuity            | Ensure backup retention policy is set for RDS Oracle Instances                                                          |
+| AWS - Business Continuity            | Ensure Multi-AZ feature is Enabled for RDS Oracle Instances                                                             |
+| AWS - Business Continuity            | Ensure that sufficient backup retention period is applied to RDS Oracle Instances                                       |
+| AWS - Business Continuity            | Ensure Auto Minor Version Upgrade feature is Enabled for RDS SQL Server Instances                                       |
+| AWS - Business Continuity            | Ensure backup retention policy is set for RDS SQL Server Instance                                                       |
+| AWS - Business Continuity            | Ensure that sufficient backup retention period is applied to RDS SQL Server Instances                                   |
+| AWS - Business Continuity            | Ensure Multi-AZ feature is Enabled for RDS SQL Server Instances                                                         |
+| AWS - Business Continuity            | Ensure Auto Minor Version Upgrade feature is Enabled for RDS Aurora SQL Instances                                       |
+| AWS - Business Continuity            | Ensure that sufficient backup retention period is applied to RDS Aurora MySQL Serverless Cluster                        |
+| AWS - Business Continuity            | Ensure that sufficient backup retention period is applied to RDS Aurora PostgreSQL Serverless Cluster                   |
+| AWS - Business Continuity            | Ensure Auto Minor Version Upgrade feature is Enabled for RDS MySQL Instances                                            |
+| AWS - Business Continuity            | Ensure backup retention policy is set for RDS MySQL Instances                                                           |
+| AWS - Business Continuity            | Ensure that sufficient backup retention period is applied to RDS MySQL Instances                                        |
+| AWS - Business Continuity            | Ensure Multi-AZ feature is Enabled for RDS MySQL Instance                                                               |
+| AWS - Key Management                 | Ensure rotation for customer created CMKs is enabled                                                                    |
+| AWS - Compute                        | Ensure that detailed monitoring is enabled for the AWS EC2 instances that you need to monitor closely                   |
+| AWS - Compute                        | Ensure Termination Protection feature is enabled for EC2 instances that are not part of ASGs                            |
+| AWS - Storage and Databases          | Ensure Amazon S3 buckets have Default Encryption feature enabled                                                        |
+| AWS - Storage and Databases          | Ensure that your AWS S3 buckets are not publicly exposed to the Internet                                                |
+| AWS - Storage and Databases          | Ensure AWS S3 buckets do not allow public READ access                                                                   |
+| AWS - Storage and Databases          | Ensure AWS S3 buckets do not allow public READ_ACP access                                                               |
+| AWS - Storage and Databases          | Ensure AWS S3 buckets do not allow public WRITE_ACP access                                                              |
+| AWS - Storage and Databases          | Ensure AWS S3 buckets do not allow public WRITE access                                                                  |
+| AWS - Storage and Databases          | Ensure that Amazon S3 buckets use Transfer Acceleration feature for faster data transfers                               |
+| AWS - Storage and Databases          | Ensure S3 buckets do not allow FULL_CONTROL access to AWS authenticated users via S3 ACLs                               |
+| AWS - Storage and Databases          | Ensure S3 buckets do not allow READ access to AWS authenticated users through ACLs                                      |
+| AWS - Storage and Databases          | Ensure AWS S3 buckets do not allow READ_ACP access to AWS authenticated users using ACLs                                |
+| AWS - Storage and Databases          | Ensure S3 buckets do not allow WRITE access to AWS authenticated users through S3 ACLs                                  |
+| AWS - Storage and Databases          | Ensure S3 buckets do not allow WRITE_ACP access to AWS authenticated users using S3 ACLs                                |
+| AWS - Storage and Databases          | Ensure Amazon DynamoDB tables have continuous backups enabled                                                           |
+| AWS - Storage and Databases          | Ensure Redshift clusters are not publicly accessible to minimize security risks                                         |
+| AWS - Storage and Databases          | Ensure Version Upgrade is enabled for Redshift clusters to automatically receive upgrades during the maintenance window |
+| AWS - Storage and Databases          | Ensure that retention period is enabled for Amazon Redshift automated snapshots                                         |
+| AWS - Storage and Databases          | Ensure enhanced monitoring is enabled for your AWS Kinesis streams using shard-level metrics                            |
+| AWS - Storage and Databases          | Ensure Amazon Kinesis streams enforce Server-Side Encryption (SSE)                                                      |
+| AWS - Governance                     | Ensure that Copy Tags to Snapshots feature is enabled for RDS PostgreSQL Instances                                      |
+| AWS - Governance                     | Ensure that Copy Tags to Snapshots feature is enabled for RDS MariaDB Instances                                         |
+| AWS - Governance                     | Ensure that Copy Tags to Snapshots feature is enabled for RDS Aurora Cluster                                            |
+| AWS - Governance                     | Ensure that Copy Tags to Snapshots feature is enabled for RDS Oracle Instances                                          |
+| AWS - Governance                     | Ensure that Copy Tags to Snapshots feature is enabled for RDS SQL Server Instances                                      |
+| AWS - Governance                     | Ensure that Copy Tags to Snapshots feature is enabled for RDS Aurora MySQL Serverless Cluster                           |
+| AWS - Governance                     | Ensure that AutoPause feature is enabled for RDS Aurora MySQL Serverless Cluster                                        |
+| AWS - Governance                     | Ensure that Copy Tags to Snapshots feature is enabled for RDS Aurora PostgreSQL Serverless Cluster                      |
+| AWS - Governance                     | Ensure that AutoPause feature is enabled for RDS Aurora PostgreSQL Serverless Cluster                                   |
+| AWS - Governance                     | Ensure that Copy Tags to Snapshots feature is enabled for RDS MySQL Instances                                           |
 

@@ -219,11 +219,11 @@ Verify Cloudneeti agent installation using Kubernetes dashboard. Please follow [
 
     ![Associate Kubernetes](.././images/kubernetes/Verify_1.png#thumbnail)
 
-2. Navigate cron jobs
+2. Navigate to the cron jobs
 
     ![Associate Kubernetes](.././images/kubernetes/Verify_2.png#thumbnail)
 
-3. Select latest job 
+3. Select a latest job 
 
     ![Associate Kubernetes](.././images/kubernetes/Verify_3.png#thumbnail)
 

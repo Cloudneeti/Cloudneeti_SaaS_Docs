@@ -56,7 +56,7 @@ nav:
     - Onboarding steps: onboardingGuide/azureSubscriptions.md
     - Additional roles: onboardingGuide/grantAccessToAzureSubscriptionAdditionalRoles.md
     - Key vaults: onboardingGuide/grantAccessToKeyVaults.md
-    - Advanced security configurations: onboardingGuide/azureAdvancedSecurityConfiguration.md
+    - Advanced security configurations: onboardingGuide/azureAdvancedSecurityConfigurations.md
     - Enable ASC audit policies: onboardingGuide/enableASCAuditPolicies.md
     - OS baseline and vulnerability: onboardingGuide/azureVulnerability.md
     - Azure Kubernetes Service (AKS): onboardingGuide/configureCloudneetiAgentInAKS.md

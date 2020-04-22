@@ -20,9 +20,9 @@ The following steps are required to onboard Microsoft Azure to the Cloudneeti ap
 
 4. [**Grant access to key vaults (Optional)**](../../onboardingGuide/grantAccessToKeyVaults/){target=_blank} includes giving the Cloudneeti application special permission on desired key vaults to get policy data related to secrets.
 
-5. [**Advanced Security configuration (Optional)**](../../onboardingGuide/azureAdvancedSecurityConfiguration/){target=_blank} includes adding a script to the customer’s Azure account and granting the required access rights.
+5. [**Advanced Security configurations (Optional)**](../../onboardingGuide/azureAdvancedSecurityConfigurations/){target=_blank} includes adding a script to the customer’s Azure account and granting the required access rights.
 
-    Advanced security configuration (step 5) requires a Cloudneeti PowerShell agent to be installed in an Azure subscription under the same tenant where the Azure subscription is located. The Cloudneeti PowerShell agent retrieves (A) additional configuration information from the Azure Active Directory  (there are no Azure APIs to retrieve this information) and pushes (B) this information as a JSON file to the Cloudneeti application.
+    Advanced security configurations (step 5) requires a Cloudneeti PowerShell agent to be installed in an Azure subscription under the same tenant where the Azure subscription is located. The Cloudneeti PowerShell agent retrieves (A) additional configurations information from the Azure Active Directory  (there are no Azure APIs to retrieve this information) and pushes (B) this information as a JSON file to the Cloudneeti application.
 
 6. [**Enable Azure Security Center audit policies (Optional)**](../../onboardingGuide/azureSubscriptions/#step-3-enable-azure-security-center-audit-policies){target=_blank} includes updating ASC configurations to make the Azure Cloud account compliant for listed policies using scripts.
 
@@ -39,7 +39,7 @@ An Azure docker agent is deployed to collect data for additional security polici
 | 2  | [Grant access to Azure subscription](.././azureSubscriptions/#step-2-grant-access-to-cloudneeti-registered-app)        | Microsoft Azure| Subscription Owner      | mandatory | 0            |
 | 3  | [Grant access to Azure subscription additional roles](../../onboardingGuide/grantAccessToAzureSubscriptionAdditionalRoles/){target=_blank} | Microsoft Azure| Subscription Owner           | optional  | 19            |
 | 4 | [Grant access to key vaults](../../onboardingGuide/grantAccessToKeyVaults/){target=_blank}                 | Microsoft Azure| Subscription Owner          | optional  | 1            |
-| 5 | [Advanced Security configuration](../../onboardingGuide/azureAdvancedSecurityConfiguration/){target=_blank}            | Microsoft Azure| Subscription Owner, Global AD Reader          | optional  | 18            |
+| 5 | [Advanced Security configuration](../../onboardingGuide/azureAdvancedSecurityConfigurations/){target=_blank}            | Microsoft Azure| Subscription Owner, Global AD Reader          | optional  | 18            |
 | 6 | [Enable Azure Security Center audit policies](../../onboardingGuide/enableASCAuditPolicies/){target=_blank}                     | Microsoft Azure| Subscription Owner           | optional  | 115            |
 | 7 | [Configure OS baseline and Vulnerability Assessment Solution](../../onboardingGuide/azureVulnerability/){target=_blank}                   | Microsoft Azure     | Subscription Owner           | optional | 513            |
 | 8 | [Configure Cloudneeti agent on AKS](../../onboardingGuide/configureCloudneetiAgentInAKS/){target=_blank}                   | Microsoft Azure     | Subscription Owner           | optional | 73            |
@@ -316,7 +316,7 @@ An Azure Automation Account resource is deployed to collect data for additional 
 
 To ensure that Cloudneeti does not ever store/have access to a global AD reader, it is recommended to deploy a small PowerShell script under customer’s control in their own Azure subscription. The metadata collected after running a script is then pushed to a Cloudneeti API that you registered during the Cloudneeti API key generation.
 
-Please follow [link](../../onboardingGuide/azureAdvancedSecurityConfiguration/){target=_blank} for steps.
+Please follow [link](../../onboardingGuide/azureAdvancedSecurityConfigurations/){target=_blank} for steps.
 
 ## STEP 6: Enable Azure Security Center audit policies
 
