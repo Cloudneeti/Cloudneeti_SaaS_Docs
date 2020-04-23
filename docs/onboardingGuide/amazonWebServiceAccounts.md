@@ -202,11 +202,9 @@ Once the AWS account is added to the cloud account under the Cloudneeti License,
 
     ![AWS Dashboard](.././images/amazonWebServiceAccounts/AWS-Account_Dashboard.png#thumbnail)
 
-Congratulations! You have added an AWS account to Cloudneeti application.
+    Congratulations! You have added an AWS account to Cloudneeti application.
 
-<!-- ## Configuration
-
-[Configure Notifications](../../administratorGuide/configureNotifications/) -->
+3. Verify [cloud account health status](../../onboardingGuide/azureAccountHealthStatus/) for prerequisite permissions and configurations verfied on every scan.
 
 ## OFFBOARDING
 
