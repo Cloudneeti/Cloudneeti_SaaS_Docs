@@ -97,6 +97,8 @@ resources:
 -   “Pass” status is assigned when configurations of all resources have “Pass”
     status.
 
+-   “Pass(O)” status is assigned when user overrides status.
+
 -   “Warn” status is assigned to a security policy when configurations of some
     resources have “Pass” status and the other resources have “Fail” status.
 
