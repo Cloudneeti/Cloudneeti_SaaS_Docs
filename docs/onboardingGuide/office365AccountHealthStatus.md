@@ -1,4 +1,4 @@
-Onboarding Health Status (Preview)
+Office 365 onboarding Health Status (Preview)
 ==================================
 
 Onboarding Health Status page provides insights into the state of your cloud account onboarded in Cloudneeti like missing pre-requisite permissions, configurations on every cloud account scan.
