@@ -79,15 +79,15 @@ License Admins and Account Admins will have the rights to view Cloud Account's o
 
 1. Navigate to **Cloud Accounts** (2) page from **Configurations** (1)
 
-    ![Onboarding Health Status](.././images/administratorGuide/Update_Cloud_Account.png#thumbnail)
+    ![Onboarding Health Status](.././images/onboardingHealthCheck/Manage_Accounts.png#thumbnail)
 
 2. Click **Onboarding Health Status** (2) in **Configure Account** (1)
 
-    ![Onboarding Health Status](.././images/administratorGuide/Update_Cloud_Account.png#thumbnail)
+    ![Onboarding Health Status](.././images/onboardingHealthCheck/O365_health_status_1.png#thumbnail)
 
 3. Explore prerequisite sections to see staus of related permissions and/or configurations
 
-    ![Onboarding Health Status](.././images/administratorGuide/Update_Cloud_Account.png#thumbnail)
+    ![Onboarding Health Status](.././images/onboardingHealthCheck/Azure_2.png#thumbnail)
 
 
 
