@@ -105,9 +105,11 @@ STEP 1: Provision Remediation framework on same or different AWS Account
 
 5.  Deploy remediation framework in AWS account which need to be remediated.
 
-        bash deploy-remediation-framework.sh -a <AWS-acount-id> -e <Cloudneeti-environment-prefix> -v 2.0 -s <list of regions where auto-remediation is to be enabled>
+        bash deploy-remediation-framework.sh -a <AWS-acount-id> -p <primary-deployment-region> -e <Cloudneeti-environment-prefix> -v 2.0 -s <list of regions where auto-remediation is to be enabled>
 
     (-a) Account Id: 12-digit AWS account Id of the account where you want the remediation framework to be deployed
+
+    (-p) Primary AWS Region where main framework will be deployed
 
     (-e) Environment prefix: Enter any suitable prefix for your deployment
 
@@ -193,7 +195,7 @@ STEP 1: Provision Remediation framework on same or different AWS Account
 
     b.  Execute below command to configure your aws account and region where remediation is to be enabled
     
-    **Region** should be same as remediation framework provisioned in [step 1.1](.././awsRemediation/#11-local-account-remediation) or [step 1.2](.././awsRemediation/#12-optional-multi-account-remediation)
+    **Region** should be same as primary region of remediation framework provisioned in [step 1.1](.././awsRemediation/#11-local-account-remediation) or [step 1.2](.././awsRemediation/#12-optional-multi-account-remediation)
 
         aws configure
 

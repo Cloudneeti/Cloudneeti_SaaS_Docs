@@ -78,6 +78,7 @@ nav:
     - Update API app access scope API: userGuide/updateAPIAppAccessScope.md
     - Initiate scan API: userGuide/initiateScanAPI.md
     - Scan status API: userGuide/scanStatusAPI.md
+    - Get supported benchmarks API: userGuide/getSupportedBenchmarks.md
     - Audit report API: userGuide/auditReportAPI.md
 - Administrator Guide:
   - Features and Quotas: administratorGuide/featuresAndQuotas.md
