@@ -1,4 +1,4 @@
-STEP 8: Configuring Cloudneeti agent in Amazon Elastic Kubernetes Service (Amazon EKS)
+STEP 4: Configuring Cloudneeti agent in Amazon Elastic Kubernetes Service (Amazon EKS)
 ======================================================================================
 
 **This step is optional.**

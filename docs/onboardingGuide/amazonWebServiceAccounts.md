@@ -10,8 +10,9 @@ The following steps are required to onboard AWS to the Cloudneeti application.
 |----|------------------------------------------|--------------------------------|--------------------|
 | 1  | Create an AWS role for Cloudneeti        | AWS                            | Administrator      |
 | 2  | Collect AWS account information          | AWS                            | Administrator      |
-| 3  | AWS inspector configuration (Optional) | AWS                            | Administrator      |
-| 4  | Add AWS Account                          | Cloudneeti                     | License Admin      |
+| 3  | AWS inspector configuration (Optional)   | AWS                            | Administrator      |
+| 4  | Configure Cloudneeti agent on EKS (Optional) | AWS                        | Administrator      |
+| 5  | Add AWS Account                          | Cloudneeti                     | License Admin      |
 
 **1. Creating an AWS role for Cloudneeti** includes registering a new AWS role for the Cloudneeti application and granting the required access permissions.
 
@@ -20,8 +21,10 @@ The following steps are required to onboard AWS to the Cloudneeti application.
 **3. AWS inspector configuration (Optional)** includes installing AWS Inspector Agent to assess your assessment target EC2 instances. Amazon Inspector is a security assessment service for your Amazon EC2 instances and the applications running on those instances.
 Enabling AWS Inspector for a host assessment allows various OS baselines as defined by CIS automatically light up on the Cloudneeti dashboards.
 
+**4. Configure Cloudneeti agent on EKS (Optional)** inlcudes Deploying Cloudneeti agent on Amazon Elastic Kubernetes Service (Amazon EKS) enables compliance monitoring of Kubernetes cluster. A docker agent is deployed to collect data for additional security policies. Cloudneeti then provides out-of-box mappings for all 13+ compliance frameworks included in the product.
 
-**3. Add AWS Account** to the Cloudneeti application includes adding AWS account information to the respective Cloudneeti cloud account and waiting until the first data collection is complete.
+
+**5. Add AWS Account** to the Cloudneeti application includes adding AWS account information to the respective Cloudneeti cloud account and waiting until the first data collection is complete.
 
 
 ### Required Roles
@@ -161,16 +164,22 @@ Sign into your AWS account.
 ## STEP 3: [AWS inspector configuration (Optional)](../../onboardingGuide/awsVMBaselineConfiguration/)
 AWS **Administrator** role is required for granting Cloudneeti application access rights to AWS account(s). The administrator must have enough permissions to create a role as a trusted entity with the [SecurityAudit access policy.](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_job-functions.html#jf_security-auditor)
 
-## STEP 4: Add AWS Account
+
+## STEP 4: [Configuring Cloudneeti agent in Amazon Elastic Kubernetes Service (Amazon EKS) (Optional)](../../onboardingGuide/configureCloudneetiAgentInEKS/) 
+
+Includes installing AWS Inspector Agent to assess your assessment target EC2 instances. Amazon Inspector is a security assessment service for your Amazon EC2 instances and the applications running on those instances.
+Enabling AWS Inspector for a host assessment allows various OS baselines as defined by CIS automatically light up on the Cloudneeti dashboards
+
+## STEP 5: Add AWS Account
 The following steps are executed by Cloudneeti application **License Admin** role.
 
-### 4.1 Activate the License
+### 5.1 Activate the License
 
 1.  Log in to the Cloudneeti application with **License Admin** role.
 2.  Click on **Activate License**
     ![Activate License](.././images/azureSubscriptions/Activate_License.png#thumbnail)
 
-### 4.2 Add AWS Account
+### 5.2 Add AWS Account
 Log into the Cloudneeti application.
 
 1.	Select **AWS connector** (1) and click **Continue**(2)
@@ -184,7 +193,7 @@ Log into the Cloudneeti application.
     ![Add account](.././images/amazonWebServiceAccounts/Add_Account.png#thumbnail)
 
 
-### 4.3 Data Collection
+### 5.3 Data Collection
 Once the AWS account is added to the cloud account under the Cloudneeti License, it requires about 5 minutes for the data to be collected and processed,before they can be displayed in Cloudneeti dashboards. 
 
 1.	Select **Dashboard** on the menu
