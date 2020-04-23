@@ -62,11 +62,34 @@ Configure Data Collection allows users to set the frequency of data collection t
 
 ![Configure Data Collection](.././images/administratorGuide/Configure_Data_Collection_Weekly.png#thumbnail)
 
+
 ### Update Cloud Account
 
 Update Cloud Account allows to update Cloud Account name
 	
 ![Update Cloud Account](.././images/administratorGuide/Update_Cloud_Account.png#thumbnail)
+
+
+
+### Onboarding Health Status (Preview)
+
+Onboarding Health Status page provides insights into the state of your cloud account onboarded in Cloudneeti like missing pre-requisite permissions, configurations on every cloud account scan.
+
+License Admins and Account Admins will have the rights to view Cloud Account's onboarding Health Status
+
+1. Navigate to **Cloud Accounts** (2) page from **Configurations** (1)
+
+    ![Onboarding Health Status](.././images/administratorGuide/Update_Cloud_Account.png#thumbnail)
+
+2. Click **Onboarding Health Status** (2) in **Configure Account** (1)
+
+    ![Onboarding Health Status](.././images/administratorGuide/Update_Cloud_Account.png#thumbnail)
+
+3. Explore prerequisite sections to see staus of related permissions and/or configurations
+
+    ![Onboarding Health Status](.././images/administratorGuide/Update_Cloud_Account.png#thumbnail)
+
+
 
 ### Re-Scan
 
