@@ -225,7 +225,7 @@ Cloudneeti application to be able to collect the Azure AD data.
 Organization.Read.All [Refer here](https://docs.microsoft.com/en-us/graph/permissions-reference#organization-permissions){target=_blank} | Application |
 | Microsoft.Graph | SecurityEvents.Read.All [Refer here](https://docs.microsoft.com/en-us/graph/permissions-reference#security-permissions){target=_blank}  | Application |
 | Microsoft.Graph | DeviceManagementConfiguration.Read.All [Refer here](https://docs.microsoft.com/en-us/graph/permissions-reference#intune-device-management-permissions){target=_blank} | Application |
-| Microsoft.Graph | DeviceManagementApps.Read.All [Refer here]https://docs.microsoft.com/en-us/graph/permissions-reference#intune-device-management-permissions){target=_blank}     | Application |
+| Microsoft.Graph | DeviceManagementApps.Read.All [Refer here](https://docs.microsoft.com/en-us/graph/permissions-reference#intune-device-management-permissions){target=_blank}     | Application |
 | Microsoft.Graph | Application.Read.All [Refer here](https://docs.microsoft.com/en-us/graph/permissions-reference#application-resource-permissions){target=_blank}          | Application |
 | Microsoft.Graph | User.Read.All [Refer here](https://docs.microsoft.com/en-us/graph/permissions-reference#user-permissions){target=_blank}  | Application |
 
