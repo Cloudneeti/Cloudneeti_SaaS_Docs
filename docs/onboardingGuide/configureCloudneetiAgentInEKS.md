@@ -74,7 +74,7 @@ Please use below steps to deploy Cloudneeti Agent on EKS
 -  **cloudneeti-agent-secret.yaml** set the below values.
     -  **namespace** as given in cloudneeti-namespace.yaml.
     -  **cloudneetiAPIKey** Please follow [steps](../../onboardingGuide/configureCloudneetiAgentInEKS/#set-api-key-in-base64) to generate the key and set the key in base64 format.
-    - **cloudneetiAPIAppSecret** Please follow [steps](../../administratorGuide/configureCloudneetiAPIAccess/#step-1-create-cloudneeti-api-application) to configure API access
+    - **cloudneetiAPIAppSecret** Please follow [steps](../../administratorGuide/configureCloudneetiAPIAccess/#step-1-create-cloudneeti-api-application) to configure API access for API **Account.InsertKubernetesClusterData**
 
                 metadata:
                     name: cloudneeti-agent
