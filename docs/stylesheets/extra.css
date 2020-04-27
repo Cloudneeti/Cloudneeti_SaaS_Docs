@@ -207,6 +207,10 @@ table thead th {
     font-weight: 700;
     color: #000 !important;
 }
+.release_notes details {
+    border-left: .2rem solid #9fa6a9;
+}
+.release_notes details>summary {background-color: rgb(234, 239, 241);}
 .release_notes .md-typeset__table {
     width: 100%;
 }
@@ -216,7 +220,7 @@ table thead th {
 .release_notes summary:before {
     content: "+";
 }
-.release_notes  details[open] summary:before {
+.release_notes details[open] summary:before {
     content: "-";
 }
 .release_notes details>summary:before {
