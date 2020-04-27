@@ -51,16 +51,20 @@ nav:
   - Amazon Web Services: 
     - Onboarding steps: onboardingGuide/amazonWebServiceAccounts.md
     - OS baseline (optional): onboardingGuide/awsVMBaselineConfiguration.md
+    - Amazon Elastic Kubernetes Service (Amazon EKS): onboardingGuide/configureCloudneetiAgentInEKS.md
+    - AWS onboarding health status: onboardingGuide/awsAccountHealthStatus.md
   - Microsoft Azure:
     - Onboarding steps: onboardingGuide/azureSubscriptions.md
     - Additional roles: onboardingGuide/grantAccessToAzureSubscriptionAdditionalRoles.md
     - Key vaults: onboardingGuide/grantAccessToKeyVaults.md
-    - Advanced security configurations: onboardingGuide/azureAdvancedSecurityConfiguration.md
+    - Advanced security configurations: onboardingGuide/azureAdvancedSecurityConfigurations.md
     - Enable ASC audit policies: onboardingGuide/enableASCAuditPolicies.md
     - OS baseline and vulnerability: onboardingGuide/azureVulnerability.md
     - Azure Kubernetes Service (AKS): onboardingGuide/configureCloudneetiAgentInAKS.md
+    - Azure onboarding health status: onboardingGuide/azureAccountHealthStatus.md
   - Office 365: 
     - Onboarding steps: onboardingGuide/office365Subscription.md
+    - Office 365 onboarding health status: onboardingGuide/office365AccountHealthStatus.md
     - Upgrade advanced security configurations: onboardingGuide/office365AdvanceSecurityConfigurationUpgrade.md
 - User Guide:
   - Sign In and Sign Out: gettingStarted/signInAndSignOut.md
@@ -77,6 +81,7 @@ nav:
     - Update API app access scope API: userGuide/updateAPIAppAccessScope.md
     - Initiate scan API: userGuide/initiateScanAPI.md
     - Scan status API: userGuide/scanStatusAPI.md
+    - Get supported benchmarks API: userGuide/getSupportedBenchmarks.md
     - Audit report API: userGuide/auditReportAPI.md
 - Administrator Guide:
   - Features and Quotas: administratorGuide/featuresAndQuotas.md

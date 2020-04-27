@@ -17,7 +17,7 @@ first data collection is complete.
 **3. Advanced security configuration** includes adding a script to the
 customer’s Azure account and granting the required access rights.
 
-Advanced security configuration (step 3) requires a Cloudneeti PowerShell agent
+Advanced security configurations (step 3) requires a Cloudneeti PowerShell agent
 to be installed in an Azure subscription under the same tenant where the Office
 365 subscription is located. The Cloudneeti PowerShell agent retrieves (A)
 additional configuration information from the Office 365 subscription (there are
@@ -29,7 +29,7 @@ as a JSON file to the Cloudneeti application.
 |--------|--------------------------------------------------------------|------------------------------|------------------------------------------------------|
 | 1      | Register Cloudneeti application                              | Microsoft Azure AD           | Global AD Administrator                              |
 | 2      | Add Office 365 subscription                                  | Cloudneeti                   | License Admin                                        |
-| 3      | Advanced security configuration (optional)                   |                              |                                                      |
+| 3      | Advanced security configurations (optional)                   |                              |                                                      |
 |        | a. Create application password                               | Office 365 My Account portal | Global AD Administrator                              |
 |        | b. Generate Cloudneeti API key                               | Cloudneeti API portal        | License Admin                                        |
 |        | c. Provision M365 Data Collector to your Azure Subscription  | Microsoft Azure              | Subscription Owner or Azure Subscription Contributor |
@@ -59,7 +59,7 @@ Microsoft Office 365 **Global Administrator** role is required for App
 Registration of the Cloudneeti application and granting access rights to the
 Cloudneeti application.
 
-For Advanced security configuration (optional) the following roles are required.
+For Advanced security configurations (optional) the following roles are required.
 
 | **Role**                                                   | **Product**            |
 |------------------------------------------------------------|------------------------|
@@ -80,12 +80,19 @@ provided, Cloudneeti application will not collect the data for the related
 policies. Security policies that require such permissions are listed later in
 this document.
 
-| Object                                          | Permission     | Portal to use     | Required Role |               
-|-------------------------------------------------|----------------|-------------------|------|
-| Azure Active Directory | Directory Read All Microsoft Graph permissions       | Microsoft Azure   | Global AD Admin    | 
-| Azure Active Directory | Security Events Read All Microsoft Graph permissions | Microsoft Azure   | Global AD Admin    | 
-| Azure Active Directory | DeviceManagementConfiguration.Read.All Microsoft Graph permissions | Microsoft Azure   | Global AD Admin    | 
-| Cloudneeti Agent | Office 365 Global Administrator Access Permission | Microsoft Azure   | Subscription Owner | 
+Login to [Azure Portal](https://portal.azure.com/){target=_blank} with **Global AD
+Administrator** associated to your Office 365 Subscription role.
+
+| **Object**                      | **Permission**                                                     |  **Required Role**  | **Step** | **Type**  | **Policies** |
+|----------------------------------|--------------------------------------------------------------------|--------------------|----------|-----------|--------------|
+| Azure Active Directory | Organisation Read All Microsoft Graph permissions                  |  Global AD Admin    | STEP 1   | mandatory | NA           |
+| Azure Active Directory | Security Events Read All Microsoft Graph permissions               |  Global AD Admin    | STEP 1   | mandatory | NA           |
+| Azure Active Directory | DeviceManagementConfiguration.Read.All Microsoft Graph permissions |  Global AD Admin    | STEP 1   | Optional  | [23](../../onboardingGuide/office365Subscription/#micorosft-graph-permission-devicemanagementconfigurationreadall)           |
+| Azure Active Directory | Application Read All Microsoft Graph permissions                   |  Global AD Admin    | STEP 1   | Optional  | [2](../../onboardingGuide/office365Subscription/#micorosft-graph-permission-applicationreadall)            |
+| Azure Active Directory | User Read All Microsoft Graph permissions                          |  Global AD Admin    | STEP 1   | Optional  | [2](../../onboardingGuide/office365Subscription/#micorosft-graph-permission-userreadall)            |
+| Azure Active Directory | DeviceManagementApps.Read.All Microsoft Graph permissions          |  Global AD Admin    | STEP 1   | Optional  | [3](../../onboardingGuide/office365Subscription/#micorosft-graph-permission-devicemanagementappsreadall)            |
+| Cloudneeti Agent       | Office 365 Global Administrator Access Permission                  |  Subscription Owner | STEP 3   | Optional  | [42](../../onboardingGuide/office365Subscription/#advanced-security-configurations)           |
+
 
 ## STEP 1: Register Cloudneeti Application
 
@@ -125,11 +132,17 @@ Administrator** associated to your Office 365 Subscription role.
 
 Add Microsoft Graph permissions and grant admin consent
 
-The Microsoft graph permission **Directory.Read.All** allows the app to read data in the organization's directory, such as user attributes, groups, and applications, without a signed-in user.
+The Microsoft graph permission **Organisation.Read.All** allows the app to read data in the organization's directory, such as user attributes, groups, and applications, without a signed-in user.
 
 Microsoft graph permission **SecurityEvents.Read.All** allows the app to read Office 365 Secure Score data. 
 
 Microsoft graph **DeviceManagementConfiguration.Read.All** allows the app to read properties of Microsoft Intune-managed device configuration and device compliance policies and their assignment to groups.
+
+Microsoft graph **Application.Read.All** allows the app to read properties of application.
+
+Microsoft graph **User.Read.All** allows the app to read properties of users.
+
+Microsoft graph **DeviceManagementApps.Read.All** allows the app to read properties of Microsoft Intune-managed application configuration and application compliance policies and their assignment to groups.
 
 You can find more details about the Microsoft Graph API permission [here](https://docs.microsoft.com/en-us/graph/permissions-reference){target=_blank}.
 
@@ -195,19 +208,28 @@ The Azure **Global AD Administrator** needs to grant permissions to the
 Cloudneeti application to be able to collect the Azure AD data.
 
 1. Click **Azure Active Directory**
+
 2. Click **App registrations**
-3. Find and select Cloudneeti application under Display NameGo to **API
-    permissions**
-4. Click **Grant admin consent** in the Grant consent section
-5. Review permissions as below listed (1)
+
+3. Find and select Cloudneeti application under Display Name
+
+4. Go to **API permissions**
+
+5. Click **Grant admin consent** in the Grant consent section
+
+6. Review permissions as below listed (1)
 
 	| API             | Permission Name                                                                                                     | Type        |
 |-----------------|---------------------------------------------------------------------------------------------------------------------|-------------|
-| Microsoft.Graph | Directory.Read.All [Refer here](https://docs.microsoft.com/en-us/graph/permissions-reference#directory-permissions){target=_blank} | Application |
+| Microsoft.Graph | 
+Organization.Read.All [Refer here](https://docs.microsoft.com/en-us/graph/permissions-reference#organization-permissions){target=_blank} | Application |
 | Microsoft.Graph | SecurityEvents.Read.All [Refer here](https://docs.microsoft.com/en-us/graph/permissions-reference#security-permissions){target=_blank}  | Application |
-| Microsoft.Graph | DeviceManagementConfiguration.Read.All [Refer here](https://docs.microsoft.com/en-us/graph/permissions-reference#intune-device-management-permissions){target=_blank}                                                                                           | Application |
+| Microsoft.Graph | DeviceManagementConfiguration.Read.All [Refer here](https://docs.microsoft.com/en-us/graph/permissions-reference#intune-device-management-permissions){target=_blank} | Application |
+| Microsoft.Graph | DeviceManagementApps.Read.All [Refer here](https://docs.microsoft.com/en-us/graph/permissions-reference#intune-device-management-permissions){target=_blank}     | Application |
+| Microsoft.Graph | Application.Read.All [Refer here](https://docs.microsoft.com/en-us/graph/permissions-reference#application-resource-permissions){target=_blank}          | Application |
+| Microsoft.Graph | User.Read.All [Refer here](https://docs.microsoft.com/en-us/graph/permissions-reference#user-permissions){target=_blank}  | Application |
 
-6. Click **Grant admin consent** in the Grant consent section (2)
+7. Click **Grant admin consent** in the Grant consent section (2)
 	![Grant_Admin_Consent](.././images/onboardingOffice365Subscription/Grant_Admin_Consent.png#thumbnail)
 
 ### 1.3 Collect Information
@@ -290,7 +312,7 @@ they can be displayed in Cloudneeti dashboards.
 2. Review the data on dashboard
 	![Dashboard](.././images/onboardingOffice365Subscription/Dashboard.png#thumbnail)
 
-## STEP 3: Advanced security configuration
+## STEP 3: Advanced security configurations
 **This step is optional.**
 
 The following steps are done by Microsoft Azure **Subscription Owner (or
@@ -567,27 +589,63 @@ Cloudneeti portal will show details for policies from next scan.
 ## Security Policies that Require Permissions
 
 The following Security Policies will be excluded if advanced security
-configuration is not done.
+configurations are not done.
 
 ### Micorosft graph permission - DeviceManagementConfiguration.Read.All
 Microsoft graph permission DeviceManagementConfiguration.Read.All is required to collect data for device related security policies listed below.
 
-| **Control No** | **Policy Title**                                                                                                                                                    | **Category**                     |
-|---------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------|
-| M300.1        | 1. Ensure that mobile devices require complex passwords with atleast two character sets to prevent brute force attacks                                                                                      | Device         |
-| M300.2          | 2. Ensure that mobile device encryption is enabled to prevent unauthorized access to mobile data                                                                                      | Device         |
-| M300.3          | 3. Require mobile devices to manage email profile                                                                                      | Device         |
-| M300.4          | 4. Ensure that mobile devices require a complex password with a minimum password length to prevent brute force attacks                                                                                     | Device         |
-| M300.6          | 5. Ensure that mobile devices are set to never expire passwords                                                                                      | Device         |
-| M300.7          | 6. Require mobile devices to use a password                                                                                     | Device         |
-| M300.8          | 7. Ensure that users cannot connect from devices that are jail broken or rooted                                                                                       | Device         |
-| M300.9         | 8. Ensure that mobile devices require complex passwords to prevent brute force attacks                                                                                     | Device         |
-| M300.10          | 9. Enable mobile devices to wipe on multiple sign-in failures to prevent brute force compromise                                                                                    | Device         |
-| M300.12          | 10. Ensure that settings are enable to lock multiple devices after a period of inactivity to prevent unauthorized access                                                                                       | Device         |
-| M300.13          | 11. Ensure that mobile device password reuse is prohibited                                                                                       | Device         |
-| M300.35          | 12. Ensure that devices connecting have local firewall enabled                                                                                     | Device         |
+| **Category**           | **Policy Title**                                                                                                     |
+|---------------|-----------------------------------------------------------------|
+| M365 - Device          | Ensure that mobile devices require complex passwords with atleast two character sets to prevent brute force attacks  |
+| M365 - Device          | Ensure that mobile device encryption is enabled to prevent unauthorized access to mobile data                        |
+| M365 - Device          | Require mobile devices to manage email profile                                                                       |
+| M365 - Device          | Ensure that mobile devices require a complex password with a minimum password length to prevent brute force attacks  |
+| M365 - Device          | Ensure that mobile devices are set to never expire passwords                                                         |
+| M365 - Device          | Require mobile devices to use a password                                                                             |
+| M365 - Device          | Ensure that users cannot connect from devices that are jail broken or rooted                                         |
+| M365 - Device          | Ensure that mobile devices require complex passwords to prevent brute force attacks                                  |
+| M365 - Device          | Enable mobile devices to wipe on multiple sign-in failures to prevent brute force compromise                         |
+| M365 - Device          | Ensure that settings are enable to lock multiple devices after a period of inactivity to prevent unauthorized access |
+| M365 - Device          | Ensure that mobile device password reuse is prohibited                                                               |
+| M365 - Device          | Create a Microsoft Intune Compliance Policy for iOS                                                                  |
+| M365 - Device          | Create a Microsoft Intune Compliance Policy for Android                                                              |
+| M365 - Device          | Create a Microsoft Intune Compliance Policy for Android for Work                                                     |
+| M365 - Device          | Create a Microsoft Intune Compliance Policy for Windows                                                              |
+| M365 - Device          | Create a Microsoft Intune Compliance Policy for macOS                                                                |
+| M365 - Device          | Create a Microsoft Intune Configuration Profile for iOS                                                              |
+| M365 - Device          | Create a Microsoft Intune Configuration Profile for Android                                                          |
+| M365 - Device          | Create a Microsoft Intune Configuration Profile for Android for Work                                                 |
+| M365 - Device          | Create a Microsoft Intune Configuration Profile for Windows                                                          |
+| M365 - Device          | Create a Microsoft Intune Configuration Profile for macOS                                                            |
+| M365 - Device          | Enable Enhanced Jailbreak Detection in Microsoft Intune                                                              |
+| M365 - Device          | Ensure that devices connecting have local firewall enabled                                                           |
 
-### Advanced security configuration
+### Micorosft graph permission - Application.Read.All
+Microsoft graph permission Application.Read.All is required to collect data for application related security policies listed below.
+
+| Category               | Policy Title                                                                                                         |
+|---------------|-----------------------------------------------------------------|
+| M365 - Identity        | Ensure that Service Principal Certificates are renewed before it expires                                             |
+| M365 - Apps            | Ensure that AD Application keys are rotated before they expires                                                      |
+
+### Micorosft graph permission - User.Read.All
+Microsoft graph permission User.Read.All is required to collect data for user related security policies listed below.
+
+| Category               | Policy Title                                                                                                         |
+|---------------|-----------------------------------------------------------------|
+| M365 - Identity        | Enforce the policy to set Password to ‘always' expire in Azure Active Directory for all Organization Users           |
+| M365 - Identity        | Ensure that there are no guest users                                                                                 |
+
+### Micorosft graph permission - DeviceManagementApps.Read.All
+Microsoft graph permission DeviceManagementApps.Read.All is required to collect data for device related security policies listed below.
+
+| Category      | Policy Title                                                    |
+|---------------|-----------------------------------------------------------------|
+| M365 - Device | Create a Microsoft Intune App Protection Policy for iOS         |
+| M365 - Device | Create a Microsoft Intune App Protection Policy for Android     |
+| M365 - Device | Create a Microsoft Intune Windows Information Protection Policy |
+
+### Advanced security configurations
 
 The advanced security policy data collector enables the following 43 policies as
 available in the Center for Internet Security (CIS) Microsoft 365 benchmark
@@ -640,9 +698,6 @@ Advanced security configuration done using Office 365 App Password will not enab
 | M400.47 | 40. Ensure that 'Users who can manage Office 365 groups' is set to 'None'                                                | M365 - Identity |
 | M400.48 | 41. Ensure that 'Enable All Users group' is set to 'Yes'                                                                 | M365 - Identity |
 | M400.49 | 42. Ensure that 'Require Multi-Factor Auth to join devices' is set to 'Yes'                                              | M365 - Identity |
-
-
-
 
 
 <div class="policy-json-code">

@@ -207,9 +207,31 @@ table thead th {
     font-weight: 700;
     color: #000 !important;
 }
+.release_notes details {
+    border-left: .2rem solid #9fa6a9;
+}
+.release_notes details>summary {background-color: rgb(234, 239, 241);}
 .release_notes .md-typeset__table {
     width: 100%;
 }
+.release_notes summary::-webkit-details-marker {
+    display: none
+}
+.release_notes summary:before {
+    content: "+";
+}
+.release_notes details[open] summary:before {
+    content: "-";
+}
+.release_notes details>summary:before {
+    content: "+";
+}
+.release_notes details>summary:after {
+    content: "";
+}
+.release_notes details .md-typeset__table{padding: 0;}
+.release_notes details {padding-left: 5px;}
+.release_notes details .md-typeset__scrollwrap{margin: 0em 0rem;}
 .policy-json-code code {
     height: 300px;
     overflow-y: auto;

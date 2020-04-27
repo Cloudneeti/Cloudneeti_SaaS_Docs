@@ -20,9 +20,9 @@ The following steps are required to onboard Microsoft Azure to the Cloudneeti ap
 
 4. [**Grant access to key vaults (Optional)**](../../onboardingGuide/grantAccessToKeyVaults/){target=_blank} includes giving the Cloudneeti application special permission on desired key vaults to get policy data related to secrets.
 
-5. [**Advanced Security configuration (Optional)**](../../onboardingGuide/azureAdvancedSecurityConfiguration/){target=_blank} includes adding a script to the customer’s Azure account and granting the required access rights.
+5. [**Advanced Security configurations (Optional)**](../../onboardingGuide/azureAdvancedSecurityConfigurations/){target=_blank} includes adding a script to the customer’s Azure account and granting the required access rights.
 
-    Advanced security configuration (step 5) requires a Cloudneeti PowerShell agent to be installed in an Azure subscription under the same tenant where the Azure subscription is located. The Cloudneeti PowerShell agent retrieves (A) additional configuration information from the Azure Active Directory  (there are no Azure APIs to retrieve this information) and pushes (B) this information as a JSON file to the Cloudneeti application.
+    Advanced security configurations (step 5) requires a Cloudneeti PowerShell agent to be installed in an Azure subscription under the same tenant where the Azure subscription is located. The Cloudneeti PowerShell agent retrieves (A) additional configuration information from the Azure Active Directory  (there are no Azure APIs to retrieve this information) and pushes (B) this information as a JSON file to the Cloudneeti application.
 
 6. [**Enable Azure Security Center audit policies (Optional)**](../../onboardingGuide/azureSubscriptions/#step-3-enable-azure-security-center-audit-policies){target=_blank} includes updating ASC configurations to make the Azure Cloud account compliant for listed policies using scripts.
 
@@ -39,7 +39,7 @@ An Azure docker agent is deployed to collect data for additional security polici
 | 2  | [Grant access to Azure subscription](.././azureSubscriptions/#step-2-grant-access-to-cloudneeti-registered-app)        | Microsoft Azure| Subscription Owner      | mandatory | 0            |
 | 3  | [Grant access to Azure subscription additional roles](../../onboardingGuide/grantAccessToAzureSubscriptionAdditionalRoles/){target=_blank} | Microsoft Azure| Subscription Owner           | optional  | 19            |
 | 4 | [Grant access to key vaults](../../onboardingGuide/grantAccessToKeyVaults/){target=_blank}                 | Microsoft Azure| Subscription Owner          | optional  | 1            |
-| 5 | [Advanced Security configuration](../../onboardingGuide/azureAdvancedSecurityConfiguration/){target=_blank}            | Microsoft Azure| Subscription Owner, Global AD Reader          | optional  | 18            |
+| 5 | [Advanced Security configuration](../../onboardingGuide/azureAdvancedSecurityConfigurations/){target=_blank}            | Microsoft Azure| Subscription Owner, Global AD Reader          | optional  | 18            |
 | 6 | [Enable Azure Security Center audit policies](../../onboardingGuide/enableASCAuditPolicies/){target=_blank}                     | Microsoft Azure| Subscription Owner           | optional  | 115            |
 | 7 | [Configure OS baseline and Vulnerability Assessment Solution](../../onboardingGuide/azureVulnerability/){target=_blank}                   | Microsoft Azure     | Subscription Owner           | optional | 513            |
 | 8 | [Configure Cloudneeti agent on AKS](../../onboardingGuide/configureCloudneetiAgentInAKS/){target=_blank}                   | Microsoft Azure     | Subscription Owner           | optional | 73            |
@@ -310,13 +310,13 @@ If the Key Vault access policy is not added, Cloudneeti application will not be 
 
 Please follow [link](../../onboardingGuide/grantAccessToKeyVaults/){target=_blank} for steps.
 
-## STEP 5: Advanced Security configuration 
+## STEP 5: Advanced Security configurations 
 **This step is optional.**
 An Azure Automation Account resource is deployed to collect data for additional security policies listed here . The Azure Active Directory control plane exposes the data only through PowerShell that needs to run under a Global AD reader credential.
 
 To ensure that Cloudneeti does not ever store/have access to a global AD reader, it is recommended to deploy a small PowerShell script under customer’s control in their own Azure subscription. The metadata collected after running a script is then pushed to a Cloudneeti API that you registered during the Cloudneeti API key generation.
 
-Please follow [link](../../onboardingGuide/azureAdvancedSecurityConfiguration/){target=_blank} for steps.
+Please follow [link](../../onboardingGuide/azureAdvancedSecurityConfigurations/){target=_blank} for steps.
 
 ## STEP 6: Enable Azure Security Center audit policies
 
@@ -367,18 +367,22 @@ The following steps are done by Cloudneeti application **License Admin** role.
 6.  You will receive a confirmation that the Azure subscription has been added.
     ![Add Account](.././images/azureSubscriptions/Account_Success.png#thumbnail)
 
-### 9.3 Data Collection
+### 9.3 Data Collection and verfication
 
 Once the Azure subscription is added to the cloud account under Cloudneeti
 License, it requires about 5 minutes for the data to be collected and processed,
 before they can be displayed in Cloudneeti dashboards.
+
 
 1.  Select **Dashboard** on the menu
 
 2.  Review the data on dashboard
     ![Data Collection](.././images/azureSubscriptions/Dashboard.png#thumbnail)
 
-Congratulations! You have added an Azure subscription to Cloudneeti application.
+    Congratulations! You have added an Azure subscription to Cloudneeti application.
+
+4. Verify [cloud account health status](../../onboardingGuide/azureAccountHealthStatus/) for prerequisite permissions and configurations verfied on every scan.   
+
 
 **Note:**
 Cloudneeti uses the App Registration (aka service principal) to register Cloudneeti’s MPN ID (4758633) as a Partner to your Azure subscription. It usually takes about a month for Microsoft to reflect this association on the [Customer's Partner Admin Link (PAL) portal page](https://portal.azure.com/#blade/Microsoft_Azure_Billing/managementpartnerblade){target=_blank}.
