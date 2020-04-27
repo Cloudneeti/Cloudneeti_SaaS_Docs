@@ -213,9 +213,7 @@ Sample Report
         "statusCode": 200,
         "message": "Request Successful"
     }
-
-
-    ]
+]
 </code>
 </pre>
 </div>

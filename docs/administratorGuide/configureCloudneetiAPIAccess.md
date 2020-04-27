@@ -34,7 +34,7 @@ The following steps are done by the Cloudneeti application License Admin role.
 
 9. **Save** (2)
 
-    ![Create API Application](.././images/cloudneetiAPIAccess/Create_API_Application_3.png#thumbnail)
+    ![Create API Application](.././images/cloudneetiAPIAccess/Create_API_Application_3a.png#thumbnail)
 
 9. Copy **Cloudneeti API application secret** (1) and click **Done** (2)
     </br> Note : Please record the API Application secret that appears in the dialog window because you will not be able to retrieve the secret again after leaving the page.
@@ -58,8 +58,8 @@ The following steps are done by the Cloudneeti application License Admin role.
 3. You will receive a confirmation mail for sign-up, Click on the confirmation
     link.
 
-4. The confirmation link will ask you for change password (info: You can use
-    the password your used when signing up)
+4. The confirmation link will ask you to change password (info: You can use
+    the password given while signing up)
 
 5. You are signed up successfully
 
