@@ -103,7 +103,7 @@ Cloudneeti advised not to store token in localstorage.
 | Environment	| Values for CLOUDNEETI API DOMAIN     |
 |---------------|--------------------------------------|
 | PROD 	        |   api.cloudneeti.com                 |
-| TRIAL 	| trialapi.cloudneeti.com              |
+| TRIAL 	 | trialapi.cloudneeti.com              |
 
 #### URI Parameters
 

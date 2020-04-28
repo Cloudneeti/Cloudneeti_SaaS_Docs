@@ -7,12 +7,12 @@ The Cloud Security Best Practices view provides a list of all security policies 
 |  AWS​                            | 448                       | 445                        | 3                      |
 |  AWS​ VM baseline RHEL           | 118                       | 118                        | -                      |
 |  Office365​                      | 133                       | 94                        | 39                      |
-|  Azure​                          | 475                       | 469                        | 31                      |
+|  Azure​                          | 500                       | 469                        | 31                      |
 |  Azure VM baseline Win 2012 R2​  | 212​                       | 212​                        | -                      |
 |  Azure VM baseline Win 2016​     | 227​                       | 227​                        | -                      |
 |  Azure VM baseline Ubuntu 18.04​ | 40​                        | 40​                         | -                      |
 |  Azure VM baseline CentOS​       | 34​                        | 34​                         | -                      |
-| **Grand Total**​                 | **1687**​                  | **1639**​                   |                   **73**      |
+| **Grand Total**​                 | **1712**​                  | **1639**​                   |                   **73**      |
 
 
 

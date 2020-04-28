@@ -63,13 +63,15 @@ Please use below steps to deploy Cloudneeti Agent on EKS
                     name: <Namespace>
     
 - **cloudneeti-agent-config.yaml** data section with values **cloudneeti-agent-config** downloaded in [STEP 1.](../../onboardingGuide/configureCloudneetiAgentInEKS/#step-1-associate-kubernetes-cluster-with-cloud-account-in-cloudneeti)
-
+    -  **cloudneetiApiAppId** Please follow [steps](../../administratorGuide/configureCloudneetiAPIAccess/#step-1-create-cloudneeti-api-application) to configure API access for API **Account.InsertKubernetesClusterData**                
                 
                 data:
                     clusterName: "<uniqueclustername>"
                     licenseId: "<cloudneetilicenseid>"
                     accountId: "<cloudneetiaccountid>"
                     cloudneetiEnvironment: "<prod/trial>"
+                    cloudneetiApiAppId: "<cloudneetiapiappid>"
+                    cloudneeticonnectorType: "<cloudneeticonnectortype>"
 
 -  **cloudneeti-agent-secret.yaml** set the below values.
     -  **namespace** as given in cloudneeti-namespace.yaml.
