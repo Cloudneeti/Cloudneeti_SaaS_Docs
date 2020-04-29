@@ -91,13 +91,13 @@ status means the Resource is compliant with the policy. “Fail” status means 
 Resource is not compliant with the policy.
 
 **Security Policy Status:** Security Policy Status is determined based on the
-number of compliant resources. The policy is assigned a “Pass”, “Warn”, “Fail”, "Prerequisite", "Manual" or “No resources” status based on Resource Status for relevant to this cloud policy
+number of compliant resources. The policy is assigned a “Pass”,  “Pass(O)”, “Warn”, “Fail”, "Prerequisite", "Manual" or “No resources” status based on Resource Status for relevant to this cloud policy
 resources:
 
 -   “Pass” status is assigned when configurations of all resources have “Pass”
     status.
 
--   “Pass(O)” status is assigned when user overrides status.
+-   “Pass(O)” status is assigned when user overrides the securty policy status.
 
 -   “Warn” status is assigned to a security policy when configurations of some
     resources have “Pass” status and the other resources have “Fail” status.
@@ -126,7 +126,7 @@ Security Posture is displayed in the Cloudneeti application as views. A view sho
 
 ![Security Posture](.././images/introduction/SecurityPosture2.png#thumbnail_1)
 
-% Compliance and Policy Compliance Trends are also available within the view.
+% Compliance and Policy Compliance Trends are also available within the view. 
 
 ![Security Posture](.././images/introduction/SecurityPosture3.png#thumbnail_1)
 
@@ -144,12 +144,12 @@ status means the Resource is compliant with the policy. “Fail” status means 
 Resource is not compliant with the policy.
 
 **Security Policy Status:** Security Policy Status is determined based on the
-number of compliant resources. The policy is assigned a “Pass”, “Warn”, “Fail”, "Prerequisite", "Manual" or “No resources” status based on Resource Status for relevant to this cloud policy
+number of compliant resources. The policy is assigned a “Pass” (Pass + Pass(O)), “Warn”, “Fail”, "Prerequisite", "Manual" or “No resources” status based on Resource Status for relevant to this cloud policy
 resources.
 
 **Compliance Percentage:** Compliance % is an aggregated percentage of fully
 compliant security policies (all resources under this security policy are
-compliant).
+compliant). Fully complaint security policies includes status Pass and Pass(O).
 
 ![Compliance Posture](.././images/introduction/CompliancePosture.png#thumbnail_1)
 
@@ -230,6 +230,7 @@ The Risk Likelihood five-point scale is defined below.
 | Moderate        | Possible to occur with a probability of 30-60%.               |
 | Low             | Will most likely not occur. Probability to occur is 10 - 30%. |
 | Not Likely      | Highly unlikely to occur with a probability <10%             |
+| Undetermined    | Security policies with status ‘No Resources’ or ‘Manual’ or ‘Prerequisite’ or ‘Excluded’ are marked with this risk likelihood.           |
 
 **Note:** Please consult with your Risk Advisor / Information Security team to
 review the Cloudneeti’s assigned Risk Likelihood in the context of your
