@@ -8,11 +8,11 @@ The following steps are required to onboard AWS to the Cloudneeti application.
 
 | S. No. | Step                                     | Product                        | Role               |
 |----|------------------------------------------|--------------------------------|--------------------|
-| 1  | Create an AWS role for Cloudneeti        | AWS                            | Administrator      |
-| 2  | Collect AWS account information          | AWS                            | Administrator      |
-| 3  | AWS inspector configuration (Optional)   | AWS                            | Administrator      |
-| 4  | Configure Cloudneeti agent on EKS (Optional) | AWS                        | Administrator      |
-| 5  | Add AWS Account                          | Cloudneeti                     | License Admin      |
+| 1  | Create an AWS role for Cloudneeti        | AWS        | AWS Administrator      |
+| 2  | Collect AWS account information          | AWS        | AWS Administrator      |
+| 3  | AWS inspector configuration (Optional)   | AWS        | AWS Administrator      |
+| 4  | Configure Cloudneeti agent on EKS (Optional) | AWS    | AWS Administrator      |
+| 5  | Add AWS Account                          | Cloudneeti | License Admin      |
 
 **1. Creating an AWS role for Cloudneeti** includes registering a new AWS role for the Cloudneeti application and granting the required access permissions.
 
@@ -33,7 +33,7 @@ One or more people with the following roles are required to complete Amazon Web 
 | Role          | Product    |
 |---------------|------------|
 | License Admin | Cloudneeti |
-| Administrator | AWS        |
+| AWS Administrator | AWS        |
 
 Cloudneeti application **License Admin** is assigned to an individual in the customer’s organization who will be responsible for configuration of the respective Cloudneeti application License.
 
@@ -172,7 +172,8 @@ Enabling AWS Inspector for a host assessment allows various OS baselines as defi
 
 Cloudneeti includes CIS recommendations for EKS by deploying a Cloudneeti agent to Amazon Kubernetes Cluster. A docker container agent is deployed to collect data for additional security policies. Cloudneeti then provides out-of-box mappings for all 13+ compliance frameworks included in the product. 
 
-Deploying Cloudneeti agent on Amazon Elastic Kubernetes Service (Amazon EKS) enables compliance monitoring of Kubernetes cluster for security policies [listed here](../../onboardingGuide/configureCloudneetiAgentInEKS/#kubernetes-policy-list).
+Deploying Cloudneeti agent on Amazon Elastic Kubernetes Service (Amazon EKS) enables compliance monitoring of Kubernetes cluster for security policies [listed here](../../onboardingGuide/configureCloudneetiAgentInEKS/#kubernetes-policy-list).e:
+ce
 
 ## STEP 5: Add AWS Account
 The following steps are executed by Cloudneeti application **License Admin** role.
