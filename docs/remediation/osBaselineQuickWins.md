@@ -1,4 +1,4 @@
-# Azure Quick Wins
+# OS Baseline Quick Wins
 
  A collection of quick wins scripts that will help to harden operating system baseline configuration supported by Cloudneeti as defined in CIS Microsoft Windows Server 2016 benchmark v1.0.0. This remediates below Monitoring [policies listed here.](.././remediation/remediation/osBaselineQuickWins/#cis-benchmark-windows-server-2016-version-100)
 
