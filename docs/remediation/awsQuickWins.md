@@ -9,7 +9,7 @@ Roles are required to complete Amazon Web Service Account onboarding process.
 
 | Role          | Product    |
 |---------------|------------|
-| Administrator | AWS        |
+| AWS Administrator | AWS        |
 
 
 ### Workstation readiness

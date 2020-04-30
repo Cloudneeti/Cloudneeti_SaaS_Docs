@@ -106,6 +106,8 @@ nav:
     - Quick wins: remediation/awsQuickWins.md
     - Auto Remediation: remediation/awsRemediation.md
     - Decommission Remediation framework: remediation/awsDecommissionofRemediation.md
+  - OS Baseline:
+    - Quick wins: remediation/osBaselineQuickWins.md
 - Release Notes:
   - Releases in 2020: releaseNotes/2020.md
   - Releases in 2019: releaseNotes/2019.md
