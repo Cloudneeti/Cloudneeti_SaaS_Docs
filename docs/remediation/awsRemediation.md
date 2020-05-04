@@ -91,9 +91,7 @@ STEP 1: Provision Remediation framework on same or different AWS Account
 
 1.  Open bash terminal
 
-2.  Clone the aws-remediation framework from the git
-
-        git clone https://github.com/Cloudneeti/aws-auto-remediation
+2.  Download and Unzip latest package from [git](https://github.com/Cloudneeti/aws-auto-remediation/releases){target=_blank}
 
 3.  Go to remediation framework repository
 

@@ -30,19 +30,23 @@ Below steps are performed on Virtual Machine using RDP, as a system admninistrat
 
         .\CIS_Benchmark_WindowsServer2016_v100.ps1
 
+
+    ![Execute script](.././images/osBaselineQuickWIns/Script_Execution_1.png#thumbnail_1)
+
 2. Script will generate MOF files in the directory.
 
 3. Run below command to apply baseline configuration
 
         Start-DscConfiguration -Path .\CIS_Benchmark_WindowsServer2016_v1_0_0  -Force -Verbose -Wait
 
-    TODO : Add screenshot here
+    ![Compliance score](.././images/osBaselineQuickWIns/Config_Script_Execution.png#thumbnail_1)
 
 4. Scan related Cloud Account in Cloudneeti or wait for scheduled scan
 
 5. Verify policy results in CIS Benchmark Windows Server 2016 Version 1.0.0
 
-     TODO : Add screenshot here
+    ![Compliance score](.././images/osBaselineQuickWIns/Compliance_Score_CIS_Win16.png#thumbnail_1)
+
 
 ## Remediation policy list
 
@@ -70,22 +74,18 @@ Below steps are performed on Virtual Machine using RDP, as a system admninistrat
 | Win OS-16 - Private Profile                           | Windows 2016 - Ensure 'Windows Firewall: Private: Firewall state' is set to 'On (recommended)'                                                                                               |
 | Win OS-16 - Private Profile                           | Windows 2016 - Ensure 'Windows Firewall: Private: Settings: Display a notification' is set to 'No'                                                                                           |
 | Win OS-16 - Account Management                        | Windows 2016 - Ensure 'Audit User Account Management' is set to 'Success and Failure'                                                                                                        |
-| Win OS-16 - Account Management                        | Windows 2016 - Ensure 'Audit Application Group Management' is set                                                                                                                            |
-| Win OS-16 - User Rights Assignment                    | Windows 2016 - Ensure 'Shut down the system' is set to 'Administrators'                                                                                                                      |
 | Win OS-16 - User Rights Assignment                    | Windows 2016 - Ensure 'Increase scheduling priority' is set to 'Administrators'                                                                                                              |
 | Win OS-16 - User Rights Assignment                    | Windows 2016 - Ensure 'Take ownership of files or other objects' is set to 'Administrators'                                                                                                  |
 | Win OS-16 - User Rights Assignment                    | Windows 2016 - Ensure 'Modify firmware environment values' is set to 'Administrators'                                                                                                        |
 | Win OS-16 - User Rights Assignment                    | Windows 2016 - Configure 'Deny access to this computer from the network'                                                                                                                     |
 | Win OS-16 - User Rights Assignment                    | Windows 2016 - Ensure 'Force shutdown from a remote system' is set to 'Administrators'                                                                                                       |
 | Win OS-16 - User Rights Assignment                    | Windows 2016 - Ensure 'Profile system performance' is set to 'Administrators, NT SERVICE\\WdiServiceHost'                                                                                    |
-| Win OS-16 - User Rights Assignment                    | Windows 2016 - Configure 'Allow log on locally'                                                                                                                                              |
 | Win OS-16 - User Rights Assignment                    | Windows 2016 - Ensure 'Deny log on locally' is configured                                                                                                                                    |
 | Win OS-16 - User Rights Assignment                    | Windows 2016 - Ensure 'Change the time zone' is set to 'Administrators, LOCAL SERVICE'                                                                                                       |
 | Win OS-16 - User Rights Assignment                    | Windows 2016 - Configure 'Enable computer and user accounts to be trusted for delegation'                                                                                                    |
 | Win OS-16 - User Rights Assignment                    | Windows 2016 - Ensure 'Load and unload device drivers' is configured                                                                                                                         |
 | Win OS-16 - User Rights Assignment                    | Windows 2016 - Ensure 'Create global objects' is set to 'Administrators, LOCAL SERVICE, NETWORK SERVICE, SERVICE'                                                                            |
 | Win OS-16 - User Rights Assignment                    | Windows 2016 - Ensure 'Deny log on as a service' is configured                                                                                                                               |
-| Win OS-16 - User Rights Assignment                    | Windows 2016 - Configure 'Access this computer from the network'                                                                                                                             |
 | Win OS-16 - User Rights Assignment                    | Windows 2016 - Configure 'Create symbolic links'                                                                                                                                             |
 | Win OS-16 - User Rights Assignment                    | Windows 2016 - Ensure 'Deny log on through Remote Desktop Services' is configured                                                                                                            |
 | Win OS-16 - User Rights Assignment                    | Windows 2016 - Ensure 'Lock pages in memory' is set to 'No One'                                                                                                                              |
@@ -106,7 +106,6 @@ Below steps are performed on Virtual Machine using RDP, as a system admninistrat
 | Win OS-16 - User Rights Assignment                    | Windows 2016 - Configure 'Manage auditing and security log'                                                                                                                                  |
 | Win OS-16 - User Rights Assignment                    | Windows 2016 - Ensure 'Modify an object label' is set to 'No One'                                                                                                                            |
 | Win OS-16 - Policy Change                             | Windows 2016 - Ensure 'Audit Authentication Policy Change' is set to 'Success'                                                                                                               |
-| Win OS-16 - Policy Change                             | Windows 2016 - Ensure 'Audit Authorization Policy Change' is set to 'Success'                                                                                                                |
 | Win OS-16 - OCR                                       | Windows 2016 - Ensure 'Allow indexing of encrypted files' is set to 'Disabled'                                                                                                               |
 | Win OS-16 - Security                                  | Windows 2016 - Ensure 'Setup: Control Event Log behavior when the log file reaches its maximum size' is set to 'Disabled'                                                                    |
 | Win OS-16 - Security                                  | Windows 2016 - Ensure 'Always prompt for password upon connection' is set to 'Enabled'                                                                                                       |
@@ -132,8 +131,6 @@ Below steps are performed on Virtual Machine using RDP, as a system admninistrat
 | Win OS-16 - System                                    | Windows 2016 - Ensure 'Audit System Integrity' is set to 'Success'                                                                                                                           |
 | Win OS-16 - System                                    | Windows 2016 - Ensure 'System: Control Event Log behavior when the log file reaches its maximum size' is set to 'Disabled'                                                                   |
 | Win OS-16 - System                                    | Windows 2016 - Ensure 'System: Specify the maximum log file size (KB)' is set to 'Enabled: 32,768 or greater'                                                                                |
-| Win OS-16 - System                                    | Windows 2016 - Ensure 'Audit Other System Events' is set to 'Success and Failure'                                                                                                            |
-| Win OS-16 - System                                    | Windows 2016 - Ensure 'Audit IPsec Driver' is set to 'Success and Failure'                                                                                                                   |
 | Win OS-16 - Microsoft network server                  | Windows 2016 - Ensure 'Microsoft network server: Idle time required before suspending session' is set to '15 or fewer minute(s), but not 0'                                                  |
 | Win OS-16 - Microsoft network server                  | Windows 2016 - Ensure 'Microsoft network server: Disconnect clients when logon hours expire' is set to 'Enabled'                                                                             |
 | Win OS-16 - Microsoft network server                  | Windows 2016 - Ensure 'Microsoft network server: Digitally sign communications (always)' is set to 'Enabled'                                                                                 |
@@ -141,8 +138,6 @@ Below steps are performed on Virtual Machine using RDP, as a system admninistrat
 | Win OS-16 - Public Profile                            | Windows 2016 - Ensure 'Windows Firewall: Public: Settings: Display a notification' is set to 'Yes'                                                                                           |
 | Win OS-16 - Public Profile                            | Windows 2016 - Ensure 'Windows Firewall: Public: Firewall state' is set to 'On (recommended)'                                                                                                |
 | Win OS-16 - Public Profile                            | Windows 2016 - Ensure 'Windows Firewall: Public: Settings: Apply local firewall rules' is set to 'No'                                                                                        |
-| Win OS-16 - Public Profile                            | Windows 2016 - Ensure 'Windows Firewall: Public: Settings: Apply local connection security rules' is set to 'No'                                                                             |
-| Win OS-16 - Public Profile                            | Windows 2016 - Ensure 'Windows Firewall: Public: Outbound connections' is set to 'Allow (default)'                                                                                           |
 | Win OS-16 - Domain Profile                            | Windows 2016 - Ensure 'Windows Firewall: Domain: Settings: Display a notification' is set to 'No'                                                                                            |
 | Win OS-16 - Domain Profile                            | Windows 2016 - Ensure 'Windows Firewall: Domain: Firewall state' is set to 'On (recommended)'                                                                                                |
 | Win OS-16 - Domain Profile                            | Windows 2016 - Ensure 'Windows Firewall: Domain: Outbound connections' is set to 'Allow (default)'                                                                                           |
