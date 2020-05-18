@@ -1,10 +1,9 @@
 # Office 365 - Upgrade Advance Security Configuration
-Upgrading existing Office 365 advance secuirty configuration to DataCollectorVersion 1.3 includes updating runbook inside automation account provisioned for Office 365 cloud account to get data for new security policies.
+Upgrading existing Office 365 advance secuirty configuration to DataCollectorVersion 1.5 includes updating runbook inside automation account provisioned for Office 365 cloud account to get data for new security policies.
 
-Please refer [Release Notes](../../releaseNotes/2020/#february-2020-v2251){target=_blank} for latest security policy addition.
+Please refer [Release Notes](../../releaseNotes/2020/){target=_blank} for latest security policy addition.
 
-Login to Azure portal [https://portal.azure.com](https://portal.azure.com){target=_blank} as Subscription Contributor or
-Subscription Owner access.
+Login to Azure portal [https://portal.azure.com](https://portal.azure.com){target=_blank} as Subscription Contributor or Subscription Owner access.
 
 Switch to Azure AD with the Azure Subscription with pre-requisite access.
 
