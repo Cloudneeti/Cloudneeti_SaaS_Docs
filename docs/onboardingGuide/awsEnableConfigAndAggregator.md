@@ -6,7 +6,7 @@
 | Activity                                                                      | Description                                              |
 |-------------------------------------------------------------------------------|----------------------------------------------------------|                                                
 | **Workstation:** Install AWS Command Line Interface                           | To install AWS cli follow [link](https://docs.aws.amazon.com/cli/latest/userguide/install-windows.html) **AWS Command Line** Interface (CLI) is a unified tool to manage your AWS services.             |                                                      |
-|**Workstation:** Download script provision-datacollection-role.yml| To download provision-datacollection-role.yml script follow [link](https://raw.githubusercontent.com/Cloudneeti/docs_cloudneeti/master/scripts/provision-datacollection-role.yml) |
+|**Workstation:** Download scripts | To download scripta for deployment of config and related resources for config based data collection follow [link](https://github.com/Cloudneeti/docs_cloudneeti/tree/ankit/config-script-updates/scripts/aws-config-onboarding) |
 
 #### Generate AWS account access key id and secret 
 

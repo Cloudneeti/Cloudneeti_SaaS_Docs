@@ -19,7 +19,7 @@ The following steps are required to onboard AWS to the Cloudneeti application.
 
 **2. Collecting AWS account information** involves taking a copy of the AWS account id and providing it to License Admin.
 
-**3. Enable AWS Config and Aggregator** involves
+**3. Enable AWS Config and Aggregator** involves enabling AWS Config and setting up Aggregator. This enables you to assess, audit and evaluate configurations of your AWS resources. Using AWS Config APIs, Cloudneeti will now be able to pull our resource configuration metadata at scale. This optional onboarding configuration will be used by default for accounts with larger number of resources.
 
 **4. AWS inspector configuration (Optional)** includes installing AWS Inspector Agent to assess your assessment target EC2 instances. Amazon Inspector is a security assessment service for your Amazon EC2 instances and the applications running on those instances.
 Enabling AWS Inspector for a host assessment allows various OS baselines as defined by CIS automatically light up on the Cloudneeti dashboards.
@@ -190,7 +190,7 @@ The following steps are executed by Cloudneeti application **License Admin** rol
 ### 5.2 Add AWS Account
 Log into the Cloudneeti application.
 
-1.	Select **AWS connector** (1) and click **Continue**(2)
+1.	Select **AWS connector** (1) and click **Continue** (2)
 
     ![Add account](.././images/amazonWebServiceAccounts/Connector_Type.png#thumbnail)
 

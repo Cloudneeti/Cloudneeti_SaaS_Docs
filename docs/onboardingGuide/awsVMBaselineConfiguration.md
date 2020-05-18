@@ -323,3 +323,47 @@ The following Cloudneeti OS baseline policies get enabled due to AWS inspector i
     | RHEL 7 -  Network Configuration | Ensure TIPC is disabled |
     | RHEL 7 -  Access, Authentication and Authorization | Ensure password expiration is 90 days or less |
     | RHEL 7 -  Initial Setup | Ensure XD/NX support is enabled |
+    | RHEL 7 - Initial Setup                            | Ensure bootloader password is set                                      |
+| RHEL 7 - Initial Setup                            | Ensure authentication required for single user mode                    |
+| RHEL 7 - Initial Setup                            | Ensure separate partition exists for /tmp                              |
+| RHEL 7 - Initial Setup                            | Ensure separate partition exists for /var                              |
+| RHEL 7 - Initial Setup                            | Ensure separate partition exists for /var/tmp                          |
+| RHEL 7 - Initial Setup                            | Ensure separate partition exists for /var/log                          |
+| RHEL 7 - Initial Setup                            | Ensure separate partition exists for /var/log/audit                    |
+| RHEL 7 - Initial Setup                            | Ensure separate partition exists for /home                             |
+| RHEL 7 - Initial Setup                            | Ensure mounting of FAT filesystems is disabled                         |
+| RHEL 7 - Initial Setup                            | Ensure GDM login banner is configured                                  |
+| RHEL 7 - Initial Setup                            | Ensure message of the day is configured properly                       |
+| RHEL 7 - Services                                 | Ensure mail transfer agent is configured for local-only mode           |
+| RHEL 7 - Network Configuration                    | Ensure /etc/hosts.allow is configured                                  |
+| RHEL 7 - Network Configuration                    | Ensure /etc/hosts.deny is configured                                   |
+| RHEL 7 - Network Configuration                    | Ensure permissions on /etc/hosts.allow are configured                  |
+| RHEL 7 - Access, Authentication and Authorization | Ensure access to the su command is restricted                          |
+| RHEL 7 - Access, Authentication and Authorization | Ensure permissions on /etc/crontab are configured                      |
+| RHEL 7 - Access, Authentication and Authorization | Ensure permissions on /etc/cron.hourly are configured                  |
+| RHEL 7 - Access, Authentication and Authorization | Ensure permissions on /etc/cron.daily are configured                   |
+| RHEL 7 - Access, Authentication and Authorization | Ensure permissions on /etc/cron.weekly are configured                  |
+| RHEL 7 - Access, Authentication and Authorization | Ensure permissions on /etc/cron.monthly are configured                 |
+| RHEL 7 - Access, Authentication and Authorization | Ensure permissions on /etc/cron.d are configured                       |
+| RHEL 7 - Access, Authentication and Authorization | Ensure permissions on /etc/ssh/sshd_config are configured              |
+| RHEL 7 - Access, Authentication and Authorization | Ensure password creation requirements are configured                   |
+| RHEL 7 - Access, Authentication and Authorization | Ensure system accounts are non-login                                   |
+| RHEL 7 - Access, Authentication and Authorization | Ensure inactive password lock is 30 days or less                       |
+| RHEL 7 - System Maintenance                       | Ensure permissions on /etc/passwd are configured                       |
+| RHEL 7 - System Maintenance                       | Ensure permissions on /etc/shadow are configured                       |
+| RHEL 7 - System Maintenance                       | Ensure permissions on /etc/group are configured                        |
+| RHEL 7 - System Maintenance                       | Ensure permissions on /etc/gshadow are configured                      |
+| RHEL 7 - System Maintenance                       | Ensure permissions on /etc/passwd- are configured                      |
+| RHEL 7 - System Maintenance                       | Ensure password fields are not empty                                   |
+| RHEL 7 - System Maintenance                       | Ensure root PATH Integrity                                             |
+| RHEL 7 - System Maintenance                       | Ensure all users' home directories exist                               |
+| RHEL 7 - System Maintenance                       | Ensure users' home directories permissions are 750 or more restrictive |
+| RHEL 7 - System Maintenance                       | Ensure users own their home directories                                |
+| RHEL 7 - System Maintenance                       | Ensure users' dot files are not group or world writable                |
+| RHEL 7 - System Maintenance                       | Ensure users' .netrc Files are not group or world accessible           |
+| RHEL 7 - System Maintenance                       | Ensure no users have .rhosts files                                     |
+| RHEL 7 - System Maintenance                       | Ensure all groups in /etc/passwd exist in /etc/group                   |
+| RHEL 7 - System Maintenance                       | Ensure no duplicate UIDs exist                                         |
+| RHEL 7 - System Maintenance                       | Ensure no duplicate GIDs exist                                         |
+| RHEL 7 - System Maintenance                       | Ensure no duplicate user names exist                                   |
+| RHEL 7 - System Maintenance                       | Ensure no duplicate group names exist                                  |
