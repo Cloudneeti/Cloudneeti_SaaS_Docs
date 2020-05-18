@@ -4,15 +4,15 @@ The Cloud Security Best Practices view provides a list of all security policies 
 
 | **Connector Type​**              | **Total Policy Count​**    | **Automated Policy Count​** | **Manual Policy Count​** |
 |---------------------------------|---------------------------|----------------------------|-------------------------|
-|  AWS​                            | 448                       | 445                        | 3                      |
-|  AWS​ VM baseline RHEL           | 118                       | 118                        | -                      |
-|  Office365​                      | 133                       | 94                        | 39                      |
+|  AWS​                            | 450                       | 437                        | 13                      |
+|  AWS​ VM baseline RHEL           | 162                       | 162                        | -                      |
+|  Office365​                      | 136                       | 97                         | 39                      |
 |  Azure​                          | 500                       | 469                        | 31                      |
 |  Azure VM baseline Win 2012 R2​  | 212​                       | 212​                        | -                      |
 |  Azure VM baseline Win 2016​     | 227​                       | 227​                        | -                      |
 |  Azure VM baseline Ubuntu 18.04​ | 40​                        | 40​                         | -                      |
 |  Azure VM baseline CentOS​       | 34​                        | 34​                         | -                      |
-| **Grand Total**​                 | **1712**​                  | **1639**​                   |                   **73**      |
+| **Grand Total**​                 | **1761**​                  | **1678**​                   |                   **83**      |
 
 
 
@@ -20,12 +20,12 @@ Following is the count of auto remediation avaiable for security policies within
 
 | **Connector Type​**              | **Auto Remediation Policy​ Count**      | **Quick Wins Policy Count**      |
 |---------------------------------|---------------------------|----------------------------|     
-|  AWS​                            | [109](https://cloudneeti.github.io/Cloudneeti_SaaS_Docs/remediation/awsRemediation/)       |            [16](https://cloudneeti.github.io/Cloudneeti_SaaS_Docs/remediation/awsQuickWins/)             |  
+|  AWS​                            | [109](../../remediation/awsRemediation/)       |            [16](../../remediation/awsQuickWins/)             |  
 |  AWS​ VM baseline RHEL           | -                                 | -                                              |
 |  Office365​                      | -                                 | -                                              |                         
-|  Azure​                          | [26](https://cloudneeti.github.io/Cloudneeti_SaaS_Docs/remediation/azureAutoRemediation/) | [137](https://cloudneeti.github.io/Cloudneeti_SaaS_Docs/remediation/azureQuickWins/) |                         
+|  Azure​                          | [26](../../remediation/azureAutoRemediation/) | [137](../../remediation/azureQuickWins/) |                         
 |  Azure VM baseline Win 2012 R2​  | -                                 | -                  |          
-|  Azure VM baseline Win 2016​     | -                                 | -                                              |
+|  Azure VM baseline Win 2016​     | -                                 | [190](../../remediation/osBaselineQuickWins/#windows-server-2016-vm-baseline-policies-for-cloud-security-best-practices)                                              |
 |  Azure VM baseline Ubuntu 18.04​ | -                                 | -                                              |
 |  Azure VM baseline CentOS​       | -                                 | -                                              |
-| **Grand Total**​                 | **135**​                            | **153**                                         |     
+| **Grand Total**​                 | **135**​                            | **343**                                         |     
