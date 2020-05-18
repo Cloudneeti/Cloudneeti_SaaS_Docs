@@ -31,7 +31,7 @@ Switch to Azure AD with the Azure Subscription with pre-requisite access.
 	<code>```
 		./Upgrade-M365DataCollector.ps1 `
             -ArtifactsName <Cloudneeti office 365 Data Collector Artifact Name> `
-            -DataCollectorVersion 1.4 `
+            -DataCollectorVersion 1.5 `
             -AzureSubscriptionId <Azure Subscription Id where office 365 datacollector resouces will be created> `
             -DataCollectorName <Office 365 Data Collector Name>
 	```</code>

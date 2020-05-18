@@ -6,25 +6,28 @@ The following steps are required to onboard AWS to the Cloudneeti application.
 
 ![AWS Overview](.././images/amazonWebServiceAccounts/AWS_Overview.png#thumbnail_1)
 
-| S. No. | Step                                     | Product                        | Role               |
-|----|------------------------------------------|--------------------------------|--------------------|
-| 1  | Create an AWS role for Cloudneeti        | AWS        | AWS Administrator      |
-| 2  | Collect AWS account information          | AWS        | AWS Administrator      |
-| 3  | AWS inspector configuration (Optional)   | AWS        | AWS Administrator      |
-| 4  | Configure Cloudneeti agent on EKS (Optional) | AWS    | AWS Administrator      |
-| 5  | Add AWS Account                          | Cloudneeti | License Admin      |
+| S. No. | Step                                     | Product                        | Role               | Type |
+|----|------------------------------------------|--------------------------------|--------------------|----------|
+| 1  | Create an AWS role for Cloudneeti        | AWS        | AWS Administrator      |  mandatory |
+| 2  | Collect AWS account information          | AWS        | AWS Administrator      |  mandatory |
+| 3  | Enable AWS Config and Aggregator         | AWS        | AWS Administrator      |  optional  |
+| 4  | AWS inspector configuration              | AWS        | AWS Administrator      |  optional  |
+| 5  | Configure Cloudneeti agent on EKS        | AWS        | AWS Administrator      |  optional |
+| 6  | Add AWS Account                          | Cloudneeti | License Admin          |  mandatory |
 
 **1. Creating an AWS role for Cloudneeti** includes registering a new AWS role for the Cloudneeti application and granting the required access permissions.
 
 **2. Collecting AWS account information** involves taking a copy of the AWS account id and providing it to License Admin.
 
-**3. AWS inspector configuration (Optional)** includes installing AWS Inspector Agent to assess your assessment target EC2 instances. Amazon Inspector is a security assessment service for your Amazon EC2 instances and the applications running on those instances.
+**3. Enable AWS Config and Aggregator** involves
+
+**4. AWS inspector configuration (Optional)** includes installing AWS Inspector Agent to assess your assessment target EC2 instances. Amazon Inspector is a security assessment service for your Amazon EC2 instances and the applications running on those instances.
 Enabling AWS Inspector for a host assessment allows various OS baselines as defined by CIS automatically light up on the Cloudneeti dashboards.
 
-**4. Configure Cloudneeti agent on EKS (Optional)** inlcudes Deploying Cloudneeti agent on Amazon Elastic Kubernetes Service (Amazon EKS) enables compliance monitoring of Kubernetes cluster. A docker agent is deployed to collect data for additional security policies. Cloudneeti then provides out-of-box mappings for all 13+ compliance frameworks included in the product.
+**5. Configure Cloudneeti agent on EKS (Optional)** inlcudes Deploying Cloudneeti agent on Amazon Elastic Kubernetes Service (Amazon EKS) enables compliance monitoring of Kubernetes cluster. A docker agent is deployed to collect data for additional security policies. Cloudneeti then provides out-of-box mappings for all 13+ compliance frameworks included in the product.
 
 
-**5. Add AWS Account** to the Cloudneeti application includes adding AWS account information to the respective Cloudneeti cloud account and waiting until the first data collection is complete.
+**6. Add AWS Account** to the Cloudneeti application includes adding AWS account information to the respective Cloudneeti cloud account and waiting until the first data collection is complete.
 
 
 ### Required Roles
@@ -32,7 +35,7 @@ One or more people with the following roles are required to complete Amazon Web 
 
 | Role          | Product    |
 |---------------|------------|
-| License Admin | Cloudneeti |
+| License Admin     | Cloudneeti |
 | AWS Administrator | AWS        |
 
 Cloudneeti application **License Admin** is assigned to an individual in the customer’s organization who will be responsible for configuration of the respective Cloudneeti application License.
