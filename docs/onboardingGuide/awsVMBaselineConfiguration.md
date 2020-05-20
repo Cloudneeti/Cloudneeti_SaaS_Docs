@@ -1,5 +1,4 @@
 ## STEP 3: AWS inspector OS Baseline Configurations (Optional)
-==============================================================
 
 Includes installing and configuring AWS Inspector Agent to assess your assessment target EC2
 instances (collections of AWS resources) for potential security issues and vulnerabilities.
@@ -8,8 +7,7 @@ Amazon Inspector is a security assessment service for your Amazon EC2 instances 
 
 Please skip this step if AWS inspector is already configured for all EC2 instances.
 
-3.1 Installing SSM agent
----------------------------
+### 3.1 Installing SSM agent
 
 AWS Systems Manager Agent (SSM Agent) is Amazon software that can be
 installed and configured on an Amazon EC2 instance. SSM Agent makes it
@@ -24,8 +22,8 @@ on the instances so that it can fetch the instance data. Follow links for instal
 [Install SSM Agent](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-manual-agent-install.html){target=_blank}
 
 
-3.2 Creating Inspector Assessment target and template 
---------------------------------------------------------
+### 3.2 Creating Inspector Assessment target and template 
+
 Once, SSM agent is installed, enable AWS Inspector in the regions where instances reside and create assessment targets and templates.
 
 Cloudneeti currently supports RHEL instances and in the near future many other Linux distributions and Windows server editions will be supported.
@@ -190,7 +188,7 @@ Once Assessment target is created, one can verify the status of the agents. AWS 
     ![AWS Inspector - AWS Console](.././images/amazonWebServiceAccounts/aws_Inspector_run.png#thumbnail)
 
 
-## 3.3 Verify policy results on Cloudneeti (to be performed after [Step 4](/onboardingGuide/amazonWebServiceAccounts/#step-4-add-aws-account))
+### 3.3 Verify policy results on Cloudneeti (to be performed after [Step 4](/onboardingGuide/amazonWebServiceAccounts/#step-4-add-aws-account))
 
 Cloudneeti will pick up latest analysis complete assessment run within last 30 days data from the AWS Inspector. Policies details will be available on Cloudneeti post next successful scan.
 

@@ -113,7 +113,7 @@ Decommission of remediation framework take place in two phases.
 
         cd aws-auto-remediation 
 
-4.  Decommission remediation framework in AWS account which need to be remediated.
+4.  Decommission remediation framework in AWS account 
 
         bash decommission-remediation-framework.sh -a <AWS-account-id> -p <primary-deployment-region> -e < Cloudneeti-environment-prefix> -s <list of regions from where the auto-remediation is to be decommissioned>
 
