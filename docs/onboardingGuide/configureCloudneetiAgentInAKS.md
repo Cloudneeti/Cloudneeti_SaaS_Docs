@@ -20,7 +20,7 @@ Prerequisites
 | 5. **Workstation:** Install and set up kubectl to execute PowerShell commands within Cloudneeti Agent configuration script | Please follow [link](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-on-windows){target=_blank} to install and set up **kubectl** <br>``choco install kubernetes-cli``<br>      |
 | 6. **Workstation:** Install OpenSSH | Please follow [link](https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse){target=_blank} to install and set up **OpenSSH**   |
 
-STEP 1: Associate Kubernetes cluster with Cloud account in Cloudneeti
+8.1: Associate Kubernetes cluster with Cloud account in Cloudneeti
 ---------------------------------------------------------------------
 
 Login to Cloudneeti portal with **License Admin** role
@@ -51,23 +51,23 @@ Login to Cloudneeti portal with **License Admin** role
 
 Sample JSON file
 
-        {"LicenseId":"XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX","AccountId":"XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX","ConnectorType":"Azure","ClusterName":"AKS Demo","Environment":"prod"}
+        {"LicenseId":"XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX","AccountId":"XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX","ClusterName":"AKS Demo","Environment":"prod"}
 
-STEP 2: Deploy Cloudneeti agent
+8.2: Deploy Cloudneeti agent
 -------------------------------
 
 Please use below steps to deploy Cloudneeti Agent on AKS, AKS engine.
 
 ### AKS
 
-#### 2.1 Update agent configuration scripts
+#### 8.2.1 Update agent configuration scripts
 
 - **cloudneeti-namespace.yaml** metadata section with value for namespace name.
 
                 metadata:
                     name: <Namespace>
     
-- **cloudneeti-agent-config.yaml** data section with values **cloudneeti-agent-config** downloaded in [STEP 1.](../../onboardingGuide/configureCloudneetiAgentInAKS/#step-1-associate-kubernetes-cluster-with-cloud-account-in-cloudneeti)
+- **cloudneeti-agent-config.yaml** data section with values **cloudneeti-agent-config** downloaded in [STEP 8.1.](../../onboardingGuide/configureCloudneetiAgentInAKS/#81-associate-kubernetes-cluster-with-cloud-account-in-cloudneeti)
 
      -  **cloudneetiApiAppId** Please follow [steps](../../administratorGuide/configureCloudneetiAPIAccess/#step-1-create-cloudneeti-api-application) to configure API access for API **Account.InsertKubernetesClusterData**
                 
@@ -77,13 +77,18 @@ Please use below steps to deploy Cloudneeti Agent on AKS, AKS engine.
                     accountId: "<cloudneetiaccountid>"
                     cloudneetiEnvironment: "<prod/trial>"
                     cloudneetiApiAppId: "<cloudneetiapiappid>"
-                    cloudneeticonnectorType: "<cloudneeticonnectortype>"
 
 
 -  **cloudneeti-agent-secret.yaml** set the below values.
     -  **namespace** as given in cloudneeti-namespace.yaml.
-    -  **cloudneetiAPIKey** Please follow [steps](../../onboardingGuide/configureCloudneetiAgentInAKS/#set-api-key-in-base64) to generate the key and set the key in base64 format.
-    - **cloudneetiAPIAppSecret** Please follow [steps](../../administratorGuide/configureCloudneetiAPIAccess/#step-1-create-cloudneeti-api-application)
+    
+   -  **cloudneetiAPIKey** 
+    
+        - Set Cloudneeti API key to base64 format : Please follow [steps](../../onboardingGuide/configureCloudneetiAgentInEKS/#set-api-key-in-base64) to generate the key and set the key in base64 format.
+    
+    - **cloudneetiAPIAppSecret** 
+        - Generate API app secret : Please follow [steps](../../administratorGuide/configureCloudneetiAPIAccess/#step-1-create-cloudneeti-api-application) to configure API access for API **Account.InsertKubernetesClusterData** and generate API access secret.
+        - Set API app secret to base64 format : Set the key in base64 format using [steps](../../onboardingGuide/configureCloudneetiAgentInEKS/#set-api-key-in-base64).
 
                 metadata:
                     name: cloudneeti-agent
@@ -99,11 +104,11 @@ Please use below steps to deploy Cloudneeti Agent on AKS, AKS engine.
 
 Note: The default value is set to scan the cluster every day at 12PM. It is recommended to set the execution time of Cloudneeti agent once a day.
 
-#### 2.2 Access Kubernetes cluster with root account from local machine
+#### 8.2.2 Access Kubernetes cluster with root account from local machine
 
         az aks get-credentials --name <cluster-name> --resource-group <cluster-resource-group> --overwrite-existing
 
-#### 2.3 Deploy Cloudneeti agent on Kubernetes cluster node
+#### 8.2.3 Deploy Cloudneeti agent on Kubernetes cluster node
 
 1.  Create/copy below files on Kubernets master 
     - cloudneeti-namespace.yaml
@@ -132,14 +137,14 @@ Note: The default value is set to scan the cluster every day at 12PM. It is reco
 
 ### AKS Engine
 
-#### 2.1 Update agent configuration scripts
+#### 8.2.1 Update agent configuration scripts
 
 - **cloudneeti-namespace.yaml** metadata section with value for namespace name.
 
                 metadata:
                     name: <Namespace>
     
-- **cloudneeti-agent-config.yaml** data section with values **cloudneeti-agent-config** downloaded in [STEP 1.](../../onboardingGuide/configureCloudneetiAgentInAKS/#step-1-associate-kubernetes-cluster-with-cloud-account-in-cloudneeti)
+- **cloudneeti-agent-config.yaml** data section with values **cloudneeti-agent-config** downloaded in [STEP 8.1.](../../onboardingGuide/configureCloudneetiAgentInAKS/#81-associate-kubernetes-cluster-with-cloud-account-in-cloudneeti)
     -  **cloudneetiApiAppId** Please follow [steps](../../administratorGuide/configureCloudneetiAPIAccess/#step-1-create-cloudneeti-api-application) to configure API access for API **Account.InsertKubernetesClusterData**
                 
                 data:
@@ -148,8 +153,6 @@ Note: The default value is set to scan the cluster every day at 12PM. It is reco
                     accountId: "<cloudneetiaccountid>"
                     cloudneetiEnvironment: "<prod/trial>"
                     cloudneetiApiAppId: "<cloudneetiapiappid>"
-                    cloudneeticonnectorType: "<cloudneeticonnectortype>"
-
     
 
 -  **cloudneeti-agent-secret.yaml** set the below values.
@@ -172,7 +175,7 @@ Note: The default value is set to scan the cluster every day at 12PM. It is reco
 
 Note: The default value is set to scan the cluster every day at 12PM. It is recommended set the execution time of Cloudneeti agent once a day.
 
-#### 2.2 Access Kubernetes cluster with root account
+#### 8.2.2 Access Kubernetes cluster with root account
 
 1. Access the AKS-Engine cluster by using the kubeconfig generated for the cluster at the time of provisioning aks-engine in below directory.
 
@@ -189,7 +192,7 @@ Note: The default value is set to scan the cluster every day at 12PM. It is reco
      ![Verify access to Kubernetes](.././images/kubernetes/K8_engine.png#thumbnail)
 
 
-#### 2.3 Deploy Cloudneeti agent on Kubernetes cluster node
+#### 8.2.3 Deploy Cloudneeti agent on Kubernetes cluster node
 
 1.  Create/copy below files on Kubernets master 
     - cloudneeti-namespace.yaml
@@ -218,7 +221,7 @@ Note: The default value is set to scan the cluster every day at 12PM. It is reco
     ![Associate Kubernetes](.././images/kubernetes/Master_2.png#thumbnail)
 
 
-STEP 3: Verify Cloudneeti agent installation
+8.3: Verify Cloudneeti agent installation
 --------------------------------------------
 
 Verify Cloudneeti agent installation using Kubernetes dashboard. Please follow [link](https://docs.microsoft.com/en-us/azure/aks/kubernetes-dashboard#start-the-kubernetes-dashboard){target=_blank}
@@ -240,7 +243,7 @@ Verify Cloudneeti agent installation using Kubernetes dashboard. Please follow [
     ![Associate Kubernetes](.././images/kubernetes/Verify_4.png#thumbnail)    
 
 
-STEP 4: Verify policy results
+8.4: Verify policy results
 -----------------------------
 
 Login to Cloudneeti portal with **License Admin** role

@@ -16,12 +16,12 @@ The following steps are required to onboard AWS to the Cloudneeti application.
 
 **1. Creating an AWS role for Cloudneeti** includes registering a new AWS role for the Cloudneeti application and granting the required access permissions.
 
-**2. Enable AWS Config Based Data Collection** involves enabling AWS Config and setting up Aggregator. This enables you to assess, audit and evaluate configurations of your AWS resources. Using AWS Config APIs, Cloudneeti will now be able to pull our resource configuration metadata at scale. This optional onboarding configuration will be used by default for accounts with larger number of resources.
+**2. Enable AWS Config Based Data Collection (optional)** involves enabling AWS Config and setting up Aggregator. This enables you to assess, audit and evaluate configurations of your AWS resources. Using AWS Config APIs, Cloudneeti will now be able to pull out resource configuration metadata at scale. This optional onboarding configuration will be used by default for accounts with larger number of resources.
 
-**3. AWS inspector configuration (Optional)** includes installing AWS Inspector Agent to assess your assessment target EC2 instances. Amazon Inspector is a security assessment service for your Amazon EC2 instances and the applications running on those instances.
+**3. AWS inspector configuration (optional)** includes installing AWS Inspector Agent to assess your assessment target EC2 instances. Amazon Inspector is a security assessment service for your Amazon EC2 instances and the applications running on those instances.
 Enabling AWS Inspector for a host assessment allows various OS baselines as defined by CIS automatically light up on the Cloudneeti dashboards.
 
-**4. Configure Cloudneeti agent on EKS (Optional)** inlcudes Deploying Cloudneeti agent on Amazon Elastic Kubernetes Service (Amazon EKS) enables compliance monitoring of Kubernetes cluster. A docker agent is deployed to collect data for additional security policies. Cloudneeti then provides out-of-box mappings for all 13+ compliance frameworks included in the product.
+**4. Configure Cloudneeti agent on EKS (optional)** inlcudes Deploying Cloudneeti agent on Amazon Elastic Kubernetes Service (Amazon EKS) enables compliance monitoring of Kubernetes cluster. A docker agent is deployed to collect data for additional security policies. Cloudneeti then provides out-of-box mappings for all 13+ compliance frameworks included in the product.
 
 
 **5. Add AWS Account** to the Cloudneeti application includes adding AWS account information to the respective Cloudneeti cloud account and waiting until the first data collection is complete.
@@ -148,9 +148,9 @@ trusted entity with the SecurityAudit access policy.
 5.  An AWS role will be created in the customer's account to mark Cloudneeti's
     account as a trusted entity with the SecurityAudit access policy.
 
-## STEP 2: [Enable AWS Config Based Data Collection(Optional)](../../onboardingGuide/awsEnableConfigAndAggregator/)
+## STEP 2: [Enable AWS Config Based Data Collection (Optional)](../../onboardingGuide/awsEnableConfigBasedDataCollection/)
 
-Involves enabling AWS Config and setting up Aggregator. This enables you to assess, audit and evaluate configurations of your AWS resources. Using AWS Config APIs, Cloudneeti will now be able to pull our resource configuration metadata at scale. This optional onboarding configuration will be used by default for accounts with larger number of resources.
+Involves enabling AWS Config and setting up Aggregator. This enables you to assess, audit and evaluate configurations of your AWS resources. Using AWS Config APIs, Cloudneeti will now be able to pull out resource configuration metadata at scale. This optional onboarding configuration will be used by default for accounts with larger number of resources.
 
 AWS Data collection and processing mechanisms to use AWS config to support massive scale requirements for the following AWS services [listed here](../../onboardingGuide/awsEnableConfigAndAggregator/#services-supported-by-aws-config-enabled-data-collection)
 

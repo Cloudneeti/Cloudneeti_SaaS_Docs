@@ -50,7 +50,7 @@ nav:
   - Overview: onboardingGuide/onboardingGuideOverview.md
   - Amazon Web Services: 
     - Onboarding steps: onboardingGuide/amazonWebServiceAccounts.md
-    - Enable AWS Config Based Data Collection(optional): onboardingGuide/awsEnableConfigAndAggregator.md
+    - Enable AWS Config Based Data Collection(optional): onboardingGuide/awsEnableConfigBasedDataCollection.md
     - OS baseline(optional): onboardingGuide/awsVMBaselineConfiguration.md
     - Amazon Elastic Kubernetes Service (Amazon EKS)(optional): onboardingGuide/configureCloudneetiAgentInEKS.md
     - AWS onboarding health status: onboardingGuide/awsAccountHealthStatus.md
