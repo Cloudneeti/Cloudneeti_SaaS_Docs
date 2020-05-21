@@ -5,9 +5,10 @@
 Note: The scripts are designed to harden the operating system baseline configurations, Please test it on the test/staging system before applying to the production system.
 
 
-| **Configuration script**       | **Category**                  | **Number of policies remediated** |
+| **Configuration script**        | **Number of policies remediated** | **Cloud Account Type**|
 |--------------------------------|-------------------------------|-----------------------------------|
-| CIS Benchmark Windows Server 2016 Version 1.0.0         | Windows Server 2016           | 160                               |
+| Windows Server 2016 VM baseline policies for Cloud Security Best Practices            | 190                               | Azure|
+| Windows Server 2016 VM baseline policies for CIS Benchmark Windows Server 2016 Version 1.0.0   | 151                               | Azure|
 
 
 
@@ -16,22 +17,46 @@ The below steps are required for registering Cloudneeti application in Azure Ten
 
 | Activity             | Description                |
 |----------------------|----------------------------|
-| 1.	Download and review **PowerShell script** to harden operating system baseline configuration | The PowerShell script is used to harden operating system baseline configuration: <br> [CIS Benchmark Windows Server 2016 Version 1.0.0](https://raw.githubusercontent.com/Cloudneeti/os-harderning-scripts/master/WindowsServer2016/CIS_Benchmark_WindowsServer2016_v100.ps1){target=_blank} |
+| 1.	Download and review **PowerShell script** to harden operating system baseline configuration | The PowerShell script is used to harden operating system baseline configuration: <br> [Azure - Windows Server 2016 VM baseline policies for CSBP](https://raw.githubusercontent.com/Cloudneeti/os-harderning-scripts/master/WindowsServer2016/CSBP_WindowsServer2016.ps1){target=_blank}<br> [Azure - Windows Server 2016 VM baseline policies for CIS Benchmark Windows Server 2016 Version 1.0.0](https://raw.githubusercontent.com/Cloudneeti/os-harderning-scripts/master/WindowsServer2016/CIS_Benchmark_WindowsServer2016_v100.ps1){target=_blank} |
 | 2.	**Virtual Machine**: Ensure you have the latest PowerShell version (v5 and above) | Verify PowerShell version by running the following command<br>`$PSVersionTable.PSVersion`<br>on the Virtual Machine where you will run the script to harden operating system baseline configuration. If PowerShell version is lower than 5, then follow this link for installation of a later version: [Download Link.](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-windows-powershell?view=powershell-6){target=_blank} |
 | 3.	**Virtual Machine:** Before executing the script, make sure there are no restrictions in running the PowerShell script  | Use this PowerShell command:<br>``Set-ExecutionPolicy ` ``<br>``-Scope Process ` ``<br>``-ExecutionPolicy Bypass``<br>PowerShell contains built-in execution policies that limit its use as an attack vector. By default, the execution policy is set to Restricted, which is the primary policy for script execution. The bypass allows for running scripts and keeps the lowered permissions isolated to just the current running process. |
 | 4.	**Virtual Machine:** Install DSC modules to execute PowerShell commands within quick wins script | DSC modules to be isnatlled: <br> AuditPolicyDsc <br> SecurityPolicyDsc <br> NetworkingDsc <br> PSDesiredStateConfiguration <br> Check module present or not <br>``Get-InstalledModule -Name <ModuleName> ` ``<br> Install the required modules by executing the below command <br>``Install-Module -Name <ModuleName>`` |
 
-CIS Benchmark Windows Server 2016 v1.0.0
-----------------------------------------
+Execute quick wins script
+-------------------------
+
+### Windows Server 2016 VM baseline policies for Cloud Security Best Practices
 
 Below steps are performed on Virtual Machine using RDP, as a system admninistrator
 
-1. Run PowerShell script to compile DSC
+1. Run PowerShell script to compile DSC 
+
+        .\CSBP_WindowsServer2016.ps1
+
+2. Script will generate MOF files in the directory.
+
+3. Run below command to apply baseline configuration
+
+        Start-DscConfiguration -Path .\CSBP_WindowsServer2016  -Force -Verbose -Wait
+
+    ![Compliance score](.././images/osBaselineQuickWIns/Script_Execution_1.png#thumbnail_1)
+
+4. Scan related Cloud Account in Cloudneeti or wait for scheduled scan
+
+5. Verify policy results in CSBP Benchmark 
+
+    ![Compliance score](.././images/osBaselineQuickWIns/Compliance_Score_CIS_Win16.png#thumbnail_1)
+
+
+
+
+### Windows Server 2016 VM baseline policies for CIS Benchmark Windows Server 2016 Version 1.0.0
+
+Below steps are performed on Virtual Machine using RDP, as a system admninistrator
+
+1. Run PowerShell script to compile DSC 
 
         .\CIS_Benchmark_WindowsServer2016_v100.ps1
-
-
-    ![Execute script](.././images/osBaselineQuickWIns/Script_Execution_1.png#thumbnail_1)
 
 2. Script will generate MOF files in the directory.
 

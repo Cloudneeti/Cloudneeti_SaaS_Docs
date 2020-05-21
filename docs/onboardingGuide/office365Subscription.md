@@ -654,50 +654,53 @@ available in the Center for Internet Security (CIS) Microsoft 365 benchmark
 
 Advanced security configuration done using Office 365 App Password will not enable 18 policies of category M365 - Identity listed in below table.
 
-| **Control No** | **Policy Title**                                                                                                                                                    | **Category**                     |
-|---------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------|
-| M500.01         | 1.  Ensure modern authentication for SharePoint applications is required                                                                                       | Account / Authentication         |
-| M600.01           | 2.  Ensure calendar details sharing with external users is disabled                                                                                            | Application Permissions          |
-| M600.02           | 3.  Ensure O365 ATP SafeLinks for Office Applications is Enabled                                                                                         | Application Permissions          |
-| M600.03           | 4.  Ensure Office 365 ATP for SharePoint, OneDrive, and Microsoft Teams is Enabled                                                                             | Application Permissions          |
-| M700.02          | 5.  Ensure that external users cannot share files, folders, and sites they do not own                                                                          | Data Management                  |
-| M800.01         | 6.  Ensure that DKIM is enabled for all Exchange Online Domains                                                                                                | Email Security / Exchange Online |
-| M800.09          | 7.  Ensure the Common Attachment Types Filter is enabled                                                                                                        | Email Security / Exchange Online |
-| M800.02          | 8.  Ensure that SPF records are published for all Exchange Domains                                                                                             | Email Security / Exchange Online |
-| M800.03          | 9.  Ensure DMARC Records for all Exchange Online domains are published                                                                                         | Email Security / Exchange Online |
-| M800.04          | 10.  Ensure notifications for internal users sending malware is Enabled                                                                                        | Email Security / Exchange Online |
-| M800.05           | 11.  Ensure Exchange Online Spam Policies are set correctly | Email Security / Exchange Online |
-| M800.06          | 12.  Ensure mail transport rules do not whitelist specific domains                                                                              | Email Security / Exchange Online |
-| M800.07           | 13.  Ensure Client Rules Forwarding Block is enabled                                                                                                           | Email Security / Exchange Online |
-| M800.08           | 14.  Ensure that an anti-phishing policy has been created                                                                                                      | Email Security / Exchange Online |
-| M009.01           | 15.  Enable Microsoft 365 audit log search                                                                                                                     | Auditing                         |
-| M009.02          | 16.  Ensure account provisioning activity report is reviewed weekly                                                                                            | Auditing                         |
-| M009.03         | 17.  Ensure the spoofed domains report is reviewed weekly                                                                                                        | Auditing                         |
-| M009.04           | 18.  Ensure user role group changes is reviewed at least every week                                                                                            | Auditing                         |
-| M010.1           | 19.  Ensure document sharing is being controlled by domains with whitelist or blacklist                                                                         | Storage                          |
-|   M500.03     |  20. Ensure modern authentication for Exchange Online is enabled |M365 - Account / Authentication |
-|   M700.03     | 21. Use custom sensitive infromation type classification for information protection | M365 - Data Management |
-|   M800.10     |  22. Ensure MailTips are enabled for end users |M365 - Email Security / Exchange Online |
-|  M800.11      |  23. Ensure basic authentication for Exchange Online is disabled |M365 - Email Security / Exchange Online |
-|    M010.2    |  24. Block OneDrive for Business sync from unmanaged devices |M365 - Storage |
-| M400.32 | 25. Ensure that 'Number of methods required to reset' is set to '2'                                                      | M365 - Identity |
-| M400.33 | 26. Ensure that 'Number of days before users are asked to re-confirm their authentication information' is not set to '0' | M365 - Identity |
-| M400.34 | 27. Ensure that 'Notify all admins when other admins reset their password?' is set to 'Yes'                              | M365 - Identity |
-| M400.35 | 28. Ensure that 'Notify users on password resets?' is set to 'Yes'                                                       | M365 - Identity |
-| M400.36 | 29. Ensure that 'Users can consent to apps accessing company data on their behalf' is set to 'No'                        | M365 - Identity |
-| M400.37 | 30. Ensure that 'Users can add gallery apps to their Access Panel' is set to 'No'                                        | M365 - Identity |
-| M400.38 | 31. Ensure that 'Users can register applications' is set to 'No'                                                         | M365 - Identity |
-| M400.39 | 32. Ensure that 'Guest user permissions are limited' is set to 'Yes'                                                     | M365 - Identity |
-| M400.40 | 33. Ensure that 'Members can invite' is set to 'No'                                                                      | M365 - Identity |
-| M400.41 | 34. Ensure that 'Guests can invite' is set to 'No'                                                                       | M365 - Identity |
-| M400.42 | 35. Ensure that 'Restrict access to Azure AD administration portal' is set to 'Yes'                                      | M365 - Identity |
-| M400.43 | 36. Ensure that 'Self-service group management enabled' is set to 'No'                                                   | M365 - Identity |
-| M400.44 | 37. Ensure that 'Users can create security groups' is set to 'No'                                                        | M365 - Identity |
-| M400.45 | 38. Ensure that 'Users who can manage security groups' is set to 'None'                                                  | M365 - Identity |
-| M400.46 | 39. Ensure that 'Users can create Office 365 groups' is set to 'No'                                                      | M365 - Identity |
-| M400.47 | 40. Ensure that 'Users who can manage Office 365 groups' is set to 'None'                                                | M365 - Identity |
-| M400.48 | 41. Ensure that 'Enable All Users group' is set to 'Yes'                                                                 | M365 - Identity |
-| M400.49 | 42. Ensure that 'Require Multi-Factor Auth to join devices' is set to 'Yes'                                              | M365 - Identity |
+| **Category**                            |                                                                                                                      |
+|-----------------------------------------|----------------------------------------------------------------------------------------------------------------------|
+| Account / Authentication                | Ensure modern authentication for SharePoint applications is required                                                 |
+| Application Permissions                 | Ensure calendar details sharing with external users is disabled                                                      |
+| Application Permissions                 | Ensure O365 ATP SafeLinks for Office Applications is Enabled                                                         |
+| Application Permissions                 | Ensure Office 365 ATP for SharePoint, OneDrive, and Microsoft Teams is Enabled                                       |
+| Data Management                         | Ensure that external users cannot share files, folders, and sites they do not own                                    |
+| Email Security / Exchange Online        | Ensure that DKIM is enabled for all Exchange Online Domains                                                          |
+| Email Security / Exchange Online        | Ensure the Common Attachment Types Filter is enabled                                                                 |
+| Email Security / Exchange Online        | Ensure that SPF records are published for all Exchange Domains                                                       |
+| Email Security / Exchange Online        | Ensure DMARC Records for all Exchange Online domains are published                                                   |
+| Email Security / Exchange Online        | Ensure notifications for internal users sending malware is Enabled                                                   |
+| Email Security / Exchange Online        | Ensure Exchange Online Spam Policies are set correctly                                                               |
+| Email Security / Exchange Online        | Ensure mail transport rules do not whitelist specific domains                                                        |
+| Email Security / Exchange Online        | Ensure Client Rules Forwarding Block is enabled                                                                      |
+| Email Security / Exchange Online        | Ensure that an anti-phishing policy has been created                                                                 |
+| Auditing                                | Enable Microsoft 365 audit log search                                                                                |
+| Auditing                                | Ensure account provisioning activity report is reviewed weekly                                                       |
+| Auditing                                | Ensure the spoofed domains report is reviewed weekly                                                                 |
+| Auditing                                | Ensure user role group changes is reviewed at least every week                                                       |
+| Storage                                 | Ensure document sharing is being controlled by domains with whitelist or blacklist                                   |
+| M365 - Account / Authentication         | Ensure modern authentication for Exchange Online is enabled                                                          |
+| M365 - Data Management                  | Use custom sensitive infromation type classification for information protection                                      |
+| M365 - Email Security / Exchange Online | Ensure MailTips are enabled for end users                                                                            |
+| M365 - Email Security / Exchange Online | Ensure basic authentication for Exchange Online is disabled                                                          |
+| M365 - Storage                          | Block OneDrive for Business sync from unmanaged devices                                                              |
+| M365 - Identity                         | Ensure that 'Number of methods required to reset' is set to '2'                                                      |
+| M365 - Identity                         | Ensure that 'Number of days before users are asked to re-confirm their authentication information' is not set to '0' |
+| M365 - Identity                         | Ensure that 'Notify all admins when other admins reset their password?' is set to 'Yes'                              |
+| M365 - Identity                         | Ensure that 'Notify users on password resets?' is set to 'Yes'                                                       |
+| M365 - Identity                         | Ensure that 'Users can consent to apps accessing company data on their behalf' is set to 'No'                        |
+| M365 - Identity                         | Ensure that 'Users can add gallery apps to their Access Panel' is set to 'No'                                        |
+| M365 - Identity                         | Ensure that 'Users can register applications' is set to 'No'                                                         |
+| M365 - Identity                         | Ensure that 'Guest user permissions are limited' is set to 'Yes'                                                     |
+| M365 - Identity                         | Ensure that 'Members can invite' is set to 'No'                                                                      |
+| M365 - Identity                         | Ensure that 'Guests can invite' is set to 'No'                                                                       |
+| M365 - Identity                         | Ensure that 'Restrict access to Azure AD administration portal' is set to 'Yes'                                      |
+| M365 - Identity                         | Ensure that 'Self-service group management enabled' is set to 'No'                                                   |
+| M365 - Identity                         | Ensure that 'Users can create security groups' is set to 'No'                                                        |
+| M365 - Identity                         | Ensure that 'Users who can manage security groups' is set to 'None'                                                  |
+| M365 - Identity                         | Ensure that 'Users can create Office 365 groups' is set to 'No'                                                      |
+| M365 - Identity                         | Ensure that 'Users who can manage Office 365 groups' is set to 'None'                                                |
+| M365 - Identity                         | Ensure that 'Enable All Users group' is set to 'Yes'                                                                 |
+| M365 - Identity                         | Ensure that 'Require Multi-Factor Auth to join devices' is set to 'Yes'                                              |
+| M365 - Data                             | Enable audit data recording                                                                                          |
+| M365 - Data                             | Ensure Advanced Threat Protection safe attach policy is Enabled                                                      |
+| M365 - Data                             | Ensure Advanced Threat Protection safe links policy is Enabled                                                       |
 
 
 <div class="policy-json-code">

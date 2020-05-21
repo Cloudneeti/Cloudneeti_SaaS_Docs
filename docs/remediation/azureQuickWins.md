@@ -4,7 +4,7 @@ Remediation policies from **Azure Security center, Logging and Monitoring** and 
 
 | **Configuration script**       | **Category**                  | **Number of policies remediated** |
 |--------------------------------|-------------------------------|-----------------------------------|
-| Configure ASC policies         | Azure – Security Center       | 120                               |
+| Configure ASC policies         | Azure – Security Center       | 115                               |
 | Configure Activity Alerts      | Azure - Logging and Auditing  | 10                                |
 | Configure Activity Log Profile | Azure - Logging and Auditing  | 5                                 |
 | Configure Storage Account      | Azure - Storage and Databases | 2                                 |
@@ -216,7 +216,7 @@ Configure Storage Account to remediate policies [listed here ](.././azureQuickWi
 3.  Download configuration script
         <pre>
             <code>```
-               wget https://raw.githubusercontent.com/Cloudneeti/docs_cloudneeti/master/scripts/subscription-governance/configure-ASCPolicies.ps1%20-O%20configure-ASCPolicies.ps1 -O configure-StorageAccounts.ps1
+               wget https://raw.githubusercontent.com/Cloudneeti/docs_cloudneeti/master/scripts/subscription-governance/configure-ASCPolicies.ps1 -O configure-ASCPolicies.ps1 -O configure-StorageAccounts.ps1
              ```</code>
         </pre>
 

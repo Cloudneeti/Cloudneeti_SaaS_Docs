@@ -42,7 +42,7 @@ Required Roles
 One or more people with the following roles are required to complete Microsoft
 Azure onboarding process.
 
- | **Pre-requisite Role** | **Portal to use**      |
+| **Pre-requisite Role** | **Portal to use**      |
 |------------------------|------------------------|
 | License Admin          | Cloudneeti application |
 | AWS Account Admin      | AWS Console            |

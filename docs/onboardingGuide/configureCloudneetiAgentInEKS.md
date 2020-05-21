@@ -48,7 +48,8 @@ Login to Cloudneeti portal with **License Admin** role
 
 Sample JSON file
 
-        {"LicenseId":"XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX","AccountId":"XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX","ClusterName":"K8 Cluster Demo","ClientId":"XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX"}
+        {"LicenseId":"XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX","AccountId":"XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX","ConnectorType":"AWS","ClusterName":"EKS Demo","Environment":"prod"}
+
 
 STEP 2: Deploy Cloudneeti agent
 -------------------------------
