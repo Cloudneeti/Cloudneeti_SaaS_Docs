@@ -1,15 +1,22 @@
-**STEP 2 : Enable AWS Config Based Data Collection**
-====================================================
+**STEP 2 : Enable AWS Config based data collection (Optional)**
+===============================================================
+
+**This step is optional.**
+
+Involves enabling AWS Config and setting up Aggregator. This enables you to assess, audit and evaluate configurations of your AWS resources. Using AWS Config APIs, Cloudneeti will now be able to pull out resource configuration metadata at scale. This optional onboarding configuration will be used by default for accounts with larger number of resources.
+
+AWS Data collection and processing mechanisms to use AWS config to support massive scale requirements for the following AWS services [listed here](../../onboardingGuide/awsEnableConfigAndAggregator/#services-supported-by-aws-config-enabled-data-collection)
+
 
 #### Workstation readiness
 
 | Activity                                                                      | Description                                              |
 |-------------------------------------------------------------------------------|----------------------------------------------------------|                                                
 | **Workstation:** Install AWS Command Line Interface                           | To install AWS cli follow [link](https://docs.aws.amazon.com/cli/latest/userguide/install-windows.html){target=_blank} **AWS Command Line** Interface (CLI) is a unified tool to manage your AWS services.             |                                                      |
-|**Workstation:** Clone config repository | To clone repository for deployment of config and related resources for config based data collection execute <br> git clone https://github.com/Cloudneeti/aws-config-onboarding  |
+|**Workstation:** download config deployment scripts | Download files for deployment of config and related resources for config based data collection from git [link](https://github.com/Cloudneeti/docs_cloudneeti/tree/master/scripts/aws-config-onboarding){target=_blank}   |
 
 
-##  3.1 Provision resources for config based data collection 
+##  2.1 Provision resources for config based data collection 
 
 1.  Open any terminal which has AWS CLI configured
 2.  On terminal navigate to folder location where you cloned the repository **aws-config-onboarding**  
@@ -44,7 +51,7 @@
 
     ![Create access key](.././images/awsConfig/deployScript_Success.png#thumbnail)
 
-## 3.2 Verify Config related resources created on AWS Portal
+## 2.2 Verify Config related resources created on AWS Portal
 
 1. Cloudformation stack deployed in all selected regions. 
 
@@ -71,7 +78,7 @@
     ![Create access key](.././images/awsConfig/aggregation_progress.png#thumbnail)
 
 
-## 3.3 Verify Aggregation is completed
+## 2.3 Verify Aggregation is completed
 
 ![Create access key](.././images/awsConfig/aggregation_success.png#thumbnail)
 
@@ -107,7 +114,7 @@
 
 ## Decommission AWS Config 
 
-### Step 1. Disable AWS Config Based Data Collection
+### 1. Disable AWS Config Based Data Collection
 
 1. Navigate to **Cloud Account** (2) from **Configurations** (1)
 
@@ -121,7 +128,7 @@
 
     ![Create access key](.././images/awsConfig/Account_Update_Config.png#thumbnail)
 
-### Step 2. Delete deployment bucket
+### 2. Delete deployment bucket
 
 Delete config deployment bucket using AWS console. Search for deployment bucket with name **config-bucket** having below tags
 
@@ -130,21 +137,19 @@ Delete config deployment bucket using AWS console. Search for deployment bucket 
 | 1      | ServiceName | config-bucket           |
 | 2      | Description | Bucket for config data collection|
 
-### Step 3. Execute decommission script
+### 3. Execute decommission script
 
-    1.  Open bash terminal
+1.  Open bash terminal
 
-    2.  Clone the aws-config-onboarding from the git
+2.  Download files from git [link](https://github.com/Cloudneeti/docs_cloudneeti/tree/master/scripts/aws-config-onboarding){target=_blank} 
 
-            git clone https://github.com/Cloudneeti/aws-config-onboarding
+3.  Go to config onboarding downloaded directory
 
-    3.  Go to config onboarding repository
+        cd aws-config-onboarding 
 
-            cd git aws-config-onboarding 
+4.  Decommission config resources in AWS account 
 
-    4.  Decommission config resources in AWS account 
-
-            bash decommission-config.sh a <AWS-acount-id> -e <environment-prefix> -p <primary-aggregator-region> -s <list of regions(secondary) where config is to enabled>
+        bash decommission-config.sh a <AWS-acount-id> -e <environment-prefix> -p <primary-aggregator-region> -s <list of regions(secondary) where config is to enabled>
 
     (-a) Account Id: 12-digit AWS account Id of the account where the remediation framework is deployed 
 

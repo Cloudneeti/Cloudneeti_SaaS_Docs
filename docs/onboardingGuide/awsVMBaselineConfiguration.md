@@ -1,4 +1,6 @@
-## STEP 3: AWS inspector OS Baseline Configurations (Optional)
+# STEP 3: AWS inspector OS Baseline Configurations (Optional)
+
+**This step is optional.**
 
 Includes installing and configuring AWS Inspector Agent to assess your assessment target EC2
 instances (collections of AWS resources) for potential security issues and vulnerabilities.
