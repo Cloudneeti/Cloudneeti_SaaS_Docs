@@ -5,7 +5,7 @@
 
 Involves enabling AWS Config and setting up Aggregator. This enables you to assess, audit and evaluate configurations of your AWS resources. Using AWS Config APIs, Cloudneeti will now be able to pull out resource configuration metadata at scale. This optional onboarding configuration will be used by default for accounts with larger number of resources.
 
-AWS Data collection and processing mechanisms to use AWS config to support massive scale requirements for the following AWS services [listed here](../../onboardingGuide/awsEnableConfigAndAggregator/#services-supported-by-aws-config-enabled-data-collection)
+AWS Data collection and processing mechanisms to use AWS config to support massive scale requirements for the following AWS services [listed here](../../onboardingGuide/awsEnableConfigBasedDataCollection/#services-supported-by-aws-config-enabled-data-collection)
 
 
 #### Workstation readiness
@@ -18,28 +18,38 @@ AWS Data collection and processing mechanisms to use AWS config to support massi
 
 ##  2.1 Provision resources for config based data collection 
 
+### Note
+- This script will delete any default config recorders and delivery channels present in entered regions of the AWS Account. 
+
+- Cloudneeti recommends following [AWS Config best practices](https://aws.amazon.com/blogs/mt/aws-config-best-practices/){target=_blank}.
+
+- AWS Config aggregation data is subject to delay. For details, please follow [link](https://docs.aws.amazon.com/config/latest/developerguide/viewing-the-aggregate-dashboard.html){target=_blank}
+
+### Steps 
+
 1.  Open any terminal which has AWS CLI configured
 2.  On terminal navigate to folder location where you cloned the repository **aws-config-onboarding**  
 3.  Type **aws configure** and enter
     
-    a.  Account access key id and secret access key generated in [step](.././awsEnableConfigAndAggregator/#generate-aws-account-access-key-id-and-secret){target=_blank}
+    a.  Account access key id and secret access key generated in [step](.././awsEnableConfigBasedDataCollection/#generate-aws-account-access-key-id-and-secret){target=_blank}
     
     b.  Default region name(eg. us-east-1).
     
     c.  Default output format as "json" only.
 
-4.  To enable Config and Aggregator execute below command 
+4.  To enable Config and Aggregator execute below command
     
             bash deploy-config.sh -a <AWS-acount-id> -e <Cloudneeti-environment-prefix> -n <Config-aggregator-name> -p <primary-aggregator-region> -s <list of regions(secondary) where config is to enabled>
 
-    - (-a)Account Id: 12-digit AWS account Id of the account where you want the remediation framework to be deployed
+    - (-a)Account Id: 12-digit AWS account Id of the account where you want to deploy AWS Config setup
     
     - (-e)Environment prefix: Enter any suitable prefix for your deployment
     
     - (-n)Config Aggregator Name: Suitable name for the config aggregator
     
     - (-p)Config Aggregator region(primary): Programmatic name of the region where the primary 
-    config with an aggregator is to be created(eg:us-east-1)
+    config with an aggregator is to be created(eg:us-east-1). 
+       [AWS Config supported in regions](https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/){target=_blank}. 
     
     - (-s)Region list(secondary): Comma separated list(with no spaces) of the regions where the config(secondary) is to be enabled(eg: us-east-1,us-east-2)
         **Pass "all" if you want to enable config in all other available regions
@@ -63,24 +73,28 @@ AWS Data collection and processing mechanisms to use AWS config to support massi
 
     ![Secondary region stack](.././images/awsConfig/stack_secondary.png#thumbnail)
 
-2. S3 Buckets
+2. S3 Bucket
 
-    ![S3 Buckets](.././images/awsConfig/s3_Bucket.png#thumbnail)
+    ![S3 Bucket](.././images/awsConfig/s3_Bucket.png#thumbnail)
 
-3. [config-role-scaletest3](https://console.aws.amazon.com/iam/home?#/policies/arn:aws:iam::aws:policy/service-role/AWSConfigRole$serviceLevelSummary){target=_blank}
+3. Config service role created [config-role-<prefix>](https://console.aws.amazon.com/iam/home?#/policies/arn:aws:iam::aws:policy/service-role/AWSConfigRole$serviceLevelSummary){target=_blank}
 
-4. Config recording is on primary and secondary regions
+4. Config recording is on primary and secondary regions where the config is enabled
 
-    ![Create access key](.././images/awsConfig/Config_Primary.png#thumbnail)
+    ![Config_Primary](.././images/awsConfig/Config_Primary.png#thumbnail)
 
 5. Aggregator is setup in primary region
 
-    ![Create access key](.././images/awsConfig/aggregation_progress.png#thumbnail)
+    ![aggregation_progress](.././images/awsConfig/aggregation_progress.png#thumbnail)
 
 
 ## 2.3 Verify Aggregation is completed
 
-![Create access key](.././images/awsConfig/aggregation_success.png#thumbnail)
+After setup, AWS Config starts aggregating data from the specified regions into an aggregator. It might take a few minutes for Data collection from all source aregions to complete.
+
+Once completed, [AWS account onboarding](../../onboardingGuide/amazonWebServiceAccounts/#step-5-add-aws-account){target=_blank} at Cloudneeti can be initiated.
+
+![aggregation_success](.././images/awsConfig/aggregation_success.png#thumbnail)
 
 
 ## Appendix 
@@ -90,13 +104,13 @@ AWS Data collection and processing mechanisms to use AWS config to support massi
 -   Updated AWS Data collection and processing mechanisms to use AWS config to
     support massive scale requirements for the following AWS services.
 
-    -   EC2::Instance
+    -   AWS::EC2::Instance
 
-    -   EC2::Volume
+    -   AWS::EC2::Volume
 
-    -   EC2::SecurityGroup
+    -   AWS::EC2::SecurityGroup
 
-    -   S3::Bucket
+    -   AWS::S3::Bucket
 
 ### Generate AWS account access key id and secret 
 
@@ -149,10 +163,10 @@ Delete config deployment bucket using AWS console. Search for deployment bucket 
 
 4.  Decommission config resources in AWS account 
 
-        bash decommission-config.sh a <AWS-acount-id> -e <environment-prefix> -p <primary-aggregator-region> -s <list of regions(secondary) where config is to enabled>
+        bash decommission-config.sh -a <AWS-acount-id> -e <environment-prefix> -p <primary-aggregator-region> 
 
-    (-a) Account Id: 12-digit AWS account Id of the account where the remediation framework is deployed 
+    (-a)Account Id: 12-digit AWS account Id of the account where you want to delete the AWS Config setup
 
     (-e)Environment prefix: Enter any suitable prefix for your deployment
 
-    (-p) Config Aggregator region(primary): Programmatic name of the region where the the primary config with an aggregator is to be decommisioned(eg:us-east-1)
+    (-p) Config Aggregator region(primary): Programmatic name of the region where the primary config with an aggregator is to be decommissioned(eg:us-east-1)

@@ -1,6 +1,6 @@
 # Quick Wins
 
-Remediation of Monitoring policies can be done using quick wins scripts. These scripts will create metrics and alarms for various events in the AWS Account. This remediates below Monitoring [policies listed here.](.././remediation/awsQuickWins/#policies-enabled-with-quick-wins)
+Remediation of Monitoring policies can be done using quick wins scripts. These scripts will create metrics and alarms for various events in the AWS Account. This remediates below Monitoring [policies listed here.](../../remediation/awsQuickWins/#policies-enabled-with-quick-wins)
 
 ## Pre-requisites
 

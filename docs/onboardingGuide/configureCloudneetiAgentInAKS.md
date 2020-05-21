@@ -84,10 +84,12 @@ Please use below steps to deploy Cloudneeti Agent on AKS, AKS engine.
     
    -  **cloudneetiAPIKey** 
     
-        - Set Cloudneeti API key to base64 format : Please follow [steps](../../onboardingGuide/configureCloudneetiAgentInEKS/#set-api-key-in-base64) to generate the key and set the key in base64 format.
+    - Set Cloudneeti API key to base64 format : Please follow [steps](../../onboardingGuide/configureCloudneetiAgentInEKS/#set-api-key-in-base64) to generate the key and set the key in base64 format.
     
     - **cloudneetiAPIAppSecret** 
+        
         - Generate API app secret : Please follow [steps](../../administratorGuide/configureCloudneetiAPIAccess/#step-1-create-cloudneeti-api-application) to configure API access for API **Account.InsertKubernetesClusterData** and generate API access secret.
+        
         - Set API app secret to base64 format : Set the key in base64 format using [steps](../../onboardingGuide/configureCloudneetiAgentInEKS/#set-api-key-in-base64).
 
                 metadata:
@@ -95,6 +97,7 @@ Please use below steps to deploy Cloudneeti Agent on AKS, AKS engine.
                     namespace: <Namespace>
                 data:
                     cloudneetiAPIKey: <cloudneetiapikey>
+                    cloudneetiAPIAppSecret: <cloudneetiapiappsecret>
 
 -  **cloudneeti-agent-worker.yaml** update value for **schedule** in spec section, set cron job schedule as per your requirement.
 
@@ -157,8 +160,16 @@ Note: The default value is set to scan the cluster every day at 12PM. It is reco
 
 -  **cloudneeti-agent-secret.yaml** set the below values.
     -  **namespace** as given in cloudneeti-namespace.yaml.
-    -  **cloudneetiAPIKey** Please follow [steps](../../onboardingGuide/configureCloudneetiAgentInAKS/#set-api-key-in-base64) to generate the key and set the key in base64 format.
-    -  **cloudneetiAPIAppSecret** Please use the secret created while configuring API access for API **Account.InsertKubernetesClusterData**
+    -  **cloudneetiAPIKey** 
+    
+    - Set Cloudneeti API key to base64 format : Please follow [steps](../../onboardingGuide/configureCloudneetiAgentInEKS/#set-api-key-in-base64) to generate the key and set the key in base64 format.
+    
+    - **cloudneetiAPIAppSecret** 
+        
+        - Generate API app secret : Please follow [steps](../../administratorGuide/configureCloudneetiAPIAccess/#step-1-create-cloudneeti-api-application) to configure API access for API **Account.InsertKubernetesClusterData** and generate API access secret.
+        
+        - Set API app secret to base64 format : Set the key in base64 format using [steps](../../onboardingGuide/configureCloudneetiAgentInEKS/#set-api-key-in-base64).
+
 
                 metadata:
                     name: cloudneeti-agent
