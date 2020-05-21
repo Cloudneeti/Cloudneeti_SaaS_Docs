@@ -14,6 +14,9 @@ AWS Data collection and processing mechanisms to use AWS config to support massi
 |-------------------------------------------------------------------------------|----------------------------------------------------------|                                                
 | **Workstation:** Install AWS Command Line Interface                           | To install AWS cli follow [link](https://docs.aws.amazon.com/cli/latest/userguide/install-windows.html){target=_blank} **AWS Command Line** Interface (CLI) is a unified tool to manage your AWS services.             |                                                      |
 |**Workstation:** download config deployment scripts | Download files for deployment of config and related resources for config based data collection from git [link](https://github.com/Cloudneeti/docs_cloudneeti/tree/master/scripts/aws-config-onboarding){target=_blank}   |
+| **Workstation:** Install serverless npm module      | Serverless Framework is a CLI tool to manage AWS deployments. Execute below command to install serverless module, \# npm install –g serverless                                              |
+| **Workstation:** Install JQ for bash terminal     | Download latest stable version of JQ from [here](https://stedolan.github.io/jq/){target=_blank} and install on the workstation                                              |
+
 
 
 ##  2.1 Provision resources for config based data collection 
