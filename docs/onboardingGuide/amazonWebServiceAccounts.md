@@ -152,7 +152,7 @@ trusted entity with the SecurityAudit access policy.
 
 Involves enabling AWS Config and setting up Aggregator. This enables you to assess, audit and evaluate configurations of your AWS resources. Using AWS Config APIs, Cloudneeti will now be able to pull out resource configuration metadata at scale. This optional onboarding configuration will be used by default for accounts with larger number of resources.
 
-AWS Data collection and processing mechanisms to use AWS config to support massive scale requirements for the following AWS services [listed here](../../onboardingGuide/awsEnableConfigAndAggregator/#services-supported-by-aws-config-enabled-data-collection)
+AWS Data collection and processing mechanisms to use AWS config to support massive scale requirements for the following AWS services [listed here](../../onboardingGuide/awsEnableConfigBasedDataCollection/#services-supported-by-aws-config-enabled-data-collection)
 
 
 ## STEP 3: [AWS inspector configuration (Optional)](../../onboardingGuide/awsVMBaselineConfiguration/)
