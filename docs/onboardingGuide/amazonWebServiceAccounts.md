@@ -148,7 +148,7 @@ trusted entity with the SecurityAudit access policy.
 5.  An AWS role will be created in the customer's account to mark Cloudneeti's
     account as a trusted entity with the SecurityAudit access policy.
 
-## STEP 2: [Enable AWS Config Based Data Collection (Optional)](../../onboardingGuide/awsEnableConfigBasedDataCollection/)
+## STEP 2: [Enable AWS Config Based Data Collection (Optional)](../../onboardingGuide/awsEnableConfigBasedDataCollection/) (Preview)
 
 Involves enabling AWS Config and setting up Aggregator. This enables you to assess, audit and evaluate configurations of your AWS resources. Using AWS Config APIs, Cloudneeti will now be able to pull out resource configuration metadata at scale. This optional onboarding configuration will be used by default for accounts with larger number of resources.
 

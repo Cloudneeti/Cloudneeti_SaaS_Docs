@@ -1,5 +1,5 @@
-**STEP 2 : Enable AWS Config based data collection (Optional)**
-===============================================================
+**STEP 2 : Enable AWS Config based data collection (Optional)**(Preview)
+========================================================================
 
 **This step is optional.**
 
