@@ -50,8 +50,9 @@ nav:
   - Overview: onboardingGuide/onboardingGuideOverview.md
   - Amazon Web Services: 
     - Onboarding steps: onboardingGuide/amazonWebServiceAccounts.md
-    - OS baseline (optional): onboardingGuide/awsVMBaselineConfiguration.md
-    - Amazon Elastic Kubernetes Service (Amazon EKS): onboardingGuide/configureCloudneetiAgentInEKS.md
+    - Enable AWS Config Based Data Collection(optional): onboardingGuide/awsEnableConfigBasedDataCollection.md
+    - OS baseline(optional): onboardingGuide/awsVMBaselineConfiguration.md
+    - Amazon Elastic Kubernetes Service (Amazon EKS)(optional): onboardingGuide/configureCloudneetiAgentInEKS.md
     - AWS onboarding health status: onboardingGuide/awsAccountHealthStatus.md
   - Microsoft Azure:
     - Onboarding steps: onboardingGuide/azureSubscriptions.md
@@ -106,6 +107,8 @@ nav:
     - Quick wins: remediation/awsQuickWins.md
     - Auto Remediation: remediation/awsRemediation.md
     - Decommission Remediation framework: remediation/awsDecommissionofRemediation.md
+  - OS Baseline:
+    - Quick wins: remediation/osBaselineQuickWins.md
 - Release Notes:
   - Releases in 2020: releaseNotes/2020.md
   - Releases in 2019: releaseNotes/2019.md

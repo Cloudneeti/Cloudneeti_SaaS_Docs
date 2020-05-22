@@ -1,5 +1,6 @@
-STEP 3: AWS inspector configuration (Optional)
-========================================
+# STEP 3: AWS inspector OS Baseline Configurations (Optional)
+
+**This step is optional.**
 
 Includes installing and configuring AWS Inspector Agent to assess your assessment target EC2
 instances (collections of AWS resources) for potential security issues and vulnerabilities.
@@ -8,8 +9,7 @@ Amazon Inspector is a security assessment service for your Amazon EC2 instances 
 
 Please skip this step if AWS inspector is already configured for all EC2 instances.
 
-3.1 Installing SSM agent
----------------------------
+### 3.1 Installing SSM agent
 
 AWS Systems Manager Agent (SSM Agent) is Amazon software that can be
 installed and configured on an Amazon EC2 instance. SSM Agent makes it
@@ -24,8 +24,8 @@ on the instances so that it can fetch the instance data. Follow links for instal
 [Install SSM Agent](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-manual-agent-install.html){target=_blank}
 
 
-3.2 Creating Inspector Assessment target and template 
---------------------------------------------------------
+### 3.2 Creating Inspector Assessment target and template 
+
 Once, SSM agent is installed, enable AWS Inspector in the regions where instances reside and create assessment targets and templates.
 
 Cloudneeti currently supports RHEL instances and in the near future many other Linux distributions and Windows server editions will be supported.
@@ -190,7 +190,7 @@ Once Assessment target is created, one can verify the status of the agents. AWS 
     ![AWS Inspector - AWS Console](.././images/amazonWebServiceAccounts/aws_Inspector_run.png#thumbnail)
 
 
-## 3.3 Verify policy results on Cloudneeti (to be performed after [Step 4](/onboardingGuide/amazonWebServiceAccounts/#step-4-add-aws-account))
+### 3.3 Verify policy results on Cloudneeti (to be performed after [Step 4](/onboardingGuide/amazonWebServiceAccounts/#step-4-add-aws-account))
 
 Cloudneeti will pick up latest analysis complete assessment run within last 30 days data from the AWS Inspector. Policies details will be available on Cloudneeti post next successful scan.
 
@@ -323,3 +323,47 @@ The following Cloudneeti OS baseline policies get enabled due to AWS inspector i
     | RHEL 7 -  Network Configuration | Ensure TIPC is disabled |
     | RHEL 7 -  Access, Authentication and Authorization | Ensure password expiration is 90 days or less |
     | RHEL 7 -  Initial Setup | Ensure XD/NX support is enabled |
+    | RHEL 7 - Initial Setup                            | Ensure bootloader password is set                                      |
+| RHEL 7 - Initial Setup                            | Ensure authentication required for single user mode                    |
+| RHEL 7 - Initial Setup                            | Ensure separate partition exists for /tmp                              |
+| RHEL 7 - Initial Setup                            | Ensure separate partition exists for /var                              |
+| RHEL 7 - Initial Setup                            | Ensure separate partition exists for /var/tmp                          |
+| RHEL 7 - Initial Setup                            | Ensure separate partition exists for /var/log                          |
+| RHEL 7 - Initial Setup                            | Ensure separate partition exists for /var/log/audit                    |
+| RHEL 7 - Initial Setup                            | Ensure separate partition exists for /home                             |
+| RHEL 7 - Initial Setup                            | Ensure mounting of FAT filesystems is disabled                         |
+| RHEL 7 - Initial Setup                            | Ensure GDM login banner is configured                                  |
+| RHEL 7 - Initial Setup                            | Ensure message of the day is configured properly                       |
+| RHEL 7 - Services                                 | Ensure mail transfer agent is configured for local-only mode           |
+| RHEL 7 - Network Configuration                    | Ensure /etc/hosts.allow is configured                                  |
+| RHEL 7 - Network Configuration                    | Ensure /etc/hosts.deny is configured                                   |
+| RHEL 7 - Network Configuration                    | Ensure permissions on /etc/hosts.allow are configured                  |
+| RHEL 7 - Access, Authentication and Authorization | Ensure access to the su command is restricted                          |
+| RHEL 7 - Access, Authentication and Authorization | Ensure permissions on /etc/crontab are configured                      |
+| RHEL 7 - Access, Authentication and Authorization | Ensure permissions on /etc/cron.hourly are configured                  |
+| RHEL 7 - Access, Authentication and Authorization | Ensure permissions on /etc/cron.daily are configured                   |
+| RHEL 7 - Access, Authentication and Authorization | Ensure permissions on /etc/cron.weekly are configured                  |
+| RHEL 7 - Access, Authentication and Authorization | Ensure permissions on /etc/cron.monthly are configured                 |
+| RHEL 7 - Access, Authentication and Authorization | Ensure permissions on /etc/cron.d are configured                       |
+| RHEL 7 - Access, Authentication and Authorization | Ensure permissions on /etc/ssh/sshd_config are configured              |
+| RHEL 7 - Access, Authentication and Authorization | Ensure password creation requirements are configured                   |
+| RHEL 7 - Access, Authentication and Authorization | Ensure system accounts are non-login                                   |
+| RHEL 7 - Access, Authentication and Authorization | Ensure inactive password lock is 30 days or less                       |
+| RHEL 7 - System Maintenance                       | Ensure permissions on /etc/passwd are configured                       |
+| RHEL 7 - System Maintenance                       | Ensure permissions on /etc/shadow are configured                       |
+| RHEL 7 - System Maintenance                       | Ensure permissions on /etc/group are configured                        |
+| RHEL 7 - System Maintenance                       | Ensure permissions on /etc/gshadow are configured                      |
+| RHEL 7 - System Maintenance                       | Ensure permissions on /etc/passwd- are configured                      |
+| RHEL 7 - System Maintenance                       | Ensure password fields are not empty                                   |
+| RHEL 7 - System Maintenance                       | Ensure root PATH Integrity                                             |
+| RHEL 7 - System Maintenance                       | Ensure all users' home directories exist                               |
+| RHEL 7 - System Maintenance                       | Ensure users' home directories permissions are 750 or more restrictive |
+| RHEL 7 - System Maintenance                       | Ensure users own their home directories                                |
+| RHEL 7 - System Maintenance                       | Ensure users' dot files are not group or world writable                |
+| RHEL 7 - System Maintenance                       | Ensure users' .netrc Files are not group or world accessible           |
+| RHEL 7 - System Maintenance                       | Ensure no users have .rhosts files                                     |
+| RHEL 7 - System Maintenance                       | Ensure all groups in /etc/passwd exist in /etc/group                   |
+| RHEL 7 - System Maintenance                       | Ensure no duplicate UIDs exist                                         |
+| RHEL 7 - System Maintenance                       | Ensure no duplicate GIDs exist                                         |
+| RHEL 7 - System Maintenance                       | Ensure no duplicate user names exist                                   |
+| RHEL 7 - System Maintenance                       | Ensure no duplicate group names exist                                  |

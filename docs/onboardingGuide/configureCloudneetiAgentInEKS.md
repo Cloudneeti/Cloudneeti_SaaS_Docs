@@ -1,5 +1,5 @@
-STEP 4: Configuring Cloudneeti agent in Amazon Elastic Kubernetes Service (Amazon EKS)
-======================================================================================
+STEP 4: Configuring Cloudneeti agent in Amazon Elastic Kubernetes Service (Amazon EKS) (Optional)
+=================================================================================================
 
 **This step is optional.**
 
@@ -17,7 +17,7 @@ Prerequisites
 | 2. **Workstation:** Install AWS Command Line Interface                           | To install AWS cli follow [link](https://docs.aws.amazon.com/cli/latest/userguide/install-windows.html) **AWS Command Line** Interface (CLI) is a unified tool to manage your AWS services.             |                                                      |
 | 3. **Workstation:** Install and set up kubectl to execute PowerShell commands within Cloudneeti Agent configuration script | Please follow [link](https://kubernetes.io/docs/tasks/tools/install-kubectl/){target=_blank} to install and set up **kubectl** <br>``choco install kubernetes-cli``<br>      |                                                     
 
-STEP 1: Associate Kubernetes cluster with Cloud account in Cloudneeti
+4.1: Associate Kubernetes cluster with Cloud account in Cloudneeti
 ---------------------------------------------------------------------
 
 Login to Cloudneeti portal with **License Admin** role
@@ -48,21 +48,22 @@ Login to Cloudneeti portal with **License Admin** role
 
 Sample JSON file
 
-        {"LicenseId":"XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX","AccountId":"XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX","ClusterName":"K8 Cluster Demo","ClientId":"XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX"}
+        {"LicenseId":"XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX","AccountId":"XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX","ClusterName":"EKS Demo","Environment":"prod"}
 
-STEP 2: Deploy Cloudneeti agent
+
+4.2: Deploy Cloudneeti agent
 -------------------------------
 
 Please use below steps to deploy Cloudneeti Agent on EKS
 
-### 2.1 Update agent configuration scripts
+### 4.2.1 Update agent configuration scripts
 
 - **cloudneeti-namespace.yaml** metadata section with value for namespace name.
 
                 metadata:
                     name: <Namespace>
     
-- **cloudneeti-agent-config.yaml** data section with values **cloudneeti-agent-config** downloaded in [STEP 1.](../../onboardingGuide/configureCloudneetiAgentInEKS/#step-1-associate-kubernetes-cluster-with-cloud-account-in-cloudneeti)
+- **cloudneeti-agent-config.yaml** data section with values **cloudneeti-agent-config** downloaded in [STEP 4.1.](../../onboardingGuide/configureCloudneetiAgentInEKS/#41-associate-kubernetes-cluster-with-cloud-account-in-cloudneeti)
     -  **cloudneetiApiAppId** Please follow [steps](../../administratorGuide/configureCloudneetiAPIAccess/#step-1-create-cloudneeti-api-application) to configure API access for API **Account.InsertKubernetesClusterData**                
                 
                 data:
@@ -71,12 +72,17 @@ Please use below steps to deploy Cloudneeti Agent on EKS
                     accountId: "<cloudneetiaccountid>"
                     cloudneetiEnvironment: "<prod/trial>"
                     cloudneetiApiAppId: "<cloudneetiapiappid>"
-                    cloudneeticonnectorType: "<cloudneeticonnectortype>"
 
 -  **cloudneeti-agent-secret.yaml** set the below values.
     -  **namespace** as given in cloudneeti-namespace.yaml.
-    -  **cloudneetiAPIKey** Please follow [steps](../../onboardingGuide/configureCloudneetiAgentInEKS/#set-api-key-in-base64) to generate the key and set the key in base64 format.
-    - **cloudneetiAPIAppSecret** Please follow [steps](../../administratorGuide/configureCloudneetiAPIAccess/#step-1-create-cloudneeti-api-application) to configure API access for API **Account.InsertKubernetesClusterData**
+
+    -  **cloudneetiAPIKey** 
+    
+        - Set Cloudneeti API key to base64 format : Please follow [steps](../../onboardingGuide/configureCloudneetiAgentInEKS/#set-api-key-in-base64) to generate the key and set the key in base64 format.
+    
+    - **cloudneetiAPIAppSecret** 
+        - Generate API app secret : Please follow [steps](../../administratorGuide/configureCloudneetiAPIAccess/#step-1-create-cloudneeti-api-application) to configure API access for API **Account.InsertKubernetesClusterData** and generate API access secret.
+        - Set API app secret to base64 format : Set the key in base64 format using [steps](../../onboardingGuide/configureCloudneetiAgentInEKS/#set-api-key-in-base64).
 
                 metadata:
                     name: cloudneeti-agent
@@ -93,11 +99,11 @@ Please use below steps to deploy Cloudneeti Agent on EKS
 
 Note: The default value is set to scan the cluster every day at 12PM. It is recommended to set the execution time of Cloudneeti agent once a day.
 
-### 2.2 Access Kubernetes cluster with root account from local machine
+### 4.2.2 Access Kubernetes cluster with root account from local machine
 
         aws eks --region <region> update-kubeconfig --name <EKS cluser name>
 
-### 2.3 Deploy Cloudneeti agent on Kubernetes cluster node
+### 4.2.3 Deploy Cloudneeti agent on Kubernetes cluster node
 
 1.  Create/copy below files on Kubernets master 
     - cloudneeti-namespace.yaml
@@ -124,8 +130,7 @@ Note: The default value is set to scan the cluster every day at 12PM. It is reco
         kubectl apply -f cloudneeti-agent-worker.yaml --namespace <namespace name>
 
 
-
-STEP 3: Verify Cloudneeti agent installation
+4.3: Verify Cloudneeti agent installation
 --------------------------------------------
 
 Verify Cloudneeti agent installation using Kubernetes dashboard. Please follow [link](https://docs.aws.amazon.com/eks/latest/userguide/dashboard-tutorial.html){target=_blank}
@@ -146,8 +151,7 @@ Verify Cloudneeti agent installation using Kubernetes dashboard. Please follow [
 
     ![Associate Kubernetes](.././images/kubernetes/Verify_EKS.png#thumbnail)    
 
-
-STEP 4: Verify policy results
+4.4: Verify policy results
 -----------------------------
 
 Login to Cloudneeti portal with **License Admin** role
