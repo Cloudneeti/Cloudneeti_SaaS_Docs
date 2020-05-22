@@ -45,7 +45,7 @@ Below steps are performed on Virtual Machine using RDP, as a system admninistrat
 
 5. Verify policy results in CSBP Benchmark 
 
-    ![Compliance score](.././images/osBaselineQuickWIns/Compliance_Score_CIS_Win16.png#thumbnail_1)
+    <!-- ![Compliance score](.././images/osBaselineQuickWIns/Compliance_Score_CIS_Win16.png#thumbnail_1) -->
 
 
 
