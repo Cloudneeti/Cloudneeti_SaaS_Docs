@@ -39,7 +39,7 @@ Below steps are performed on Virtual Machine using RDP, as a system admninistrat
 
         Start-DscConfiguration -Path .\CSBP_WindowsServer2016  -Force -Verbose -Wait
 
-    ![Compliance score](.././images/osBaselineQuickWIns/Script_Execution_1.png#thumbnail_1)
+    <!-- ![Compliance score](.././images/osBaselineQuickWIns/Script_Execution_1.png#thumbnail_1) -->
 
 4. Scan related Cloud Account in Cloudneeti or wait for scheduled scan
 
@@ -64,13 +64,13 @@ Below steps are performed on Virtual Machine using RDP, as a system admninistrat
 
         Start-DscConfiguration -Path .\CIS_Benchmark_WindowsServer2016_v1_0_0  -Force -Verbose -Wait
 
-    ![Compliance score](.././images/osBaselineQuickWIns/Config_Script_Execution.png#thumbnail_1)
+    <!-- ![Compliance score](.././images/osBaselineQuickWIns/Config_Script_Execution.png#thumbnail_1) -->
 
 4. Scan related Cloud Account in Cloudneeti or wait for scheduled scan
 
 5. Verify policy results in CIS Benchmark Windows Server 2016 Version 1.0.0
 
-    ![Compliance score](.././images/osBaselineQuickWIns/Compliance_Score_CIS_Win16.png#thumbnail_1)
+    <!-- ![Compliance score](.././images/osBaselineQuickWIns/Compliance_Score_CIS_Win16.png#thumbnail_1) -->
 
 
 ## Remediation policy list
