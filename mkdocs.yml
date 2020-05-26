@@ -108,8 +108,8 @@ nav:
     - Auto Remediation: remediation/awsRemediation.md
     - Decommission Remediation framework: remediation/awsDecommissionofRemediation.md
   - OS Baseline Quick wins:
-    - Windows Server 2016: remediation\osBaseline\win16QuickWins.md
-    - Windows Server 2012 R2: remediation\osBaseline\win12QuickWins.md
+    - Windows Server 2016: remediation/osBaseline/win16QuickWins.md
+    - Windows Server 2012 R2: remediation/osBaseline/win12QuickWins.md
     # - CentOS Linux 7: remediation\osBaseline\centOSQuickWins.md
 - Release Notes:
   - Releases in 2020: releaseNotes/2020.md
