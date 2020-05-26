@@ -24,8 +24,8 @@ Following is the count of auto remediation avaiable for security policies within
 |  AWS​ VM baseline RHEL           | -                                 | -                                              |
 |  Office365​                      | -                                 | -                                              |                         
 |  Azure​                          | [26](../../remediation/azureAutoRemediation/) | [137](../../remediation/azureQuickWins/) |                         
-|  Azure VM baseline Win 2012 R2​  | -                                 | -                  |          
-|  Azure VM baseline Win 2016​     | -                                 | [190](../../remediation/osBaselineQuickWins/#windows-server-2016-vm-baseline-policies-for-cloud-security-best-practices)                                              |
+|  Azure VM baseline Win 2012 R2​  | -                                 | [125](../../remediation/osBaseline/win12QuickWins/#cis-benchmark-windows-server-2012-r2-version-100)                 |          
+|  Azure VM baseline Win 2016​     | -                                 | [190](../../remediation/osBaseline/win16QuickWins/#cis-benchmark-windows-server-2016-version-100)                                              |
 |  Azure VM baseline Ubuntu 18.04​ | -                                 | -                                              |
 |  Azure VM baseline CentOS​       | -                                 | -                                              |
-| **Grand Total**​                 | **135**​                            | **343**                                         |     
+| **Grand Total**​                 | **135**​                            | **468**                                         |     
