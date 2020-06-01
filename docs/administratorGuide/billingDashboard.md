@@ -23,11 +23,11 @@ Login to Cloudneeti portal as License Admin.
 
     ![Azure Resources](.././images/billingDashboard/azure_billingDashboard_AccountLevel.png#thumbnail)
 
-3. Select **Billing Cycle** (1)
+3. Select **Billing Cycle** (1), loads current billing cycle by default.
 
     - Billing details (2)
 
-    ![Azure Resources](.././images/billingDashboard/azure_billingDashboard_AccountLevel.png#thumbnail)
+    ![Azure Resources](.././images/billingDashboard/azure_billingDashboard_CycleDetails.png#thumbnail)
 
 4. Resource summary for a chosen Cloud Account is loaded
 
@@ -50,7 +50,7 @@ Login to Cloudneeti portal as License Admin.
 
     - Average resource counts for days of chosen billing cycle (3)
 
-    ![AWS Resources](.././images/billingDashboard/azure_billingDashboard_CycleDetails.png#thumbnail)
+    ![AWS Resources](.././images/billingDashboard/aws_billingDashboard_ResourceSummary.png#thumbnail)
 
 
     ### Office 365 Resource Summary
