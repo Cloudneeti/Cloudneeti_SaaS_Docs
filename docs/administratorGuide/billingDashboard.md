@@ -1,12 +1,12 @@
 Billing Dashboard
 =================
 
-Cloudneeti product subscription fees are based on a total number of resources in
+Cloudneeti product subscription fees are based on an average total number of resources in
 onboarded cloud accounts (Azure subscription, AWS accounts) and number of users
 in Office 365 subscription. Please follow the steps below to know resource
 and user count. 
 
-Billing dashboard page providing a tabular view of the total cloud resources for specific Cloud Account type. Dashboard also comprises trend chart of cloud resources across the billing cycle. User can select the billing cycle to view the cloud resources for a specific period. This release comprises only resource view. More features like view on total allocated cloud resources vs consumed cloud resources, consolidated billing at license level will be released in subsequent phases. 
+Billing dashboard page provides billing visibility to the consumed resource capacity. Customers/Partners can now use the resource consumption data to calculate the monthly/yearly invoices. 
 
 Total resources in Cloud Account
 --------------------------------
