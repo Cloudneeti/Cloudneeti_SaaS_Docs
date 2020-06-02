@@ -4,7 +4,7 @@ Estimate Pricing
 Subscription Fee 
 ----------------------
 
-Cloudneeti product subscription fees are based on a total number of resources in
+Cloudneeti product subscription fees are based on an average total number of resources in
 onboarded cloud accounts (Azure subscription, AWS accounts) and number of users
 in Office 365 subscription. Please follow the steps below to collect resource
 and user count.
