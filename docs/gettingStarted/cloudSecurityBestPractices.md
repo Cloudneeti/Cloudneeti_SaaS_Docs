@@ -6,7 +6,7 @@ The Cloud Security Best Practices view provides a list of all security policies 
 |---------------------------------|---------------------------|----------------------------|-------------------------|
 |  AWS​                            | 429                       | 416                        | 13                      |
 |  AWS​ VM baseline RHEL           | 162                       | 162                        | -                      |
-|  Azure VM baseline Win 2016​     | 167                       | 167                        | -                      |
+|  AWS VM baseline Win 2016​     | 167                       | 167                        | -                      |
 |  Amazon Elastic Kubernetes Service (Amazon EKS)             | 21                       | 21                        | -                      |
 |  Office365​                      | 133                       | 97                         | 36                      |
 |  Azure​                          | 425                       | 392                        | 33                      |
