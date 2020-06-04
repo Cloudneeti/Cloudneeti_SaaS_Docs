@@ -5,16 +5,16 @@ The Cloud Security Best Practices view provides a list of all security policies 
 | **Connector Type​**              | **Total Policy Count​**    | **Automated Policy Count​** | **Manual Policy Count​** |
 |---------------------------------|---------------------------|----------------------------|-------------------------|
 |  AWS​                            | 429                       | 416                        | 13                      |
-|  AWS​ VM baseline RHEL           | 162                       | 162                        | -                      |
-|  AWS VM baseline Win 2016​     | 167                       | 167                        | -                      |
-|  Amazon Elastic Kubernetes Service (Amazon EKS)             | 21                       | 21                        | -                      |
+|  AWS​ VM baseline RHEL           | 162                       | 162                        | -                       |
+|  AWS VM baseline Win 2016​       | 167                       | 167                        | -                       |
+|  Amazon Elastic Kubernetes Service (Amazon EKS)             | 21                         | 21                      | -                      |
 |  Office365​                      | 133                       | 97                         | 36                      |
 |  Azure​                          | 425                       | 392                        | 33                      |
-|  Azure VM baseline Win 2012 R2​  | 212​                       | 212​                        | -                      |
-|  Azure VM baseline Win 2016​     | 227​                       | 227​                        | -                      |
-|  Azure VM baseline Ubuntu 18.04​ | 40​                        | 40​                         | -                      |
-|  Azure VM baseline CentOS​       | 34​                        | 34​                         | -                      |
-|  Azure Kubernetes Service (AKS) | 73                        | 73                         | -                      |
+|  Azure VM baseline Win 2012 R2​  | 212​                       | 212​                        | -                       |
+|  Azure VM baseline Win 2016​     | 227​                       | 227​                        | -                       |
+|  Azure VM baseline Ubuntu 18.04​ | 40​                        | 40​                         | -                       |
+|  Azure VM baseline CentOS​       | 34​                        | 34​                         | -                       |
+|  Azure Kubernetes Service (AKS) | 73                        | 73                         | -                       |
 | **Grand Total**​                 | **1923**​                  | **1841**​                   |                   **82**      |
 
 
@@ -23,8 +23,8 @@ Following is the count of auto remediation avaiable for security policies within
 
 | **Connector Type​**              | **Auto Remediation Policy​ Count**      | **Quick Wins Policy Count**      |
 |---------------------------------|---------------------------|----------------------------|     
-|  AWS​                            | [109](../../remediation/awsRemediation/)       |            [16](../../remediation/awsQuickWins/)             |  
-|  AWS​ VM baseline RHEL           | -                                 | -                                              |
+|  AWS​                            | [109](../../remediation/awsRemediation/)       |            [16](../../remediation/awsQuickWins/)                |  
+|  AWS​ VM baseline RHEL           | -                                              | -                                              |
 |  Amazon Elastic Kubernetes Service (Amazon EKS)           | -                                 | -                                              |
 |  Office365​                      | -                                 | -                                              |                         
 |  Azure​                          | [26](../../remediation/azureAutoRemediation/) | [137](../../remediation/azureQuickWins/) |                         
