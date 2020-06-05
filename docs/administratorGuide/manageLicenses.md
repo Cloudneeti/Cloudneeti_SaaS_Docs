@@ -251,6 +251,8 @@ Cloudneeti application.
 
 9.  Click **Save**
 
+    ![ZenDesk integration](.././images/administratorGuide/Zendesk2.png#thumbnail)
+
 
 ### STEP 2: Configure Incident Management
 
