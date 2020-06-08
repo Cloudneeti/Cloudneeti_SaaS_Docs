@@ -78,8 +78,11 @@ nav:
     - Rest APIs: userGuide/restAPIs.md
     - API User Scenarios: userGuide/apiUserScenarios.md
     - Token API: userGuide/tokenAPI.md
+    - License Details API (Preview): userGuide/getLicenseDetails.md
     - Onboard cloud account API: userGuide/onboardCloudAccount.md
     - Update API app access scope API: userGuide/updateAPIAppAccessScope.md
+    - Get cloud account health status API (Preview): userGuide/getHealthStatus.md
+    - Get benchmark summary report API (Preview): userGuide/getBenchmarkSummary.md
     - Initiate scan API: userGuide/initiateScanAPI.md
     - Scan status API: userGuide/scanStatusAPI.md
     - Get supported benchmarks API: userGuide/getSupportedBenchmarks.md

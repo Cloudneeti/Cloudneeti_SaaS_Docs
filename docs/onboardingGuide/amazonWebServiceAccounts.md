@@ -13,6 +13,7 @@ The following steps are required to onboard AWS to the Cloudneeti application.
 | 3  | AWS inspector configuration              | AWS        | AWS Administrator      |  optional  |
 | 4  | Configure Cloudneeti agent on EKS        | AWS        | AWS Administrator      |  optional  |
 | 5  | Add AWS Account                          | Cloudneeti | License Admin          |  mandatory |
+| 6  | Verify cloud account health status       | Cloudneeti | License Admin          |  optional |
 
 **1. Creating an AWS role for Cloudneeti** includes registering a new AWS role for the Cloudneeti application and granting the required access permissions.
 
@@ -26,6 +27,7 @@ Enabling AWS Inspector for a host assessment allows various OS baselines as defi
 
 **5. Add AWS Account** to the Cloudneeti application includes adding AWS account information to the respective Cloudneeti cloud account and waiting until the first data collection is complete.
 
+**6. Verify cloud account health status** for prerequisite permissions and configurations can be verified post every scan.
 
 ### Required Roles
 One or more people with the following roles are required to complete Amazon Web Service Account onboarding process.
@@ -209,7 +211,11 @@ Once the AWS account is added to the cloud account under the Cloudneeti License,
 
     Congratulations! You have added an AWS account to Cloudneeti application.
 
-3. Verify [cloud account health status](../../onboardingGuide/azureAccountHealthStatus/) for prerequisite permissions and configurations verfied on every scan.
+
+
+## STEP 6. Verify cloud account health status
+
+Verify [cloud account health status](../../onboardingGuide/azureAccountHealthStatus/) for prerequisite permissions and configurations, can be verfied on every scan.
 
 ## OFFBOARDING
 

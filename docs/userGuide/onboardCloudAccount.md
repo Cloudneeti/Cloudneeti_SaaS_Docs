@@ -26,7 +26,7 @@ Please follow steps 1 to 3 in [page](../../onboardingGuide/amazonWebServiceAccou
 ### Authorization
 | Type           |           Description                                |           Required/Optional  |
 |-----------|----------------------------------------------------------------|----------------------------|
-| Bearer Token  |          [License Token](../../userGuide/tokenAPI/##license-token)                   | Required|
+| Bearer Token  |          [License Token](../../userGuide/tokenAPI/#license-token)                   | Required|
 
 ### Header
 
