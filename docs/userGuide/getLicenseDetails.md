@@ -1,9 +1,9 @@
-Get License Details API (Preview)
+Get License Accounts API (Preview)
 =================================
 
 The benchmarks API provides list of the list of Cloud Accounts for given License in Cloudneeti.
 
-        GET https://<CLOUDNEETI API DOMAIN>/onboarding/license/<LICENSE ID>/licensedetail
+        GET https://<CLOUDNEETI API DOMAIN>/onboarding/license/<LICENSE ID>/licenseAccounts
 
 | Environment	| Values for Cloudneeti API domain     |
 |---------------|--------------------------------------|
@@ -36,6 +36,40 @@ The benchmarks API provides list of the list of Cloud Accounts for given License
 | statusCode |     Integer      | Cloudneeti API response status code                             |
 | message	 |     String       | Response describing operation result as success or failed.      |
 
+
+### Sample response
+
+                {
+                "result": {
+                        "licenseId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxx",
+                        "accounts": [
+                        {
+                                "accountId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxx",
+                                "accountName": "Azure",
+                                "isInApiScope": true,
+                                "connectorType": "Azure"
+                        },
+                        {
+                                "accountId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxx",
+                                "accountName": "office",
+                                "isInApiScope": true,
+                                "connectorType": "Office365"
+                        }
+                        ],
+                        "apis": [
+                        "Account.Audit",
+                        "Account.Health",
+                        "Account.Rescan",
+                        "Account.GetJobstatus",
+                        "Account.InsertKubernetesClusterData",
+                        "License.AddAccount",
+                        "License.UpdateAPIAccess",
+                        "License.GetAPIAccess"
+                        ]
+                },
+                "statusCode": 200,
+                "message": "Request Successful"
+                }
 
 Appendix 
 ---------

@@ -1,7 +1,7 @@
 Get benchmark summary report API (Preview)
 ==========================================
 
-The benchmarks API provides list of benchmark ids supported for given cloud account in Cloudneeti.
+The benchmarks API provides list of benchmark ids supported for given cloud account in Cloudneeti. 
 
         GET https://<CLOUDNEETI API DOMAIN>/audit/license/<LICENSE ID>/account/<ACCOUNT ID>/benchmark/<BENCHMARK ID>summary?jobId=<JOB ID>
 
@@ -17,7 +17,7 @@ The benchmarks API provides list of benchmark ids supported for given cloud acco
 | LICENSE ID  |          [Cloudneeti license id​](#license-id)                  | Required|
 | ACCOUNT ID  |          [Cloud account id​](#account-id)                       | Required|
 | BENCHMARK ID |        [Benchmark id​](#cloudneeti-supported-benchmarks)       | Required|
-| JOB ID      |  [Cloud account scan job id​](../../userGuide/initiateScanAPI/) | Optional|
+| JOB ID      |  [Cloud account scan job id​](../../userGuide/initiateScanAPI/) | Optional, if not passed will give report for the last successful scan job|
 
 ### Authorization
 | Type           |           Description                                |           Required/Optional  |
