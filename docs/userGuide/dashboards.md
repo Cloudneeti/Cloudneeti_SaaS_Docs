@@ -4,7 +4,8 @@ Cloudneeti portal home page displays **Compliance** (1) dashboard. The left side
 of the screen (2) displays various compliance benchmarks with the overall
 compliance score and a daily trend. The right side of the screen (2) displays a
 fly wheel that allows quick drill down into each compliance score.
-	![Compliance](.././images/userGuide/Compliance_Dashboard.png#thumbnail)
+	
+![Compliance](.././images/userGuide/Compliance_Dashboard.png#thumbnail)
 
 Users can click on different part of the fly wheel for a quick drill down.
 
@@ -23,7 +24,8 @@ The left side of the screen also allows navigation.
 
 6.  Redirects user to a complete list of security policies within Cloudneeti
     application.
-	![Compliance](.././images/userGuide/Compliance_Navigation_Dashboard.png#thumbnail)
+	
+    ![Compliance](.././images/userGuide/Compliance_Navigation_Dashboard.png#thumbnail)
 
 ## Risk
 
@@ -33,7 +35,8 @@ by Risk Impact and Risk Likelihood. The upper right corner of the dashboard
 displays high risk deviations from cloud security best practices. This allows
 users to better understand their risk exposure and prioritize remediation
 activities.
-	![Risk Dashboard](.././images/userGuide/Risk_Dashboard.png#thumbnail)
+	
+![Risk Dashboard](.././images/userGuide/Risk_Dashboard.png#thumbnail)
 
 ## Assets Security (Preview)
 

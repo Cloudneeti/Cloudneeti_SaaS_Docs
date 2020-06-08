@@ -11062,26 +11062,10 @@ Login to Cloudneeti portal as a License Admin.
 
 ### Cloudneeti supported benchmarks 
 
-| **Benchmark Name**                                  | **Benchmark Id**                |
-|-----------------------------------------------------|---------------------------------|
-| CIS Azure Foundations Benchmark1.0.0                | AZFDCIS1_0_0                    |
-| CIS Azure Foundations Benchmark1.1.0                | AZFDCIS1_1_0                    |
-| CIS Microsoft Windows Server 2012 R2 Benchmark1.0.0 | AZMSWIN12R2CIS1_0_0             |
-| CIS Microsoft Windows Server 2016 Benchmark1.0.0    | AZMSWIN16CIS1_0_0               |
-| PCI_DSS_3.2                                         | PCI3_2                          |
-| General Data Protection Regulation 2016-679         | GDPR2016_679                    |
-| HIPAA Safeguards                                    | HIPAA                           |
-| FFIEC                                               | FFIEC                           |
-| NIST Cybersecurity Framework1.1                     | NISTCSF1_1                      |
-| NIST SP 800-53 Rev. 4                               | NIST800_53Rev4                  |
-| CSA CCM V.3.0.1                                     | CSACCM3_0_1                     |
-| ISO-IEC 27001-2013                                  | ISO27001_2013                   |
-| Cloud Security Best Practices                       | CSBP                            |
-| UK NCSC                                             | UKNCSC                          |
-| Reserve Bank of India 2015-16-418                   | RBI2015_16_418                  |
-| SOC2 - AICPA TSC 2017                               | SOC2_AICPA_TSC_2017             |
-| GxP Life Science 21 CFR PART 11                     | GxP_Life_Science_21_CFR_PART_11 |
-| CIS Ubuntu Linux 18.04 LTS Benchmark v1.0.0         | AZLinux18CIS1_1_0               |
-| CIS CentOS Linux 7 Benchmark v2.2.0                 | AZCentOSCIS2_2_0                |
-| CIS AWS Foundations Benchmarks 1.2.0                | AWSFDCIS1_2_0                   |
-| CIS M365 Foundations Benchmark1.0.0                 | M365CIS1_0_0                    |
+API is availabel to get supported benchmark, refer page [Get supported benchmarks API](../../userGuide/getSupportedBenchmarks/)
+
+| **Cloud Account Type** | **Cloudneeti supported benchmark**                                                                                                                                                                                                                                                                                                                                 |
+|------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Azure                  | CIS AZ FD v1.0.0, CIS AZ FD v1.1.0, CIS AZ K8s v1.5.0, CIS CentOS 7 v2.2.0, CIS Ubuntu 18.04 v1.0.0, CIS Win_16 v1.0.0, CIS Win_R12 v1.0.0, Cloud Security Best Practices, CSA CCM v3.0.1, Enterprise Benchmark V1, FFIEC CAT, GDPR, GxP – FDA 21 CFR, HIPAA, ISO/IEC 27001, NIST 800-53 Rev.4, NIST CSF v1.1, PCI DSS 3.2, RBI, SOC2 AICPA TSC 2017, UK NCSC, U-NNPI |
+| AWS                    | CIS AWS FD v1.2.0, CIS K8s v1.5.0, CIS RHEL 7 v1.0.0, CIS Win_16 v1.0.0, Cloud Security Best Practices, CSA CCM v3.0.1, Enterprise Benchmark, FFIEC CAT, GDPR, GxP – FDA 21 CFR, HIPAA, ISO/IEC 27001, NIST 800-53 Rev.4, NIST CSF v1.1, PCI DSS 3.2, RBI, SOC2 AICPA TSC 2017, U-NNPI                                                                                |
+| Office 365             | CIS AWS FD v1.2.0, CIS K8s v1.5.0, CIS RHEL 7 v1.0.0, CIS Win_16 v1.0.0, Cloud Security Best Practices, CSA CCM v3.0.1, Enterprise Benchmark, FFIEC CAT, GDPR, GxP – FDA 21 CFR, HIPAA, ISO/IEC 27001 ,NIST 800-53 Rev.4, NIST CSF v1.1, PCI DSS 3.2, RBI, SOC2 AICPA TSC 2017, U-NNPI                                                                                |

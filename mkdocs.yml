@@ -78,8 +78,11 @@ nav:
     - Rest APIs: userGuide/restAPIs.md
     - API User Scenarios: userGuide/apiUserScenarios.md
     - Token API: userGuide/tokenAPI.md
+    - License Details API (Preview): userGuide/getLicenseDetails.md
     - Onboard cloud account API: userGuide/onboardCloudAccount.md
     - Update API app access scope API: userGuide/updateAPIAppAccessScope.md
+    - Get cloud account health status API (Preview): userGuide/getHealthStatus.md
+    - Get benchmark summary report API (Preview): userGuide/getBenchmarkSummary.md
     - Initiate scan API: userGuide/initiateScanAPI.md
     - Scan status API: userGuide/scanStatusAPI.md
     - Get supported benchmarks API: userGuide/getSupportedBenchmarks.md
@@ -95,6 +98,7 @@ nav:
   - Override Security Policy Status: administratorGuide/overrideSecurityPolicyStatus.md
   - Audit Log: administratorGuide/auditLog.md
   - Configure Cloudneeti API Access: administratorGuide/configureCloudneetiAPIAccess.md
+  - Billing Dashboard: administratorGuide/billingDashboard.md 
 - Remediation:
   - Overview: remediation/overview.md
   - Azure:
@@ -110,7 +114,7 @@ nav:
   - OS Baseline Quick wins:
     - Windows Server 2016: remediation/osBaseline/win16QuickWins.md
     - Windows Server 2012 R2: remediation/osBaseline/win12QuickWins.md
-    # - CentOS Linux 7: remediation\osBaseline\centOSQuickWins.md
+    # - CentOS Linux 7: remediation/osBaseline/centOSQuickWins.md
 - Release Notes:
   - Releases in 2020: releaseNotes/2020.md
   - Releases in 2019: releaseNotes/2019.md

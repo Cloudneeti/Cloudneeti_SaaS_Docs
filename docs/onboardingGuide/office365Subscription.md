@@ -700,7 +700,8 @@ Advanced security configuration done using Office 365 App Password will not enab
 | M365 - Identity                         | Ensure that 'Require Multi-Factor Auth to join devices' is set to 'Yes'                                              |
 | M365 - Data                             | Enable audit data recording                                                                                          |
 | M365 - Data                             | Ensure Advanced Threat Protection safe attach policy is Enabled                                                      |
-| M365 - Data                             | Ensure Advanced Threat Protection safe links policy is Enabled                                                       |
+
+<!-- | M365 - Data                             | Ensure Advanced Threat Protection safe links policy is Enabled                                                       | -->
 
 
 <div class="policy-json-code">
