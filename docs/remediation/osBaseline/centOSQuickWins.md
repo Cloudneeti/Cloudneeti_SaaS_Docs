@@ -11,7 +11,6 @@ Note: The scripts are designed to harden the operating system baseline configura
 | CentOS Linux 7 VM baseline policies for CIS Benchmark CentOS Linux 7 Version 2.2.0   | 121                               | Azure|
 
 
-
 #### Prerequisites 
 The below steps are required for registering Cloudneeti application in Azure Tenant using PowerShell script.
 
