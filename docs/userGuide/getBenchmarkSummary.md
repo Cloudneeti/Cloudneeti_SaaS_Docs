@@ -1,9 +1,9 @@
-Get benchmark summary report API (Preview)
+Audit summary report API (Preview)
 ==========================================
 
 The benchmarks API provides list of benchmark ids supported for given cloud account in Cloudneeti. 
 
-        GET https://<CLOUDNEETI API DOMAIN>/audit/license/<LICENSE ID>/account/<ACCOUNT ID>/benchmark/<BENCHMARK ID>summary?jobId=<JOB ID>
+        GET https://<CLOUDNEETI API DOMAIN>/audit/license/<LICENSE ID>/account/<ACCOUNT ID>/benchmark/<BENCHMARK ID>/summary?jobId=<JOB ID>
 
 | Environment	| Values for Cloudneeti API domain     |
 |---------------|--------------------------------------|
@@ -219,6 +219,17 @@ Sample Report
 </code>
 </pre>
 </div>
+
+### Cloudneeti supported benchmarks 
+
+API is availabel to get supported benchmark, refer page [Get supported benchmarks API](../../userGuide/getSupportedBenchmarks/)
+
+
+| **Cloud Account Type** | **Cloudneeti supported benchmark**                                                                                                                                                                                                                                                                                                                                 |
+|------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Azure                  | AZFDCIS1_0_0, AZFDCIS1_1_0, PCI3_2, GDPR2016_679, HIPAA, FFIEC, NISTCSF1_1, NIST800_53Rev4, CSACCM3_0_1, ISO27001_2013, CSBP, UKNCSC, RBI2015_16_418, SOC2_AICPA_TSC_2017, GxP_Life_Science_21_CFR_PART_11, U_NNPI, AZMSWIN12R2CIS1_0_0, AZMSWIN16CIS1_0_0, AZLinux18CIS1_1_0, AZCentOSCIS2_2_0, AZKUBERNETES1_5_0 |
+| AWS                    | AWSFDCIS1_2_0, CSBP, HIPAA, PCI3_2, GDPR2016_679, NIST800_53Rev4, ISO27001_2013, SOC2_AICPA_TSC_2017, NISTCSF1_1, FFIEC, GxP_Life_Science_21_CFR_PART_11, CSACCM3_0_1, RBI2015_16_418, U_NNPI, AWSRHEL7CIS1_1_0, AWSMSWIN16CIS1_0_0, AWSKUBERNETES1_5_0                    |
+| Office 365             | CSBP, CSACCM3_0_1, M365CIS1_0_0, M365CIS1_1_0, PCI3_2, GDPR2016_679, HIPAA, FFIEC, NISTCSF1_1, NIST800_53Rev4, ISO27001_2013, UKNCSC, RBI2015_16_418, GxP_Life_Science_21_CFR_PART_11, U_NNPI         |
 
 
 Appendix 
