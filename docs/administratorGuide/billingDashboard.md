@@ -8,10 +8,35 @@ and user count.
 
 Billing dashboard page provides billing visibility to the consumed resource capacity. Customers/Partners can now use the resource consumption data to calculate the monthly/yearly invoices. 
 
-Total resources in Cloud Account
+
+Aggregated resource counts at License level
+-------------------------------------------
+
+Please follow the below steps to determine the average total number of resources aggreagted at a license level for all Cloud Accounts within selected License.
+
+Login to Cloudneeti portal as License Admin.
+
+1. Navigate to **Billing** (1)
+
+2. Select **License** (2) and **All Accounts** (3)
+
+    ![Azure Resources](.././images/billingDashboard/billingDashboard_All_1.png#thumbnail)
+
+3. Select **Billing Cycle** (1), loads the current billing cycle by default.
+
+    ![Azure Resources](.././images/billingDashboard/billingDashboard_All_1a.png#thumbnail)
+
+4. Aggregated resource view is shown for all cloud accounts within a selected License.
+ - Billing Details (1)
+ - Aggreagted resource summary (2)
+
+    ![Azure Resources](.././images/billingDashboard/billingDashboard_All_2.png#thumbnail)
+
+
+Resource count in Cloud Account
 --------------------------------
 
-Please follow the below steps to determine the total number of resources within
+Please follow the below steps to determine the average total number of resources within
 a Cloud Account.
 
 Login to Cloudneeti portal as License Admin.
