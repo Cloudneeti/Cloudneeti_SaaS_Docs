@@ -11,7 +11,6 @@ Note: The scripts are designed to harden the operating system baseline configura
 | [Windows Server 2016 VM baseline policies for CIS Benchmark Windows Server 2016 Version 1.0.0](https://raw.githubusercontent.com/Cloudneeti/os-harderning-scripts/master/WindowsServer2016/CIS_Benchmark_WindowsServer2016_v100.ps1){target=_blank}   | 151                               | Azure|
 
 
-
 #### Prerequisites 
 The below steps are required for registering Cloudneeti application in Azure Tenant using PowerShell script.
 
