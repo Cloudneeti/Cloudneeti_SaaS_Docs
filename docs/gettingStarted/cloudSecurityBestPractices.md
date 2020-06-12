@@ -15,7 +15,7 @@ The Cloud Security Best Practices view provides a list of all security policies 
 |  Azure VM baseline Ubuntu 18.04​ | 40​                        | 40​                         | -                       |
 |  Azure VM baseline CentOS​       | 34​                        | 34​                         | -                       |
 |  Azure Kubernetes Service (AKS) | 73                        | 73                         | -                       |
-| **Grand Total**​                 | **1923**​                  | **1841**​                   |                   **82**      |
+| **Grand Total**​                 | **2115**​                  | **2032**​                   |                   **82**      |
 
 
 
