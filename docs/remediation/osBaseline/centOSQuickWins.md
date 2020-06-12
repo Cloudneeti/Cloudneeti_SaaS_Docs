@@ -1,6 +1,6 @@
 # CentOS Linux 7
 
- A collection of quick wins scripts that will help to harden operating system baseline configuration supported by Cloudneeti as defined in CIS Microsoft CentOS Linux 7 benchmark v2.2.0. This remediates below Monitoring [policies listed here.](../../osBaseline/centOSQuickWins/#cis-benchmark-centos-linux-7-version-220)
+ A collection of quick wins scripts that will help to harden operating system baseline configuration supported by Cloudneeti as defined in CIS Microsoft CentOS Linux 7 benchmark v2.2.0. This remediates below Monitoring [policies listed here.](../../osBaseline/centOSQuickWins/#csbp-centos-linux-7-version-220)
 
 Note: The scripts are designed to harden the operating system baseline configurations, Please test it on the test/staging system before applying to the production system.
 
@@ -37,7 +37,7 @@ Below steps are performed on Virtual Machine, as a root user
 
 5. Verify policy results in CSBP Benchmark on Cloudneeti portal
 
-    ![Compliance score](.././images/osBaselineQuickWIns/CentOS_QuickWins.png#thumbnail_1)
+    ![Compliance score](../../images/osBaselineQuickWIns/CentOS_QuickWins.png#thumbnail_1)
 
 ### CentOS Linux 7 VM baseline policies for CIS Benchmark CentOS Linux 7 Version 2.2.0
 

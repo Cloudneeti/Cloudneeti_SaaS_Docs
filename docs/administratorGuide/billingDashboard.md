@@ -12,7 +12,7 @@ Billing dashboard page provides billing visibility to the consumed resource capa
 Aggregated resource counts at License level
 -------------------------------------------
 
-Please follow the below steps to determine the average total number of resources aggreagted at a license level for all Cloud Accounts within selected License.
+Please follow the below steps to determine the average total number of resources aggregated at a license level for all Cloud Accounts within selected License.
 
 Login to Cloudneeti portal as License Admin.
 
