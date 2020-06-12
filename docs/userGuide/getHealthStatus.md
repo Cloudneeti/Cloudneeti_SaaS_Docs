@@ -1,7 +1,7 @@
 Cloud account health status API (Preview)
 =============================================
 
-The benchmarks API provides account health status for given cloud account in Cloudneeti.
+The benchmarks API provides account health status for given cloud account in Cloudneeti. The filters available through the API enable you to view your status across different cloud accounts.
 
         GET https://<CLOUDNEETI API DOMAIN>/audit/license/<LICENSE ID>/account/<ACCOUNT ID>/healthstatus
 

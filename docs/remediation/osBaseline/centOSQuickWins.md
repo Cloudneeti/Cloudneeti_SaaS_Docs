@@ -37,7 +37,7 @@ Below steps are performed on Virtual Machine, as a root user
 
 5. Verify policy results in CSBP Benchmark on Cloudneeti portal
 
-    ![Compliance score](.././images/osBaselineQuickWIns/CentOS_QuickWins.png.png#thumbnail_1)
+    ![Compliance score](.././images/osBaselineQuickWIns/CentOS_QuickWins.png#thumbnail_1)
 
 ### CentOS Linux 7 VM baseline policies for CIS Benchmark CentOS Linux 7 Version 2.2.0
 
