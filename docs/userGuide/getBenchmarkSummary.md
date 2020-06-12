@@ -1,7 +1,7 @@
 Audit summary report API (Preview)
 ==========================================
 
-The benchmarks API provides list of benchmark ids supported for given cloud account in Cloudneeti. 
+The Audit Report API provide information related to your compliance posture across various compliance standards. The filters available through the API enable you to view your status across different cloud accounts and for different benchmarks [(list below)](../../userGuide/getBenchmarkSummary/#cloudneeti-supported-benchmarks) 
 
         GET https://<CLOUDNEETI API DOMAIN>/audit/license/<LICENSE ID>/account/<ACCOUNT ID>/benchmark/<BENCHMARK ID>/summary?jobId=<JOB ID>
 
