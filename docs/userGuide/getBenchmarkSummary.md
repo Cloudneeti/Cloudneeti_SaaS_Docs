@@ -1,5 +1,5 @@
-Audit summary report API (Preview)
-==========================================
+Audit summary report API
+========================
 
 The Audit Report API provide information related to your compliance posture across various compliance standards. The filters available through the API enable you to view your status across different cloud accounts and for different benchmarks [(list below)](../../userGuide/getBenchmarkSummary/#cloudneeti-supported-benchmarks) 
 
