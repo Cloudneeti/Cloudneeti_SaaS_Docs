@@ -1,7 +1,7 @@
 Office 365 onboarding Health Status (Preview)
 ==================================
 
-Onboarding Health Status page provides insights into the state of your cloud account onboarded in Cloudneeti like missing pre-requisite permissions, configurations, scan quota consumed on every cloud account scan. 
+Onboarding Health Status page provides insights into the state of your cloud account onboarded in Cloudneeti like completed pre-requisite permissions, configurations, scan quota consumed on every cloud account scan. 
 
 License Admins and Account Admins will have the rights to view Cloud Account's onboarding Health Status
 
