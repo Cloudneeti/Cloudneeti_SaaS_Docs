@@ -4,9 +4,9 @@ The Cloud Security Best Practices view provides a list of all security policies 
 
 | **Connector Type​**              | **Total Policy Count​**    | **Automated Policy Count​** | **Manual Policy Count​** |
 |---------------------------------|---------------------------|----------------------------|-------------------------|
-|  AWS​                            | 429                       | 416                        | 13                      |
+|  AWS​                            | 438                       | 425                        | 13                      |
 |  AWS​ VM baseline RHEL           | 162                       | 162                        | -                       |
-|  AWS VM baseline Win 2016​       | 167                       | 167                        | -                       |
+|  AWS VM baseline Win 2016​       | 351                       | 351                        | -                       |
 |  Amazon Elastic Kubernetes Service (Amazon EKS)             | 21                         | 21                      | -                      |
 |  Office365​                      | 133                       | 96                         | 37                      |
 |  Azure​                          | 425                       | 392                        | 33                      |
@@ -15,7 +15,7 @@ The Cloud Security Best Practices view provides a list of all security policies 
 |  Azure VM baseline Ubuntu 18.04​ | 40​                        | 40​                         | -                       |
 |  Azure VM baseline CentOS​       | 34​                        | 34​                         | -                       |
 |  Azure Kubernetes Service (AKS) | 73                        | 73                         | -                       |
-| **Grand Total**​                 | **1923**​                  | **1841**​                   |                   **82**      |
+| **Grand Total**​                 | **2116**​                  | **2033**​                   |                   **82**      |
 
 
 
@@ -31,6 +31,6 @@ Following is the count of auto remediation avaiable for security policies within
 |  Azure VM baseline Win 2012 R2​  | -                                 | [125](../../remediation/osBaseline/win12QuickWins/#cis-benchmark-windows-server-2012-r2-version-100)                 |          
 |  Azure VM baseline Win 2016​     | -                                 | [190](../../remediation/osBaseline/win16QuickWins/#cis-benchmark-windows-server-2016-version-100)                                              |
 |  Azure VM baseline Ubuntu 18.04​ | -                                 | -                                              |
-|  Azure VM baseline CentOS​       | -                                 | -                                              |
+|  Azure VM baseline CentOS​       | -                                 | [26](../../remediation/osBaseline/centOSQuickWins/)                                             |
 |  Azure Kubernetes Service (AKS)       | -                                 | -                                              |
-| **Grand Total**​                 | **135**​                            | **468**                                         |     
+| **Grand Total**​                 | **135**​                            | **495**                                         |     

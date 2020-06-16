@@ -1,5 +1,5 @@
-Get License Accounts API (Preview)
-=================================
+Get License Accounts API
+========================
 
 The benchmarks API provides list of the list of Cloud Accounts for given License in Cloudneeti.
 
