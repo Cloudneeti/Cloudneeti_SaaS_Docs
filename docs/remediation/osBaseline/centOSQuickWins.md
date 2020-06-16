@@ -8,8 +8,7 @@ Note: The scripts are designed to harden the operating system baseline configura
 | **Configuration script**        | **Number of policies remediated** | **Cloud Account Type**|
 |--------------------------------|-------------------------------|-----------------------------------|
 | CentOS Linux 7 VM baseline policies for Cloud Security Best Practices            | 26                               | Azure|
-
-<!-- | CentOS Linux 7 VM baseline policies for CIS Benchmark CentOS Linux 7 Version 2.2.0   | 121                               | Azure| -->
+| CentOS Linux 7 VM baseline policies for CIS Benchmark CentOS Linux 7 Version 2.2.0   | 121                               | Azure|
 
 
 #### Prerequisites 
@@ -40,7 +39,7 @@ Below steps are performed on Virtual Machine, as a root user
 
     ![Compliance score](../../images/osBaselineQuickWIns/CentOS_QuickWins.png#thumbnail_1)
 
-<!-- ### CentOS Linux 7 VM baseline policies for CIS Benchmark CentOS Linux 7 Version 2.2.0
+### CentOS Linux 7 VM baseline policies for CIS Benchmark CentOS Linux 7 Version 2.2.0
 
 Below steps are performed on Virtual Machine as a root user
 
@@ -50,9 +49,8 @@ Below steps are performed on Virtual Machine as a root user
 
         bash CIS_CentOS_Linux7_Benchmark_v2_2_0_Remediation.sh
 
-3. Script will update baseline configuration to harden operating system.
+3. Script will update baseline configuration to harden operating system for 121 policies.
 
-4. Scan related Cloud Account in Cloudneeti or wait for scheduled scan -->
 
 ## Remediation policy list
 
