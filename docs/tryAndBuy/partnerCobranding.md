@@ -46,13 +46,18 @@ Co-branding experience for email notifications Cloudneeti sends to the Customers
 
 | **S. No.** | **Detail**                | **Type**    | **Length/Size/Description**                                                         |
 |------------|---------------------------|-------------|-------------------------------------------------------------------------|
-| 1.         | Domain/subdomain          | URL         | subdomain.customerdomain.com    |
-| 2.         | Background Image          | Image (SVG) | 1280 px X 720 px    |
-| 3.         | Logo Image                | Image (PNG) | 200 px                             |
-| 4.         | Favicon Image             | Image (PNG) | 160px X 160 px                             |
-| 5.         | Welcome Text              | Text        | maximum number of chars 100, two sentences |
-| 6.         | Tagline Text              | Text        | maximum number of char max 30 chars    |
-| 7.         | Text Below Sign In button | Text        | Maximum 50 chars |
+| 1.         | Domain/subdomain             | URL         | subdomain.customerdomain.com    |
+| 2.         | Background Image             | Image (JPG) | 1280 px X 720 px    |
+| 3.         | Logo Image                   | Image (PNG) | 200 px                             |
+| 4.         | Favicon Image                 | Image (PNG) | 160px X 160 px                             |
+| 5.         | Welcome Text                  | Text        | maximum number of chars 100, two sentences |
+| 6.         | Tagline Text                  | Text        | maximum number of char max 30 chars    |
+| 7.         | Text Below Sign In button     | Text        | Maximum 50 chars |
+| 8.         | Word summary report title page | Image (JPG)        | 1100px X  800px   |
+| 9.         | Word summary report last page  | Image (JPG)        | 1100px X  800px |
+| 10.        | Word summary report header logo| Image (PNG)        | 200 px    |
+| 11.        | Word summary report footer logo| Image (PNG)        | 200 px |
+| 12.        | URL in Report footer           | URL        | NA    |
 
 ### Reference
 
