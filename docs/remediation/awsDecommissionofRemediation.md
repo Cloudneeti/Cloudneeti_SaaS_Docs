@@ -87,7 +87,11 @@ Decommission of remediation framework take place in two phases.
 
         cd aws-auto-remediation/multi-mode-remediation
 
-4.	Remove remediation configuration of multi-account remediation
+4.  Configure AWS account where remediation framework is to be deployed
+
+        aws configure
+
+5.	Remove remediation configuration of multi-account remediation
 
         bash decommission-multi-mode-remediation.sh -a <AWS-account-id> -p <primary-deployment-region> -e <Cloudneeti-environment-prefix> -s <list of regions from where the auto-remediation is to be decommissioned>
 
@@ -111,9 +115,13 @@ Decommission of remediation framework take place in two phases.
 
 3.  Go to remediation framework repository
 
-        cd aws-auto-remediation 
+        cd aws-auto-remediation
 
-4.  Decommission remediation framework in AWS account 
+4.  Configure AWS account where remediation framework is to be deployed
+
+        aws configure
+
+5.  Decommission remediation framework in AWS account 
 
         bash decommission-remediation-framework.sh -a <AWS-account-id> -p <primary-deployment-region> -e < Cloudneeti-environment-prefix> -s <list of regions from where the auto-remediation is to be decommissioned>
 
