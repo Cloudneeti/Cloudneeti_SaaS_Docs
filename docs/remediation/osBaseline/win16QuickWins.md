@@ -28,46 +28,52 @@ Execute quick wins script
 
 Below steps are performed on Virtual Machine using RDP, as a system admninistrator
 
-1. Run PowerShell script to compile DSC 
+1. Download quick wins script
+
+        wget https://raw.githubusercontent.com/Cloudneeti/os-harderning-scripts/master/WindowsServer2016/CSBP_WindowsServer2016.ps1 -O CSBP_WindowsServer2016.ps1
+
+2. Run PowerShell script to compile DSC 
 
         .\CSBP_WindowsServer2016.ps1
 
-2. Script will generate MOF files in the directory.
+3. Script will generate MOF files in the directory.
 
-3. Run below command to apply baseline configuration
+4. Run below command to apply baseline configuration
 
         Start-DscConfiguration -Path .\CSBP_WindowsServer2016  -Force -Verbose -Wait
 
     ![Compliance score](../../images/osBaselineQuickWIns/Script_Execution_1.png#thumbnail_1)
 
-4. Scan related Cloud Account in Cloudneeti or wait for scheduled scan
+5. Scan related Cloud Account in Cloudneeti or wait for scheduled scan
 
-5. Verify policy results in CSBP Benchmark 
+6. Verify policy results in CSBP Benchmark 
 
     <!-- ![Compliance score](.././images/osBaselineQuickWIns/Compliance_Score_CIS_Win16.png#thumbnail_1) -->
-
-
 
 
 ### Windows Server 2016 VM baseline policies for CIS Benchmark Windows Server 2016 Version 1.0.0
 
 Below steps are performed on Virtual Machine using RDP, as a system admninistrator
 
-1. Run PowerShell script to compile DSC 
+1. Download quick wins script
+
+        wget https://raw.githubusercontent.com/Cloudneeti/os-harderning-scripts/master/WindowsServer2016/CSBP_WindowsServer2016.ps1 -O CIS_Benchmark_WindowsServer2016_v100.ps1
+
+2. Run PowerShell script to compile DSC 
 
         .\CIS_Benchmark_WindowsServer2016_v100.ps1
 
-2. Script will generate MOF files in the directory.
+3. Script will generate MOF files in the directory.
 
-3. Run below command to apply baseline configuration
+4. Run below command to apply baseline configuration
 
         Start-DscConfiguration -Path .\CIS_Benchmark_WindowsServer2016_v1_0_0  -Force -Verbose -Wait
 
     <!-- ![Compliance score](../../images/osBaselineQuickWIns/Config_Script_Execution.png#thumbnail_1) -->
 
-4. Scan related Cloud Account in Cloudneeti or wait for scheduled scan
+5. Scan related Cloud Account in Cloudneeti or wait for scheduled scan
 
-5. Verify policy results in CIS Benchmark Windows Server 2016 Version 1.0.0
+6. Verify policy results in CIS Benchmark Windows Server 2016 Version 1.0.0
 
     ![Compliance score](../../images/osBaselineQuickWIns/Compliance_Score_CIS_Win16.png#thumbnail_1)
 
