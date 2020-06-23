@@ -25,17 +25,21 @@ Execute quick wins script
 
 Below steps are performed on Virtual Machine, as a root user
 
-1. Use su command
+1. Download quick wins script
 
-2. Run script  
+        wget https://raw.githubusercontent.com/Cloudneeti/os-harderning-scripts/master/CentOS7/Azure_CSBP_CentOS_Linux7_Remediation.sh -O Azure_CSBP_CentOS_Linux7_Remediation.sh
+
+2. Open bash and navigate to the script 
+
+3. Execute the script as a root user  
 
         bash Azure_CSBP_CentOS_Linux7_Remediation.sh
 
-3. Script will update baseline configuration to harden operating system.
+4. Script will update baseline configuration to harden operating system.
 
-4. Scan related Cloud Account in Cloudneeti or wait for scheduled scan
+5. Scan related Cloud Account in Cloudneeti or wait for scheduled scan
 
-5. Verify policy results in CSBP Benchmark on Cloudneeti portal
+6. Verify policy results in CSBP Benchmark on Cloudneeti portal
 
     ![Compliance score](../../images/osBaselineQuickWIns/CentOS_QuickWins.png#thumbnail_1)
 
@@ -43,13 +47,17 @@ Below steps are performed on Virtual Machine, as a root user
 
 Below steps are performed on Virtual Machine as a root user
 
-1. Use su command
+1. Download quick wins script
 
-2. Run PowerShell script to compile DSC 
+        wget https://raw.githubusercontent.com/Cloudneeti/os-harderning-scripts/master/CentOS7/CIS_CentOS_Linux7_Benchmark_v2_2_0_Remediation.sh -O CIS_CentOS_Linux7_Benchmark_v2_2_0_Remediation.sh
+
+2. Open bash and navigate to the script 
+
+3. Execute the script as a root user  
 
         bash CIS_CentOS_Linux7_Benchmark_v2_2_0_Remediation.sh
 
-3. Script will update baseline configuration to harden operating system for 121 policies.
+4. Script will update baseline configuration to harden operating system for 121 policies.
 
 
 ## Remediation policy list
