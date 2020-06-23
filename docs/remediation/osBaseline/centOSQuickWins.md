@@ -37,7 +37,11 @@ Below steps are performed on Virtual Machine, as a root user
 
         bash Azure_CSBP_CentOS_Linux7_Remediation.sh
 
+       ![Compliance score](../../images/osBaselineQuickWIns/CentOS_QuickWins_CSBP.png#thumbnail_1)
+
 4. Script will update baseline configuration to harden operating system.
+
+       ![Compliance score](../../images/osBaselineQuickWIns/CentOS_QuickWins_CSBP_1.png#thumbnail_1)
 
 5. Scan related Cloud Account in Cloudneeti or wait for scheduled scan
 
@@ -61,7 +65,11 @@ Below steps are performed on Virtual Machine as a root user
 
         bash CIS_CentOS_Linux7_Benchmark_v2_2_0_Remediation.sh
 
+       ![Compliance score](../../images/osBaselineQuickWIns/CentOS_QuickWins_CIS.png#thumbnail_1)
+
 4. Script will update baseline configuration to harden operating system for 121 policies.
+
+       ![Compliance score](../../images/osBaselineQuickWIns/CentOS_QuickWins_CIS_1.png#thumbnail_1)
 
 
 ## Remediation policy list
