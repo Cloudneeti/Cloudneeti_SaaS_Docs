@@ -25,11 +25,13 @@ Execute quick wins script
 
 Below steps are performed on Virtual Machine, as a root user
 
-1. Download quick wins script
+1. Open bash and switch user to root
+
+        sudo su
+
+2. Download quick wins script
 
         wget https://raw.githubusercontent.com/Cloudneeti/os-harderning-scripts/master/CentOS7/Azure_CSBP_CentOS_Linux7_Remediation.sh -O Azure_CSBP_CentOS_Linux7_Remediation.sh
-
-2. Open bash and navigate to the script 
 
 3. Execute the script as a root user  
 
@@ -47,11 +49,13 @@ Below steps are performed on Virtual Machine, as a root user
 
 Below steps are performed on Virtual Machine as a root user
 
-1. Download quick wins script
+1. Open bash and switch user to root
+
+        sudo su
+
+2. Download quick wins script
 
         wget https://raw.githubusercontent.com/Cloudneeti/os-harderning-scripts/master/CentOS7/CIS_CentOS_Linux7_Benchmark_v2_2_0_Remediation.sh -O CIS_CentOS_Linux7_Benchmark_v2_2_0_Remediation.sh
-
-2. Open bash and navigate to the script 
 
 3. Execute the script as a root user  
 

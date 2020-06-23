@@ -32,6 +32,10 @@ Login to Cloudneeti portal as License Admin.
 
     ![Azure Resources](.././images/billingDashboard/billingDashboard_All_2.png#thumbnail)
 
+5. Download (1) report for aggreagted resource summary details at License level.
+
+    ![Azure Resources](.././images/billingDashboard/billingDashboard_All_report.png#thumbnail)
+
 
 Resource count in Cloud Account
 --------------------------------
@@ -89,3 +93,9 @@ Login to Cloudneeti portal as License Admin.
     - Average user counts for days of a chosen billing cycle (3)
 
     ![Office 365 Resources](.././images/billingDashboard/o365_billingDashboard_ResourceSummary.png#thumbnail)
+
+    ### Report download at Account level
+
+    Download (1) report for resource summary details at Cloud Account level.
+
+    ![Azure Resources](.././images/billingDashboard/aws_billingDashboard_Report.png#thumbnail)
