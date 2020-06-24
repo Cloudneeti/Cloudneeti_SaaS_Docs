@@ -4,7 +4,7 @@ The Cloud Security Best Practices view provides a list of all security policies 
 
 | **Connector Type​**              | **Total Policy Count​**    | **Automated Policy Count​** | **Manual Policy Count​** |
 |---------------------------------|---------------------------|----------------------------|-------------------------|
-|  AWS​                            | 438                       | 425                        | 13                      |
+|  AWS​                            | 448                       | 435                        | 13                      |
 |  AWS​ VM baseline RHEL           | 162                       | 162                        | -                       |
 |  AWS VM baseline Win 2016​       | 351                       | 351                        | -                       |
 |  Amazon Elastic Kubernetes Service (Amazon EKS)             | 21                         | 21                      | -                      |
@@ -15,7 +15,7 @@ The Cloud Security Best Practices view provides a list of all security policies 
 |  Azure VM baseline Ubuntu 18.04​ | 40​                        | 40​                         | -                       |
 |  Azure VM baseline CentOS​       | 34​                        | 34​                         | -                       |
 |  Azure Kubernetes Service (AKS) | 73                        | 73                         | -                       |
-| **Grand Total**​                 | **2116**​                  | **2033**​                   |                   **82**      |
+| **Grand Total**​                 | **2126**​                  | **2043**​                   |                   **82**      |
 
 
 

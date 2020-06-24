@@ -25,17 +25,23 @@ Execute quick wins script
 
 Below steps are performed on Virtual Machine, as a root user
 
-1. Download quick wins script
+1. Open bash and switch user to root
+
+        sudo su
+
+2. Download quick wins script
 
         wget https://raw.githubusercontent.com/Cloudneeti/os-harderning-scripts/master/CentOS7/Azure_CSBP_CentOS_Linux7_Remediation.sh -O Azure_CSBP_CentOS_Linux7_Remediation.sh
-
-2. Open bash and navigate to the script 
 
 3. Execute the script as a root user  
 
         bash Azure_CSBP_CentOS_Linux7_Remediation.sh
 
+       ![Compliance score](../../images/osBaselineQuickWIns/CentOS_QuickWins_CSBP.png#thumbnail_1)
+
 4. Script will update baseline configuration to harden operating system.
+
+       ![Compliance score](../../images/osBaselineQuickWIns/CentOS_QuickWins_CSBP_1.png#thumbnail_1)
 
 5. Scan related Cloud Account in Cloudneeti or wait for scheduled scan
 
@@ -47,17 +53,23 @@ Below steps are performed on Virtual Machine, as a root user
 
 Below steps are performed on Virtual Machine as a root user
 
-1. Download quick wins script
+1. Open bash and switch user to root
+
+        sudo su
+
+2. Download quick wins script
 
         wget https://raw.githubusercontent.com/Cloudneeti/os-harderning-scripts/master/CentOS7/CIS_CentOS_Linux7_Benchmark_v2_2_0_Remediation.sh -O CIS_CentOS_Linux7_Benchmark_v2_2_0_Remediation.sh
-
-2. Open bash and navigate to the script 
 
 3. Execute the script as a root user  
 
         bash CIS_CentOS_Linux7_Benchmark_v2_2_0_Remediation.sh
 
+       ![Compliance score](../../images/osBaselineQuickWIns/CentOS_QuickWins_CIS.png#thumbnail_1)
+
 4. Script will update baseline configuration to harden operating system for 121 policies.
+
+       ![Compliance score](../../images/osBaselineQuickWIns/CentOS_QuickWins_CIS_1.png#thumbnail_1)
 
 
 ## Remediation policy list
