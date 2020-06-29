@@ -254,6 +254,6 @@ available in the Center for Internet Security (CIS) Azure benchmark
 | 1600.26    | Ensure that 'Require Multi-Factor Auth to join devices' is set to 'Yes'                                              | Azure - Identity and Access |
 | 1600.27    | Ensure that 'Number of methods required to reset' is set to '2'                                                      | Azure - Identity and Access |
 | 1600.28    | Ensure that 'Number of days before users are asked to re-confirm their authentication information' is not set to '0' | Azure - Identity and Access |
-| 1600.29    | Ensure that 'Notify all admins when other admins reset their password?' is set to 'Yes'                              | Azure - Identity and Access |
+| 1600.29    | Ensure that 'Notify users on password resets?' is set to 'Yes'                              | Azure - Identity and Access |
 | 1600.30    | Ensure that 'Notify all admins when other admins reset their password?' is set to 'Yes'                 | Azure - Identity and Access |
 

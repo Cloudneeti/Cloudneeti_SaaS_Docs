@@ -12,7 +12,7 @@ Note: The scripts are designed to harden the operating system baseline configura
 
 
 #### Prerequisites 
-The below steps are required for registering Cloudneeti application in Azure Tenant using PowerShell script.
+The below steps are required for executing quick wins script to harden operating system baseline configuration
 
 | Activity             | Description                |
 |----------------------|----------------------------|
@@ -25,17 +25,27 @@ Execute quick wins script
 
 Below steps are performed on Virtual Machine, as a root user
 
-1. Use su command
+1. Open bash and switch user to root
 
-2. Run script  
+        sudo su
+
+2. Download quick wins script
+
+        wget https://raw.githubusercontent.com/Cloudneeti/os-harderning-scripts/master/CentOS7/Azure_CSBP_CentOS_Linux7_Remediation.sh -O Azure_CSBP_CentOS_Linux7_Remediation.sh
+
+3. Execute the script as a root user  
 
         bash Azure_CSBP_CentOS_Linux7_Remediation.sh
 
-3. Script will update baseline configuration to harden operating system.
+       ![Compliance score](../../images/osBaselineQuickWIns/CentOS_QuickWins_CSBP.png#thumbnail_1)
 
-4. Scan related Cloud Account in Cloudneeti or wait for scheduled scan
+4. Script will update baseline configuration to harden operating system.
 
-5. Verify policy results in CSBP Benchmark on Cloudneeti portal
+       ![Compliance score](../../images/osBaselineQuickWIns/CentOS_QuickWins_CSBP_1.png#thumbnail_1)
+
+5. Scan related Cloud Account in Cloudneeti or wait for scheduled scan
+
+6. Verify policy results in CSBP Benchmark on Cloudneeti portal
 
     ![Compliance score](../../images/osBaselineQuickWIns/CentOS_QuickWins.png#thumbnail_1)
 
@@ -43,13 +53,23 @@ Below steps are performed on Virtual Machine, as a root user
 
 Below steps are performed on Virtual Machine as a root user
 
-1. Use su command
+1. Open bash and switch user to root
 
-2. Run PowerShell script to compile DSC 
+        sudo su
+
+2. Download quick wins script
+
+        wget https://raw.githubusercontent.com/Cloudneeti/os-harderning-scripts/master/CentOS7/CIS_CentOS_Linux7_Benchmark_v2_2_0_Remediation.sh -O CIS_CentOS_Linux7_Benchmark_v2_2_0_Remediation.sh
+
+3. Execute the script as a root user  
 
         bash CIS_CentOS_Linux7_Benchmark_v2_2_0_Remediation.sh
 
-3. Script will update baseline configuration to harden operating system for 121 policies.
+       ![Compliance score](../../images/osBaselineQuickWIns/CentOS_QuickWins_CIS.png#thumbnail_1)
+
+4. Script will update baseline configuration to harden operating system for 121 policies.
+
+       ![Compliance score](../../images/osBaselineQuickWIns/CentOS_QuickWins_CIS_1.png#thumbnail_1)
 
 
 ## Remediation policy list

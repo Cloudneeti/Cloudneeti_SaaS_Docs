@@ -74,14 +74,14 @@ nav:
   - Security Policies: userGuide/securityPolicies.md
   - Compliance Benchmarks: userGuide/complianceBenchmarks.md
   - Reports: userGuide/reports.md
-  - Cloudneeti REST APIs: 
-    - Rest APIs: userGuide/restAPIs.md
+- REST APIs: 
+    - Overview: userGuide/restAPIs.md
     - API User Scenarios: userGuide/apiUserScenarios.md
     - Token API: userGuide/tokenAPI.md
     - License Accounts API: userGuide/getLicenseAccounts.md
     - Onboard cloud account API: userGuide/onboardCloudAccount.md
     - Update API app access scope API: userGuide/updateAPIAppAccessScope.md
-    - Cloud account health status API: userGuide/getHealthStatus.md
+    - Onboarding health status API: userGuide/getHealthStatus.md
     - Audit summary report API: userGuide/getBenchmarkSummary.md
     - Initiate scan API: userGuide/initiateScanAPI.md
     - Scan status API: userGuide/scanStatusAPI.md
