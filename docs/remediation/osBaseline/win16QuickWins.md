@@ -12,7 +12,7 @@ Note: The scripts are designed to harden the operating system baseline configura
 
 
 #### Prerequisites 
-The below steps are required for registering Cloudneeti application in Azure Tenant using PowerShell script.
+The below steps are required for executing quick wins script to harden operating system baseline configuration.
 
 | Activity             | Description                |
 |----------------------|----------------------------|
