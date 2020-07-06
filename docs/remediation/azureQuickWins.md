@@ -216,7 +216,7 @@ Configure Storage Account to remediate policies [listed here ](.././azureQuickWi
 3.  Download configuration script
         <pre>
             <code>```
-               wget https://raw.githubusercontent.com/Cloudneeti/docs_cloudneeti/master/scripts/subscription-governance/configure-ASCPolicies.ps1 -O configure-ASCPolicies.ps1 -O configure-StorageAccounts.ps1
+               wget https://raw.githubusercontent.com/Cloudneeti/docs_cloudneeti/master/scripts/subscription-governance/configure-StorageAccounts.ps1 -O configure-StorageAccounts.ps1
              ```</code>
         </pre>
 

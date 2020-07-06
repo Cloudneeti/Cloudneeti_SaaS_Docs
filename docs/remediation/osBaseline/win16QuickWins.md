@@ -1,18 +1,18 @@
-# Windows Server 2016 VM  Baseline Quick Wins
+# Windows Server 2016 VM Baseline Hardening
 
- A collection of quick wins scripts that will help to harden operating system baseline configuration supported by Cloudneeti as defined in CIS Microsoft Windows Server 2012 benchmark v1.0.0. This remediates below Monitoring [policies listed here.](../../osBaseline/win16QuickWins/#cis-benchmark-windows-server-2016-version-100)
+ A collection of scripts that will help to harden operating system baseline configuration supported by Cloudneeti as defined in CIS Microsoft Windows Server 2012 benchmark v1.0.0. This remediates policies, complaicne status can be validated for below [policies listed here.](../../osBaseline/win16QuickWins/#cis-benchmark-windows-server-2016-version-100)
 
 Note: The scripts are designed to harden the operating system baseline configurations, Please test it on the test/staging system before applying to the production system.
 
 
-| **Configuration script**        | **Number of policies remediated** | **Cloud Account Type**|
+| **Hardening script**        | **Number of policies remediated** | **Cloud Account Type**|
 |--------------------------------|-------------------------------|-----------------------------------|
 | [Windows Server 2016 VM baseline policies for Cloud Security Best Practices](https://raw.githubusercontent.com/Cloudneeti/os-harderning-scripts/master/WindowsServer2016/CSBP_WindowsServer2016.ps1){target=_blank}            | 190                               | Azure|
-| [Windows Server 2016 VM baseline policies for CIS Benchmark Windows Server 2016 Version 1.0.0](https://raw.githubusercontent.com/Cloudneeti/os-harderning-scripts/master/WindowsServer2016/CIS_Benchmark_WindowsServer2016_v100.ps1){target=_blank}   | 151                               | Azure|
+| [Windows Server 2016 VM baseline policies for CIS Benchmark Windows Server 2016 Version 1.0.0](https://raw.githubusercontent.com/Cloudneeti/os-harderning-scripts/master/WindowsServer2016/CIS_Benchmark_WindowsServer2016_v100.ps1){target=_blank}   | 151                               | Azure, AWS|
 
 
 #### Prerequisites 
-The below steps are required for executing quick wins script to harden operating system baseline configuration.
+The below steps are required for executing script to harden operating system baseline configuration.
 
 | Activity             | Description                |
 |----------------------|----------------------------|
@@ -21,14 +21,14 @@ The below steps are required for executing quick wins script to harden operating
 | 3.	**Virtual Machine:** Before executing the script, make sure there are no restrictions in running the PowerShell script  | Use this PowerShell command:<br>``Set-ExecutionPolicy ` ``<br>``-Scope Process ` ``<br>``-ExecutionPolicy Bypass``<br>PowerShell contains built-in execution policies that limit its use as an attack vector. By default, the execution policy is set to Restricted, which is the primary policy for script execution. The bypass allows for running scripts and keeps the lowered permissions isolated to just the current running process. |
 | 4.	**Virtual Machine:** Install DSC modules to execute PowerShell commands within quick wins script | DSC modules to be isnatlled: <br> AuditPolicyDsc <br> SecurityPolicyDsc <br> NetworkingDsc <br> PSDesiredStateConfiguration <br> Check module present or not <br>``Get-InstalledModule -Name <ModuleName> ` ``<br> Install the required modules by executing the below command <br>``Install-Module -Name <ModuleName>`` |
 
-Execute quick wins script
--------------------------
+Execute OS Baseline Hardening script
+-------------------------------------
 
 ### Windows Server 2016 VM baseline policies for Cloud Security Best Practices
 
 Below steps are performed on Virtual Machine using RDP, as a system admninistrator
 
-1. Download quick wins script
+1. Download script
 
         wget https://raw.githubusercontent.com/Cloudneeti/os-harderning-scripts/master/WindowsServer2016/CSBP_WindowsServer2016.ps1 -O CSBP_WindowsServer2016.ps1
 
@@ -55,7 +55,7 @@ Below steps are performed on Virtual Machine using RDP, as a system admninistrat
 
 Below steps are performed on Virtual Machine using RDP, as a system admninistrator
 
-1. Download quick wins script
+1. Download script
 
         wget https://raw.githubusercontent.com/Cloudneeti/os-harderning-scripts/master/WindowsServer2016/CSBP_WindowsServer2016.ps1 -O CIS_Benchmark_WindowsServer2016_v100.ps1
 
@@ -81,6 +81,8 @@ Below steps are performed on Virtual Machine using RDP, as a system admninistrat
 ## Remediation policy list
 
 ### CIS Benchmark Windows Server 2016 Version 1.0.0
+
+Hardening scripts 
 
 | **Category Name**                                     | **Policy Title**                                                                                                                                                                             |
 |-------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
