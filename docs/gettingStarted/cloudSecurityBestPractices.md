@@ -24,7 +24,7 @@ Following is the count of auto remediation avaiable for security policies within
 | **Connector Type​**              | **Auto Remediation Policy​ Count**      | **Quick Wins Policy Count**      |
 |---------------------------------|---------------------------|----------------------------|     
 |  AWS​                            | [109](../../remediation/awsRemediation/)       |            [16](../../remediation/awsQuickWins/)                |  
-|  AWS​ VM baseline RHEL           | -                                              | -                                              |
+|  AWS​ VM baseline RHEL           | -                                              | [149](../../remediation/osBaseline/rhelQuickWins/)                                              |
 |  Amazon Elastic Kubernetes Service (Amazon EKS)           | -                                 | -                                              |
 |  Office365​                      | -                                 | -                                              |                         
 |  Azure​                          | [26](../../remediation/azureAutoRemediation/) | [137](../../remediation/azureQuickWins/) |                         
@@ -33,4 +33,4 @@ Following is the count of auto remediation avaiable for security policies within
 |  Azure VM baseline Ubuntu 18.04​ | -                                 | -                                              |
 |  Azure VM baseline CentOS​       | -                                 | [26](../../remediation/osBaseline/centOSQuickWins/)                                             |
 |  Azure Kubernetes Service (AKS)       | -                                 | -                                              |
-| **Grand Total**​                 | **135**​                            | **495**                                         |     
+| **Grand Total**​                 | **135**​                            | **644**                                         |     

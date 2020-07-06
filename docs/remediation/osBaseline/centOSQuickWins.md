@@ -1,25 +1,25 @@
-# CentOS Linux 7
+# CentOS Linux 7 VM Baseline Hardening
 
- A collection of quick wins scripts that will help to harden operating system baseline configuration supported by Cloudneeti as defined in CIS Microsoft CentOS Linux 7 benchmark v2.2.0. This remediates below Monitoring [policies listed here.](../../osBaseline/centOSQuickWins/#csbp-centos-linux-7-version-220)
+ A collection of scripts that will help to harden operating system baseline configuration supported by Cloudneeti as defined in CIS CentOS Linux 7 benchmark v2.2.0. This remediates policies, compliance status can be validated for below  [policies listed here.](../../osBaseline/centOSQuickWins/#csbp-centos-linux-7-version-220)
 
 Note: The scripts are designed to harden the operating system baseline configurations, Please test it on the test/staging system before applying to the production system.
 
 
 | **Configuration script**        | **Number of policies remediated** | **Cloud Account Type**|
 |--------------------------------|-------------------------------|-----------------------------------|
-| CentOS Linux 7 VM baseline policies for Cloud Security Best Practices            | 26                               | Azure|
-| CentOS Linux 7 VM baseline policies for CIS Benchmark CentOS Linux 7 Version 2.2.0   | 121                               | Azure|
+| [CentOS Linux 7 VM baseline policies for Cloud Security Best Practices](https://raw.githubusercontent.com/Cloudneeti/os-harderning-scripts/master/CentOS7/Azure_CSBP_CentOS_Linux7_Remediation.sh){target=_blank}             | 26                               | Azure|
+| [CentOS Linux 7 VM baseline policies for CIS Benchmark CentOS Linux 7 Version 2.2.0](https://raw.githubusercontent.com/Cloudneeti/os-harderning-scripts/master/CentOS7/CIS_CentOS_Linux7_Benchmark_v2_2_0_Remediation.sh){target=_blank}   | 151                               | Azure|
 
 
 #### Prerequisites 
-The below steps are required for executing quick wins script to harden operating system baseline configuration
+The below steps are required for executing script to harden operating system baseline configuration
 
 | Activity             | Description                |
 |----------------------|----------------------------|
 | 1.	Download and review **Bash script** to harden operating system baseline configuration | The PowerShell script is used to harden operating system baseline configuration: <br> [Azure - CentOS Linux 7 VM baseline policies for CSBP](https://raw.githubusercontent.com/Cloudneeti/os-harderning-scripts/master/CentOS7/Azure_CSBP_CentOS_Linux7_Remediation.sh){target=_blank} <br> [Azure - CentOS Linux 7 VM baseline policies for CIS Benchmark CentOS Linux 7 Version 2.2.0](https://raw.githubusercontent.com/Cloudneeti/os-harderning-scripts/master/CentOS7/CIS_CentOS_Linux7_Benchmark_v2_2_0_Remediation.sh){target=_blank}|
 
-Execute quick wins script
--------------------------
+Execute OS Baseline Hardening script
+-------------------------------------
 
 ### CentOS Linux 7 VM baseline policies for Cloud Security Best Practices
 
@@ -29,7 +29,7 @@ Below steps are performed on Virtual Machine, as a root user
 
         sudo su
 
-2. Download quick wins script
+2. Download script
 
         wget https://raw.githubusercontent.com/Cloudneeti/os-harderning-scripts/master/CentOS7/Azure_CSBP_CentOS_Linux7_Remediation.sh -O Azure_CSBP_CentOS_Linux7_Remediation.sh
 
@@ -57,7 +57,7 @@ Below steps are performed on Virtual Machine as a root user
 
         sudo su
 
-2. Download quick wins script
+2. Download script
 
         wget https://raw.githubusercontent.com/Cloudneeti/os-harderning-scripts/master/CentOS7/CIS_CentOS_Linux7_Benchmark_v2_2_0_Remediation.sh -O CIS_CentOS_Linux7_Benchmark_v2_2_0_Remediation.sh
 
