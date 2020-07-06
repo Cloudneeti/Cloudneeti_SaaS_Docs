@@ -33,4 +33,4 @@ Following is the count of auto remediation avaiable for security policies within
 |  Azure VM baseline Ubuntu 18.04​ | -                                 | -                                              |
 |  Azure VM baseline CentOS​       | -                                 | [26](../../remediation/osBaseline/centOSQuickWins/)                                             |
 |  Azure Kubernetes Service (AKS)       | -                                 | -                                              |
-| **Grand Total**​                 | **135**​                            | **495**                                         |     
+| **Grand Total**​                 | **135**​                            | **644**                                         |     
