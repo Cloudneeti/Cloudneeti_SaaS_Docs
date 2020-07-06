@@ -1,6 +1,6 @@
 # Red Hat Enterprise Linux 7 VM Baseline Hardening
 
- A collection of scripts that will help to harden operating system baseline configuration supported by Cloudneeti as defined in CIS Red Hat Enterprise Linux 7 benchmark v2.2.0. This remediates policies, complaicne status can be validated for below [policies listed here.](../../osBaseline/rhelQuickWins/#center-for-internet-security-aws-red-hat-enterprise-linux-7-benchmark-v220)
+ A collection of scripts that will help to harden operating system baseline configuration supported by Cloudneeti as defined in CIS Red Hat Enterprise Linux 7 benchmark v2.2.0. This remediates policies, compliance status can be validated for below [policies listed here.](../../osBaseline/rhelQuickWins/#center-for-internet-security-aws-red-hat-enterprise-linux-7-benchmark-v220)
 
 Note: The scripts are designed to harden the operating system baseline configurations, Please test it on the test/staging system before applying to the production system.
 
@@ -22,7 +22,7 @@ The below steps are required for executing script to harden operating system bas
 Execute OS Baseline Hardening script
 -------------------------------------
 
-### CentOS Linux 7 VM baseline policies for Cloud Security Best Practices
+### RHEL Linux 7 VM baseline policies for Cloud Security Best Practices
 
 Below steps are performed on Virtual Machine, as a root user
 
@@ -44,7 +44,7 @@ Below steps are performed on Virtual Machine, as a root user
 
        <!-- ![Compliance score](../../images/osBaselineQuickWIns/CentOS_QuickWins_CSBP_1.png#thumbnail_1) -->
 
-### CentOS Linux 7 VM baseline policies for CIS Benchmark CentOS Linux 7 Version 2.2.0
+### RHEL Linux 7 VM baseline policies for CIS Benchmark CentOS Linux 7 Version 2.2.0
 
 Below steps are performed on Virtual Machine as a root user
 
