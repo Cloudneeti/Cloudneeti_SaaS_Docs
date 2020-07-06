@@ -1,6 +1,6 @@
 # Windows Server 2012 R2 VM Baseline Hardening
 
- A collection of scripts that will help to harden operating system baseline configuration supported by Cloudneeti as defined in CIS Microsoft Windows Server 2012 benchmark v1.0.0. This remediates policies, complaicne status can be validated for below [policies listed here.](../../osBaseline/win12QuickWins/#cis-benchmark-windows-server-2012-r2-version-100)
+ A collection of scripts that will help to harden operating system baseline configuration supported by Cloudneeti as defined in CIS Microsoft Windows Server 2012 benchmark v1.0.0. This remediates policies, compliance status can be validated for below [policies listed here.](../../osBaseline/win12QuickWins/#cis-benchmark-windows-server-2012-r2-version-100)
 
 Note: The scripts are designed to harden the operating system baseline configurations, Please test it on the test/staging system before applying to the production system.
 
