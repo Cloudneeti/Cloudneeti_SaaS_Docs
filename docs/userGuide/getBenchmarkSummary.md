@@ -51,7 +51,7 @@ Sample Report
         {
         "result": [
             {
-                "name": "CIS Foundations Benchmark1.0.0",
+                "name": "CIS Microsoft Azure Foundations Benchmark1.0.0",
                 "title": null,
                 "category": null,
                 "dummyImageUrl": null,
@@ -59,7 +59,7 @@ Sample Report
                 "benchmarkId": "AZFDCIS1_0_0"
             },
             {
-                "name": "CIS Foundations Benchmark1.1.0",
+                "name": "CIS Microsoft Azure Foundations Benchmark1.1.0",
                 "title": null,
                 "category": null,
                 "dummyImageUrl": null,

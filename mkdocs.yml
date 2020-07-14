@@ -40,6 +40,22 @@ nav:
   - Deployment Architecture: gettingStarted/deploymentArchitecture.md
   - Customer Data Security: gettingStarted/customerDataSecurity.md
   - Glossary: gettingStarted/glossary.md
+- Security Policies:
+  - Cloud Security Best Practices: gettingStarted/cloudSecurityBestPractices.md
+  - AWS Security Policies: securityPolicies/awsSecurityPolcies.md
+  - Azure Security Policies: securityPolicies/azureSecurityPolcies.md
+  - Office 365 Security Policies: securityPolicies/office365SecurityPolcies.md
+  - OS baselines:
+    - CentOS: gettingStarted/cloudSecurityBestPractices.md
+    - RHEL: gettingStarted/cloudSecurityBestPractices.md
+    - Ubuntu 18.04: gettingStarted/cloudSecurityBestPractices.md
+    - Windows 12 R2: gettingStarted/cloudSecurityBestPractices.md
+    - Windows 16: gettingStarted/cloudSecurityBestPractices.md 
+  - Kubernetes:
+    - AWS: gettingStarted/awsK8SSecurityPolcies.md
+    - Azure: gettingStarted/azureK8SSecurityPolcies.md
+- Compliance Benchmarks:
+  - Benchmarks: complianceBenchmarks/complianceBenchmarks.md
 - Try and Buy:
   - Free Trial: tryAndBuy/freeTrial.md
   - Buy on Azure Marketplace: tryAndBuy/subscribeOnAzureMarketplace.md
