@@ -52,8 +52,8 @@ nav:
     - Windows 12 R2: gettingStarted/cloudSecurityBestPractices.md
     - Windows 16: gettingStarted/cloudSecurityBestPractices.md 
   - Kubernetes:
-    - AWS: gettingStarted/awsK8SSecurityPolcies.md
-    - Azure: gettingStarted/azureK8SSecurityPolcies.md
+    - AWS: securityPolicies/kubernetes/awsK8SSecurityPolcies.md
+    - Azure: securityPolicies/kubernetes/azureK8SSecurityPolcies.md
 - Compliance Benchmarks:
   - Benchmarks: complianceBenchmarks/complianceBenchmarks.md
 - Try and Buy:
