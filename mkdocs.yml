@@ -40,35 +40,36 @@ nav:
   - Deployment Architecture: gettingStarted/deploymentArchitecture.md
   - Customer Data Security: gettingStarted/customerDataSecurity.md
   - Glossary: gettingStarted/glossary.md
-- Security Policies:
-  - Cloud Security Best Practices: gettingStarted/cloudSecurityBestPractices.md
-  - AWS Security Policies: securityPolicies/awsSecurityPolcies.md
-  - Azure Security Policies: securityPolicies/azureSecurityPolcies.md
-  - Office 365 Security Policies: securityPolicies/office365SecurityPolcies.md
-  - OS baselines:
-    - CentOS: gettingStarted/cloudSecurityBestPractices.md
-    - RHEL: gettingStarted/cloudSecurityBestPractices.md
-    - Ubuntu 18.04: gettingStarted/cloudSecurityBestPractices.md
-    - Windows 12 R2: gettingStarted/cloudSecurityBestPractices.md
-    - Windows 16: gettingStarted/cloudSecurityBestPractices.md 
-  - Kubernetes:
-    - AWS: securityPolicies/kubernetes/awsK8SSecurityPolcies.md
-    - Azure: securityPolicies/kubernetes/azureK8SSecurityPolcies.md
-- Compliance Benchmarks:
-  - Benchmarks: complianceBenchmarks/complianceBenchmarks.md
 - Try and Buy:
   - Free Trial: tryAndBuy/freeTrial.md
   - Buy on Azure Marketplace: tryAndBuy/subscribeOnAzureMarketplace.md
   - Request a License: tryAndBuy/subscribe.md
   - Partner co-branding: tryAndBuy/partnerCobranding.md
   - Estimate Pricing: tryAndBuy/estimatePricing.md
+- Security Policies:
+  - Cloud Security Best Practices: gettingStarted/cloudSecurityBestPractices.md
+  - AWS Security Policies: securityPolicies/awsSecurityPolcies.md
+  - Azure Security Policies: securityPolicies/azureSecurityPolcies.md
+  - Office 365 Security Policies: securityPolicies/office365SecurityPolcies.md
+  - OS baselines:
+    - CentOS: securityPolicies/osBaseline/centOSSecurityPolcies.md
+    - RHEL: securityPolicies/osBaseline/rhelSecurityPolcies.md
+    - Ubuntu 18.04: securityPolicies/osBaseline/ubuntuSecurityPolcies.md
+    - Windows 2012 R2: securityPolicies/osBaseline/windows12SecurityPolcies.md
+    - Windows 2016: securityPolicies/osBaseline/windows16SecurityPolcies.md 
+    - Windows 2019: securityPolicies/osBaseline/windows19SecurityPolcies.md
+  - Kubernetes:
+    - AWS: securityPolicies/kubernetes/awsK8SSecurityPolcies.md
+    - Azure: securityPolicies/kubernetes/azureK8SSecurityPolcies.md
+- Compliance Benchmarks:
+  - Benchmarks: complianceBenchmarks/complianceBenchmarks.md
 - Onboarding Guide:
   - Overview: onboardingGuide/onboardingGuideOverview.md
   - Amazon Web Services: 
     - Onboarding steps: onboardingGuide/amazonWebServiceAccounts.md
-    - Enable AWS Config Based Data Collection(optional): onboardingGuide/awsEnableConfigBasedDataCollection.md
-    - OS baseline(optional): onboardingGuide/awsVMBaselineConfiguration.md
-    - Amazon Elastic Kubernetes Service (Amazon EKS)(optional): onboardingGuide/configureCloudneetiAgentInEKS.md
+    - Enable AWS Config Based Data Collection (optional): onboardingGuide/awsEnableConfigBasedDataCollection.md
+    - OS baseline and vulnerability (optional): onboardingGuide/awsVMBaselineConfiguration.md
+    - Amazon Elastic Kubernetes Service (Amazon EKS) (optional): onboardingGuide/configureCloudneetiAgentInEKS.md
     - AWS onboarding health status: onboardingGuide/awsAccountHealthStatus.md
   - Microsoft Azure:
     - Onboarding steps: onboardingGuide/azureSubscriptions.md
