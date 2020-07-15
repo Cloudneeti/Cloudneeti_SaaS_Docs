@@ -1,6 +1,5 @@
-
-Windows 16
-==========
+Red Hat Enterprise Linux 7
+==========================
 
 
 AWS 
