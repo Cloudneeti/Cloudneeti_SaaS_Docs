@@ -6,6 +6,8 @@ CentOS Linux 7
 AWS 
 ---
 
+No policies.
+
 Azure
 -----
 
