@@ -1,10 +1,12 @@
 
-Windows 16
-==========
+CentOS Linux 7
+==============
 
 
 AWS 
 ---
+
+No policies.
 
 Azure
 -----
