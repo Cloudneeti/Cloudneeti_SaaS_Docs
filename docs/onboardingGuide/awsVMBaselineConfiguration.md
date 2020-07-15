@@ -1,4 +1,4 @@
-# STEP 3: AWS inspector OS Baseline Configurations (Optional)
+# STEP 3: AWS inspector OS Baseline and Vulnerability Configurations (Optional)
 
 **This step is optional.**
 
@@ -73,8 +73,11 @@ Login to [AWS portal](https://console.aws.amazon.com/){target=_blank} with AWS
 
 1. Add **Name**
 
-2. Select rules package **CIS Operating System Security Configuration Benchmarks-1.0** Reference link [Center for Internet Security (CIS) (2)
-    Benchmarks](https://docs.aws.amazon.com/inspector/latest/userguide/inspector_cis){target=_blank}
+2. Select below rules packages 
+
+    -  **CIS Operating System Security Configuration Benchmarks-1.0** Reference link [Center for Internet Security (CIS) (2) Benchmarks](https://docs.aws.amazon.com/inspector/latest/userguide/inspector_cis){target=_blank}
+
+    -  **Common Vulnerabilities and Exposures-1.1** Reference link [Common vulnerabilities and exposures](https://docs.aws.amazon.com/inspector/latest/userguide/inspector_cves.html){target=_blank}
 
 3. Set **Duration** (3), recommended is 1 hour
 
@@ -84,8 +87,6 @@ Login to [AWS portal](https://console.aws.amazon.com/){target=_blank} with AWS
     ![AWS Inspector - AWS Console](.././images/amazonWebServiceAccounts/aws_Inspector_TemplateConfig.png#thumbnail){target=_blank}
 
 6. Review details and **Create**
-
-    ![AWS Inspector - AWS Console](.././images/amazonWebServiceAccounts/aws_Inspector_ReviewandCreate.png#thumbnail){target=_blank}
 
 #### 3.2.4 Verify assessment target
 
@@ -163,8 +164,12 @@ Once Assessment target is created, one can verify the status of the agents. AWS 
 4.  Add **Name** (3) and **Target Name** (4) of the Assessment target created in 
 [Step 1](../../onboardingGuide/awsVMBaselineConfiguration/#step-1-installing-ssm-agent/)
 
-5.  Select rules package **CIS Operating System Security Configuration Benchmarks-1.0** Reference link [Center for Internet Security (CIS) (5)
-    Benchmarks](https://docs.aws.amazon.com/inspector/latest/userguide/inspector_cis){target=_blank}
+5.  Select rules package 
+
+    -  **CIS Operating System Security Configuration Benchmarks-1.0** Reference link [Center for Internet Security (CIS) (5) Benchmarks](https://docs.aws.amazon.com/inspector/latest/userguide/inspector_cis){target=_blank}
+
+    -  **Common Vulnerabilities and Exposures-1.1** Reference link [Common vulnerabilities and exposures](https://docs.aws.amazon.com/inspector/latest/userguide/inspector_cves.html){target=_blank}
+
 
 6.  Set **Duration** (6), recommended is 1 hour
 
@@ -190,12 +195,15 @@ Once Assessment target is created, one can verify the status of the agents. AWS 
     ![AWS Inspector - AWS Console](.././images/amazonWebServiceAccounts/aws_Inspector_run.png#thumbnail)
 
 
-### 3.3 Verify policy results on Cloudneeti (to be performed after [Step 4](/onboardingGuide/amazonWebServiceAccounts/#step-4-add-aws-account))
+### 3.3 Verify policy results and vulnerability on Cloudneeti (to be performed after [Step 4](/onboardingGuide/amazonWebServiceAccounts/#step-4-add-aws-account))
 
-Cloudneeti will pick up latest analysis complete assessment run within last 30 days data from the AWS Inspector. Policies details will be available on Cloudneeti post next successful scan.
+1. Cloudneeti will pick up latest analysis complete assessment run within last 30 days data from the AWS Inspector. Policies details will be available on Cloudneeti post next successful scan.
 
-![AWS Inspector - AWS Console](.././images/amazonWebServiceAccounts/aws_RHEL_Results.png#thumbnail)
+    ![AWS Inspector - AWS Console](.././images/amazonWebServiceAccounts/aws_RHEL_Results.png#thumbnail)
 
+2. After successful scan, AWS RHEL EC2 vulnerability assessment will appear on Vulnerability tab on Asset Security dashboard
+
+    ![AWS Inspector - AWS Console](.././images/amazonWebServiceAccounts/vulnerability.png#thumbnail)
 
 ## AWS VM baseline policy list
 

@@ -1,5 +1,5 @@
-
-The Security Policies view provides a list of all security policies within the Cloudneeti application. Following is the security policies within the Cloudneeti application for different cloud account types, please refer [Release Notes](../../releaseNotes/2020/){target=_blank} for latest updates.
+AWS - Kubernetes
+==================
 
 
 EC2-Instance based Kubernetes Security Policies
