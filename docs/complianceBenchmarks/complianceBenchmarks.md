@@ -15,6 +15,7 @@ Azure
 | Center for Internet Security Azure - Ubuntu Linux 18.04 LTS Benchmark v1.0.0             | 40           |
 | Center for Internet Security Azure - Microsoft Windows Server 2016 Benchmark v1.0.0      | 160          |
 | Center for Internet Security Azure - Microsoft Windows Server 2012 R2 Benchmark v1.0.0   | 162          |
+| Center for Internet Security Azure - Microsoft Windows Server 2019 Benchmark v1.0.0 [preview] | 190      |
 | Cloud Security Alliance's Cloud Control Matrix (CCM v3.0.1)                              | 870          |
 | National Institute of Standards and Technology (NIST) Cybersecurity Framework (CSF v1.1) | 1006         |
 | General Data Protection Regulation                                                       | 976          |

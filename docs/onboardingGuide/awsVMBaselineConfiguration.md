@@ -7,6 +7,8 @@ instances (collections of AWS resources) for potential security issues and vuln
 
 Amazon Inspector is a security assessment service for your Amazon EC2 instances and the applications running on those instances. Enabling AWS Inspector for a host assessment allows various OS baselines as defined by CIS automatically light up on the Cloudneeti dashboards. Please follow [link](https://aws.amazon.com/inspector/pricing/) for Amazon Inspector pricing.
 
+**Vulnerability Configurations** to add additional package help Cloudneeti to collect common vulnerabilities and exposures (CVEs) and associate them to each of the cloud assets.
+
 Please skip this step if AWS inspector is already configured for all EC2 instances.
 
 ### 3.1 Installing SSM agent
@@ -73,7 +75,7 @@ Login to [AWS portal](https://console.aws.amazon.com/){target=_blank} with AWS
 
 1. Add **Name**
 
-2. Select below rules packages 
+2. Select below rules packages for 
 
     -  **CIS Operating System Security Configuration Benchmarks-1.0** Reference link [Center for Internet Security (CIS) (2) Benchmarks](https://docs.aws.amazon.com/inspector/latest/userguide/inspector_cis){target=_blank}
 
