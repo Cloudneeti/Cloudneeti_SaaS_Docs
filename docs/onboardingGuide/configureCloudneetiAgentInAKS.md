@@ -18,7 +18,7 @@ Prerequisites
 | 3. **Workstation:** Azure CLI version 2.0.46 | Please follow [link](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest){target=_blank} to install Azure CLI version 2.0.46       |
 | 4. **Workstation:** Install and set up kubectl to execute PowerShell commands within Cloudneeti Agent configuration script | Please follow [link](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-on-windows){target=_blank} to install and set up **kubectl** <br>``choco install kubernetes-cli``<br>      |
 | 5. **Workstation:** Install OpenSSH | Please follow [link](https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse){target=_blank} to install and set up **OpenSSH**   |
-| 5. **Workstation:** Install Helm | Install Helm using below commands <br> **Windows** <br>``choco install kubernetes-helm`` <br> **Unix** <br>``sudo apt-get install helm``  |
+| 6. **Kubernetes Cluster:** Install Helm | Install Helm using below commands <br> **Windows** <br>``choco install kubernetes-helm`` <br> **Unix** <br>``sudo apt-get install helm``  |
 
 8.1: Associate Kubernetes cluster with Cloud account in Cloudneeti
 ---------------------------------------------------------------------
@@ -60,33 +60,11 @@ Sample JSON file
         {"LicenseId":"XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX","AccountId":"XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX","ClusterName":"AKS Demo","ClusterHosting":"AKS","Environment":"prod"}
 
 8.2: Deploy Cloudneeti agent
--------------------------------
+-----------------------------
+
+Setup Cloudneeti Helm Repo and deploy Cloudneeti agent on Kubernetes cluster. Please use below steps to deploy Cloudneeti Agent on AKS, AKS engine and VM based Kubernetes Cluster. 
 
 Access Kubernetes cluster with root account from local machine.
-
-### 8.2.1 Setup Cloudneeti Helm Repo 
-
-1. Add Cloudneeti Helm repo 
-
-        helm repo add cloudneeti https://charts.cloudneeti.com
-
-    ![Helm Setup - Kubernetes](.././images/kubernetes/helm_1.png#thumbnail)
-
-2. Verify Helm repo addition
-
-        helm repo list
-
-    ![Helm Setup - Kubernetes](.././images/kubernetes/helm_2.png#thumbnail)
-
-3. List available Cloudneeti helm charts
-
-        helm search repo cloudneeti -–versions
-
-    ![Helm Setup - Kubernetes](.././images/kubernetes/helm_3.png#thumbnail)
-
-
-### 8.2.2 Setup Cloudneeti Helm Repo 
-Please use below steps to deploy Cloudneeti Agent on AKS, AKS engine.
 
 ### AKS
 
@@ -94,7 +72,25 @@ Please use below steps to deploy Cloudneeti Agent on AKS, AKS engine.
 
         az aks get-credentials --name <cluster-name> --resource-group <cluster-resource-group> --overwrite-existing 
 
-2. Deploy Cloudneeti agent on Kubernetes cluster node
+2. Add Cloudneeti Helm repo 
+
+        helm repo add cloudneeti https://charts.cloudneeti.com
+
+    ![Helm Setup - Kubernetes](.././images/kubernetes/helm_1.png#thumbnail)
+
+3. Verify Helm repo addition
+
+        helm repo list
+
+    ![Helm Setup - Kubernetes](.././images/kubernetes/helm_2.png#thumbnail)
+
+4. List available Cloudneeti helm charts
+
+        helm search repo cloudneeti -–versions
+
+    ![Helm Setup - Kubernetes](.././images/kubernetes/helm_3.png#thumbnail)
+
+5. Deploy Cloudneeti agent on Kubernetes cluster node
 
         helm install <ReleaseName> cloudneeti/cloudneeti-agent `
         --set clusterName=<cluster-name-as-onboarded-on-cloudneeti> `
@@ -120,8 +116,26 @@ Please use below steps to deploy Cloudneeti Agent on AKS, AKS engine.
 
     ![Helm Setup - Kubernetes](.././images/kubernetes/AKS_Engine_1.png#thumbnail)
 
+4. Add Cloudneeti Helm repo 
 
-4.  Deploy Cloudneeti agent on Kubernetes cluster node
+        helm repo add cloudneeti https://charts.cloudneeti.com
+
+    ![Helm Setup - Kubernetes](.././images/kubernetes/helm_1.png#thumbnail)
+
+5. Verify Helm repo addition
+
+        helm repo list
+
+    ![Helm Setup - Kubernetes](.././images/kubernetes/helm_2.png#thumbnail)
+
+6. List available Cloudneeti helm charts
+
+        helm search repo cloudneeti -–versions
+
+    ![Helm Setup - Kubernetes](.././images/kubernetes/helm_3.png#thumbnail)
+
+
+7.  Deploy Cloudneeti agent on Kubernetes cluster node
 
         helm install <ReleaseName> cloudneeti/cloudneeti-agent `
         --set clusterName=<cluster-name-as-onboarded-on-cloudneeti> `
@@ -142,8 +156,27 @@ Please use below steps to deploy Cloudneeti Agent on AKS, AKS engine.
 3.	Verify K8S cluster access
 
     ![Helm Setup - Kubernetes](.././images/kubernetes/vm-based.png#thumbnail)
+
+
+4. Add Cloudneeti Helm repo 
+
+        helm repo add cloudneeti https://charts.cloudneeti.com
+
+    ![Helm Setup - Kubernetes](.././images/kubernetes/helm_1.png#thumbnail)
+
+5. Verify Helm repo addition
+
+        helm repo list
+
+    ![Helm Setup - Kubernetes](.././images/kubernetes/helm_2.png#thumbnail)
+
+6. List available Cloudneeti helm charts
+
+        helm search repo cloudneeti -–versions
+
+    ![Helm Setup - Kubernetes](.././images/kubernetes/helm_3.png#thumbnail)
  
-4.  Deploy Cloudneeti agent on Kubernetes cluster node
+7.  Deploy Cloudneeti agent on Kubernetes cluster node
         
         helm install <ReleaseName> cloudneeti/cloudneeti-agent `
         --set clusterName=<cluster-name-as-onboarded-on-cloudneeti> `
@@ -220,7 +253,7 @@ In case Cloudneeti releases a new version of the agent then first upgrade the he
 
 1. Update the Cloudneeti helm repo
 
-    helm repo update 
+        helm repo update 
  
 2. Upgrade the Cloudneeti agent
 
