@@ -24,7 +24,7 @@ Login to Cloudneeti portal with **License Admin** role
 
 1.  Navigate to **Configurations** and **Cloud Accounts**
 
-    ![Associate Kubernetes](.././images/kubernetes/CN_ManageAccounts_AWS.png#thumbnail)
+    ![Associate Kubernetes](.././images/kubernetes/CN_ManageAccounts_1.png#thumbnail)
 
 2.  Expand **AWS** (1) section
 
