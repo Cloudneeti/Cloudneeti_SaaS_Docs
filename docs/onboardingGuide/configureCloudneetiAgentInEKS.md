@@ -24,7 +24,7 @@ Login to Cloudneeti portal with **License Admin** role
 
 1.  Navigate to **Configurations** and **Cloud Accounts**
 
-    ![Associate Kubernetes](.././images/kubernetes/CN_ManageAccounts_AWS.png#thumbnail)
+    ![Associate Kubernetes](.././images/kubernetes/CN_ManageAccounts_1.png#thumbnail)
 
 2.  Expand **AWS** (1) section
 
@@ -35,16 +35,14 @@ Login to Cloudneeti portal with **License Admin** role
 
     ![Associate Kubernetes](.././images/kubernetes/CN_ManageK8Cluster_EKS_2.png#thumbnail)
 
-4.  Add **Kubernetes Cluster Name**
+4.  Add **Kubernetes Cluster Name** (1)
 
-5.  **Save**
+5.  Select **Cluster Hosting** (2) from dropdown and **Save**
 
-    ![Associate Kubernetes](.././images/kubernetes/CN_ManageK8Cluster_EKS_3.png#thumbnail)
+    ![Associate Kubernetes](.././images/kubernetes/CN_ManageK8Cluster_EKS.png#thumbnail)
 
 6.  It will download a JSON file **cloudneeti-agent-config** which will be used in
     step 2 to update agent configuration script.
-
-    ![Associate Kubernetes config](.././images/kubernetes/CN_ConfigFile_EKS.png#thumbnail)
 
 Sample JSON file
 
