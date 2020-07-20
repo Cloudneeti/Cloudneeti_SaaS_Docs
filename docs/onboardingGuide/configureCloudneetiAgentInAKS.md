@@ -258,7 +258,7 @@ Access Kubernetes cluster with root account from local machine
 
     ![kubectl - Kubernetes](.././images/kubernetes/kubectl6.png#thumbnail)
 
-8.4: Verify policy results
+8.5: Verify policy results
 -----------------------------
 
 Login to Cloudneeti portal with **License Admin** role

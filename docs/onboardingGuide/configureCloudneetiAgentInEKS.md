@@ -39,7 +39,7 @@ Login to Cloudneeti portal with **License Admin** role
 
 5.  Select **Cluster Hosting** (2) from dropdown and **Save**
 
-    ![Associate Kubernetes](.././images/kubernetes/CN_ManageK8Cluster_EKS.png#thumbnail)
+    ![Associate Kubernetes](.././images/kubernetes/CN_AssociateK8Cluster_EKS.png#thumbnail)
 
 6.  It will download a JSON file **cloudneeti-agent-config** which will be used in
     step 2 to update agent configuration script.
