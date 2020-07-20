@@ -3,7 +3,7 @@ STEP 8: Configuring Cloudneeti agent in Azure Kubernetes Service (AKS)
 
 **This step is optional.**
 
-Cloudneeti includes and extends Azure Security center recommendations for AKS by deploying a Cloudneeti agent to Azure Kubernetes Cluster. A docker container agent is deployed to collect data for additional security policies. Cloudneeti then provides out-of-box mappings for all 13+ compliance frameworks included in the product. 
+Cloudneeti includes and extends Azure Security center recommendations for AKS by deploying a Cloudneeti agent to Azure Kubernetes Cluster. A docker container-based agent is deployed as a cronjob in Kubernetes cluster to collect data for additional security policies. Cloudneeti then provides out-of-box mappings for all 13+ compliance frameworks included in the product. 
 
 Deploying Cloudneeti agent on Azure Kubernetes Service enables compliance monitoring of Kubernetes cluster for security policies [listed here](../../securityPolicies/kubernetes/azureK8SSecurityPolcies/).
 
@@ -18,7 +18,7 @@ Prerequisites
 | 3. **Workstation:** Azure CLI version 2.0.46 | Please follow [link](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest){target=_blank} to install Azure CLI version 2.0.46       |
 | 4. **Workstation:** Install and set up kubectl to execute PowerShell commands within Cloudneeti Agent configuration script | Please follow [link](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-on-windows){target=_blank} to install and set up **kubectl** <br>``choco install kubernetes-cli``<br>      |
 | 5. **Workstation:** Install OpenSSH | Please follow [link](https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse){target=_blank} to install and set up **OpenSSH**   |
-| 6. **Kubernetes Cluster:** Install Helm | Install Helm using below commands <br> **Windows** <br>``choco install kubernetes-helm`` <br> **Unix** <br>``sudo apt-get install helm``  |
+| 6. **Kubernetes Cluster:** Install and set up Helm 3.0 and higher to execute helm chart deployment commands | Please follow [link](https://helm.sh/docs/intro/install/){target=_blank} to install and set up Helm or install Helm using below commands <br> **Windows** <br>``choco install kubernetes-helm`` <br> **Unix** <br>``sudo apt-get install helm``  |
 
 8.1: Associate Kubernetes cluster with Cloud account in Cloudneeti
 ---------------------------------------------------------------------
@@ -59,7 +59,37 @@ Sample JSON file
 
         {"LicenseId":"XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX","AccountId":"XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX","ClusterName":"AKS Demo","ClusterHosting":"AKS","Environment":"prod"}
 
-8.2: Deploy Cloudneeti agent
+
+8.2: Collect Information
+-------------------------
+
+**Collect Information**
+
+| **Information**                                            | **Source / Portal to use** | **User**      |
+|------------------------------------------------------------|----------------------------|---------------|
+| Cloudneeti License Id                                      | Cloudneeti (step 8.1)      | License Admin |
+| Cloudneeti Account Id                                      | Cloudneeti (step 8.1)      | License Admin |
+| Cluster Name                                               | Cloudneeti (step 8.1)      | License Admin |
+| Cloudneeti Environment                                     | Cloudneeti (step 8.1)      | License Admin |
+| Cluster Hosting                                            | Cloudneeti (step 8.1)      | License Admin |
+| **Cloudneeti API key**                                     | Cloudneeti                 | License Admin |
+| CloudneetiApiAppId                                         | Cloudneeti                 | License Admin |
+| **CloudneetiAPIAppSecret**                                 | Cloudneeti                 | License Admin |
+|                                                            |                            |               |
+
+
+**Notes:**
+
+Set Cloudneeti API key and APIAPPSecret to base64 format : Please
+follow [steps](https://docs.cloudneeti.com/onboardingGuide/configureCloudneetiAgentInEKS/#set-api-key-in-base64) to
+generate the key and set the key in base64 format.
+
+Generate API app secret : Please
+follow [steps](https://docs.cloudneeti.com/administratorGuide/configureCloudneetiAPIAccess/#step-1-create-cloudneeti-api-application) to
+configure API access for API **Account.InsertKubernetesClusterData** and
+generate API access secret.
+
+8.3: Deploy Cloudneeti agent
 -----------------------------
 
 Setup Cloudneeti Helm Repo and deploy Cloudneeti agent on Kubernetes cluster. Please use below steps to deploy Cloudneeti Agent on AKS, AKS engine and VM based Kubernetes Cluster. 
@@ -188,7 +218,7 @@ Access Kubernetes cluster with root account from local machine.
         --set cloudneetiAPIAppSecret=<api-app-secret> `
         --set clusterHosting=”VM-Based”
 
-8.3: Verify Cloudneeti agent installation
+8.4: Verify Cloudneeti agent installation
 ------------------------------------------
 
 Access Kubernetes cluster with root account from local machine
