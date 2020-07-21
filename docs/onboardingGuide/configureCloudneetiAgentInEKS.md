@@ -15,7 +15,8 @@ Prerequisites
 |----------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 1. **Workstation:** Install AWS Command Line Interface                           | To install AWS cli follow [link](https://docs.aws.amazon.com/cli/latest/userguide/install-windows.html) **AWS Command Line** Interface (CLI) is a unified tool to manage your AWS services.             |                                                      |
 | 2. **Workstation:** Install and set up kubectl to execute PowerShell commands within Cloudneeti Agent configuration script | Please follow [link](https://kubernetes.io/docs/tasks/tools/install-kubectl/){target=_blank} to install and set up **kubectl** <br>``choco install kubernetes-cli``<br>      |                                                     
-| 3. **Kubernetes Cluster:** Install and set up Helm 3.0 and higher to execute helm chart deployment commands | Please follow [link](https://helm.sh/docs/intro/install/){target=_blank} to install and set up Helm or install Helm using below commands <br> **Windows** <br>``choco install kubernetes-helm`` <br> **Unix** <br>``sudo apt-get install helm``  |
+| 3. **Workstation:** Install and set up Helm 3.0 and higher to execute helm chart deployment commands | Please follow [link](https://helm.sh/docs/intro/install/){target=_blank} to install and set up Helm or install Helm using below commands <br> **Windows** <br>``choco install kubernetes-helm`` <br> **Unix** <br>``sudo apt-get install helm``  |
+| 4. **Workstation:** Add Cloudneeti Helm repo | Add Cloudneeti Helm repo and verify using below commands, more details [here](../../onboardingGuide/configureCloudneetiAgentInAKS/#setup-cloudneeti-helm-repo) <br> **1 Add Cloudneeti Helm repo** <br>``helm repo add cloudneeti https://charts.cloudneeti.com`` <br> **2 Verify Helm repo addition** <br>``helm repo list`` <br> **3 List available Cloudneeti helm charts** <br> ``helm search repo cloudneeti -–versions``  |
 
 4.1: Associate Kubernetes cluster with Cloud account in Cloudneeti
 ---------------------------------------------------------------------
@@ -56,13 +57,13 @@ Sample JSON file
 
 | **Information**                                            | **Source / Portal to use** | **User**      |
 |------------------------------------------------------------|----------------------------|---------------|
-| Cloudneeti License Id                                      | Cloudneeti (step 4.1)      | License Admin |
-| Cloudneeti Account Id                                      | Cloudneeti (step 4.1)      | License Admin |
-| Cluster Name                                               | Cloudneeti (step 4.1)      | License Admin |
-| Cloudneeti Environment                                     | Cloudneeti (step 4.1)      | License Admin |
-| Cluster Hosting                                            | Cloudneeti (step 4.1)      | License Admin |
+| Cloudneeti License Id                                      | Cloudneeti (JSON file generated in step 4.1)      | License Admin |
+| Cloudneeti Account Id                                      | Cloudneeti (JSON file generated in step  4.1)      | License Admin |
+| Cluster Name                                               | Cloudneeti (JSON file generated in step  4.1)      | License Admin |
+| Cloudneeti Environment                                     | Cloudneeti (JSON file generated in step  4.1)      | License Admin |
+| Cluster Hosting                                            | Cloudneeti (JSON file generated in step  4.1)      | License Admin |
 | **Cloudneeti API key**                                     | Cloudneeti                 | License Admin |
-| CloudneetiApiAppId                                         | Cloudneeti                 | License Admin |
+| CloudneetiApiAppId                                         | Cloudneeti ()                | License Admin |
 | **CloudneetiAPIAppSecret**                                 | Cloudneeti                 | License Admin |
 |                                                            |                            |               |
 
@@ -91,25 +92,7 @@ Access Kubernetes cluster with root account
 
         aws eks --region <region> update-kubeconfig --name <cluster_name>
 
-2. Add Cloudneeti Helm repo 
-
-        helm repo add cloudneeti https://charts.cloudneeti.com
-
-    ![Helm Setup - Kubernetes](.././images/kubernetes/helm_1.png#thumbnail)
-
-3. Verify Helm repo addition
-
-        helm repo list
-
-    ![Helm Setup - Kubernetes](.././images/kubernetes/helm_2.png#thumbnail)
-
-4. List available Cloudneeti helm charts
-
-        helm search repo cloudneeti -–versions
-
-    ![Helm Setup - Kubernetes](.././images/kubernetes/helm_3.png#thumbnail)
-
-5. Deploy Cloudneeti agent on Kubernetes cluster node
+2. Deploy Cloudneeti agent on Kubernetes cluster node
 
         helm install <ReleaseName> cloudneeti/cloudneeti-agent `
         --set clusterName=<cluster-name-as-onboarded-on-cloudneeti> `
@@ -132,25 +115,7 @@ Access Kubernetes cluster with root account
 
     ![Helm Setup - Kubernetes](.././images/kubernetes/vm-based.png#thumbnail)
 
-4. Add Cloudneeti Helm repo 
-
-        helm repo add cloudneeti https://charts.cloudneeti.com
-
-    ![Helm Setup - Kubernetes](.././images/kubernetes/helm_1.png#thumbnail)
-
-5. Verify Helm repo addition
-
-        helm repo list
-
-    ![Helm Setup - Kubernetes](.././images/kubernetes/helm_2.png#thumbnail)
-
-6. List available Cloudneeti helm charts
-
-        helm search repo cloudneeti -–versions
-
-    ![Helm Setup - Kubernetes](.././images/kubernetes/helm_3.png#thumbnail)
-    
-7.  Deploy Cloudneeti agent on Kubernetes cluster node
+4.  Deploy Cloudneeti agent on Kubernetes cluster node
             
         helm install <ReleaseName> cloudneeti/cloudneeti-agent `
         --set clusterName=<cluster-name-as-onboarded-on-cloudneeti> `

@@ -18,7 +18,8 @@ Prerequisites
 | 3. **Workstation:** Azure CLI version 2.0.46 | Please follow [link](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest){target=_blank} to install Azure CLI version 2.0.46       |
 | 4. **Workstation:** Install and set up kubectl to execute PowerShell commands within Cloudneeti Agent configuration script | Please follow [link](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-on-windows){target=_blank} to install and set up **kubectl** <br>``choco install kubernetes-cli``<br>      |
 | 5. **Workstation:** Install OpenSSH | Please follow [link](https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse){target=_blank} to install and set up **OpenSSH**   |
-| 6. **Kubernetes Cluster:** Install and set up Helm 3.0 and higher to execute helm chart deployment commands | Please follow [link](https://helm.sh/docs/intro/install/){target=_blank} to install and set up Helm or install Helm using below commands <br> **Windows** <br>``choco install kubernetes-helm`` <br> **Unix** <br>``sudo apt-get install helm``  |
+| 6. **Workstation:** Install and set up Helm 3.0 and higher to execute helm chart deployment commands | Please follow [link](https://helm.sh/docs/intro/install/){target=_blank} to install and set up Helm or install Helm using below commands <br> **Windows** <br>``choco install kubernetes-helm`` <br> **Unix** <br>``sudo apt-get install helm``  |
+| 7. **Workstation:** Add Cloudneeti Helm repo | Add Cloudneeti Helm repo and verify using below commands, more details [here](../../onboardingGuide/configureCloudneetiAgentInAKS/#setup-cloudneeti-helm-repo) <br> **1 Add Cloudneeti Helm repo** <br>``helm repo add cloudneeti https://charts.cloudneeti.com`` <br> **2 Verify Helm repo addition** <br>``helm repo list`` <br> **3 List available Cloudneeti helm charts** <br> ``helm search repo cloudneeti -–versions``  |
 
 8.1: Associate Kubernetes cluster with Cloud account in Cloudneeti
 ---------------------------------------------------------------------
@@ -67,11 +68,11 @@ Sample JSON file
 
 | **Information**                                            | **Source / Portal to use** | **User**      |
 |------------------------------------------------------------|----------------------------|---------------|
-| Cloudneeti License Id                                      | Cloudneeti (step 8.1)      | License Admin |
-| Cloudneeti Account Id                                      | Cloudneeti (step 8.1)      | License Admin |
-| Cluster Name                                               | Cloudneeti (step 8.1)      | License Admin |
-| Cloudneeti Environment                                     | Cloudneeti (step 8.1)      | License Admin |
-| Cluster Hosting                                            | Cloudneeti (step 8.1)      | License Admin |
+| Cloudneeti License Id                                      | Cloudneeti (JSON file generated in step 8.1)      | License Admin |
+| Cloudneeti Account Id                                      | Cloudneeti (JSON file generated in step 8.1)      | License Admin |
+| Cluster Name                                               | Cloudneeti (JSON file generated in step 8.1)      | License Admin |
+| Cloudneeti Environment                                     | Cloudneeti (JSON file generated in step 8.1)      | License Admin |
+| Cluster Hosting                                            | Cloudneeti (JSON file generated in step 8.1)      | License Admin |
 | **Cloudneeti API key**                                     | Cloudneeti                 | License Admin |
 | CloudneetiApiAppId                                         | Cloudneeti                 | License Admin |
 | **CloudneetiAPIAppSecret**                                 | Cloudneeti                 | License Admin |
@@ -102,25 +103,7 @@ Access Kubernetes cluster with root account from local machine.
 
         az aks get-credentials --name <cluster-name> --resource-group <cluster-resource-group> --overwrite-existing 
 
-2. Add Cloudneeti Helm repo 
-
-        helm repo add cloudneeti https://charts.cloudneeti.com
-
-    ![Helm Setup - Kubernetes](.././images/kubernetes/helm_1.png#thumbnail)
-
-3. Verify Helm repo addition
-
-        helm repo list
-
-    ![Helm Setup - Kubernetes](.././images/kubernetes/helm_2.png#thumbnail)
-
-4. List available Cloudneeti helm charts
-
-        helm search repo cloudneeti -–versions
-
-    ![Helm Setup - Kubernetes](.././images/kubernetes/helm_3.png#thumbnail)
-
-5. Deploy Cloudneeti agent on Kubernetes cluster node
+2. Deploy Cloudneeti agent on Kubernetes cluster node
 
         helm install <ReleaseName> cloudneeti/cloudneeti-agent `
         --set clusterName=<cluster-name-as-onboarded-on-cloudneeti> `
@@ -146,26 +129,7 @@ Access Kubernetes cluster with root account from local machine.
 
     ![Helm Setup - Kubernetes](.././images/kubernetes/AKS_Engine_1.png#thumbnail)
 
-4. Add Cloudneeti Helm repo 
-
-        helm repo add cloudneeti https://charts.cloudneeti.com
-
-    ![Helm Setup - Kubernetes](.././images/kubernetes/helm_1.png#thumbnail)
-
-5. Verify Helm repo addition
-
-        helm repo list
-
-    ![Helm Setup - Kubernetes](.././images/kubernetes/helm_2.png#thumbnail)
-
-6. List available Cloudneeti helm charts
-
-        helm search repo cloudneeti -–versions
-
-    ![Helm Setup - Kubernetes](.././images/kubernetes/helm_3.png#thumbnail)
-
-
-7.  Deploy Cloudneeti agent on Kubernetes cluster node
+4.  Deploy Cloudneeti agent on Kubernetes cluster node
 
         helm install <ReleaseName> cloudneeti/cloudneeti-agent `
         --set clusterName=<cluster-name-as-onboarded-on-cloudneeti> `
@@ -188,25 +152,7 @@ Access Kubernetes cluster with root account from local machine.
     ![Helm Setup - Kubernetes](.././images/kubernetes/vm-based.png#thumbnail)
 
 
-4. Add Cloudneeti Helm repo 
-
-        helm repo add cloudneeti https://charts.cloudneeti.com
-
-    ![Helm Setup - Kubernetes](.././images/kubernetes/helm_1.png#thumbnail)
-
-5. Verify Helm repo addition
-
-        helm repo list
-
-    ![Helm Setup - Kubernetes](.././images/kubernetes/helm_2.png#thumbnail)
-
-6. List available Cloudneeti helm charts
-
-        helm search repo cloudneeti -–versions
-
-    ![Helm Setup - Kubernetes](.././images/kubernetes/helm_3.png#thumbnail)
- 
-7.  Deploy Cloudneeti agent on Kubernetes cluster node
+4.  Deploy Cloudneeti agent on Kubernetes cluster node
         
         helm install <ReleaseName> cloudneeti/cloudneeti-agent `
         --set clusterName=<cluster-name-as-onboarded-on-cloudneeti> `
@@ -273,6 +219,28 @@ Login to Cloudneeti portal with **License Admin** role
 
 
 ## Appendix
+
+### Setup Cloudneeti helm repo
+
+1. Add Cloudneeti Helm repo 
+
+        helm repo add cloudneeti https://charts.cloudneeti.com
+
+    ![Helm Setup - Kubernetes](.././images/kubernetes/helm_1.png#thumbnail)
+
+2. Verify Helm repo addition
+
+        helm repo list
+
+    ![Helm Setup - Kubernetes](.././images/kubernetes/helm_2.png#thumbnail)
+
+
+3. List available Cloudneeti helm charts
+
+        helm search repo cloudneeti -–versions
+
+    ![Helm Setup - Kubernetes](.././images/kubernetes/helm_3.png#thumbnail)
+
 
 ### Upgrade Cloudneeti Agent
 
