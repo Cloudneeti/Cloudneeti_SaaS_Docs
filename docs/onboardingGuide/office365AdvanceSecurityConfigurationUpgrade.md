@@ -1,5 +1,5 @@
-# Office 365 - Upgrade Advance Security Configuration
-Upgrading existing Office 365 advance secuirty configuration to DataCollectorVersion 1.5 includes updating runbook inside automation account provisioned for Office 365 cloud account to get data for new security policies.
+# Office 365 - Upgrade Advanced Security Configuration
+Upgrading existing Office 365 advance secuirty configuration to DataCollectorVersion 1.6 includes updating runbook inside automation account provisioned for Office 365 cloud account to get data for new security policies.
 
 Please refer [Release Notes](../../releaseNotes/2020/){target=_blank} for latest security policy addition.
 
@@ -30,7 +30,7 @@ Switch to Azure AD with the Azure Subscription with pre-requisite access.
 	<code>```
 		./Upgrade-M365DataCollector.ps1 `
             -ArtifactsName <Cloudneeti office 365 Data Collector Artifact Name> `
-            -DataCollectorVersion 1.5 `
+            -DataCollectorVersion 1.6 `
             -AzureSubscriptionId <Azure Subscription Id where office 365 datacollector resouces will be created> `
             -DataCollectorName <Office 365 Data Collector Name>
 	```</code>
