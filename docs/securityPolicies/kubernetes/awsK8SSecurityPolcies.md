@@ -1,7 +1,6 @@
 AWS - Kubernetes
 ==================
 
-
 EC2-Instance based Kubernetes Security Policies
 -----------------------------------------------
 
@@ -77,11 +76,9 @@ EC2-Instance based Kubernetes Security Policies
 | Kubernetes - Worker Nodes - Kubelet                                     | EC2-Instance based - Ensure that the --streaming-connection-idle-timeout argument is not set to 0                             |
 | Kubernetes - Worker Nodes - Kubelet                                     | EC2-Instance based - Ensure that the --protect-kernel-defaults argument is set to true                                        |
 | Kubernetes - Worker Nodes - Kubelet                                     | EC2-Instance based - Ensure that the --make-iptables-util-chains argument is set to true                                      |
-| Kubernetes - Worker Nodes - Kubelet                                     | EC2-Instance based - Ensure that the --hostname-override argument is not set                                                  |
 | Kubernetes - Worker Nodes - Kubelet                                     | EC2-Instance based - Ensure that the --tls-cert-file and --tls-private-key-file arguments are set as appropriate              |
 | Kubernetes - Worker Nodes - Kubelet                                     | EC2-Instance based - Ensure that the --rotate-certificates argument is not set to false                                       |
 | Kubernetes - Worker Nodes - Kubelet                                     | EC2-Instance based - Ensure that the RotateKubeletServerCertificate argument is set to true                                   |
-| Kubernetes - Worker Nodes - Kubelet                                     | EC2-Instance based - Ensure that the Kubelet only makes use of Strong Cryptographic Ciphers                                   |
 
 
 EKS Security Policies
@@ -105,8 +102,6 @@ EKS Security Policies
 | Kubernetes - Worker Nodes - Kubelet                         | AWS EKS - Ensure that the --streaming-connection-idle-timeout argument is not set to 0                |
 | Kubernetes - Worker Nodes - Kubelet                         | AWS EKS - Ensure that the --protect-kernel-defaults argument is set to true                           |
 | Kubernetes - Worker Nodes - Kubelet                         | AWS EKS - Ensure that the --make-iptables-util-chains argument is set to true                         |
-| Kubernetes - Worker Nodes - Kubelet                         | AWS EKS - Ensure that the --hostname-override argument is not set                                     |
 | Kubernetes - Worker Nodes - Kubelet                         | AWS EKS - Ensure that the --tls-cert-file and --tls-private-key-file arguments are set as appropriate |
 | Kubernetes - Worker Nodes - Kubelet                         | AWS EKS - Ensure that the --rotate-certificates argument is not set to false                          |
 | Kubernetes - Worker Nodes - Kubelet                         | AWS EKS - Ensure that the RotateKubeletServerCertificate argument is set to true                      |
-| Kubernetes - Worker Nodes - Kubelet                         | AWS EKS - Ensure that the Kubelet only makes use of Strong Cryptographic Ciphers                      |
