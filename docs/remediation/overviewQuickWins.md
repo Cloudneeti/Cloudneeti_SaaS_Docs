@@ -1,5 +1,8 @@
 # Quick wins and OS hardening for baseline configuration 
 
+Cloudneeti provides scripts to quickly mitigate quite a few low-hanging security configurations and improving posture soon after a cloud account has been onboarded.
+
+
 ## Quick Wins
    
   Update configurations and settings to make the Cloud account compliant for listed policies.

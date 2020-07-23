@@ -1,23 +1,30 @@
-Service Now Integration
+ServiceNow Integration
 ===============================
+Cloudneeti supports integration with ticketing systems to automatically log incidents when a misconfiguration is discovered in the monitored production environment. Incident Management (Ticketing) allows integrations with ticketing systems such as ServiceNow.
 
-Incident Management (Ticketing) allows integrations with ticketing systems such
-as ServiceNow.
+## Prerequisites
 
+1. ServiceNow instance is online
 
-License Admins will have the rights to managed configure integrations.
+    ![ServiceNow integration](.././images/administratorGuide/servicenowInstanceOnline.png#thumbnail)
+
+2. ServiceNow instance admin username and Password
+
+3. ServiceNow instance user email id to assign tickets
 
 
 | S. No. | Step                                   | Portal to use     | Role                    |
 |--------|------------------------------------|-------------------|-------------------------|
 | 1      | Configure ticketing system integration for ServiceNow     | Cloudneeti   | License Admin  |
-| 2      | Configure Incident Management   | Cloudneeti   | Subscription Owner  |
+| 2      | Configure Incident Management                            | Cloudneeti   | Subscription Owner  |
 | 3      | Verify tickets created | ServiceNow    | Admin      |
 
 
 ### STEP 1: Configure ticketing system integration for ServiceNow or Zendesk
 The following steps are required to configure Service Now ticketing system integration in the
 Cloudneeti application.
+
+License Admins will have the rights to managed configure integrations.
 
 1.  Select **Service Now** in the dropdown
 
@@ -43,6 +50,8 @@ Cloudneeti application.
 
 
 ### STEP 2: Configure Incident Management
+
+License Admins will have the rights to managed configure integrations.
 
 1.  Select **Ticketing System** from dropdown (ServiceNow, ZenDesk).
 
@@ -89,3 +98,15 @@ Sample ServiceNow Problem Task
 
 ![ServiceNow integration](.././images/administratorGuide/ServiceNow_ProblemTask_LicenseDetails.png#thumbnail)
 
+
+
+## Annexture
+
+
+### Priority mapping
+
+| **Cloudneeti Category Priority distribution** | **ServiceNow Ticket Impact** | **ServiceNow Ticket Urgency** | **ServiceNow Ticket Priority** |
+|-----------------------------------------------|------------------------------|-------------------------------|--------------------------------|
+| High                                          | 2                            | 1                             | 2                              |
+| Medium                                        | 1                            | 3                             | 3                              |
+| Low                                           | 3                            | 3                             | 4                              |

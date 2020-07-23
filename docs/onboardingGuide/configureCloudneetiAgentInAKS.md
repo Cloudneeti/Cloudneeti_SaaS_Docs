@@ -3,7 +3,7 @@ STEP 8: Configuring Cloudneeti agent in Azure Kubernetes Service (AKS)
 
 **This step is optional.**
 
-Cloudneeti includes and extends Azure Security center recommendations for AKS by deploying a Cloudneeti agent to Azure Kubernetes Cluster. A docker container-based agent is deployed as a cronjob in Kubernetes cluster to collect data for additional security policies. Cloudneeti then provides out-of-box mappings for all 13+ compliance frameworks included in the product. 
+Cloudneeti includes and extends Azure Security Center recommendations for AKS by deploying a Cloudneeti agent to Azure Kubernetes Cluster. A docker container-based agent is deployed as a cronjob in Kubernetes cluster to collect data for additional security policies. Cloudneeti then provides out-of-box mappings for all 13+ compliance frameworks included in the product. 
 
 Deploying Cloudneeti agent on Azure Kubernetes Service enables compliance monitoring of Kubernetes cluster for security policies [listed here](../../securityPolicies/kubernetes/azureK8SSecurityPolcies/).
 
@@ -68,7 +68,7 @@ Sample JSON file
 
 | **Information**                                            | **Source / Portal to use** | **User**      |
 |------------------------------------------------------------|----------------------------|---------------|
-| Cloudneeti License Id                                      | Cloudneeti (JSON file generated in step 8.1)      | License Admin |
+| [Cloudneeti License Id]                                      | Cloudneeti (JSON file generated in step 8.1)      | License Admin |
 | Cloudneeti Account Id                                      | Cloudneeti (JSON file generated in step 8.1)      | License Admin |
 | Cluster Name                                               | Cloudneeti (JSON file generated in step 8.1)      | License Admin |
 | Cloudneeti Environment                                     | Cloudneeti (JSON file generated in step 8.1)      | License Admin |
