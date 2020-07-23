@@ -1,0 +1,31 @@
+# Quick wins and OS baseline hardening scripts
+
+## Quick Wins
+   
+  Update configurations and settings to make the Cloud account compliant for listed policies.
+
+  [Azure](../azureQuickWins/){target=_blank}
+
+  [AWS](../awsQuickWins/){target=_blank}
+
+## OS Hardening for Baseline Configuration
+ 
+  A collection of OS hardening scripts that will help to harden operating system baseline configuration supported by Cloudneeti.
+
+  [CentOS Linux 7](../../remediation/osBaseline/centOSQuickWins/){target=_blank}
+
+  [Red Hat Enterprise Linux 7](../../remediation/osBaseline/rhelQuickWins/){target=_blank}
+
+  [Windows Server 2016](../../remediation/osBaseline/win16QuickWins/){target=_blank}
+
+  [Windows Server 2012 R2](../../remediation/osBaseline/win12QuickWins/){target=_blank}
+
+
+
+
+
+ 
+
+ 
+
+ 
