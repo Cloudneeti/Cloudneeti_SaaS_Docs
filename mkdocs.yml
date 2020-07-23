@@ -123,19 +123,21 @@ nav:
   - Overview: remediation/overview.md
   - Azure:
     - Guided Remediation: remediation/azureGuidedRemediation.md
-    - Quick Wins: remediation/azureQuickWins.md
     - Auto Remediation: remediation/azureAutoRemediation.md
     - Decommission of remediation: remediation/azureDecommissionofRemediation.md
   - AWS:
     - Guided Remediation: remediation/awsGuidedRemediation.md
-    - Quick wins: remediation/awsQuickWins.md
     - Auto Remediation: remediation/awsRemediation.md
     - Decommission Remediation Framework: remediation/awsDecommissionofRemediation.md
+- Quick wins and OS baseline hardening scripts:
+  - Overview: remediation/overviewQuickWins.md
+  - AWS Quick wins: remediation/awsQuickWins.md
+  - Azure Quick Wins: remediation/azureQuickWins.md
   - OS Hardening for Baseline Configuration:
-    - Windows Server 2016: remediation/osBaseline/win16QuickWins.md
-    - Windows Server 2012 R2: remediation/osBaseline/win12QuickWins.md
     - CentOS Linux 7: remediation/osBaseline/centOSQuickWins.md
     - RHEL Linux 7: remediation/osBaseline/rhelQuickWins.md
+    - Windows Server 2016: remediation/osBaseline/win16QuickWins.md
+    - Windows Server 2012 R2: remediation/osBaseline/win12QuickWins.md
 - Release Notes:
   - Releases in 2020: releaseNotes/2020.md
   - Releases in 2019: releaseNotes/2019.md
