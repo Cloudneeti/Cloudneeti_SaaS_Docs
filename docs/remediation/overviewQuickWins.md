@@ -8,7 +8,7 @@
 
   [AWS](../awsQuickWins/){target=_blank}
 
-## OS Hardening for Baseline Configuration
+## OS hardening for baseline configuration
  
   A collection of OS hardening scripts that will help to harden operating system baseline configuration supported by Cloudneeti.
 
