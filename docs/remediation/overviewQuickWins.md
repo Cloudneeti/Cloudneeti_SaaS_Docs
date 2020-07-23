@@ -1,4 +1,4 @@
-# Quick wins and OS baseline hardening scripts
+# Quick wins and OS hardening for baseline configuration 
 
 ## Quick Wins
    
