@@ -11,7 +11,7 @@ The Cloud Security Best Practices view provides a list of all security policies 
 |  Amazon Elastic Kubernetes Service (Amazon EKS)             | [19](../../securityPolicies/kubernetes/awsK8SSecurityPolcies/#eks-security-policies)                         | 19                      | -                      |
 |  Office365​                      | [133](../../securityPolicies/office365SecurityPolcies/)                       | 96                         | 37                      |
 |  Azure​                          | [425](../../securityPolicies/azureSecurityPolcies/)                       | 392                        | 33                      |
-|  Azure VM baseline Win 2012 R2​  | [212​](../../http://127.0.0.1:8000/securityPolicies/osBaseline/windows12SecurityPolcies/#azure)                       | 212​                        | -                       |
+|  Azure VM baseline Win 2012 R2​  | [182](../../http://127.0.0.1:8000/securityPolicies/osBaseline/windows12SecurityPolcies/#azure)                       | 182​                        | -                       |
 |  Azure VM baseline Win 2016​     | [197](../../securityPolicies/osBaseline/windows16SecurityPolcies/)                       | 197                        | -                       |
 |  Azure VM baseline Win 2019     | [193](../../securityPolicies/osBaseline/windows19SecurityPolcies/)                       | 193                        | -                       |
 |  Azure VM baseline Ubuntu 18.04​ | [40](../../securityPolicies/osBaseline/ubuntuSecurityPolcies/)​                        | 40​                         | -                       |
@@ -19,7 +19,7 @@ The Cloud Security Best Practices view provides a list of all security policies 
 |  Azure Kubernetes | [73](../../securityPolicies/kubernetes/azureK8SSecurityPolcies/#vm-based-kubernetes-security-policies)                        | 73                         | -                       |
 |  Azure Kubernetes Service (AKS Engine) | [73](../../securityPolicies/kubernetes/azureK8SSecurityPolcies/#aks-engine-security-policies)                        | 73                         | -                       |
 |  Azure Kubernetes Service (AKS) | [19](../../securityPolicies/kubernetes/azureK8SSecurityPolcies/#aks-security-policies)                        | 19                         | -                       |
-| **Grand Total**​                 | **2481**​                  | **2392**​                   |                   **89**      |
+| **Grand Total**​                 | **2451**​                  | **2362**​                   |                   **89**      |
 
 
 

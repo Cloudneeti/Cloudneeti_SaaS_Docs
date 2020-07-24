@@ -56,31 +56,7 @@ Resources in AWS account
 Please the follow below steps to determine the total number of resources within
 an AWS account.
 
-### Manual 
-Login to [AWS console](https://console.aws.amazon.com){target=_blank} with security audit role
-
-1.  Click on **Resource Group**
-
-2.  Click on **Tag Editor**
-
-3.  Select **All regions** in **Regions** dropdown menu
-
-4.  Select **All resource types** in **Resource Type** dropdown menu
-
-5.  Click on **Search resources**
-
-	![AWS Resources](.././images/Subscribe/AWS_Resources.png#thumbnail)
-
-6.  Wait until all resources are loaded.
-
-    ![AWS Resources](.././images/Subscribe/Loading_Resources.png#thumbnail)
-
-7.  Resource count will appear next to **Resource search results**
-
-    ![AWS Resources](.././images/Subscribe/Resource_Search_Result.png#thumbnail)
-
-
-### Automated Script
+### Automated
 
 #### Workstation Readiness
 
