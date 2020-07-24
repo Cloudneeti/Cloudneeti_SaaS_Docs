@@ -34,7 +34,8 @@ Following is the count of auto remediation avaiable for security policies within
 |  Azure​                          | [26](../../remediation/azureAutoRemediation/) | [137](../../remediation/azureQuickWins/) |                         
 |  Azure VM baseline Win 2012 R2​  | -                                 | [125](../../remediation/osBaseline/win12QuickWins/#cis-benchmark-windows-server-2012-r2-version-100)                 |          
 |  Azure VM baseline Win 2016​     | -                                 | [190](../../remediation/osBaseline/win16QuickWins/#cis-benchmark-windows-server-2016-version-100)                                              |
+|  Azure VM baseline Win 2019​     | -                                 | [198](](../../remediation/osBaseline/win19QuickWins/){target=_blank})                                              |
 |  Azure VM baseline Ubuntu 18.04​ | -                                 | -                                              |
 |  Azure VM baseline CentOS​       | -                                 | [26](../../remediation/osBaseline/centOSQuickWins/)                                             |
 |  Azure Kubernetes Service (AKS)       | -                                 | -                                              |
-| **Grand Total**​                 | **135**​                            | **644**                                         |     
+| **Grand Total**​                 | **135**​                            | **842**                                         |     
