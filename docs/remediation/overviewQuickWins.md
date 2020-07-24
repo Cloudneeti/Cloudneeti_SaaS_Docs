@@ -19,9 +19,13 @@ Cloudneeti provides scripts to quickly mitigate quite a few low-hanging security
 
   [Red Hat Enterprise Linux 7](../../remediation/osBaseline/rhelQuickWins/){target=_blank}
 
+  [Windows Server 2012 R2](../../remediation/osBaseline/win12QuickWins/){target=_blank}
+
   [Windows Server 2016](../../remediation/osBaseline/win16QuickWins/){target=_blank}
 
-  [Windows Server 2012 R2](../../remediation/osBaseline/win12QuickWins/){target=_blank}
+  [Windows Server 2019](../../remediation/osBaseline/win19QuickWins/){target=_blank}
+
+  
 
 
 

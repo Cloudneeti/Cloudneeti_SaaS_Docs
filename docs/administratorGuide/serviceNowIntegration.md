@@ -64,7 +64,7 @@ License Admins will have the rights to managed configure integrations.
 5.  Select **Azure, Office365 or AWS**
 
 6.  Select items in **Available Categories** section and click (6) to allocate
-    High Priority or move them back to Available Categories
+    High Priority or move them back to Available Categories. [Reference for Cloudneeti priority to ServiceNow ticket Impact, Urgency and Priority](../../administratorGuide/serviceNowIntegration/#priority-mapping)
 
 7.  Select items in **Available Categories** section and click (7) to allocate
     Medium Priority or move them back to Available Categories
@@ -80,21 +80,34 @@ License Admins will have the rights to managed configure integrations.
 ### STEP 3: Verify tickets created
 Tickets are created for non-compliant resources after every successful scan.
 
-#### ServiceNow Incident Sample
+#### Sample ServiceNow Incident
 
-Sample ServiceNow Incidents List
+1. Login to ServiceNow instance and click on **Incidents** to see the list
 
 ![ServiceNow integration](.././images/administratorGuide/ServiceNow_IncidentList.png#thumbnail)
 
-Sample ServiceNow Incident
+2. Verify details for selected incident
 
 ![ServiceNow integration](.././images/administratorGuide/ServiceNow_Incident.png#thumbnail)
 
-Sample ServiceNow Problem
+#### Sample ServiceNow Problem
+
+1. Copy **Problem id** (2) related to Incident is available in **Releated Records** (1)
 
 ![ServiceNow integration](.././images/administratorGuide/ServiceNow_Incident_RelatedProblems.png#thumbnail)
 
-Sample ServiceNow Problem Task
+2. Search Problem id in Problem, within Problem all related Problem Tasks are listed
+
+![ServiceNow integration](.././images/administratorGuide/ServiceNowProblem.png#thumbnail)
+
+
+#### Sample ServiceNow Problem Task
+
+1. **Problem Task** has **Analysis** section
+
+![ServiceNow integration](.././images/administratorGuide/ServiceNow_ProblemTask_Analysis.png#thumbnail)
+
+2. Analysis section has Cloudneeti License, Account and failed policy details within **Workaround**
 
 ![ServiceNow integration](.././images/administratorGuide/ServiceNow_ProblemTask_LicenseDetails.png#thumbnail)
 
@@ -105,7 +118,9 @@ Sample ServiceNow Problem Task
 
 ### Priority mapping
 
-| **Cloudneeti Category Priority distribution** | **ServiceNow Ticket Impact** | **ServiceNow Ticket Urgency** | **ServiceNow Ticket Priority** |
+Cloudneeti Category Priority to ServiceNow Ticket Impact, Urgency and Priority. [ServiceNow priority lookup link](https://docs.servicenow.com/bundle/newyork-it-service-management/page/product/incident-management/task/def-prio-lookup-rules.html) 
+
+| **Cloudneeti Category Priority** | **ServiceNow Ticket Impact** | **ServiceNow Ticket Urgency** | **ServiceNow Ticket Priority** |
 |-----------------------------------------------|------------------------------|-------------------------------|--------------------------------|
 | High                                          | 2                            | 1                             | 2                              |
 | Medium                                        | 1                            | 3                             | 3                              |

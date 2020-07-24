@@ -1,6 +1,6 @@
 # Windows Server 2016 VM Baseline Hardening
 
- A collection of scripts that will help to harden operating system baseline configuration supported by Cloudneeti as defined in CIS Microsoft Windows Server 2012 benchmark v1.0.0. This remediates policies, compliance status can be validated for below [policies listed here.](../../osBaseline/win16QuickWins/#cis-benchmark-windows-server-2016-version-100)
+ A collection of scripts that will help to harden operating system baseline configuration supported by Cloudneeti as defined in CIS Microsoft Windows Server 2016 benchmark v1.0.0. This remediates policies, compliance status can be validated for below [policies listed here.](../../osBaseline/win16QuickWins/#cis-benchmark-windows-server-2016-version-100)
 
 Note: The scripts are designed to harden the operating system baseline configurations, Please test it on the test/staging system before applying to the production system.
 
@@ -81,8 +81,6 @@ Below steps are performed on Virtual Machine using RDP, as a system admninistrat
 ## Remediation policy list
 
 ### CIS Benchmark Windows Server 2016 Version 1.0.0
-
-Hardening scripts 
 
 | **Category Name**                                     | **Policy Title**                                                                                                                                                                             |
 |-------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
