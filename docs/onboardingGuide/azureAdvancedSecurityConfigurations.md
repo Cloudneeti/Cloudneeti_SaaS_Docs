@@ -229,7 +229,56 @@ time.
 
 Cloudneeti portal will show details for policies from next scan.
 
-## Advanced security configuration
+## Annexture
+
+### Azure - Upgrade Advanced Security Configuration 
+
+Upgrading existing Azure advance secuirty configuration to DataCollectorVersion 1.2 includes updating runbook inside automation account provisioned for Azure cloud account to get data for new security policies.
+
+Please refer [Release Notes](../../releaseNotes/2020/){target=_blank} for latest security policy addition.
+
+Login to Azure portal [https://portal.azure.com](https://portal.azure.com){target=_blank} as Subscription Contributor or Subscription Owner access.
+
+Switch to Azure AD with the Azure Subscription with pre-requisite access.
+
+1. Open **CloudShell**
+2. Click on **Cloudshell** icon on the navigation bar to open Cloudshell
+3. Choose PowerShell from shell drop down
+4. Select **storage**
+	![CloudShell](.././images/onboardingOffice365Subscription/CloudShell.png#thumbnail)
+5. Execute below command in Cloudshell to download the Cloudneeti data
+    collector update script.
+	<pre>
+	<code>```
+		wget https://raw.githubusercontent.com/Cloudneeti/docs_cloudneeti/master/scripts/Upgrade-AzureIAM-DataCollector.ps1 -O Upgrade-AzureIAM-DataCollector.ps1
+	```</code>
+	</pre>
+6. Switch to the User directory
+	<pre>
+	<code>```
+		cd $User
+	```</code>
+	</pre>
+7. Run update script with inline parameters
+	<pre>
+	<code>```
+		./Upgrade-AzureIAM-DataCollector.ps1 `
+            -ArtifactsName <Cloudneeti Azure IAM Data Collector Artifact Name> `
+            -DataCollectorVersion 1.2 `
+            -AzureSubscriptionId <Azure Subscription Id where Azure IAM Data datacollector resouces will be created> `
+            -DataCollectorName <Azure IAM Data Data Collector Name>
+	```</code>
+	</pre>
+**Note:** 
+**Enter name of existing data collector automation account**</br>
+**Contact Cloudneeti Team for ArtifactsName, DataCollectorVersion and ArtifactsAccessKey**
+
+8. The script will execute and prompt you for below details:</br>
+   Cloudneeti Azure IAM data collector artifacts storage access Key </br>
+
+9. This will update a runbook inside automation account
+
+### Advanced security configuration
 
 The advanced security policy data collector enables the following 18 policies as
 available in the Center for Internet Security (CIS) Azure benchmark

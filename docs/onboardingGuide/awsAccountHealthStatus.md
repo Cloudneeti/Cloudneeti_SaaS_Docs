@@ -14,7 +14,7 @@ License Admins and Account Admins will have the rights to view Cloud Account's o
 
     ![Onboarding Health Status](.././images/onboardingHealthCheck/AWS_1.png#thumbnail)
 
-3. Explore prerequisite sections to see staus of related permissions and/or configurations
+3. Explore prerequisite sections to see status of related permissions and/or configurations
 
     ![Onboarding Health Status](.././images/onboardingHealthCheck/AWS_2.png#thumbnail)
 

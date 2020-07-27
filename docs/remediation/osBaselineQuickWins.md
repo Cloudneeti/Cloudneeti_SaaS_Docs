@@ -1,6 +1,6 @@
 # OS Baseline Quick Wins
 
- A collection of quick wins scripts that will help to harden operating system baseline configuration supported by Cloudneeti as defined in CIS Microsoft Windows Server 2016 benchmark v1.0.0. This remediates below Monitoring [policies listed here.](../../remediation/osBaselineQuickWins/#cis-benchmark-windows-server-2016-version-100)
+ A collection of OS hardening scripts that will help to harden operating system baseline configuration supported by Cloudneeti as defined in CIS Microsoft Windows Server 2016 benchmark v1.0.0. This remediates below Monitoring [policies listed here.](../../remediation/osBaselineQuickWins/#cis-benchmark-windows-server-2016-version-100)
 
 Note: The scripts are designed to harden the operating system baseline configurations, Please test it on the test/staging system before applying to the production system.
 

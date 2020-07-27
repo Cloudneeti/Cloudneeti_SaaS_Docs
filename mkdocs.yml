@@ -46,13 +46,30 @@ nav:
   - Request a License: tryAndBuy/subscribe.md
   - Partner co-branding: tryAndBuy/partnerCobranding.md
   - Estimate Pricing: tryAndBuy/estimatePricing.md
+- Security Policies:
+  - Cloud Security Best Practices: gettingStarted/cloudSecurityBestPractices.md
+  - AWS Security Policies: securityPolicies/awsSecurityPolcies.md
+  - Azure Security Policies: securityPolicies/azureSecurityPolcies.md
+  - Office 365 Security Policies: securityPolicies/office365SecurityPolcies.md
+  - OS baselines:
+    - CentOS: securityPolicies/osBaseline/centOSSecurityPolcies.md
+    - RHEL: securityPolicies/osBaseline/rhelSecurityPolcies.md
+    - Ubuntu 18.04: securityPolicies/osBaseline/ubuntuSecurityPolcies.md
+    - Windows 2012 R2: securityPolicies/osBaseline/windows12SecurityPolcies.md
+    - Windows 2016: securityPolicies/osBaseline/windows16SecurityPolcies.md 
+    - Windows 2019: securityPolicies/osBaseline/windows19SecurityPolcies.md
+  - Kubernetes:
+    - AWS: securityPolicies/kubernetes/awsK8SSecurityPolcies.md
+    - Azure: securityPolicies/kubernetes/azureK8SSecurityPolcies.md
+- Compliance Benchmarks:
+  - Benchmarks: complianceBenchmarks/complianceBenchmarks.md
 - Onboarding Guide:
   - Overview: onboardingGuide/onboardingGuideOverview.md
   - Amazon Web Services: 
     - Onboarding steps: onboardingGuide/amazonWebServiceAccounts.md
-    - Enable AWS Config Based Data Collection(optional): onboardingGuide/awsEnableConfigBasedDataCollection.md
-    - OS baseline(optional): onboardingGuide/awsVMBaselineConfiguration.md
-    - Amazon Elastic Kubernetes Service (Amazon EKS)(optional): onboardingGuide/configureCloudneetiAgentInEKS.md
+    - Enable AWS Config Based Data Collection (optional): onboardingGuide/awsEnableConfigBasedDataCollection.md
+    - OS baseline and vulnerability (optional): onboardingGuide/awsVMBaselineConfiguration.md
+    - Amazon Elastic Kubernetes Service (Amazon EKS) (optional): onboardingGuide/configureCloudneetiAgentInEKS.md
     - AWS onboarding health status: onboardingGuide/awsAccountHealthStatus.md
   - Microsoft Azure:
     - Onboarding steps: onboardingGuide/azureSubscriptions.md
@@ -90,6 +107,9 @@ nav:
 - Administrator Guide:
   - Features and Quotas: administratorGuide/featuresAndQuotas.md
   - Integrations: administratorGuide/manageLicenses.md
+  - Incident management: 
+    - Service Now: administratorGuide/serviceNowIntegration.md
+    - Zendesk: administratorGuide/zendeskIntegration.md
   - ASC Push Integration: administratorGuide/azureASCPushIntegration.md
   - Cloud Accounts: administratorGuide/manageAccounts.md
   - Users & Roles: administratorGuide/manageUsers.md
@@ -103,19 +123,22 @@ nav:
   - Overview: remediation/overview.md
   - Azure:
     - Guided Remediation: remediation/azureGuidedRemediation.md
-    - Quick Wins: remediation/azureQuickWins.md
     - Auto Remediation: remediation/azureAutoRemediation.md
     - Decommission of remediation: remediation/azureDecommissionofRemediation.md
   - AWS:
     - Guided Remediation: remediation/awsGuidedRemediation.md
-    - Quick wins: remediation/awsQuickWins.md
     - Auto Remediation: remediation/awsRemediation.md
     - Decommission Remediation Framework: remediation/awsDecommissionofRemediation.md
+- Quick wins and OS baseline hardening scripts:
+  - Overview: remediation/overviewQuickWins.md
+  - AWS Quick wins: remediation/awsQuickWins.md
+  - Azure Quick Wins: remediation/azureQuickWins.md
   - OS Hardening for Baseline Configuration:
-    - Windows Server 2016: remediation/osBaseline/win16QuickWins.md
-    - Windows Server 2012 R2: remediation/osBaseline/win12QuickWins.md
     - CentOS Linux 7: remediation/osBaseline/centOSQuickWins.md
     - RHEL Linux 7: remediation/osBaseline/rhelQuickWins.md
+    - Windows Server 2012 R2: remediation/osBaseline/win12QuickWins.md
+    - Windows Server 2016: remediation/osBaseline/win16QuickWins.md
+    - Windows Server 2019: remediation/osBaseline/win19QuickWins.md
 - Release Notes:
   - Releases in 2020: releaseNotes/2020.md
   - Releases in 2019: releaseNotes/2019.md

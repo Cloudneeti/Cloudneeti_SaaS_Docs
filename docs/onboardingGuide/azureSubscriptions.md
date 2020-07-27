@@ -28,7 +28,7 @@ The following steps are required to onboard Microsoft Azure to the Cloudneeti ap
 
 7. [**Configure OS baseline and Vulnerability Assessment Solution (Optional)**](../../onboardingGuide/azureVulnerability/){target=_blank} inlcudes connecting VMs to OMS workspace. Also deploy partner Vulnerability Assessment Solution in Azure Security Center and installing the solution on multiple VMs allows to provide visibility into missing updates, misconfigured OS security settings, endpoint protection status, and health and threat protection.
 
-8. [**Configure Cloudneeti agent on AKS (Optional)**](../../onboardingGuide/configureCloudneetiAgentInAKS/){target=_blank} inlcudes Deploying Cloudneeti agent on Azure Kubernetes Service enables compliance monitoring of Kubernetes cluster.
+8. [**Configure Cloudneeti agent on AKS, AKS Engine and VM Based Kubernetes Clusters (Optional)**](../../onboardingGuide/configureCloudneetiAgentInAKS/){target=_blank} inlcudes Deploying Cloudneeti agent on Azure Kubernetes Service enables compliance monitoring of Kubernetes cluster.
 An Azure docker agent is deployed to collect data for additional security policies.
 
 9. [**Adding Azure subscription**](.././azureSubscriptions/#step-9-add-azure-subscription){target=_blank} includes adding Azure subscription information to the respective Cloud Account and waiting until the first data collection is complete.
@@ -42,7 +42,7 @@ An Azure docker agent is deployed to collect data for additional security polici
 | 5 | [Advanced Security configuration](../../onboardingGuide/azureAdvancedSecurityConfigurations/){target=_blank}            | Microsoft Azure| Subscription Owner, Global AD Reader          | optional  | 18            |
 | 6 | [Enable Azure Security Center audit policies](../../onboardingGuide/enableASCAuditPolicies/){target=_blank}                     | Microsoft Azure| Subscription Owner           | optional  | 115            |
 | 7 | [Configure OS baseline and Vulnerability Assessment Solution](../../onboardingGuide/azureVulnerability/){target=_blank}                   | Microsoft Azure     | Subscription Owner           | optional | 513            |
-| 8 | [Configure Cloudneeti agent on AKS](../../onboardingGuide/configureCloudneetiAgentInAKS/){target=_blank}                   | Microsoft Azure     | Subscription Owner           | optional | 73            |
+| 8 | [Configure Cloudneeti agent on AKS, AKS Engine and VM Based Kubernetes Clusters](../../onboardingGuide/configureCloudneetiAgentInAKS/){target=_blank}                   | Microsoft Azure     | Subscription Owner           | optional | 73            |
 | 9 | [Add Azure subscription](../../onboardingGuide/azureSubscriptions/#step-9-add-azure-subscription){target=_blank}                    | Cloudneeti     | License Admin           | mandatory | 0            |
 
 ### Required Roles
@@ -333,7 +333,7 @@ Deploy partner Vulnerability Assessment Solution in Azure Security Center and in
 Please follow [link](../../onboardingGuide/azureVulnerability/){target=_blank} for steps.
 
 
-## STEP 8: Configure Cloudneeti agent on AKS
+## STEP 8: Configure Cloudneeti agent on AKS, AKS Engine and VM based Kubernetes Clusters
 **This step is optional.** 
 
 Cloudneeti includes and extends Azure Security center recommendations for AKS by deploying a Cloudneeti agent to Azure Kubernetes Cluster. A docker container agent is deployed to collect data for additional security policies. Cloudneeti then provides out-of-box mappings for all 13+ compliance frameworks included in the product. 

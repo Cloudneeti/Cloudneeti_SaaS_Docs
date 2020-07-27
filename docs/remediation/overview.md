@@ -21,6 +21,18 @@ remediation for resources in 3 different ways to remediate the non-compliant re
 
   [AWS](../awsQuickWins/){target=_blank}
 
+## OS Hardening for Baseline Configuration
+ 
+  A collection of OS hardening scripts that will help to harden operating system baseline configuration supported by Cloudneeti.
+
+  [Windows Server 2016](../../remediation/osBaseline/win16QuickWins/){target=_blank}
+
+  [Windows Server 2012 R2](../../remediation/osBaseline/win12QuickWins/){target=_blank}
+
+  [CentOS Linux 7](../../remediation/osBaseline/centOSQuickWins/){target=_blank}
+
+  [Red Hat Enterprise Linux 7](../../remediation/osBaseline/rhelQuickWins/){target=_blank}
+
 ## Manually Triggered Remediation 
 
  Admin manually triggers the remediation in Cloudneeti portal which internally makes use of remediation framework. This approach is used for remediating the existing non-compliant resources. 
