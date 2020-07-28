@@ -49,165 +49,104 @@ Sample Report
         {
         "result": [
             {
-                "name": "CIS Foundations Benchmark1.0.0",
-                "title": null,
-                "category": null,
-                "dummyImageUrl": null,
-                "longName": null,
+                "name": "CIS Azure Foundations Benchmark1.0.0",
                 "benchmarkId": "AZFDCIS1_0_0"
             },
             {
-                "name": "CIS Foundations Benchmark1.1.0",
-                "title": null,
-                "category": null,
-                "dummyImageUrl": null,
-                "longName": null,
+                "name": "CIS Azure Foundations Benchmark1.1.0",
                 "benchmarkId": "AZFDCIS1_1_0"
             },
             {
-                "name": "CIS Microsoft Windows Server 2012 R2 Benchmark1.0.0",
-                "title": null,
-                "category": null,
-                "dummyImageUrl": null,
-                "longName": null,
-                "benchmarkId": "AZMSWIN12R2CIS1_0_0"
-            },
-            {
-                "name": "CIS Microsoft Windows Server 2016 Benchmark1.0.0",
-                "title": null,
-                "category": null,
-                "dummyImageUrl": null,
-                "longName": null,
-                "benchmarkId": "AZMSWIN16CIS1_0_0"
-            },
-            {
                 "name": "PCI_DSS_3.2",
-                "title": null,
-                "category": null,
-                "dummyImageUrl": null,
-                "longName": null,
                 "benchmarkId": "PCI3_2"
             },
             {
                 "name": "General Data Protection Regulation",
-                "title": null,
-                "category": null,
-                "dummyImageUrl": null,
-                "longName": null,
                 "benchmarkId": "GDPR2016_679"
             },
             {
                 "name": "HIPAA Safeguards",
-                "title": null,
-                "category": null,
-                "dummyImageUrl": null,
-                "longName": null,
                 "benchmarkId": "HIPAA"
             },
             {
                 "name": "FFIEC",
-                "title": null,
-                "category": null,
-                "dummyImageUrl": null,
-                "longName": null,
                 "benchmarkId": "FFIEC"
             },
             {
                 "name": "NIST Cybersecurity Framework1.1",
-                "title": null,
-                "category": null,
-                "dummyImageUrl": null,
-                "longName": null,
                 "benchmarkId": "NISTCSF1_1"
             },
             {
                 "name": "NIST SP 800-53 Rev. 4",
-                "title": null,
-                "category": null,
-                "dummyImageUrl": null,
-                "longName": null,
                 "benchmarkId": "NIST800_53Rev4"
             },
             {
                 "name": "CSA CCM V.3.0.1",
-                "title": null,
-                "category": null,
-                "dummyImageUrl": null,
-                "longName": null,
                 "benchmarkId": "CSACCM3_0_1"
             },
             {
                 "name": "ISO-IEC 27001-2013",
-                "title": null,
-                "category": null,
-                "dummyImageUrl": null,
-                "longName": null,
                 "benchmarkId": "ISO27001_2013"
             },
             {
                 "name": "Cloud Security Best Practices",
-                "title": null,
-                "category": null,
-                "dummyImageUrl": null,
-                "longName": null,
                 "benchmarkId": "CSBP"
             },
             {
                 "name": "UK NCSC",
-                "title": null,
-                "category": null,
-                "dummyImageUrl": null,
-                "longName": null,
                 "benchmarkId": "UKNCSC"
             },
             {
                 "name": "Reserve Bank of India",
-                "title": null,
-                "category": null,
-                "dummyImageUrl": null,
-                "longName": null,
                 "benchmarkId": "RBI2015_16_418"
             },
             {
                 "name": "SOC2 - AICPA TSC 2017",
-                "title": null,
-                "category": null,
-                "dummyImageUrl": null,
-                "longName": null,
                 "benchmarkId": "SOC2_AICPA_TSC_2017"
             },
             {
                 "name": "GxP Life Science 21 CFR PART 11",
-                "title": null,
-                "category": null,
-                "dummyImageUrl": null,
-                "longName": null,
                 "benchmarkId": "GxP_Life_Science_21_CFR_PART_11"
             },
             {
-                "name": "CIS Ubuntu Linux 18.04 LTS Benchmark v1.0.0",
-                "title": null,
-                "category": null,
-                "dummyImageUrl": null,
-                "longName": null,
+                "name": "U-NNPI",
+                "benchmarkId": "U_NNPI"
+            },
+            {
+                "name": "CIS Azure Microsoft Windows Server 2012 R2 Benchmark1.0.0",
+                "benchmarkId": "AZMSWIN12R2CIS1_0_0"
+            },
+            {
+                "name": "CIS Azure Microsoft Windows Server 2016 Benchmark1.0.0",
+                "benchmarkId": "AZMSWIN16CIS1_0_0"
+            },
+            {
+                "name": "CIS Azure Ubuntu Linux 18.04 LTS Benchmark v1.0.0",
                 "benchmarkId": "AZLinux18CIS1_1_0"
             },
             {
-                "name": "CIS CentOS Linux 7 Benchmark v2.2.0",
-                "title": null,
-                "category": null,
-                "dummyImageUrl": null,
-                "longName": null,
+                "name": "CIS Azure CentOS Linux 7 Benchmark v2.2.0",
                 "benchmarkId": "AZCentOSCIS2_2_0"
             },
             {
-                "name": "CIS Kubernetes Benchmark_v1.5.0",
-                "title": null,
-                "category": null,
-                "dummyImageUrl": null,
-                "longName": null,
+                "name": "CIS Azure Microsoft Windows Server 2019 RTM Release 1809 Benchmark v1.1.0",
+                "benchmarkId": "AZMSWIN19CIS1_0_0"
+            },
+            {
+                "name": "CIS Azure Kubernetes Benchmark_v1.5.1",
                 "benchmarkId": "AZKUBERNETES1_5_0"
-                }
+            },
+            {
+                "name": "CIS Azure AKS Engine Kubernetes Benchmark_v1.5.1",
+                "benchmarkId": "AZAKSEngineKUBERNETES1_5_0"
+            },
+            {
+                "name": "CIS Azure AKS Kubernetes Benchmark_v1.5.1",
+                "benchmarkId": "AZAKSKUBERNETES1_5_0"
+            },
+            {
+                "name": "Test PB-3.01",
+                "benchmarkId": "69c99ba4-79aa-4557-a6a0-002aee0b9320"
             }
         ],
         "statusCode": 200,
