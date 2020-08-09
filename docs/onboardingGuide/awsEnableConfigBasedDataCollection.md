@@ -57,27 +57,29 @@ If config is already setup, verify and configure below on the config setting pag
 
 ###  2.1.2 Create config Aggregator
 
-Select a primary region to set up the Aggregator. 
+Select a primary region to set up the Aggregator.
 
-1. Navigate to the config dashboard in that region
+1. Navigate to the config dashboard in primary region
 
-2. In the left navigation pane, click on **Aggregators** 
+2. In the left navigation pane, click on **Aggregators** (1) and 
 
-3. Click **Add Aggregator**
+3. Click **Add Aggregator** (2)
 
     ![AWS Config](../../images/awsConfig/aggregator.JPG#thumbnail)
 
-4. Select the check box to enable aggregation
+4. Select the check box to **Allow data replication** (1)
 
-6. Enter a suitable aggregator name
+6. Enter a suitable **Aggregator name** (2)
 
-7. Add self-account id in the Add individual accounts setting 
+7. Select **Add individual account IDs** (3) and add self-account id
 
-8. Select all as well as include future regions
+    ![AWS Config](../../images/awsConfig/aggregator_setup.jpg#thumbnail)
 
-9. Click **Save**
+8. In **Regions**, select all regions (1) as well as **Include future AWS regions** (2)
 
-    ![AWS Config](../../images/awsConfig/aggregator_setup.JPG#thumbnail)
+9. Click **Save** (3)
+
+    ![AWS Config](../../images/awsConfig/aggregator_setup1.png#thumbnail)
 
 
 ##  2.1 Provision resources for config based data collection (Automated)
