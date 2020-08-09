@@ -10,13 +10,15 @@ AWS Data collection and processing mechanisms to use AWS config to support massi
 
 ##  2.1 Provision resources for config based data collection (Manual)
 
+### 2.1.1 Config set-up
+
+Set-up config in primary region and all other required regions using below steps.
+
 Login to AWS portal with AWS Administrator role.
 
 1. Under **Service**, select **Config**
 
-### **First time configuration**
-
-Please repeat below steps for all regions.
+#### **First time configuration**
 
 2. Click, **Get Started** 
 
@@ -34,21 +36,49 @@ Please repeat below steps for all regions.
 
     ![AWS Config](../../images/awsConfig/config_setup.JPG#thumbnail)
 
-6. **Step 2 : Rules** can be skipped 
+7. **Step 2 : Rules** can be skipped 
 
-7. Review details and click **Confirm** 
+8. Review details and click **Confirm** 
 
     ![AWS Config](../../images/awsConfig/config_create_reviewscreen.JPG#thumbnail)
 
-### **Config is already setup**
+9. Please repeat above steps for rest all regions keeping **Include global resources (e.g., AWS IAM resources)** unchecked in step 3.
+
+#### **Config is already setup**
 
 If config is already setup, verify and configure below on the config setting page, repeat below steps for all regions.
 
  1. All resources checkbox is checked in all the regions 
  
- 2. Include global resources should be checked in any primary region where the aggregator is planned to be created.
+ 2. Include global resources should be checked in any one region (primary region) where the aggregator is planned to be created.
 
     ![AWS Config](../../images/awsConfig/config_setup.JPG#thumbnail)
+
+
+###  2.1.2 Create config Aggregator
+
+Select a primary region to set up the Aggregator. 
+
+1. Navigate to the config dashboard in that region
+
+2. In the left navigation pane, click on **Aggregators** 
+
+3. Click **Add Aggregator**
+
+    ![AWS Config](../../images/awsConfig/aggregator.JPG#thumbnail)
+
+4. Select the check box to enable aggregation
+
+6. Enter a suitable aggregator name
+
+7. Add self-account id in the Add individual accounts setting 
+
+8. Select all as well as include future regions
+
+9. Click **Save**
+
+    ![AWS Config](../../images/awsConfig/aggregator_setup.JPG#thumbnail)
+
 
 ##  2.1 Provision resources for config based data collection (Automated)
 
