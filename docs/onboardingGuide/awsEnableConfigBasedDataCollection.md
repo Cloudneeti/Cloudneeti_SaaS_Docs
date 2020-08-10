@@ -20,9 +20,9 @@ Login to AWS portal with AWS Administrator role.
 
 #### **First time configuration**
 
-2. Click, **Get Started** 
+2. Click **Get Started** 
 
-    ![AWS Config](../../images/awsConfig/getting_started.jpg#thumbnail)
+    ![AWS Config](.././images/awsConfig/getting_started.jpg#thumbnail)
 
 3. Select the **Record all resources supported in this region** and **Include global resources (e.g., AWS IAM resources)**
 
@@ -34,13 +34,13 @@ Login to AWS portal with AWS Administrator role.
 
 6. Click Next
 
-    ![AWS Config](../../images/awsConfig/config_setup.JPG#thumbnail)
+    ![AWS Config](.././images/awsConfig/config_setup.jpg#thumbnail)
 
 7. **Step 2 : Rules** can be skipped 
 
 8. Review details and click **Confirm** 
 
-    ![AWS Config](../../images/awsConfig/config_create_reviewscreen.JPG#thumbnail)
+    ![AWS Config](.././images/awsConfig/config_create_reviewscreen.jpg#thumbnail)
 
 9. Please repeat above steps for rest all regions keeping **Include global resources (e.g., AWS IAM resources)** unchecked in step 3.
 
@@ -52,7 +52,7 @@ If config is already setup, verify and configure below on the config setting pag
  
  2. Include global resources should be checked in any one region (primary region) where the aggregator is planned to be created.
 
-    ![AWS Config](../../images/awsConfig/config_setup.JPG#thumbnail)
+    ![AWS Config](.././images/awsConfig/config_setup.jpg#thumbnail)
 
 
 ###  2.1.2 Create config Aggregator
@@ -65,7 +65,7 @@ Select a primary region to set up the Aggregator.
 
 3. Click **Add Aggregator** (2)
 
-    ![AWS Config](../../images/awsConfig/aggregator.JPG#thumbnail)
+    ![AWS Config](.././images/awsConfig/aggregator.jpg#thumbnail)
 
 4. Select the check box to **Allow data replication** (1)
 
@@ -73,13 +73,13 @@ Select a primary region to set up the Aggregator.
 
 7. Select **Add individual account IDs** (3) and add self-account id
 
-    ![AWS Config](../../images/awsConfig/aggregator_setup.jpg#thumbnail)
+    ![AWS Config](.././images/awsConfig/aggregator_setup.jpg#thumbnail)
 
 8. In **Regions**, select all regions (1) as well as **Include future AWS regions** (2)
 
 9. Click **Save** (3)
 
-    ![AWS Config](../../images/awsConfig/aggregator_setup1.png#thumbnail)
+    ![AWS Config](.././images/awsConfig/aggregator_setup1.png#thumbnail)
 
 
 ##  2.1 Provision resources for config based data collection (Automated)
