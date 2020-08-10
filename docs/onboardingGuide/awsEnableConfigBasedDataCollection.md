@@ -8,6 +8,83 @@ Involves enabling AWS Config and setting up Aggregator. This enables you to asse
 AWS Data collection and processing mechanisms to use AWS config to support massive scale requirements for the following AWS services [listed here](../../onboardingGuide/awsEnableConfigBasedDataCollection/#services-supported-by-aws-config-enabled-data-collection)
 
 
+##  2.1 Provision resources for config based data collection (Manual)
+
+### 2.1.1 Config set-up
+
+Set-up config in primary region and all other required regions using below steps.
+
+Login to AWS portal with AWS Administrator role.
+
+1. Under **Service**, select **Config**
+
+#### **First time configuration**
+
+2. Click, **Get Started** 
+
+    ![AWS Config](../../images/awsConfig/getting_started.jpg#thumbnail)
+
+3. Select the **Record all resources supported in this region** and **Include global resources (e.g., AWS IAM resources)**
+
+4. Create/select **Amazon S3 bucket** to store config log 
+
+5. Choose an existing service role for **AWS Config role**
+
+    **Note** If you are using an already existing bucket, making sure you provide required permissions to the config for the bucket access, using bucket policies
+
+6. Click Next
+
+    ![AWS Config](../../images/awsConfig/config_setup.JPG#thumbnail)
+
+7. **Step 2 : Rules** can be skipped 
+
+8. Review details and click **Confirm** 
+
+    ![AWS Config](../../images/awsConfig/config_create_reviewscreen.JPG#thumbnail)
+
+9. Please repeat above steps for rest all regions keeping **Include global resources (e.g., AWS IAM resources)** unchecked in step 3.
+
+#### **Config is already setup**
+
+If config is already setup, verify and configure below on the config setting page, repeat below steps for all regions.
+
+ 1. All resources checkbox is checked in all the regions 
+ 
+ 2. Include global resources should be checked in any one region (primary region) where the aggregator is planned to be created.
+
+    ![AWS Config](../../images/awsConfig/config_setup.JPG#thumbnail)
+
+
+###  2.1.2 Create config Aggregator
+
+Select a primary region to set up the Aggregator.
+
+1. Navigate to the config dashboard in primary region
+
+2. In the left navigation pane, click on **Aggregators** (1) and 
+
+3. Click **Add Aggregator** (2)
+
+    ![AWS Config](../../images/awsConfig/aggregator.JPG#thumbnail)
+
+4. Select the check box to **Allow data replication** (1)
+
+6. Enter a suitable **Aggregator name** (2)
+
+7. Select **Add individual account IDs** (3) and add self-account id
+
+    ![AWS Config](../../images/awsConfig/aggregator_setup.jpg#thumbnail)
+
+8. In **Regions**, select all regions (1) as well as **Include future AWS regions** (2)
+
+9. Click **Save** (3)
+
+    ![AWS Config](../../images/awsConfig/aggregator_setup1.png#thumbnail)
+
+
+##  2.1 Provision resources for config based data collection (Automated)
+
+
 #### Workstation readiness
 
 | Activity                                                                      | Description                                              |
@@ -16,10 +93,6 @@ AWS Data collection and processing mechanisms to use AWS config to support massi
 |**Workstation:** download config deployment scripts | Download files for deployment of config and related resources for config based data collection from git [link](https://github.com/Cloudneeti/docs_cloudneeti/tree/master/scripts/aws-config-onboarding){target=_blank}   |
 | **Workstation:** Install serverless npm module      | Serverless Framework is a CLI tool to manage AWS deployments. Execute below command to install serverless module, \# npm install –g serverless                                              |
 | **Workstation:** Install JQ for bash terminal     | Download latest stable version of JQ from [here](https://stedolan.github.io/jq/){target=_blank} and install on the workstation                                              |
-
-
-
-##  2.1 Provision resources for config based data collection 
 
 ### Note
 - This script will delete any default config recorders and delivery channels present in entered regions of the AWS Account. 
