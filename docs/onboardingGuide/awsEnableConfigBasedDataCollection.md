@@ -99,7 +99,7 @@ Select a primary region to set up the Aggregator.
 ### Note
 - This script will existing setup will be modified in entered regions of the AWS Account. 
 
-- Cloudneeti recommends following [AWS Config best practices](https://aws.amazon.com/blogs/mt/aws-config-best-practices/){target=_blank}.
+- Cloudneeti recommends following [AWS Config best practices](https://aws.amazon.com/blogs/mt/aws-config-best-practices/){target=_blank}
 
 - AWS Config aggregation data is subject to delay. For details, please follow [link](https://docs.aws.amazon.com/config/latest/developerguide/viewing-the-aggregate-dashboard.html){target=_blank}
 
