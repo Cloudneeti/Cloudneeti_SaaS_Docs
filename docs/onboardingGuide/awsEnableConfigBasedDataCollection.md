@@ -24,25 +24,27 @@ Login to AWS portal with AWS Administrator role.
 
     ![AWS Config](.././images/awsConfig/getting_started.jpg#thumbnail)
 
-3. Select the **Record all resources supported in this region** and **Include global resources (e.g., AWS IAM resources)**
+3. Select **Record all resources supported in this region** 
 
-4. Create/select **Amazon S3 bucket** to store config log 
+4. Include global resources should be checked in any one region (primary region) where the aggregator is planned to be created. 
 
-5. Choose an existing service role for **AWS Config role**
+5. Create/select **Amazon S3 bucket** to store config log 
+
+6. Choose an existing service role for **AWS Config role**
 
     **Note** If you are using an already existing bucket, making sure you provide required permissions to the config for the bucket access, using bucket policies
 
-6. Click Next
+7. Click Next
 
     ![AWS Config](.././images/awsConfig/config_setup.jpg#thumbnail)
 
-7. **Step 2 : Rules** can be skipped 
+8. **Step 2 : Rules** can be skipped 
 
-8. Review details and click **Confirm** 
+9. Review details and click **Confirm** 
 
     ![AWS Config](.././images/awsConfig/config_create_reviewscreen.jpg#thumbnail)
 
-9. Please repeat above steps for rest all regions keeping **Include global resources (e.g., AWS IAM resources)** unchecked in step 3.
+10. Please repeat above steps for rest all regions keeping **Include global resources (e.g., AWS IAM resources)** unchecked in step 3.
 
 #### **Config is already setup**
 
@@ -95,9 +97,9 @@ Select a primary region to set up the Aggregator.
 | **Workstation:** Install JQ for bash terminal     | Download latest stable version of JQ from [here](https://stedolan.github.io/jq/){target=_blank} and install on the workstation                                              |
 
 ### Note
-- This script will delete any default config recorders and delivery channels present in entered regions of the AWS Account. 
+- This script will existing setup will be modified in entered regions of the AWS Account. 
 
-- Cloudneeti recommends following [AWS Config best practices](https://aws.amazon.com/blogs/mt/aws-config-best-practices/){target=_blank}.
+- Cloudneeti recommends following [AWS Config best practices](https://aws.amazon.com/blogs/mt/aws-config-best-practices/){target=_blank}
 
 - AWS Config aggregation data is subject to delay. For details, please follow [link](https://docs.aws.amazon.com/config/latest/developerguide/viewing-the-aggregate-dashboard.html){target=_blank}
 
