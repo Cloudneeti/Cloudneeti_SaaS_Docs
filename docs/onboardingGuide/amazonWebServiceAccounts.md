@@ -10,10 +10,11 @@ The following steps are required to onboard AWS to the Cloudneeti application.
 |----|------------------------------------------|--------------------------------|--------------------|----------|
 | 1  | Create an AWS role for Cloudneeti        | AWS        | AWS Administrator      |  mandatory |
 | 2  | Enable AWS Config Based Data Collection  | AWS        | AWS Administrator      |  optional  |
-| 3  | AWS inspector OS Baseline and Vulnerability Configurations (Optional)              | AWS        | AWS Administrator      |  optional  |
-| 4  | Configure Cloudneeti agent on EKS and EC2-instance based Kubernetes       | AWS        | AWS Administrator      |  optional  |
-| 5  | Add AWS Account                          | Cloudneeti | License Admin          |  mandatory |
-| 6  | Verify cloud account health status       | Cloudneeti | License Admin          |  optional |
+| 3  | AWS inspector OS Baseline Configurations (Optional)                | AWS        | AWS Administrator      |  optional  |
+| 4  | AWS inspector Vulnerability Configurations (Optional)              | AWS        | AWS Administrator      |  optional  |
+| 5  | Configure Cloudneeti agent on EKS and EC2-instance based Kubernetes       | AWS        | AWS Administrator      |  optional  |
+| 6  | Add AWS Account                          | Cloudneeti | License Admin          |  mandatory |
+| 7  | Verify cloud account health status       | Cloudneeti | License Admin          |  optional |
 
 **1. Creating an AWS role for Cloudneeti** includes registering a new AWS role for the Cloudneeti application and granting the required access permissions.
 
@@ -24,13 +25,16 @@ Enabling AWS Inspector for a host assessment allows various OS baselines as defi
 
 **Vulnerability Configurations** to add additional package help Cloudneeti to collect common vulnerabilities and exposures (CVEs) and associate them to each of the cloud assets.
 
+**4. AWS inspector Vulnerability Configurations (Optional)** includes installing AWS Inspector Agent to assess your assessment target EC2 instances. Amazon Inspector is a security assessment service for your Amazon EC2 instances and the applications running on those instances.
+Enabling AWS Inspector for a host assessment allows Cloudneeti to collect common vulnerabilities and exposures (CVEs) and associate them to each of the cloud assets.
 
-**4. Configure Cloudneeti agent on EKS and EC2-instance based Kubernetes (optional)** inlcudes Deploying Cloudneeti agent on Amazon Elastic Kubernetes Service (Amazon EKS) enables compliance monitoring of Kubernetes cluster. A docker agent is deployed to collect data for additional security policies. Cloudneeti then provides out-of-box mappings for all 13+ compliance frameworks included in the product.
+
+**5. Configure Cloudneeti agent on EKS and EC2-instance based Kubernetes (optional)** inlcudes Deploying Cloudneeti agent on Amazon Elastic Kubernetes Service (Amazon EKS) enables compliance monitoring of Kubernetes cluster. A docker agent is deployed to collect data for additional security policies. Cloudneeti then provides out-of-box mappings for all 13+ compliance frameworks included in the product.
 
 
-**5. Add AWS Account** to the Cloudneeti application includes adding AWS account information to the respective Cloudneeti cloud account and waiting until the first data collection is complete.
+**6. Add AWS Account** to the Cloudneeti application includes adding AWS account information to the respective Cloudneeti cloud account and waiting until the first data collection is complete.
 
-**6. Verify cloud account health status** for prerequisite permissions and configurations can be verified post every scan.
+**7. Verify cloud account health status** for prerequisite permissions and configurations can be verified post every scan.
 
 ### Required Roles
 One or more people with the following roles are required to complete Amazon Web Service Account onboarding process.
