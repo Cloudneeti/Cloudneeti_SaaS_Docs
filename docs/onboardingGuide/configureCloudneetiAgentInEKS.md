@@ -13,10 +13,10 @@ Prerequisites
 
 | **Activity**                                                                                                               | **Description**                                                              |
 |----------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1. **Workstation:** Install AWS Command Line Interface                           | To install AWS cli follow [link](https://docs.aws.amazon.com/cli/latest/userguide/install-windows.html) **AWS Command Line** Interface (CLI) is a unified tool to manage your AWS services.             |                                                      |
-| 2. **Workstation:** Install and set up kubectl to execute PowerShell commands within Cloudneeti Agent configuration script | Please follow [link](https://kubernetes.io/docs/tasks/tools/install-kubectl/){target=_blank} to install and set up **kubectl** <br>``choco install kubernetes-cli``<br>      |                                                     
-| 3. **Workstation:** Install and set up Helm 3.0 and higher to execute helm chart deployment commands | Please follow [link](https://helm.sh/docs/intro/install/){target=_blank} to install and set up Helm or install Helm using below commands <br> **Windows** <br>``choco install kubernetes-helm`` <br> **Unix** <br>``sudo apt-get install helm``  |
-| 4. **Workstation:** Add Cloudneeti Helm repo | Add Cloudneeti Helm repo and verify using below commands, more details [here](../../onboardingGuide/configureCloudneetiAgentInAKS/#setup-cloudneeti-helm-repo) <br> **1 Add Cloudneeti Helm repo** <br>``helm repo add cloudneeti https://charts.cloudneeti.com`` <br> **2 Verify Helm repo addition** <br>``helm repo list`` <br> **3 List available Cloudneeti helm charts** <br> ``helm search repo cloudneeti -–versions``  |
+| 1. **Workstation:** Install AWS Command Line Interface                           | To install AWS cli follow [link](https://docs.aws.amazon.com/cli/latest/userguide/install-windows.html) **AWS Command Line** Interface (CLI) is a unified tool to manage your AWS services.             |                                                      |
+| 2. **Workstation:** Install and set up kubectl to execute PowerShell commands within Cloudneeti Agent configuration script | Please follow [link](https://kubernetes.io/docs/tasks/tools/install-kubectl/){target=_blank} to install and set up **kubectl** <br>``choco install kubernetes-cli``<br>      |                                                     
+| 3. **Workstation:** Install and set up Helm 3.0 and higher to execute helm chart deployment commands | Please follow [link](https://helm.sh/docs/intro/install/){target=_blank} to install and set up Helm or install Helm using below commands <br> **Windows** <br>``choco install kubernetes-helm`` <br> **Unix** <br>``sudo apt-get install helm``  |
+| 4. **Workstation:** Add Cloudneeti Helm repo | Add Cloudneeti Helm repo and verify using below commands, more details [here](../../onboardingGuide/configureCloudneetiAgentInEKS/#setup-cloudneeti-helm-repo) <br> **1 Add Cloudneeti Helm repo** <br>``helm repo add cloudneeti https://charts.cloudneeti.com`` <br> **2 Verify Helm repo addition** <br>``helm repo list`` <br> **3 List available Cloudneeti helm charts** <br> ``helm search repo cloudneeti -–versions``  |
 
 4.1: Associate Kubernetes cluster with Cloud account in Cloudneeti
 ---------------------------------------------------------------------
@@ -62,22 +62,24 @@ Sample JSON file
 | Cluster Name                                               | Cloudneeti (JSON file generated in step  4.1)      | License Admin |
 | Cloudneeti Environment                                     | Cloudneeti (JSON file generated in step  4.1)      | License Admin |
 | Cluster Hosting                                            | Cloudneeti (JSON file generated in step  4.1)      | License Admin |
-| **Cloudneeti API key**                                     | Cloudneeti                 | License Admin |
-| CloudneetiApiAppId                                         | Cloudneeti ()                | License Admin |
-| **CloudneetiAPIAppSecret**                                 | Cloudneeti                 | License Admin |
+| **Cloudneeti API key**                                     | [Cloudneeti](../../onboardingGuide/configureCloudneetiAgentInEKS/#cloudneeti-api-key)                | License Admin |
+| **CloudneetiApiAppId**                                     | [Cloudneeti](../../onboardingGuide/configureCloudneetiAgentInEKS/#cloudneetiapiappid-and-cloudneetiapiappsecret)                   | License Admin |
+| **CloudneetiAPIAppSecret**                                 | [Cloudneeti](../../onboardingGuide/configureCloudneetiAgentInEKS/#cloudneetiapiappid-and-cloudneetiapiappsecret)                 | License Admin |
 |                                                            |                            |               |
 
 
 **Notes:**
 
-Set Cloudneeti API key and APIAPPSecret to base64 format : Please
-follow [steps](https://docs.cloudneeti.com/onboardingGuide/configureCloudneetiAgentInEKS/#set-api-key-in-base64) to
+####  **Cloudneeti API key** 
+
+Set Cloudneeti API key and APIAPPSecret to base64 format : Please follow [steps](https://docs.cloudneeti.com/onboardingGuide/configureCloudneetiAgentInEKS/#set-api-key-in-base64) to
 generate the key and set the key in base64 format.
 
+
+####  **CloudneetiApiAppId** and **CloudneetiAPIAppSecret** 
+
 Generate API app secret : Please
-follow [steps](https://docs.cloudneeti.com/administratorGuide/configureCloudneetiAPIAccess/#step-1-create-cloudneeti-api-application) to
-configure API access for API **Account.InsertKubernetesClusterData** and
-generate API access secret.
+follow [steps](https://docs.cloudneeti.com/administratorGuide/configureCloudneetiAPIAccess/#step-1-create-cloudneeti-api-application) to configure API access for API **Account.InsertKubernetesClusterData** and generate API access secret.
 
 4.3: Deploy Cloudneeti agent
 -------------------------------
@@ -102,7 +104,7 @@ Access Kubernetes cluster with root account
         --set cloudneetiApiAppId=<api-app-id> `
         --set cloudneetiAPIKey=<cloudneeti-apimgmt-key> `
         --set cloudneetiAPIAppSecret=<api-app-secret> `
-        --set clusterHosting=”AKS”
+        --set clusterHosting=”EKS”
 
 
 ### EC2-instance based
@@ -182,6 +184,28 @@ Login to Cloudneeti portal with **License Admin** role
 
 
 ## Appendix
+
+### Setup Cloudneeti helm repo
+
+1. Add Cloudneeti Helm repo 
+
+        helm repo add cloudneeti https://charts.cloudneeti.com
+
+    ![Helm Setup - Kubernetes](.././images/kubernetes/helm_1.png#thumbnail)
+
+2. Verify Helm repo addition
+
+        helm repo list
+
+    ![Helm Setup - Kubernetes](.././images/kubernetes/helm_2.png#thumbnail)
+
+
+3. List available Cloudneeti helm charts
+
+        helm search repo cloudneeti -–versions
+
+    ![Helm Setup - Kubernetes](.././images/kubernetes/helm_3.png#thumbnail)
+
 
 ### Upgrade Cloudneeti Agent
 
@@ -300,4 +324,3 @@ Below commands can be used to set API key in base64
         $Bytes = [System.Text.Encoding]::Unicode.GetBytes($PlainTextKey)
         $EncodedKey =[Convert]::ToBase64String($Bytes)
         $EncodedKey
-
