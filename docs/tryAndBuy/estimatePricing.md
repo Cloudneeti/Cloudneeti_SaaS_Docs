@@ -48,7 +48,9 @@ Login to [Azure portal](https://portal.azure.com){target=_blank} as Subscription
 
        .\Get-AzureResourceCount.ps1 -SubscriptionId <subscriptionId>
 
-4.	Output will have protected workloads counts and all resource categories listed along with resource count.
+       ![Azure Resources](.././images/azureMarketplace/Azure_Resource_Count_Script.png#thumbnail)
+
+5.	Output will have protected workloads counts and all resource categories listed along with resource count.
 
     ![Azure Resources](.././images/azureMarketplace/Azure_Resource_Count_Auot.png#thumbnail)
 
@@ -81,6 +83,8 @@ an AWS account.
 1. Run below command to get the count
 
         python .\count_aws_resources.py --accessKey <aws_access_key> --secretKey <aws_secret_key>
+
+    ![AWS Resources](.././images/azureMarketplace/AWS_Resource_Count_Script.png#thumbnail)
 
 2. Output will have protected workloads and all services listed along with resource count for the given AWS account.
 
