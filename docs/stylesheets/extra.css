@@ -245,6 +245,7 @@ table thead th {
 
 .md-sidebar--secondary {
     margin-left: 99%;
+    background: #f1f3f4;
 }
 
 .md-main__inner{padding-top: 0rem !important}
@@ -274,15 +275,17 @@ table thead th {
   .md-footer-nav__link{padding-top: .4rem !important}
   .md-footer-nav__inner{padding: .2rem !important}
 
-  [data-md-color-primary=cloudneeti] .md-header, [data-md-color-primary=cloudneeti] .md-hero {
-    background-color: #2f353a;
-    color:#FF8C00;
+[data-md-color-primary=cloudneeti] .md-header, [data-md-color-primary=cloudneeti] .md-hero {
+    background-color: #fff;
+    color:#3b76be;
 }
 
 .md-typeset {
     font-size: 16px;
     line-height: 28px;
 }
+.md-search__input{background-color: #fff; border: 1px solid #827d7d;}
+.md-search__input::placeholder{color: #5a5959;}
 .md-clipboard{position: relative;top: 0rem;right: 1.3rem;}
 .md-clipboard:before {color: rgb(47, 51, 58);}
 .md-clipboard::after {content: "copy";}
@@ -298,7 +301,7 @@ table thead th {
     .tiles_section {margin-top: 6%;}
 }
 @media only screen and (min-width : 1600px){
-    .md-sidebar--primary  {background: #f1f3f4;}
+    .md-sidebar--primary  {background: #fff;}
 }
 @media only screen and (max-width: 76.1875em){
     .md-sidebar--primary { height: 100% !important;width: 12.1rem;}
@@ -310,22 +313,30 @@ table thead th {
 .md-typeset h1{ margin: 0.5rem 0 .8rem;color:#44546A; font-weight: 700}
 .md-typeset h2{margin: 0.5rem 0 .8rem;color:#080808;font-weight: 700}
 .md-typeset h3 {margin: 0.5rem 0 .8rem;color:#080808;font-weight: 700}
-.md-sidebar--primary  {background: #f1f3f4;}
-.md-header{ background: url('../images/header-bg.png') !important;}
+.md-sidebar--primary  {background: #fff;}
+/* .md-header{ background: url('../images/header-bg.png') !important;} */
 .md-footer-meta {position: sticky;}
+.md-content{background: #f1f3f4; padding-top: 15px;}
+.md-content__inner {background: #fff;}
 @media only screen and (min-width:1280px){
     .md-sidebar--primary {
       width: 260px;
-    }}
+    }
+}
 @media only screen and (min-width:1280px){
-        .md-sidebar--secondary {
-          width: 300px;
-        }}
+    .md-sidebar--secondary {
+        width: 300px;
+        background:#f1f3f4;
+    }
+}
 @media only screen and (min-width: 76.25em){
-.md-content__inner {
-    margin-right: 4rem;
-    margin-left: 2rem;
-}}
+    .md-content__inner {
+        margin-right: 3rem;
+        margin-left: 2rem;
+        padding: 0px 5px 0px 5px;
+        box-shadow: 0 1px 2px 0 rgba(60,64,67,.3), 0 1px 3px 1px rgba(60,64,67,.15);
+    }
+}
 /* @media only screen and (min-width:1280px){
     .md-sidebar--primary .md-nav__item{margin-left:30px} 
 }
