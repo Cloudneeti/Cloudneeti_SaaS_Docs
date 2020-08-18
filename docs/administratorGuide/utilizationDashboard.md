@@ -48,7 +48,8 @@ Login to Cloudneeti portal as License Admin.
 
 4. Aggregated resource view is shown for all cloud accounts within a selected License.
     - Resource Trend 
-    - Aggreagted resource summary per account for chosen Cloud Service
+    - Aggreagted resource summary for chosen Cloud Service
+    - Aggreagted resource summary Cloud Service average for CLoud Accounts
 
     ![Azure Resources](.././images/utilizationDashboard/csp_level.png#thumbnail)
 

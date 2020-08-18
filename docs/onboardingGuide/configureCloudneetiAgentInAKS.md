@@ -352,7 +352,7 @@ Below commands can be used to set API key in base64
 
 ##### Bash
 
-        echo <apikey> | base64
+        echo -n '<apikey>' | base64
 
 ##### Powershell
 
