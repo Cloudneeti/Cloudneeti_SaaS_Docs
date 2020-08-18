@@ -1,4 +1,4 @@
-# STEP 4: AWS inspector Vulnerability Configurations (Optional)
+# STEP 4: AWS inspector vulnerability configurations (Optional)
 
 **This step is optional.**
 
