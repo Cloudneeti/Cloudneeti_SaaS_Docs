@@ -1,4 +1,4 @@
-# STEP 4: AWS inspector Vulnerability Configurations (Optional)
+# STEP 4: AWS inspector vulnerability configurations (Optional)
 
 **This step is optional.**
 
@@ -30,7 +30,7 @@ Once, SSM agent is installed, enable AWS Inspector in the regions where instance
 
 Cloudneeti currently supports RHEL and Windows Server 16 instances and in the near future many other Linux distributions and Windows server editions will be supported.
 
-Multiple assessment targets and templates can be created.  For exaple, create an assessment target is each of the Operating systems separately, and add to seperate template.
+Multiple assessment targets and templates can be created.  For exmaple, create an assessment target is each of the Operating systems separately, and add to separate template.
 - OS = RedHat Linux
 - Tags = All tags | None
 - Instances = All instances
@@ -79,7 +79,7 @@ Login to [AWS portal](https://console.aws.amazon.com/){target=_blank} with AWS
 
 3. Set **Duration** (3), recommended is 1 hour
 
-4. Select **Schedule** (4), recommned is 7 days
+4. Select **Schedule** (4), recommend  is 7 days
 
 5. Click **Next** (5)
     ![AWS Inspector - AWS Console](.././images/amazonWebServiceAccounts/aws_Inspector_TemplateConfig.png#thumbnail){target=_blank}
@@ -103,7 +103,7 @@ Once Assessment target is created, one can verify the status of the agents. AWS 
 
 #### 4.2.5 Run assessment template
 
-1. Run the Assessment Template if required, by default assesment template is run on creation.
+1. Run the Assessment Template if required, by default assessment template is run on creation.
 
     ![AWS Inspector - AWS Console](.././images/amazonWebServiceAccounts/aws_Inspector_runTemplate.png#thumbnail)
 
@@ -173,13 +173,13 @@ Once Assessment target is created, one can verify the status of the agents. AWS 
 
     ![AWS Inspector - AWS Console](.././images/amazonWebServiceAccounts/aws_Inspector_template1.png#thumbnail)
 
-8.  Set **Assessment Schedule** (1), recommned is 7 days
+8.  Set **Assessment Schedule** (1), recommend is 7 days
 
 9.  Click **Create** or **Create and run** (2)
 
     ![AWS Inspector - AWS Console](.././images/amazonWebServiceAccounts/aws_Inspector_template2.png#thumbnail)
 
-#### 3.2.4 Run assessment template
+#### 4.2.4 Run assessment template
 
 1. Run the Assessment Template or wait for their schedule as per their requirement
     
@@ -190,7 +190,7 @@ Once Assessment target is created, one can verify the status of the agents. AWS 
     ![AWS Inspector - AWS Console](.././images/amazonWebServiceAccounts/aws_Inspector_run.png#thumbnail)
 
 
-### 3.3 Verify policy results and vulnerability on Cloudneeti (to be performed after [Step 4](/onboardingGuide/amazonWebServiceAccounts/#step-4-add-aws-account))
+### 4.3 Verify policy results and vulnerability on Cloudneeti (to be performed after [Step 4](/onboardingGuide/amazonWebServiceAccounts/#step-4-add-aws-account))
 
 1. Cloudneeti will pick up latest analysis complete assessment run within last 30 days data from the AWS Inspector. Policies details will be available on Cloudneeti post next successful scan.
 

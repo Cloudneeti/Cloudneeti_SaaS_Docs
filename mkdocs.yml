@@ -120,7 +120,7 @@ nav:
   - Override Security Policy Status: administratorGuide/overrideSecurityPolicyStatus.md
   - Audit Log: administratorGuide/auditLog.md
   - Configure Cloudneeti API Access: administratorGuide/configureCloudneetiAPIAccess.md
-  - Utlization Dashboard: administratorGuide/utilizationDashboard.md 
+  - Utilization Dashboard: administratorGuide/utilizationDashboard.md 
 - Remediation:
   - Overview: remediation/overview.md
   - Azure:

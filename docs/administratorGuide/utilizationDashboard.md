@@ -26,7 +26,7 @@ Login to Cloudneeti portal as License Admin.
 
 4. Aggregated resource view is shown for all cloud accounts within a selected License.
     - Resource Trend 
-    - Aggreagted resource summary 
+    - Aggregated resource summary 
 
    ![Azure Resources](.././images/utilizationDashboard/license_level_avg.png#thumbnail)
 
@@ -48,7 +48,8 @@ Login to Cloudneeti portal as License Admin.
 
 4. Aggregated resource view is shown for all cloud accounts within a selected License.
     - Resource Trend 
-    - Aggreagted resource summary per account for chosen Cloud Service
+    - Aggregated resource summary for chosen Cloud Service
+    - Aggregated resource summary Cloud Service average for CLoud Accounts
 
     ![Azure Resources](.././images/utilizationDashboard/csp_level.png#thumbnail)
 
@@ -88,7 +89,7 @@ Login to Cloudneeti portal as License Admin.
 
 3. Select **Time Range** and **Date** (1)
 
-4. **Average recorded users** and **Subscribed** count is displayed for the chosen time range, aggreagated for all Office 365 accounts under the selected License
+4. **Average recorded users** and **Subscribed** count is displayed for the chosen time range, aggregated for all Office 365 accounts under the selected License
 
     ![Azure Resources](.././images/utilizationDashboard/saas.png#thumbnail)
 

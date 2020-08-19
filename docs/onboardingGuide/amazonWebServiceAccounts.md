@@ -20,10 +20,8 @@ The following steps are required to onboard AWS to the Cloudneeti application.
 
 **2. Enable AWS Config Based Data Collection (optional)** involves enabling AWS Config and setting up Aggregator. This enables you to assess, audit and evaluate configurations of your AWS resources. Using AWS Config APIs, Cloudneeti will now be able to pull out resource configuration metadata at scale. This optional onboarding configuration will be used by default for accounts with larger number of resources.
 
-**3. AWS inspector OS Baseline and Vulnerability Configurations (Optional)** includes installing AWS Inspector Agent to assess your assessment target EC2 instances. Amazon Inspector is a security assessment service for your Amazon EC2 instances and the applications running on those instances.
+**3. AWS inspector OS Baseline Configurations (Optional)** includes installing AWS Inspector Agent to assess your assessment target EC2 instances. Amazon Inspector is a security assessment service for your Amazon EC2 instances and the applications running on those instances.
 Enabling AWS Inspector for a host assessment allows various OS baselines as defined by CIS automatically light up on the Cloudneeti dashboards.
-
-**Vulnerability Configurations** to add additional package help Cloudneeti to collect common vulnerabilities and exposures (CVEs) and associate them to each of the cloud assets.
 
 **4. AWS inspector Vulnerability Configurations (Optional)** includes installing AWS Inspector Agent to assess your assessment target EC2 instances. Amazon Inspector is a security assessment service for your Amazon EC2 instances and the applications running on those instances.
 Enabling AWS Inspector for a host assessment allows Cloudneeti to collect common vulnerabilities and exposures (CVEs) and associate them to each of the cloud assets.
@@ -164,9 +162,13 @@ Involves enabling AWS Config and setting up Aggregator. This enables you to asse
 AWS Data collection and processing mechanisms to use AWS config to support massive scale requirements for the following AWS services [listed here](../../onboardingGuide/awsEnableConfigBasedDataCollection/#services-supported-by-aws-config-enabled-data-collection)
 
 
-## STEP 3: [AWS inspector configuration (Optional)](../../onboardingGuide/awsVMBaselineConfiguration/)
+## STEP 3: [AWS inspector OS Baseline Configurations (Optional)](../../onboardingGuide/awsVMBaselineConfiguration/)
 Includes installing AWS Inspector Agent to assess your assessment target EC2 instances. Amazon Inspector is a security assessment service for your Amazon EC2 instances and the applications running on those instances.
 Enabling AWS Inspector for a host assessment allows various OS baselines as defined by CIS automatically light up on the Cloudneeti dashboards.
+
+## STEP 4: [AWS inspector Vulnerability Configurations (Optional)](../../onboardingGuide/awsVulnerabilities/)
+includes installing AWS Inspector Agent to assess your assessment target EC2 instances. Amazon Inspector is a security assessment service for your Amazon EC2 instances and the applications running on those instances.
+Enabling AWS Inspector for a host assessment allows Cloudneeti to collect common vulnerabilities and exposures (CVEs) and associate them to each of the cloud assets.
 
 
 ## STEP 4: [Configuring Cloudneeti agent in Amazon Elastic Kubernetes Service (Amazon EKS) (Optional)](../../onboardingGuide/configureCloudneetiAgentInEKS/) 
