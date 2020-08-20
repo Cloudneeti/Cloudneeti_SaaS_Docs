@@ -4,7 +4,7 @@ The Cloud Security Best Practices view provides a list of all security policies 
 
 | **Connector Type​**              | **Total Policy Count​**    | **Automated Policy Count​** | **Manual Policy Count​** |
 |---------------------------------|---------------------------|----------------------------|-------------------------|
-|  AWS​                            | [463](../../securityPolicies/awsSecurityPolcies/)                       | 445                        | 20                      |
+|  AWS​                            | [463](../../securityPolicies/awsSecurityPolcies/)                       | 443                        | 20                      |
 |  AWS​ VM baseline RHEL           | [174](../../securityPolicies/osBaseline/centOSSecurityPolcies/)                       | 174                        | -                       |
 |  AWS VM baseline Win 2016​       | [351](../../securityPolicies/osBaseline/windows16SecurityPolcies/#aws)                       | 351                        | -                       |
 |  Amazon EC2-instance based Kubernetes             | [71](../../securityPolicies/kubernetes/awsK8SSecurityPolcies/#ec2-instance-based-kubernetes-security-policies)                         | 71                      | -                      |
@@ -19,7 +19,7 @@ The Cloud Security Best Practices view provides a list of all security policies 
 |  Azure Kubernetes | [71](../../securityPolicies/kubernetes/azureK8SSecurityPolcies/#vm-based-kubernetes-security-policies)                        | 71                         | -                       |
 |  Azure Kubernetes Service (AKS Engine) | [72](../../securityPolicies/kubernetes/azureK8SSecurityPolcies/#aks-engine-security-policies)                        | 72                         | -                       |
 |  Azure Kubernetes Service (AKS) | [19](../../securityPolicies/kubernetes/azureK8SSecurityPolcies/#aks-security-policies)                        | 19                         | -                       |
-| **Grand Total**​                 | **2444**​                  | **2356**​                   |                   **90**      |
+| **Grand Total**​                 | **2444**​                  | **2354**​                   |                   **90**      |
 
 
 
