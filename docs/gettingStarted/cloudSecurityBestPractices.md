@@ -19,7 +19,7 @@ The Cloud Security Best Practices view provides a list of all security policies 
 |  Azure Kubernetes | [71](../../securityPolicies/kubernetes/azureK8SSecurityPolcies/#vm-based-kubernetes-security-policies)                        | 71                         | -                       |
 |  Azure Kubernetes Service (AKS Engine) | [72](../../securityPolicies/kubernetes/azureK8SSecurityPolcies/#aks-engine-security-policies)                        | 72                         | -                       |
 |  Azure Kubernetes Service (AKS) | [19](../../securityPolicies/kubernetes/azureK8SSecurityPolcies/#aks-security-policies)                        | 19                         | -                       |
-| **Grand Total**​                 | **2447**​                  | **2360**​                   |                   **87**      |
+| **Grand Total**​                 | **2444**​                  | **2356**​                   |                   **90**      |
 
 
 
