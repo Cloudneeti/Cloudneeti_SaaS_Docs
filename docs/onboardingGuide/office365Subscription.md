@@ -377,9 +377,10 @@ Sign into your Office 365 portal (e.g. <https://outlook.office.com/mail/inbox>)
 as global administrator.
 
 ##### Create Office 365 user
-Create Office 365 user with roles **SharePoint Administrator** and **Exchange Administrator**
 
-1. Login to [office portal](https://www.office.com){target=_blank}
+###### 1. Create Office 365 user with roles **SharePoint Administrator** and **Exchange Administrator**
+
+1. Login to [office portal](https://www.office.com){target=_blank} with Office Administrator role
 2. Click **Admin** to go to **M365 Admin center**
 	
 	![Admin Center](.././images/onboardingOffice365Subscription/M365AdminCenter.png#thumbnail)
@@ -394,6 +395,21 @@ Create Office 365 user with roles **SharePoint Administrator** and **Exchange Ad
 7. Click **Finish adding**
 
 	![Basic info](.././images/onboardingOffice365Subscription/AdminRoles_Save.png#thumbnail)
+
+###### 2. Assign User with Compliance Manager role
+
+1. Login to [Azure portal](https://portal.azure.com/){target=_blank} with AD admin role
+
+2. Navigate to the User created
+
+    ![Basic info](.././images/onboardingOffice365Subscription/CM1.png#thumbnail)
+
+3. Assign **Compliance Manager** role to the User
+
+    ![Basic info](.././images/onboardingOffice365Subscription/CM2.png#thumbnail)
+
+
+    ![Basic info](.././images/onboardingOffice365Subscription/CM3.png#thumbnail)
 
 
 ##### Enable MFA and create application password
