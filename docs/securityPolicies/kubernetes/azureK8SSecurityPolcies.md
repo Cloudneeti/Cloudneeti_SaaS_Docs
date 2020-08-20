@@ -46,12 +46,10 @@ VM Hosted Kubernetes Security Policies
 | Kubernetes - Control Plane Components - API Server                      | VM Hosted - Ensure that the --tls-cert-file and --tls-private-key-file arguments are set as appropriate              |
 | Kubernetes - Control Plane Components - API Server                      | VM Hosted - Ensure that the --client-ca-file argument is set as appropriate                                          |
 | Kubernetes - Control Plane Components - API Server                      | VM Hosted - Ensure that the --etcd-cafile argument is set as appropriate                                             |
-| Kubernetes - Control Plane Components - API Server                      | VM Hosted - Ensure that the --encryption-provider-config argument is set as appropriate                              |
 | Kubernetes - Control Plane Components - API Server                      | VM Hosted - Ensure that the --audit-log-maxage argument is set to 30 or as appropriate                               |
 | Kubernetes - Control Plane Components - API Server                      | VM Hosted - Ensure that the --audit-log-path argument is set                                                         |
 | Kubernetes - Control Plane Components - API Server                      | VM Hosted - Ensure that the --audit-log-maxsize argument is set to 100 or as appropriate                             |
 | Kubernetes - Control Plane Components - API Server                      | VM Hosted - Ensure that the --audit-log-maxbackup argument is set to 10 or as appropriate                            |
-| Kubernetes - Control Plane Components - Controller Manager              | VM Hosted - Ensure that the --terminated-pod-gc-threshold argument is set as appropriate                             |
 | Kubernetes - Control Plane Components - Controller Manager              | VM Hosted - Ensure that the --use-service-account-credentials argument is set to true                                |
 | Kubernetes - Control Plane Components - Controller Manager              | VM Hosted - Ensure that the --profiling argument is set to false                                                     |
 | Kubernetes - Control Plane Components - Controller Manager              | VM Hosted - Ensure that the --root-ca-file argument is set as appropriate                                            |
@@ -127,7 +125,6 @@ AKS Engine Security Policies
 | Kubernetes - Control Plane Components - API Server                      | AKS Engine - Ensure that the --etcd-cafile argument is set as appropriate                                             |
 | Kubernetes - Control Plane Components - API Server                      | AKS Engine - Ensure that the --client-ca-file argument is set as appropriate                                          |
 | Kubernetes - Control Plane Components - API Server                      | AKS Engine - Ensure that the --audit-log-path argument is set                                                         |
-| Kubernetes - Control Plane Components - API Server                      | AKS Engine - Ensure that the --encryption-provider-config argument is set as appropriate                              |
 | Kubernetes - Control Plane Components - API Server                      | AKS Engine - Ensure that the --audit-log-maxbackup argument is set to 10 or as appropriate                            |
 | Kubernetes - Control Plane Components - API Server                      | AKS Engine - Ensure that the --audit-log-maxage argument is set to 30 or as appropriate                               |
 | Kubernetes - Control Plane Components - API Server                      | AKS Engine - Ensure that the --audit-log-maxsize argument is set to 100 or as appropriate                             |
