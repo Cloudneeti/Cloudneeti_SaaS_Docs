@@ -5,7 +5,7 @@ The following steps are required to onboard Microsoft Azure to the Cloudneeti ap
 
 ![Onboarding Steps](.././images/azureSubscriptions/Onboarding_Steps.png#thumbnail_1)
 
-1.  [**Registering the Cloudneeti application**](.././azureSubscriptions/#step-1-register-cloudneeti-application-manually-or-using-azure-powershell-script){target=_blank} includes registering the
+1.  [**Registering the Cloudneeti application**](.././onboardingGuide/azureSubscriptions/#create-new-azure-app-registration_1){target=_blank} includes registering the
     Cloudneeti application with Azure tenant, providing access to Microsoft
     Graph and granting admin consent to the Cloudneeti application.
 
@@ -35,7 +35,7 @@ An Azure docker agent is deployed to collect data for additional security polici
 
 | S. No. | Step                                      | Portal to use  | Role                    | Type      | Policies     |
 |---|-------------------------------------------|----------------|-------------------------|-------------------|-------------------------|
-| 1  | [Register Cloudneeti application](.././azureSubscriptions/#step-1-register-cloudneeti-application-manually-or-using-azure-powershell-script){target=_blank}           | Microsoft Azure| Global AD Administrator | mandatory | 0            |
+| 1  | [Create new Azure App Registration ](.././azureSubscriptions/#step-1-create-new-azure-app-registration-manually-or-using-azure-powershell-script){target=_blank}           | Microsoft Azure| Global AD Administrator | mandatory | 0            |
 | 2  | [Grant access to Azure subscription](.././azureSubscriptions/#step-2-grant-access-to-cloudneeti-registered-app)        | Microsoft Azure| Subscription Owner      | mandatory | 0            |
 | 3  | [Grant access to Azure subscription additional roles](../../onboardingGuide/grantAccessToAzureSubscriptionAdditionalRoles/){target=_blank} | Microsoft Azure| Subscription Owner           | optional  | 19            |
 | 4 | [Grant access to key vaults](../../onboardingGuide/grantAccessToKeyVaults/){target=_blank}                 | Microsoft Azure| Subscription Owner          | optional  | 1            |
@@ -86,7 +86,7 @@ document.
 | Azure Subscription | Network Contributor Role  | Microsoft Azure   | Subscription Owner | STEP 3   | optional  | 1           |
 | Key Vault | Access Policy   | Microsoft Azure   | Subscription Owner | STEP 4   | optional  | 1            |
 
-## STEP 1: Register Cloudneeti application Manually or using Azure powershell script
+## STEP 1: Create new Azure App Registration Manually or using Azure powershell script
 
 
 The following steps are executed by the Microsoft Azure **Global AD
@@ -97,7 +97,9 @@ script.
 
 ### 1.1 Manual Steps
 
-#### Register Cloudneeti Application 
+Following manual steps allow you to understand the actual steps and permissions needed to create the Azure Application. If you prefer to automate this steps, please refer to 1.1 (Automated) section
+
+#### Create new Azure App Registration 
 
 Login to [Azure Portal](https://portal.azure.com/){target=_blank} with **Global AD Administrator** role.
 
@@ -149,8 +151,13 @@ Azure AD related security policy information.
     ![Service Principal - Azure Portal](.././images/azureSubscriptions/Azure_API_Permissions.png#thumbnail)
 
 
-### 1.2 Automated Steps
-#### Prerequisites 
+### 1.1 Automated Steps
+
+Automated steps allow you to apply repeatability and consistency in provisioning. These steps replace 1.1 (Manual) section above.
+
+#### Create new Azure App Registration 
+
+##### Prerequisites 
 The below steps are required for registering Cloudneeti application in Azure Tenant using PowerShell script.
 
 | Activity             | Description                |
@@ -160,7 +167,7 @@ The below steps are required for registering Cloudneeti application in Azure Ten
 | 3.	**Workstation:** Before executing the script, make sure there are no restrictions in running the PowerShell script  | Use this PowerShell command:<br>``Set-ExecutionPolicy ` ``<br>``-Scope Process ` ``<br>``-ExecutionPolicy Bypass``<br>PowerShell contains built-in execution policies that limit its use as an attack vector. By default, the execution policy is set to Restricted, which is the primary policy for script execution. The bypass allows for running scripts and keeps the lowered permissions isolated to just the current running process. |
 | 4.	**Workstation:** Install Azure Modules to execute PowerShell commands within service principal automation script | ``Install-Module ` ``<br>``-Name AzureAD ` ``<br>``-MinimumVersion 2.0.0.131``<br><br>It is a roll-up module for the Azure Resource Manager cmdlets. |
 
-#### Register Cloudneeti Application
+##### Register Cloudneeti Application
 
 Use the Create-ServicePrincipal-AzureOnboarding.ps1 script to create and register a Cloudneeti Application.
 
@@ -193,7 +200,7 @@ Use the Create-ServicePrincipal-AzureOnboarding.ps1 script to create and registe
 	```</code>
 	</pre>
     
-#### Grant admin consent for API permissions
+##### Grant admin consent for API permissions
 
 **This step is optional**
 
@@ -264,7 +271,7 @@ The Cloudneeti application **License Admin** requires this information to add an
 
 2.  Select **App Registrations** in the secondary menu
 
-3.  Select Cloudneeti Application registered in [step 1](.././azureSubscriptions/#step-1-register-cloudneeti-application-manually-or-using-azure-powershell-script)
+3.  Select Cloudneeti Application registered in [step 1](.././azureSubscriptions/#step-1-create-new-azure-app-registration-manually-or-using-azure-powershell-script)
 
     ![Azure Domain](.././images/azureSubscriptions/Grant_Permission.png#thumbnail)
 
@@ -395,7 +402,7 @@ For more information, refer to the documentation link here [Link a Partner ID to
 
 ### Onboard another Microsoft Azure Subscription to the Cloudneeti application
 
-Please follow [STEP 1](../../onboardingGuide/azureSubscriptions/#step-1-register-cloudneeti-application-manually-or-using-azure-powershell-script) to [STEP 8](../../onboardingGuide/azureSubscriptions/#step-8-configure-cloudneeti-agent-on-aks) for required prerequisites configurations. Then add Azure subscription to Cloudneeti Application using below steps:
+Please follow [STEP 1](../../onboardingGuide/azureSubscriptions/#step-1-create-new-azure-app-registration-manually-or-using-azure-powershell-script) to [STEP 8](../../onboardingGuide/azureSubscriptions/#step-8-configure-cloudneeti-agent-on-aks) for required prerequisites configurations. Then add Azure subscription to Cloudneeti Application using below steps:
 
 #### 1. Azure subscription is in same Azure Active Directory as of already added Cloud accounts.
 

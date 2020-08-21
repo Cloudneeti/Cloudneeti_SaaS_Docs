@@ -1,18 +1,17 @@
 Utilization Dashboard
 =====================
 
-Cloudneeti product subscription fees are based on an average total number of resources in
+Utilization dashboard page provides utilization visibility to the consumed resource capacity. 
+
+Zscaler CSPM product subscription fees are based on an average total number of resources in
 onboarded cloud accounts (Azure subscription, AWS accounts) and number of users in Office 365 subscription. Please follow the steps below to know resource and user count. 
-
-Utilization dashboard page provides utilization visibility to the consumed resource capacity. Customers/Partners can now use the resource consumption data to calculate the monthly/yearly invoices. 
-
 
 Utilization visibility at License level
 ----------------------------------------
 
 Please follow the below steps to determine the average total number of resources aggregated at a license level for all Cloud Accounts within selected License.
 
-Login to Cloudneeti portal as License Admin.
+Login to Zscaler CSPM portal as License Admin.
 
 1. Navigate to **Utilization** (1)
 
@@ -31,12 +30,12 @@ Login to Cloudneeti portal as License Admin.
    ![Azure Resources](.././images/utilizationDashboard/license_level_avg.png#thumbnail)
 
 
-Utilization visibility for a Cloud Service at License level
------------------------------------------------------------
+Utilization visibility for a Cloud Service at a License level
+-------------------------------------------------------------
 
-Please follow the below steps to determine the average total number of resources aggregated at a license level for all Cloud Accounts within selected License and Cloud Service
+Please follow the below steps to determine the average total number of resources aggregated at a license level for all Cloud Accounts within selected License and Cloud Service.
 
-Login to Cloudneeti portal as License Admin.
+Login to Zscaler CSPM portal as License Admin.
 
 1. Navigate to **Utilization** (1)
 
@@ -58,7 +57,7 @@ Utilization visibility for a Cloud Account
 --------------------------------------------
 Please follow the below steps to determine the average total number of resources for a selected Cloud Account.
 
-Login to Cloudneeti portal as License Admin.
+Login to Zscaler CSPM portal as License Admin.
 
 1. Navigate to **Utilization** (1)
 
@@ -79,7 +78,7 @@ Utilization visibility for Office 365 Account
 ---------------------------------------------
 Please follow the below steps to determine the average total number of resources for a selected Cloud Account of type Office 365.
 
-Login to Cloudneeti portal as License Admin.
+Login to Zscaler CSPM portal as License Admin.
 
 1. Navigate to **Utilization** (1) and **SaaS** (2) tab
 

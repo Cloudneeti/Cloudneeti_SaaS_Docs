@@ -120,7 +120,7 @@ Login to Azure portal [https://portal.azure.com](https://portal.azure.com){targe
 #### Registered Cloudneeti Application ID 
 1. Select **Azure Active Directory** in the primary menu
 2. Select **App Registrations** in the secondary menu
-3. Select Cloudneeti Application registered in [Step 1](.././onboardingGuide/azureSubscriptions/#step-1-register-cloudneeti-application-manually-or-using-azure-powershell-script)
+3. Select Cloudneeti Application registered in [Step 1](.././onboardingGuide/azureSubscriptions/#create-new-azure-app-registration_1)
 	![Registered Cloudneeti Application ID](.././images/onboardingOffice365Subscription/Cloudneeti_Application_ID.png#thumbnail)
 4. Copy the Cloudneeti Application id
 	![Cloudneeti Application id](.././images/onboardingOffice365Subscription/Copy_AppID.png#thumbnail)
@@ -129,7 +129,7 @@ Login to Azure portal [https://portal.azure.com](https://portal.azure.com){targe
 
 1. Select **Azure Active Directory** in the primary menu
 2. Select **App Registrations** in the secondary menu
-3. Select Cloudneeti Application registered in [Step 1](.././onboardingGuide/azureSubscriptions/#step-1-register-cloudneeti-application-manually-or-using-azure-powershell-script)
+3. Select Cloudneeti Application registered in [Step 1](.././onboardingGuide/azureSubscriptions/#step-1-create-new-azure-app-registration-manually-or-using-azure-powershell-script1)
 4. Click on **new client secret** in **Certificates & secrets** section (1)
 5. Add **Description** and select expiry time
 6. Click on **Add** (2)

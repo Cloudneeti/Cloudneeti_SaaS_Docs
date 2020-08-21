@@ -93,7 +93,7 @@ generate API access secret.
 8.3: Deploy Cloudneeti agent
 -----------------------------
 
-Setup Cloudneeti Helm Repo and deploy Cloudneeti agent on Kubernetes cluster. Please use below steps to deploy Cloudneeti Agent on AKS, AKS engine and VM based Kubernetes Cluster. 
+Setup Cloudneeti Helm Repo and deploy Cloudneeti agent on Kubernetes cluster. Please use below steps to deploy Cloudneeti Agent on AKS, AKS engine and VM hosted Kubernetes Cluster. 
 
 Access Kubernetes cluster with root account from local machine.
 
@@ -141,7 +141,7 @@ Access Kubernetes cluster with root account from local machine.
         --set cloudneetiAPIAppSecret=<api-app-secret> `
         --set clusterHosting=”AKS-Engine”
 
-### VM Based Kubernetes
+### VM hosted Kubernetes
 
 1. Access Kubernetes cluster with root account
 
