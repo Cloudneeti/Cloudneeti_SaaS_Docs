@@ -3,7 +3,7 @@ STEP 4: Configuring Cloudneeti agent in Amazon Elastic Kubernetes Service (Amazo
 
 **This step is optional.**
 
-Cloudneeti includes CIS recommendations for EKS and EC2-instance based Kubernetes by deploying a Cloudneeti agent to Amazon Kubernetes Cluster. A docker container-based agent is deployed as a cronjob in Kubernetes cluster to collect data for additional security policies. Cloudneeti then provides out-of-box mappings for all 13+ compliance frameworks included in the product. 
+Cloudneeti includes CIS recommendations for EKS and EC2-instance hosted Kubernetes by deploying a Cloudneeti agent to Amazon Kubernetes Cluster. A docker container-based agent is deployed as a cronjob in Kubernetes cluster to collect data for additional security policies. Cloudneeti then provides out-of-box mappings for all 13+ compliance frameworks included in the product. 
 
 Deploying Cloudneeti agent on Amazon Elastic Kubernetes Service (Amazon EKS) enables compliance monitoring of Kubernetes cluster for security policies [listed here](../../securityPolicies/kubernetes/awsK8SSecurityPolcies/).
 
@@ -84,7 +84,7 @@ follow [steps](https://docs.cloudneeti.com/administratorGuide/configureCloudnee
 4.3: Deploy Cloudneeti agent
 -------------------------------
 
-Deploy Cloudneeti agent on Kubernetes cluster node. Please use below steps to deploy Cloudneeti Agent on EKS, EC2-instance based Kubernetes Cluster. 
+Deploy Cloudneeti agent on Kubernetes cluster node. Please use below steps to deploy Cloudneeti Agent on EKS, EC2-instance hosted Kubernetes Cluster. 
 
 Access Kubernetes cluster with root account
 
@@ -107,7 +107,7 @@ Access Kubernetes cluster with root account
         --set clusterHosting=”EKS”
 
 
-### EC2-instance based
+### EC2-instance hosted
 
 1. Access Kubernetes cluster with root account
 
