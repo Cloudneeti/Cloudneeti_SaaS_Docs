@@ -72,6 +72,7 @@ Sample JSON file
 
 ####  **Cloudneeti API key** 
 
+
 Set Cloudneeti API key and APIAPPSecret to base64 format : Please follow [steps](https://docs.cloudneeti.com/onboardingGuide/configureCloudneetiAgentInEKS/#set-api-key-in-base64) to
 generate the key and set the key in base64 format.
 
@@ -79,6 +80,7 @@ generate the key and set the key in base64 format.
 ####  **CloudneetiApiAppId** and **CloudneetiAPIAppSecret** 
 
 Generate API app secret : Please
+
 follow [steps](https://docs.cloudneeti.com/administratorGuide/configureCloudneetiAPIAccess/#step-1-create-cloudneeti-api-application) to configure API access for API **Account.InsertKubernetesClusterData** and generate API access secret.
 
 4.3: Deploy Cloudneeti agent
@@ -324,4 +326,3 @@ Below commands can be used to set API key in base64
         $Bytes = [System.Text.Encoding]::Unicode.GetBytes($PlainTextKey)
         $EncodedKey =[Convert]::ToBase64String($Bytes)
         $EncodedKey
-
