@@ -24,16 +24,14 @@ Select Settings on the left menu and click on Manage Accounts.
 The dropdown of the **Configure Account** button provides multiple configuration
 options.
 
-1.  **Configure Notifications** allows configurations of notification settings.
-
-2.  **Configure Data Collection** allows users to set the frequency of data
+1.  **Configure Data Collection** allows users to set the frequency of data
     collection and other configurations.
 
-3.  **Update Cloud Account** allows users to update the Cloud Account name
+2.  **Update Cloud Account** allows users to update the Cloud Account name
 
-4.  **Configure Account Remediation** allows configurations of AWS Cloud Account remediation settings.
+3.  **Configure Account Remediation** allows configurations of AWS Cloud Account remediation settings.
 
-5.  **Re-Scan** allows users to initiate a new scan of the cloud account separately from scheduled scans.
+4.  **Re-Scan** allows users to initiate a new scan of the cloud account separately from scheduled scans.
 	
     ![Configure Account](.././images/administratorGuide/Configure_Account.png#thumbnail)
 
@@ -42,17 +40,9 @@ report where the License and Cloud Account are selected on the top.
 	
 ![Configuration Options](.././images/administratorGuide/Configuration_Options.png#thumbnail)
 
-### Configure Notifications
-
-Configure Notifications will give you an opportunity to add users who should
-receive notifications. Cloudneeti sends notifications about a new scan
-completion and about major configuration changes at a License or Account level.
-	
-![Configure Notifications](.././images/administratorGuide/Configure_Notifications.png#thumbnail)
-
 ### Configure Data Collection
 
-Configure Data Collection allows users to set the frequency of data collection to daily or weekly for chosen day.
+Configure Data Collection allows users to set the frequency of data collection to daily or weekly for chosen day. License Admin and Account Admin users will recieve an email on successful data scan.
 
 #### Cloud Account Data Collection Frequency Daily
 
@@ -61,6 +51,10 @@ Configure Data Collection allows users to set the frequency of data collection t
 #### Cloud Account Data Collection Frequency Weekly
 
 ![Configure Data Collection](.././images/administratorGuide/Configure_Data_Collection_Weekly.png#thumbnail)
+
+#### Sample email notification on successful data scan
+
+![Configure Data Collection](.././images/administratorGuide/scanNotification.png#thumbnail)
 
 
 ### Update Cloud Account
@@ -97,3 +91,7 @@ Re-Scan allows users to initiate a new scan of the cloud account separately from
 scheduled scans.
 	
 ![Re-Scan](.././images/administratorGuide/Re-Scan.png#thumbnail)
+
+#### Sample email notification on successful data scan
+
+![Configure Data Collection](.././images/administratorGuide/scanNotification.png#thumbnail)

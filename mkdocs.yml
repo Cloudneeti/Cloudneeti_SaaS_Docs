@@ -68,7 +68,8 @@ nav:
   - Amazon Web Services: 
     - Onboarding steps: onboardingGuide/amazonWebServiceAccounts.md
     - Enable AWS Config Based Data Collection (optional): onboardingGuide/awsEnableConfigBasedDataCollection.md
-    - OS baseline and vulnerability (optional): onboardingGuide/awsVMBaselineConfiguration.md
+    - OS baseline (optional): onboardingGuide/awsVMBaselineConfiguration.md
+    - Vulnerability (optional): onboardingGuide/awsVulnerabilities.md
     - Amazon Elastic Kubernetes Service (Amazon EKS) (optional): onboardingGuide/configureCloudneetiAgentInEKS.md
     - AWS onboarding health status: onboardingGuide/awsAccountHealthStatus.md
   - Microsoft Azure:
@@ -77,7 +78,8 @@ nav:
     - Key vaults: onboardingGuide/grantAccessToKeyVaults.md
     - Advanced security configurations: onboardingGuide/azureAdvancedSecurityConfigurations.md
     - Enable ASC audit policies: onboardingGuide/enableASCAuditPolicies.md
-    - OS baseline and vulnerability: onboardingGuide/azureVulnerability.md
+    - OS baseline and vulnerability: onboardingGuide/azureOSBaseline.md
+    - Vulnerability: onboardingGuide/azureVulnerability.md
     - Azure Kubernetes Service (AKS): onboardingGuide/configureCloudneetiAgentInAKS.md
     - Azure onboarding health status: onboardingGuide/azureAccountHealthStatus.md
   - Office 365: 
@@ -118,7 +120,7 @@ nav:
   - Override Security Policy Status: administratorGuide/overrideSecurityPolicyStatus.md
   - Audit Log: administratorGuide/auditLog.md
   - Configure Cloudneeti API Access: administratorGuide/configureCloudneetiAPIAccess.md
-  - Billing Dashboard: administratorGuide/billingDashboard.md 
+  - Utilization Dashboard: administratorGuide/utilizationDashboard.md 
 - Remediation:
   - Overview: remediation/overview.md
   - Azure:

@@ -418,7 +418,6 @@ Remediation lambda functions are assigned with permissions listed as per policie
 | AWS - Identity and Access Management | Ensure IAM Database Authentication feature is enabled for RDS MySQL Instances                                           |
 | AWS - Audit and Logging              | Ensure CloudTrail is enabled in all regions                                                                             |
 | AWS - Audit and Logging              | Ensure CloudTrail log file validation is enabled                                                                        |
-| AWS - Audit and Logging              | Ensure Global resources are included into Amazon Config service configuration                                           |
 | AWS - Audit and Logging              | Ensure Log Exports feature is enabled for RDS Aurora MySQL Serverless Cluster                                           |
 | AWS - Audit and Logging              | Ensure Log Exports feature is enabled for RDS MySQL Instance                                                            |
 | AWS - Audit and Logging              | Ensure Log Exports feature is enabled for RDS Mariadb Instance                                                          |

@@ -36,15 +36,21 @@ Login to [Azure portal](https://portal.azure.com){target=_blank} as Subscription
 
 1.	Open Cloudshell with bash
 
-2.	Enable resource graph query extension using 
+2.	Download script
 
-        az extension add --name resource-graph
+        wget https://raw.githubusercontent.com/Cloudneeti/docs_cloudneeti/workload-resource-count/scripts/Get-AzureResourceCount.ps1 -O Get-AzureResourceCount.ps1
 
-3.	Get resource counts [put the subscriptionid in below command]
+3. Switch directory
 
-        az graph query -q "summarize count() by type| project resource=type , total=count_ | order by total desc" --subscriptions <subscriptionID> --output table
+        cd $user
 
-4.	Output will have categories listed along with resource count.
+4.	Get resource counts [put the subscriptionid in below command]
+
+       .\Get-AzureResourceCount.ps1 -SubscriptionId <subscriptionId>
+
+       ![Azure Resources](.././images/azureMarketplace/Azure_Resource_Count_Script.png#thumbnail)
+
+5.	Output will have protected workloads counts and all resource categories listed along with resource count.
 
     ![Azure Resources](.././images/azureMarketplace/Azure_Resource_Count_Auot.png#thumbnail)
 
@@ -78,7 +84,9 @@ an AWS account.
 
         python .\count_aws_resources.py --accessKey <aws_access_key> --secretKey <aws_secret_key>
 
-2. Output will have services listed along with resource count.
+    ![AWS Resources](.././images/azureMarketplace/AWS_Resource_Count_Script.png#thumbnail)
+
+2. Output will have protected workloads and all services listed along with resource count for the given AWS account.
 
     ![AWS Resources](.././images/azureMarketplace/AWS_Resource_Count_Script_OP.png#thumbnail)
 

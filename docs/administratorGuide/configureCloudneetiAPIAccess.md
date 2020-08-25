@@ -181,7 +181,7 @@ Cloudneeti advised not to store token in localstorage.
 
 ## Appendix
 
-### Regenearate API Secret 
+### Regenerate API Secret 
 
 1. Select **license** in which Cloudneeti API application is to be created.
 
