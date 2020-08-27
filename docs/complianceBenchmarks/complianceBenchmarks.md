@@ -39,8 +39,8 @@ AWS
 |------------------------------------------------------------------------------------------|--------------|
 | Cloud Security Best Practices                                                            | 970          |
 | Center for Internet Security AWS Foundations Benchmark v1.2.0                            | 49           |
-| Center for Internet Security AWS - Kubernetes Benchmark v1.5.1                           | 71           |
-| Center for Internet Security AWS EKS - Kubernetes Benchmark v1.5.1                       | 19           |
+| Center for Internet Security AWS - Kubernetes Benchmark v1.5.1                           | 73           |
+| Center for Internet Security AWS EKS - Kubernetes Benchmark v1.5.1                       | 21           |
 | Center for Internet Security AWS - Red Hat Enterprise Linux 7 Benchmark v2.2.0           | 162          |
 | Center for Internet Security AWS - Microsoft Windows Server 2016 Benchmark v1.0.0        | 350          |
 | Cloud Security Alliance's Cloud Control Matrix (CCM v3.0.1)                              | 742          |
