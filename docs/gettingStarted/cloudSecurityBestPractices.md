@@ -4,12 +4,12 @@ The Cloud Security Best Practices view provides a list of all security policies 
 
 | **Connector Type​**              | **Total Policy Count​**    | **Automated Policy Count​** | **Manual Policy Count​** |
 |---------------------------------|---------------------------|----------------------------|-------------------------|
-|  AWS​                            | [463](../../securityPolicies/awsSecurityPolcies/)                       | 443                        | 20                      |
+|  AWS​                            | [459](../../securityPolicies/awsSecurityPolcies/)                       | 439                        | 20                      |
 |  AWS​ VM baseline RHEL           | [174](../../securityPolicies/osBaseline/centOSSecurityPolcies/)                       | 174                        | -                       |
 |  AWS VM baseline Win 2016​       | [351](../../securityPolicies/osBaseline/windows16SecurityPolcies/#aws)                       | 351                        | -                       |
-|  Amazon EC2-instance based Kubernetes             | [71](../../securityPolicies/kubernetes/awsK8SSecurityPolcies/#ec2-instance-based-kubernetes-security-policies)                         | 71                      | -                      |
-|  Amazon Elastic Kubernetes Service (Amazon EKS)             | [19](../../securityPolicies/kubernetes/awsK8SSecurityPolcies/#eks-security-policies)                         | 19                      | -                      |
-|  Office365​                      | [133](../../securityPolicies/office365SecurityPolcies/)                       | 96                         | 37                      |
+|  Amazon EC2-instance based Kubernetes             | [73](../../securityPolicies/kubernetes/awsK8SSecurityPolcies/#ec2-instance-based-kubernetes-security-policies)                         | 73                      | -                      |
+|  Amazon Elastic Kubernetes Service (Amazon EKS)             | [21](../../securityPolicies/kubernetes/awsK8SSecurityPolcies/#eks-security-policies)                         | 21                      | -                      |
+|  Office365​                      | [133](../../securityPolicies/office365SecurityPolcies/)                       | 96                         | 36                      |
 |  Azure​                          | [425](../../securityPolicies/azureSecurityPolcies/)                       | 392                        | 33                      |
 |  Azure VM baseline Win 2012 R2​  | [182](../../http://127.0.0.1:8000/securityPolicies/osBaseline/windows12SecurityPolcies/#azure)                       | 182​                        | -                       |
 |  Azure VM baseline Win 2016​     | [197](../../securityPolicies/osBaseline/windows16SecurityPolcies/)                       | 197                        | -                       |
@@ -19,7 +19,7 @@ The Cloud Security Best Practices view provides a list of all security policies 
 |  Azure Kubernetes | [71](../../securityPolicies/kubernetes/azureK8SSecurityPolcies/#vm-based-kubernetes-security-policies)                        | 71                         | -                       |
 |  Azure Kubernetes Service (AKS Engine) | [72](../../securityPolicies/kubernetes/azureK8SSecurityPolcies/#aks-engine-security-policies)                        | 72                         | -                       |
 |  Azure Kubernetes Service (AKS) | [19](../../securityPolicies/kubernetes/azureK8SSecurityPolcies/#aks-security-policies)                        | 19                         | -                       |
-| **Grand Total**​                 | **2444**​                  | **2354**​                   |                   **90**      |
+| **Grand Total**​                 | **2444**​                  | **2355**​                   |                   **89**      |
 
 
 
