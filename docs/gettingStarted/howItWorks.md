@@ -110,8 +110,7 @@ resources:
 -   “No resources” status is assigned to a security policy when onboarded cloud
     accounts don’t have any relevant resources for this security policy.
 
--   "Prerequisite" status is assigned to a security policy when onboarded cloud
-    accounts don’t have prerequisite permissions/configurations done to read the policy related resource configuration.
+-   "Prerequisite" is a status assigned to a security policy, indicates that the Customer would need to take additional actions to setup permissions/roles/enablement of services on the respective cloud service provider (Azure, AWS, O365, GCP etc)
 
 -   "Excluded" status is assigned to a security policy when a security policy is excluded globally or at the cloud account level.
 
