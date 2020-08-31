@@ -13,10 +13,14 @@ The following steps are required to onboard Microsoft Azure to the Cloudneeti ap
     application reader access to the Azure subscription and collecting Subscription ID, Directory ID, Domain Name information.
 
 3. [**Grant access to Azure subscription additional roles (Optional)**](../../onboardingGuide/grantAccessToAzureSubscriptionAdditionalRoles/){target=_blank} includes giving the Cloudneeti
-    application access to the Azure subscription, assigning below roles:
-    Website Contributor Role
-    Storage Account Contributor Role
-    Network Contributor Role
+    application access to the Azure subscription, assigning [Azure custom role.](https://docs.microsoft.com/en-us/azure/role-based-access-control/custom-roles) 
+    
+    -   Custom role with permission **"Microsoft.Web/sites/config/list/action"** for Azure Subscription level scope.
+    The Cloudneeti application needs "Microsoft.Web/sites/config/list/action" action present in [Website Contributor role](https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#custom-role-with-permission-microsoftwebsitesconfiglistaction) in order to collect authentication and authorization configuration of Web/API/Mobile/Function Apps which is hosted on the App Service Plan. The current subscription Reader role given doesn't have sufficient permissions to collect web site configuration details.
+
+    -   Custom role with permission **"Microsoft.Storage/storageAccounts/listkeys/action"** for Azure Subscription level scope.
+    Cloudneeti needs "Microsoft.Storage/storageAccounts/listkeys/action" action present in [Storage Account Contributor role](https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#storage) in order to collect metadata configuration of blobs.  The current subscription [Reader role](https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#reader) given doesn't have sufficient permissions to list blob keys. 
+
 
 4. [**Grant access to key vaults (Optional)**](../../onboardingGuide/grantAccessToKeyVaults/){target=_blank} includes giving the Cloudneeti application special permission on desired key vaults to get policy data related to secrets.
 
@@ -37,7 +41,7 @@ An Azure docker agent is deployed to collect data for additional security polici
 |---|-------------------------------------------|----------------|-------------------------|-------------------|-------------------------|
 | 1  | [Create new Azure App Registration ](.././azureSubscriptions/#step-1-create-new-azure-app-registration-manually-or-using-azure-powershell-script){target=_blank}           | Microsoft Azure| Global AD Administrator | mandatory | 0            |
 | 2  | [Grant access to Azure subscription](.././azureSubscriptions/#step-2-grant-access-to-cloudneeti-registered-app)        | Microsoft Azure| Subscription Owner      | mandatory | 0            |
-| 3  | [Grant access to Azure subscription additional roles](../../onboardingGuide/grantAccessToAzureSubscriptionAdditionalRoles/){target=_blank} | Microsoft Azure| Subscription Owner           | optional  | 19            |
+| 3  | [Grant access to Azure subscription additional roles](../../onboardingGuide/grantAccessToAzureSubscriptionAdditionalRoles/){target=_blank} | Microsoft Azure| Subscription Owner           | optional  | 12            |
 | 4 | [Grant access to key vaults](../../onboardingGuide/grantAccessToKeyVaults/){target=_blank}                 | Microsoft Azure| Subscription Owner          | optional  | 1            |
 | 5 | [Advanced Security configuration](../../onboardingGuide/azureAdvancedSecurityConfigurations/){target=_blank}            | Microsoft Azure| Subscription Owner, Global AD Reader          | optional  | 18            |
 | 6 | [Enable Azure Security Center audit policies](../../onboardingGuide/enableASCAuditPolicies/){target=_blank}                     | Microsoft Azure| Subscription Owner           | optional  | 115            |
@@ -81,9 +85,8 @@ document.
 |------|-------------------------------------------------------------|-------------------|--------------------|----------|-----------|--------------|
 | Azure Active Directory | Directory Read All Microsoft Graph              | Microsoft Azure   | Global AD Admin    | STEP 1   | optional  | 5            |
 | Azure Subscription | Reader              | Microsoft Azure   | Subscription Owner | STEP 2   | mandatory | 0            |
-| Azure Subscription | Website Contributor | Microsoft Azure   | Subscription Owner | STEP 3   | optional  | 11           |
-| Azure Subscription | Storage Account Contributor | Microsoft Azure   | Subscription Owner | STEP 3   | optional  | 1            |
-| Azure Subscription | Network Contributor Role  | Microsoft Azure   | Subscription Owner | STEP 3   | optional  | 1           |
+| Azure Subscription | Custom role | Microsoft Azure   | Subscription Owner | STEP 3   | optional  | 11           |
+| Azure Subscription | Custom role | Microsoft Azure   | Subscription Owner | STEP 3   | optional  | 1            |
 | Key Vault | Access Policy   | Microsoft Azure   | Subscription Owner | STEP 4   | optional  | 1            |
 
 ## STEP 1: Create new Azure App Registration Manually or using Azure powershell script
@@ -220,11 +223,7 @@ Use the Create-ServicePrincipal-AzureOnboarding.ps1 script to create and registe
 
 ## STEP 2: Grant access to Cloudneeti registered app existing
 
-The following roles need to be granted to the Cloudneeti App registered in the previous step
-
-1.	Reader role for Azure Subscription level scope.
-2.	Website contributor role for Azure Subscription level scope.
-3.  Key Vault access policies for specific managed Key Vaults.
+Reader role need to be granted to the Cloudneeti App registered in the previous step
 
 The following steps are done by Microsoft Azure **Subscription Owner** role.
 
@@ -299,16 +298,24 @@ The Cloudneeti application **License Admin** requires this information to add an
 
 
 ## STEP 3: Grant access to Azure subscription additional roles
-
 **This step is optional**
 
-The following roles need to be granted to the Cloudneeti App registered in the previous step. Please follow [link](../../onboardingGuide/grantAccessToAzureSubscriptionAdditionalRoles/){target=_blank} for steps.
+[Azure custom role](https://docs.microsoft.com/en-us/azure/role-based-access-control/custom-roles) needs to be granted to the Cloudneeti App registered in the previous step with following permission.
 
-- Website contributor role for Azure Subscription level scope.
-- Storage Account Contributor role for Azure Subscription level scope.
-- Network Contributor role for Azure Subscription level scope.
-- Key Vault access policies for specific managed Key Vaults.
-- The following steps are done by Microsoft Azure Subscription Owner role.
+Custom role with permission **"Microsoft.Web/sites/config/list/action"** for Azure Subscription level scope.
+
+-   The Cloudneeti application needs "Microsoft.Web/sites/config/list/action" action present in [Website Contributor role](https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#custom-role-with-permission-microsoftwebsitesconfiglistaction) in order to collect authentication and authorization configuration of Web/API/Mobile/Function Apps which is hosted on the App Service Plan. The current subscription Reader role given doesn't have sufficient permissions to collect web site configuration details.
+
+-   If the custom role with "Microsoft.Web/sites/config/list/action" is not assigned, Cloudneeti application will not be able to collect data of security policies [listed here.](.././grantAccessToAzureSubscriptionAdditionalRoles/#website-contributor-role)
+
+Custom role with permission **"Microsoft.Storage/storageAccounts/listkeys/action"** for Azure Subscription level scope.
+
+-   Cloudneeti needs "Microsoft.Storage/storageAccounts/listkeys/action" action present in [Storage Account Contributor role](https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#storage) in order to collect metadata configuration of blobs.  The current subscription [Reader role](https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#reader) given doesn't have sufficient permissions to list blob keys. 
+
+-   If the custom role with "Microsoft.Storage/storageAccounts/listkeys/action" is not assigned, Cloudneeti application will not be able to collect data of security policies [listed here.](.././grantAccessToAzureSubscriptionAdditionalRoles/#custom-role-with-permission-microsoftstoragestorageaccountslistkeysaction)
+
+
+The following roles need to be granted to the Cloudneeti App registered in the previous step. Please follow [link](../../onboardingGuide/grantAccessToAzureSubscriptionAdditionalRoles/){target=_blank} for steps.
 
 ## STEP 4: Grant access to key vaults 
 **This step is optional.**
@@ -497,8 +504,8 @@ not assigned.
 |--------------------------------------------------------------|------------------------------------------|
 | Read All Microsoft Graph permissions                         | 5         |
 | Reader role for Azure Subscription level scope.              | 0         |
-| Website Contributor role for Azure Subscription level scope. | 11        |
-| Storage Account Contributor role for Azure Subscription level scope. | 1        |
+| Custom role with permission 'Microsoft.Web/sites/config/list/action' | 11        |
+| Custom role with permission 'Microsoft.Storage/storageAccounts/listkeys/action' | 1        |
 | Key Vault access policies for specific managed Key Vaults    | 1         |
 
 ### Microsoft Graph
