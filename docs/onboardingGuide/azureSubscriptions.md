@@ -223,11 +223,7 @@ Use the Create-ServicePrincipal-AzureOnboarding.ps1 script to create and registe
 
 ## STEP 2: Grant access to Cloudneeti registered app existing
 
-The following roles need to be granted to the Cloudneeti App registered in the previous step
-
-1.	Reader role for Azure Subscription level scope.
-2.	Website contributor role for Azure Subscription level scope.
-3.  Key Vault access policies for specific managed Key Vaults.
+Reader role need to be granted to the Cloudneeti App registered in the previous step
 
 The following steps are done by Microsoft Azure **Subscription Owner** role.
 
@@ -508,8 +504,8 @@ not assigned.
 |--------------------------------------------------------------|------------------------------------------|
 | Read All Microsoft Graph permissions                         | 5         |
 | Reader role for Azure Subscription level scope.              | 0         |
-| Website Contributor role for Azure Subscription level scope. | 11        |
-| Storage Account Contributor role for Azure Subscription level scope. | 1        |
+| Custom role with permission 'Microsoft.Web/sites/config/list/action' | 11        |
+| Custom role with permission 'Microsoft.Storage/storageAccounts/listkeys/action' | 1        |
 | Key Vault access policies for specific managed Key Vaults    | 1         |
 
 ### Microsoft Graph
