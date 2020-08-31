@@ -69,13 +69,12 @@ not assigned.
 |--------------------------------------------------------------|------------------------------------------|
 | Read All Microsoft Graph permissions                         | 5                                        |
 | Reader role for Azure Subscription level scope.              | 0                                        |
-| Website contributor role for Azure Subscription level scope. | 11           |
-| Storage Account Contributor role for Azure Subscription level scope. | 1                                       |
+| Custom role with permission 'Microsoft.Web/sites/config/list/action' | 11           |
+| Custom role with permission 'Microsoft.Storage/storageAccounts/listkeys/action' | 1                                       |
 
 ### Custom role with permission "Microsoft.Web/sites/config/list/action" 
 
-Website Contributor role access is needed to collect data for security policies
-listed below.
+Custom role with permission "Microsoft.Web/sites/config/list/action" access is needed to collect data for security policies listed below.
 
 | Policy Title                                                                          | Category                              |
 |--------------------------------------------------------------------------------------|---------------------------------------|
@@ -93,8 +92,7 @@ listed below.
 
 ### Custom role with permission 'Microsoft.Storage/storageAccounts/listkeys/action'
 
-Storage Account Contributor role or Storage Account Key Operator Servic role access is needed to collect data for security policies
-listed below.
+Custom role with permission 'Microsoft.Storage/storageAccounts/listkeys/action' access is needed to collect data for security policies listed below.
 
 | Policy Title                                                                          | Category                              |
 |--------------------------------------------------------------------------------------|---------------------------------------|
