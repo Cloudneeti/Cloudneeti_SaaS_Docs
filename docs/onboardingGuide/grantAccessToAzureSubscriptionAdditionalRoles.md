@@ -19,6 +19,8 @@ The following steps are done by Microsoft Azure **Subscription Owner** role.
 
 
 ### 3.1 Create custom role(s)
+
+#### Manual
 1.	Go to the subscription’s **Access control (IAM)** in the menu
 2.	Click **Add custom role**
 
@@ -48,6 +50,51 @@ The following steps are done by Microsoft Azure **Subscription Owner** role.
 
     ![Assign role](.././images/azureSubscriptions/customRole7.png#thumbnail)
 
+#### Using json file
+
+1. Copy and create json file for CSPM custom role creation 
+    - **Generate GUID**, can use below command in powershell
+
+            [guid]::NewGuid()
+
+        ![Assign role](.././images/azureSubscriptions/CR_json1.png#thumbnail)
+
+    - Azure **subscription id**
+
+            {
+                "Name": "CSPM Role",
+                "Id": "<Generate GUID>",
+                "IsCustom": true,
+                "Description": "Custom Role for website and storage policies.",
+                "Actions": [
+                    "Microsoft.Storage/storageAccounts/listkeys/action",
+                    "Microsoft.Web/sites/config/list/action"
+                ],
+                "NotActions": [],
+                "DataActions": [],
+                "NotDataActions": [],
+                "AssignableScopes": [
+                    "/subscriptions/<Subscription_Id>"
+                ]
+            }
+
+2. Launch Azure Cloudshell  
+
+    ![Assign role](.././images/azureSubscriptions/CR_json2.png#thumbnail)
+
+3. Upload json file on Cloudshell 
+
+    ![Assign role](.././images/azureSubscriptions/CR_json3.png#thumbnail)
+
+4. Execute below command to create the role
+
+        az role definition create --role-definition "<json_file_path>"
+
+    ![Assign role](.././images/azureSubscriptions/CR_json4.png#thumbnail)
+
+5. verify the role created 
+
+    ![Assign role](.././images/azureSubscriptions/CR_json5.png#thumbnail)
 
 ### 3.2 Grant Azure Subscription custom role 
 **This step is optional**

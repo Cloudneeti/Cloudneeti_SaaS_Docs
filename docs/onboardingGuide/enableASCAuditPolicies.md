@@ -12,7 +12,7 @@ Note : Please note that it is advised to have only one ASC initiative. If there 
 
 ## 6.1 Configure ASC default policies 
 
-Configure ASC policies to remediate policies [listed here ](.././azureQuickWins/#configure-azure-security-center-policies-azure-security-center) using below steps.
+Configure ASC policies to remediate policies [listed here ](../../onboardingGuide/enableASCAuditPolicies/#asc-policy-list){target=_blank} using below steps.
 
 #### Category Subscription Governance Policies [Increase compliance Score 30-50%]
 
@@ -48,7 +48,7 @@ Configure ASC policies to remediate policies [listed here ](.././azureQuickWins/
 
 ## 6.2 Configure ASC policies at Management Group level
 
-Configure ASC policies to remediate policies [listed here ](.././azureQuickWins/#configure-azure-security-center-policies-azure-security-center) using below steps.
+Configure ASC policies to remediate policies [listed here ](../../onboardingGuide/enableASCAuditPolicies/#asc-policy-list){target=_blank} using below steps.
 
 #### Category Subscription Governance Policies [Increase compliance Score 30-50%]
 
