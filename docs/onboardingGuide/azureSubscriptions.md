@@ -28,7 +28,7 @@ The following steps are required to onboard Microsoft Azure to the Cloudneeti ap
 
     Advanced security configurations (step 5) requires a Cloudneeti PowerShell agent to be installed in an Azure subscription under the same tenant where the Azure subscription is located. The Cloudneeti PowerShell agent retrieves (A) additional configuration information from the Azure Active Directory  (there are no Azure APIs to retrieve this information) and pushes (B) this information as a JSON file to the Cloudneeti application.
 
-6. [**Enable Azure Security Center audit policies (Optional)**](onboardingGuide/azureSubscriptions/#step-6-enable-azure-security-center-audit-policies){target=_blank} includes enabling Azure Security Center audit policies (Optional) includes configuring  Azure Security Center free tier in order for Zscaler CSPM to pull all security recommendations and make it available within the product.
+6. [**Enable Azure Security Center audit policies (Optional)**](../../onboardingGuide/azureSubscriptions/#step-6-enable-azure-security-center-audit-policies){target=_blank} includes enabling Azure Security Center audit policies (Optional) includes configuring  Azure Security Center free tier in order for Zscaler CSPM to pull all security recommendations and make it available within the product.
 
 7. [**Configure OS baseline and Vulnerability Assessment Solution (Optional)**](../../onboardingGuide/azureVulnerability/){target=_blank} inlcudes connecting VMs to OMS workspace. Also deploy partner Vulnerability Assessment Solution in Azure Security Center and installing the solution on multiple VMs allows to provide visibility into missing updates, misconfigured OS security settings, endpoint protection status, and health and threat protection.
 
