@@ -15,10 +15,10 @@
 
     -   If the custom role with "Microsoft.Storage/storageAccounts/listkeys/action" is not assigned, Cloudneeti application will not be able to collect data of security policies [listed here.](.././grantAccessToAzureSubscriptionAdditionalRoles/#custom-role-with-permission-microsoftstoragestorageaccountslistkeysaction)
 
+### 3.1 Create custom role(s) 
+
+Azure customer role can be created using manual steps or using a JSON file.
 The following steps are done by Microsoft Azure **Subscription Owner** role.
-
-
-### 3.1 Create custom role(s)
 
 #### Manual
 1.	Go to the subscription’s **Access control (IAM)** in the menu
@@ -36,6 +36,9 @@ The following steps are done by Microsoft Azure **Subscription Owner** role.
 
 5. Select below permissions
 
+    -   **Microsoft.Web/sites/config/list/action**
+    -   **Microsoft.Storage/storageAccounts/listkeys/action**
+
     ![Assign role](.././images/azureSubscriptions/customRole4.png#thumbnail)
 
 6. **Add** permission
@@ -52,18 +55,31 @@ The following steps are done by Microsoft Azure **Subscription Owner** role.
 
 #### Using json file
 
-1. Copy and create json file for CSPM custom role creation 
-    - **Generate GUID**, can use below command in powershell
+1. Launch Azure Cloudshell  
 
-            [guid]::NewGuid()
+    ![Assign role](.././images/azureSubscriptions/CR_json1.png#thumbnail)
 
-        ![Assign role](.././images/azureSubscriptions/CR_json1.png#thumbnail)
+2. Use below command to create and edit file (1)
 
-    - Azure **subscription id**
+        code CSPM_Custom_Role.json
+
+3. Copy and paste below json file for CSPM custom role creation (2)
+
+    ![Assign role](.././images/azureSubscriptions/CR_json3.png#thumbnail)
+
+4. Replace the GUID (1), subscription id(s) (2) and management group id.
+
+    ![Assign role](.././images/azureSubscriptions/CR_json2.png#thumbnail)
+
+    - 4.1 **Generate GUID**, can use below command in powershell
+
+            [guid]::NewGuid() 
+
+    - 4.2 JSON to create role at Subscription(s) level
 
             {
                 "Name": "CSPM Role",
-                "Id": "<Generate GUID>",
+                "Id": "<GUID>",
                 "IsCustom": true,
                 "Description": "Custom Role for website and storage policies.",
                 "Actions": [
@@ -74,25 +90,43 @@ The following steps are done by Microsoft Azure **Subscription Owner** role.
                 "DataActions": [],
                 "NotDataActions": [],
                 "AssignableScopes": [
-                    "/subscriptions/<Subscription_Id>"
+                "/subscriptions/<subscriptionId1>",
+                "/subscriptions/<subscriptionId2}"
                 ]
             }
 
-2. Launch Azure Cloudshell  
+    - OR 4.2 JSON to create role at Azure management group level
 
-    ![Assign role](.././images/azureSubscriptions/CR_json2.png#thumbnail)
+            {
+                "Name": "CSPM Role",
+                "Id": "<GUID>",
+                "IsCustom": true,
+                "Description": "Custom Role for website and storage policies.",
+                "Actions": [
+                    "Microsoft.Storage/storageAccounts/listkeys/action",
+                    "Microsoft.Web/sites/config/list/action"
+                ],
+                "NotActions": [],
+                "DataActions": [],
+                "NotDataActions": [],
+                "AssignableScopes": [
+                    "/subscriptions/<subscriptionId1>",
+                    "/subscriptions/<subscriptionId2>",
+                    "/providers/Microsoft.Management/managementGroups/<groupId1>"
+                ]
+            }
 
-3. Upload json file on Cloudshell 
+5. **Save** (1) and **Close** (2) the editor within cloudshell
 
-    ![Assign role](.././images/azureSubscriptions/CR_json3.png#thumbnail)
+    ![Assign role](.././images/azureSubscriptions/CR_json3a.png#thumbnail)
 
-4. Execute below command to create the role
+6. Execute below command to create the role
 
-        az role definition create --role-definition "<json_file_path>"
+        az role definition create --role-definition CSPM_Custom_Role.json
 
     ![Assign role](.././images/azureSubscriptions/CR_json4.png#thumbnail)
 
-5. verify the role created 
+6. verify the role created 
 
     ![Assign role](.././images/azureSubscriptions/CR_json5.png#thumbnail)
 
