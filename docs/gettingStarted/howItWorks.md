@@ -161,9 +161,9 @@ Risk Posture
 
 Cloudneeti implemented risk-based prioritization matrix using the ISO 27005
 standard. The risk matrix is created by automatically categorizing each security
-policy for risk impact and risk likelihood. Risk impact can be “Not Likely”,
-“Low”, “Moderate”, “High” and “Certain”. Risk likelihood can be “Very Low”,
-“Low”, “Moderate”, “High” and “Critical”. Risk impact is preset for each
+policy for risk impact and risk likelihood. Risk impact can be “Very Low”,
+“Low”, “Moderate”, “High” and “Critical”. Risk likelihood can be “Not Likely”,
+“Low”, “Moderate”, “High” and “Certain”. Risk impact is preset for each
 security policy. Risk likelihood is calculated each time based on multiple
 metrics using machine learning algorithms.
 

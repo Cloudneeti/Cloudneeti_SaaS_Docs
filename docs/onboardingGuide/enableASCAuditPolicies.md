@@ -2,7 +2,7 @@
 
 **This step is optional.**
 
-Enable policies from **Azure Security center** using script. This scripts will update configurations and settings to make the cloud account compliant for the policies [listed here](../../onboardingGuide/enableASCAuditPolicies/#asc-policy-list){target=_blank}
+Enable Azure Security Center audit policies (Optional) includes configuring  Azure Security Center free tier in order for Zscaler CSPM to pull all security recommendations and make it available within the product.
 
 ## Prerequisite 
 
@@ -12,7 +12,7 @@ Note : Please note that it is advised to have only one ASC initiative. If there 
 
 ## 6.1 Configure ASC default policies 
 
-Configure ASC policies to remediate policies [listed here ](.././azureQuickWins/#configure-azure-security-center-policies-azure-security-center) using below steps.
+Enable pull integration with Azure Security Center free tier using automated scripts for policies [listed here ](../../onboardingGuide/enableASCAuditPolicies/#asc-policy-list){target=_blank} using below steps.
 
 #### Category Subscription Governance Policies [Increase compliance Score 30-50%]
 
@@ -48,7 +48,7 @@ Configure ASC policies to remediate policies [listed here ](.././azureQuickWins/
 
 ## 6.2 Configure ASC policies at Management Group level
 
-Configure ASC policies to remediate policies [listed here ](.././azureQuickWins/#configure-azure-security-center-policies-azure-security-center) using below steps.
+Enable pull integration with Azure Security Center free tier using automated scripts for policies [listed here ](../../onboardingGuide/enableASCAuditPolicies/#asc-policy-list){target=_blank} using below steps.
 
 #### Category Subscription Governance Policies [Increase compliance Score 30-50%]
 
