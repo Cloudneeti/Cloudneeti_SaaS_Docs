@@ -41,13 +41,33 @@ activities.
 ## Assets Security (Preview)
 
 By clicking on the **Assets Security** tab (1) on the top, users gain access to an assets
-dashboard that provides insights into the resources compliance status. By clicking on the region (2) in the graph, list of resources listed gropued in resource category (3) for selected region. 
+dashboard that provides insights into the protected assets' compliance status and risk level. 
 
 ![Assets_Dashboard](.././images/userGuide/Assets_Security_Dashboard.png#thumbnail)
 
-Resource compliance status can be seen by expanding resource category (1) and clicking on a resource (2) for resource related policies (3)
+![Assets_Dashboard](.././images/userGuide/AS2.png#thumbnail)
 
-![Assets_Dashboard](.././images/userGuide/Assets_Security_Dashboard_ResourceDetails.png#thumbnail)
+
+Assets can be filtered across resource types by using below filtering options:
+-   Resource Type
+-   Resource Status
+-   Region
+-   Risk Level
+-   Asset Tags
+
+![Assets_Dashboard](.././images/userGuide/AS_filter1.png#thumbnail)
+
+![Assets_Dashboard](.././images/userGuide/AS_filter1.png#thumbnail)
+
+Asset compliance status can be seen 
+
+-   Expand resource category (1) 
+
+    ![Assets_Dashboard](.././images/userGuide/AS4.png#thumbnail)
+
+-   Click on a asset (2) for asset related policies (3)
+
+    ![Assets_Dashboard](.././images/userGuide/AS5.png#thumbnail)
 
 Azure Windows VM vulnerability assessment can be seen on **Vulnerability** tab on **Asset Security** dashboard
 
