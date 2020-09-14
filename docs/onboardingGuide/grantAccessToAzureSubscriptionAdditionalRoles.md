@@ -21,6 +21,7 @@ Azure customer role can be created using manual steps or using a JSON file.
 The following steps are done by Microsoft Azure **Subscription Owner** role.
 
 #### Manual
+
 1.	Go to the subscription’s **Access control (IAM)** in the menu
 2.	Click **Add custom role**
 
