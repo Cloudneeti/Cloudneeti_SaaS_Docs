@@ -192,6 +192,11 @@ Once completed, [AWS account onboarding](../../onboardingGuide/amazonWebServiceA
 
     -   AWS::CloudFormation::Stack 
 
+    -   AWS::SNS::Topic
+
+    -   AWS::SQS::Queue
+
+
 ### Generate AWS account access key id and secret 
 
 1.	Click **your name** located on the top right navigation pane
