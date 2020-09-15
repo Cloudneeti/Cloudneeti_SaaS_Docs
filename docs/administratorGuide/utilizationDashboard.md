@@ -75,9 +75,9 @@ Login to Zscaler CSPM portal as License Admin.
 
       
 
-Utilization visibility for the Cloud Account (Utilization based on resources) 
+Utilization visibility for the Cloud Account (Utilization based on workloads) 
 ----------------------------------------------------------------------------
-Please follow the below steps to determine the average total number of resources for a selected Cloud Account.
+Please follow the below steps to determine the average total number of workloads for a selected Cloud Account.
 
 Login to Zscaler CSPM portal as License Admin.
 
