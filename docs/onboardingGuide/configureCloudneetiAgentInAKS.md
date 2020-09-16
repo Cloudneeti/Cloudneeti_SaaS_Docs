@@ -3,7 +3,7 @@ STEP 8: Configuring Cloudneeti agent in Azure Kubernetes Service (AKS)
 
 **This step is optional.**
 
-Cloudneeti includes and extends Azure Security Center recommendations for AKS by deploying a Cloudneeti agent to Azure Kubernetes Cluster. A docker container-based agent is deployed as a cronjob in Kubernetes cluster to collect data for additional security policies. Cloudneeti then provides out-of-box mappings for all 13+ compliance frameworks included in the product. 
+Cloudneeti includes and extends Azure Security Center recommendations for AKS by deploying a Cloudneeti agent to Azure Kubernetes Clusters - AKS, AKS-Engine and VM hosted Kubernetes Clusters. A docker container-based agent is deployed as a cronjob in Kubernetes cluster to collect data for additional security policies. Cloudneeti then provides out-of-box mappings for all 13+ compliance frameworks included in the product. 
 
 Deploying Cloudneeti agent on Azure Kubernetes Service enables compliance monitoring of Kubernetes cluster for security policies [listed here](../../securityPolicies/kubernetes/azureK8SSecurityPolcies/).
 
@@ -74,21 +74,17 @@ Sample JSON file
 | Cloudneeti Environment                                     | Cloudneeti (JSON file generated in step 8.1)      | License Admin |
 | Cluster Hosting                                            | Cloudneeti (JSON file generated in step 8.1)      | License Admin |
 | **Cloudneeti API key**                                     | Cloudneeti                 | License Admin |
-| CloudneetiApiAppId                                         | Cloudneeti                 | License Admin |
+| **CloudneetiApiAppId**                                     | Cloudneeti                 | License Admin |
 | **CloudneetiAPIAppSecret**                                 | Cloudneeti                 | License Admin |
 |                                                            |                            |               |
 
 
 **Notes:**
 
-Set Cloudneeti API key and APIAPPSecret to base64 format : Please
-follow [steps](https://docs.cloudneeti.com/onboardingGuide/configureCloudneetiAgentInEKS/#set-api-key-in-base64) to
-generate the key and set the key in base64 format.
+-   **Generate Cloudneeti API key** : Please follow [steps](../../onboardingGuide/configureCloudneetiAgentInAKS/#generate-cloudneeti-api-key) for API key generation.
 
-Generate API app secret : Please
-follow [steps](https://docs.cloudneeti.com/administratorGuide/configureCloudneetiAPIAccess/#step-1-create-cloudneeti-api-application) to
-configure API access for API **Account.InsertKubernetesClusterData** and
-generate API access secret.
+-   **Generate API app secret** : Please
+follow [steps](../../administratorGuide/configureCloudneetiAPIAccess/#step-1-create-cloudneeti-api-application) to configure API access for API **Account.InsertKubernetesClusterData** and generate API access secret.
 
 8.3: Deploy Cloudneeti agent
 -----------------------------
@@ -345,19 +341,3 @@ Once you receive the confirmation, proceed with the following steps.
 3. Click on **Show**
 4. Copy the **Primary key** to your notepad.
 	![Primary key](.././images/onboardingOffice365Subscription/Primary_key.png#thumbnail)
-
-#### Set API key in base64
-
-Below commands can be used to set API key in base64
-
-##### Bash
-
-        echo -n '<apikey>' | base64
-
-##### Powershell
-
-        $PlainTextKey = <apikey>
-        $Bytes = [System.Text.Encoding]::Unicode.GetBytes($PlainTextKey)
-        $EncodedKey =[Convert]::ToBase64String($Bytes)
-        $EncodedKey
-

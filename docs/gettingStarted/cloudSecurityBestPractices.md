@@ -4,23 +4,23 @@ The Cloud Security Best Practices view provides a list of all security policies 
 
 | **Connector Type​**              | **Total Policy Count​**    | **Automated Policy Count​** | **Manual Policy Count​** |
 |---------------------------------|---------------------------|----------------------------|-------------------------|
-|  AWS​                            | [454](../../securityPolicies/awsSecurityPolcies/)                       | 434                        | 20                      |
+|  AWS​                            | [456](../../securityPolicies/awsSecurityPolcies/)                       | 433                        | 23                      |
 |  AWS​ VM baseline RHEL           | [174](../../securityPolicies/osBaseline/centOSSecurityPolcies/)                       | 174                        | -                       |
 |  AWS VM baseline Win 2016​       | [351](../../securityPolicies/osBaseline/windows16SecurityPolcies/#aws)                       | 351                        | -                       |
-|  Amazon EC2-instance based Kubernetes             | [73](../../securityPolicies/kubernetes/awsK8SSecurityPolcies/#ec2-instance-based-kubernetes-security-policies)                         | 73                      | -                      |
-|  Amazon Elastic Kubernetes Service (Amazon EKS)             | [21](../../securityPolicies/kubernetes/awsK8SSecurityPolcies/#eks-security-policies)                         | 21                      | -                      |
-|  Office365​                      | [133](../../securityPolicies/office365SecurityPolcies/)                       | 96                         | 36                      |
+|  Amazon EC2-instance based Kubernetes             | [75](../../securityPolicies/kubernetes/awsK8SSecurityPolcies/#ec2-instance-based-kubernetes-security-policies)                         | 75                      | -                      |
+|  Amazon Elastic Kubernetes Service (Amazon EKS)             | [22](../../securityPolicies/kubernetes/awsK8SSecurityPolcies/#eks-security-policies)                         | 22                      | -                      |
+|  Office365​                      | [133](../../securityPolicies/office365SecurityPolcies/)                       | 97                         | 36                      |
 |  Azure​                          | [425](../../securityPolicies/azureSecurityPolcies/)                       | 392                        | 33                      |
 |  Azure VM baseline Win 2012 R2​  | [182](../../http://127.0.0.1:8000/securityPolicies/osBaseline/windows12SecurityPolcies/#azure)                       | 182​                        | -                       |
 |  Azure VM baseline Win 2016​     | [197](../../securityPolicies/osBaseline/windows16SecurityPolcies/)                       | 197                        | -                       |
 |  Azure VM baseline Win 2019     | [193](../../securityPolicies/osBaseline/windows19SecurityPolcies/)                       | 193                        | -                       |
-|  Azure VM baseline Ubuntu 18.04​ | [40](../../securityPolicies/osBaseline/ubuntuSecurityPolcies/)​                        | 40​                         | -                       |
-|  Azure VM baseline CentOS​       | [34](../../securityPolicies/osBaseline/centOSSecurityPolcies/#azure)​                        | 34​                         | -                       |
-|  Azure Kubernetes | [71](../../securityPolicies/kubernetes/azureK8SSecurityPolcies/#vm-based-kubernetes-security-policies)                        | 71                         | -                       |
-|  Azure Kubernetes Service (AKS Engine) | [72](../../securityPolicies/kubernetes/azureK8SSecurityPolcies/#aks-engine-security-policies)                        | 72                         | -                       |
-|  Azure Kubernetes Service (AKS) | [19](../../securityPolicies/kubernetes/azureK8SSecurityPolcies/#aks-security-policies)                        | 19                         | -                       |
-| GCP (Preview)                         | [64](../../securityPolicies/azureSecurityPolcies/)                       | 50                        | 14                      |
-| **Grand Total**​                 | **2503**​                  | **2400**​                   |                   **103**      |
+|  Azure VM baseline Ubuntu 18.04​ | [40](../../securityPolicies/osBaseline/ubuntuSecurityPolcies/)​                        | 40​                        | -                       |
+|  Azure VM baseline CentOS​       | [34](../../securityPolicies/osBaseline/centOSSecurityPolcies/#azure)​                        | 34​                        | -                       |
+|  Azure Kubernetes | [75](../../securityPolicies/kubernetes/azureK8SSecurityPolcies/#vm-based-kubernetes-security-policies)                        | 75                         | -                       |
+|  Azure Kubernetes Service (AKS Engine) | [78](../../securityPolicies/kubernetes/azureK8SSecurityPolcies/#aks-engine-security-policies)                        | 78                         | -                       |
+|  Azure Kubernetes Service (AKS) | [23](../../securityPolicies/kubernetes/azureK8SSecurityPolcies/#aks-security-policies)                        | 23                         | -                       |
+| GCP (Preview)                         | [63](../../securityPolicies/azureSecurityPolcies/)                       | 49                        | 14                      |
+| **Grand Total**​                 | **2521**​                  | **2415**​                   |                   **106**      |
 
 
 
