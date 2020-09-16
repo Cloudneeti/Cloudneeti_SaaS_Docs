@@ -48,7 +48,8 @@ dashboard that provides insights into the protected assets' compliance status an
 ![Assets_Dashboard](.././images/userGuide/AS2.png#thumbnail)
 
 
-Assets can be filtered across resource types by using below filtering options:
+Assets can be filtered across resource types by using below filtering options:\
+
 -   Resource Type
 -   Resource Status
 -   Region
