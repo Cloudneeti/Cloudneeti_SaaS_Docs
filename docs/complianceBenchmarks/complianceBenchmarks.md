@@ -43,9 +43,8 @@ Azure
 | Center for Internet Security Azure - Microsoft Windows Server 2016 Benchmark v1.0.0      | 156          |
 | Center for Internet Security Azure - Microsoft Windows Server 2012 R2 Benchmark v1.0.0   | 158          |
 | Center for Internet Security Azure - Microsoft Windows Server 2019 Benchmark v1.0.0 (preview) | 174      |
-| Cloud Security Alliance's Cloud Control Matrix (CCM v3.0.1)                    | 
-1003          |
-| National Institute of Standards and Technology (NIST) Cybersecurity Framework (CSF v1.1) | 1228         |
+| Cloud Security Alliance's Cloud Control Matrix (CCM v3.0.1)       | 1003     |
+| National Institute of Standards and Technology (NIST) Cybersecurity Framework (CSF v1.1) | 1228      |
 | General Data Protection Regulation                                                       | 901          |
 | HIPAA - Health Insurance Portability and Accountability Act                              | 1197          |
 | FFIEC - Federal Financial Institutions Examination Council (CAT)                         | 1199          |
