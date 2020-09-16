@@ -5,7 +5,7 @@ The Security Policies view provides a list of all security policies within the C
 GCP Security Policies (Preview)
 -------------------------------
 
-| Category Name                        | Policy Name                                                                                                                |
+| Category Name                         | Policy Name                                                                                                                |
     |--------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
     | GCP - Identity and Access Management | Ensure that corporate login credentials are used                                                                           |
     | GCP - Identity and Access Management | Ensure that multi-factor authentication is enabled for all non-service accounts                                            |
