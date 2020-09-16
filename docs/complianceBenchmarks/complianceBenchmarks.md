@@ -56,6 +56,29 @@ AWS
 | SOC2 - AICPA TSC 2017                                                                    | 844          |
 | Unclassified - Naval Nuclear Propulsion Information (U-NNPI)                             | 926          |
 
+
+GCP (Preview)
+-------------
+
+| **Benchmark Title**           | **Policy Count** |
+|-------------------------------|------------------|
+| Cloud Security Best Practices | 63               |
+| CIS GCP FD v1.1.0             | 63               |
+| NIST CSF v1.1                 | 63               |
+| CSA CCM v3.0.1                | 63               |
+| FFIEC CAT                     | 62               |
+| GDPR                          | 63               |
+| HIPAA                         | 63               |
+| NIST 800-53 Rev.4             | 63               |
+| U-NNPI                        | 62               |
+| PCI DSS 3.2                   | 63               |
+| ISO/IEC 27001:2013            | 63               |
+| RBI                           | 21               |
+| UK NCSC                       | 19               |
+| SOC2 AICPA TSC 2017           | 60               |
+| GxP – FDA 21 CFR              | 52               |
+
+
 Office 365
 ----------
 

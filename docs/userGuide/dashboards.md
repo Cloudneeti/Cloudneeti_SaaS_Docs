@@ -69,6 +69,6 @@ Asset compliance status can be seen
 
     ![Assets_Dashboard](.././images/userGuide/AS5.png#thumbnail)
 
-Azure Windows VM vulnerability assessment can be seen on **Vulnerability** tab on **Asset Security** dashboard
+AWS Windows VM vulnerability assessment can be seen on **Vulnerability** tab on **Asset Security** dashboard
 
-![Azure vulnerability](.././images/vulnerability/vulnerabilityTab_Details.png#thumbnail)
+![AWS vulnerability](.././images/userGuide/vulnerabilityTab_AWS.png#thumbnail)
