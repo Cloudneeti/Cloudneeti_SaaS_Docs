@@ -24,6 +24,7 @@ AWS
 | RBI - Annex 1 Baseline Cyber Security and Resilience Requirements                        | 26           |
 | SOC2 - AICPA TSC 2017                                                                    | 1062          |
 | Unclassified - Naval Nuclear Propulsion Information (U-NNPI)                             | 1013          |
+| Cybersecurity Maturity Model Certification                             | 1074          |
 
 
 Azure
@@ -41,8 +42,8 @@ Azure
 | Center for Internet Security Azure - Ubuntu Linux 18.04 LTS Benchmark v1.0.0             | 40           |
 | Center for Internet Security Azure - Microsoft Windows Server 2016 Benchmark v1.0.0      | 156          |
 | Center for Internet Security Azure - Microsoft Windows Server 2012 R2 Benchmark v1.0.0   | 158          |
-| Center for Internet Security Azure - Microsoft Windows Server 2019 Benchmark v1.0.0 [preview] | 174      |
-| Cloud Security Alliance's Cloud Control Matrix (CCM v3.0.1)                              | 
+| Center for Internet Security Azure - Microsoft Windows Server 2019 Benchmark v1.0.0 (preview) | 174      |
+| Cloud Security Alliance's Cloud Control Matrix (CCM v3.0.1)                    | 
 1003          |
 | National Institute of Standards and Technology (NIST) Cybersecurity Framework (CSF v1.1) | 1228         |
 | General Data Protection Regulation                                                       | 901          |
@@ -56,7 +57,7 @@ Azure
 | SOC2 - AICPA TSC 2017                                                                    | 1232          |
 | UK National Cyber Security Centre                                                        | 360          |
 | Unclassified - Naval Nuclear Propulsion Information (U-NNPI)                             | 1228         |
-| Cybersecurity Maturity Model Certification                             | 1074          |
+| Cybersecurity Maturity Model Certification                             | 1233          |
 
 GCP (Preview)
 -------------
