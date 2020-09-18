@@ -83,6 +83,11 @@ nav:
     - Vulnerability: onboardingGuide/azureVulnerability.md
     - Azure Kubernetes Service (AKS): onboardingGuide/configureCloudneetiAgentInAKS.md
     - Azure onboarding health status: onboardingGuide/azureAccountHealthStatus.md
+  - Google Cloud Platform (Preview):
+    - Overview: onboardingGuide/gcpOnboardingOverview.md
+    - GCP Project: onboardingGuide/gcpProject.md
+    - GCP Organization: onboardingGuide/gcpOrganization.md
+    - Annexure: onboardingGuide/gcpAnnexure.md
   - Office 365: 
     - Onboarding steps: onboardingGuide/office365Subscription.md
     - Office 365 onboarding health status: onboardingGuide/office365AccountHealthStatus.md

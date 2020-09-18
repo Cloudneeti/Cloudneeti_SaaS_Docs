@@ -12,5 +12,7 @@ Please follow links for details:
 
 ### [Microsoft Azure Subscription](../azureSubscriptions/){target=_blank}
 
+### [Google Cloud Platform (Preview)](../../onboardingGuide/gcpOnboardingOverview/){target=_blank}
+
 ### [Office 365 Subscription](../office365Subscription/){target=_blank}
 
