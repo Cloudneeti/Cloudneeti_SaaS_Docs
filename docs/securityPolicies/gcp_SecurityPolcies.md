@@ -2,8 +2,8 @@
 The Security Policies view provides a list of all security policies within the Cloudneeti application. Following is the security policies within the Cloudneeti application for different cloud account types, please refer [Release Notes](../../releaseNotes/2020/){target=_blank} for latest updates.
 
 
-GCP Security Policies (Preview)
--------------------------------
+GCP Security Policies 
+----------------------
 
 | Category Name                         | Policy Name                                                                                                                |
     |--------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
