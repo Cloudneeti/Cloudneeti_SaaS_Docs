@@ -19,7 +19,7 @@ Login to Zscaler CSPM portal as License Admin.
 
     ![Azure Resources](.././images/utilizationDashboard/utilization.png#thumbnail)
 
-3. Select **Time Range** and **Date** (1)
+3. Select **Time Range** (1) and **Date** (2)
 
     ![Azure Resources](.././images/utilizationDashboard/license_level.png#thumbnail)
 
@@ -43,7 +43,7 @@ Login to Zscaler CSPM portal as License Admin.
 
     ![Azure Resources](.././images/utilizationDashboard/csp_level_nav.png#thumbnail)
 
-3. Select **Time Range** and **Date** (1)
+3. Select **Time Range** (1) and **Date** (2)
 
 4. Aggregated resource view is shown for all cloud accounts within a selected License.
     - Resource Trend 
@@ -65,7 +65,7 @@ Login to Zscaler CSPM portal as License Admin.
 
     ![Azure Resources](.././images/utilizationDashboard/account_level_nav.png#thumbnail)
 
-3. Select **Time Range** and **Date** (1)
+3. Select **Time Range** (1) and **Date** (2)
 
 4. Resource view is shown for a selected cloud account
     - Resource Trend 
