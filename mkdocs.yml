@@ -50,7 +50,7 @@ nav:
   - Cloud Security Best Practices: gettingStarted/cloudSecurityBestPractices.md
   - AWS Security Policies: securityPolicies/awsSecurityPolcies.md
   - Azure Security Policies: securityPolicies/azureSecurityPolcies.md
-  - GCP Security Policies: securityPolicies/gcp_SecurityPolcies.md
+  - GCP Security Policies(Preview): securityPolicies/gcp_SecurityPolcies.md
   - Office 365 Security Policies: securityPolicies/office365SecurityPolcies.md
   - OS baselines:
     - CentOS: securityPolicies/osBaseline/centOSSecurityPolcies.md
