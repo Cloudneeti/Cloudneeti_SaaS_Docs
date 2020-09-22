@@ -68,8 +68,8 @@ Login to Zscaler CSPM portal as License Admin.
 3. Select **Time Range** (1) and **Date** (2)
 
 4. Resource view is shown for a selected cloud account
-    - Resource Trend 
-    - Resource summary per account for chosen Cloud Service
+    - Daily Resource Trend 
+    - Resource summary per day for chosen Cloud Account
 
     ![Azure Resources](.././images/utilizationDashboard/account_level.png#thumbnail)
 
@@ -104,8 +104,8 @@ Login to Zscaler CSPM portal as License Admin.
     ![Azure Resources](.././images/utilizationDashboard/account_level_filter5.png#thumbnail)
 
 7. Resource counts across Workload types for a selected cloud account for selected Time Range and Date appears
-    - Workload Trend 
-    - Workload summary per account for chosen Cloud Service
+    - Daily Workload Utilization Trend 
+    - Workload summary per day for chosen Cloud Account
 
     ![Azure Resources](.././images/utilizationDashboard/account_level_workload.png#thumbnail)
 
