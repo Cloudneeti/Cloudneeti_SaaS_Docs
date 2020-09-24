@@ -91,10 +91,10 @@ Follow below steps to create and assign roles to the service account.
 
 8.  Click on **CONTINUE** to save the role selections
 
-    ![GCP Project](.././images/gcp/gcp_img_8.png#thumbnail)
-
 9.  Click on **DONE** on Grant user access to this service account to finish the
     service account creation.
+
+    ![GCP Project](.././images/gcp/gcp_img_8.png#thumbnail)
 
 10.  Click on the service account created during the previous step and create a
     Keys.
