@@ -87,7 +87,7 @@ Follow below steps to create and assign roles to the service account.
 
 7.  Click on **ADD ANOTHER ROLE** to add Cloud Asset Viewer role
 
-    ![GCP Project](.././images/gcp/gcp_img_8.png#thumbnail)
+    ![GCP Project](.././images/gcp/gcp_img_7a.png#thumbnail)
 
 8.  Click on **CONTINUE** to save the role selections
 
