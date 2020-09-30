@@ -305,4 +305,7 @@ available in the Center for Internet Security (CIS) Azure benchmark
 | 1600.28    | Ensure that 'Number of days before users are asked to re-confirm their authentication information' is not set to '0' | Azure - Identity and Access |
 | 1600.29    | Ensure that 'Notify users on password resets?' is set to 'Yes'                              | Azure - Identity and Access |
 | 1600.30    | Ensure that 'Notify all admins when other admins reset their password?' is set to 'Yes'                 | Azure - Identity and Access |
+| 1600.4    | Enforce the policy to set Password to 'always' expire in Azure Active Directory for all Organization Users    | Azure - Identity and Access |
+| 1600.4    | Enforce the policy to set Password to 'always' expire in Azure Active Directory for all Organization Users    | Azure - Identity and Access |
+| 1600.12    | Ensure that there are no guest users                                   | Azure - Identity and Access |
 
