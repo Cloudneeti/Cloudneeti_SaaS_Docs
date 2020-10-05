@@ -7,7 +7,7 @@
 
     -   The Cloudneeti application needs "Microsoft.Web/sites/config/list/action" action present in [Website Contributor role](https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#custom-role-with-permission-microsoftwebsitesconfiglistaction) in order to collect authentication and authorization configuration of Web/API/Mobile/Function Apps which is hosted on the App Service Plan. The current subscription Reader role given doesn't have sufficient permissions to collect web site configuration details.
 
-    -   If the custom role with "Microsoft.Web/sites/config/list/action" is not assigned, Cloudneeti application will not be able to collect data of security policies [listed here.](.././grantAccessToAzureSubscriptionAdditionalRoles/#website-contributor-role)
+    -   If the custom role with "Microsoft.Web/sites/config/list/action" is not assigned, Cloudneeti application will not be able to collect data of security policies [listed here.](.././grantAccessToAzureSubscriptionAdditionalRoles/#custom-role-with-permission-microsoftwebsitesconfiglistaction)
 
 -   Custom role with permission **"Microsoft.Storage/storageAccounts/listkeys/action"** for Azure Subscription level scope.
 
