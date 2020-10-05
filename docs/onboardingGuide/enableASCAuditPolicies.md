@@ -8,7 +8,10 @@ Enable Azure Security Center audit policies (Optional) includes configuring  Azu
 
 Access Needed on Subscription: **Contributor**
 
-Note : Please note that it is advised to have only one ASC initiative. If there are multiple initiatives created, Cloud account compliance results in Cloudneeti may vary. 
+-   **Note:**
+1.  Please note that it is advised to have only one ASC initiative. If there are multiple initiatives created, Cloud account compliance results in Cloudneeti may vary. 
+2.  Please note that it is not required to have Azure Defender enabled (ASC Standard tier).
+
 
 ## 6.1 Configure ASC default policies 
 
