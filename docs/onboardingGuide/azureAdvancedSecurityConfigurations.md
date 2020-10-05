@@ -280,7 +280,7 @@ Switch to Azure AD with the Azure Subscription with pre-requisite access.
 
 ### Advanced security configuration
 
-The advanced security policy data collector enables the following 18 policies as
+The advanced security policy data collector enables the following 21 policies as
 available in the Center for Internet Security (CIS) Azure benchmark
 (Reference
 [here](https://www.cloudneeti.com/2018/03/cloudneeti-delivers-industry-first-automation-for-cis-azure-foundations-benchmark/){target=_blank}).
