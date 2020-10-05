@@ -30,6 +30,8 @@ The following steps are required to onboard Microsoft Azure to the Cloudneeti ap
 
 6. [**Enable Azure Security Center audit policies (Optional)**](../../onboardingGuide/azureSubscriptions/#step-6-enable-azure-security-center-audit-policies){target=_blank} includes enabling Azure Security Center audit policies (Optional) includes configuring  Azure Security Center free tier in order for Zscaler CSPM to pull all security recommendations and make it available within the product.
 
+    - Note : Please note that it is not required to have Azure Defender enabled (ASC Standard tier).
+
 7. [**Configure OS baseline and Vulnerability Assessment Solution (Optional)**](../../onboardingGuide/azureVulnerability/){target=_blank} inlcudes connecting VMs to OMS workspace. Also deploy partner Vulnerability Assessment Solution in Azure Security Center and installing the solution on multiple VMs allows to provide visibility into missing updates, misconfigured OS security settings, endpoint protection status, and health and threat protection.
 
 8. [**Configure Cloudneeti agent on AKS, AKS Engine and VM Based Kubernetes Clusters (Optional)**](../../onboardingGuide/configureCloudneetiAgentInAKS/){target=_blank} inlcudes Deploying Cloudneeti agent on Azure Kubernetes Service enables compliance monitoring of Azure Kubernetes Clusters - AKS, AKS-Engine and VM hosted Kubernetes Clusters.
@@ -306,7 +308,7 @@ Custom role with permission **"Microsoft.Web/sites/config/list/action"** for Azu
 
 -   The Cloudneeti application needs "Microsoft.Web/sites/config/list/action" action present in [Website Contributor role](https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#custom-role-with-permission-microsoftwebsitesconfiglistaction) in order to collect authentication and authorization configuration of Web/API/Mobile/Function Apps which is hosted on the App Service Plan. The current subscription Reader role given doesn't have sufficient permissions to collect web site configuration details.
 
--   If the custom role with "Microsoft.Web/sites/config/list/action" is not assigned, Cloudneeti application will not be able to collect data of security policies [listed here.](.././grantAccessToAzureSubscriptionAdditionalRoles/#website-contributor-role)
+-   If the custom role with "Microsoft.Web/sites/config/list/action" is not assigned, Cloudneeti application will not be able to collect data of security policies [listed here.](.././grantAccessToAzureSubscriptionAdditionalRoles/#custom-role-with-permission-microsoftwebsitesconfiglistaction)
 
 Custom role with permission **"Microsoft.Storage/storageAccounts/listkeys/action"** for Azure Subscription level scope.
 
@@ -336,6 +338,8 @@ Please follow [link](../../onboardingGuide/azureAdvancedSecurityConfigurations/)
 
 Enable pull integration with Azure Security Center free tier using either manual steps or automated scripts. 
 Automated scripts will update configurations to enable data collection for the policies [listed here](../../onboardingGuide/enableASCAuditPolicies/#asc-policy-list){target=_blank}.
+
+Note : Please note that it is not required to have Azure Defender enabled (ASC Standard tier).
 
 Please follow [link](../../onboardingGuide/enableASCAuditPolicies/){target=_blank} for steps.
 
