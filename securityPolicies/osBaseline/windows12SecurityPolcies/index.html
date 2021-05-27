@@ -1,0 +1,783 @@
+<!doctype html><html lang="en" class="no-js"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="x-ua-compatible" content="ie=edge"><meta name="description" content="Cloudneeti Documentation"><meta name="author" content="The Cloudneeti Team"><meta name="lang:clipboard.copy" content="Copy to clipboard"><meta name="lang:clipboard.copied" content="Copied to clipboard"><meta name="lang:search.language" content="en"><meta name="lang:search.pipeline.stopwords" content="True"><meta name="lang:search.pipeline.trimmer" content="True"><meta name="lang:search.result.none" content="No matching documents"><meta name="lang:search.result.one" content="1 matching document"><meta name="lang:search.result.other" content="# matching documents"><meta name="lang:search.tokenizer" content="[\s\-]+"><link rel="shortcut icon" href="../../../assets/images/favicon.png"><meta name="generator" content="mkdocs-1.1.2, mkdocs-material-4.3.1"><title>Windows 2012 R2 - Documentation</title><link rel="stylesheet" href="../../../assets/stylesheets/application.4031d38b.css"><link rel="stylesheet" href="../../../assets/stylesheets/application-palette.224b79ff.css"><meta name="theme-color" content=""><script src="../../../assets/javascripts/modernizr.74668098.js"></script><link href="https://fonts.gstatic.com" rel="preconnect" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,400i,700|&display=swap"><style>body,input{font-family:"Poppins","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"","Courier New",Courier,monospace}</style><link rel="stylesheet" href="../../../assets/fonts/material-icons.css"><link rel="stylesheet" href="../../../stylesheets/extra.css"><script>window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-149855644-1", "docs.cloudneeti.com")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })</script><script async src="https://www.google-analytics.com/analytics.js"></script></head><body dir="ltr" data-md-color-primary="cloudneeti" data-md-color-accent="cloudneeti"><svg class="md-svg"><defs></defs></svg> <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off"> <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off"> <label class="md-overlay" data-md-component="overlay" for="__drawer"></label><a href="#microsoft-windows-server-2012-r2" tabindex="1" class="md-skip">Skip to content </a><header class="md-header" data-md-component="header"><nav class="md-header-nav md-grid"><div class="md-flex"><div class="md-flex__cell md-flex__cell--shrink"><a href="../../.." title="Documentation" class="md-header-nav__button md-logo md-custom-logo"><img src="../../../images/logo.png" width="170" height="40"></a></div><div class="md-flex__cell md-flex__cell--shrink"><label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label></div><div class="md-flex__cell md-flex__cell--stretch"><div class="md-flex__ellipsis md-header-nav__title" data-md-component="title"><!--<span class="md-header-nav__topic"><a href="../../..">Documentation</a></span><span class="md-header-nav__topic">Windows 2012 R2</span>--></div></div><div class="md-flex__cell md-flex__cell--shrink"><label class="md-icon md-icon--search md-header-nav__button" for="__search"></label><div class="md-search" data-md-component="search" role="dialog"><label class="md-search__overlay" for="__search"></label><div class="md-search__inner" role="search"><form class="md-search__form" name="search"><input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active"> <label class="md-icon md-search__icon" for="__search"></label> <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">&#xE5CD;</button></form><div class="md-search__output"><div class="md-search__scrollwrap" data-md-scrollfix><div class="md-search-result" data-md-component="result"><div class="md-search-result__meta">Type to start searching</div><ol class="md-search-result__list"></ol></div></div></div></div></div></div></div></nav></header><div class="md-container"><main class="md-main"><div class="md-main__inner md-grid" data-md-component="container"><div class="md-sidebar md-sidebar--primary" data-md-component="navigation"><div class="md-sidebar__scrollwrap"><div class="md-sidebar__inner"><nav class="md-nav md-nav--primary" data-md-level="0"><label class="md-nav__title md-nav__title--site" for="__drawer"><a href="../../.." title="Documentation" class="md-nav__button md-logo"><img src="../../../images/logo.png" width="48" height="48"></a>Documentation</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1"><label class="md-nav__link" for="nav-1">Introduction</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-1">Introduction</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../../gettingStarted/introduction/" title="Getting Started" class="md-nav__link">Getting Started</a></li><li class="md-nav__item"><a href="../../../gettingStarted/productFeatures/" title="Product Features" class="md-nav__link">Product Features</a></li><li class="md-nav__item"><a href="../../../gettingStarted/howItWorks/" title="How it works" class="md-nav__link">How it works</a></li><li class="md-nav__item"><a href="../../../gettingStarted/cloudSecurityBestPractices/" title="Cloud Security Best Practices" class="md-nav__link">Cloud Security Best Practices</a></li><li class="md-nav__item"><a href="../../../gettingStarted/deploymentArchitecture/" title="Deployment Architecture" class="md-nav__link">Deployment Architecture</a></li><li class="md-nav__item"><a href="../../../gettingStarted/customerDataSecurity/" title="Customer Data Security" class="md-nav__link">Customer Data Security</a></li><li class="md-nav__item"><a href="../../../gettingStarted/glossary/" title="Glossary" class="md-nav__link">Glossary</a></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2"><label class="md-nav__link" for="nav-2">Try and Buy</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-2">Try and Buy</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../../tryAndBuy/freeTrial/" title="Free Trial" class="md-nav__link">Free Trial</a></li><li class="md-nav__item"><a href="../../../tryAndBuy/subscribeOnAzureMarketplace/" title="Buy on Azure Marketplace" class="md-nav__link">Buy on Azure Marketplace</a></li><li class="md-nav__item"><a href="../../../tryAndBuy/subscribe/" title="Request a License" class="md-nav__link">Request a License</a></li><li class="md-nav__item"><a href="../../../tryAndBuy/partnerCobranding/" title="Partner co-branding" class="md-nav__link">Partner co-branding</a></li><li class="md-nav__item"><a href="../../../tryAndBuy/estimatePricing/" title="Estimate Pricing" class="md-nav__link">Estimate Pricing</a></li></ul></nav></li><li class="md-nav__item md-nav__item--active md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked><label class="md-nav__link" for="nav-3">Security Policies</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-3">Security Policies</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../../gettingStarted/cloudSecurityBestPractices/" title="Cloud Security Best Practices" class="md-nav__link">Cloud Security Best Practices</a></li><li class="md-nav__item"><a href="../../awsSecurityPolcies/" title="AWS Security Policies" class="md-nav__link">AWS Security Policies</a></li><li class="md-nav__item"><a href="../../azureSecurityPolcies/" title="Azure Security Policies" class="md-nav__link">Azure Security Policies</a></li><li class="md-nav__item"><a href="../../gcp_SecurityPolcies/" title="GCP Security Policies(Preview)" class="md-nav__link">GCP Security Policies(Preview)</a></li><li class="md-nav__item"><a href="../../office365SecurityPolcies/" title="Office 365 Security Policies" class="md-nav__link">Office 365 Security Policies</a></li><li class="md-nav__item md-nav__item--active md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-6" type="checkbox" id="nav-3-6" checked><label class="md-nav__link" for="nav-3-6">OS baselines</label><nav class="md-nav" data-md-component="collapsible" data-md-level="2"><label class="md-nav__title" for="nav-3-6">OS baselines</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../centOSSecurityPolcies/" title="CentOS" class="md-nav__link">CentOS</a></li><li class="md-nav__item"><a href="../rhelSecurityPolcies/" title="RHEL" class="md-nav__link">RHEL</a></li><li class="md-nav__item"><a href="../ubuntuSecurityPolcies/" title="Ubuntu 18.04" class="md-nav__link">Ubuntu 18.04</a></li><li class="md-nav__item md-nav__item--active"><input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc"><label class="md-nav__link md-nav__link--active" for="__toc">Windows 2012 R2</label><a href="./" title="Windows 2012 R2" class="md-nav__link md-nav__link--active">Windows 2012 R2</a><nav class="md-nav md-nav--secondary"><label class="md-nav__title" for="__toc">In this article</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="#aws" title="AWS" class="md-nav__link">AWS</a></li><li class="md-nav__item"><a href="#azure" title="Azure" class="md-nav__link">Azure</a></li></ul></nav></li><li class="md-nav__item"><a href="../windows16SecurityPolcies/" title="Windows 2016" class="md-nav__link">Windows 2016</a></li><li class="md-nav__item"><a href="../windows19SecurityPolcies/" title="Windows 2019" class="md-nav__link">Windows 2019</a></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-7" type="checkbox" id="nav-3-7"><label class="md-nav__link" for="nav-3-7">Kubernetes</label><nav class="md-nav" data-md-component="collapsible" data-md-level="2"><label class="md-nav__title" for="nav-3-7">Kubernetes</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../kubernetes/awsK8SSecurityPolcies/" title="AWS" class="md-nav__link">AWS</a></li><li class="md-nav__item"><a href="../../kubernetes/azureK8SSecurityPolcies/" title="Azure" class="md-nav__link">Azure</a></li></ul></nav></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4"><label class="md-nav__link" for="nav-4">Compliance Benchmarks</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-4">Compliance Benchmarks</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../../complianceBenchmarks/complianceBenchmarks/" title="Benchmarks" class="md-nav__link">Benchmarks</a></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5"><label class="md-nav__link" for="nav-5">Onboarding Guide</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-5">Onboarding Guide</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../../onboardingGuide/onboardingGuideOverview/" title="Overview" class="md-nav__link">Overview</a></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-2" type="checkbox" id="nav-5-2"><label class="md-nav__link" for="nav-5-2">Amazon Web Services</label><nav class="md-nav" data-md-component="collapsible" data-md-level="2"><label class="md-nav__title" for="nav-5-2">Amazon Web Services</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../../onboardingGuide/amazonWebServiceAccounts/" title="Onboarding steps" class="md-nav__link">Onboarding steps</a></li><li class="md-nav__item"><a href="../../../onboardingGuide/awsEnableConfigBasedDataCollection/" title="Enable AWS Config Based Data Collection (optional)" class="md-nav__link">Enable AWS Config Based Data Collection (optional)</a></li><li class="md-nav__item"><a href="../../../onboardingGuide/awsVMBaselineConfiguration/" title="OS baseline (optional)" class="md-nav__link">OS baseline (optional)</a></li><li class="md-nav__item"><a href="../../../onboardingGuide/awsVulnerabilities/" title="Vulnerability (optional)" class="md-nav__link">Vulnerability (optional)</a></li><li class="md-nav__item"><a href="../../../onboardingGuide/configureCloudneetiAgentInEKS/" title="Amazon Elastic Kubernetes Service (Amazon EKS) (optional)" class="md-nav__link">Amazon Elastic Kubernetes Service (Amazon EKS) (optional)</a></li><li class="md-nav__item"><a href="../../../onboardingGuide/awsAccountHealthStatus/" title="AWS onboarding health status" class="md-nav__link">AWS onboarding health status</a></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-3" type="checkbox" id="nav-5-3"><label class="md-nav__link" for="nav-5-3">Microsoft Azure</label><nav class="md-nav" data-md-component="collapsible" data-md-level="2"><label class="md-nav__title" for="nav-5-3">Microsoft Azure</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../../onboardingGuide/azureSubscriptions/" title="Onboarding steps" class="md-nav__link">Onboarding steps</a></li><li class="md-nav__item"><a href="../../../onboardingGuide/grantAccessToAzureSubscriptionAdditionalRoles/" title="Additional roles" class="md-nav__link">Additional roles</a></li><li class="md-nav__item"><a href="../../../onboardingGuide/grantAccessToKeyVaults/" title="Key vaults" class="md-nav__link">Key vaults</a></li><li class="md-nav__item"><a href="../../../onboardingGuide/azureAdvancedSecurityConfigurations/" title="Advanced security configurations" class="md-nav__link">Advanced security configurations</a></li><li class="md-nav__item"><a href="../../../onboardingGuide/enableASCAuditPolicies/" title="Enable ASC audit policies" class="md-nav__link">Enable ASC audit policies</a></li><li class="md-nav__item"><a href="../../../onboardingGuide/azureOSBaseline/" title="OS baseline and vulnerability" class="md-nav__link">OS baseline and vulnerability</a></li><li class="md-nav__item"><a href="../../../onboardingGuide/azureVulnerability/" title="Vulnerability" class="md-nav__link">Vulnerability</a></li><li class="md-nav__item"><a href="../../../onboardingGuide/configureCloudneetiAgentInAKS/" title="Azure Kubernetes Service (AKS)" class="md-nav__link">Azure Kubernetes Service (AKS)</a></li><li class="md-nav__item"><a href="../../../onboardingGuide/azureAccountHealthStatus/" title="Azure onboarding health status" class="md-nav__link">Azure onboarding health status</a></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-4" type="checkbox" id="nav-5-4"><label class="md-nav__link" for="nav-5-4">Google Cloud Platform (Preview)</label><nav class="md-nav" data-md-component="collapsible" data-md-level="2"><label class="md-nav__title" for="nav-5-4">Google Cloud Platform (Preview)</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../../onboardingGuide/gcpOnboardingOverview/" title="Overview" class="md-nav__link">Overview</a></li><li class="md-nav__item"><a href="../../../onboardingGuide/gcpProject/" title="GCP Project" class="md-nav__link">GCP Project</a></li><li class="md-nav__item"><a href="../../../onboardingGuide/gcpOrganization/" title="GCP Organization" class="md-nav__link">GCP Organization</a></li><li class="md-nav__item"><a href="../../../onboardingGuide/gcpAnnexure/" title="Annexure" class="md-nav__link">Annexure</a></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-5" type="checkbox" id="nav-5-5"><label class="md-nav__link" for="nav-5-5">Office 365</label><nav class="md-nav" data-md-component="collapsible" data-md-level="2"><label class="md-nav__title" for="nav-5-5">Office 365</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../../onboardingGuide/office365Subscription/" title="Onboarding steps" class="md-nav__link">Onboarding steps</a></li><li class="md-nav__item"><a href="../../../onboardingGuide/office365AccountHealthStatus/" title="Office 365 onboarding health status" class="md-nav__link">Office 365 onboarding health status</a></li><li class="md-nav__item"><a href="../../../onboardingGuide/office365AdvanceSecurityConfigurationUpgrade/" title="Upgrade advanced security configurations" class="md-nav__link">Upgrade advanced security configurations</a></li></ul></nav></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6"><label class="md-nav__link" for="nav-6">User Guide</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-6">User Guide</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../../gettingStarted/signInAndSignOut/" title="Sign In and Sign Out" class="md-nav__link">Sign In and Sign Out</a></li><li class="md-nav__item"><a href="../../../userGuide/userInterface/" title="User Interface" class="md-nav__link">User Interface</a></li><li class="md-nav__item"><a href="../../../userGuide/dashboards/" title="Dashboards" class="md-nav__link">Dashboards</a></li><li class="md-nav__item"><a href="../../../userGuide/securityPolicies/" title="Security Policies" class="md-nav__link">Security Policies</a></li><li class="md-nav__item"><a href="../../../userGuide/complianceBenchmarks/" title="Compliance Benchmarks" class="md-nav__link">Compliance Benchmarks</a></li><li class="md-nav__item"><a href="../../../userGuide/reports/" title="Reports" class="md-nav__link">Reports</a></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7"><label class="md-nav__link" for="nav-7">REST APIs</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-7">REST APIs</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../../userGuide/restAPIs/" title="Overview" class="md-nav__link">Overview</a></li><li class="md-nav__item"><a href="../../../userGuide/apiUserScenarios/" title="API User Scenarios" class="md-nav__link">API User Scenarios</a></li><li class="md-nav__item"><a href="../../../userGuide/tokenAPI/" title="Token API" class="md-nav__link">Token API</a></li><li class="md-nav__item"><a href="../../../userGuide/getLicenseAccounts/" title="License Accounts API" class="md-nav__link">License Accounts API</a></li><li class="md-nav__item"><a href="../../../userGuide/onboardCloudAccount/" title="Onboard cloud account API" class="md-nav__link">Onboard cloud account API</a></li><li class="md-nav__item"><a href="../../../userGuide/updateAPIAppAccessScope/" title="Update API app access scope API" class="md-nav__link">Update API app access scope API</a></li><li class="md-nav__item"><a href="../../../userGuide/getHealthStatus/" title="Onboarding health status API" class="md-nav__link">Onboarding health status API</a></li><li class="md-nav__item"><a href="../../../userGuide/getBenchmarkSummary/" title="Audit summary report API" class="md-nav__link">Audit summary report API</a></li><li class="md-nav__item"><a href="../../../userGuide/initiateScanAPI/" title="Initiate scan API" class="md-nav__link">Initiate scan API</a></li><li class="md-nav__item"><a href="../../../userGuide/scanStatusAPI/" title="Scan status API" class="md-nav__link">Scan status API</a></li><li class="md-nav__item"><a href="../../../userGuide/getSupportedBenchmarks/" title="Get supported benchmarks API" class="md-nav__link">Get supported benchmarks API</a></li><li class="md-nav__item"><a href="../../../userGuide/auditReportAPI/" title="Audit report API" class="md-nav__link">Audit report API</a></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8"><label class="md-nav__link" for="nav-8">Administrator Guide</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-8">Administrator Guide</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../../administratorGuide/featuresAndQuotas/" title="Features and Quotas" class="md-nav__link">Features and Quotas</a></li><li class="md-nav__item"><a href="../../../administratorGuide/manageLicenses/" title="Integrations" class="md-nav__link">Integrations</a></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-3" type="checkbox" id="nav-8-3"><label class="md-nav__link" for="nav-8-3">Incident management</label><nav class="md-nav" data-md-component="collapsible" data-md-level="2"><label class="md-nav__title" for="nav-8-3">Incident management</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../../administratorGuide/serviceNowIntegration/" title="Service Now" class="md-nav__link">Service Now</a></li><li class="md-nav__item"><a href="../../../administratorGuide/zendeskIntegration/" title="Zendesk" class="md-nav__link">Zendesk</a></li></ul></nav></li><li class="md-nav__item"><a href="../../../administratorGuide/azureASCPushIntegration/" title="ASC Push Integration" class="md-nav__link">ASC Push Integration</a></li><li class="md-nav__item"><a href="../../../administratorGuide/manageAccounts/" title="Cloud Accounts" class="md-nav__link">Cloud Accounts</a></li><li class="md-nav__item"><a href="../../../administratorGuide/manageUsers/" title="Users & Roles" class="md-nav__link">Users & Roles</a></li><li class="md-nav__item"><a href="../../../administratorGuide/privateBenchmark/" title="Private Benchmark" class="md-nav__link">Private Benchmark</a></li><li class="md-nav__item"><a href="../../../administratorGuide/securityPolicyExclusions/" title="Security Policy Configuration" class="md-nav__link">Security Policy Configuration</a></li><li class="md-nav__item"><a href="../../../administratorGuide/overrideSecurityPolicyStatus/" title="Override Security Policy Status" class="md-nav__link">Override Security Policy Status</a></li><li class="md-nav__item"><a href="../../../administratorGuide/auditLog/" title="Audit Log" class="md-nav__link">Audit Log</a></li><li class="md-nav__item"><a href="../../../administratorGuide/configureCloudneetiAPIAccess/" title="Configure Cloudneeti API Access" class="md-nav__link">Configure Cloudneeti API Access</a></li><li class="md-nav__item"><a href="../../../administratorGuide/utilizationDashboard/" title="Utilization Dashboard" class="md-nav__link">Utilization Dashboard</a></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9"><label class="md-nav__link" for="nav-9">Remediation</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-9">Remediation</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../../remediation/overview/" title="Overview" class="md-nav__link">Overview</a></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-2" type="checkbox" id="nav-9-2"><label class="md-nav__link" for="nav-9-2">Azure</label><nav class="md-nav" data-md-component="collapsible" data-md-level="2"><label class="md-nav__title" for="nav-9-2">Azure</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../../remediation/azureGuidedRemediation/" title="Guided Remediation" class="md-nav__link">Guided Remediation</a></li><li class="md-nav__item"><a href="../../../remediation/azureAutoRemediation/" title="Auto Remediation" class="md-nav__link">Auto Remediation</a></li><li class="md-nav__item"><a href="../../../remediation/azureDecommissionofRemediation/" title="Decommission of remediation" class="md-nav__link">Decommission of remediation</a></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3" type="checkbox" id="nav-9-3"><label class="md-nav__link" for="nav-9-3">AWS</label><nav class="md-nav" data-md-component="collapsible" data-md-level="2"><label class="md-nav__title" for="nav-9-3">AWS</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../../remediation/awsGuidedRemediation/" title="Guided Remediation" class="md-nav__link">Guided Remediation</a></li><li class="md-nav__item"><a href="../../../remediation/awsRemediation/" title="Auto Remediation" class="md-nav__link">Auto Remediation</a></li><li class="md-nav__item"><a href="../../../remediation/awsDecommissionofRemediation/" title="Decommission Remediation Framework" class="md-nav__link">Decommission Remediation Framework</a></li></ul></nav></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10"><label class="md-nav__link" for="nav-10">Quick wins and OS baseline hardening scripts</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-10">Quick wins and OS baseline hardening scripts</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../../remediation/overviewQuickWins/" title="Overview" class="md-nav__link">Overview</a></li><li class="md-nav__item"><a href="../../../remediation/awsQuickWins/" title="AWS Quick wins" class="md-nav__link">AWS Quick wins</a></li><li class="md-nav__item"><a href="../../../remediation/azureQuickWins/" title="Azure Quick Wins" class="md-nav__link">Azure Quick Wins</a></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-10-4" type="checkbox" id="nav-10-4"><label class="md-nav__link" for="nav-10-4">OS Hardening for Baseline Configuration</label><nav class="md-nav" data-md-component="collapsible" data-md-level="2"><label class="md-nav__title" for="nav-10-4">OS Hardening for Baseline Configuration</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../../remediation/osBaseline/centOSQuickWins/" title="CentOS Linux 7" class="md-nav__link">CentOS Linux 7</a></li><li class="md-nav__item"><a href="../../../remediation/osBaseline/rhelQuickWins/" title="RHEL Linux 7" class="md-nav__link">RHEL Linux 7</a></li><li class="md-nav__item"><a href="../../../remediation/osBaseline/win12QuickWins/" title="Windows Server 2012 R2" class="md-nav__link">Windows Server 2012 R2</a></li><li class="md-nav__item"><a href="../../../remediation/osBaseline/win16QuickWins/" title="Windows Server 2016" class="md-nav__link">Windows Server 2016</a></li><li class="md-nav__item"><a href="../../../remediation/osBaseline/win19QuickWins/" title="Windows Server 2019" class="md-nav__link">Windows Server 2019</a></li></ul></nav></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11"><label class="md-nav__link" for="nav-11">Release Notes</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-11">Release Notes</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../../releaseNotes/2020/" title="Releases in 2020" class="md-nav__link">Releases in 2020</a></li><li class="md-nav__item"><a href="../../../releaseNotes/2019/" title="Releases in 2019" class="md-nav__link">Releases in 2019</a></li></ul></nav></li></ul></nav></div></div></div><div class="md-sidebar md-sidebar--secondary" data-md-component="toc"><div class="md-sidebar__scrollwrap"><div class="md-sidebar__inner"><nav class="md-nav md-nav--secondary"><label class="md-nav__title" for="__toc">In this article</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="#aws" title="AWS" class="md-nav__link">AWS</a></li><li class="md-nav__item"><a href="#azure" title="Azure" class="md-nav__link">Azure</a></li></ul></nav></div></div></div><div class="md-content"><article class="md-content__inner md-typeset"><h1 id="microsoft-windows-server-2012-r2">Microsoft Windows Server 2012 R2</h1>
+<h2 id="aws">AWS</h2>
+<p>No policies.</p>
+<h2 id="azure">Azure</h2>
+<table>
+<thead>
+<tr>
+<th>Category Name</th>
+<th>Policy Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Win OS-12R2 - Audit Policy</td>
+<td>Windows 2012R2 - Audit Policy: Account Logon: Credential Validation</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Audit Policy</td>
+<td>Windows 2012R2 - Audit Policy: Account Management: Other Account Management Events</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Audit Policy</td>
+<td>Windows 2012R2 - Audit Policy: Account Management: Security Group Management</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Audit Policy</td>
+<td>Windows 2012R2 - Audit Policy: Account Management: User Account Management</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Audit Policy</td>
+<td>Windows 2012R2 - Audit Policy: Detailed Tracking: Process Creation</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Audit Policy</td>
+<td>Windows 2012R2 - Audit Policy: Logon-Logoff: Account Lockout</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Audit Policy</td>
+<td>Windows 2012R2 - Audit Policy: Logon-Logoff: Logoff</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Audit Policy</td>
+<td>Windows 2012R2 - Audit Policy: Logon-Logoff: Logon</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Audit Policy</td>
+<td>Windows 2012R2 - Ensure 'Audit Other Logon/Logoff Events' is set to 'Success and Failure'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Audit Policy</td>
+<td>Windows 2012R2 - Audit Policy: Logon-Logoff: Special Logon</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Audit Policy</td>
+<td>Windows 2012R2 - Ensure 'Audit Removable Storage' is set to 'Success and Failure'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Audit Policy</td>
+<td>Windows 2012R2 - Audit Policy: Policy Change: Audit Policy Change'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Audit Policy</td>
+<td>Windows 2012R2 - Audit Policy: Policy Change: Authentication Policy Change</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Audit Policy</td>
+<td>Windows 2012R2 - Audit Policy: Privilege Use: Sensitive Privilege Use</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Audit Policy</td>
+<td>Windows 2012R2 - Audit Policy: System: Security State Change</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Audit Policy</td>
+<td>Windows 2012R2 - Audit Policy: System: Security System Extension</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Audit Policy</td>
+<td>Windows 2012R2 - Audit Policy: System: System Integrity</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Audit Policy</td>
+<td>Windows 2012R2 - Audit MPSSVC Rule-Level Policy Change</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Audit Policy</td>
+<td>Windows 2012R2 - Audit Other Privilege Use Events</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Audit Policy</td>
+<td>Windows 2012R2 - Audit Other Object Access Events</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Audit Policy</td>
+<td>Windows 2012R2 - Audit RPC Events</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Audit Policy</td>
+<td>Windows 2012R2 - Audit Registry</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Audit Policy</td>
+<td>Windows 2012R2 - Audit Other Policy Change Events</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Audit Policy</td>
+<td>Windows 2012R2 - Audit SAM</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Ensure 'Allow Basic authentication' is set to 'Disabled'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Ensure 'Do not allow passwords to be saved' is set to 'Enabled'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Network access: Do not allow anonymous enumeration of SAM accounts</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Network access: Do not allow anonymous enumeration of SAM accounts and shares</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Ensure 'Enable RPC Endpoint Mapper Client Authentication' is set to 'Enabled' (MS only)</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Ensure 'System: Specify the maximum log file size (KB)' is set to 'Enabled: 32,768 or greater'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Ensure 'Turn off app notifications on the lock screen' is set to 'Enabled'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Ensure 'Accounts: Limit local account use of blank passwords to console logon only' is set to 'Enabled'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Ensure 'Audit: Force audit policy subcategory settings (Windows Vista or later) to override audit policy category settings' is set to 'Enabled'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Ensure 'Audit: Shut down system immediately if unable to log security audits' is set to 'Disabled'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Ensure 'Devices: Allowed to format and eject removable media' is set to 'Administrators'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Ensure 'Devices: Prevent users from installing printer drivers' is set to 'Enabled'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Ensure 'Interactive logon: Do not display last user name' is set to 'Enabled'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Ensure 'Interactive logon: Do not require CTRL+ALT+DEL' is set to 'Disabled'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Ensure 'Microsoft network client: Digitally sign communications (always)' is set to 'Enabled'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Ensure 'Microsoft network client: Send unencrypted password to third-party SMB servers' is set to 'Disabled'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Ensure 'Microsoft network server: Idle time required before suspending session' is set to '15 or fewer minute(s), but not 0'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Ensure 'Microsoft network server: Digitally sign communications (always)' is set to 'Enabled'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Ensure 'Microsoft network server: Digitally sign communications (if client agrees)' is set to 'Enabled'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Ensure 'Microsoft network server: Disconnect clients when logon hours expire' is set to 'Enabled'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Ensure 'Microsoft network client: Digitally sign communications (if server agrees)' is set to 'Enabled'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Ensure 'Prevent enabling lock screen camera' is set to 'Enabled'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Ensure 'Prevent enabling lock screen slide show' is set to 'Enabled'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Ensure 'Prohibit installation and configuration of Network Bridge on your DNS domain network' is set to 'Enabled'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Ensure 'Minimize the number of simultaneous connections to the Internet or a Windows Domain' is set to 'Enabled'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Ensure 'Boot-Start Driver Initialization Policy' is set to 'Enabled: Good, unknown and bad but critical'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Ensure 'Turn off downloading of print drivers over HTTP' is set to 'Enabled'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Ensure 'Do not display network selection UI' is set to 'Enabled'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Ensure 'Allow Microsoft accounts to be optional' is set to 'Enabled'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Configure 'Network access: Remotely accessible registry paths'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Ensure 'Always install with elevated privileges' is set to 'Disabled'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Ensure 'Allow unencrypted traffic' is set to 'Disabled'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Ensure 'Allow user control over installs' is set to 'Disabled'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Ensure 'Always prompt for password upon connection' is set to 'Enabled'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Configure 'Network access: Remotely accessible registry paths and sub-paths'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Ensure 'Configure Solicited Remote Assistance' is set to 'Disabled'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Ensure 'Windows Firewall: Public: Settings: Apply local connection security rules' is set to 'No'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Ensure 'Disallow Digest authentication' is set to 'Enabled'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Ensure 'Security: Control Event Log behavior when the log file reaches its maximum size' is set to 'Disabled'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Ensure 'Windows Firewall: Private: Settings: Apply local firewall rules' is set to 'Yes (default)'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Ensure 'Turn off heap termination on corruption' is set to 'Disabled'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Ensure 'Turn off Autoplay' is set to 'Enabled: All drives'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Ensure 'Network Security: Allow PKU2U authentication requests to this computer to use online identities' is set to 'Disabled'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Ensure 'Turn off shell protocol protected mode' is set to 'Disabled'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Ensure 'Network access: Shares that can be accessed anonymously' is set to 'None'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Ensure 'Do not display the password reveal button' is set to 'Enabled'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Ensure 'Network security: Allow Local System to use computer identity for NTLM' is set to 'Enabled'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Ensure 'Automatically send memory dumps for OS-generated error reports' is set to 'Disabled'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Ensure 'Windows Firewall: Private: Firewall state' is set to 'On (recommended)'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Ensure 'Configure Default consent' is set to 'Enabled: Send all data'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Ensure 'System: Control Event Log behavior when the log file reaches its maximum size' is set to 'Disabled'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Ensure 'Include command line in process creation events' is set to 'Disabled'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Ensure 'Network Security: Configure encryption types allowed for Kerberos' is set to 'RC4_HMAC_MD5, AES128_HMAC_SHA1, AES256_HMAC_SHA1, Future encryption types'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Ensure 'Sign-in last interactive user automatically after a system-initiated restart' is set to 'Disabled'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Ensure 'Prevent downloading of enclosures' is set to 'Enabled'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Ensure 'Set the default behavior for AutoRun' is set to 'Enabled: Do not execute any autorun commands'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Ensure 'Security: Specify the maximum log file size (KB)' is set to 'Enabled: 196,608 or greater'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Ensure 'Turn on convenience PIN sign-in' is set to 'Disabled'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Ensure 'Setup: Specify the maximum log file size (KB)' is set to 'Enabled: 32,768 or greater'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Ensure 'Set client connection encryption level' is set to 'Enabled: High Level'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Ensure 'Setup: Control Event Log behavior when the log file reaches its maximum size' is set to 'Disabled'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Ensure 'Application: Control Event Log behavior when the log file reaches its maximum size' is set to 'Disabled'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Ensure 'Enumerate administrator accounts on elevation' is set to 'Disabled'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Ensure 'Application: Specify the maximum log file size (KB)' is set to 'Enabled: 32,768 or greater'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Ensure 'Windows Firewall: Domain: Firewall state' is set to 'On (recommended)'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Ensure 'Network security: LAN Manager authentication level' is set to 'Send NTLMv2 response only. Refuse LM &amp; NTLM'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Ensure 'Require secure RPC communication' is set to 'Enabled'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Ensure 'Turn off Data Execution Prevention for Explorer' is set to 'Disabled'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Ensure 'Do not delete temp folders upon exit' is set to 'Disabled'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Ensure 'Disallow Autoplay for non-volume devices' is set to 'Enabled'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Ensure 'Windows Firewall: Public: Settings: Apply local firewall rules' is set to 'No'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Ensure 'Configure Offer Remote Assistance' is set to 'Disabled'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Ensure 'Windows Firewall: Public: Firewall state' is set to 'On (recommended)'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Ensure 'Disallow WinRM from storing RunAs credentials' is set to 'Enabled'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Ensure 'Do not use temporary folders per session' is set to 'Disabled'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Network access: Sharing and security model for local accounts</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Network security: Minimum session security for NTLM SSP based (including secure RPC) clients</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - System objects: Require case insensitivity for non-Windows subsystems</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Network access: Let Everyone permissions apply to anonymous users</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Network security: LDAP client signing requirements</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Network access: Restrict anonymous access to Named Pipes and Shares</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - User Account Control: Admin Approval Mode for the Built-in Administrator account</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - 'Shutdown: Allow system to be shut down without having to log on' is set to 'Disabled'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Network security: Minimum session security for NTLM SSP based (including secure RPC) servers</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Network security: Do not store LAN Manager hash value on next password change</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - System objects: Strengthen default permissions of internal system objects (e.g. Symbolic Links)</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Network security: Allow LocalSystem NULL session fallback</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Windows Firewall: Public: Display a notification</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Windows Firewall: Public: Outbound connections</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - User Account Control: Run all administrators in Admin Approval Mode</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Windows Firewall: Domain: Display a notification</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - User Account Control: Behavior of the elevation prompt for administrators in Admin Approval Mode</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Windows Firewall: Private: Display a notification</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - User Account Control: Behavior of the elevation prompt for standard users</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - User Account Control: Only elevate UIAccess applications that are installed in secure locations</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - User Account Control: Detect application installations and prompt for elevation</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - User Account Control: Allow UIAccess applications to prompt for elevation without using the secure desktop</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - User Account Control: Virtualize file and registry write failures to per-user locations</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - User Account Control: Switch to the secure desktop when prompting for elevation</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Windows Firewall: Domain: Outbound connections</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Windows Firewall: Private: Outbound connections</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Devices: Allow undock without having to log on</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Ensure 'Enable Windows NTP Client' is set to 'Enabled'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Disable SMB v1 server</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Ensure 'Always use classic logon' is set to 'Enabled'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Detect change from default RDP port</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Disable Windows Search Service</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Require user authentication for remote connections by using Network Level Authentication</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Ensure 'Windows Firewall: Private: Settings: Apply local connection security rules' is set to 'Yes (default)'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Ensure 'Turn off Internet Connection Wizard if URL connection is referring to Microsoft.com' is set to 'Enabled'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Ensure 'Windows Firewall: Domain: Settings: Apply local firewall rules' is set to 'Yes (default)'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Ensure 'Windows Firewall: Domain: Settings: Apply local connection security rules' is set to 'Yes (default)'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - System settings: Use Certificate Rules on Windows Executables for Software Restriction Policies</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Recovery console: Allow floppy copy and access to all drives and all folders</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Specify the interval to check for definition updates</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Windows Firewall: Private: Allow unicast response</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Windows Firewall: Domain: Allow unicast response</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Ensure 'Prohibit use of Internet Connection Sharing on your DNS domain network' is set to 'Enabled'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Shutdown: Clear virtual memory pagefile</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Registry Policy</td>
+<td>Windows 2012R2 - Windows Firewall: Public: Allow unicast response</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Security Policy</td>
+<td>Windows 2012R2 - Ensure 'Enforce password history' is set to '24 or more password(s)'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Security Policy</td>
+<td>Windows 2012R2 - Ensure 'Maximum password age' is set to '70 or fewer days, but not 0'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Security Policy</td>
+<td>Windows 2012R2 - Ensure 'Minimum password age' is set to '1 or more day(s)'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Security Policy</td>
+<td>Windows 2012R2 - Ensure 'Minimum password length' is set to '14 or more character(s)'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Security Policy</td>
+<td>Windows 2012R2 - Ensure 'Password must meet complexity requirements' is set to 'Enabled'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Security Policy</td>
+<td>Windows 2012R2 - Ensure 'Store passwords using reversible encryption' is set to 'Disabled'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Security Policy</td>
+<td>Windows 2012R2 - Ensure 'Access Credential Manager as a trusted caller' is set to 'No One'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Security Policy</td>
+<td>Windows 2012R2 - Configure 'Access this computer from the network'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Security Policy</td>
+<td>Windows 2012R2 - Ensure 'Act as part of the operating system' is set to 'No One'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Security Policy</td>
+<td>Windows 2012R2 - Ensure 'Allow log on locally' is set to 'Administrators'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Security Policy</td>
+<td>Windows 2012R2 - Configure 'Allow log on through Remote Desktop Services'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Security Policy</td>
+<td>Windows 2012R2 - Ensure 'Back up files and directories' is set to 'Administrators'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Security Policy</td>
+<td>Windows 2012R2 - Ensure 'Change the system time' is set to 'Administrators, LOCAL SERVICE'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Security Policy</td>
+<td>Windows 2012R2 - Ensure 'Change the time zone' is set to 'Administrators, LOCAL SERVICE'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Security Policy</td>
+<td>Windows 2012R2 - Ensure 'Create a pagefile' is set to 'Administrators'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Security Policy</td>
+<td>Windows 2012R2 - Ensure 'Create a token object' is set to 'No One'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Security Policy</td>
+<td>Windows 2012R2 - Ensure 'Create global objects' is set to 'Administrators, LOCAL SERVICE, NETWORK SERVICE, SERVICE'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Security Policy</td>
+<td>Windows 2012R2 - Ensure 'Create permanent shared objects' is set to 'No One'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Security Policy</td>
+<td>Windows 2012R2 - Configure 'Create symbolic links'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Security Policy</td>
+<td>Windows 2012R2 - Configure 'Deny access to this computer from the network'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Security Policy</td>
+<td>Windows 2012R2 - Ensure 'Deny log on as a batch job' to include 'Guests'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Security Policy</td>
+<td>Windows 2012R2 - Ensure 'Deny log on as a service' to include 'Guests'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Security Policy</td>
+<td>Windows 2012R2 - Ensure 'Deny log on locally' to include 'Guests'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Security Policy</td>
+<td>Windows 2012R2 - Configure 'Deny log on through Remote Desktop Services'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Security Policy</td>
+<td>Windows 2012R2 - Configure 'Enable computer and user accounts to be trusted for delegation'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Security Policy</td>
+<td>Windows 2012R2 - Ensure 'Force shutdown from a remote system' is set to 'Administrators'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Security Policy</td>
+<td>Windows 2012R2 - Ensure 'Generate security audits' is set to 'LOCAL SERVICE, NETWORK SERVICE'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Security Policy</td>
+<td>Windows 2012R2 - Ensure 'Increase scheduling priority' is set to 'Administrators'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Security Policy</td>
+<td>Windows 2012R2 - Ensure 'Load and unload device drivers' is set to 'Administrators'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Security Policy</td>
+<td>Windows 2012R2 - Ensure 'Lock pages in memory' is set to 'No One'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Security Policy</td>
+<td>Windows 2012R2 - Configure 'Manage auditing and security log'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Security Policy</td>
+<td>Windows 2012R2 - Ensure 'Modify an object label' is set to 'No One'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Security Policy</td>
+<td>Windows 2012R2 - Ensure 'Modify firmware environment values' is set to 'Administrators'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Security Policy</td>
+<td>Windows 2012R2 - Ensure 'Perform volume maintenance tasks' is set to 'Administrators'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Security Policy</td>
+<td>Windows 2012R2 - Ensure 'Profile single process' is set to 'Administrators'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Security Policy</td>
+<td>Windows 2012R2 - Ensure 'Replace a process level token' is set to 'LOCAL SERVICE, NETWORK SERVICE'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Security Policy</td>
+<td>Windows 2012R2 - Ensure 'Restore files and directories' is set to 'Administrators'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Security Policy</td>
+<td>Windows 2012R2 - Ensure 'Shut down the system' is set to 'Administrators'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Security Policy</td>
+<td>Windows 2012R2 - Ensure 'Take ownership of files or other objects' is set to 'Administrators'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Security Policy</td>
+<td>Windows 2012R2 - Ensure 'Accounts: Guest account status' is set to 'Disabled' (MS only)</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Security Policy</td>
+<td>Windows 2012R2 - Ensure 'Profile system performance' is set to 'Administrators, NT SERVICE-WdiServiceHost'</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Security Policy</td>
+<td>Windows 2012R2 - Increase a process working set</td>
+</tr>
+<tr>
+<td>Win OS-12R2 - Security Policy</td>
+<td>Windows 2012R2 - Bypass traverse checking</td>
+</tr>
+</tbody>
+</table></article></div></div></main><footer class="md-footer"><div class="md-footer-meta md-typeset"><div class="md-footer-meta__inner md-grid"><div class="md-footer-copyright"><div class="md-footer-copyright__highlight">&copy; 2020 Cloudneeti.All Rights Reserved. | <a href="https://www.cloudneeti.com/privacy-policy-2/" target="_blank"> Privacy Policy</a> | <a href="https://www.cloudneeti.com/terms-of-use/" target="_blank"> Terms of Use</a></div></div></div></div></footer>
+
+</div><script src="../../../assets/javascripts/application.d5a09f94.js"></script><script>app.initialize({version:"1.1.2",url:{base:"../../.."}})</script><script src="../../../javascripts/custom.js"></script></body></html>

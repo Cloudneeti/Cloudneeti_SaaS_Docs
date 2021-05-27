@@ -1,0 +1,2254 @@
+<!doctype html><html lang="en" class="no-js"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="x-ua-compatible" content="ie=edge"><meta name="description" content="Cloudneeti Documentation"><meta name="author" content="The Cloudneeti Team"><meta name="lang:clipboard.copy" content="Copy to clipboard"><meta name="lang:clipboard.copied" content="Copied to clipboard"><meta name="lang:search.language" content="en"><meta name="lang:search.pipeline.stopwords" content="True"><meta name="lang:search.pipeline.trimmer" content="True"><meta name="lang:search.result.none" content="No matching documents"><meta name="lang:search.result.one" content="1 matching document"><meta name="lang:search.result.other" content="# matching documents"><meta name="lang:search.tokenizer" content="[\s\-]+"><link rel="shortcut icon" href="../../assets/images/favicon.png"><meta name="generator" content="mkdocs-1.1.2, mkdocs-material-4.3.1"><title>AWS Security Policies - Documentation</title><link rel="stylesheet" href="../../assets/stylesheets/application.4031d38b.css"><link rel="stylesheet" href="../../assets/stylesheets/application-palette.224b79ff.css"><meta name="theme-color" content=""><script src="../../assets/javascripts/modernizr.74668098.js"></script><link href="https://fonts.gstatic.com" rel="preconnect" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,400i,700|&display=swap"><style>body,input{font-family:"Poppins","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"","Courier New",Courier,monospace}</style><link rel="stylesheet" href="../../assets/fonts/material-icons.css"><link rel="stylesheet" href="../../stylesheets/extra.css"><script>window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-149855644-1", "docs.cloudneeti.com")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })</script><script async src="https://www.google-analytics.com/analytics.js"></script></head><body dir="ltr" data-md-color-primary="cloudneeti" data-md-color-accent="cloudneeti"><svg class="md-svg"><defs></defs></svg> <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off"> <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off"> <label class="md-overlay" data-md-component="overlay" for="__drawer"></label><a href="#aws-security-policies" tabindex="1" class="md-skip">Skip to content </a><header class="md-header" data-md-component="header"><nav class="md-header-nav md-grid"><div class="md-flex"><div class="md-flex__cell md-flex__cell--shrink"><a href="../.." title="Documentation" class="md-header-nav__button md-logo md-custom-logo"><img src="../../images/logo.png" width="170" height="40"></a></div><div class="md-flex__cell md-flex__cell--shrink"><label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label></div><div class="md-flex__cell md-flex__cell--stretch"><div class="md-flex__ellipsis md-header-nav__title" data-md-component="title"><!--<span class="md-header-nav__topic"><a href="../..">Documentation</a></span><span class="md-header-nav__topic">AWS Security Policies</span>--></div></div><div class="md-flex__cell md-flex__cell--shrink"><label class="md-icon md-icon--search md-header-nav__button" for="__search"></label><div class="md-search" data-md-component="search" role="dialog"><label class="md-search__overlay" for="__search"></label><div class="md-search__inner" role="search"><form class="md-search__form" name="search"><input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active"> <label class="md-icon md-search__icon" for="__search"></label> <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">&#xE5CD;</button></form><div class="md-search__output"><div class="md-search__scrollwrap" data-md-scrollfix><div class="md-search-result" data-md-component="result"><div class="md-search-result__meta">Type to start searching</div><ol class="md-search-result__list"></ol></div></div></div></div></div></div></div></nav></header><div class="md-container"><main class="md-main"><div class="md-main__inner md-grid" data-md-component="container"><div class="md-sidebar md-sidebar--primary" data-md-component="navigation"><div class="md-sidebar__scrollwrap"><div class="md-sidebar__inner"><nav class="md-nav md-nav--primary" data-md-level="0"><label class="md-nav__title md-nav__title--site" for="__drawer"><a href="../.." title="Documentation" class="md-nav__button md-logo"><img src="../../images/logo.png" width="48" height="48"></a>Documentation</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1"><label class="md-nav__link" for="nav-1">Introduction</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-1">Introduction</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../gettingStarted/introduction/" title="Getting Started" class="md-nav__link">Getting Started</a></li><li class="md-nav__item"><a href="../../gettingStarted/productFeatures/" title="Product Features" class="md-nav__link">Product Features</a></li><li class="md-nav__item"><a href="../../gettingStarted/howItWorks/" title="How it works" class="md-nav__link">How it works</a></li><li class="md-nav__item"><a href="../../gettingStarted/cloudSecurityBestPractices/" title="Cloud Security Best Practices" class="md-nav__link">Cloud Security Best Practices</a></li><li class="md-nav__item"><a href="../../gettingStarted/deploymentArchitecture/" title="Deployment Architecture" class="md-nav__link">Deployment Architecture</a></li><li class="md-nav__item"><a href="../../gettingStarted/customerDataSecurity/" title="Customer Data Security" class="md-nav__link">Customer Data Security</a></li><li class="md-nav__item"><a href="../../gettingStarted/glossary/" title="Glossary" class="md-nav__link">Glossary</a></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2"><label class="md-nav__link" for="nav-2">Try and Buy</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-2">Try and Buy</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../tryAndBuy/freeTrial/" title="Free Trial" class="md-nav__link">Free Trial</a></li><li class="md-nav__item"><a href="../../tryAndBuy/subscribeOnAzureMarketplace/" title="Buy on Azure Marketplace" class="md-nav__link">Buy on Azure Marketplace</a></li><li class="md-nav__item"><a href="../../tryAndBuy/subscribe/" title="Request a License" class="md-nav__link">Request a License</a></li><li class="md-nav__item"><a href="../../tryAndBuy/partnerCobranding/" title="Partner co-branding" class="md-nav__link">Partner co-branding</a></li><li class="md-nav__item"><a href="../../tryAndBuy/estimatePricing/" title="Estimate Pricing" class="md-nav__link">Estimate Pricing</a></li></ul></nav></li><li class="md-nav__item md-nav__item--active md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked><label class="md-nav__link" for="nav-3">Security Policies</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-3">Security Policies</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../gettingStarted/cloudSecurityBestPractices/" title="Cloud Security Best Practices" class="md-nav__link">Cloud Security Best Practices</a></li><li class="md-nav__item md-nav__item--active"><input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc"><label class="md-nav__link md-nav__link--active" for="__toc">AWS Security Policies</label><a href="./" title="AWS Security Policies" class="md-nav__link md-nav__link--active">AWS Security Policies</a><nav class="md-nav md-nav--secondary"><label class="md-nav__title" for="__toc">In this article</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="#aws-security-policies" title="AWS Security Policies" class="md-nav__link">AWS Security Policies</a></li></ul></nav></li><li class="md-nav__item"><a href="../azureSecurityPolcies/" title="Azure Security Policies" class="md-nav__link">Azure Security Policies</a></li><li class="md-nav__item"><a href="../gcp_SecurityPolcies/" title="GCP Security Policies(Preview)" class="md-nav__link">GCP Security Policies(Preview)</a></li><li class="md-nav__item"><a href="../office365SecurityPolcies/" title="Office 365 Security Policies" class="md-nav__link">Office 365 Security Policies</a></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-6" type="checkbox" id="nav-3-6"><label class="md-nav__link" for="nav-3-6">OS baselines</label><nav class="md-nav" data-md-component="collapsible" data-md-level="2"><label class="md-nav__title" for="nav-3-6">OS baselines</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../osBaseline/centOSSecurityPolcies/" title="CentOS" class="md-nav__link">CentOS</a></li><li class="md-nav__item"><a href="../osBaseline/rhelSecurityPolcies/" title="RHEL" class="md-nav__link">RHEL</a></li><li class="md-nav__item"><a href="../osBaseline/ubuntuSecurityPolcies/" title="Ubuntu 18.04" class="md-nav__link">Ubuntu 18.04</a></li><li class="md-nav__item"><a href="../osBaseline/windows12SecurityPolcies/" title="Windows 2012 R2" class="md-nav__link">Windows 2012 R2</a></li><li class="md-nav__item"><a href="../osBaseline/windows16SecurityPolcies/" title="Windows 2016" class="md-nav__link">Windows 2016</a></li><li class="md-nav__item"><a href="../osBaseline/windows19SecurityPolcies/" title="Windows 2019" class="md-nav__link">Windows 2019</a></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-7" type="checkbox" id="nav-3-7"><label class="md-nav__link" for="nav-3-7">Kubernetes</label><nav class="md-nav" data-md-component="collapsible" data-md-level="2"><label class="md-nav__title" for="nav-3-7">Kubernetes</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../kubernetes/awsK8SSecurityPolcies/" title="AWS" class="md-nav__link">AWS</a></li><li class="md-nav__item"><a href="../kubernetes/azureK8SSecurityPolcies/" title="Azure" class="md-nav__link">Azure</a></li></ul></nav></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4"><label class="md-nav__link" for="nav-4">Compliance Benchmarks</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-4">Compliance Benchmarks</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../complianceBenchmarks/complianceBenchmarks/" title="Benchmarks" class="md-nav__link">Benchmarks</a></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5"><label class="md-nav__link" for="nav-5">Onboarding Guide</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-5">Onboarding Guide</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../onboardingGuide/onboardingGuideOverview/" title="Overview" class="md-nav__link">Overview</a></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-2" type="checkbox" id="nav-5-2"><label class="md-nav__link" for="nav-5-2">Amazon Web Services</label><nav class="md-nav" data-md-component="collapsible" data-md-level="2"><label class="md-nav__title" for="nav-5-2">Amazon Web Services</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../onboardingGuide/amazonWebServiceAccounts/" title="Onboarding steps" class="md-nav__link">Onboarding steps</a></li><li class="md-nav__item"><a href="../../onboardingGuide/awsEnableConfigBasedDataCollection/" title="Enable AWS Config Based Data Collection (optional)" class="md-nav__link">Enable AWS Config Based Data Collection (optional)</a></li><li class="md-nav__item"><a href="../../onboardingGuide/awsVMBaselineConfiguration/" title="OS baseline (optional)" class="md-nav__link">OS baseline (optional)</a></li><li class="md-nav__item"><a href="../../onboardingGuide/awsVulnerabilities/" title="Vulnerability (optional)" class="md-nav__link">Vulnerability (optional)</a></li><li class="md-nav__item"><a href="../../onboardingGuide/configureCloudneetiAgentInEKS/" title="Amazon Elastic Kubernetes Service (Amazon EKS) (optional)" class="md-nav__link">Amazon Elastic Kubernetes Service (Amazon EKS) (optional)</a></li><li class="md-nav__item"><a href="../../onboardingGuide/awsAccountHealthStatus/" title="AWS onboarding health status" class="md-nav__link">AWS onboarding health status</a></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-3" type="checkbox" id="nav-5-3"><label class="md-nav__link" for="nav-5-3">Microsoft Azure</label><nav class="md-nav" data-md-component="collapsible" data-md-level="2"><label class="md-nav__title" for="nav-5-3">Microsoft Azure</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../onboardingGuide/azureSubscriptions/" title="Onboarding steps" class="md-nav__link">Onboarding steps</a></li><li class="md-nav__item"><a href="../../onboardingGuide/grantAccessToAzureSubscriptionAdditionalRoles/" title="Additional roles" class="md-nav__link">Additional roles</a></li><li class="md-nav__item"><a href="../../onboardingGuide/grantAccessToKeyVaults/" title="Key vaults" class="md-nav__link">Key vaults</a></li><li class="md-nav__item"><a href="../../onboardingGuide/azureAdvancedSecurityConfigurations/" title="Advanced security configurations" class="md-nav__link">Advanced security configurations</a></li><li class="md-nav__item"><a href="../../onboardingGuide/enableASCAuditPolicies/" title="Enable ASC audit policies" class="md-nav__link">Enable ASC audit policies</a></li><li class="md-nav__item"><a href="../../onboardingGuide/azureOSBaseline/" title="OS baseline and vulnerability" class="md-nav__link">OS baseline and vulnerability</a></li><li class="md-nav__item"><a href="../../onboardingGuide/azureVulnerability/" title="Vulnerability" class="md-nav__link">Vulnerability</a></li><li class="md-nav__item"><a href="../../onboardingGuide/configureCloudneetiAgentInAKS/" title="Azure Kubernetes Service (AKS)" class="md-nav__link">Azure Kubernetes Service (AKS)</a></li><li class="md-nav__item"><a href="../../onboardingGuide/azureAccountHealthStatus/" title="Azure onboarding health status" class="md-nav__link">Azure onboarding health status</a></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-4" type="checkbox" id="nav-5-4"><label class="md-nav__link" for="nav-5-4">Google Cloud Platform (Preview)</label><nav class="md-nav" data-md-component="collapsible" data-md-level="2"><label class="md-nav__title" for="nav-5-4">Google Cloud Platform (Preview)</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../onboardingGuide/gcpOnboardingOverview/" title="Overview" class="md-nav__link">Overview</a></li><li class="md-nav__item"><a href="../../onboardingGuide/gcpProject/" title="GCP Project" class="md-nav__link">GCP Project</a></li><li class="md-nav__item"><a href="../../onboardingGuide/gcpOrganization/" title="GCP Organization" class="md-nav__link">GCP Organization</a></li><li class="md-nav__item"><a href="../../onboardingGuide/gcpAnnexure/" title="Annexure" class="md-nav__link">Annexure</a></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-5" type="checkbox" id="nav-5-5"><label class="md-nav__link" for="nav-5-5">Office 365</label><nav class="md-nav" data-md-component="collapsible" data-md-level="2"><label class="md-nav__title" for="nav-5-5">Office 365</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../onboardingGuide/office365Subscription/" title="Onboarding steps" class="md-nav__link">Onboarding steps</a></li><li class="md-nav__item"><a href="../../onboardingGuide/office365AccountHealthStatus/" title="Office 365 onboarding health status" class="md-nav__link">Office 365 onboarding health status</a></li><li class="md-nav__item"><a href="../../onboardingGuide/office365AdvanceSecurityConfigurationUpgrade/" title="Upgrade advanced security configurations" class="md-nav__link">Upgrade advanced security configurations</a></li></ul></nav></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6"><label class="md-nav__link" for="nav-6">User Guide</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-6">User Guide</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../gettingStarted/signInAndSignOut/" title="Sign In and Sign Out" class="md-nav__link">Sign In and Sign Out</a></li><li class="md-nav__item"><a href="../../userGuide/userInterface/" title="User Interface" class="md-nav__link">User Interface</a></li><li class="md-nav__item"><a href="../../userGuide/dashboards/" title="Dashboards" class="md-nav__link">Dashboards</a></li><li class="md-nav__item"><a href="../../userGuide/securityPolicies/" title="Security Policies" class="md-nav__link">Security Policies</a></li><li class="md-nav__item"><a href="../../userGuide/complianceBenchmarks/" title="Compliance Benchmarks" class="md-nav__link">Compliance Benchmarks</a></li><li class="md-nav__item"><a href="../../userGuide/reports/" title="Reports" class="md-nav__link">Reports</a></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7"><label class="md-nav__link" for="nav-7">REST APIs</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-7">REST APIs</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../userGuide/restAPIs/" title="Overview" class="md-nav__link">Overview</a></li><li class="md-nav__item"><a href="../../userGuide/apiUserScenarios/" title="API User Scenarios" class="md-nav__link">API User Scenarios</a></li><li class="md-nav__item"><a href="../../userGuide/tokenAPI/" title="Token API" class="md-nav__link">Token API</a></li><li class="md-nav__item"><a href="../../userGuide/getLicenseAccounts/" title="License Accounts API" class="md-nav__link">License Accounts API</a></li><li class="md-nav__item"><a href="../../userGuide/onboardCloudAccount/" title="Onboard cloud account API" class="md-nav__link">Onboard cloud account API</a></li><li class="md-nav__item"><a href="../../userGuide/updateAPIAppAccessScope/" title="Update API app access scope API" class="md-nav__link">Update API app access scope API</a></li><li class="md-nav__item"><a href="../../userGuide/getHealthStatus/" title="Onboarding health status API" class="md-nav__link">Onboarding health status API</a></li><li class="md-nav__item"><a href="../../userGuide/getBenchmarkSummary/" title="Audit summary report API" class="md-nav__link">Audit summary report API</a></li><li class="md-nav__item"><a href="../../userGuide/initiateScanAPI/" title="Initiate scan API" class="md-nav__link">Initiate scan API</a></li><li class="md-nav__item"><a href="../../userGuide/scanStatusAPI/" title="Scan status API" class="md-nav__link">Scan status API</a></li><li class="md-nav__item"><a href="../../userGuide/getSupportedBenchmarks/" title="Get supported benchmarks API" class="md-nav__link">Get supported benchmarks API</a></li><li class="md-nav__item"><a href="../../userGuide/auditReportAPI/" title="Audit report API" class="md-nav__link">Audit report API</a></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8"><label class="md-nav__link" for="nav-8">Administrator Guide</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-8">Administrator Guide</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../administratorGuide/featuresAndQuotas/" title="Features and Quotas" class="md-nav__link">Features and Quotas</a></li><li class="md-nav__item"><a href="../../administratorGuide/manageLicenses/" title="Integrations" class="md-nav__link">Integrations</a></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-3" type="checkbox" id="nav-8-3"><label class="md-nav__link" for="nav-8-3">Incident management</label><nav class="md-nav" data-md-component="collapsible" data-md-level="2"><label class="md-nav__title" for="nav-8-3">Incident management</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../administratorGuide/serviceNowIntegration/" title="Service Now" class="md-nav__link">Service Now</a></li><li class="md-nav__item"><a href="../../administratorGuide/zendeskIntegration/" title="Zendesk" class="md-nav__link">Zendesk</a></li></ul></nav></li><li class="md-nav__item"><a href="../../administratorGuide/azureASCPushIntegration/" title="ASC Push Integration" class="md-nav__link">ASC Push Integration</a></li><li class="md-nav__item"><a href="../../administratorGuide/manageAccounts/" title="Cloud Accounts" class="md-nav__link">Cloud Accounts</a></li><li class="md-nav__item"><a href="../../administratorGuide/manageUsers/" title="Users & Roles" class="md-nav__link">Users & Roles</a></li><li class="md-nav__item"><a href="../../administratorGuide/privateBenchmark/" title="Private Benchmark" class="md-nav__link">Private Benchmark</a></li><li class="md-nav__item"><a href="../../administratorGuide/securityPolicyExclusions/" title="Security Policy Configuration" class="md-nav__link">Security Policy Configuration</a></li><li class="md-nav__item"><a href="../../administratorGuide/overrideSecurityPolicyStatus/" title="Override Security Policy Status" class="md-nav__link">Override Security Policy Status</a></li><li class="md-nav__item"><a href="../../administratorGuide/auditLog/" title="Audit Log" class="md-nav__link">Audit Log</a></li><li class="md-nav__item"><a href="../../administratorGuide/configureCloudneetiAPIAccess/" title="Configure Cloudneeti API Access" class="md-nav__link">Configure Cloudneeti API Access</a></li><li class="md-nav__item"><a href="../../administratorGuide/utilizationDashboard/" title="Utilization Dashboard" class="md-nav__link">Utilization Dashboard</a></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9"><label class="md-nav__link" for="nav-9">Remediation</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-9">Remediation</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../remediation/overview/" title="Overview" class="md-nav__link">Overview</a></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-2" type="checkbox" id="nav-9-2"><label class="md-nav__link" for="nav-9-2">Azure</label><nav class="md-nav" data-md-component="collapsible" data-md-level="2"><label class="md-nav__title" for="nav-9-2">Azure</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../remediation/azureGuidedRemediation/" title="Guided Remediation" class="md-nav__link">Guided Remediation</a></li><li class="md-nav__item"><a href="../../remediation/azureAutoRemediation/" title="Auto Remediation" class="md-nav__link">Auto Remediation</a></li><li class="md-nav__item"><a href="../../remediation/azureDecommissionofRemediation/" title="Decommission of remediation" class="md-nav__link">Decommission of remediation</a></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3" type="checkbox" id="nav-9-3"><label class="md-nav__link" for="nav-9-3">AWS</label><nav class="md-nav" data-md-component="collapsible" data-md-level="2"><label class="md-nav__title" for="nav-9-3">AWS</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../remediation/awsGuidedRemediation/" title="Guided Remediation" class="md-nav__link">Guided Remediation</a></li><li class="md-nav__item"><a href="../../remediation/awsRemediation/" title="Auto Remediation" class="md-nav__link">Auto Remediation</a></li><li class="md-nav__item"><a href="../../remediation/awsDecommissionofRemediation/" title="Decommission Remediation Framework" class="md-nav__link">Decommission Remediation Framework</a></li></ul></nav></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10"><label class="md-nav__link" for="nav-10">Quick wins and OS baseline hardening scripts</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-10">Quick wins and OS baseline hardening scripts</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../remediation/overviewQuickWins/" title="Overview" class="md-nav__link">Overview</a></li><li class="md-nav__item"><a href="../../remediation/awsQuickWins/" title="AWS Quick wins" class="md-nav__link">AWS Quick wins</a></li><li class="md-nav__item"><a href="../../remediation/azureQuickWins/" title="Azure Quick Wins" class="md-nav__link">Azure Quick Wins</a></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-10-4" type="checkbox" id="nav-10-4"><label class="md-nav__link" for="nav-10-4">OS Hardening for Baseline Configuration</label><nav class="md-nav" data-md-component="collapsible" data-md-level="2"><label class="md-nav__title" for="nav-10-4">OS Hardening for Baseline Configuration</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../remediation/osBaseline/centOSQuickWins/" title="CentOS Linux 7" class="md-nav__link">CentOS Linux 7</a></li><li class="md-nav__item"><a href="../../remediation/osBaseline/rhelQuickWins/" title="RHEL Linux 7" class="md-nav__link">RHEL Linux 7</a></li><li class="md-nav__item"><a href="../../remediation/osBaseline/win12QuickWins/" title="Windows Server 2012 R2" class="md-nav__link">Windows Server 2012 R2</a></li><li class="md-nav__item"><a href="../../remediation/osBaseline/win16QuickWins/" title="Windows Server 2016" class="md-nav__link">Windows Server 2016</a></li><li class="md-nav__item"><a href="../../remediation/osBaseline/win19QuickWins/" title="Windows Server 2019" class="md-nav__link">Windows Server 2019</a></li></ul></nav></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11"><label class="md-nav__link" for="nav-11">Release Notes</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-11">Release Notes</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../releaseNotes/2020/" title="Releases in 2020" class="md-nav__link">Releases in 2020</a></li><li class="md-nav__item"><a href="../../releaseNotes/2019/" title="Releases in 2019" class="md-nav__link">Releases in 2019</a></li></ul></nav></li></ul></nav></div></div></div><div class="md-sidebar md-sidebar--secondary" data-md-component="toc"><div class="md-sidebar__scrollwrap"><div class="md-sidebar__inner"><nav class="md-nav md-nav--secondary"><label class="md-nav__title" for="__toc">In this article</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="#aws-security-policies" title="AWS Security Policies" class="md-nav__link">AWS Security Policies</a></li></ul></nav></div></div></div><div class="md-content"><article class="md-content__inner md-typeset"><h1>AWS Security Policies</h1><p>The Security Policies view provides a list of all security policies within the Cloudneeti application. Following is the security policies within the Cloudneeti application for different cloud account types, please refer <a href="../../releaseNotes/2020/" target="_blank">Release Notes</a> for latest updates.</p>
+<h2 id="aws-security-policies">AWS Security Policies</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Category Name</strong></th>
+<th><strong>Service Name</strong></th>
+<th><strong>Policy Title</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AWS - Audit and Logging</td>
+<td>CloudTrail</td>
+<td>Ensure CloudTrail is enabled in all regions</td>
+</tr>
+<tr>
+<td>AWS - Audit and Logging</td>
+<td>CloudTrail</td>
+<td>Ensure CloudTrail log file validation is enabled</td>
+</tr>
+<tr>
+<td>AWS - Audit and Logging</td>
+<td>Config</td>
+<td>Ensure AWS Config is enabled in all regions</td>
+</tr>
+<tr>
+<td>AWS - Audit and Logging</td>
+<td>CloudTrail</td>
+<td>Ensure S3 bucket access logging is enabled on the CloudTrail S3 bucket</td>
+</tr>
+<tr>
+<td>AWS - Audit and Logging</td>
+<td>CloudTrail</td>
+<td>Ensure CloudTrail logs are encrypted at rest using KMS CMKs</td>
+</tr>
+<tr>
+<td>AWS - Audit and Logging</td>
+<td>Virtual Private Cloud (VPC)</td>
+<td>Ensure VPC flow logging is enabled in all VPCs</td>
+</tr>
+<tr>
+<td>AWS - Audit and Logging</td>
+<td>Simple Storage Service (S3)</td>
+<td>Ensure S3 bucket access logging is enabled</td>
+</tr>
+<tr>
+<td>AWS - Audit and Logging</td>
+<td>CloudTrail</td>
+<td>Ensure CloudTrail trails are integrated with CloudWatch Logs</td>
+</tr>
+<tr>
+<td>AWS - Audit and Logging</td>
+<td>CloudTrail</td>
+<td>Ensure the S3 bucket used to store CloudTrail logs is not publicly accessible</td>
+</tr>
+<tr>
+<td>AWS - Audit and Logging</td>
+<td>Config</td>
+<td>Ensure that the log files (history files and snapshots) generated by AWS Config are delivered without any failures to designated S3 bucket</td>
+</tr>
+<tr>
+<td>AWS - Audit and Logging</td>
+<td>Config</td>
+<td>Ensure AWS Config service is using an active SNS topic to monitor configuration changes</td>
+</tr>
+<tr>
+<td>AWS - Audit and Logging</td>
+<td>Config</td>
+<td>Ensure AWS Config service is using an active S3 bucket to store configuration changes files</td>
+</tr>
+<tr>
+<td>AWS - Audit and Logging</td>
+<td>Simple Storage Service (S3)</td>
+<td>Ensure that Object level write event log is enabled for S3 bucket</td>
+</tr>
+<tr>
+<td>AWS - Audit and Logging</td>
+<td>Simple Storage Service (S3)</td>
+<td>Ensure that Object level read event log is enabled for S3 bucket</td>
+</tr>
+<tr>
+<td>AWS - Audit and Logging</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure that Event Subscription is enabled for RDS PostgreSQL Instance</td>
+</tr>
+<tr>
+<td>AWS - Audit and Logging</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure that Event Subscription is enabled for RDS MariaDB Instance</td>
+</tr>
+<tr>
+<td>AWS - Audit and Logging</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure that Event Subscription is enabled for RDS Aurora Cluster</td>
+</tr>
+<tr>
+<td>AWS - Audit and Logging</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure that Event Subscription is enabled for RDS Oracle Instances</td>
+</tr>
+<tr>
+<td>AWS - Audit and Logging</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure that Event Subscription is enabled for RDS SQL Server Instances</td>
+</tr>
+<tr>
+<td>AWS - Audit and Logging</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure that Event Subscription is enabled for RDS Aurora SQL Instances</td>
+</tr>
+<tr>
+<td>AWS - Audit and Logging</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure that Event Subscription is enabled for RDS Aurora MySQL Serverless Cluster</td>
+</tr>
+<tr>
+<td>AWS - Audit and Logging</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure Log Exports feature is enabled for RDS Aurora MySQL Serverless Cluster</td>
+</tr>
+<tr>
+<td>AWS - Audit and Logging</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure that Event Subscription is enabled for RDS Aurora PostgreSQL Serverless Cluster</td>
+</tr>
+<tr>
+<td>AWS - Audit and Logging</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure to enable unsafe statement transaction logging for RDS MySQL Instance</td>
+</tr>
+<tr>
+<td>AWS - Audit and Logging</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure Log Exports feature is enabled for RDS MySQL Instance</td>
+</tr>
+<tr>
+<td>AWS - Audit and Logging</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure Log Exports feature is enabled for RDS Mariadb Instance</td>
+</tr>
+<tr>
+<td>AWS - Audit and Logging</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure Log Exports feature is enabled for Aurora cluster</td>
+</tr>
+<tr>
+<td>AWS - Audit and Logging</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure Log Exports feature is enabled for Oracle instances</td>
+</tr>
+<tr>
+<td>AWS - Audit and Logging</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure that Event Subscription is enabled for RDS MySQL Instance</td>
+</tr>
+<tr>
+<td>AWS - Audit and Logging</td>
+<td>CloudTrail</td>
+<td>Ensure that CloudTrail trail have logging enabled</td>
+</tr>
+<tr>
+<td>AWS - Audit and Logging</td>
+<td>EC2 Autoscaling Group (ASG)</td>
+<td>Ensure that Cloudwatch detailed monitoring is enabled in ASG launch configurations</td>
+</tr>
+<tr>
+<td>AWS - Audit and Logging</td>
+<td>APIGateway</td>
+<td>Ensure that CloudWatch Log feature is enabled for Amazon API Gateway</td>
+</tr>
+<tr>
+<td>AWS - Audit and Logging</td>
+<td>APIGateway</td>
+<td>Ensure that Detailed CloudWatch Metrics feature is enabled for Amazon API Gateway</td>
+</tr>
+<tr>
+<td>AWS - Business Continuity</td>
+<td>EC2 Autoscaling Group (ASG)</td>
+<td>Ensure each Auto-Scaling Group is configured for multiple Availability Zones</td>
+</tr>
+<tr>
+<td>AWS - Business Continuity</td>
+<td>Simple Storage Service (S3)</td>
+<td>Ensure S3 buckets have versioning enabled</td>
+</tr>
+<tr>
+<td>AWS - Business Continuity</td>
+<td>EC2 Autoscaling Group (ASG)</td>
+<td>Ensure Amazon Auto Scaling Groups are utilizing cooldown periods</td>
+</tr>
+<tr>
+<td>AWS - Business Continuity</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure Classic Load Balancer has application layer Health Check Configured</td>
+</tr>
+<tr>
+<td>AWS - Business Continuity</td>
+<td>Cloudfront</td>
+<td>Ensure all CloudFront Distributions require HTTPS between CloudFront and your ELB origin</td>
+</tr>
+<tr>
+<td>AWS - Business Continuity</td>
+<td>EC2 Autoscaling Group (ASG)</td>
+<td>Ensure Auto-Scaling Group has an associated Elastic Load Balancer</td>
+</tr>
+<tr>
+<td>AWS - Business Continuity</td>
+<td>Redshift</td>
+<td>Ensure that AWS Redshift Reserved Nodes are renewed in The Next 7 Days</td>
+</tr>
+<tr>
+<td>AWS - Business Continuity</td>
+<td>Cloudfront</td>
+<td>Configure HTTP to HTTPS redirects with a CloudFront Viewer Protocol Policy</td>
+</tr>
+<tr>
+<td>AWS - Business Continuity</td>
+<td>Redshift</td>
+<td>Ensure that AWS Redshift Reserved Nodes are renewed in The Next 30 Days</td>
+</tr>
+<tr>
+<td>AWS - Business Continuity</td>
+<td>Cloudformation</td>
+<td>Ensure that Termination Protection feature is enabled for AWS CloudFormation stacks</td>
+</tr>
+<tr>
+<td>AWS - Business Continuity</td>
+<td>Neptune (programmatically under Amazon Relational Database Service)</td>
+<td>Ensure AWS Neptune clusters have a sufficient backup retention period set for compliance purposes</td>
+</tr>
+<tr>
+<td>AWS - Business Continuity</td>
+<td>Neptune (programmatically under Amazon Relational Database Service)</td>
+<td>Ensure Amazon Neptune instances have Auto Minor Version Upgrade feature enabled</td>
+</tr>
+<tr>
+<td>AWS - Business Continuity</td>
+<td>Elastic Block Store (EBS)</td>
+<td>Ensure AWS Elastic Block Store (EBS) volumes have recent snapshots available for point-in-time recovery</td>
+</tr>
+<tr>
+<td>AWS - Business Continuity</td>
+<td>Neptune (programmatically under Amazon Relational Database Service)</td>
+<td>Ensure that Amazon Neptune database clusters have the Multi-AZ feature enabled</td>
+</tr>
+<tr>
+<td>AWS - Business Continuity</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure backup retention policy is set for RDS PostgreSQL Instances</td>
+</tr>
+<tr>
+<td>AWS - Business Continuity</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure Auto Minor Version Upgrade feature is Enabled for RDS PostgreSQL Instances</td>
+</tr>
+<tr>
+<td>AWS - Business Continuity</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure that sufficient backup retention period is applied to RDS PostgreSQL Instances</td>
+</tr>
+<tr>
+<td>AWS - Business Continuity</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure Multi-AZ feature is Enabled for RDS PostgreSQL Instance</td>
+</tr>
+<tr>
+<td>AWS - Business Continuity</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure backup retention policy is set for RDS MariaDB Instances</td>
+</tr>
+<tr>
+<td>AWS - Business Continuity</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure Auto Minor Version Upgrade feature is Enabled for RDS MariaDB Instances</td>
+</tr>
+<tr>
+<td>AWS - Business Continuity</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure that sufficient backup retention period is applied to RDS MariaDB Instances</td>
+</tr>
+<tr>
+<td>AWS - Business Continuity</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure Multi-AZ feature is Enabled for RDS MariaDB Instance</td>
+</tr>
+<tr>
+<td>AWS - Business Continuity</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure Multi-AZ feature is Enabled for RDS Aurora Cluster</td>
+</tr>
+<tr>
+<td>AWS - Business Continuity</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure backup retention policy is set for RDS Aurora Cluster</td>
+</tr>
+<tr>
+<td>AWS - Business Continuity</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure that sufficient backup retention period is applied to RDS Aurora Cluster</td>
+</tr>
+<tr>
+<td>AWS - Business Continuity</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure that backtracking is enabled for RDS Aurora Cluster</td>
+</tr>
+<tr>
+<td>AWS - Business Continuity</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure Auto Minor Version Upgrade feature is Enabled for RDS Oracle Instances</td>
+</tr>
+<tr>
+<td>AWS - Business Continuity</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure backup retention policy is set for RDS Oracle Instances</td>
+</tr>
+<tr>
+<td>AWS - Business Continuity</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure Multi-AZ feature is Enabled for RDS Oracle Instances</td>
+</tr>
+<tr>
+<td>AWS - Business Continuity</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure that sufficient backup retention period is applied to RDS Oracle Instances</td>
+</tr>
+<tr>
+<td>AWS - Business Continuity</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure Auto Minor Version Upgrade feature is Enabled for RDS SQL Server Instances</td>
+</tr>
+<tr>
+<td>AWS - Business Continuity</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure backup retention policy is set for RDS SQL Server Instance</td>
+</tr>
+<tr>
+<td>AWS - Business Continuity</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure that sufficient backup retention period is applied to RDS SQL Server Instances</td>
+</tr>
+<tr>
+<td>AWS - Business Continuity</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure Multi-AZ feature is Enabled for RDS SQL Server Instances</td>
+</tr>
+<tr>
+<td>AWS - Business Continuity</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure Auto Minor Version Upgrade feature is Enabled for RDS Aurora SQL Instances</td>
+</tr>
+<tr>
+<td>AWS - Business Continuity</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure that sufficient backup retention period is applied to RDS Aurora MySQL Serverless Cluster</td>
+</tr>
+<tr>
+<td>AWS - Business Continuity</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure that sufficient backup retention period is applied to RDS Aurora PostgreSQL Serverless Cluster</td>
+</tr>
+<tr>
+<td>AWS - Business Continuity</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure Auto Minor Version Upgrade feature is Enabled for RDS MySQL Instances</td>
+</tr>
+<tr>
+<td>AWS - Business Continuity</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure backup retention policy is set for RDS MySQL Instances</td>
+</tr>
+<tr>
+<td>AWS - Business Continuity</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure that sufficient backup retention period is applied to RDS MySQL Instances</td>
+</tr>
+<tr>
+<td>AWS - Business Continuity</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure Multi-AZ feature is Enabled for RDS MySQL Instance</td>
+</tr>
+<tr>
+<td>AWS - Business Continuity</td>
+<td>EC2 Autoscaling Group (ASG)</td>
+<td>Ensure that autoscaling group has a healthcheck type set to ELB</td>
+</tr>
+<tr>
+<td>AWS - Business Continuity</td>
+<td>EC2 Autoscaling Group (ASG)</td>
+<td>Ensure that termination policy for instances in an ASG is in place</td>
+</tr>
+<tr>
+<td>AWS - Business Continuity</td>
+<td>EC2 Autoscaling Group (ASG)</td>
+<td>Ensure that MaxInstanceLifetime of instances in an ASG is set</td>
+</tr>
+<tr>
+<td>AWS - Business Continuity</td>
+<td>EC2 Autoscaling Group (ASG)</td>
+<td>Ensure that DeleteOnTermination is enabled for EBS volumes in ASG launch configurations</td>
+</tr>
+<tr>
+<td>AWS - Compute</td>
+<td>Elastic Compute Cloud Instances (EC2)</td>
+<td>Ensure all AWS EC2 instances are launched from approved AMIs</td>
+</tr>
+<tr>
+<td>AWS - Compute</td>
+<td>Elastic Compute Cloud Instances (EC2)</td>
+<td>Ensure that EC2 instances have no Elastic or Public IP addresses associated</td>
+</tr>
+<tr>
+<td>AWS - Compute</td>
+<td>Lambda</td>
+<td>Ensure that tracing is enabled for your AWS Lambda functions</td>
+</tr>
+<tr>
+<td>AWS - Compute</td>
+<td>Elastic Compute Cloud Instances (EC2)</td>
+<td>Ensure default EC2 security groups are not in use in order to follow AWS security best practices</td>
+</tr>
+<tr>
+<td>AWS - Compute</td>
+<td>Elastic Compute Cloud Instances (EC2)</td>
+<td>Ensure that detailed monitoring is enabled for the AWS EC2 instances that you need to monitor closely</td>
+</tr>
+<tr>
+<td>AWS - Compute</td>
+<td>Elastic Compute Cloud Instances (EC2)</td>
+<td>Ensure no backend EC2 instances are running in public subnets</td>
+</tr>
+<tr>
+<td>AWS - Compute</td>
+<td>Elastic Compute Cloud Instances (EC2)</td>
+<td>Ensure every EC2 instance is launched inside an Auto Scaling Group (ASG) in order to follow AWS reliability and security best practices</td>
+</tr>
+<tr>
+<td>AWS - Compute</td>
+<td>Elastic Compute Cloud Instances (EC2)</td>
+<td>Ensure EC2 instances are launched using the EC2-VPC platform instead of EC2-Classic outdated platform</td>
+</tr>
+<tr>
+<td>AWS - Compute</td>
+<td>Elastic Compute Cloud Instances (EC2)</td>
+<td>Ensure that there are no AWS EC2 instances that have scheduled events</td>
+</tr>
+<tr>
+<td>AWS - Compute</td>
+<td>Elastic Compute Cloud Instances (EC2)</td>
+<td>Ensure that the security group(s) associated with an EC2 instance does not have an excessive number of rules defined</td>
+</tr>
+<tr>
+<td>AWS - Compute</td>
+<td>Elastic Compute Cloud Instances (EC2)</td>
+<td>Ensure Termination Protection feature is enabled for EC2 instances that are not part of ASGs</td>
+</tr>
+<tr>
+<td>AWS - Compute</td>
+<td>Elastic Compute Cloud Instances (EC2)</td>
+<td>Ensure there are no running AWS EC2 instances older than 180 days available within your AWS account</td>
+</tr>
+<tr>
+<td>AWS - Compute</td>
+<td>Elastic Compute Cloud Instances (EC2)</td>
+<td>Ensure Instance Profiles/IAM Roles are used to appropriately grant permissions to applications running on amazon EC2 instances</td>
+</tr>
+<tr>
+<td>AWS - Compute</td>
+<td>Elastic Compute Cloud Instances (EC2)</td>
+<td>Ensure no EC2 security group allows inbound traffic from RFC-1918 CIDRs in order to follow AWS security best practices</td>
+</tr>
+<tr>
+<td>AWS - Compute</td>
+<td>Amazon Machine Image (AMI)</td>
+<td>Ensure that your existing AMIs are encrypted to meet security and compliance requirements</td>
+</tr>
+<tr>
+<td>AWS - Compute</td>
+<td>Amazon Machine Image (AMI)</td>
+<td>Ensure that there are no AMIs older than 180 days available within your AWS account</td>
+</tr>
+<tr>
+<td>AWS - Compute</td>
+<td>Amazon Machine Image (AMI)</td>
+<td>Ensure that unused Amazon Machine Images (AMIs) are identified and removed in order to follow AWS security best practices</td>
+</tr>
+<tr>
+<td>AWS - Compute</td>
+<td>Amazon Machine Image (AMI)</td>
+<td>Ensure your Amazon Machine Images (AMIs) are not accessible to all AWS accounts</td>
+</tr>
+<tr>
+<td>AWS - Compute</td>
+<td>Elastic Compute Cloud Instances (EC2)</td>
+<td>Ensure that none of your AWS EC2 Reserved Instance purchases have been failed</td>
+</tr>
+<tr>
+<td>AWS - Compute</td>
+<td>Elastic Compute Cloud Instances (EC2)</td>
+<td>Ensure that none of your AWS EC2 Reserved Instance purchases are pending</td>
+</tr>
+<tr>
+<td>AWS - Compute</td>
+<td>Elastic Compute Cloud Instances (EC2)</td>
+<td>Ensure Amazon EC2 Reserved Instances (RI) are renewed before expiration (less than 30 days)</td>
+</tr>
+<tr>
+<td>AWS - Compute</td>
+<td>Lambda</td>
+<td>Ensure that the latest execution environment is used for your AWS Lambda functions</td>
+</tr>
+<tr>
+<td>AWS - Compute</td>
+<td>Elastic Compute Cloud Instances (EC2)</td>
+<td>Ensure that EC2 instances provisioned in your AWS account are not associated with security groups that have their name prefixed with 'launch-wizard'</td>
+</tr>
+<tr>
+<td>AWS - Compute</td>
+<td>EC2 Autoscaling Group (ASG)</td>
+<td>Ensure that EBS optimized instances are launched using ASG launch configurations</td>
+</tr>
+<tr>
+<td>AWS - Compute</td>
+<td>APIGateway</td>
+<td>Ensure that AWS X-Ray Tracing feature is enabled for Amazon API Gateway</td>
+</tr>
+<tr>
+<td>AWS - Compute</td>
+<td>Identity and Access Management (IAM)</td>
+<td>Ensure SSL/TLS certificates are renewed 45 days before their expiration</td>
+</tr>
+<tr>
+<td>AWS - Compute</td>
+<td>Identity and Access Management (IAM)</td>
+<td>Ensure SSL/TLS certificates are renewed 30 days before their expiration</td>
+</tr>
+<tr>
+<td>AWS - Compute</td>
+<td>Identity and Access Management (IAM)</td>
+<td>Ensure SSL/TLS certificates are renewed 7 days before their expiration</td>
+</tr>
+<tr>
+<td>AWS - Compute</td>
+<td>Identity and Access Management (IAM)</td>
+<td>Ensure that your server certificates are not vulnerable to Heartbleed security bug</td>
+</tr>
+<tr>
+<td>AWS - Compute</td>
+<td>Identity and Access Management (IAM)</td>
+<td>Ensure expired SSL/TLS certificates are removed from AWS IAM</td>
+</tr>
+<tr>
+<td>AWS - Compute</td>
+<td>Amazon Certificate Manager (ACM)</td>
+<td>Ensure that wildcard certificates issued by Amazon Certificate Manager (ACM) or imported to ACM are not in use</td>
+</tr>
+<tr>
+<td>AWS - Compute</td>
+<td>Amazon Certificate Manager (ACM)</td>
+<td>Ensure there are no failed SSL/TLS certificates in the AWS Certificate Manager (ACM)</td>
+</tr>
+<tr>
+<td>AWS - Compute</td>
+<td>Amazon Certificate Manager (ACM)</td>
+<td>Ensure expired SSL/TLS certificates are removed from AWS Certificate Manager (ACM)</td>
+</tr>
+<tr>
+<td>AWS - Compute</td>
+<td>Amazon Certificate Manager (ACM)</td>
+<td>Ensure that all the requests made during SSL/TLS certificate issue or renewal process are validated</td>
+</tr>
+<tr>
+<td>AWS - Compute</td>
+<td>Amazon Certificate Manager (ACM)</td>
+<td>Ensure Amazon Certificate Manager (ACM) certificates are renewed 7 days before their expiration</td>
+</tr>
+<tr>
+<td>AWS - Compute</td>
+<td>Amazon Certificate Manager (ACM)</td>
+<td>Ensure Amazon Certificate Manager (ACM) certificates are renewed 45 days before their expiration</td>
+</tr>
+<tr>
+<td>AWS - Compute</td>
+<td>Amazon Certificate Manager (ACM)</td>
+<td>Ensure Amazon Certificate Manager (ACM) certificates are renewed 30 days before their expiration</td>
+</tr>
+<tr>
+<td>AWS - Compute</td>
+<td>Amazon Certificate Manager (ACM)</td>
+<td>Ensure unused SSL/TLS certificates are removed from AWS Certificate Manager (ACM) in order to follow AWS best practices</td>
+</tr>
+<tr>
+<td>AWS - Compute</td>
+<td>Neptune (RDS)</td>
+<td>Ensure that AWS Neptune instances enforce data-at-rest encryption using KMS CMKs</td>
+</tr>
+<tr>
+<td>AWS - Compute</td>
+<td>Neptune (RDS)</td>
+<td>Ensure that Amazon Neptune graph database instances are encrypted</td>
+</tr>
+<tr>
+<td>AWS - Compute</td>
+<td>Elastic Block Store (EBS)</td>
+<td>Ensure EBS volumes are encrypted with KMS CMKs in order to have full control over data encryption and decryption</td>
+</tr>
+<tr>
+<td>AWS - Compute</td>
+<td>Simple Notification Service (SNS)</td>
+<td>Ensure that encryption with KMS key implemented for each SNS topic</td>
+</tr>
+<tr>
+<td>AWS - Compute</td>
+<td>Simple Queue Service (SQS)</td>
+<td>Ensure that KMS CMK is used to encrypt SQS queue</td>
+</tr>
+<tr>
+<td>AWS - Compute</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure that Transport Encryption feature enabled for RDS SQL Server Instances</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Elastic Block Store (EBS)</td>
+<td>Ensure that existing Elastic Block Store (EBS) attached volumes are encrypted</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Elastic Block Store (EBS)</td>
+<td>Ensure unattached Elastic Block Store volumes should be removed to improve security of data</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Elastic Block Store (EBS)</td>
+<td>Ensure Amazon EBS snapshots are encrypted to meet security and compliance requirement</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Simple Notification Service (SNS)</td>
+<td>Ensure Simple Notification Service are not using HTTP as delivery protocol in subscription</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Simple Notification Service (SNS)</td>
+<td>Ensure that AWS Simple Notification Service topics are not exposed to everyone</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Simple Queue Service (SQS)</td>
+<td>Ensure that AWS Simple Queue Service queues is not exposed to everyone</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Simple Queue Service (SQS)</td>
+<td>Ensure that Server-Side Encryption is enabled for Amazon SQS queues</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure Deletion Protection feature is enabled for RDS PostgreSQL Instances</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure that encryption is enabled for RDS PostgreSQL Instances</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure Performance Insights feature is enabled for RDS PostgreSQL Instances</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure that encryption for storage done with KMS CMKs for each RDS PostgreSQL Instance</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure Deletion Protection feature is enabled for RDS MariaDB Instances</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure that encryption is enabled for RDS MariaDB Instances</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure Performance Insights feature is enabled for RDS MariaDB Instances</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure that encryption for storage done with KMS CMKs for each RDS MariaDB Instance</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure that Deletion Protection feature is enabled for RDS Aurora Cluster</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure Deletion Protection feature is enabled for RDS Oracle Instances</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure that encryption is enabled for RDS Oracle Instances</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure Performance Insights feature is enabled for RDS Oracle Instances</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure that encryption for storage done with KMS CMKs for each RDS Oracle Instances</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure Deletion Protection feature is enabled for RDS SQL Server Instances</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure that encryption is enabled for RDS SQL Server Instances</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure Performance Insights feature is enabled for RDS SQL Server Instances</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure that encryption for storage done with KMS CMKs for each RDS SQL Server Instances</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure that encryption is enabled for RDS Aurora SQL Instances</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure Performance Insights feature is enabled for Aurora SQL Instances</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure that encryption for storage done with KMS CMKs for RDS Aurora MySQL Serverless Cluster</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure that encryption for storage done with KMS CMKs for RDS Aurora SQL Instances</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure that encryption for storage done with KMS CMKs for RDS Aurora PostgreSQL Serverless Cluster</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure that Deletion Protection feature is enabled for RDS Aurora MySQL Serverless Cluster</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure that latest block encryption algorithms is used for RDS MySQL Instance</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure that Deletion Protection feature is enabled for RDS Aurora PostgreSQL Serverless Cluster</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure to enable FIPS standards on the server side for RDS MySQL Instance</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure that server loads the validate password plugin at startup for RDS MySQL Instance</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure Performance Insights feature is enabled for RDS MySQL Instances</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure Deletion Protection feature is enabled for RDS MySQL Instances</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure that encryption for storage done with KMS CMKs for each RDS MySQL Instance</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure that encryption is enabled for RDS MySQL Instances</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>APIGateway</td>
+<td>Ensure that SSL certificates attached with Amazon API Gateway to verify HTTP requests made to backend system are from API Gateway service</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>EC2 Autoscaling Group (ASG)</td>
+<td>Ensure that encrypted EBS volume is being used in ASG launch configurations</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>APIGateway</td>
+<td>Ensure that API Gateway client-side SSL certificate is renewed before expiration</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Elastic Compute Cloud Instances (EC2)</td>
+<td>Windows 2016 - Ensure 'Audit Credential Validation' is set to 'Success and Failure'</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Elastic Compute Cloud Instances (EC2)</td>
+<td>Windows 2016 - Ensure 'Audit Account Lockout' is set to 'Success and Failure'</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Elastic Compute Cloud Instances (EC2)</td>
+<td>Windows 2016 - Ensure 'Audit Other Logon/Logoff Events' is set to 'Success and Failure'</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Elastic Compute Cloud Instances (EC2)</td>
+<td>Windows 2016 - Ensure 'Audit Special Logon' is set to 'Success'</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Elastic Compute Cloud Instances (EC2)</td>
+<td>Windows 2016 - Ensure 'Audit Removable Storage' is set to 'Success and Failure'</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Elastic Compute Cloud Instances (EC2)</td>
+<td>Windows 2016 - Ensure 'Audit Authorization Policy Change' is set to 'Success'</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Elastic Compute Cloud Instances (EC2)</td>
+<td>Windows 2016 - Ensure 'Audit Sensitive Privilege Use' is set to 'Success and Failure'</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Elastic Compute Cloud Instances (EC2)</td>
+<td>Windows 2016 - Ensure 'Audit Group Membership' is set to 'Success'</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Elastic Compute Cloud Instances (EC2)</td>
+<td>Windows 2016 - Ensure 'Audit User Account Management' is set to 'Success and Failure'</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Elastic Compute Cloud Instances (EC2)</td>
+<td>Windows 2016 - Ensure 'Audit Logoff' is set to 'Success'</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Elastic Compute Cloud Instances (EC2)</td>
+<td>Windows 2016 - Ensure 'Audit Logon' is set to 'Success and Failure'</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Elastic Compute Cloud Instances (EC2)</td>
+<td>Windows 2016 - Ensure 'Audit Other System Events' is set to 'Success and Failure'</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Elastic Compute Cloud Instances (EC2)</td>
+<td>Windows 2016 - Ensure 'Audit Security State Change' is set to 'Success'</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Elastic Compute Cloud Instances (EC2)</td>
+<td>Windows 2016 - Ensure 'Audit IPsec Driver' is set to 'Success and Failure'</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Elastic Compute Cloud Instances (EC2)</td>
+<td>Windows 2016 - Ensure 'Audit Other Object Access Events' is set to 'Success and Failure'</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Elastic Compute Cloud Instances (EC2)</td>
+<td>Windows 2016 - Ensure 'Audit Application Group Management' is set to 'Success and Failure'</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Elastic Compute Cloud Instances (EC2)</td>
+<td>Windows 2016 - Ensure 'Audit PNP Activity' is set to 'Success'</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Elastic Compute Cloud Instances (EC2)</td>
+<td>Windows 2016 - Ensure 'Audit Authentication Policy Change' is set to 'Success'</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Elastic Compute Cloud Instances (EC2)</td>
+<td>Windows 2016 - Ensure 'Audit Distribution Group Management' is set to 'Success and Failure' (DC only)</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Elastic Compute Cloud Instances (EC2)</td>
+<td>Windows 2016 - Ensure 'Windows Firewall: Domain: Logging: Name' is set to '%SYSTEMROOT%\System32\logfiles\firewall\domainfw.log'</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Elastic Compute Cloud Instances (EC2)</td>
+<td>Windows 2016 - Ensure 'Windows Firewall: Domain: Logging: Size limit (KB)' is set to '16,384 KB or greater'</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Elastic Compute Cloud Instances (EC2)</td>
+<td>Windows 2016 - Ensure 'Windows Firewall: Domain: Logging: Log dropped packets' is set to 'Yes'</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Elastic Compute Cloud Instances (EC2)</td>
+<td>Windows 2016 - Ensure 'Windows Firewall: Domain: Logging: Log successful connections' is set to 'Yes'</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Elastic Compute Cloud Instances (EC2)</td>
+<td>Windows 2016 - Ensure 'Windows Firewall: Private: Logging: Name' is set to '%SYSTEMROOT%\System32\logfiles\firewall\privatefw.log'</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Elastic Compute Cloud Instances (EC2)</td>
+<td>Windows 2016 - Ensure 'Windows Firewall: Private: Logging: Size limit (KB)' is set to '16,384 KB or greater'</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Elastic Compute Cloud Instances (EC2)</td>
+<td>Windows 2016 - Ensure 'Windows Firewall: Private: Logging: Log dropped packets' is set to 'Yes'</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Elastic Compute Cloud Instances (EC2)</td>
+<td>Windows 2016 - Ensure 'Windows Firewall: Private: Logging: Log successful connections' is set to 'Yes'</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Elastic Compute Cloud Instances (EC2)</td>
+<td>Windows 2016 - Ensure 'Audit Computer Account Management' is set to 'Success and Failure'</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Elastic Compute Cloud Instances (EC2)</td>
+<td>Windows 2016 - Ensure 'Audit Other Account Management Events' is set to 'Success and Failure'</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Elastic Compute Cloud Instances (EC2)</td>
+<td>Windows 2016 - Ensure 'Audit Security Group Management' is set to 'Success and Failure'</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Elastic Compute Cloud Instances (EC2)</td>
+<td>Windows 2016 - Ensure 'Audit Process Creation' is set to 'Success'</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Elastic Compute Cloud Instances (EC2)</td>
+<td>Windows 2016 - Ensure 'Audit Audit Policy Change' is set to 'Success and Failure'</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Elastic Compute Cloud Instances (EC2)</td>
+<td>Windows 2016 - Ensure 'Audit Security System Extension' is set to 'Success and Failure'</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Elastic Compute Cloud Instances (EC2)</td>
+<td>Windows 2016 - Ensure 'Audit System Integrity' is set to 'Success and Failure'</td>
+</tr>
+<tr>
+<td>AWS - Governance</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure Amazon RDS Reserved Instances contract are renewed before expiration in 7 days</td>
+</tr>
+<tr>
+<td>AWS - Governance</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure Amazon RDS Reserved Instances contract are renewed before expiration in 30 days</td>
+</tr>
+<tr>
+<td>AWS - Governance</td>
+<td>Organization</td>
+<td>Ensure Amazon Organization is in use to consolidate all AWS accounts into an organization</td>
+</tr>
+<tr>
+<td>AWS - Governance</td>
+<td>Lambda</td>
+<td>Ensure that there are no publicly accessible AWS Lambda functions</td>
+</tr>
+<tr>
+<td>AWS - Governance</td>
+<td>Simple Queue Service (SQS)</td>
+<td>Ensure there is a Dead Letter Queue configured for each Amazon SQS queue</td>
+</tr>
+<tr>
+<td>AWS - Governance</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure that Copy Tags to Snapshots feature is enabled for RDS PostgreSQL Instances</td>
+</tr>
+<tr>
+<td>AWS - Governance</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure that unique master user name is used for each RDS PostgreSQL Instance</td>
+</tr>
+<tr>
+<td>AWS - Governance</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure that Copy Tags to Snapshots feature is enabled for RDS MariaDB Instances</td>
+</tr>
+<tr>
+<td>AWS - Governance</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure that unique master user name is used for each RDS MariaDB Instance</td>
+</tr>
+<tr>
+<td>AWS - Governance</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure that Copy Tags to Snapshots feature is enabled for RDS Aurora Cluster</td>
+</tr>
+<tr>
+<td>AWS - Governance</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure that Copy Tags to Snapshots feature is enabled for RDS Oracle Instances</td>
+</tr>
+<tr>
+<td>AWS - Governance</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure that unique master user name is used for each RDS Oracle Instances</td>
+</tr>
+<tr>
+<td>AWS - Governance</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure that Copy Tags to Snapshots feature is enabled for RDS SQL Server Instances</td>
+</tr>
+<tr>
+<td>AWS - Governance</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure that unique master user name is used for each RDS SQL Server Instances</td>
+</tr>
+<tr>
+<td>AWS - Governance</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure that unique master user name is used for RDS Aurora SQL Instances</td>
+</tr>
+<tr>
+<td>AWS - Governance</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure that Copy Tags to Snapshots feature is enabled for RDS Aurora MySQL Serverless Cluster</td>
+</tr>
+<tr>
+<td>AWS - Governance</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure that unique master user name is used for RDS Aurora MySQL Serverless Cluster</td>
+</tr>
+<tr>
+<td>AWS - Governance</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure that AutoPause feature is enabled for RDS Aurora MySQL Serverless Cluster</td>
+</tr>
+<tr>
+<td>AWS - Governance</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure that Copy Tags to Snapshots feature is enabled for RDS Aurora PostgreSQL Serverless Cluster</td>
+</tr>
+<tr>
+<td>AWS - Governance</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure that AutoPause feature is enabled for RDS Aurora PostgreSQL Serverless Cluster</td>
+</tr>
+<tr>
+<td>AWS - Governance</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure that unique master user name is used for RDS Aurora PostgreSQL Serverless Cluster</td>
+</tr>
+<tr>
+<td>AWS - Governance</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure that Copy Tags to Snapshots feature is enabled for RDS MySQL Instances</td>
+</tr>
+<tr>
+<td>AWS - Governance</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure that unique master user name is used for each RDS MySQL Instance</td>
+</tr>
+<tr>
+<td>AWS - Key Management</td>
+<td>Key Management Service (KMS)</td>
+<td>Ensure rotation for customer created CMKs is enabled</td>
+</tr>
+<tr>
+<td>AWS - Key Management</td>
+<td>Key Management Service (KMS)</td>
+<td>Ensure that there are no disabled Customer Master Keys (CMK) in your AWS account in order to follow AWS best practices</td>
+</tr>
+<tr>
+<td>AWS - Key Management</td>
+<td>Key Management Service (KMS)</td>
+<td>Ensure Amazon KMS master keys are not exposed to everyone</td>
+</tr>
+<tr>
+<td>AWS - Key Management</td>
+<td>Key Management Service (KMS)</td>
+<td>Identify and recover any KMS Customer Master Keys (CMK) scheduled for deletion</td>
+</tr>
+<tr>
+<td>AWS - Monitoring</td>
+<td>CloudWatch</td>
+<td>Ensure a log metric filter and alarm exist for unauthorized API calls</td>
+</tr>
+<tr>
+<td>AWS - Monitoring</td>
+<td>CloudWatch</td>
+<td>Ensure a log metric filter and alarm exist for Management Console sign-in without MFA</td>
+</tr>
+<tr>
+<td>AWS - Monitoring</td>
+<td>CloudWatch</td>
+<td>Ensure a log metric filter and alarm exist for usage of 'root' account</td>
+</tr>
+<tr>
+<td>AWS - Monitoring</td>
+<td>CloudWatch</td>
+<td>Ensure a log metric filter and alarm exist for IAM policy changes</td>
+</tr>
+<tr>
+<td>AWS - Monitoring</td>
+<td>CloudWatch</td>
+<td>Ensure a log metric filter and alarm exist for CloudTrail configuration changes</td>
+</tr>
+<tr>
+<td>AWS - Monitoring</td>
+<td>CloudWatch</td>
+<td>Ensure a log metric filter and alarm exist for AWS Management Console authentication failures</td>
+</tr>
+<tr>
+<td>AWS - Monitoring</td>
+<td>CloudWatch</td>
+<td>Ensure a log metric filter and alarm exist for disabling or scheduled deletion of customer created CMKs</td>
+</tr>
+<tr>
+<td>AWS - Monitoring</td>
+<td>CloudWatch</td>
+<td>Ensure a log metric filter and alarm exist for S3 bucket policy changes</td>
+</tr>
+<tr>
+<td>AWS - Monitoring</td>
+<td>CloudWatch</td>
+<td>Ensure a log metric filter and alarm exist for AWS Config configuration changes</td>
+</tr>
+<tr>
+<td>AWS - Monitoring</td>
+<td>CloudWatch</td>
+<td>Ensure a log metric filter and alarm exist for security group changes</td>
+</tr>
+<tr>
+<td>AWS - Monitoring</td>
+<td>CloudWatch</td>
+<td>Ensure a log metric filter and alarm exist for changes to Network Access Control Lists (NACL)</td>
+</tr>
+<tr>
+<td>AWS - Monitoring</td>
+<td>CloudWatch</td>
+<td>Ensure a log metric filter and alarm exist for changes to network gateways</td>
+</tr>
+<tr>
+<td>AWS - Monitoring</td>
+<td>CloudWatch</td>
+<td>Ensure a log metric filter and alarm exist for route table changes</td>
+</tr>
+<tr>
+<td>AWS - Monitoring</td>
+<td>CloudWatch</td>
+<td>Ensure a log metric filter and alarm exist for VPC changes</td>
+</tr>
+<tr>
+<td>AWS - Monitoring</td>
+<td>CloudWatch</td>
+<td>Ensure to integrate Simple Notification Service with AWS CloudFormation stack</td>
+</tr>
+<tr>
+<td>AWS - Monitoring</td>
+<td>CloudWatch</td>
+<td>Ensure a log metric filter and alarm exist for S3 bucket object read operations</td>
+</tr>
+<tr>
+<td>AWS - Monitoring</td>
+<td>CloudWatch</td>
+<td>Ensure a log metric filter and alarm exist for S3 bucket object write operations</td>
+</tr>
+<tr>
+<td>AWS - Monitoring</td>
+<td>Simple Storage Service (S3)</td>
+<td>Ensure that Block all public access is turned on for S3 buckets</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Security Groups (SG)</td>
+<td>Ensure no security groups allow ingress from 0.0.0.0/0 to port 22</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Security Groups (SG)</td>
+<td>Ensure no security groups allow ingress from 0.0.0.0/0 to port 3389</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Security Groups (SG)</td>
+<td>Ensure no security groups allow ingress from 0.0.0.0/0 to TCP ports 20 and 21 (FTP)</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Security Groups (SG)</td>
+<td>Ensure no AWS EC2 security group allows unrestricted inbound access to TCP port 23 (Telnet)</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Security Groups (SG)</td>
+<td>Ensure no AWS EC2 security group allows unrestricted inbound access to TCP port 25 (SMTP)</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Security Groups (SG)</td>
+<td>Ensure no security group allows unrestricted inbound access to TCP port 1521 (Oracle Database)</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Security Groups (SG)</td>
+<td>Ensure no security groups allow ingress from 0.0.0.0/0 to TCP port 3306 (MySQL)</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Security Groups (SG)</td>
+<td>Ensure no security group allows unrestricted inbound access to TCP port 5432 (PostgreSQL Database)</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Security Groups (SG)</td>
+<td>Ensure no security groups allow ingress from 0.0.0.0/0 to TCP and UDP port 53 (DNS)</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Security Groups (SG)</td>
+<td>Ensure no security groups allow ingress from 0.0.0.0/0 to TCP port 1433 (MSSQL)</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Security Groups (SG)</td>
+<td>Ensure no security groups allow ingress from 0.0.0.0/0 to TCP port 445 and (CIFS)</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Security Groups (SG)</td>
+<td>Ensure no AWS EC2 security group allows unrestricted inbound access to TCP port 139 and UDP ports 137 and 138 (NetBIOS)</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Security Groups (SG)</td>
+<td>Ensure no security groups allow ingress from 0.0.0.0/0 to Internet Control Message Protocol (ICMP)</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Security Groups (SG)</td>
+<td>Ensure no security group allows unrestricted inbound access to TCP port 135 (RPC)</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Security Groups (SG)</td>
+<td>Ensure no security groups allow ingress from 0.0.0.0/0 to MongoDB port 27017</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Security Groups (SG)</td>
+<td>Ensure no security groups allow ingress from 0.0.0.0/0 to port 9200 (Elasticsearch)</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Security Groups (SG)</td>
+<td>Ensure no security groups allow ingress from 0.0.0.0/0 to port 80 (HTTP)</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Security Groups (SG)</td>
+<td>Ensure no security groups allow ingress from 0.0.0.0/0 to port 443 (HTTPS)</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Security Groups (SG)</td>
+<td>Ensure no security group allows unrestricted inbound access to TCP port 110 (Pop3 Database)</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Security Groups (SG)</td>
+<td>Ensure your EC2 security groups do not have an excessive number of rules defined</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Security Groups (SG)</td>
+<td>Ensure your AWS account does not have an excessive number of security groups per region</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>Virtual Private Cloud (VPC)</td>
+<td>Ensure routing tables for VPC peering are "least access"</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>Virtual Private Cloud (VPC)</td>
+<td>Ensure the default security group of every VPC restricts all traffic</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure that your AWS ELBs listeners are using a secure protocol (HTTPS or SSL)</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure Application Load Balancer (ALB) with administrative service: Remote Desktop (TCP:3389) is not exposed to the public internet</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure Application Load Balancer (ALB) with unencrypted Mongo (TCP:27017) is not exposed to the public internet</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure Application Load Balancer (ALB) with HTTP (Port:80) is not exposed to the public internet</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure Application Load Balancer (ALB) with administrative service: SSH (TCP:22) is not exposed to the public internet</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure Application Load Balancer (ALB) with service 'SNMP' (UDP:161) is not exposed to the public internet</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure Application Load Balancer (ALB) with HTTPS (Port:443) is not exposed to the public internet</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure Application Load Balancer (ALB) with service 'NetBios Datagram Service' (UDP:138) is not exposed to the public internet</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure Application Load Balancer (ALB) with service 'NetBios Session Service' (UDP:139) is not exposed to the public internet</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure Application Load Balancer (ALB) with service 'Known internal web port' (TCP:8080) is not exposed to the public internet</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure Application Load Balancer (ALB) with service 'NetBIOS Name Service' (UDP:137) is not exposed to the public internet</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure Application Load Balancer (ALB) with service 'NetBios Session Service' (TCP:139) is not exposed to the public internet</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure Application Load Balancer (ALB) with service 'Known internal web port' (TCP:8000) is not exposed to the public internet</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure Application Load Balancer (ALB) with service 'NetBIOS Name Service' (TCP:137) is not exposed to the public internet</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure Application Load Balancer (ALB) with service 'NetBios Datagram Service' (TCP:138) is not exposed to the public internet</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure Application Load Balancer (ALB) with unencrypted LDAP (TCP:389) is not exposed to the public internet</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure Application Load Balancer (ALB) with service 'Prevalent known internal port' (TCP:3000) is not exposed to the public internet</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure that all Application Load Balancers (ALBs) available in your AWS account are associated with valid and secure security groups</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Security Groups (SG)</td>
+<td>Ensure no security group allows unrestricted inbound access using Internet Control Message Protocol v6 (ICMPv6)</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Security Groups (SG)</td>
+<td>Ensure no security group allows unrestricted inbound access to all TCP traffic</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Security Groups (SG)</td>
+<td>Ensure no security group allows unrestricted inbound access to all UDP traffic</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure AWS Application Load Balancers (ALBs) are using the latest predefined security policy</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Security Groups (SG)</td>
+<td>Ensure no security group allows unrestricted inbound access to all traffic</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure Deletion Protection feature is enabled for your AWS Application load balancers to follow security best practices</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure that there are no unused Application Load Balancers in your AWS account in order to follow AWS best practices</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure that your Application Load Balancer (ALB) listeners are using a secure protocol such as HTTPS</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure access logging is enabled for your AWS ALBs to follow security best practices</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure AWS Network Load Balancers (NLBs) are using the latest predefined security policy</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure no Network Load Balancer allows unrestricted inbound access to all Traffic</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure Deletion Protection feature is enabled for your AWS Network load balancers to follow security best practices</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure there are no unused Network Load Balancers in your AWS account in order to follow AWS best practices</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure that your AWS Network Load Balancer listeners are using a secure protocol such as TLS</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure access logging is enabled for your AWS NLBs to follow security best practices</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure Network Load Balancer with unencrypted LDAP (TCP:389) is not exposed to the public internet</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure that all Network Load Balancers (NLBs) available in your AWS account are associated with valid and secure security groups</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure Network Load Balancer with service 'NetBIOS Name Service' (TCP:137) is not exposed to the public internet</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure Network Load Balancer with service 'Prevalent known internal port' (TCP:3000) is not exposed to the public internet</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure Network Load Balancer with service 'NetBios Session Service' (TCP:139) is not exposed to the public internet</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure Network Load Balancer with service 'NetBios Datagram Service' (TCP:138) is not exposed to the public internet</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure Network Load Balancer with service 'Known internal web port' (TCP:8080) is not exposed to the public internet</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure Network Load Balancer with service 'Known internal web port' (TCP:8000) is not exposed to the public internet</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure Network Load Balancer with service 'NetBios Datagram Service' (UDP:138) is not exposed to the public internet</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure Network Load Balancer with service 'NetBIOS Name Service' (UDP:137) is not exposed to the public internet</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure Network Load Balancer with service 'SNMP' (UDP:161) is not exposed to the public internet</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure Network Load Balancer with service 'NetBios Session Service' (UDP:139) is not exposed to the public internet</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure Network Load Balancer with HTTP (Port:80) is not exposed to the public internet</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure Network Load Balancer with HTTPS (Port:443) is not exposed to the public internet</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure Network Load Balancer with administrative service: Remote Desktop (TCP:3389) is not exposed to the public internet</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure Network Load Balancer with administrative service: SSH (TCP:22) is not exposed to the public internet</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure that there are no unused Classic Load Balancers in your AWS account in order to follow AWS best practices</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure Network Load Balancer with unencrypted Mongo DB (TCP:27017) is not exposed to the public internet</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure Connection Draining is enabled for your AWS Classic Load Balancer</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure there are valid security groups associated with your Classic Load Balancer</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure access logging is enabled for your AWS Classic Load Balancer to follow security best practices</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure Classic Load Balancer with unencrypted LDAP (TCP:389) is not exposed to the public internet</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure Classic Load Balancer with service 'Prevalent known internal port' (TCP:3000) is not exposed to the public internet</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure Classic Load Balancer with service 'NetBIOS Name Service' (TCP:137) is not exposed to the public internet</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure Classic Load Balancer with service 'NetBios Datagram Service' (TCP:138) is not exposed to the public internet</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure Classic Load Balancer with service 'NetBios Session Service' (TCP:139) is not exposed to the public internet</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure Classic Load Balancer with service 'Known internal web port' (TCP:8000) is not exposed to the public internet</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure Classic Load Balancer with service 'Known internal web port' (TCP:8080) is not exposed to the public internet</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure Classic Load Balancer with service 'NetBIOS Name Service' (UDP:137) is not exposed to the public internet</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure Classic Load Balancer with service 'NetBios Datagram Service' (UDP:138) is not exposed to the public internet</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure Classic Load Balancer with service 'NetBios Session Service' (UDP:139) is not exposed to the public internet</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure Classic Load Balancer with service 'SNMP' (UDP:161) is not exposed to the public internet</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure Classic Load Balancer with HTTPS (Port:443) is not exposed to the public internet</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure Classic Load Balancer with HTTP (Port:80) is not exposed to the public internet</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure Classic Load Balancer with administrative service: SSH (TCP:22) is not exposed to the public internet</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure Classic Load Balancer with administrative service: Remote Desktop (TCP:3389) is not exposed to the public internet</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure Classic Load Balancer with unencrypted Mongo (TCP:27017) is not exposed to the public internet</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure no Classic Load Balancer allows unrestricted inbound access using Internet Control Message Protocol v6 (ICMPv6)</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure no Classic Load Balancer allows unrestricted inbound access using Internet Control Message Protocol (ICMP)</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure no Classic Load Balancer allows unrestricted inbound access to all UDP traffic</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure no Network Load Balancer allows unrestricted inbound access to all TCP traffic</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Security Groups (SG)</td>
+<td>Ensure that your EC2 security groups do not allow unrestricted outbound/egress access</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Security Groups (SG)</td>
+<td>Ensure AWS EC2 security group rules have descriptive text for organization and documentation</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure no Classic Load Balancer allows unrestricted inbound access to all traffic</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure no Classic Load Balancer allows unrestricted inbound access to all TCP traffic</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>Virtual Private Cloud (VPC)</td>
+<td>Ensure Elastic IPs for NAT gateways are allocated</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>Virtual Private Cloud (VPC)</td>
+<td>Ensure AWS default Virtual Private Cloud (VPC) is not being used</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>Virtual Private Cloud (VPC)</td>
+<td>Ensure that a specific Internet/NAT gateway is attached to a specific VPC</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>Virtual Private Cloud (VPC)</td>
+<td>Ensure Amazon VPC endpoints are not exposed to everyone</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure no Application Load Balancer allows unrestricted inbound access using Internet Control Message Protocol v6 (ICMPv6)</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure no Application Load Balancer allows unrestricted inbound access using Internet Control Message Protocol (ICMP)</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure no Application Load Balancer allows unrestricted inbound access to all UDP traffic</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure no Application Load Balancer allows unrestricted inbound access to all TCP traffic</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure no Application Load Balancer allows unrestricted inbound access to all traffic</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure no Network Load Balancer allows unrestricted inbound access to all UDP traffic</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure no Network Load Balancer allows unrestricted inbound access using Internet Control Message Protocol (ICMP)</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure no Network Load Balancer allows unrestricted inbound access using Internet Control Message Protocol v6 (ICMPv6)</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Security Groups (SG)</td>
+<td>Ensure no security group allows unrestricted ingress access to TCP port 8545 (Ethereum)</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Security Groups (SG)</td>
+<td>Ensure no security group allows unrestricted ingress access to TCP ports 8332 and 8333 (Bitcoin)</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure Network Load Balancer with service 'Ethereum' (TCP Port 8545) is not exposed to the public internet</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure Network Load Balancer with service 'Bitcoin' (TCP Ports 8332 and 8333) is not exposed to the public internet</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure Classic Load Balancer with service 'Ethereum' (Port 8545) is not exposed to the public internet</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure Classic Load Balancer with service 'Bitcoin' (Ports 8332 and 8333) is not exposed to the public internet</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure Application Load Balancer with service 'Ethereum' (Port 8545) is not exposed to the public internet</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Load Balancer (LB)</td>
+<td>Ensure Application Load Balancer with service 'Bitcoin' (Ports 8332 and 8333) is not exposed to the public internet</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure that public access is not given to RDS PostgreSQL Instance</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure that public subnets are not assigned to RDS PostgreSQL Instances</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure that public access is not given to RDS MariaDB Instance</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure that public subnets are not assigned to RDS MariaDB Instances</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure that public access is not given to RDS Oracle Instances</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure that public subnets are not assigned to RDS Oracle Instances</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure that public access is not given to RDS SQL Server Instances</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure that public subnets are not assigned to RDS SQL Server Instances</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure that public access is not given to RDS Aurora SQL Instances</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure that public subnets are not assigned to RDS Aurora SQL Instances</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure that public subnets are not assigned to RDS Aurora MySQL Serverless Cluster</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure that public subnets are not assigned to RDS Aurora PostgreSQL Serverless Cluster</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure that public access is not given to RDS MySQL Instance</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure that public subnets are not assigned to RDS MySQL Instances</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Autoscaling Group (ASG)</td>
+<td>Ensure that security group in ASG launch configuration does not have SSH port open to the internet</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>EC2 Autoscaling Group (ASG)</td>
+<td>Ensure that security group in ASG launch configuration does not have RDP port open to the internet</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>APIGateway</td>
+<td>Ensure that Access-Control-Allow-Origin is not set to all sources for HTTP APIs</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>APIGateway</td>
+<td>Ensure that Access-Control-Allow-Methods is set to specific methods and not * for HTTP APIs</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>APIGateway</td>
+<td>Ensure that Access-Control-Allow-Headers is set to specific Header and not * for HTTP APIs</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>APIGateway</td>
+<td>Ensure that Access-Control-Allow-Credentials is set to True for HTTP APIs</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>APIGateway</td>
+<td>Ensure that Data Trace logging is enabled for WebSocket APIs</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>APIGateway</td>
+<td>Ensure that Access logging is enabled for WebSocket APIs</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>APIGateway</td>
+<td>Ensure that Amazon API Gateway APIs accessible only through private API endpoints</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>APIGateway</td>
+<td>Ensure that AWS WAF is integrated with Amazon API Gateway to protect APIs from common web exploits</td>
+</tr>
+<tr>
+<td>AWS - Storage and Databases</td>
+<td>Simple Storage Service (S3)</td>
+<td>Ensure all S3 buckets have policy to require server-side and in transit encryption for all objects stored in bucket</td>
+</tr>
+<tr>
+<td>AWS - Storage and Databases</td>
+<td>Simple Storage Service (S3)</td>
+<td>Ensure AWS S3 buckets have the MFA Delete feature enabled</td>
+</tr>
+<tr>
+<td>AWS - Storage and Databases</td>
+<td>Simple Storage Service (S3)</td>
+<td>Ensure AWS S3 buckets do not allow public access via bucket policies</td>
+</tr>
+<tr>
+<td>AWS - Storage and Databases</td>
+<td>Simple Storage Service (S3)</td>
+<td>Ensure AWS S3 buckets enforce SSL to secure data in transit</td>
+</tr>
+<tr>
+<td>AWS - Storage and Databases</td>
+<td>Simple Storage Service (S3)</td>
+<td>Ensure Amazon S3 buckets have Default Encryption feature enabled</td>
+</tr>
+<tr>
+<td>AWS - Storage and Databases</td>
+<td>Simple Storage Service (S3)</td>
+<td>Ensure that Amazon S3 buckets access is limited only to specific IP addresses</td>
+</tr>
+<tr>
+<td>AWS - Storage and Databases</td>
+<td>Simple Storage Service (S3)</td>
+<td>Ensure that your AWS S3 buckets are not publicly exposed to the Internet</td>
+</tr>
+<tr>
+<td>AWS - Storage and Databases</td>
+<td>Simple Storage Service (S3)</td>
+<td>Ensure AWS S3 buckets do not allow public READ access</td>
+</tr>
+<tr>
+<td>AWS - Storage and Databases</td>
+<td>Simple Storage Service (S3)</td>
+<td>Ensure AWS S3 buckets do not allow public READ_ACP access</td>
+</tr>
+<tr>
+<td>AWS - Storage and Databases</td>
+<td>Simple Storage Service (S3)</td>
+<td>Ensure AWS S3 buckets do not allow public WRITE_ACP access</td>
+</tr>
+<tr>
+<td>AWS - Storage and Databases</td>
+<td>Simple Storage Service (S3)</td>
+<td>Ensure AWS S3 buckets do not allow public WRITE access</td>
+</tr>
+<tr>
+<td>AWS - Storage and Databases</td>
+<td>Simple Storage Service (S3)</td>
+<td>Ensure that your AWS S3 buckets are using DNS-compliant bucket names</td>
+</tr>
+<tr>
+<td>AWS - Storage and Databases</td>
+<td>Simple Storage Service (S3)</td>
+<td>Ensure Amazon S3 buckets have lifecycle configuration enabled for security purposes</td>
+</tr>
+<tr>
+<td>AWS - Storage and Databases</td>
+<td>Simple Storage Service (S3)</td>
+<td>Ensure that Amazon S3 buckets are encrypted with customer-provided AWS KMS CMKs</td>
+</tr>
+<tr>
+<td>AWS - Storage and Databases</td>
+<td>Simple Storage Service (S3)</td>
+<td>Ensure that Amazon S3 buckets use Transfer Acceleration feature for faster data transfers</td>
+</tr>
+<tr>
+<td>AWS - Storage and Databases</td>
+<td>Simple Storage Service (S3)</td>
+<td>Ensure that AWS S3 buckets use Object Lock for data protection and/or regulatory compliance</td>
+</tr>
+<tr>
+<td>AWS - Storage and Databases</td>
+<td>Simple Storage Service (S3)</td>
+<td>Ensure S3 buckets do not allow FULL_CONTROL access to AWS authenticated users via S3 ACLs</td>
+</tr>
+<tr>
+<td>AWS - Storage and Databases</td>
+<td>Simple Storage Service (S3)</td>
+<td>Ensure S3 buckets do not allow READ access to AWS authenticated users through ACLs</td>
+</tr>
+<tr>
+<td>AWS - Storage and Databases</td>
+<td>Simple Storage Service (S3)</td>
+<td>Ensure AWS S3 buckets do not allow READ_ACP access to AWS authenticated users using ACLs</td>
+</tr>
+<tr>
+<td>AWS - Storage and Databases</td>
+<td>Simple Storage Service (S3)</td>
+<td>Ensure S3 buckets do not allow WRITE access to AWS authenticated users through S3 ACLs</td>
+</tr>
+<tr>
+<td>AWS - Storage and Databases</td>
+<td>Simple Storage Service (S3)</td>
+<td>Ensure S3 buckets do not allow WRITE_ACP access to AWS authenticated users using S3 ACLs</td>
+</tr>
+<tr>
+<td>AWS - Storage and Databases</td>
+<td>DynamoDB</td>
+<td>Identify and remove any unused AWS DynamoDB tables in your AWS account in order to follow AWS best practices</td>
+</tr>
+<tr>
+<td>AWS - Storage and Databases</td>
+<td>DynamoDB</td>
+<td>Ensure Amazon DynamoDB tables enforce Server-Side Encryption (SSE)</td>
+</tr>
+<tr>
+<td>AWS - Storage and Databases</td>
+<td>DynamoDB</td>
+<td>Ensure Amazon DynamoDB tables have continuous backups enabled</td>
+</tr>
+<tr>
+<td>AWS - Storage and Databases</td>
+<td>DynamoDB</td>
+<td>Ensure that Amazon DynamoDB data is encrypted using AWS-managed Customer Master Keys</td>
+</tr>
+<tr>
+<td>AWS - Storage and Databases</td>
+<td>DynamoDB</td>
+<td>Ensure on-demand backup and restore functionality is in use for AWS DynamoDB tables</td>
+</tr>
+<tr>
+<td>AWS - Storage and Databases</td>
+<td>DynamoDB</td>
+<td>Ensure AWS DynamoDB Auto Scaling is enabled to automate capacity management for tables and indexes</td>
+</tr>
+<tr>
+<td>AWS - Storage and Databases</td>
+<td>Elastic MapReduce (EMR)</td>
+<td>Ensure in-transit and at-rest encryption is enabled for Amazon EMR clusters</td>
+</tr>
+<tr>
+<td>AWS - Storage and Databases</td>
+<td>Elastic MapReduce (EMR)</td>
+<td>Ensure AWS Elastic MapReduce (EMR) clusters capture detailed log data to Amazon S3</td>
+</tr>
+<tr>
+<td>AWS - Storage and Databases</td>
+<td>Elastic MapReduce (EMR)</td>
+<td>Ensure AWS EMR clusters are launched in a Virtual Private Cloud (i.e. are using EC2-VPC platform)</td>
+</tr>
+<tr>
+<td>AWS - Storage and Databases</td>
+<td>Redshift</td>
+<td>Ensure that user activity logging is enabled for your Amazon Redshift clusters</td>
+</tr>
+<tr>
+<td>AWS - Storage and Databases</td>
+<td>Redshift</td>
+<td>Ensure AWS Redshift database clusters are not using 'awsuser' (default master user name) for database access</td>
+</tr>
+<tr>
+<td>AWS - Storage and Databases</td>
+<td>Redshift</td>
+<td>Ensure Redshift clusters are using the latest generation of nodes for performance improvements</td>
+</tr>
+<tr>
+<td>AWS - Storage and Databases</td>
+<td>Redshift</td>
+<td>Ensure Deferred Maintenance feature is enabled for your Amazon Redshift clusters</td>
+</tr>
+<tr>
+<td>AWS - Storage and Databases</td>
+<td>Redshift</td>
+<td>Ensure Amazon Redshift clusters are not using port 5439 (default port) for database access</td>
+</tr>
+<tr>
+<td>AWS - Storage and Databases</td>
+<td>Redshift</td>
+<td>Ensure Redshift clusters are not publicly accessible to minimize security risks</td>
+</tr>
+<tr>
+<td>AWS - Storage and Databases</td>
+<td>Redshift</td>
+<td>Ensure AWS Redshift non-default parameter groups require SSL to secure data in transit</td>
+</tr>
+<tr>
+<td>AWS - Storage and Databases</td>
+<td>Redshift</td>
+<td>Ensure Amazon Redshift clusters are launched within a Virtual Private Cloud (VPC)</td>
+</tr>
+<tr>
+<td>AWS - Storage and Databases</td>
+<td>Redshift</td>
+<td>Ensure Redshift clusters are encrypted with KMS customer master keys (CMKs) in order to have full control over data encryption and decryption</td>
+</tr>
+<tr>
+<td>AWS - Storage and Databases</td>
+<td>Redshift</td>
+<td>Ensure database encryption is enabled for AWS Redshift clusters to protect your data at rest</td>
+</tr>
+<tr>
+<td>AWS - Storage and Databases</td>
+<td>Redshift</td>
+<td>Ensure audit logging is enabled for Redshift clusters for security and troubleshooting purposes</td>
+</tr>
+<tr>
+<td>AWS - Storage and Databases</td>
+<td>Redshift</td>
+<td>Ensure Version Upgrade is enabled for Redshift clusters to automatically receive upgrades during the maintenance window</td>
+</tr>
+<tr>
+<td>AWS - Storage and Databases</td>
+<td>Redshift</td>
+<td>Ensure that retention period is enabled for Amazon Redshift automated snapshots</td>
+</tr>
+<tr>
+<td>AWS - Storage and Databases</td>
+<td>Kinesis</td>
+<td>Ensure AWS Kinesis streams are encrypted with KMS Customer Master Keys (CMKs) for complete control over data encryption and decryption</td>
+</tr>
+<tr>
+<td>AWS - Storage and Databases</td>
+<td>Kinesis</td>
+<td>Ensure enhanced monitoring is enabled for your AWS Kinesis streams using shard-level metrics</td>
+</tr>
+<tr>
+<td>AWS - Storage and Databases</td>
+<td>Kinesis</td>
+<td>Ensure Amazon Kinesis streams enforce Server-Side Encryption (SSE)</td>
+</tr>
+<tr>
+<td>AWS - Storage and Databases</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure that port number should not be set as default port number for RDS PostgreSQL Instances</td>
+</tr>
+<tr>
+<td>AWS - Storage and Databases</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure that port number should not be set as default port number for RDS MariaDB Instances</td>
+</tr>
+<tr>
+<td>AWS - Storage and Databases</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure that port number should not be set as default port number for RDS Oracle Instances</td>
+</tr>
+<tr>
+<td>AWS - Storage and Databases</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure that port number should not be set as default port number for RDS SQL Server Instances</td>
+</tr>
+<tr>
+<td>AWS - Storage and Databases</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure that port number should not be set as default port number for RDS Aurora SQL Instances</td>
+</tr>
+<tr>
+<td>AWS - Storage and Databases</td>
+<td>Relational Database Service (RDS)</td>
+<td>Ensure that port number should not be set as default port number for RDS MySQL Instances</td>
+</tr>
+<tr>
+<td>AWS - Storage and Databases</td>
+<td>Simple Storage Service (S3)</td>
+<td>Ensure that Block public access to buckets and objects granted through new access control lists (ACLs) is turned on for S3 buckets</td>
+</tr>
+<tr>
+<td>AWS - Storage and Databases</td>
+<td>Simple Storage Service (S3)</td>
+<td>Ensure that Block public access to buckets and objects granted through any access control lists (ACLs) is turned on for S3 buckets</td>
+</tr>
+<tr>
+<td>AWS - Storage and Databases</td>
+<td>Simple Storage Service (S3)</td>
+<td>Ensure that Block public access to buckets and objects granted through new public bucket or access point policies is turned on for S3 buckets</td>
+</tr>
+<tr>
+<td>AWS - Storage and Databases</td>
+<td>Simple Storage Service (S3)</td>
+<td>Ensure that Block public and cross-account access to buckets and objects through any public bucket or access point policies are turned on for S3 buckets</td>
+</tr>
+<tr>
+<td>AWS - Storage and Databases</td>
+<td>APIGateway</td>
+<td>Ensure that Content Encoding feature is enabled for Amazon API Gateway APIs</td>
+</tr>
+</tbody>
+</table></article></div></div></main><footer class="md-footer"><div class="md-footer-meta md-typeset"><div class="md-footer-meta__inner md-grid"><div class="md-footer-copyright"><div class="md-footer-copyright__highlight">&copy; 2020 Cloudneeti.All Rights Reserved. | <a href="https://www.cloudneeti.com/privacy-policy-2/" target="_blank"> Privacy Policy</a> | <a href="https://www.cloudneeti.com/terms-of-use/" target="_blank"> Terms of Use</a></div></div></div></div></footer>
+
+</div><script src="../../assets/javascripts/application.d5a09f94.js"></script><script>app.initialize({version:"1.1.2",url:{base:"../.."}})</script><script src="../../javascripts/custom.js"></script></body></html>

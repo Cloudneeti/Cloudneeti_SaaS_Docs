@@ -1,0 +1,676 @@
+<!doctype html><html lang="en" class="no-js"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="x-ua-compatible" content="ie=edge"><meta name="description" content="Cloudneeti Documentation"><meta name="author" content="The Cloudneeti Team"><meta name="lang:clipboard.copy" content="Copy to clipboard"><meta name="lang:clipboard.copied" content="Copied to clipboard"><meta name="lang:search.language" content="en"><meta name="lang:search.pipeline.stopwords" content="True"><meta name="lang:search.pipeline.trimmer" content="True"><meta name="lang:search.result.none" content="No matching documents"><meta name="lang:search.result.one" content="1 matching document"><meta name="lang:search.result.other" content="# matching documents"><meta name="lang:search.tokenizer" content="[\s\-]+"><link rel="shortcut icon" href="../../assets/images/favicon.png"><meta name="generator" content="mkdocs-1.1.2, mkdocs-material-4.3.1"><title>Enable ASC audit policies - Documentation</title><link rel="stylesheet" href="../../assets/stylesheets/application.4031d38b.css"><link rel="stylesheet" href="../../assets/stylesheets/application-palette.224b79ff.css"><meta name="theme-color" content=""><script src="../../assets/javascripts/modernizr.74668098.js"></script><link href="https://fonts.gstatic.com" rel="preconnect" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,400i,700|&display=swap"><style>body,input{font-family:"Poppins","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"","Courier New",Courier,monospace}</style><link rel="stylesheet" href="../../assets/fonts/material-icons.css"><link rel="stylesheet" href="../../stylesheets/extra.css"><script>window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-149855644-1", "docs.cloudneeti.com")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })</script><script async src="https://www.google-analytics.com/analytics.js"></script></head><body dir="ltr" data-md-color-primary="cloudneeti" data-md-color-accent="cloudneeti"><svg class="md-svg"><defs></defs></svg> <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off"> <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off"> <label class="md-overlay" data-md-component="overlay" for="__drawer"></label><a href="#step-6-enable-azure-security-center-audit-policies" tabindex="1" class="md-skip">Skip to content </a><header class="md-header" data-md-component="header"><nav class="md-header-nav md-grid"><div class="md-flex"><div class="md-flex__cell md-flex__cell--shrink"><a href="../.." title="Documentation" class="md-header-nav__button md-logo md-custom-logo"><img src="../../images/logo.png" width="170" height="40"></a></div><div class="md-flex__cell md-flex__cell--shrink"><label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label></div><div class="md-flex__cell md-flex__cell--stretch"><div class="md-flex__ellipsis md-header-nav__title" data-md-component="title"><!--<span class="md-header-nav__topic"><a href="../..">Documentation</a></span><span class="md-header-nav__topic">Enable ASC audit policies</span>--></div></div><div class="md-flex__cell md-flex__cell--shrink"><label class="md-icon md-icon--search md-header-nav__button" for="__search"></label><div class="md-search" data-md-component="search" role="dialog"><label class="md-search__overlay" for="__search"></label><div class="md-search__inner" role="search"><form class="md-search__form" name="search"><input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active"> <label class="md-icon md-search__icon" for="__search"></label> <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">&#xE5CD;</button></form><div class="md-search__output"><div class="md-search__scrollwrap" data-md-scrollfix><div class="md-search-result" data-md-component="result"><div class="md-search-result__meta">Type to start searching</div><ol class="md-search-result__list"></ol></div></div></div></div></div></div></div></nav></header><div class="md-container"><main class="md-main"><div class="md-main__inner md-grid" data-md-component="container"><div class="md-sidebar md-sidebar--primary" data-md-component="navigation"><div class="md-sidebar__scrollwrap"><div class="md-sidebar__inner"><nav class="md-nav md-nav--primary" data-md-level="0"><label class="md-nav__title md-nav__title--site" for="__drawer"><a href="../.." title="Documentation" class="md-nav__button md-logo"><img src="../../images/logo.png" width="48" height="48"></a>Documentation</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1"><label class="md-nav__link" for="nav-1">Introduction</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-1">Introduction</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../gettingStarted/introduction/" title="Getting Started" class="md-nav__link">Getting Started</a></li><li class="md-nav__item"><a href="../../gettingStarted/productFeatures/" title="Product Features" class="md-nav__link">Product Features</a></li><li class="md-nav__item"><a href="../../gettingStarted/howItWorks/" title="How it works" class="md-nav__link">How it works</a></li><li class="md-nav__item"><a href="../../gettingStarted/cloudSecurityBestPractices/" title="Cloud Security Best Practices" class="md-nav__link">Cloud Security Best Practices</a></li><li class="md-nav__item"><a href="../../gettingStarted/deploymentArchitecture/" title="Deployment Architecture" class="md-nav__link">Deployment Architecture</a></li><li class="md-nav__item"><a href="../../gettingStarted/customerDataSecurity/" title="Customer Data Security" class="md-nav__link">Customer Data Security</a></li><li class="md-nav__item"><a href="../../gettingStarted/glossary/" title="Glossary" class="md-nav__link">Glossary</a></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2"><label class="md-nav__link" for="nav-2">Try and Buy</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-2">Try and Buy</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../tryAndBuy/freeTrial/" title="Free Trial" class="md-nav__link">Free Trial</a></li><li class="md-nav__item"><a href="../../tryAndBuy/subscribeOnAzureMarketplace/" title="Buy on Azure Marketplace" class="md-nav__link">Buy on Azure Marketplace</a></li><li class="md-nav__item"><a href="../../tryAndBuy/subscribe/" title="Request a License" class="md-nav__link">Request a License</a></li><li class="md-nav__item"><a href="../../tryAndBuy/partnerCobranding/" title="Partner co-branding" class="md-nav__link">Partner co-branding</a></li><li class="md-nav__item"><a href="../../tryAndBuy/estimatePricing/" title="Estimate Pricing" class="md-nav__link">Estimate Pricing</a></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3"><label class="md-nav__link" for="nav-3">Security Policies</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-3">Security Policies</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../gettingStarted/cloudSecurityBestPractices/" title="Cloud Security Best Practices" class="md-nav__link">Cloud Security Best Practices</a></li><li class="md-nav__item"><a href="../../securityPolicies/awsSecurityPolcies/" title="AWS Security Policies" class="md-nav__link">AWS Security Policies</a></li><li class="md-nav__item"><a href="../../securityPolicies/azureSecurityPolcies/" title="Azure Security Policies" class="md-nav__link">Azure Security Policies</a></li><li class="md-nav__item"><a href="../../securityPolicies/gcp_SecurityPolcies/" title="GCP Security Policies(Preview)" class="md-nav__link">GCP Security Policies(Preview)</a></li><li class="md-nav__item"><a href="../../securityPolicies/office365SecurityPolcies/" title="Office 365 Security Policies" class="md-nav__link">Office 365 Security Policies</a></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-6" type="checkbox" id="nav-3-6"><label class="md-nav__link" for="nav-3-6">OS baselines</label><nav class="md-nav" data-md-component="collapsible" data-md-level="2"><label class="md-nav__title" for="nav-3-6">OS baselines</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../securityPolicies/osBaseline/centOSSecurityPolcies/" title="CentOS" class="md-nav__link">CentOS</a></li><li class="md-nav__item"><a href="../../securityPolicies/osBaseline/rhelSecurityPolcies/" title="RHEL" class="md-nav__link">RHEL</a></li><li class="md-nav__item"><a href="../../securityPolicies/osBaseline/ubuntuSecurityPolcies/" title="Ubuntu 18.04" class="md-nav__link">Ubuntu 18.04</a></li><li class="md-nav__item"><a href="../../securityPolicies/osBaseline/windows12SecurityPolcies/" title="Windows 2012 R2" class="md-nav__link">Windows 2012 R2</a></li><li class="md-nav__item"><a href="../../securityPolicies/osBaseline/windows16SecurityPolcies/" title="Windows 2016" class="md-nav__link">Windows 2016</a></li><li class="md-nav__item"><a href="../../securityPolicies/osBaseline/windows19SecurityPolcies/" title="Windows 2019" class="md-nav__link">Windows 2019</a></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-7" type="checkbox" id="nav-3-7"><label class="md-nav__link" for="nav-3-7">Kubernetes</label><nav class="md-nav" data-md-component="collapsible" data-md-level="2"><label class="md-nav__title" for="nav-3-7">Kubernetes</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../securityPolicies/kubernetes/awsK8SSecurityPolcies/" title="AWS" class="md-nav__link">AWS</a></li><li class="md-nav__item"><a href="../../securityPolicies/kubernetes/azureK8SSecurityPolcies/" title="Azure" class="md-nav__link">Azure</a></li></ul></nav></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4"><label class="md-nav__link" for="nav-4">Compliance Benchmarks</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-4">Compliance Benchmarks</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../complianceBenchmarks/complianceBenchmarks/" title="Benchmarks" class="md-nav__link">Benchmarks</a></li></ul></nav></li><li class="md-nav__item md-nav__item--active md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked><label class="md-nav__link" for="nav-5">Onboarding Guide</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-5">Onboarding Guide</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../onboardingGuideOverview/" title="Overview" class="md-nav__link">Overview</a></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-2" type="checkbox" id="nav-5-2"><label class="md-nav__link" for="nav-5-2">Amazon Web Services</label><nav class="md-nav" data-md-component="collapsible" data-md-level="2"><label class="md-nav__title" for="nav-5-2">Amazon Web Services</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../amazonWebServiceAccounts/" title="Onboarding steps" class="md-nav__link">Onboarding steps</a></li><li class="md-nav__item"><a href="../awsEnableConfigBasedDataCollection/" title="Enable AWS Config Based Data Collection (optional)" class="md-nav__link">Enable AWS Config Based Data Collection (optional)</a></li><li class="md-nav__item"><a href="../awsVMBaselineConfiguration/" title="OS baseline (optional)" class="md-nav__link">OS baseline (optional)</a></li><li class="md-nav__item"><a href="../awsVulnerabilities/" title="Vulnerability (optional)" class="md-nav__link">Vulnerability (optional)</a></li><li class="md-nav__item"><a href="../configureCloudneetiAgentInEKS/" title="Amazon Elastic Kubernetes Service (Amazon EKS) (optional)" class="md-nav__link">Amazon Elastic Kubernetes Service (Amazon EKS) (optional)</a></li><li class="md-nav__item"><a href="../awsAccountHealthStatus/" title="AWS onboarding health status" class="md-nav__link">AWS onboarding health status</a></li></ul></nav></li><li class="md-nav__item md-nav__item--active md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-3" type="checkbox" id="nav-5-3" checked><label class="md-nav__link" for="nav-5-3">Microsoft Azure</label><nav class="md-nav" data-md-component="collapsible" data-md-level="2"><label class="md-nav__title" for="nav-5-3">Microsoft Azure</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../azureSubscriptions/" title="Onboarding steps" class="md-nav__link">Onboarding steps</a></li><li class="md-nav__item"><a href="../grantAccessToAzureSubscriptionAdditionalRoles/" title="Additional roles" class="md-nav__link">Additional roles</a></li><li class="md-nav__item"><a href="../grantAccessToKeyVaults/" title="Key vaults" class="md-nav__link">Key vaults</a></li><li class="md-nav__item"><a href="../azureAdvancedSecurityConfigurations/" title="Advanced security configurations" class="md-nav__link">Advanced security configurations</a></li><li class="md-nav__item md-nav__item--active"><input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc"><label class="md-nav__link md-nav__link--active" for="__toc">Enable ASC audit policies</label><a href="./" title="Enable ASC audit policies" class="md-nav__link md-nav__link--active">Enable ASC audit policies</a><nav class="md-nav md-nav--secondary"><label class="md-nav__title" for="__toc">In this article</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="#prerequisite" title="Prerequisite" class="md-nav__link">Prerequisite</a></li><li class="md-nav__item"><a href="#61-configure-asc-default-policies" title="6.1 Configure ASC default policies" class="md-nav__link">6.1 Configure ASC default policies</a><nav class="md-nav"><ul class="md-nav__list"><li class="md-nav__item"><a href="#category-subscription-governance-policies-increase-compliance-score-30-50" title="Category Subscription Governance Policies [Increase compliance Score 30-50%]" class="md-nav__link">Category Subscription Governance Policies [Increase compliance Score 30-50%]</a></li><li class="md-nav__item"><a href="#configuration-steps" title="Configuration Steps" class="md-nav__link">Configuration Steps</a></li></ul></nav></li><li class="md-nav__item"><a href="#62-configure-asc-policies-at-management-group-level" title="6.2 Configure ASC policies at Management Group level" class="md-nav__link">6.2 Configure ASC policies at Management Group level</a><nav class="md-nav"><ul class="md-nav__list"><li class="md-nav__item"><a href="#category-subscription-governance-policies-increase-compliance-score-30-50_1" title="Category Subscription Governance Policies [Increase compliance Score 30-50%]" class="md-nav__link">Category Subscription Governance Policies [Increase compliance Score 30-50%]</a></li><li class="md-nav__item"><a href="#configuration-steps_1" title="Configuration Steps" class="md-nav__link">Configuration Steps</a></li></ul></nav></li><li class="md-nav__item"><a href="#asc-policy-list" title="ASC policy list" class="md-nav__link">ASC policy list</a><nav class="md-nav"><ul class="md-nav__list"><li class="md-nav__item"><a href="#configure-azure-security-center-policies-azure-security-center" title="Configure Azure Security Center policies : Azure - Security Center" class="md-nav__link">Configure Azure Security Center policies : Azure - Security Center</a></li></ul></nav></li></ul></nav></li><li class="md-nav__item"><a href="../azureOSBaseline/" title="OS baseline and vulnerability" class="md-nav__link">OS baseline and vulnerability</a></li><li class="md-nav__item"><a href="../azureVulnerability/" title="Vulnerability" class="md-nav__link">Vulnerability</a></li><li class="md-nav__item"><a href="../configureCloudneetiAgentInAKS/" title="Azure Kubernetes Service (AKS)" class="md-nav__link">Azure Kubernetes Service (AKS)</a></li><li class="md-nav__item"><a href="../azureAccountHealthStatus/" title="Azure onboarding health status" class="md-nav__link">Azure onboarding health status</a></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-4" type="checkbox" id="nav-5-4"><label class="md-nav__link" for="nav-5-4">Google Cloud Platform (Preview)</label><nav class="md-nav" data-md-component="collapsible" data-md-level="2"><label class="md-nav__title" for="nav-5-4">Google Cloud Platform (Preview)</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../gcpOnboardingOverview/" title="Overview" class="md-nav__link">Overview</a></li><li class="md-nav__item"><a href="../gcpProject/" title="GCP Project" class="md-nav__link">GCP Project</a></li><li class="md-nav__item"><a href="../gcpOrganization/" title="GCP Organization" class="md-nav__link">GCP Organization</a></li><li class="md-nav__item"><a href="../gcpAnnexure/" title="Annexure" class="md-nav__link">Annexure</a></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-5" type="checkbox" id="nav-5-5"><label class="md-nav__link" for="nav-5-5">Office 365</label><nav class="md-nav" data-md-component="collapsible" data-md-level="2"><label class="md-nav__title" for="nav-5-5">Office 365</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../office365Subscription/" title="Onboarding steps" class="md-nav__link">Onboarding steps</a></li><li class="md-nav__item"><a href="../office365AccountHealthStatus/" title="Office 365 onboarding health status" class="md-nav__link">Office 365 onboarding health status</a></li><li class="md-nav__item"><a href="../office365AdvanceSecurityConfigurationUpgrade/" title="Upgrade advanced security configurations" class="md-nav__link">Upgrade advanced security configurations</a></li></ul></nav></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6"><label class="md-nav__link" for="nav-6">User Guide</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-6">User Guide</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../gettingStarted/signInAndSignOut/" title="Sign In and Sign Out" class="md-nav__link">Sign In and Sign Out</a></li><li class="md-nav__item"><a href="../../userGuide/userInterface/" title="User Interface" class="md-nav__link">User Interface</a></li><li class="md-nav__item"><a href="../../userGuide/dashboards/" title="Dashboards" class="md-nav__link">Dashboards</a></li><li class="md-nav__item"><a href="../../userGuide/securityPolicies/" title="Security Policies" class="md-nav__link">Security Policies</a></li><li class="md-nav__item"><a href="../../userGuide/complianceBenchmarks/" title="Compliance Benchmarks" class="md-nav__link">Compliance Benchmarks</a></li><li class="md-nav__item"><a href="../../userGuide/reports/" title="Reports" class="md-nav__link">Reports</a></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7"><label class="md-nav__link" for="nav-7">REST APIs</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-7">REST APIs</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../userGuide/restAPIs/" title="Overview" class="md-nav__link">Overview</a></li><li class="md-nav__item"><a href="../../userGuide/apiUserScenarios/" title="API User Scenarios" class="md-nav__link">API User Scenarios</a></li><li class="md-nav__item"><a href="../../userGuide/tokenAPI/" title="Token API" class="md-nav__link">Token API</a></li><li class="md-nav__item"><a href="../../userGuide/getLicenseAccounts/" title="License Accounts API" class="md-nav__link">License Accounts API</a></li><li class="md-nav__item"><a href="../../userGuide/onboardCloudAccount/" title="Onboard cloud account API" class="md-nav__link">Onboard cloud account API</a></li><li class="md-nav__item"><a href="../../userGuide/updateAPIAppAccessScope/" title="Update API app access scope API" class="md-nav__link">Update API app access scope API</a></li><li class="md-nav__item"><a href="../../userGuide/getHealthStatus/" title="Onboarding health status API" class="md-nav__link">Onboarding health status API</a></li><li class="md-nav__item"><a href="../../userGuide/getBenchmarkSummary/" title="Audit summary report API" class="md-nav__link">Audit summary report API</a></li><li class="md-nav__item"><a href="../../userGuide/initiateScanAPI/" title="Initiate scan API" class="md-nav__link">Initiate scan API</a></li><li class="md-nav__item"><a href="../../userGuide/scanStatusAPI/" title="Scan status API" class="md-nav__link">Scan status API</a></li><li class="md-nav__item"><a href="../../userGuide/getSupportedBenchmarks/" title="Get supported benchmarks API" class="md-nav__link">Get supported benchmarks API</a></li><li class="md-nav__item"><a href="../../userGuide/auditReportAPI/" title="Audit report API" class="md-nav__link">Audit report API</a></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8"><label class="md-nav__link" for="nav-8">Administrator Guide</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-8">Administrator Guide</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../administratorGuide/featuresAndQuotas/" title="Features and Quotas" class="md-nav__link">Features and Quotas</a></li><li class="md-nav__item"><a href="../../administratorGuide/manageLicenses/" title="Integrations" class="md-nav__link">Integrations</a></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-3" type="checkbox" id="nav-8-3"><label class="md-nav__link" for="nav-8-3">Incident management</label><nav class="md-nav" data-md-component="collapsible" data-md-level="2"><label class="md-nav__title" for="nav-8-3">Incident management</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../administratorGuide/serviceNowIntegration/" title="Service Now" class="md-nav__link">Service Now</a></li><li class="md-nav__item"><a href="../../administratorGuide/zendeskIntegration/" title="Zendesk" class="md-nav__link">Zendesk</a></li></ul></nav></li><li class="md-nav__item"><a href="../../administratorGuide/azureASCPushIntegration/" title="ASC Push Integration" class="md-nav__link">ASC Push Integration</a></li><li class="md-nav__item"><a href="../../administratorGuide/manageAccounts/" title="Cloud Accounts" class="md-nav__link">Cloud Accounts</a></li><li class="md-nav__item"><a href="../../administratorGuide/manageUsers/" title="Users & Roles" class="md-nav__link">Users & Roles</a></li><li class="md-nav__item"><a href="../../administratorGuide/privateBenchmark/" title="Private Benchmark" class="md-nav__link">Private Benchmark</a></li><li class="md-nav__item"><a href="../../administratorGuide/securityPolicyExclusions/" title="Security Policy Configuration" class="md-nav__link">Security Policy Configuration</a></li><li class="md-nav__item"><a href="../../administratorGuide/overrideSecurityPolicyStatus/" title="Override Security Policy Status" class="md-nav__link">Override Security Policy Status</a></li><li class="md-nav__item"><a href="../../administratorGuide/auditLog/" title="Audit Log" class="md-nav__link">Audit Log</a></li><li class="md-nav__item"><a href="../../administratorGuide/configureCloudneetiAPIAccess/" title="Configure Cloudneeti API Access" class="md-nav__link">Configure Cloudneeti API Access</a></li><li class="md-nav__item"><a href="../../administratorGuide/utilizationDashboard/" title="Utilization Dashboard" class="md-nav__link">Utilization Dashboard</a></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9"><label class="md-nav__link" for="nav-9">Remediation</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-9">Remediation</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../remediation/overview/" title="Overview" class="md-nav__link">Overview</a></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-2" type="checkbox" id="nav-9-2"><label class="md-nav__link" for="nav-9-2">Azure</label><nav class="md-nav" data-md-component="collapsible" data-md-level="2"><label class="md-nav__title" for="nav-9-2">Azure</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../remediation/azureGuidedRemediation/" title="Guided Remediation" class="md-nav__link">Guided Remediation</a></li><li class="md-nav__item"><a href="../../remediation/azureAutoRemediation/" title="Auto Remediation" class="md-nav__link">Auto Remediation</a></li><li class="md-nav__item"><a href="../../remediation/azureDecommissionofRemediation/" title="Decommission of remediation" class="md-nav__link">Decommission of remediation</a></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3" type="checkbox" id="nav-9-3"><label class="md-nav__link" for="nav-9-3">AWS</label><nav class="md-nav" data-md-component="collapsible" data-md-level="2"><label class="md-nav__title" for="nav-9-3">AWS</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../remediation/awsGuidedRemediation/" title="Guided Remediation" class="md-nav__link">Guided Remediation</a></li><li class="md-nav__item"><a href="../../remediation/awsRemediation/" title="Auto Remediation" class="md-nav__link">Auto Remediation</a></li><li class="md-nav__item"><a href="../../remediation/awsDecommissionofRemediation/" title="Decommission Remediation Framework" class="md-nav__link">Decommission Remediation Framework</a></li></ul></nav></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10"><label class="md-nav__link" for="nav-10">Quick wins and OS baseline hardening scripts</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-10">Quick wins and OS baseline hardening scripts</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../remediation/overviewQuickWins/" title="Overview" class="md-nav__link">Overview</a></li><li class="md-nav__item"><a href="../../remediation/awsQuickWins/" title="AWS Quick wins" class="md-nav__link">AWS Quick wins</a></li><li class="md-nav__item"><a href="../../remediation/azureQuickWins/" title="Azure Quick Wins" class="md-nav__link">Azure Quick Wins</a></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-10-4" type="checkbox" id="nav-10-4"><label class="md-nav__link" for="nav-10-4">OS Hardening for Baseline Configuration</label><nav class="md-nav" data-md-component="collapsible" data-md-level="2"><label class="md-nav__title" for="nav-10-4">OS Hardening for Baseline Configuration</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../remediation/osBaseline/centOSQuickWins/" title="CentOS Linux 7" class="md-nav__link">CentOS Linux 7</a></li><li class="md-nav__item"><a href="../../remediation/osBaseline/rhelQuickWins/" title="RHEL Linux 7" class="md-nav__link">RHEL Linux 7</a></li><li class="md-nav__item"><a href="../../remediation/osBaseline/win12QuickWins/" title="Windows Server 2012 R2" class="md-nav__link">Windows Server 2012 R2</a></li><li class="md-nav__item"><a href="../../remediation/osBaseline/win16QuickWins/" title="Windows Server 2016" class="md-nav__link">Windows Server 2016</a></li><li class="md-nav__item"><a href="../../remediation/osBaseline/win19QuickWins/" title="Windows Server 2019" class="md-nav__link">Windows Server 2019</a></li></ul></nav></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11"><label class="md-nav__link" for="nav-11">Release Notes</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-11">Release Notes</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../releaseNotes/2020/" title="Releases in 2020" class="md-nav__link">Releases in 2020</a></li><li class="md-nav__item"><a href="../../releaseNotes/2019/" title="Releases in 2019" class="md-nav__link">Releases in 2019</a></li></ul></nav></li></ul></nav></div></div></div><div class="md-sidebar md-sidebar--secondary" data-md-component="toc"><div class="md-sidebar__scrollwrap"><div class="md-sidebar__inner"><nav class="md-nav md-nav--secondary"><label class="md-nav__title" for="__toc">In this article</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="#prerequisite" title="Prerequisite" class="md-nav__link">Prerequisite</a></li><li class="md-nav__item"><a href="#61-configure-asc-default-policies" title="6.1 Configure ASC default policies" class="md-nav__link">6.1 Configure ASC default policies</a><nav class="md-nav"><ul class="md-nav__list"><li class="md-nav__item"><a href="#category-subscription-governance-policies-increase-compliance-score-30-50" title="Category Subscription Governance Policies [Increase compliance Score 30-50%]" class="md-nav__link">Category Subscription Governance Policies [Increase compliance Score 30-50%]</a></li><li class="md-nav__item"><a href="#configuration-steps" title="Configuration Steps" class="md-nav__link">Configuration Steps</a></li></ul></nav></li><li class="md-nav__item"><a href="#62-configure-asc-policies-at-management-group-level" title="6.2 Configure ASC policies at Management Group level" class="md-nav__link">6.2 Configure ASC policies at Management Group level</a><nav class="md-nav"><ul class="md-nav__list"><li class="md-nav__item"><a href="#category-subscription-governance-policies-increase-compliance-score-30-50_1" title="Category Subscription Governance Policies [Increase compliance Score 30-50%]" class="md-nav__link">Category Subscription Governance Policies [Increase compliance Score 30-50%]</a></li><li class="md-nav__item"><a href="#configuration-steps_1" title="Configuration Steps" class="md-nav__link">Configuration Steps</a></li></ul></nav></li><li class="md-nav__item"><a href="#asc-policy-list" title="ASC policy list" class="md-nav__link">ASC policy list</a><nav class="md-nav"><ul class="md-nav__list"><li class="md-nav__item"><a href="#configure-azure-security-center-policies-azure-security-center" title="Configure Azure Security Center policies : Azure - Security Center" class="md-nav__link">Configure Azure Security Center policies : Azure - Security Center</a></li></ul></nav></li></ul></nav></div></div></div><div class="md-content"><article class="md-content__inner md-typeset"><h1 id="step-6-enable-azure-security-center-audit-policies">STEP 6: Enable Azure Security Center audit policies</h1>
+<p><strong>This step is optional.</strong></p>
+<p>Enable Azure Security Center audit policies (Optional) includes configuring  Azure Security Center free tier in order for Zscaler CSPM to pull all security recommendations and make it available within the product.</p>
+<h2 id="prerequisite">Prerequisite</h2>
+<p>Access Needed on Subscription: <strong>Contributor</strong></p>
+<ul>
+<li><strong>Note:</strong></li>
+<li>Please note that it is advised to have only one ASC initiative. If there are multiple initiatives created, Cloud account compliance results in Cloudneeti may vary. </li>
+<li>Please note that it is not required to have Azure Defender enabled (ASC Standard tier).</li>
+</ul>
+<h2 id="61-configure-asc-default-policies">6.1 Configure ASC default policies</h2>
+<p>Enable pull integration with Azure Security Center free tier using automated scripts for policies <a href="../../onboardingGuide/enableASCAuditPolicies/#asc-policy-list" target="_blank">listed here </a> using below steps.</p>
+<h4 id="category-subscription-governance-policies-increase-compliance-score-30-50">Category Subscription Governance Policies [Increase compliance Score 30-50%]</h4>
+<h4 id="configuration-steps">Configuration Steps</h4>
+<ol>
+<li>
+<p>Login to Azure portal</p>
+</li>
+<li>
+<p>Open Cloud shell in PowerShell mode</p>
+</li>
+<li>
+<p>Download configuration script</p>
+<p><pre>
+    <code><code>wget https://raw.githubusercontent.com/Cloudneeti/docs_cloudneeti/master/scripts/subscription-governance/configure-ASCPolicies.ps1 -O configure-ASCPolicies.ps1</code>
+    </code>
+</pre></p>
+</li>
+<li>
+<p>Switch directory</p>
+<p><pre>
+    <code><code>cd $user</code></code>
+</pre></p>
+</li>
+<li>
+<p>Configure ASC default policies
+    <pre>
+        <code><code>.\configure-ASCPolicies.ps1 -SubscriptionId &lt;subscriptionId&gt;</code></code>
+    </pre></p>
+</li>
+</ol>
+<h2 id="62-configure-asc-policies-at-management-group-level">6.2 Configure ASC policies at Management Group level</h2>
+<p>Enable pull integration with Azure Security Center free tier using automated scripts for policies <a href="../../onboardingGuide/enableASCAuditPolicies/#asc-policy-list" target="_blank">listed here </a> using below steps.</p>
+<h4 id="category-subscription-governance-policies-increase-compliance-score-30-50_1">Category Subscription Governance Policies [Increase compliance Score 30-50%]</h4>
+<h4 id="configuration-steps_1">Configuration Steps</h4>
+<ol>
+<li>
+<p>Login to Azure portal</p>
+</li>
+<li>
+<p>Open Cloud shell in PowerShell mode</p>
+</li>
+<li>
+<p>Download configuration script</p>
+<p><pre>
+    <code><code>wget https://raw.githubusercontent.com/Cloudneeti/docs_cloudneeti/master/scripts/subscription-governance/configure-ASCPolicies.ps1 -O configure-ASCPolicies.ps1</code>
+    </code>
+</pre></p>
+</li>
+<li>
+<p>Switch directory</p>
+<p><pre>
+    <code><code>cd $user</code></code>
+</pre></p>
+</li>
+<li>
+<p>Configure ASC Policies at Management Group level
+        <pre>
+            <code><code>.\configure-ASCPolicies.ps1 -EnableManagementGroup -ManagementGroupId &lt;ManagementGroupId&gt;</code></code>
+    </pre></p>
+</li>
+</ol>
+<h2 id="asc-policy-list">ASC policy list</h2>
+<h3 id="configure-azure-security-center-policies-azure-security-center">Configure Azure Security Center policies : Azure - Security Center</h3>
+<table>
+<thead>
+<tr>
+<th><strong>Control No</strong></th>
+<th><strong>Policy Title</strong></th>
+<th><strong>Category</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2100.1</td>
+<td>Ensure that AAD authentication in Service Fabric is set to enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.101</td>
+<td>Ensure that required diagnostic logs retention period in days for Batch accounts is set in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.102</td>
+<td>Ensure that required diagnostic logs retention period in days in Azure Search service is set in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.103</td>
+<td>Ensure that required diagnostic logs retention period in days in Data Lake Analytics is set in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.104</td>
+<td>Ensure that required diagnostic logs retention period in days in Data Lake Store accounts is set in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.105</td>
+<td>Ensure that required diagnostic logs retention period in days in Event Hub accounts is set in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.106</td>
+<td>Ensure that required diagnostic logs retention period in days in IoT Hub accounts is set in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.107</td>
+<td>Ensure that required diagnostic logs retention period in days in Key Vault vaults is set in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.108</td>
+<td>Ensure that required diagnostic logs retention period in days in Logic Apps workflows is set in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.109</td>
+<td>Ensure that required diagnostic logs retention period in days in Service Bus is set in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.111</td>
+<td>Ensure that monitoring of Kubernetes Services without RBAC is enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.112</td>
+<td>Ensure that monitoring of sensitive data is classified on SQL database is enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.113</td>
+<td>Ensure that monitoring of SQL managed instances alerts being sent to admins and subscription owners is enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.114</td>
+<td>Ensure that monitoring of classic storage accounts migration to ARM is enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.115</td>
+<td>Ensure that reporting of system updates in virtual machine scale sets is enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.116</td>
+<td>Ensure that monitoring of unencrypted SQL databases is enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.117</td>
+<td>Ensure that monitoring of classic virtual machines is enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.118</td>
+<td>Ensure that OS vulnerabilities monitoring for virtual machine scale sets is enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.119</td>
+<td>Ensure that the detection of VM vulnerabilities by a Vulnerability Assessment solution is enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.12</td>
+<td>Ensure that diagnostics logs in Redis Cache is set to enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.121</td>
+<td>Ensure that Vulnerability Assessment on your SQL servers is enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.122</td>
+<td>Ensure that monitoring of the use of HTTPS in Web App is enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.13</td>
+<td>Ensure that diagnostics logs in Search Service is set to enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.14</td>
+<td>Ensure that diagnostics logs in Service Bus is set to enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.15</td>
+<td>Ensure that diagnostics logs in Virtual Machine Scale Sets is set to enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.16</td>
+<td>Ensure that diagnostics logs in Stream Analytics is set to enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.17</td>
+<td>Ensure that disable unrestricted network to storage account is set to enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.18</td>
+<td>Ensure that monitor disk encryption is set to enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.19</td>
+<td>Ensure that monitor for Endpoint Protection is set to enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.2</td>
+<td>Ensure that AAD authentication in SQL server is set to enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.22</td>
+<td>Ensure that MFA is enabled for all subscription accounts with owner permissions in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.23</td>
+<td>Ensure that MFA is enabled for all subscription accounts with read permissions in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.24</td>
+<td>Ensure that MFA is enabled for all subscription accounts with write permissions in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.25</td>
+<td>Ensure that deprecated accounts is removed on subscription are set to enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.26</td>
+<td>Ensure that deprecated accounts with owner permissions are removed from subscription is set to enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.27</td>
+<td>Ensure that external accounts with owner permissions are removed from subscription is set to enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.28</td>
+<td>Ensure that external accounts with read permissions are removed from subscription is set to enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.29</td>
+<td>Ensure that external accounts with write permissions are removed from subscription is set to enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.3</td>
+<td>Ensure that monitor of Adaptive Application whitelisting is set to enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.31</td>
+<td>Ensure that metric alerts in Batch account is set to enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.32</td>
+<td>Ensure that namespace authorization rules in service bus is set to enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.33</td>
+<td>Ensure that monitoring of network security groups is set to enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.34</td>
+<td>Ensure that next generation firewall is set to enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.35</td>
+<td>Ensure that monitoring of OS vulnerabilities is set to enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.36</td>
+<td>Ensure that secure transfer to storage account is set to enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.41</td>
+<td>Ensure that monitoring of SQL auditing is set to enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.42</td>
+<td>Ensure that SqlDb Vulnerability Assesment is set to enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.43</td>
+<td>Ensure that monitor SQL encryption is set to enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.44</td>
+<td>Ensure that monitor storage blob encryption is set to enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.45</td>
+<td>Ensure that monitor system updates is set to enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.47</td>
+<td>Ensure that vulnerability assessment is set to enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.48</td>
+<td>Ensure that web application firewall is set to enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.49</td>
+<td>Ensure that monitoring of permissive network access to app-services is enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.5</td>
+<td>Ensure that Cluster Protection level in Service Fabric is set to enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.51</td>
+<td>Ensure that monitoring of SQL managed server without Advanced Data Security is enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.53</td>
+<td>Ensure that all Advanced Threat Protection types on SQL server is enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.54</td>
+<td>Ensure that monitoring of access rules in Event Hub namespaces is enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.55</td>
+<td>Ensure that monitoring of the use of HTTPS in API app is enable in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.57</td>
+<td>Ensure that the Audit monitoring of SQL Servers is enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.58</td>
+<td>Ensure that monitoring of using built-in RBAC rules is enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.59</td>
+<td>Ensure that monitoring of access rules in Event Hubs is enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.6</td>
+<td>Ensure that monitoring of Kubernetes Services without authorized IP ranges is enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.61</td>
+<td>Ensure that monitoring of Automation Account Encryption is enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.63</td>
+<td>Ensure that monitoring of CORS restrictions for API Function is enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.64</td>
+<td>Ensure that monitoring of CORS restrictions for API Web is enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.65</td>
+<td>Ensure that monitoring of DDoS protection for virtual network is enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.66</td>
+<td>Ensure that monitoring of diagnostics logs in selective app services is enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.67</td>
+<td>Ensure that monitoring of diagnostic logs in IoT Hubs is enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.68</td>
+<td>Ensure that endpoint protection monitoring for virtual machine scale sets is enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.69</td>
+<td>Ensure that 'Send alerts to' is set in SQL server Advanced Data Security settings is enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.7</td>
+<td>Ensure that diagnostics logs in Data Lake Analytics is set to enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.71</td>
+<td>Ensure that IP Forwarding monitoring on virtual machines is disabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.72</td>
+<td>Ensure that monitoring of network just In time access is enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.73</td>
+<td>Ensure that monitoring of Open Management Ports on virtual machines is enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.74</td>
+<td>Ensure that monitoring of IP restrictions for API App is enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.75</td>
+<td>Ensure that monitoring of IP restrictions for Function App is enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.76</td>
+<td>Ensure that monitoring of IP restrictions for Web App is enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.77</td>
+<td>Ensure that monitoring of diagnostics logs in App Services is enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.78</td>
+<td>Ensure that monitoring of web sockets for API App is enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.79</td>
+<td>Ensure that monitoring of web sockets for Function App is enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.8</td>
+<td>Ensure that diagnostics logs in Data Lake Store is set to enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.81</td>
+<td>Ensure that monitoring of Endpoint Protection is enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.82</td>
+<td>Ensure that monitoring of custom domain use in API App is enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.83</td>
+<td>Ensure that monitoring of custom domain use in Function App is enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.84</td>
+<td>Ensure that monitoring of custom domain use in Web App is enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.85</td>
+<td>Ensure that monitoring of .Net version in API App is enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.86</td>
+<td>Ensure that monitoring of .Net version in Web App is enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.87</td>
+<td>Ensure that monitoring of Java version in API App is enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.88</td>
+<td>Ensure that monitoring of Java version in web app is enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.89</td>
+<td>Ensure that monitoring of Node.js version in Web App is enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.9</td>
+<td>Ensure that diagnostics logs in Event Hub is set to enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.91</td>
+<td>Ensure that monitoring of PHP version in Web App is enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.92</td>
+<td>Ensure that monitoring of Python version in API App is enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.93</td>
+<td>Ensure that monitoring of Python version in Web App is enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.94</td>
+<td>Ensure that monitoring of Internet-facing VM for NSG traffic hardening is enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.95</td>
+<td>Ensure that monitoring of NSG for virtual machines is enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.96</td>
+<td>Ensure that monitoring of NSG for Subnet is enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.97</td>
+<td>Ensure that monitoring of Kubernetes Services without pod security policy is enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.98</td>
+<td>Ensure that monitoring of remote debugging for API App is enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.99</td>
+<td>Ensure that monitoring of remote debugging for Function App is enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.10</td>
+<td>Ensure that diagnostics logs in Key Vault is set to enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.100</td>
+<td>Ensure that monitoring of remote debugging for Web App is enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.110</td>
+<td>Ensure that required diagnostic logs retention period in days in Stream Analytics is set in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.120</td>
+<td>Ensure that Vulnerability Assessment on your SQL managed instances is enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.16</td>
+<td>Ensure that diagnostics logs in Logic Apps is set to enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.30</td>
+<td>Ensure that JIT network access policy is set to enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.50</td>
+<td>Ensure that monitoring of SQL managed instances without Advanced Data Security is enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.52</td>
+<td>Ensure that all Advanced Threat Protection types on SQL managed instance is enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.56</td>
+<td>Ensure that monitoring of auditing policy Action-Groups and Actions setting is enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.60</td>
+<td>Ensure that diagnostics logs in Batch Account is set to enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.62</td>
+<td>Ensure that monitoring of CORS restrictions for API App is enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.70</td>
+<td>Ensure that monitoring of the use of HTTPS in function app is enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.80</td>
+<td>Ensure that monitoring of web sockets for Web App is enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+<tr>
+<td>2100.90</td>
+<td>Ensure that monitoring of PHP version in the API App is enabled in ASC</td>
+<td>Azure - Security Center</td>
+</tr>
+</tbody>
+</table></article></div></div></main><footer class="md-footer"><div class="md-footer-meta md-typeset"><div class="md-footer-meta__inner md-grid"><div class="md-footer-copyright"><div class="md-footer-copyright__highlight">&copy; 2020 Cloudneeti.All Rights Reserved. | <a href="https://www.cloudneeti.com/privacy-policy-2/" target="_blank"> Privacy Policy</a> | <a href="https://www.cloudneeti.com/terms-of-use/" target="_blank"> Terms of Use</a></div></div></div></div></footer>
+
+</div><script src="../../assets/javascripts/application.d5a09f94.js"></script><script>app.initialize({version:"1.1.2",url:{base:"../.."}})</script><script src="../../javascripts/custom.js"></script></body></html>

@@ -1,0 +1,2159 @@
+<!doctype html><html lang="en" class="no-js"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="x-ua-compatible" content="ie=edge"><meta name="description" content="Cloudneeti Documentation"><meta name="author" content="The Cloudneeti Team"><meta name="lang:clipboard.copy" content="Copy to clipboard"><meta name="lang:clipboard.copied" content="Copied to clipboard"><meta name="lang:search.language" content="en"><meta name="lang:search.pipeline.stopwords" content="True"><meta name="lang:search.pipeline.trimmer" content="True"><meta name="lang:search.result.none" content="No matching documents"><meta name="lang:search.result.one" content="1 matching document"><meta name="lang:search.result.other" content="# matching documents"><meta name="lang:search.tokenizer" content="[\s\-]+"><link rel="shortcut icon" href="../../assets/images/favicon.png"><meta name="generator" content="mkdocs-1.1.2, mkdocs-material-4.3.1"><title>Azure Security Policies - Documentation</title><link rel="stylesheet" href="../../assets/stylesheets/application.4031d38b.css"><link rel="stylesheet" href="../../assets/stylesheets/application-palette.224b79ff.css"><meta name="theme-color" content=""><script src="../../assets/javascripts/modernizr.74668098.js"></script><link href="https://fonts.gstatic.com" rel="preconnect" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,400i,700|&display=swap"><style>body,input{font-family:"Poppins","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"","Courier New",Courier,monospace}</style><link rel="stylesheet" href="../../assets/fonts/material-icons.css"><link rel="stylesheet" href="../../stylesheets/extra.css"><script>window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-149855644-1", "docs.cloudneeti.com")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })</script><script async src="https://www.google-analytics.com/analytics.js"></script></head><body dir="ltr" data-md-color-primary="cloudneeti" data-md-color-accent="cloudneeti"><svg class="md-svg"><defs></defs></svg> <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off"> <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off"> <label class="md-overlay" data-md-component="overlay" for="__drawer"></label><a href="#azure-security-policies" tabindex="1" class="md-skip">Skip to content </a><header class="md-header" data-md-component="header"><nav class="md-header-nav md-grid"><div class="md-flex"><div class="md-flex__cell md-flex__cell--shrink"><a href="../.." title="Documentation" class="md-header-nav__button md-logo md-custom-logo"><img src="../../images/logo.png" width="170" height="40"></a></div><div class="md-flex__cell md-flex__cell--shrink"><label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label></div><div class="md-flex__cell md-flex__cell--stretch"><div class="md-flex__ellipsis md-header-nav__title" data-md-component="title"><!--<span class="md-header-nav__topic"><a href="../..">Documentation</a></span><span class="md-header-nav__topic">Azure Security Policies</span>--></div></div><div class="md-flex__cell md-flex__cell--shrink"><label class="md-icon md-icon--search md-header-nav__button" for="__search"></label><div class="md-search" data-md-component="search" role="dialog"><label class="md-search__overlay" for="__search"></label><div class="md-search__inner" role="search"><form class="md-search__form" name="search"><input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active"> <label class="md-icon md-search__icon" for="__search"></label> <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">&#xE5CD;</button></form><div class="md-search__output"><div class="md-search__scrollwrap" data-md-scrollfix><div class="md-search-result" data-md-component="result"><div class="md-search-result__meta">Type to start searching</div><ol class="md-search-result__list"></ol></div></div></div></div></div></div></div></nav></header><div class="md-container"><main class="md-main"><div class="md-main__inner md-grid" data-md-component="container"><div class="md-sidebar md-sidebar--primary" data-md-component="navigation"><div class="md-sidebar__scrollwrap"><div class="md-sidebar__inner"><nav class="md-nav md-nav--primary" data-md-level="0"><label class="md-nav__title md-nav__title--site" for="__drawer"><a href="../.." title="Documentation" class="md-nav__button md-logo"><img src="../../images/logo.png" width="48" height="48"></a>Documentation</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1"><label class="md-nav__link" for="nav-1">Introduction</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-1">Introduction</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../gettingStarted/introduction/" title="Getting Started" class="md-nav__link">Getting Started</a></li><li class="md-nav__item"><a href="../../gettingStarted/productFeatures/" title="Product Features" class="md-nav__link">Product Features</a></li><li class="md-nav__item"><a href="../../gettingStarted/howItWorks/" title="How it works" class="md-nav__link">How it works</a></li><li class="md-nav__item"><a href="../../gettingStarted/cloudSecurityBestPractices/" title="Cloud Security Best Practices" class="md-nav__link">Cloud Security Best Practices</a></li><li class="md-nav__item"><a href="../../gettingStarted/deploymentArchitecture/" title="Deployment Architecture" class="md-nav__link">Deployment Architecture</a></li><li class="md-nav__item"><a href="../../gettingStarted/customerDataSecurity/" title="Customer Data Security" class="md-nav__link">Customer Data Security</a></li><li class="md-nav__item"><a href="../../gettingStarted/glossary/" title="Glossary" class="md-nav__link">Glossary</a></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2"><label class="md-nav__link" for="nav-2">Try and Buy</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-2">Try and Buy</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../tryAndBuy/freeTrial/" title="Free Trial" class="md-nav__link">Free Trial</a></li><li class="md-nav__item"><a href="../../tryAndBuy/subscribeOnAzureMarketplace/" title="Buy on Azure Marketplace" class="md-nav__link">Buy on Azure Marketplace</a></li><li class="md-nav__item"><a href="../../tryAndBuy/subscribe/" title="Request a License" class="md-nav__link">Request a License</a></li><li class="md-nav__item"><a href="../../tryAndBuy/partnerCobranding/" title="Partner co-branding" class="md-nav__link">Partner co-branding</a></li><li class="md-nav__item"><a href="../../tryAndBuy/estimatePricing/" title="Estimate Pricing" class="md-nav__link">Estimate Pricing</a></li></ul></nav></li><li class="md-nav__item md-nav__item--active md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked><label class="md-nav__link" for="nav-3">Security Policies</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-3">Security Policies</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../gettingStarted/cloudSecurityBestPractices/" title="Cloud Security Best Practices" class="md-nav__link">Cloud Security Best Practices</a></li><li class="md-nav__item"><a href="../awsSecurityPolcies/" title="AWS Security Policies" class="md-nav__link">AWS Security Policies</a></li><li class="md-nav__item md-nav__item--active"><input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc"><label class="md-nav__link md-nav__link--active" for="__toc">Azure Security Policies</label><a href="./" title="Azure Security Policies" class="md-nav__link md-nav__link--active">Azure Security Policies</a><nav class="md-nav md-nav--secondary"><label class="md-nav__title" for="__toc">In this article</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="#azure-security-policies" title="Azure Security Policies" class="md-nav__link">Azure Security Policies</a></li></ul></nav></li><li class="md-nav__item"><a href="../gcp_SecurityPolcies/" title="GCP Security Policies(Preview)" class="md-nav__link">GCP Security Policies(Preview)</a></li><li class="md-nav__item"><a href="../office365SecurityPolcies/" title="Office 365 Security Policies" class="md-nav__link">Office 365 Security Policies</a></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-6" type="checkbox" id="nav-3-6"><label class="md-nav__link" for="nav-3-6">OS baselines</label><nav class="md-nav" data-md-component="collapsible" data-md-level="2"><label class="md-nav__title" for="nav-3-6">OS baselines</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../osBaseline/centOSSecurityPolcies/" title="CentOS" class="md-nav__link">CentOS</a></li><li class="md-nav__item"><a href="../osBaseline/rhelSecurityPolcies/" title="RHEL" class="md-nav__link">RHEL</a></li><li class="md-nav__item"><a href="../osBaseline/ubuntuSecurityPolcies/" title="Ubuntu 18.04" class="md-nav__link">Ubuntu 18.04</a></li><li class="md-nav__item"><a href="../osBaseline/windows12SecurityPolcies/" title="Windows 2012 R2" class="md-nav__link">Windows 2012 R2</a></li><li class="md-nav__item"><a href="../osBaseline/windows16SecurityPolcies/" title="Windows 2016" class="md-nav__link">Windows 2016</a></li><li class="md-nav__item"><a href="../osBaseline/windows19SecurityPolcies/" title="Windows 2019" class="md-nav__link">Windows 2019</a></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-7" type="checkbox" id="nav-3-7"><label class="md-nav__link" for="nav-3-7">Kubernetes</label><nav class="md-nav" data-md-component="collapsible" data-md-level="2"><label class="md-nav__title" for="nav-3-7">Kubernetes</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../kubernetes/awsK8SSecurityPolcies/" title="AWS" class="md-nav__link">AWS</a></li><li class="md-nav__item"><a href="../kubernetes/azureK8SSecurityPolcies/" title="Azure" class="md-nav__link">Azure</a></li></ul></nav></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4"><label class="md-nav__link" for="nav-4">Compliance Benchmarks</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-4">Compliance Benchmarks</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../complianceBenchmarks/complianceBenchmarks/" title="Benchmarks" class="md-nav__link">Benchmarks</a></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5"><label class="md-nav__link" for="nav-5">Onboarding Guide</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-5">Onboarding Guide</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../onboardingGuide/onboardingGuideOverview/" title="Overview" class="md-nav__link">Overview</a></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-2" type="checkbox" id="nav-5-2"><label class="md-nav__link" for="nav-5-2">Amazon Web Services</label><nav class="md-nav" data-md-component="collapsible" data-md-level="2"><label class="md-nav__title" for="nav-5-2">Amazon Web Services</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../onboardingGuide/amazonWebServiceAccounts/" title="Onboarding steps" class="md-nav__link">Onboarding steps</a></li><li class="md-nav__item"><a href="../../onboardingGuide/awsEnableConfigBasedDataCollection/" title="Enable AWS Config Based Data Collection (optional)" class="md-nav__link">Enable AWS Config Based Data Collection (optional)</a></li><li class="md-nav__item"><a href="../../onboardingGuide/awsVMBaselineConfiguration/" title="OS baseline (optional)" class="md-nav__link">OS baseline (optional)</a></li><li class="md-nav__item"><a href="../../onboardingGuide/awsVulnerabilities/" title="Vulnerability (optional)" class="md-nav__link">Vulnerability (optional)</a></li><li class="md-nav__item"><a href="../../onboardingGuide/configureCloudneetiAgentInEKS/" title="Amazon Elastic Kubernetes Service (Amazon EKS) (optional)" class="md-nav__link">Amazon Elastic Kubernetes Service (Amazon EKS) (optional)</a></li><li class="md-nav__item"><a href="../../onboardingGuide/awsAccountHealthStatus/" title="AWS onboarding health status" class="md-nav__link">AWS onboarding health status</a></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-3" type="checkbox" id="nav-5-3"><label class="md-nav__link" for="nav-5-3">Microsoft Azure</label><nav class="md-nav" data-md-component="collapsible" data-md-level="2"><label class="md-nav__title" for="nav-5-3">Microsoft Azure</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../onboardingGuide/azureSubscriptions/" title="Onboarding steps" class="md-nav__link">Onboarding steps</a></li><li class="md-nav__item"><a href="../../onboardingGuide/grantAccessToAzureSubscriptionAdditionalRoles/" title="Additional roles" class="md-nav__link">Additional roles</a></li><li class="md-nav__item"><a href="../../onboardingGuide/grantAccessToKeyVaults/" title="Key vaults" class="md-nav__link">Key vaults</a></li><li class="md-nav__item"><a href="../../onboardingGuide/azureAdvancedSecurityConfigurations/" title="Advanced security configurations" class="md-nav__link">Advanced security configurations</a></li><li class="md-nav__item"><a href="../../onboardingGuide/enableASCAuditPolicies/" title="Enable ASC audit policies" class="md-nav__link">Enable ASC audit policies</a></li><li class="md-nav__item"><a href="../../onboardingGuide/azureOSBaseline/" title="OS baseline and vulnerability" class="md-nav__link">OS baseline and vulnerability</a></li><li class="md-nav__item"><a href="../../onboardingGuide/azureVulnerability/" title="Vulnerability" class="md-nav__link">Vulnerability</a></li><li class="md-nav__item"><a href="../../onboardingGuide/configureCloudneetiAgentInAKS/" title="Azure Kubernetes Service (AKS)" class="md-nav__link">Azure Kubernetes Service (AKS)</a></li><li class="md-nav__item"><a href="../../onboardingGuide/azureAccountHealthStatus/" title="Azure onboarding health status" class="md-nav__link">Azure onboarding health status</a></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-4" type="checkbox" id="nav-5-4"><label class="md-nav__link" for="nav-5-4">Google Cloud Platform (Preview)</label><nav class="md-nav" data-md-component="collapsible" data-md-level="2"><label class="md-nav__title" for="nav-5-4">Google Cloud Platform (Preview)</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../onboardingGuide/gcpOnboardingOverview/" title="Overview" class="md-nav__link">Overview</a></li><li class="md-nav__item"><a href="../../onboardingGuide/gcpProject/" title="GCP Project" class="md-nav__link">GCP Project</a></li><li class="md-nav__item"><a href="../../onboardingGuide/gcpOrganization/" title="GCP Organization" class="md-nav__link">GCP Organization</a></li><li class="md-nav__item"><a href="../../onboardingGuide/gcpAnnexure/" title="Annexure" class="md-nav__link">Annexure</a></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-5" type="checkbox" id="nav-5-5"><label class="md-nav__link" for="nav-5-5">Office 365</label><nav class="md-nav" data-md-component="collapsible" data-md-level="2"><label class="md-nav__title" for="nav-5-5">Office 365</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../onboardingGuide/office365Subscription/" title="Onboarding steps" class="md-nav__link">Onboarding steps</a></li><li class="md-nav__item"><a href="../../onboardingGuide/office365AccountHealthStatus/" title="Office 365 onboarding health status" class="md-nav__link">Office 365 onboarding health status</a></li><li class="md-nav__item"><a href="../../onboardingGuide/office365AdvanceSecurityConfigurationUpgrade/" title="Upgrade advanced security configurations" class="md-nav__link">Upgrade advanced security configurations</a></li></ul></nav></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6"><label class="md-nav__link" for="nav-6">User Guide</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-6">User Guide</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../gettingStarted/signInAndSignOut/" title="Sign In and Sign Out" class="md-nav__link">Sign In and Sign Out</a></li><li class="md-nav__item"><a href="../../userGuide/userInterface/" title="User Interface" class="md-nav__link">User Interface</a></li><li class="md-nav__item"><a href="../../userGuide/dashboards/" title="Dashboards" class="md-nav__link">Dashboards</a></li><li class="md-nav__item"><a href="../../userGuide/securityPolicies/" title="Security Policies" class="md-nav__link">Security Policies</a></li><li class="md-nav__item"><a href="../../userGuide/complianceBenchmarks/" title="Compliance Benchmarks" class="md-nav__link">Compliance Benchmarks</a></li><li class="md-nav__item"><a href="../../userGuide/reports/" title="Reports" class="md-nav__link">Reports</a></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7"><label class="md-nav__link" for="nav-7">REST APIs</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-7">REST APIs</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../userGuide/restAPIs/" title="Overview" class="md-nav__link">Overview</a></li><li class="md-nav__item"><a href="../../userGuide/apiUserScenarios/" title="API User Scenarios" class="md-nav__link">API User Scenarios</a></li><li class="md-nav__item"><a href="../../userGuide/tokenAPI/" title="Token API" class="md-nav__link">Token API</a></li><li class="md-nav__item"><a href="../../userGuide/getLicenseAccounts/" title="License Accounts API" class="md-nav__link">License Accounts API</a></li><li class="md-nav__item"><a href="../../userGuide/onboardCloudAccount/" title="Onboard cloud account API" class="md-nav__link">Onboard cloud account API</a></li><li class="md-nav__item"><a href="../../userGuide/updateAPIAppAccessScope/" title="Update API app access scope API" class="md-nav__link">Update API app access scope API</a></li><li class="md-nav__item"><a href="../../userGuide/getHealthStatus/" title="Onboarding health status API" class="md-nav__link">Onboarding health status API</a></li><li class="md-nav__item"><a href="../../userGuide/getBenchmarkSummary/" title="Audit summary report API" class="md-nav__link">Audit summary report API</a></li><li class="md-nav__item"><a href="../../userGuide/initiateScanAPI/" title="Initiate scan API" class="md-nav__link">Initiate scan API</a></li><li class="md-nav__item"><a href="../../userGuide/scanStatusAPI/" title="Scan status API" class="md-nav__link">Scan status API</a></li><li class="md-nav__item"><a href="../../userGuide/getSupportedBenchmarks/" title="Get supported benchmarks API" class="md-nav__link">Get supported benchmarks API</a></li><li class="md-nav__item"><a href="../../userGuide/auditReportAPI/" title="Audit report API" class="md-nav__link">Audit report API</a></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8"><label class="md-nav__link" for="nav-8">Administrator Guide</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-8">Administrator Guide</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../administratorGuide/featuresAndQuotas/" title="Features and Quotas" class="md-nav__link">Features and Quotas</a></li><li class="md-nav__item"><a href="../../administratorGuide/manageLicenses/" title="Integrations" class="md-nav__link">Integrations</a></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-3" type="checkbox" id="nav-8-3"><label class="md-nav__link" for="nav-8-3">Incident management</label><nav class="md-nav" data-md-component="collapsible" data-md-level="2"><label class="md-nav__title" for="nav-8-3">Incident management</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../administratorGuide/serviceNowIntegration/" title="Service Now" class="md-nav__link">Service Now</a></li><li class="md-nav__item"><a href="../../administratorGuide/zendeskIntegration/" title="Zendesk" class="md-nav__link">Zendesk</a></li></ul></nav></li><li class="md-nav__item"><a href="../../administratorGuide/azureASCPushIntegration/" title="ASC Push Integration" class="md-nav__link">ASC Push Integration</a></li><li class="md-nav__item"><a href="../../administratorGuide/manageAccounts/" title="Cloud Accounts" class="md-nav__link">Cloud Accounts</a></li><li class="md-nav__item"><a href="../../administratorGuide/manageUsers/" title="Users & Roles" class="md-nav__link">Users & Roles</a></li><li class="md-nav__item"><a href="../../administratorGuide/privateBenchmark/" title="Private Benchmark" class="md-nav__link">Private Benchmark</a></li><li class="md-nav__item"><a href="../../administratorGuide/securityPolicyExclusions/" title="Security Policy Configuration" class="md-nav__link">Security Policy Configuration</a></li><li class="md-nav__item"><a href="../../administratorGuide/overrideSecurityPolicyStatus/" title="Override Security Policy Status" class="md-nav__link">Override Security Policy Status</a></li><li class="md-nav__item"><a href="../../administratorGuide/auditLog/" title="Audit Log" class="md-nav__link">Audit Log</a></li><li class="md-nav__item"><a href="../../administratorGuide/configureCloudneetiAPIAccess/" title="Configure Cloudneeti API Access" class="md-nav__link">Configure Cloudneeti API Access</a></li><li class="md-nav__item"><a href="../../administratorGuide/utilizationDashboard/" title="Utilization Dashboard" class="md-nav__link">Utilization Dashboard</a></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9"><label class="md-nav__link" for="nav-9">Remediation</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-9">Remediation</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../remediation/overview/" title="Overview" class="md-nav__link">Overview</a></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-2" type="checkbox" id="nav-9-2"><label class="md-nav__link" for="nav-9-2">Azure</label><nav class="md-nav" data-md-component="collapsible" data-md-level="2"><label class="md-nav__title" for="nav-9-2">Azure</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../remediation/azureGuidedRemediation/" title="Guided Remediation" class="md-nav__link">Guided Remediation</a></li><li class="md-nav__item"><a href="../../remediation/azureAutoRemediation/" title="Auto Remediation" class="md-nav__link">Auto Remediation</a></li><li class="md-nav__item"><a href="../../remediation/azureDecommissionofRemediation/" title="Decommission of remediation" class="md-nav__link">Decommission of remediation</a></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3" type="checkbox" id="nav-9-3"><label class="md-nav__link" for="nav-9-3">AWS</label><nav class="md-nav" data-md-component="collapsible" data-md-level="2"><label class="md-nav__title" for="nav-9-3">AWS</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../remediation/awsGuidedRemediation/" title="Guided Remediation" class="md-nav__link">Guided Remediation</a></li><li class="md-nav__item"><a href="../../remediation/awsRemediation/" title="Auto Remediation" class="md-nav__link">Auto Remediation</a></li><li class="md-nav__item"><a href="../../remediation/awsDecommissionofRemediation/" title="Decommission Remediation Framework" class="md-nav__link">Decommission Remediation Framework</a></li></ul></nav></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10"><label class="md-nav__link" for="nav-10">Quick wins and OS baseline hardening scripts</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-10">Quick wins and OS baseline hardening scripts</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../remediation/overviewQuickWins/" title="Overview" class="md-nav__link">Overview</a></li><li class="md-nav__item"><a href="../../remediation/awsQuickWins/" title="AWS Quick wins" class="md-nav__link">AWS Quick wins</a></li><li class="md-nav__item"><a href="../../remediation/azureQuickWins/" title="Azure Quick Wins" class="md-nav__link">Azure Quick Wins</a></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-10-4" type="checkbox" id="nav-10-4"><label class="md-nav__link" for="nav-10-4">OS Hardening for Baseline Configuration</label><nav class="md-nav" data-md-component="collapsible" data-md-level="2"><label class="md-nav__title" for="nav-10-4">OS Hardening for Baseline Configuration</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../remediation/osBaseline/centOSQuickWins/" title="CentOS Linux 7" class="md-nav__link">CentOS Linux 7</a></li><li class="md-nav__item"><a href="../../remediation/osBaseline/rhelQuickWins/" title="RHEL Linux 7" class="md-nav__link">RHEL Linux 7</a></li><li class="md-nav__item"><a href="../../remediation/osBaseline/win12QuickWins/" title="Windows Server 2012 R2" class="md-nav__link">Windows Server 2012 R2</a></li><li class="md-nav__item"><a href="../../remediation/osBaseline/win16QuickWins/" title="Windows Server 2016" class="md-nav__link">Windows Server 2016</a></li><li class="md-nav__item"><a href="../../remediation/osBaseline/win19QuickWins/" title="Windows Server 2019" class="md-nav__link">Windows Server 2019</a></li></ul></nav></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11"><label class="md-nav__link" for="nav-11">Release Notes</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-11">Release Notes</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../releaseNotes/2020/" title="Releases in 2020" class="md-nav__link">Releases in 2020</a></li><li class="md-nav__item"><a href="../../releaseNotes/2019/" title="Releases in 2019" class="md-nav__link">Releases in 2019</a></li></ul></nav></li></ul></nav></div></div></div><div class="md-sidebar md-sidebar--secondary" data-md-component="toc"><div class="md-sidebar__scrollwrap"><div class="md-sidebar__inner"><nav class="md-nav md-nav--secondary"><label class="md-nav__title" for="__toc">In this article</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="#azure-security-policies" title="Azure Security Policies" class="md-nav__link">Azure Security Policies</a></li></ul></nav></div></div></div><div class="md-content"><article class="md-content__inner md-typeset"><h1>Azure Security Policies</h1><p>The Security Policies view provides a list of all security policies within the Cloudneeti application. Following is the security policies within the Cloudneeti application for different cloud account types, please refer <a href="../../releaseNotes/2020/" target="_blank">Release Notes</a> for latest updates.</p>
+<h2 id="azure-security-policies">Azure Security Policies</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Category Name</strong></th>
+<th><strong>Service Name</strong></th>
+<th><strong>Policy Title</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Azure - Business continuity and DR</td>
+<td>Virtual Machine (VM)</td>
+<td>Ensure that backup feature is configured for Virtual Machines</td>
+</tr>
+<tr>
+<td>Azure - Business continuity and DR</td>
+<td>Recovery Services vault</td>
+<td>Ensure that backup policy is associated with every Backup Vault</td>
+</tr>
+<tr>
+<td>Azure - Business continuity and DR</td>
+<td>Virtual Machine (VM)</td>
+<td>Ensure that sufficient capacity is available for Virtual Machines (SLA)</td>
+</tr>
+<tr>
+<td>Azure - Business continuity and DR</td>
+<td>Web App</td>
+<td>Ensure that Backup feature is configured for App Service deployed on Standard and above App Service Plan</td>
+</tr>
+<tr>
+<td>Azure - Business continuity and DR</td>
+<td>API App</td>
+<td>Ensure that Backup feature is configured for API Apps deployed on Standard and above App Service Plan</td>
+</tr>
+<tr>
+<td>Azure - Business continuity and DR</td>
+<td>Function App</td>
+<td>Ensure that Backup feature is configured for Function Apps deployed on Standard and above App Service Plan</td>
+</tr>
+<tr>
+<td>Azure - Business continuity and DR</td>
+<td>Mobile App</td>
+<td>Ensure that Backup feature is configured for Mobile Apps deployed on Standard and above App Service Plan</td>
+</tr>
+<tr>
+<td>Azure - Compute (IaaS)</td>
+<td>Virtual Machine (VM)</td>
+<td>Ensure that Vulnerability Assessment solutions is installed on the Virtual Machines</td>
+</tr>
+<tr>
+<td>Azure - Compute (IaaS)</td>
+<td>Virtual Machine (VM)</td>
+<td>Ensure that Endpoint Protection is installed on the Virtual Machines</td>
+</tr>
+<tr>
+<td>Azure - Compute (IaaS)</td>
+<td>Virtual Machine (VM)</td>
+<td>Ensure that latest OS patches are applied to all Virtual Machines</td>
+</tr>
+<tr>
+<td>Azure - Compute (IaaS)</td>
+<td>Virtual Machine (VM)</td>
+<td>Ensure that Disk Encryption policy is enforced on the Virtual Machines</td>
+</tr>
+<tr>
+<td>Azure - Compute (IaaS)</td>
+<td>Virtual Machine (VM)</td>
+<td>Ensure that operating system disks are encrypted for Windows Virtual Machines</td>
+</tr>
+<tr>
+<td>Azure - Compute (IaaS)</td>
+<td>Virtual Machine (VM)</td>
+<td>Ensure that data disks are encrypted for Windows Virtual Machines</td>
+</tr>
+<tr>
+<td>Azure - Compute (IaaS)</td>
+<td>Virtual Machine (VM)</td>
+<td>Ensure that VM agent is installed on Virtual Machines</td>
+</tr>
+<tr>
+<td>Azure - Compute (IaaS)</td>
+<td>Virtual Machine (VM)</td>
+<td>Ensure that Antivirus is enabled for Virtual Machines</td>
+</tr>
+<tr>
+<td>Azure - Compute (IaaS)</td>
+<td>Virtual Machine (VM)</td>
+<td>Ensure that auto update for Antivirus software is enabled on the Virtual Machines</td>
+</tr>
+<tr>
+<td>Azure - Compute (IaaS)</td>
+<td>Virtual Machine (VM)</td>
+<td>Ensure that real time protection is set to ON inside the Windows Virtual Machine</td>
+</tr>
+<tr>
+<td>Azure - Compute (IaaS)</td>
+<td>Virtual Machine (VM)</td>
+<td>Ensure that diagnostics is enabled on Virtual Machine</td>
+</tr>
+<tr>
+<td>Azure - Compute (IaaS)</td>
+<td>Service Fabric cluster</td>
+<td>Ensure that Service Fabric cluster consists more than one VM</td>
+</tr>
+<tr>
+<td>Azure - Compute (IaaS)</td>
+<td>Service Fabric cluster</td>
+<td>Ensure that Certificate security is enabled on the Service Fabric cluster</td>
+</tr>
+<tr>
+<td>Azure - Compute (IaaS)</td>
+<td>Service Fabric cluster</td>
+<td>Ensure that update mode is set to automatic for Service Fabric cluster</td>
+</tr>
+<tr>
+<td>Azure - Compute (IaaS)</td>
+<td>Service Fabric cluster</td>
+<td>Ensure that log analytics storage is enabled for Service Fabric cluster</td>
+</tr>
+<tr>
+<td>Azure - Compute (IaaS)</td>
+<td>Service Fabric cluster</td>
+<td>Ensure that Azure AD security is use to Service Fabric cluster</td>
+</tr>
+<tr>
+<td>Azure - Compute (IaaS)</td>
+<td>Virtual Machine (VM)</td>
+<td>Ensure that Log Analytics VM extension is enabled for Windows Virtual Machines</td>
+</tr>
+<tr>
+<td>Azure - Compute (IaaS)</td>
+<td>Virtual Machine (VM)</td>
+<td>Ensure that Windows Virtual Machines are always AD Domain joined</td>
+</tr>
+<tr>
+<td>Azure - Compute (IaaS)</td>
+<td>Azure Disk</td>
+<td>Ensure that 'Unattached disks' are encrypted</td>
+</tr>
+<tr>
+<td>Azure - Compute (IaaS)</td>
+<td>Virtual Machine (VM)</td>
+<td>Ensure than ASC showing healthy state for Virtual Machine</td>
+</tr>
+<tr>
+<td>Azure - Compute (IaaS)</td>
+<td>Virtual Machine (VM)</td>
+<td>Ensure that Log Analytics VM extension is enabled for Linux Virtual Machines</td>
+</tr>
+<tr>
+<td>Azure - Compute (IaaS)</td>
+<td>Virtual Machine (VM)</td>
+<td>Ensure that operating system disks are encrypted for Linux Virtual Machines</td>
+</tr>
+<tr>
+<td>Azure - Compute (IaaS)</td>
+<td>Virtual Machine (VM)</td>
+<td>Ensure that data disks are encrypted for Linux Virtual Machines</td>
+</tr>
+<tr>
+<td>Azure - Compute (IaaS)</td>
+<td>Virtual Machine (VM)</td>
+<td>Ensure that Virtual Machines are using managed disks</td>
+</tr>
+<tr>
+<td>Azure - Compute (IaaS)</td>
+<td>Virtual Machine (VM)</td>
+<td>Ensure that only approved extensions are installed</td>
+</tr>
+<tr>
+<td>Azure - Compute (PaaS and Serverless)</td>
+<td>Mobile App</td>
+<td>Ensure HTTP/2 is enabled for an App Service Mobile Apps</td>
+</tr>
+<tr>
+<td>Azure - Compute (PaaS and Serverless)</td>
+<td>Web App</td>
+<td>Ensure that 'Always On' is enabled for App Services deployed on Basic and above App Service Plan</td>
+</tr>
+<tr>
+<td>Azure - Compute (PaaS and Serverless)</td>
+<td>API App</td>
+<td>Ensure that 'Always On' is enabled for Api Apps deployed on Basic and above App Service Plan</td>
+</tr>
+<tr>
+<td>Azure - Compute (PaaS and Serverless)</td>
+<td>Mobile App</td>
+<td>Ensure that 'Always On' is enabled for Mobile Apps deployed on Basic and above App Service Plan</td>
+</tr>
+<tr>
+<td>Azure - Compute (PaaS and Serverless)</td>
+<td>Function App</td>
+<td>Ensure that 'Always On' is enabled for Function Apps deployed on Basic and above App Service Plan</td>
+</tr>
+<tr>
+<td>Azure - Compute (PaaS and Serverless)</td>
+<td>Web App</td>
+<td>Ensure that 'Auto Heal' is enabled for App Services</td>
+</tr>
+<tr>
+<td>Azure - Compute (PaaS and Serverless)</td>
+<td>Mobile App</td>
+<td>Ensure that 'Auto Heal' is enabled for Mobile Apps</td>
+</tr>
+<tr>
+<td>Azure - Compute (PaaS and Serverless)</td>
+<td>API App</td>
+<td>Ensure that 'Auto Heal' is enabled for Api Apps</td>
+</tr>
+<tr>
+<td>Azure - Compute (PaaS and Serverless)</td>
+<td>Function App</td>
+<td>Ensure that 'Auto Heal' is enabled for Function Apps</td>
+</tr>
+<tr>
+<td>Azure - Compute (PaaS and Serverless)</td>
+<td>Web App</td>
+<td>Ensure that Register with Azure Active Directory is enabled on App Service</td>
+</tr>
+<tr>
+<td>Azure - Compute (PaaS and Serverless)</td>
+<td>Mobile App</td>
+<td>Ensure that Managed Service Identity (MSI) is enabled for Mobile Apps</td>
+</tr>
+<tr>
+<td>Azure - Compute (PaaS and Serverless)</td>
+<td>Function App</td>
+<td>Ensure that Managed Service Identity (MSI) is enabled for Function Apps</td>
+</tr>
+<tr>
+<td>Azure - Compute (PaaS and Serverless)</td>
+<td>API App</td>
+<td>Ensure that Managed Service Identity (MSI) is enabled for Api Apps</td>
+</tr>
+<tr>
+<td>Azure - Compute (PaaS and Serverless)</td>
+<td>Web App</td>
+<td>Ensure Web Sockets are disabled for App Services</td>
+</tr>
+<tr>
+<td>Azure - Compute (PaaS and Serverless)</td>
+<td>Mobile App</td>
+<td>Ensure Web Sockets are disabled for Mobile Apps</td>
+</tr>
+<tr>
+<td>Azure - Compute (PaaS and Serverless)</td>
+<td>API App</td>
+<td>Ensure Web Sockets are disabled for API Apps</td>
+</tr>
+<tr>
+<td>Azure - Compute (PaaS and Serverless)</td>
+<td>Function App</td>
+<td>Ensure Web Sockets are disabled for Function Apps</td>
+</tr>
+<tr>
+<td>Azure - Compute (PaaS and Serverless)</td>
+<td>Web App</td>
+<td>Ensure that WEBSITE_LOAD_CERTIFICATES parameter is not set to '*' for Web Apps</td>
+</tr>
+<tr>
+<td>Azure - Compute (PaaS and Serverless)</td>
+<td>Mobile App</td>
+<td>Ensure that WEBSITE_LOAD_CERTIFICATES parameter is not set to '*' for Mobile Apps</td>
+</tr>
+<tr>
+<td>Azure - Compute (PaaS and Serverless)</td>
+<td>API App</td>
+<td>Ensure that WEBSITE_LOAD_CERTIFICATES parameter is not set to '*' for API Apps</td>
+</tr>
+<tr>
+<td>Azure - Compute (PaaS and Serverless)</td>
+<td>Function App</td>
+<td>Ensure that remote debugging is turned off for Function App</td>
+</tr>
+<tr>
+<td>Azure - Compute (PaaS and Serverless)</td>
+<td>Function App</td>
+<td>Ensure that IP restrictions rules are configured for Function Apps</td>
+</tr>
+<tr>
+<td>Azure - Compute (PaaS and Serverless)</td>
+<td>Web App</td>
+<td>Ensure that IP restrictions rules are configured for App Service</td>
+</tr>
+<tr>
+<td>Azure - Compute (PaaS and Serverless)</td>
+<td>Web App</td>
+<td>Ensure that Custom Domains are configured in App Service</td>
+</tr>
+<tr>
+<td>Azure - Compute (PaaS and Serverless)</td>
+<td>Function App</td>
+<td>Ensure that Custom Domains are configured in Function App</td>
+</tr>
+<tr>
+<td>Azure - Compute (PaaS and Serverless)</td>
+<td>Mobile App</td>
+<td>Ensure that CORS should not allow every resource to access Mobile Apps</td>
+</tr>
+<tr>
+<td>Azure - Compute (PaaS and Serverless)</td>
+<td>Mobile App</td>
+<td>Ensure that Custom Domains are configured in Mobile App</td>
+</tr>
+<tr>
+<td>Azure - Compute (PaaS and Serverless)</td>
+<td>API App</td>
+<td>Ensure that Custom Domains are configured in API App</td>
+</tr>
+<tr>
+<td>Azure - Compute (PaaS and Serverless)</td>
+<td>Mobile App</td>
+<td>Ensure that IP restrictions rules are configured for Mobile Apps</td>
+</tr>
+<tr>
+<td>Azure - Compute (PaaS and Serverless)</td>
+<td>API App</td>
+<td>Ensure that IP restrictions rules are configured for API Apps</td>
+</tr>
+<tr>
+<td>Azure - Compute (PaaS and Serverless)</td>
+<td>Function App</td>
+<td>Ensure that WEBSITE_LOAD_CERTIFICATES parameter is not set to '*' for Function Apps</td>
+</tr>
+<tr>
+<td>Azure - Compute (PaaS and Serverless)</td>
+<td>Function App</td>
+<td>Ensure that CORS should not allow every resource to access Function Apps</td>
+</tr>
+<tr>
+<td>Azure - Compute (PaaS and Serverless)</td>
+<td>Web App</td>
+<td>Ensure that CORS should not allow every resource to access Web Apps</td>
+</tr>
+<tr>
+<td>Azure - Compute (PaaS and Serverless)</td>
+<td>API App</td>
+<td>Ensure that CORS should not allow every resource to access API Apps</td>
+</tr>
+<tr>
+<td>Azure - Compute (PaaS and Serverless)</td>
+<td>Web App</td>
+<td>Ensure web app redirects all HTTP traffic to HTTPS in Azure App Service</td>
+</tr>
+<tr>
+<td>Azure - Compute (PaaS and Serverless)</td>
+<td>Function App</td>
+<td>Ensure that HTTPS Only is enabled for Function Apps</td>
+</tr>
+<tr>
+<td>Azure - Compute (PaaS and Serverless)</td>
+<td>API App</td>
+<td>Ensure that HTTPS Only is enabled for API App Services</td>
+</tr>
+<tr>
+<td>Azure - Compute (PaaS and Serverless)</td>
+<td>Mobile App</td>
+<td>Ensure that HTTPS Only is enabled for Mobile App Services</td>
+</tr>
+<tr>
+<td>Azure - Compute (PaaS and Serverless)</td>
+<td>Web App</td>
+<td>Ensure that remote debugging is turned off for App Service</td>
+</tr>
+<tr>
+<td>Azure - Compute (PaaS and Serverless)</td>
+<td>Function App</td>
+<td>Ensure that 'App Service Authentication' is enabled for Function Apps</td>
+</tr>
+<tr>
+<td>Azure - Compute (PaaS and Serverless)</td>
+<td>API App</td>
+<td>Ensure that 'App Service Authentication' is enabled for API Apps</td>
+</tr>
+<tr>
+<td>Azure - Compute (PaaS and Serverless)</td>
+<td>Mobile App</td>
+<td>Ensure that 'App Service Authentication' is enabled for Mobile Apps</td>
+</tr>
+<tr>
+<td>Azure - Compute (PaaS and Serverless)</td>
+<td>Web App</td>
+<td>Ensure that 'App Service Authentication' is enabled for Web apps</td>
+</tr>
+<tr>
+<td>Azure - Compute (PaaS and Serverless)</td>
+<td>Mobile App</td>
+<td>Ensure that remote debugging is turned off for Mobile App</td>
+</tr>
+<tr>
+<td>Azure - Compute (PaaS and Serverless)</td>
+<td>API App</td>
+<td>Ensure that remote debugging is turned off for API App</td>
+</tr>
+<tr>
+<td>Azure - Compute (PaaS and Serverless)</td>
+<td>API App</td>
+<td>Ensure that 'Availability Web Tests' are configured for API Apps</td>
+</tr>
+<tr>
+<td>Azure - Compute (PaaS and Serverless)</td>
+<td>Mobile App</td>
+<td>Ensure that 'Availability Web Tests' are configured for Mobile Apps</td>
+</tr>
+<tr>
+<td>Azure - Compute (PaaS and Serverless)</td>
+<td>Function App</td>
+<td>Ensure that 'Availability Web Tests' are configured for Function Apps</td>
+</tr>
+<tr>
+<td>Azure - Compute (PaaS and Serverless)</td>
+<td>Mobile App</td>
+<td>Ensure that 'App Insights' are configured for Azure Mobile Apps</td>
+</tr>
+<tr>
+<td>Azure - Compute (PaaS and Serverless)</td>
+<td>Function App</td>
+<td>Ensure that 'App Insights' are configured for Azure Function Apps</td>
+</tr>
+<tr>
+<td>Azure - Compute (PaaS and Serverless)</td>
+<td>API App</td>
+<td>Ensure that 'App Insights' are configured for Azure API Apps</td>
+</tr>
+<tr>
+<td>Azure - Compute (PaaS and Serverless)</td>
+<td>Web App</td>
+<td>Ensure web app has 'Client Certificates (Incoming client certificates)' set to 'On'</td>
+</tr>
+<tr>
+<td>Azure - Compute (PaaS and Serverless)</td>
+<td>Web App</td>
+<td>Ensure that 'HTTP Version' is the latest, if used to run the web app</td>
+</tr>
+<tr>
+<td>Azure - Compute (PaaS and Serverless)</td>
+<td>Function App</td>
+<td>Ensure HTTP/2 is enabled for an App Service Function Apps</td>
+</tr>
+<tr>
+<td>Azure - Compute (PaaS and Serverless)</td>
+<td>API App</td>
+<td>Ensure HTTP/2 is enabled for an App Service API Apps</td>
+</tr>
+<tr>
+<td>Azure - Data Analytics</td>
+<td>HDInsight</td>
+<td>Ensure that HDInsight Cluster is AD Domain joined</td>
+</tr>
+<tr>
+<td>Azure - Data Analytics</td>
+<td>Network Security Groups (NSG)</td>
+<td>Ensure that NSG always allows traffic from the specific IP addresses for HDInsight Cluster</td>
+</tr>
+<tr>
+<td>Azure - Data Analytics</td>
+<td>Network Security Groups (NSG)</td>
+<td>Ensure that NSG always allows traffic from the specific region for HDInsight Cluster</td>
+</tr>
+<tr>
+<td>Azure - Data Analytics</td>
+<td>HDInsight</td>
+<td>Ensure that Enterprise Security Package is enabled for HDInsight cluster</td>
+</tr>
+<tr>
+<td>Azure - Data Analytics</td>
+<td>Azure Data Factory (ADF)</td>
+<td>Ensure that Service Identity is enabled for Azure Data Factory</td>
+</tr>
+<tr>
+<td>Azure - Data Analytics</td>
+<td>Azure Data Factory (ADF)</td>
+<td>Ensure that Azure Data Factory connection credentials are stored in Azure Key Vault</td>
+</tr>
+<tr>
+<td>Azure - Data in Transit</td>
+<td>Application Gateway</td>
+<td>Ensure that TLS 1.0 and 1.1 protocols are disabled for Application Gateway</td>
+</tr>
+<tr>
+<td>Azure - Data in Transit</td>
+<td>Application Gateway</td>
+<td>Ensure only SSL traffic is enabled for Application Gateway</td>
+</tr>
+<tr>
+<td>Azure - Data in Transit</td>
+<td>Application Gateway</td>
+<td>Ensure that minimum protocol version of TLS1.2 or higher is enabled for Application Gateway</td>
+</tr>
+<tr>
+<td>Azure - Data in Transit</td>
+<td>Web App</td>
+<td>Ensure web app is using the latest version of TLS encryption</td>
+</tr>
+<tr>
+<td>Azure - Data in Transit</td>
+<td>Function App</td>
+<td>Ensure that TLS is configured for Function Apps</td>
+</tr>
+<tr>
+<td>Azure - Data in Transit</td>
+<td>API App</td>
+<td>Ensure that TLS is configured for API Apps</td>
+</tr>
+<tr>
+<td>Azure - Data in Transit</td>
+<td>Mobile App</td>
+<td>Ensure that TLS is configured for Mobile Apps</td>
+</tr>
+<tr>
+<td>Azure - Data in Transit</td>
+<td>Application Gateway</td>
+<td>Ensure that latest version of OWASP ruleset is used for Application Gateway</td>
+</tr>
+<tr>
+<td>Azure - Data in Transit</td>
+<td>Application Gateway</td>
+<td>Ensure that WAF is enabled for Application Gateway</td>
+</tr>
+<tr>
+<td>Azure - Data in Transit</td>
+<td>Application Gateway</td>
+<td>Ensure that your deployment architecture is protected by Azure SLA for Application Gateway</td>
+</tr>
+<tr>
+<td>Azure - Data in Transit</td>
+<td>Application Gateway</td>
+<td>Ensure that WAF is set to 'Prevention mode' for Application Gateway</td>
+</tr>
+<tr>
+<td>Azure - Fundamentals</td>
+<td>Azure Resource</td>
+<td>Ensure that Department tag has been applied for individual Azure resources</td>
+</tr>
+<tr>
+<td>Azure - Fundamentals</td>
+<td>Azure Resource</td>
+<td>Ensure that Environment tag has been applied for individual Azure resources</td>
+</tr>
+<tr>
+<td>Azure - Fundamentals</td>
+<td>Azure Resource</td>
+<td>Ensure that ProjectName tag has been applied for individual Azure resources</td>
+</tr>
+<tr>
+<td>Azure - Fundamentals</td>
+<td>Azure Resource</td>
+<td>Ensure that ApplicationOwner tag has been applied for individual Azure resources</td>
+</tr>
+<tr>
+<td>Azure - Fundamentals</td>
+<td>Azure Resource</td>
+<td>Ensure that BusinessUnit tag has been applied for individual Azure resources</td>
+</tr>
+<tr>
+<td>Azure - Fundamentals</td>
+<td>Azure Resource</td>
+<td>Ensure that CostCenter tag has been applied for individual Azure resources</td>
+</tr>
+<tr>
+<td>Azure - Fundamentals</td>
+<td>Azure Resource</td>
+<td>Ensure that DataProfile tag has been applied for individual Azure resources</td>
+</tr>
+<tr>
+<td>Azure - Fundamentals</td>
+<td>Azure Resource</td>
+<td>Ensure that Resource Locks are set for mission critical Azure resources</td>
+</tr>
+<tr>
+<td>Azure - Identity and Access</td>
+<td>Identify and access management (IAM)</td>
+<td>Ensure that no custom subscription owner roles are created</td>
+</tr>
+<tr>
+<td>Azure - Identity and Access</td>
+<td>Identify and access management (IAM)</td>
+<td>Enforce the policy to set Password to 'always' expire in Azure Active Directory for all Organization Users</td>
+</tr>
+<tr>
+<td>Azure - Identity and Access</td>
+<td>Identify and access management (IAM)</td>
+<td>Ensure that Azure resources are accessible only through Organization Account</td>
+</tr>
+<tr>
+<td>Azure - Identity and Access</td>
+<td>Identify and access management (IAM)</td>
+<td>Ensure that Service Principal Certificates are renewed before it expires</td>
+</tr>
+<tr>
+<td>Azure - Identity and Access</td>
+<td>Identify and access management (IAM)</td>
+<td>Ensure that there are no guest users</td>
+</tr>
+<tr>
+<td>Azure - Identity and Access</td>
+<td>Identify and access management (IAM)</td>
+<td>Ensure that 'Users can consent to apps accessing company data on their behalf' is set to 'No'</td>
+</tr>
+<tr>
+<td>Azure - Identity and Access</td>
+<td>Identify and access management (IAM)</td>
+<td>Ensure that 'Users can add gallery apps to their Access Panel' is set to 'No'</td>
+</tr>
+<tr>
+<td>Azure - Identity and Access</td>
+<td>Identify and access management (IAM)</td>
+<td>Ensure that 'Restrict access to Azure AD administration portal' is set to 'Yes'</td>
+</tr>
+<tr>
+<td>Azure - Identity and Access</td>
+<td>Identify and access management (IAM)</td>
+<td>Ensure that 'Users can register applications' is set to 'No'</td>
+</tr>
+<tr>
+<td>Azure - Identity and Access</td>
+<td>Identify and access management (IAM)</td>
+<td>Ensure that 'Guest user permissions are limited' is set to 'Yes'</td>
+</tr>
+<tr>
+<td>Azure - Identity and Access</td>
+<td>Identify and access management (IAM)</td>
+<td>Ensure that 'Members can invite' is set to 'No'</td>
+</tr>
+<tr>
+<td>Azure - Identity and Access</td>
+<td>Identify and access management (IAM)</td>
+<td>Ensure that 'Guests can invite' is set to 'No'</td>
+</tr>
+<tr>
+<td>Azure - Identity and Access</td>
+<td>Identify and access management (IAM)</td>
+<td>Ensure that 'Self-service group management enabled' is set to 'No'</td>
+</tr>
+<tr>
+<td>Azure - Identity and Access</td>
+<td>Identify and access management (IAM)</td>
+<td>Ensure that 'Users can create security groups' is set to 'No'</td>
+</tr>
+<tr>
+<td>Azure - Identity and Access</td>
+<td>Identify and access management (IAM)</td>
+<td>Ensure that 'Users who can manage security groups' is set to 'None'</td>
+</tr>
+<tr>
+<td>Azure - Identity and Access</td>
+<td>Identify and access management (IAM)</td>
+<td>Ensure that 'Users can create Office 365 groups' is set to 'No'</td>
+</tr>
+<tr>
+<td>Azure - Identity and Access</td>
+<td>Identify and access management (IAM)</td>
+<td>Ensure that 'Users who can manage Office 365 groups' is set to 'None'</td>
+</tr>
+<tr>
+<td>Azure - Identity and Access</td>
+<td>Identify and access management (IAM)</td>
+<td>Ensure that 'Enable All Users group' is set to 'Yes'</td>
+</tr>
+<tr>
+<td>Azure - Identity and Access</td>
+<td>Identify and access management (IAM)</td>
+<td>Ensure that 'Require Multi-Factor Auth to join devices' is set to 'Yes'</td>
+</tr>
+<tr>
+<td>Azure - Identity and Access</td>
+<td>Identify and access management (IAM)</td>
+<td>Ensure that 'Number of methods required to reset' is set to '2'</td>
+</tr>
+<tr>
+<td>Azure - Identity and Access</td>
+<td>Identify and access management (IAM)</td>
+<td>Ensure that 'Number of days before users are asked to re-confirm their authentication information' is not set to '0'</td>
+</tr>
+<tr>
+<td>Azure - Identity and Access</td>
+<td>Identify and access management (IAM)</td>
+<td>Ensure that 'Notify users on password resets?' is set to 'Yes'</td>
+</tr>
+<tr>
+<td>Azure - Identity and Access</td>
+<td>Identify and access management (IAM)</td>
+<td>Ensure that 'Notify all admins when other admins reset their password?' is set to 'Yes'</td>
+</tr>
+<tr>
+<td>Azure - Identity and Access</td>
+<td>Identify and access management (IAM)</td>
+<td>Ensure that multi-factor authentication is enabled for all privileged users</td>
+</tr>
+<tr>
+<td>Azure - Key Management</td>
+<td>Identify and access management (IAM)</td>
+<td>Ensure that AD Application keys are rotated before they expires</td>
+</tr>
+<tr>
+<td>Azure - Key Management</td>
+<td>Key Vault</td>
+<td>Ensure that the expiry date is set on all Secrets in a Key Vault</td>
+</tr>
+<tr>
+<td>Azure - Key Management</td>
+<td>Key Vault</td>
+<td>Ensure that Diagnostics logs are set with a retention period of at least 365 days for Azure Key Vaults</td>
+</tr>
+<tr>
+<td>Azure - Key Management</td>
+<td>Key Vault</td>
+<td>Ensure that Soft Delete is enabled for Key Vault</td>
+</tr>
+<tr>
+<td>Azure - Key Management</td>
+<td>Key Vault</td>
+<td>Ensure mission critical Azure KeyVaults are not open to the Internet</td>
+</tr>
+<tr>
+<td>Azure - Key Management</td>
+<td>Key Vault</td>
+<td>Ensure that the expiration date is set on all keys</td>
+</tr>
+<tr>
+<td>Azure - Kubernetes &amp; Containers</td>
+<td>Azure Kubernetes Service (AKS)</td>
+<td>Ensure Azure Active Directory RBAC is enabled for Azure Kubernetes Services (AKS)</td>
+</tr>
+<tr>
+<td>Azure - Kubernetes &amp; Containers</td>
+<td>Azure Kubernetes Service (AKS)</td>
+<td>Ensure that AAD is enabled in Kubernetes Service</td>
+</tr>
+<tr>
+<td>Azure - Kubernetes &amp; Containers</td>
+<td>Azure Kubernetes Service (AKS)</td>
+<td>Ensure that Monitoring is enabled for Azure Kubernetes Service</td>
+</tr>
+<tr>
+<td>Azure - Kubernetes &amp; Containers</td>
+<td>Azure Kubernetes Service (AKS)</td>
+<td>Ensure Azure Kubernetes Service clusters are always running with latest Kubernetes versions</td>
+</tr>
+<tr>
+<td>Azure - Kubernetes &amp; Containers</td>
+<td>Azure Kubernetes Service (AKS)</td>
+<td>Ensure that latest system updates are applied to all Azure Kubernetes Cluster nodes</td>
+</tr>
+<tr>
+<td>Azure - Kubernetes &amp; Containers</td>
+<td>Azure Kubernetes Service (AKS)</td>
+<td>Ensure that Diagnostics logs must be enabled with a retention period of at least 365 days for Azure Kubernetes Service</td>
+</tr>
+<tr>
+<td>Azure - Kubernetes &amp; Containers</td>
+<td>Azure Container Registry (ACR)</td>
+<td>Ensure that credentials of service principal used for Container Registry are stored in Key Vault</td>
+</tr>
+<tr>
+<td>Azure - Kubernetes &amp; Containers</td>
+<td>Azure Container Registry (ACR)</td>
+<td>Ensure that Container Registry has latest/patched image(s) all the time</td>
+</tr>
+<tr>
+<td>Azure - Kubernetes &amp; Containers</td>
+<td>Azure Container Registry (ACR)</td>
+<td>Ensure that Activity logs for Data Container Registry are reviewed periodically</td>
+</tr>
+<tr>
+<td>Azure - Kubernetes &amp; Containers</td>
+<td>Azure Container Registry (ACR)</td>
+<td>Ensure that only signed images are pushed to Container Registry</td>
+</tr>
+<tr>
+<td>Azure - Kubernetes &amp; Containers</td>
+<td>Azure Container Registry (ACR)</td>
+<td>Ensure that a service principal is used to access container images in Container Registry</td>
+</tr>
+<tr>
+<td>Azure - Kubernetes &amp; Containers</td>
+<td>Azure Container Registry (ACR)</td>
+<td>Ensure that all users/identities are granted minimum required permissions on Container Registry using Role Based Access Control (RBAC)</td>
+</tr>
+<tr>
+<td>Azure - Kubernetes &amp; Containers</td>
+<td>Azure Kubernetes Service (AKS)</td>
+<td>Ensure that management ports are not kept open on Kubernetes nodes unless required</td>
+</tr>
+<tr>
+<td>Azure - Kubernetes &amp; Containers</td>
+<td>Azure Kubernetes Service (AKS)</td>
+<td>Ensure that cluster admin level access is not directly or indirectly granted to developers</td>
+</tr>
+<tr>
+<td>Azure - Kubernetes &amp; Containers</td>
+<td>Azure Kubernetes Service (AKS)</td>
+<td>Ensure that container images (including nested images) deployed in Kubernetes are from a trustworthy source</td>
+</tr>
+<tr>
+<td>Azure - Kubernetes &amp; Containers</td>
+<td>Azure Kubernetes Service (AKS)</td>
+<td>Ensure that default cluster namespace is not used to deploy applications</td>
+</tr>
+<tr>
+<td>Azure - Kubernetes &amp; Containers</td>
+<td>Azure Kubernetes Service (AKS)</td>
+<td>Ensure that all Kubernetes Service secrets are stored in Key Vault</td>
+</tr>
+<tr>
+<td>Azure - Kubernetes &amp; Containers</td>
+<td>Azure Kubernetes Service (AKS)</td>
+<td>Ensure that all the Kubernetes cluster nodes have all the required OS patches installed</td>
+</tr>
+<tr>
+<td>Azure - Kubernetes &amp; Containers</td>
+<td>Azure Kubernetes Service (AKS)</td>
+<td>Ensure that Pod Identity is used for accessing other AAD(Azure Active Directory)-protected resources from the Kubernetes Service</td>
+</tr>
+<tr>
+<td>Azure - Kubernetes &amp; Containers</td>
+<td>Azure Kubernetes Service (AKS)</td>
+<td>Ensure that issues/recommendations provided by kube advisor are reviewed periodically</td>
+</tr>
+<tr>
+<td>Azure - Kubernetes &amp; Containers</td>
+<td>Azure Kubernetes Service (AKS)</td>
+<td>Ensure that data transit inside/across Kubernetes are using encrypted channel</td>
+</tr>
+<tr>
+<td>Azure - Kubernetes &amp; Containers</td>
+<td>Azure Kubernetes Service (AKS)</td>
+<td>Ensure that all users/identities are granted minimum required permissions on Kubernetes Cluster using Role Based Access Control (RBAC)</td>
+</tr>
+<tr>
+<td>Azure - Logging and Auditing</td>
+<td>Web App</td>
+<td>Ensure that 'Availability Web Tests' are configured for Azure Web Apps</td>
+</tr>
+<tr>
+<td>Azure - Logging and Auditing</td>
+<td>Azure Monitor</td>
+<td>Ensure that a Log Profile exists for Azure Monitor</td>
+</tr>
+<tr>
+<td>Azure - Logging and Auditing</td>
+<td>Azure Monitor</td>
+<td>Ensure that retention period is set to 365 days or greater for Activity Logs</td>
+</tr>
+<tr>
+<td>Azure - Logging and Auditing</td>
+<td>Azure Monitor</td>
+<td>Ensure that Activity Log Alert exists for Create Policy Assignment</td>
+</tr>
+<tr>
+<td>Azure - Logging and Auditing</td>
+<td>Azure Monitor</td>
+<td>Ensure Activity Log Alert exists for Create or Update Network Security Group</td>
+</tr>
+<tr>
+<td>Azure - Logging and Auditing</td>
+<td>Azure Monitor</td>
+<td>Ensure Activity Log Alert exists for Delete Network Security Group</td>
+</tr>
+<tr>
+<td>Azure - Logging and Auditing</td>
+<td>Azure Monitor</td>
+<td>Ensure Activity Log Alert exists for Create or Update Network Security Group Rule</td>
+</tr>
+<tr>
+<td>Azure - Logging and Auditing</td>
+<td>Azure Monitor</td>
+<td>Ensure Activity Log Alert exists for Delete Network Security Group Rule</td>
+</tr>
+<tr>
+<td>Azure - Logging and Auditing</td>
+<td>Azure Monitor</td>
+<td>Ensure Activity Log Alert exists for Create or Update Security Solution</td>
+</tr>
+<tr>
+<td>Azure - Logging and Auditing</td>
+<td>Azure Monitor</td>
+<td>Ensure Activity Log Alert exists for Delete Security Solution</td>
+</tr>
+<tr>
+<td>Azure - Logging and Auditing</td>
+<td>Azure Monitor</td>
+<td>Ensure Activity Log Alert(s) have configured for Create or Update SQL Server Firewall Rule</td>
+</tr>
+<tr>
+<td>Azure - Logging and Auditing</td>
+<td>Azure Monitor</td>
+<td>Ensure Activity Log Alert exists for Delete SQL Server Firewall Rule</td>
+</tr>
+<tr>
+<td>Azure - Logging and Auditing</td>
+<td>Azure Monitor</td>
+<td>Ensure Activity Log Alert exists for Update Security Policy</td>
+</tr>
+<tr>
+<td>Azure - Logging and Auditing</td>
+<td>Key Vault</td>
+<td>Ensure that Logging is enabled for Azure Key Vault</td>
+</tr>
+<tr>
+<td>Azure - Logging and Auditing</td>
+<td>Web App</td>
+<td>Ensure that Auditing and Monitoring is enabled for App Service</td>
+</tr>
+<tr>
+<td>Azure - Logging and Auditing</td>
+<td>Mobile App</td>
+<td>Ensure that Auditing and Monitoring is enabled for Mobile App</td>
+</tr>
+<tr>
+<td>Azure - Logging and Auditing</td>
+<td>API App</td>
+<td>Ensure that Auditing and Monitoring is enabled for API App</td>
+</tr>
+<tr>
+<td>Azure - Logging and Auditing</td>
+<td>Function App</td>
+<td>Ensure that Auditing and Monitoring is enabled for Function App</td>
+</tr>
+<tr>
+<td>Azure - Logging and Auditing</td>
+<td>Log Analytics</td>
+<td>Ensure that data retention period is set to 365 days or longer for Log Analytics</td>
+</tr>
+<tr>
+<td>Azure - Logging and Auditing</td>
+<td>Azure Monitor</td>
+<td>Ensure Audit Profile captures all the Activities</td>
+</tr>
+<tr>
+<td>Azure - Logging and Auditing</td>
+<td>Azure Monitor</td>
+<td>Ensure Log Profile captures activity logs for all Regions including global</td>
+</tr>
+<tr>
+<td>Azure - Logging and Auditing</td>
+<td>Storage Account</td>
+<td>Ensure Storage Container storing activity logs is not Publicly accessible</td>
+</tr>
+<tr>
+<td>Azure - Logging and Auditing</td>
+<td>Storage Account</td>
+<td>Ensure the storage account containing the container with activity logs is encrypted with BYOK</td>
+</tr>
+<tr>
+<td>Azure - Logging and Auditing</td>
+<td>Cosmos DB</td>
+<td>Ensure that 'Geo replication' is enabled for Cosmos DB</td>
+</tr>
+<tr>
+<td>Azure - Logging and Auditing</td>
+<td>SQL Database</td>
+<td>Ensure that 'Also send email notification to admin and subscription owners' in Advanced Threat Protection Settings is enabled for SQL database</td>
+</tr>
+<tr>
+<td>Azure - Logging and Auditing</td>
+<td>SQL Server</td>
+<td>Ensure that periodic recurring scans is enabled for SQL server</td>
+</tr>
+<tr>
+<td>Azure - Logging and Auditing</td>
+<td>SQL Server</td>
+<td>Ensure that 'Also send email notification to admin and subscription owners' in Periodic recurring scan is enabled for SQL Server</td>
+</tr>
+<tr>
+<td>Azure - Logging and Auditing</td>
+<td>SQL Server</td>
+<td>Ensure that 'Send alerts to' in Advanced Threat Protection Settings is set for SQL Server</td>
+</tr>
+<tr>
+<td>Azure - Logging and Auditing</td>
+<td>SQL Server</td>
+<td>Ensure that 'Also send email notification to admin and subscription owners' in Advanced Threat Protection Settings is enabled for SQL Server</td>
+</tr>
+<tr>
+<td>Azure - Logging and Auditing</td>
+<td>SQL Database</td>
+<td>Ensure that 'Advanced Data Security' on a SQL database is set to 'On'</td>
+</tr>
+<tr>
+<td>Azure - Logging and Auditing</td>
+<td>SQL Database</td>
+<td>Ensure that 'Send alerts to' in Advanced Threat Protection Settings is set for SQL database</td>
+</tr>
+<tr>
+<td>Azure - Logging and Auditing</td>
+<td>SQL Server</td>
+<td>Ensure that 'Send scan reports to' is set for SQL Server</td>
+</tr>
+<tr>
+<td>Azure - Networking</td>
+<td>Virtual Network (VNET)</td>
+<td>Ensure that inbound and outbound traffic rules are configured for Subnets by associating NSGs to Subnets</td>
+</tr>
+<tr>
+<td>Azure - Networking</td>
+<td>Network Security Groups (NSG)</td>
+<td>Ensure that DenyAll rule is configured for all NSG's</td>
+</tr>
+<tr>
+<td>Azure - Networking</td>
+<td>Network Security Groups (NSG)</td>
+<td>Ensure that RDP access is restricted from the internet on NSG's</td>
+</tr>
+<tr>
+<td>Azure - Networking</td>
+<td>Network Security Groups (NSG)</td>
+<td>Ensure that SSH access is restricted from the internet on NSG's</td>
+</tr>
+<tr>
+<td>Azure - Networking</td>
+<td>Network Watcher</td>
+<td>Ensure that Network Watcher is 'Enabled'</td>
+</tr>
+<tr>
+<td>Azure - Networking</td>
+<td>SQL Server</td>
+<td>Ensure no SQL Databases allow ingress 0.0.0.0/0 (ANY IP)</td>
+</tr>
+<tr>
+<td>Azure - Networking</td>
+<td>Virtual Network (VNET)</td>
+<td>Ensure that DDOS protection is enabled for Virtual Network</td>
+</tr>
+<tr>
+<td>Azure - Networking</td>
+<td>Network Security Groups (NSG)</td>
+<td>Ensure that Flow Log Status is set to On for Network Security Groups</td>
+</tr>
+<tr>
+<td>Azure - Networking</td>
+<td>Network Security Groups (NSG)</td>
+<td>Ensure that ingress traffic to 'Known internal web port' (TCP:8000) is restricted from the public internet on NSG's</td>
+</tr>
+<tr>
+<td>Azure - Networking</td>
+<td>Network Security Groups (NSG)</td>
+<td>Ensure that ingress traffic to 'Known internal web port' (TCP:8080) is restricted from the public internet on NSG's</td>
+</tr>
+<tr>
+<td>Azure - Networking</td>
+<td>Network Security Groups (NSG)</td>
+<td>Ensure that ingress traffic to 'NetBIOS Name Service' (UDP:137) is restricted from the public internet on NSG's</td>
+</tr>
+<tr>
+<td>Azure - Networking</td>
+<td>Network Security Groups (NSG)</td>
+<td>Ensure that ingress traffic to 'NetBios Datagram Service' (UDP:138) is restricted from the public internet on NSG's</td>
+</tr>
+<tr>
+<td>Azure - Networking</td>
+<td>Network Security Groups (NSG)</td>
+<td>Ensure that ingress traffic to 'NetBios Datagram Service' (UDP:139) is restricted from the public internet on NSG's</td>
+</tr>
+<tr>
+<td>Azure - Networking</td>
+<td>Network Security Groups (NSG)</td>
+<td>Ensure that ingress traffic to 'SNMP' (UDP:161) is restricted from the public internet on NSG's</td>
+</tr>
+<tr>
+<td>Azure - Networking</td>
+<td>Network Security Groups (NSG)</td>
+<td>Ensure that ingress traffic to CiscoSecure,websm (TCP:9090) is restricted from the public internet on NSG's</td>
+</tr>
+<tr>
+<td>Azure - Networking</td>
+<td>Network Security Groups (NSG)</td>
+<td>Ensure that ingress traffic to 'Cassandra' (TCP:7001) is restricted from the public internet on NSG's</td>
+</tr>
+<tr>
+<td>Azure - Networking</td>
+<td>Network Security Groups (NSG)</td>
+<td>Ensure that ingress traffic to 'MSSQL Server' (TCP:1433) is restricted from the public internet on NSG's</td>
+</tr>
+<tr>
+<td>Azure - Networking</td>
+<td>Network Security Groups (NSG)</td>
+<td>Ensure that ingress traffic to 'MySQL' (TCP:3306) is restricted from the public internet on NSG's</td>
+</tr>
+<tr>
+<td>Azure - Networking</td>
+<td>Network Security Groups (NSG)</td>
+<td>Ensure that ingress traffic to 'Postgres SQL' (TCP:5432) is restricted from the public internet on NSG's</td>
+</tr>
+<tr>
+<td>Azure - Networking</td>
+<td>Network Security Groups (NSG)</td>
+<td>Ensure that ingress traffic to 'SQL Server Analysis Services' (TCP:2383) is restricted from the public internet on NSG's</td>
+</tr>
+<tr>
+<td>Azure - Networking</td>
+<td>Network Security Groups (NSG)</td>
+<td>Ensure that ingress traffic to Cassandra Client (TCP:9042) is restricted from the public internet on NSG's</td>
+</tr>
+<tr>
+<td>Azure - Networking</td>
+<td>Network Security Groups (NSG)</td>
+<td>Ensure that ingress traffic to Cassandra Internode Communication (TCP:7000) is restricted from the public internet on NSG's</td>
+</tr>
+<tr>
+<td>Azure - Networking</td>
+<td>Network Security Groups (NSG)</td>
+<td>Ensure that ingress traffic to Cassandra Monitoring (TCP:7199) is restricted from the public internet on NSG's</td>
+</tr>
+<tr>
+<td>Azure - Networking</td>
+<td>Network Security Groups (NSG)</td>
+<td>Ensure that ingress traffic to Cassandra OpsCenter Monitoring (TCP:61620) is restricted from the public internet on NSG's</td>
+</tr>
+<tr>
+<td>Azure - Networking</td>
+<td>Network Security Groups (NSG)</td>
+<td>Ensure that ingress traffic to Cassandra OpsCenter Website (TCP:8888) is restricted from the public internet on NSG's</td>
+</tr>
+<tr>
+<td>Azure - Networking</td>
+<td>Network Security Groups (NSG)</td>
+<td>Ensure that ingress traffic to Cassandra Thrift (TCP:9160) is restricted from the public internet on NSG's</td>
+</tr>
+<tr>
+<td>Azure - Networking</td>
+<td>Network Security Groups (NSG)</td>
+<td>Ensure that ingress traffic to Elastic search (TCP:9200) is restricted from the public internet on NSG's</td>
+</tr>
+<tr>
+<td>Azure - Networking</td>
+<td>Network Security Groups (NSG)</td>
+<td>Ensure that ingress traffic to Elastic search (TCP:9300) is restricted from the public internet on NSG's</td>
+</tr>
+<tr>
+<td>Azure - Networking</td>
+<td>Network Security Groups (NSG)</td>
+<td>Ensure that ingress traffic to LDAP (UDP:389) is restricted from the public internet on NSG's</td>
+</tr>
+<tr>
+<td>Azure - Networking</td>
+<td>Network Security Groups (NSG)</td>
+<td>Ensure that ingress traffic to Memcached (TCP:11211) is restricted from the public internet on NSG's</td>
+</tr>
+<tr>
+<td>Azure - Networking</td>
+<td>Network Security Groups (NSG)</td>
+<td>Ensure that ingress traffic to Memcached (UDP:11211) is restricted from the public internet on NSG's</td>
+</tr>
+<tr>
+<td>Azure - Networking</td>
+<td>Network Security Groups (NSG)</td>
+<td>Ensure that ingress traffic to Mongo (TCP:27017) is restricted from the public internet on NSG's</td>
+</tr>
+<tr>
+<td>Azure - Networking</td>
+<td>Network Security Groups (NSG)</td>
+<td>Ensure that ingress traffic to Oracle DB (TCP:1521) is restricted from the public internet on NSG's</td>
+</tr>
+<tr>
+<td>Azure - Networking</td>
+<td>Network Security Groups (NSG)</td>
+<td>Ensure that ingress traffic to Oracle DB (TCP:2483) is restricted from the public internet on NSG's</td>
+</tr>
+<tr>
+<td>Azure - Networking</td>
+<td>Network Security Groups (NSG)</td>
+<td>Ensure that ingress traffic to Oracle DB (UDP:2483) is restricted from the public internet on NSG's</td>
+</tr>
+<tr>
+<td>Azure - Networking</td>
+<td>Network Security Groups (NSG)</td>
+<td>Ensure that ingress traffic to Redis (TCP:6379) is restricted from the public internet on NSG's</td>
+</tr>
+<tr>
+<td>Azure - Networking</td>
+<td>Network Security Groups (NSG)</td>
+<td>Ensure that ingress traffic to Remote Desktop (TCP:3389) is restricted from the public internet on NSG's</td>
+</tr>
+<tr>
+<td>Azure - Networking</td>
+<td>Network Security Groups (NSG)</td>
+<td>Ensure that ingress traffic to SSH (TCP:22) is restricted from the public internet on NSG's</td>
+</tr>
+<tr>
+<td>Azure - Networking</td>
+<td>Network Interface Card (NIC)</td>
+<td>Ensure that less than 3 Public IP's (i.e. NIC's with Public IP) are used for Virtual Network</td>
+</tr>
+<tr>
+<td>Azure - Networking</td>
+<td>Network Security Groups (NSG)</td>
+<td>Ensure that ingress traffic to bitcoin ports (TCP 8332 and 8333) is restricted from the public internet on NSG's</td>
+</tr>
+<tr>
+<td>Azure - Networking</td>
+<td>Network Security Groups (NSG)</td>
+<td>Ensure that ingress traffic to Ethereum port (TCP 8545) is restricted from the public internet on NSG's</td>
+</tr>
+<tr>
+<td>Azure - Networking</td>
+<td>Network Security Groups (NSG)</td>
+<td>Ensure that ingress traffic to 'POP3' (TCP:110) is restricted from the public internet on NSG's</td>
+</tr>
+<tr>
+<td>Azure - Networking</td>
+<td>Network Security Groups (NSG)</td>
+<td>Ensure that ingress traffic to SMTP (TCP:25) is restricted from the public internet on NSG's</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that AAD authentication in Service Fabric is set to enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that AAD authentication in SQL server is set to enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that monitor of Adaptive Application whitelisting is set to enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that Automatic Provisioning of monitoring agent is set to On in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that Cluster Protection level in Service Fabric is set to enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that diagnostics logs in Batch Account is set to enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that diagnostics logs in Data Lake Analytics is set to enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that diagnostics logs in Data Lake Store is set to enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that diagnostics logs in Event Hub is set to enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that diagnostics logs in Key Vault is set to enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that diagnostics logs in Logic Apps is set to enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that diagnostics logs in Redis Cache is set to enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that diagnostics logs in Search Service is set to enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that diagnostics logs in Service Bus is set to enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that diagnostics logs in Virtual Machine Scale Sets is set to enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that diagnostics logs in Stream Analytics is set to enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that disable unrestricted network to storage account is set to enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that monitor disk encryption is set to enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Designate up to 3 subscription owners is set to enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Designate more than one subscription owner is set to enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that MFA is enabled for all subscription accounts with owner permissions in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that MFA is enabled for all subscription accounts with read permissions in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that MFA is enabled for all subscription accounts with write permissions in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that deprecated accounts is removed on subscription are set to enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that deprecated accounts with owner permissions are removed from subscription is set to enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that external accounts with owner permissions are removed from subscription is set to enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that external accounts with read permissions are removed from subscription is set to enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that external accounts with write permissions are removed from subscription is set to enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that metric alerts in Batch account is set to enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that namespace authorization rules in service bus is set to enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that monitoring of network security groups is set to enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that next generation firewall is set to enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that monitoring of OS vulnerabilities is set to enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that secure transfer to storage account is set to enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that security contact email is provided in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that phone number is provided in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that alert notification is set to On in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that email notification is set to On to subscription owners in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that monitoring of SQL auditing is set to enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that SqlDb Vulnerability Assessment is set to enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that monitor SQL encryption is set to enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that monitor storage blob encryption is set to enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that in ASC standard tier is selected</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that monitor system updates is set to enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that web application firewall is set to enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that vulnerability assessment is set to enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that monitoring of SQL managed instances without Advanced Data Security is enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that monitoring of permissive network access to app-services is enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that all Advanced Threat Protection types on SQL managed instance is enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that monitoring of SQL managed server without Advanced Data Security is enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that monitoring of access rules in Event Hub namespaces is enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that all Advanced Threat Protection types on SQL server is enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that monitoring of auditing policy Action-Groups and Actions setting is enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that monitoring of the use of HTTPS in API app is enable in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that monitoring of using built-in RBAC rules is enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that the Audit monitoring of SQL Servers is enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that monitoring of Kubernetes Services without authorized IP ranges is enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that monitoring of access rules in Event Hubs is enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that monitoring of CORS restrictions for API App is enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that monitoring of Automation Account Encryption is enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that monitoring of CORS restrictions for Web App is enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that monitoring of CORS restrictions for Function App is enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that monitoring of diagnostics logs in selective app services is enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that monitoring of DDoS protection for virtual network is enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that endpoint protection monitoring for virtual machine scale sets is enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that monitoring of diagnostic logs in IoT Hubs is enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that monitoring of the use of HTTPS in function app is enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that 'Send alerts to' is set in SQL server Advanced Data Security settings is enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that monitoring of network just In time access is enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that IP Forwarding monitoring on virtual machines is disabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that monitoring of IP restrictions for API App is enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that monitoring of Open Management Ports on virtual machines is enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that monitoring of IP restrictions for Web App is enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that monitoring of IP restrictions for Function App is enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that monitoring of web sockets for API App is enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that monitoring of diagnostics logs in App Services is enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that monitoring of web sockets for Web App is enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that monitoring of web sockets for Function App is enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that monitoring of custom domain use in API App is enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that monitoring of Endpoint Protection is enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that monitoring of custom domain use in Web App is enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that monitoring of custom domain use in Function App is enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that monitoring of .Net version in Web App is enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that monitoring of .Net version in API App is enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that monitoring of Java version in web app is enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that monitoring of Java version in API App is enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that monitoring of PHP version in the API App is enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that monitoring of Node.js version in Web App is enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that monitoring of Python version in API App is enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that monitoring of PHP version in Web App is enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that monitoring of Internet-facing VM for NSG traffic hardening is enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that monitoring of Python version in Web App is enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that monitoring of NSG for virtual machines is enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that monitoring of NSG for Subnet is enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that monitoring of Kubernetes Services without pod security policy is enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that monitoring of remote debugging for API App is enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that monitoring of remote debugging for Function App is enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that monitoring of remote debugging for Web App is enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that required diagnostic logs retention period in days for Batch accounts is set in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that required diagnostic logs retention period in days in Azure Search service is set in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that required diagnostic logs retention period in days in Data Lake Analytics is set in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that required diagnostic logs retention period in days in Data Lake Store accounts is set in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that required diagnostic logs retention period in days in Event Hub accounts is set in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that required diagnostic logs retention period in days in IoT Hub accounts is set in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that required diagnostic logs retention period in days in Key Vault vaults is set in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that required diagnostic logs retention period in days in Logic Apps workflows is set in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that required diagnostic logs retention period in days in Service Bus is set in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that required diagnostic logs retention period in days in Stream Analytics is set in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that monitoring of Kubernetes Services without RBAC is enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that monitoring of sensitive data is classified on SQL database is enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that monitoring of SQL managed instances alerts being sent to admins and subscription owners is enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that monitoring of classic storage accounts migration to ARM is enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that reporting of system updates in virtual machine scale sets is enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that monitoring of unencrypted SQL databases is enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that monitoring of classic virtual machines is enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that OS vulnerabilities monitoring for virtual machine scale sets is enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that the detection of VM vulnerabilities by a Vulnerability Assessment solution is enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that Vulnerability Assessment on your SQL managed instances is enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that Vulnerability Assessment on your SQL servers is enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that monitoring of the use of HTTPS in Web App is enabled in ASC</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that Vulnerabilities in container security configurations should be remediated in ASC.</td>
+</tr>
+<tr>
+<td>Azure - Security Center</td>
+<td>Azure Security Center (ASC)</td>
+<td>Ensure that Kubernetes Services should be upgraded to a non-vulnerable Kubernetes version in ASC.</td>
+</tr>
+<tr>
+<td>Azure - Storage and Databases</td>
+<td>Storage Account</td>
+<td>Ensure that encryption is enabled for Azure Storage Service</td>
+</tr>
+<tr>
+<td>Azure - Storage and Databases</td>
+<td>SQL Database</td>
+<td>Ensure that 'Data encryption' is set to 'On' for SQL Databases</td>
+</tr>
+<tr>
+<td>Azure - Storage and Databases</td>
+<td>SQL Database</td>
+<td>Ensure that 'Auditing' is set to 'On' for SQL Databases</td>
+</tr>
+<tr>
+<td>Azure - Storage and Databases</td>
+<td>SQl Server</td>
+<td>Ensure that 'Auditing' is set to 'On' for SQL Server</td>
+</tr>
+<tr>
+<td>Azure - Storage and Databases</td>
+<td>Storage Account</td>
+<td>Ensure that 'Secure transfer required' is 'Enabled' for Storage Account</td>
+</tr>
+<tr>
+<td>Azure - Storage and Databases</td>
+<td>SQl Server</td>
+<td>Ensure that 'Threat Detection types' is set to 'All' for SQL Server</td>
+</tr>
+<tr>
+<td>Azure - Storage and Databases</td>
+<td>Storage Account</td>
+<td>Ensure that 'Storage service encryption' is set to Enabled for File Service</td>
+</tr>
+<tr>
+<td>Azure - Storage and Databases</td>
+<td>Storage Account</td>
+<td>Ensure that 'Storage service encryption' is set to Enabled for Blob Service</td>
+</tr>
+<tr>
+<td>Azure - Storage and Databases</td>
+<td>Storage Account</td>
+<td>Ensure that 'Geo-redundant' is enabled for Azure Storage</td>
+</tr>
+<tr>
+<td>Azure - Storage and Databases</td>
+<td>Storage Account</td>
+<td>Ensure that 'Public access level' is set to Private for Blob Containers</td>
+</tr>
+<tr>
+<td>Azure - Storage and Databases</td>
+<td>SQL Server</td>
+<td>Ensure that firewall rules are set as appropriate for SQL Servers</td>
+</tr>
+<tr>
+<td>Azure - Storage and Databases</td>
+<td>SQL Database</td>
+<td>Ensure that 'Threat Detection types' is set to 'All' for SQL Databases</td>
+</tr>
+<tr>
+<td>Azure - Storage and Databases</td>
+<td>SQL Server</td>
+<td>Ensure that 'Threat Detection' Retention is 'greater than 90 days' for SQL Server</td>
+</tr>
+<tr>
+<td>Azure - Storage and Databases</td>
+<td>SQL Server</td>
+<td>Ensure that 'Auditing' Retention is 'greater than 90 days' for SQL Servers</td>
+</tr>
+<tr>
+<td>Azure - Storage and Databases</td>
+<td>SQL Server</td>
+<td>Ensure that Azure Active Directory Admin is configured for SQL Server</td>
+</tr>
+<tr>
+<td>Azure - Storage and Databases</td>
+<td>SQL Server</td>
+<td>Ensure that 'Advanced Data Security' on a SQL server is set to 'On'</td>
+</tr>
+<tr>
+<td>Azure - Storage and Databases</td>
+<td>SQL Database</td>
+<td>Ensure that 'Threat' Retention is 'greater than 90 days' for SQL Databases</td>
+</tr>
+<tr>
+<td>Azure - Storage and Databases</td>
+<td>SQL Database</td>
+<td>Ensure that 'Geo replication' is enabled for SQL Databases</td>
+</tr>
+<tr>
+<td>Azure - Storage and Databases</td>
+<td>SQL Database</td>
+<td>Ensure that 'Data Masking' is enabled for SQL Databases</td>
+</tr>
+<tr>
+<td>Azure - Storage and Databases</td>
+<td>SQL Database</td>
+<td>Ensure that DataProfile tag has been applied for SQL Databases</td>
+</tr>
+<tr>
+<td>Azure - Storage and Databases</td>
+<td>SQL Database</td>
+<td>Ensure that Diagnostics is enabled for SQL Databases</td>
+</tr>
+<tr>
+<td>Azure - Storage and Databases</td>
+<td>Storage Account</td>
+<td>Ensure that DataProfile tag has been applied for Azure Storage</td>
+</tr>
+<tr>
+<td>Azure - Storage and Databases</td>
+<td>SQL Server</td>
+<td>Ensure that DataProfile tag has been applied for SQL DB Servers</td>
+</tr>
+<tr>
+<td>Azure - Storage and Databases</td>
+<td>Azure Synapse Analytics</td>
+<td>Ensure that threat detection is enabled for SQL Data Warehouse</td>
+</tr>
+<tr>
+<td>Azure - Storage and Databases</td>
+<td>Azure Synapse Analytics</td>
+<td>Ensure that firewall is enabled for SQL Data Warehouse</td>
+</tr>
+<tr>
+<td>Azure - Storage and Databases</td>
+<td>Azure Synapse Analytics</td>
+<td>Ensure that encryption is enabled for SQL Data Warehouse</td>
+</tr>
+<tr>
+<td>Azure - Storage and Databases</td>
+<td>Azure Synapse Analytics</td>
+<td>Ensure that auditing is enabled for SQL Data Warehouse</td>
+</tr>
+<tr>
+<td>Azure - Storage and Databases</td>
+<td>Cosmos DB</td>
+<td>Ensure that failover is enabled for Cosmos DB</td>
+</tr>
+<tr>
+<td>Azure - Storage and Databases</td>
+<td>Cosmos DB</td>
+<td>Ensure that firewall is enabled for Cosmos DB</td>
+</tr>
+<tr>
+<td>Azure - Storage and Databases</td>
+<td>Azure Database for PostgreSQL server</td>
+<td>Ensure server parameter 'log_retention_days' is greater than 3 days for PostgreSQL Database Server</td>
+</tr>
+<tr>
+<td>Azure - Storage and Databases</td>
+<td>Storage Account</td>
+<td>Ensure default network access rule for Storage Accounts is set to deny</td>
+</tr>
+<tr>
+<td>Azure - Storage and Databases</td>
+<td>Azure Database for PostgreSQL server</td>
+<td>Ensure server parameter 'log_duration' is set to 'ON' for PostgreSQL Database Server</td>
+</tr>
+<tr>
+<td>Azure - Storage and Databases</td>
+<td>Azure Database for PostgreSQL server</td>
+<td>Ensure server parameter 'connection_throttling' is set to 'ON' for PostgreSQL Database Server</td>
+</tr>
+<tr>
+<td>Azure - Storage and Databases</td>
+<td>Azure Database for PostgreSQL server</td>
+<td>Ensure server parameter 'log_connections' is set to 'ON' for PostgreSQL Database Server</td>
+</tr>
+<tr>
+<td>Azure - Storage and Databases</td>
+<td>Azure Database for PostgreSQL server</td>
+<td>Ensure server parameter 'log_disconnections' is set to 'ON' for PostgreSQL Database Server</td>
+</tr>
+<tr>
+<td>Azure - Storage and Databases</td>
+<td>Azure Database for PostgreSQL server</td>
+<td>Ensure server parameter 'log_checkpoints' is set to 'ON' for PostgreSQL Database Server</td>
+</tr>
+<tr>
+<td>Azure - Storage and Databases</td>
+<td>Azure Database for PostgreSQL server</td>
+<td>Ensure 'Enforce SSL connection' is set to 'ENABLED' for PostgreSQL Database Server</td>
+</tr>
+<tr>
+<td>Azure - Storage and Databases</td>
+<td>SQL Server</td>
+<td>Ensure SQL server's TDE protector is encrypted with BYOK</td>
+</tr>
+<tr>
+<td>Azure - Storage and Databases</td>
+<td>Storage Account</td>
+<td>Ensure 'Trusted Microsoft Services' is enabled for Storage Account access</td>
+</tr>
+<tr>
+<td>Azure - Storage and Databases</td>
+<td>Azure Database for MySQL server</td>
+<td>Ensure 'Enforce SSL connection' is set to 'ENABLED' for MySQL Database Server</td>
+</tr>
+<tr>
+<td>Azure - Storage and Databases</td>
+<td>SQL Server</td>
+<td>Ensure that 'AuditActionGroups' in 'auditing' policy for a SQL server is set properly</td>
+</tr>
+<tr>
+<td>Azure - Storage and Databases</td>
+<td>SQL Server</td>
+<td>Ensure the 'Allow access to Azure services' flag is disabled for SQL Server</td>
+</tr>
+<tr>
+<td>Azure - Storage and Databases</td>
+<td>SQL Database</td>
+<td>Ensure that 'Auditing' Retention is 'greater than 90 days' for SQL Database</td>
+</tr>
+<tr>
+<td>Azure - Storage and Databases</td>
+<td>Storage Account</td>
+<td>Ensure Advanced Threat Protection is enabled for Storage Accounts</td>
+</tr>
+<tr>
+<td>Azure - Storage and Databases</td>
+<td>Cosmos DB</td>
+<td>Ensure that 'Eventual' consistency is disabled for Cosmos DB</td>
+</tr>
+<tr>
+<td>Azure - Storage and Databases</td>
+<td>Azure Data Lake Storage Gen 1</td>
+<td>Ensure that firewall is enabled for Azure Data Lake Storage Gen1</td>
+</tr>
+<tr>
+<td>Azure - Storage and Databases</td>
+<td>Azure Data Lake Storage Gen 1</td>
+<td>Ensure that diagnostics log is enabled for Azure Data Lake Storage Gen1</td>
+</tr>
+<tr>
+<td>Azure - Storage and Databases</td>
+<td>Azure Data Lake Storage Gen 1</td>
+<td>Ensure that encryption of sensitive data is enabled for Azure Data Lake Storage Gen1</td>
+</tr>
+<tr>
+<td>Azure - Storage and Databases</td>
+<td>SQL Database</td>
+<td>Ensure that 'Send scan reports to' is set for SQL database</td>
+</tr>
+<tr>
+<td>Azure - Storage and Databases</td>
+<td>SQL Database</td>
+<td>Ensure that periodic recurring scans is enabled for SQL database</td>
+</tr>
+<tr>
+<td>Azure - Storage and Databases</td>
+<td>Storage Account</td>
+<td>Ensure that shared access signature tokens are allowed only over https</td>
+</tr>
+<tr>
+<td>Azure - Storage and Databases</td>
+<td>SQL Database</td>
+<td>Ensure that 'Also send email notification to admin and subscription owners' in Periodic recurring scan is enabled for SQL database</td>
+</tr>
+<tr>
+<td>Azure - Storage and Databases</td>
+<td>Storage Account</td>
+<td>Ensure that shared access signature tokens expire within an hour</td>
+</tr>
+<tr>
+<td>Azure - Storage and Databases</td>
+<td>Storage Account</td>
+<td>Ensure Storage logging is enabled for Queue service for read, write, and delete requests</td>
+</tr>
+<tr>
+<td>Azure - Storage and Databases</td>
+<td>Storage Account</td>
+<td>Ensure that storage account access keys are periodically regenerated</td>
+</tr>
+<tr>
+<td>Azure - Storage and Databases</td>
+<td>Azure Databricks</td>
+<td>Ensure that secrets and keys must not be in plain text in notebooks and jobs</td>
+</tr>
+<tr>
+<td>Azure - Storage and Databases</td>
+<td>Azure Databricks</td>
+<td>Ensure that use Azure Key Vault backed secret scope to hold secrets</td>
+</tr>
+<tr>
+<td>Azure - Storage and Databases</td>
+<td>Azure Databricks</td>
+<td>Ensure that all users/identities must be granted minimum required permissions using Role Based Access Control (RBAC)</td>
+</tr>
+<tr>
+<td>Azure - Storage and Databases</td>
+<td>Azure Databricks</td>
+<td>Ensure that Minimize the number of workspace admins</td>
+</tr>
+<tr>
+<td>Azure - Storage and Databases</td>
+<td>Azure Databricks</td>
+<td>Ensure that All users must be granted minimum required permissions on clusters</td>
+</tr>
+<tr>
+<td>Azure - Storage and Databases</td>
+<td>Cosmos DB</td>
+<td>Ensure that the parameterized SQL queries used to access the database</td>
+</tr>
+<tr>
+<td>Azure - Storage and Databases</td>
+<td>Cosmos DB</td>
+<td>Ensure that CosmosDb Account keys are rotated periodically</td>
+</tr>
+<tr>
+<td>Azure - Storage and Databases</td>
+<td>Cosmos DB</td>
+<td>Ensure that resource tokens are generated with least privileges and expiry needed by clients</td>
+</tr>
+<tr>
+<td>Azure - Storage and Databases</td>
+<td>Cosmos DB</td>
+<td>Do not send resource token with read write (RW) permission to untrusted clients</td>
+</tr>
+</tbody>
+</table></article></div></div></main><footer class="md-footer"><div class="md-footer-meta md-typeset"><div class="md-footer-meta__inner md-grid"><div class="md-footer-copyright"><div class="md-footer-copyright__highlight">&copy; 2020 Cloudneeti.All Rights Reserved. | <a href="https://www.cloudneeti.com/privacy-policy-2/" target="_blank"> Privacy Policy</a> | <a href="https://www.cloudneeti.com/terms-of-use/" target="_blank"> Terms of Use</a></div></div></div></div></footer>
+
+</div><script src="../../assets/javascripts/application.d5a09f94.js"></script><script>app.initialize({version:"1.1.2",url:{base:"../.."}})</script><script src="../../javascripts/custom.js"></script></body></html>

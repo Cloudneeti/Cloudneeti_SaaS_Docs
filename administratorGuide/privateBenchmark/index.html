@@ -1,0 +1,245 @@
+<!doctype html><html lang="en" class="no-js"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="x-ua-compatible" content="ie=edge"><meta name="description" content="Cloudneeti Documentation"><meta name="author" content="The Cloudneeti Team"><meta name="lang:clipboard.copy" content="Copy to clipboard"><meta name="lang:clipboard.copied" content="Copied to clipboard"><meta name="lang:search.language" content="en"><meta name="lang:search.pipeline.stopwords" content="True"><meta name="lang:search.pipeline.trimmer" content="True"><meta name="lang:search.result.none" content="No matching documents"><meta name="lang:search.result.one" content="1 matching document"><meta name="lang:search.result.other" content="# matching documents"><meta name="lang:search.tokenizer" content="[\s\-]+"><link rel="shortcut icon" href="../../assets/images/favicon.png"><meta name="generator" content="mkdocs-1.1.2, mkdocs-material-4.3.1"><title>Private Benchmark - Documentation</title><link rel="stylesheet" href="../../assets/stylesheets/application.4031d38b.css"><link rel="stylesheet" href="../../assets/stylesheets/application-palette.224b79ff.css"><meta name="theme-color" content=""><script src="../../assets/javascripts/modernizr.74668098.js"></script><link href="https://fonts.gstatic.com" rel="preconnect" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,400i,700|&display=swap"><style>body,input{font-family:"Poppins","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"","Courier New",Courier,monospace}</style><link rel="stylesheet" href="../../assets/fonts/material-icons.css"><link rel="stylesheet" href="../../stylesheets/extra.css"><script>window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-149855644-1", "docs.cloudneeti.com")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })</script><script async src="https://www.google-analytics.com/analytics.js"></script></head><body dir="ltr" data-md-color-primary="cloudneeti" data-md-color-accent="cloudneeti"><svg class="md-svg"><defs></defs></svg> <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off"> <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off"> <label class="md-overlay" data-md-component="overlay" for="__drawer"></label><a href="#private-compliance-benchmark" tabindex="1" class="md-skip">Skip to content </a><header class="md-header" data-md-component="header"><nav class="md-header-nav md-grid"><div class="md-flex"><div class="md-flex__cell md-flex__cell--shrink"><a href="../.." title="Documentation" class="md-header-nav__button md-logo md-custom-logo"><img src="../../images/logo.png" width="170" height="40"></a></div><div class="md-flex__cell md-flex__cell--shrink"><label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label></div><div class="md-flex__cell md-flex__cell--stretch"><div class="md-flex__ellipsis md-header-nav__title" data-md-component="title"><!--<span class="md-header-nav__topic"><a href="../..">Documentation</a></span><span class="md-header-nav__topic">Private Benchmark</span>--></div></div><div class="md-flex__cell md-flex__cell--shrink"><label class="md-icon md-icon--search md-header-nav__button" for="__search"></label><div class="md-search" data-md-component="search" role="dialog"><label class="md-search__overlay" for="__search"></label><div class="md-search__inner" role="search"><form class="md-search__form" name="search"><input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active"> <label class="md-icon md-search__icon" for="__search"></label> <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">&#xE5CD;</button></form><div class="md-search__output"><div class="md-search__scrollwrap" data-md-scrollfix><div class="md-search-result" data-md-component="result"><div class="md-search-result__meta">Type to start searching</div><ol class="md-search-result__list"></ol></div></div></div></div></div></div></div></nav></header><div class="md-container"><main class="md-main"><div class="md-main__inner md-grid" data-md-component="container"><div class="md-sidebar md-sidebar--primary" data-md-component="navigation"><div class="md-sidebar__scrollwrap"><div class="md-sidebar__inner"><nav class="md-nav md-nav--primary" data-md-level="0"><label class="md-nav__title md-nav__title--site" for="__drawer"><a href="../.." title="Documentation" class="md-nav__button md-logo"><img src="../../images/logo.png" width="48" height="48"></a>Documentation</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1"><label class="md-nav__link" for="nav-1">Introduction</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-1">Introduction</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../gettingStarted/introduction/" title="Getting Started" class="md-nav__link">Getting Started</a></li><li class="md-nav__item"><a href="../../gettingStarted/productFeatures/" title="Product Features" class="md-nav__link">Product Features</a></li><li class="md-nav__item"><a href="../../gettingStarted/howItWorks/" title="How it works" class="md-nav__link">How it works</a></li><li class="md-nav__item"><a href="../../gettingStarted/cloudSecurityBestPractices/" title="Cloud Security Best Practices" class="md-nav__link">Cloud Security Best Practices</a></li><li class="md-nav__item"><a href="../../gettingStarted/deploymentArchitecture/" title="Deployment Architecture" class="md-nav__link">Deployment Architecture</a></li><li class="md-nav__item"><a href="../../gettingStarted/customerDataSecurity/" title="Customer Data Security" class="md-nav__link">Customer Data Security</a></li><li class="md-nav__item"><a href="../../gettingStarted/glossary/" title="Glossary" class="md-nav__link">Glossary</a></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2"><label class="md-nav__link" for="nav-2">Try and Buy</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-2">Try and Buy</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../tryAndBuy/freeTrial/" title="Free Trial" class="md-nav__link">Free Trial</a></li><li class="md-nav__item"><a href="../../tryAndBuy/subscribeOnAzureMarketplace/" title="Buy on Azure Marketplace" class="md-nav__link">Buy on Azure Marketplace</a></li><li class="md-nav__item"><a href="../../tryAndBuy/subscribe/" title="Request a License" class="md-nav__link">Request a License</a></li><li class="md-nav__item"><a href="../../tryAndBuy/partnerCobranding/" title="Partner co-branding" class="md-nav__link">Partner co-branding</a></li><li class="md-nav__item"><a href="../../tryAndBuy/estimatePricing/" title="Estimate Pricing" class="md-nav__link">Estimate Pricing</a></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3"><label class="md-nav__link" for="nav-3">Security Policies</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-3">Security Policies</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../gettingStarted/cloudSecurityBestPractices/" title="Cloud Security Best Practices" class="md-nav__link">Cloud Security Best Practices</a></li><li class="md-nav__item"><a href="../../securityPolicies/awsSecurityPolcies/" title="AWS Security Policies" class="md-nav__link">AWS Security Policies</a></li><li class="md-nav__item"><a href="../../securityPolicies/azureSecurityPolcies/" title="Azure Security Policies" class="md-nav__link">Azure Security Policies</a></li><li class="md-nav__item"><a href="../../securityPolicies/gcp_SecurityPolcies/" title="GCP Security Policies(Preview)" class="md-nav__link">GCP Security Policies(Preview)</a></li><li class="md-nav__item"><a href="../../securityPolicies/office365SecurityPolcies/" title="Office 365 Security Policies" class="md-nav__link">Office 365 Security Policies</a></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-6" type="checkbox" id="nav-3-6"><label class="md-nav__link" for="nav-3-6">OS baselines</label><nav class="md-nav" data-md-component="collapsible" data-md-level="2"><label class="md-nav__title" for="nav-3-6">OS baselines</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../securityPolicies/osBaseline/centOSSecurityPolcies/" title="CentOS" class="md-nav__link">CentOS</a></li><li class="md-nav__item"><a href="../../securityPolicies/osBaseline/rhelSecurityPolcies/" title="RHEL" class="md-nav__link">RHEL</a></li><li class="md-nav__item"><a href="../../securityPolicies/osBaseline/ubuntuSecurityPolcies/" title="Ubuntu 18.04" class="md-nav__link">Ubuntu 18.04</a></li><li class="md-nav__item"><a href="../../securityPolicies/osBaseline/windows12SecurityPolcies/" title="Windows 2012 R2" class="md-nav__link">Windows 2012 R2</a></li><li class="md-nav__item"><a href="../../securityPolicies/osBaseline/windows16SecurityPolcies/" title="Windows 2016" class="md-nav__link">Windows 2016</a></li><li class="md-nav__item"><a href="../../securityPolicies/osBaseline/windows19SecurityPolcies/" title="Windows 2019" class="md-nav__link">Windows 2019</a></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-7" type="checkbox" id="nav-3-7"><label class="md-nav__link" for="nav-3-7">Kubernetes</label><nav class="md-nav" data-md-component="collapsible" data-md-level="2"><label class="md-nav__title" for="nav-3-7">Kubernetes</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../securityPolicies/kubernetes/awsK8SSecurityPolcies/" title="AWS" class="md-nav__link">AWS</a></li><li class="md-nav__item"><a href="../../securityPolicies/kubernetes/azureK8SSecurityPolcies/" title="Azure" class="md-nav__link">Azure</a></li></ul></nav></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4"><label class="md-nav__link" for="nav-4">Compliance Benchmarks</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-4">Compliance Benchmarks</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../complianceBenchmarks/complianceBenchmarks/" title="Benchmarks" class="md-nav__link">Benchmarks</a></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5"><label class="md-nav__link" for="nav-5">Onboarding Guide</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-5">Onboarding Guide</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../onboardingGuide/onboardingGuideOverview/" title="Overview" class="md-nav__link">Overview</a></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-2" type="checkbox" id="nav-5-2"><label class="md-nav__link" for="nav-5-2">Amazon Web Services</label><nav class="md-nav" data-md-component="collapsible" data-md-level="2"><label class="md-nav__title" for="nav-5-2">Amazon Web Services</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../onboardingGuide/amazonWebServiceAccounts/" title="Onboarding steps" class="md-nav__link">Onboarding steps</a></li><li class="md-nav__item"><a href="../../onboardingGuide/awsEnableConfigBasedDataCollection/" title="Enable AWS Config Based Data Collection (optional)" class="md-nav__link">Enable AWS Config Based Data Collection (optional)</a></li><li class="md-nav__item"><a href="../../onboardingGuide/awsVMBaselineConfiguration/" title="OS baseline (optional)" class="md-nav__link">OS baseline (optional)</a></li><li class="md-nav__item"><a href="../../onboardingGuide/awsVulnerabilities/" title="Vulnerability (optional)" class="md-nav__link">Vulnerability (optional)</a></li><li class="md-nav__item"><a href="../../onboardingGuide/configureCloudneetiAgentInEKS/" title="Amazon Elastic Kubernetes Service (Amazon EKS) (optional)" class="md-nav__link">Amazon Elastic Kubernetes Service (Amazon EKS) (optional)</a></li><li class="md-nav__item"><a href="../../onboardingGuide/awsAccountHealthStatus/" title="AWS onboarding health status" class="md-nav__link">AWS onboarding health status</a></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-3" type="checkbox" id="nav-5-3"><label class="md-nav__link" for="nav-5-3">Microsoft Azure</label><nav class="md-nav" data-md-component="collapsible" data-md-level="2"><label class="md-nav__title" for="nav-5-3">Microsoft Azure</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../onboardingGuide/azureSubscriptions/" title="Onboarding steps" class="md-nav__link">Onboarding steps</a></li><li class="md-nav__item"><a href="../../onboardingGuide/grantAccessToAzureSubscriptionAdditionalRoles/" title="Additional roles" class="md-nav__link">Additional roles</a></li><li class="md-nav__item"><a href="../../onboardingGuide/grantAccessToKeyVaults/" title="Key vaults" class="md-nav__link">Key vaults</a></li><li class="md-nav__item"><a href="../../onboardingGuide/azureAdvancedSecurityConfigurations/" title="Advanced security configurations" class="md-nav__link">Advanced security configurations</a></li><li class="md-nav__item"><a href="../../onboardingGuide/enableASCAuditPolicies/" title="Enable ASC audit policies" class="md-nav__link">Enable ASC audit policies</a></li><li class="md-nav__item"><a href="../../onboardingGuide/azureOSBaseline/" title="OS baseline and vulnerability" class="md-nav__link">OS baseline and vulnerability</a></li><li class="md-nav__item"><a href="../../onboardingGuide/azureVulnerability/" title="Vulnerability" class="md-nav__link">Vulnerability</a></li><li class="md-nav__item"><a href="../../onboardingGuide/configureCloudneetiAgentInAKS/" title="Azure Kubernetes Service (AKS)" class="md-nav__link">Azure Kubernetes Service (AKS)</a></li><li class="md-nav__item"><a href="../../onboardingGuide/azureAccountHealthStatus/" title="Azure onboarding health status" class="md-nav__link">Azure onboarding health status</a></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-4" type="checkbox" id="nav-5-4"><label class="md-nav__link" for="nav-5-4">Google Cloud Platform (Preview)</label><nav class="md-nav" data-md-component="collapsible" data-md-level="2"><label class="md-nav__title" for="nav-5-4">Google Cloud Platform (Preview)</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../onboardingGuide/gcpOnboardingOverview/" title="Overview" class="md-nav__link">Overview</a></li><li class="md-nav__item"><a href="../../onboardingGuide/gcpProject/" title="GCP Project" class="md-nav__link">GCP Project</a></li><li class="md-nav__item"><a href="../../onboardingGuide/gcpOrganization/" title="GCP Organization" class="md-nav__link">GCP Organization</a></li><li class="md-nav__item"><a href="../../onboardingGuide/gcpAnnexure/" title="Annexure" class="md-nav__link">Annexure</a></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-5" type="checkbox" id="nav-5-5"><label class="md-nav__link" for="nav-5-5">Office 365</label><nav class="md-nav" data-md-component="collapsible" data-md-level="2"><label class="md-nav__title" for="nav-5-5">Office 365</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../onboardingGuide/office365Subscription/" title="Onboarding steps" class="md-nav__link">Onboarding steps</a></li><li class="md-nav__item"><a href="../../onboardingGuide/office365AccountHealthStatus/" title="Office 365 onboarding health status" class="md-nav__link">Office 365 onboarding health status</a></li><li class="md-nav__item"><a href="../../onboardingGuide/office365AdvanceSecurityConfigurationUpgrade/" title="Upgrade advanced security configurations" class="md-nav__link">Upgrade advanced security configurations</a></li></ul></nav></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6"><label class="md-nav__link" for="nav-6">User Guide</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-6">User Guide</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../gettingStarted/signInAndSignOut/" title="Sign In and Sign Out" class="md-nav__link">Sign In and Sign Out</a></li><li class="md-nav__item"><a href="../../userGuide/userInterface/" title="User Interface" class="md-nav__link">User Interface</a></li><li class="md-nav__item"><a href="../../userGuide/dashboards/" title="Dashboards" class="md-nav__link">Dashboards</a></li><li class="md-nav__item"><a href="../../userGuide/securityPolicies/" title="Security Policies" class="md-nav__link">Security Policies</a></li><li class="md-nav__item"><a href="../../userGuide/complianceBenchmarks/" title="Compliance Benchmarks" class="md-nav__link">Compliance Benchmarks</a></li><li class="md-nav__item"><a href="../../userGuide/reports/" title="Reports" class="md-nav__link">Reports</a></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7"><label class="md-nav__link" for="nav-7">REST APIs</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-7">REST APIs</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../userGuide/restAPIs/" title="Overview" class="md-nav__link">Overview</a></li><li class="md-nav__item"><a href="../../userGuide/apiUserScenarios/" title="API User Scenarios" class="md-nav__link">API User Scenarios</a></li><li class="md-nav__item"><a href="../../userGuide/tokenAPI/" title="Token API" class="md-nav__link">Token API</a></li><li class="md-nav__item"><a href="../../userGuide/getLicenseAccounts/" title="License Accounts API" class="md-nav__link">License Accounts API</a></li><li class="md-nav__item"><a href="../../userGuide/onboardCloudAccount/" title="Onboard cloud account API" class="md-nav__link">Onboard cloud account API</a></li><li class="md-nav__item"><a href="../../userGuide/updateAPIAppAccessScope/" title="Update API app access scope API" class="md-nav__link">Update API app access scope API</a></li><li class="md-nav__item"><a href="../../userGuide/getHealthStatus/" title="Onboarding health status API" class="md-nav__link">Onboarding health status API</a></li><li class="md-nav__item"><a href="../../userGuide/getBenchmarkSummary/" title="Audit summary report API" class="md-nav__link">Audit summary report API</a></li><li class="md-nav__item"><a href="../../userGuide/initiateScanAPI/" title="Initiate scan API" class="md-nav__link">Initiate scan API</a></li><li class="md-nav__item"><a href="../../userGuide/scanStatusAPI/" title="Scan status API" class="md-nav__link">Scan status API</a></li><li class="md-nav__item"><a href="../../userGuide/getSupportedBenchmarks/" title="Get supported benchmarks API" class="md-nav__link">Get supported benchmarks API</a></li><li class="md-nav__item"><a href="../../userGuide/auditReportAPI/" title="Audit report API" class="md-nav__link">Audit report API</a></li></ul></nav></li><li class="md-nav__item md-nav__item--active md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8" checked><label class="md-nav__link" for="nav-8">Administrator Guide</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-8">Administrator Guide</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../featuresAndQuotas/" title="Features and Quotas" class="md-nav__link">Features and Quotas</a></li><li class="md-nav__item"><a href="../manageLicenses/" title="Integrations" class="md-nav__link">Integrations</a></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-3" type="checkbox" id="nav-8-3"><label class="md-nav__link" for="nav-8-3">Incident management</label><nav class="md-nav" data-md-component="collapsible" data-md-level="2"><label class="md-nav__title" for="nav-8-3">Incident management</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../serviceNowIntegration/" title="Service Now" class="md-nav__link">Service Now</a></li><li class="md-nav__item"><a href="../zendeskIntegration/" title="Zendesk" class="md-nav__link">Zendesk</a></li></ul></nav></li><li class="md-nav__item"><a href="../azureASCPushIntegration/" title="ASC Push Integration" class="md-nav__link">ASC Push Integration</a></li><li class="md-nav__item"><a href="../manageAccounts/" title="Cloud Accounts" class="md-nav__link">Cloud Accounts</a></li><li class="md-nav__item"><a href="../manageUsers/" title="Users & Roles" class="md-nav__link">Users & Roles</a></li><li class="md-nav__item md-nav__item--active"><input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc"><label class="md-nav__link md-nav__link--active" for="__toc">Private Benchmark</label><a href="./" title="Private Benchmark" class="md-nav__link md-nav__link--active">Private Benchmark</a><nav class="md-nav md-nav--secondary"><label class="md-nav__title" for="__toc">In this article</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="#overview" title="Overview" class="md-nav__link">Overview</a></li><li class="md-nav__item"><a href="#step-1-create-and-update-private-benchmark" title="STEP 1: Create and Update Private Benchmark" class="md-nav__link">STEP 1: Create and Update Private Benchmark</a><nav class="md-nav"><ul class="md-nav__list"><li class="md-nav__item"><a href="#11-create-private-benchmark" title="1.1 Create Private Benchmark" class="md-nav__link">1.1 Create Private Benchmark</a></li><li class="md-nav__item"><a href="#12-update-private-benchmark" title="1.2 Update Private Benchmark" class="md-nav__link">1.2 Update Private Benchmark</a></li></ul></nav></li><li class="md-nav__item"><a href="#step-2-configure-private-benchmark" title="STEP 2 Configure Private Benchmark" class="md-nav__link">STEP 2 Configure Private Benchmark</a><nav class="md-nav"><ul class="md-nav__list"><li class="md-nav__item"><a href="#21-category-configuration" title="2.1 Category Configuration" class="md-nav__link">2.1 Category Configuration</a><nav class="md-nav"><ul class="md-nav__list"><li class="md-nav__item"><a href="#211-reuse-existing-categories" title="2.1.1 Reuse existing categories" class="md-nav__link">2.1.1 Reuse existing categories</a></li><li class="md-nav__item"><a href="#212-adding-new-categories" title="2.1.2 Adding new categories" class="md-nav__link">2.1.2 Adding new categories</a></li><li class="md-nav__item"><a href="#213-update-a-category" title="2.1.3 Update a category" class="md-nav__link">2.1.3 Update a category</a></li><li class="md-nav__item"><a href="#214-remove-a-category" title="2.1.4 Remove a category" class="md-nav__link">2.1.4 Remove a category</a></li></ul></nav></li><li class="md-nav__item"><a href="#22-configure-control-numbers" title="2.2 Configure Control Numbers" class="md-nav__link">2.2 Configure Control Numbers</a><nav class="md-nav"><ul class="md-nav__list"><li class="md-nav__item"><a href="#221-add-control-number" title="2.2.1 Add control number" class="md-nav__link">2.2.1 Add control number</a></li><li class="md-nav__item"><a href="#222-update-control-id" title="2.2.2 Update control id" class="md-nav__link">2.2.2 Update control id</a></li><li class="md-nav__item"><a href="#223-delete-control-id" title="2.2.3 Delete control id" class="md-nav__link">2.2.3 Delete control id</a></li></ul></nav></li><li class="md-nav__item"><a href="#23-policy-configuration" title="2.3 Policy Configuration" class="md-nav__link">2.3 Policy Configuration</a><nav class="md-nav"><ul class="md-nav__list"><li class="md-nav__item"><a href="#231-reuse-existing-security-policies" title="2.3.1 Reuse existing security policies" class="md-nav__link">2.3.1 Reuse existing security policies</a></li><li class="md-nav__item"><a href="#232-update-security-policy" title="2.3.2 Update security policy" class="md-nav__link">2.3.2 Update security policy</a></li><li class="md-nav__item"><a href="#233-remove-policy" title="2.3.3 Remove policy" class="md-nav__link">2.3.3 Remove policy</a></li></ul></nav></li></ul></nav></li><li class="md-nav__item"><a href="#step-3-associate-private-benchmark-with-licenses" title="STEP 3 Associate Private Benchmark with License(s)" class="md-nav__link">STEP 3 Associate Private Benchmark with License(s)</a><nav class="md-nav"><ul class="md-nav__list"><li class="md-nav__item"><a href="#31-associate-with-an-active-license" title="3.1 Associate with an active License" class="md-nav__link">3.1 Associate with an active License</a></li></ul></nav></li><li class="md-nav__item"><a href="#step-4-collaboration-with-users" title="STEP 4: Collaboration with users" class="md-nav__link">STEP 4: Collaboration with users</a><nav class="md-nav"><ul class="md-nav__list"><li class="md-nav__item"><a href="#41-add-license-admins-for-collaboration" title="4.1 Add License Admins for Collaboration" class="md-nav__link">4.1 Add License Admins for Collaboration</a></li></ul></nav></li></ul></nav></li><li class="md-nav__item"><a href="../securityPolicyExclusions/" title="Security Policy Configuration" class="md-nav__link">Security Policy Configuration</a></li><li class="md-nav__item"><a href="../overrideSecurityPolicyStatus/" title="Override Security Policy Status" class="md-nav__link">Override Security Policy Status</a></li><li class="md-nav__item"><a href="../auditLog/" title="Audit Log" class="md-nav__link">Audit Log</a></li><li class="md-nav__item"><a href="../configureCloudneetiAPIAccess/" title="Configure Cloudneeti API Access" class="md-nav__link">Configure Cloudneeti API Access</a></li><li class="md-nav__item"><a href="../utilizationDashboard/" title="Utilization Dashboard" class="md-nav__link">Utilization Dashboard</a></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9"><label class="md-nav__link" for="nav-9">Remediation</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-9">Remediation</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../remediation/overview/" title="Overview" class="md-nav__link">Overview</a></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-2" type="checkbox" id="nav-9-2"><label class="md-nav__link" for="nav-9-2">Azure</label><nav class="md-nav" data-md-component="collapsible" data-md-level="2"><label class="md-nav__title" for="nav-9-2">Azure</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../remediation/azureGuidedRemediation/" title="Guided Remediation" class="md-nav__link">Guided Remediation</a></li><li class="md-nav__item"><a href="../../remediation/azureAutoRemediation/" title="Auto Remediation" class="md-nav__link">Auto Remediation</a></li><li class="md-nav__item"><a href="../../remediation/azureDecommissionofRemediation/" title="Decommission of remediation" class="md-nav__link">Decommission of remediation</a></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3" type="checkbox" id="nav-9-3"><label class="md-nav__link" for="nav-9-3">AWS</label><nav class="md-nav" data-md-component="collapsible" data-md-level="2"><label class="md-nav__title" for="nav-9-3">AWS</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../remediation/awsGuidedRemediation/" title="Guided Remediation" class="md-nav__link">Guided Remediation</a></li><li class="md-nav__item"><a href="../../remediation/awsRemediation/" title="Auto Remediation" class="md-nav__link">Auto Remediation</a></li><li class="md-nav__item"><a href="../../remediation/awsDecommissionofRemediation/" title="Decommission Remediation Framework" class="md-nav__link">Decommission Remediation Framework</a></li></ul></nav></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10"><label class="md-nav__link" for="nav-10">Quick wins and OS baseline hardening scripts</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-10">Quick wins and OS baseline hardening scripts</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../remediation/overviewQuickWins/" title="Overview" class="md-nav__link">Overview</a></li><li class="md-nav__item"><a href="../../remediation/awsQuickWins/" title="AWS Quick wins" class="md-nav__link">AWS Quick wins</a></li><li class="md-nav__item"><a href="../../remediation/azureQuickWins/" title="Azure Quick Wins" class="md-nav__link">Azure Quick Wins</a></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-10-4" type="checkbox" id="nav-10-4"><label class="md-nav__link" for="nav-10-4">OS Hardening for Baseline Configuration</label><nav class="md-nav" data-md-component="collapsible" data-md-level="2"><label class="md-nav__title" for="nav-10-4">OS Hardening for Baseline Configuration</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../remediation/osBaseline/centOSQuickWins/" title="CentOS Linux 7" class="md-nav__link">CentOS Linux 7</a></li><li class="md-nav__item"><a href="../../remediation/osBaseline/rhelQuickWins/" title="RHEL Linux 7" class="md-nav__link">RHEL Linux 7</a></li><li class="md-nav__item"><a href="../../remediation/osBaseline/win12QuickWins/" title="Windows Server 2012 R2" class="md-nav__link">Windows Server 2012 R2</a></li><li class="md-nav__item"><a href="../../remediation/osBaseline/win16QuickWins/" title="Windows Server 2016" class="md-nav__link">Windows Server 2016</a></li><li class="md-nav__item"><a href="../../remediation/osBaseline/win19QuickWins/" title="Windows Server 2019" class="md-nav__link">Windows Server 2019</a></li></ul></nav></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11"><label class="md-nav__link" for="nav-11">Release Notes</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-11">Release Notes</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../releaseNotes/2020/" title="Releases in 2020" class="md-nav__link">Releases in 2020</a></li><li class="md-nav__item"><a href="../../releaseNotes/2019/" title="Releases in 2019" class="md-nav__link">Releases in 2019</a></li></ul></nav></li></ul></nav></div></div></div><div class="md-sidebar md-sidebar--secondary" data-md-component="toc"><div class="md-sidebar__scrollwrap"><div class="md-sidebar__inner"><nav class="md-nav md-nav--secondary"><label class="md-nav__title" for="__toc">In this article</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="#overview" title="Overview" class="md-nav__link">Overview</a></li><li class="md-nav__item"><a href="#step-1-create-and-update-private-benchmark" title="STEP 1: Create and Update Private Benchmark" class="md-nav__link">STEP 1: Create and Update Private Benchmark</a><nav class="md-nav"><ul class="md-nav__list"><li class="md-nav__item"><a href="#11-create-private-benchmark" title="1.1 Create Private Benchmark" class="md-nav__link">1.1 Create Private Benchmark</a></li><li class="md-nav__item"><a href="#12-update-private-benchmark" title="1.2 Update Private Benchmark" class="md-nav__link">1.2 Update Private Benchmark</a></li></ul></nav></li><li class="md-nav__item"><a href="#step-2-configure-private-benchmark" title="STEP 2 Configure Private Benchmark" class="md-nav__link">STEP 2 Configure Private Benchmark</a><nav class="md-nav"><ul class="md-nav__list"><li class="md-nav__item"><a href="#21-category-configuration" title="2.1 Category Configuration" class="md-nav__link">2.1 Category Configuration</a><nav class="md-nav"><ul class="md-nav__list"><li class="md-nav__item"><a href="#211-reuse-existing-categories" title="2.1.1 Reuse existing categories" class="md-nav__link">2.1.1 Reuse existing categories</a></li><li class="md-nav__item"><a href="#212-adding-new-categories" title="2.1.2 Adding new categories" class="md-nav__link">2.1.2 Adding new categories</a></li><li class="md-nav__item"><a href="#213-update-a-category" title="2.1.3 Update a category" class="md-nav__link">2.1.3 Update a category</a></li><li class="md-nav__item"><a href="#214-remove-a-category" title="2.1.4 Remove a category" class="md-nav__link">2.1.4 Remove a category</a></li></ul></nav></li><li class="md-nav__item"><a href="#22-configure-control-numbers" title="2.2 Configure Control Numbers" class="md-nav__link">2.2 Configure Control Numbers</a><nav class="md-nav"><ul class="md-nav__list"><li class="md-nav__item"><a href="#221-add-control-number" title="2.2.1 Add control number" class="md-nav__link">2.2.1 Add control number</a></li><li class="md-nav__item"><a href="#222-update-control-id" title="2.2.2 Update control id" class="md-nav__link">2.2.2 Update control id</a></li><li class="md-nav__item"><a href="#223-delete-control-id" title="2.2.3 Delete control id" class="md-nav__link">2.2.3 Delete control id</a></li></ul></nav></li><li class="md-nav__item"><a href="#23-policy-configuration" title="2.3 Policy Configuration" class="md-nav__link">2.3 Policy Configuration</a><nav class="md-nav"><ul class="md-nav__list"><li class="md-nav__item"><a href="#231-reuse-existing-security-policies" title="2.3.1 Reuse existing security policies" class="md-nav__link">2.3.1 Reuse existing security policies</a></li><li class="md-nav__item"><a href="#232-update-security-policy" title="2.3.2 Update security policy" class="md-nav__link">2.3.2 Update security policy</a></li><li class="md-nav__item"><a href="#233-remove-policy" title="2.3.3 Remove policy" class="md-nav__link">2.3.3 Remove policy</a></li></ul></nav></li></ul></nav></li><li class="md-nav__item"><a href="#step-3-associate-private-benchmark-with-licenses" title="STEP 3 Associate Private Benchmark with License(s)" class="md-nav__link">STEP 3 Associate Private Benchmark with License(s)</a><nav class="md-nav"><ul class="md-nav__list"><li class="md-nav__item"><a href="#31-associate-with-an-active-license" title="3.1 Associate with an active License" class="md-nav__link">3.1 Associate with an active License</a></li></ul></nav></li><li class="md-nav__item"><a href="#step-4-collaboration-with-users" title="STEP 4: Collaboration with users" class="md-nav__link">STEP 4: Collaboration with users</a><nav class="md-nav"><ul class="md-nav__list"><li class="md-nav__item"><a href="#41-add-license-admins-for-collaboration" title="4.1 Add License Admins for Collaboration" class="md-nav__link">4.1 Add License Admins for Collaboration</a></li></ul></nav></li></ul></nav></div></div></div><div class="md-content"><article class="md-content__inner md-typeset"><h1 id="private-compliance-benchmark">Private Compliance Benchmark</h1>
+<h2 id="overview">Overview</h2>
+<p>Cloudneeti License Admin can create a Private Benchmark. Companies can use Private Benchmark to select security policies relevant for their organization. Private benchmark can be defined from individual security policies, but it can also be based on an existing compliance benchmark as a starting point and then modified as appropriate.</p>
+<p>The following steps are done by Cloudneeti application <strong>License Admin</strong> role.</p>
+<p><img alt="Configure Notifications" src="../../images/enterpriseBenchmark/enterpriseBenchmarkOverview.png#thumbnail_1" /></p>
+<table>
+<thead>
+<tr>
+<th><strong>S. No.</strong></th>
+<th><strong>Step</strong></th>
+<th><strong>Portal to use</strong></th>
+<th><strong>Role</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Create Private Benchmark</td>
+<td>Cloudneeti</td>
+<td>License Admin</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Configure Private Benchmark</td>
+<td>Cloudneeti</td>
+<td>License Admin</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Associate Private Benchmark with License(s)</td>
+<td>Cloudneeti</td>
+<td>License Admin</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Collaborate with other License Admins</td>
+<td>Cloudneeti</td>
+<td>License Admin</td>
+</tr>
+</tbody>
+</table>
+<h2 id="step-1-create-and-update-private-benchmark">STEP 1: Create and Update Private Benchmark</h2>
+<h3 id="11-create-private-benchmark">1.1 Create Private Benchmark</h3>
+<p>Add basic details for Private Benchmark.</p>
+<ol>
+<li>
+<p>Click <strong>Configurations</strong></p>
+</li>
+<li>
+<p>Navigate to <strong>Private Benchmarks</strong></p>
+<p><img alt="Private Benchmarks" src="../../images/enterpriseBenchmark/enterpriseBenchmarkCreate.png#thumbnail" /></p>
+</li>
+<li>
+<p>Give <strong>Name, Title, Long Name, Logo</strong> and choose <strong>Connector Type</strong> for
+    Benchmark to be created</p>
+<p><img alt="Private Benchmarks" src="../../images/enterpriseBenchmark/enterpriseBenchmarkBasic.png#thumbnail" /></p>
+<p>Note : Private Benchmark configuration can be done for one selected connector type only.
+chosen connector type only.</p>
+</li>
+<li>
+<p><strong>Save</strong> and continue to configure the benchmark.</p>
+</li>
+</ol>
+<h3 id="12-update-private-benchmark">1.2 Update Private Benchmark</h3>
+<ol>
+<li>
+<p>Navigate to <strong>Private Benchmark</strong> page </p>
+</li>
+<li>
+<p>Click <strong>Update</strong></p>
+<p><img alt="Private Benchmark" src="../../images/enterpriseBenchmark/update_1.png#thumbnail" /></p>
+</li>
+<li>
+<p>Update benchmark long name, title logo and <strong>Save</strong></p>
+<p><img alt="Private Benchmark" src="../../images/enterpriseBenchmark/update_2.png#thumbnail" /></p>
+</li>
+</ol>
+<h2 id="step-2-configure-private-benchmark">STEP 2 Configure Private Benchmark</h2>
+<p>Private Benchmark is configured by defining specific to this benchmark categories and security policies. 
+Cloudneeti allows custom control ids for mapping policies into a category.</p>
+<p>Repeat below steps to map, update categories and policies from baseline benchmarks.</p>
+<h3 id="21-category-configuration">2.1 Category Configuration</h3>
+<p>Private Benchmark can be configured by reusing existing categories from an existing benchmark (baseline benchmark) and/or by adding new categories.</p>
+<h4 id="211-reuse-existing-categories">2.1.1 Reuse existing categories</h4>
+<p>Select baseline benchmark to drag and drop existing categories</p>
+<ol>
+<li>
+<p>Select Baseline Benchmark</p>
+</li>
+<li>
+<p>Drag and drop categories</p>
+<p><img alt="Private Benchmark" src="../../images/enterpriseBenchmark/mapCreateCategories.gif" /></p>
+</li>
+</ol>
+<h4 id="212-adding-new-categories">2.1.2 Adding new categories</h4>
+<ol>
+<li>
+<p>Click <strong>Add</strong> to create a new category</p>
+<p><img alt="Private Benchmark" src="../../images/enterpriseBenchmark/addCategory.png#thumbnail" /></p>
+</li>
+<li>
+<p>Enter <strong>Category Name</strong></p>
+<p><img alt="Private Benchmark" src="../../images/enterpriseBenchmark/addCategory_1.png#thumbnail" /></p>
+</li>
+<li>
+<p>A category will be added in the Private Benchmark</p>
+<p><img alt="Private Benchmark" src="../../images/enterpriseBenchmark/addCategory_2.png#thumbnail" /></p>
+</li>
+</ol>
+<h4 id="213-update-a-category">2.1.3 Update a category</h4>
+<ol>
+<li>
+<p>Click on <strong>edit icon</strong></p>
+<p><img alt="Private Benchmark" src="../../images/enterpriseBenchmark/editCategory_1.png#thumbnail" /></p>
+</li>
+<li>
+<p>Update category name and click <strong>Save</strong></p>
+<p><img alt="Private Benchmark" src="../../images/enterpriseBenchmark/editCategory_2.png#thumbnail" /></p>
+</li>
+</ol>
+<h4 id="214-remove-a-category">2.1.4 Remove a category</h4>
+<p>Click on <strong>bin icon</strong> to remove benchmark category. This will remove all the security policies (including control ids) mapped under this category.</p>
+<p><img alt="Private Benchmark" src="../../images/enterpriseBenchmark/deleteCategory.png#thumbnail" /></p>
+<h3 id="22-configure-control-numbers">2.2 Configure Control Numbers</h3>
+<h4 id="221-add-control-number">2.2.1 Add control number</h4>
+<ol>
+<li>
+<p>Select category</p>
+</li>
+<li>
+<p>Click <strong>Add</strong> control number</p>
+<p><img alt="Private Benchmark" src="../../images/enterpriseBenchmark/addControl_1.png#thumbnail" /></p>
+</li>
+<li>
+<p>Enter control number</p>
+<p><img alt="Private Benchmark" src="../../images/enterpriseBenchmark/addControl_2.png#thumbnail" /></p>
+</li>
+</ol>
+<h4 id="222-update-control-id">2.2.2 Update control id</h4>
+<p>Click on edit icon to update control id</p>
+<p><img alt="Private Benchmark" src="../../images/enterpriseBenchmark/updateControl_1.png#thumbnail" /></p>
+<p><img alt="Private Benchmark" src="../../images/enterpriseBenchmark/updateControl_2.png#thumbnail" /></p>
+<h4 id="223-delete-control-id">2.2.3 Delete control id</h4>
+<p>Click on bin icon to delete control id, this will remove mapped policies within this control id.</p>
+<p><img alt="Private Benchmark" src="../../images/enterpriseBenchmark/deleteControl.png#thumbnail" /></p>
+<h3 id="23-policy-configuration">2.3 Policy Configuration</h3>
+<h4 id="231-reuse-existing-security-policies">2.3.1 Reuse existing security policies</h4>
+<ol>
+<li>
+<p>Select baseline benchmark </p>
+</li>
+<li>
+<p>Expand category to see existing secuirty policy within the baseline benchmark.</p>
+</li>
+<li>
+<p>Drag and drop security policies under desired control number.</p>
+<p><img alt="Private Benchmark" src="../../images/enterpriseBenchmark/mapPolicies.gif" /></p>
+</li>
+</ol>
+<h4 id="232-update-security-policy">2.3.2 Update security policy</h4>
+<ol>
+<li>
+<p>Double click on mapped security policy </p>
+</li>
+<li>
+<p>Update security Policy title</p>
+<p><img alt="Private Benchmark" src="../../images/enterpriseBenchmark/updatePolicy.png#thumbnail" /></p>
+</li>
+</ol>
+<h4 id="233-remove-policy">2.3.3 Remove policy</h4>
+<p>Use bin icon to removed mapped policy</p>
+<p><img alt="Private Benchmark" src="../../images/enterpriseBenchmark/deletePolicy.png#thumbnail" /></p>
+<h2 id="step-3-associate-private-benchmark-with-licenses">STEP 3 Associate Private Benchmark with License(s)</h2>
+<p>Private Benchmark can be associated with License(s) where private benchmark feature is enabled. </p>
+<p>Private Benchmark views and reports will be available for Cloud Accounts that match the selected connector type</p>
+<h3 id="31-associate-with-an-active-license">3.1 Associate with an active License</h3>
+<p>Private benchmark need to be associated with specific Cloudneeti License(s). Private benchmark menu entry, views and reports will be available after a successful rescan.</p>
+<ol>
+<li>
+<p>Navigate to <strong>Private Benchmark</strong> page </p>
+</li>
+<li>
+<p>Click <strong>Associate</strong></p>
+<p><img alt="Private Benchmark" src="../../images/enterpriseBenchmark/associate_1.png#thumbnail" /></p>
+</li>
+<li>
+<p>Select and move license to section <strong>Associate with Licenses</strong> </p>
+<p><img alt="Private Benchmark" src="../../images/enterpriseBenchmark/associate_2.png#thumbnail" />
+Example : Move license Cloudneeti Demo and Cloudneeti Test to associate</p>
+</li>
+<li>
+<p>Click <strong>Save</strong></p>
+<p><img alt="Private Benchmark" src="../../images/enterpriseBenchmark/associate_3.png#thumbnail" /></p>
+</li>
+<li>
+<p>Initiate a <strong>rescan</strong> for selected connector type cloud account in associated License </p>
+<p><img alt="Private Benchmark" src="../../images/enterpriseBenchmark/rescan.png#thumbnail" /></p>
+</li>
+<li>
+<p>Benchmark summary page will appear on next successful scan</p>
+<p><img alt="Private Benchmark" src="../../images/enterpriseBenchmark/summary.png#thumbnail" /></p>
+</li>
+</ol>
+<h2 id="step-4-collaboration-with-users">STEP 4: Collaboration with users</h2>
+<p>License Admins can collaborate with other License Admins for configuring Private Benchmark and associating it with different Licenses. Added License Admins can do all the same operations (Edit, Collaborate, remove Collaboration, Associate and Disassociate) on Private Benchmarks as the License Admin who created Private Benchmark. </p>
+<h3 id="41-add-license-admins-for-collaboration">4.1 Add License Admins for Collaboration</h3>
+<p>License Admin can add License Admins of Licenses where Private Benchmark feature is enabled.</p>
+<ol>
+<li>
+<p>Navigate to <strong>Private Benchmark</strong> page </p>
+</li>
+<li>
+<p>Click <strong>Collaborate</strong></p>
+<p><img alt="Private Benchmark" src="../../images/enterpriseBenchmark/collaborate_1.png#thumbnail" /></p>
+</li>
+<li>
+<p>Select and move users to section <strong>Collaborate with</strong> to collaborate and move to <strong>Available for collaboration</strong> to remove collaboration.</p>
+<p><img alt="Private Benchmark" src="../../images/enterpriseBenchmark/collaborate_2.png#thumbnail" /></p>
+</li>
+<li>
+<p>Click <strong>Collaborate Now</strong> </p>
+<p><img alt="Private Benchmark" src="../../images/enterpriseBenchmark/collaborate_3.png#thumbnail" /></p>
+</li>
+</ol></article></div></div></main><footer class="md-footer"><div class="md-footer-meta md-typeset"><div class="md-footer-meta__inner md-grid"><div class="md-footer-copyright"><div class="md-footer-copyright__highlight">&copy; 2020 Cloudneeti.All Rights Reserved. | <a href="https://www.cloudneeti.com/privacy-policy-2/" target="_blank"> Privacy Policy</a> | <a href="https://www.cloudneeti.com/terms-of-use/" target="_blank"> Terms of Use</a></div></div></div></div></footer>
+
+</div><script src="../../assets/javascripts/application.d5a09f94.js"></script><script>app.initialize({version:"1.1.2",url:{base:"../.."}})</script><script src="../../javascripts/custom.js"></script></body></html>

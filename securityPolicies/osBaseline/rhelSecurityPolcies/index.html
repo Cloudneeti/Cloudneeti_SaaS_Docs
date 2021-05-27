@@ -1,0 +1,730 @@
+<!doctype html><html lang="en" class="no-js"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="x-ua-compatible" content="ie=edge"><meta name="description" content="Cloudneeti Documentation"><meta name="author" content="The Cloudneeti Team"><meta name="lang:clipboard.copy" content="Copy to clipboard"><meta name="lang:clipboard.copied" content="Copied to clipboard"><meta name="lang:search.language" content="en"><meta name="lang:search.pipeline.stopwords" content="True"><meta name="lang:search.pipeline.trimmer" content="True"><meta name="lang:search.result.none" content="No matching documents"><meta name="lang:search.result.one" content="1 matching document"><meta name="lang:search.result.other" content="# matching documents"><meta name="lang:search.tokenizer" content="[\s\-]+"><link rel="shortcut icon" href="../../../assets/images/favicon.png"><meta name="generator" content="mkdocs-1.1.2, mkdocs-material-4.3.1"><title>RHEL - Documentation</title><link rel="stylesheet" href="../../../assets/stylesheets/application.4031d38b.css"><link rel="stylesheet" href="../../../assets/stylesheets/application-palette.224b79ff.css"><meta name="theme-color" content=""><script src="../../../assets/javascripts/modernizr.74668098.js"></script><link href="https://fonts.gstatic.com" rel="preconnect" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,400i,700|&display=swap"><style>body,input{font-family:"Poppins","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"","Courier New",Courier,monospace}</style><link rel="stylesheet" href="../../../assets/fonts/material-icons.css"><link rel="stylesheet" href="../../../stylesheets/extra.css"><script>window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-149855644-1", "docs.cloudneeti.com")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })</script><script async src="https://www.google-analytics.com/analytics.js"></script></head><body dir="ltr" data-md-color-primary="cloudneeti" data-md-color-accent="cloudneeti"><svg class="md-svg"><defs></defs></svg> <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off"> <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off"> <label class="md-overlay" data-md-component="overlay" for="__drawer"></label><a href="#red-hat-enterprise-linux-7" tabindex="1" class="md-skip">Skip to content </a><header class="md-header" data-md-component="header"><nav class="md-header-nav md-grid"><div class="md-flex"><div class="md-flex__cell md-flex__cell--shrink"><a href="../../.." title="Documentation" class="md-header-nav__button md-logo md-custom-logo"><img src="../../../images/logo.png" width="170" height="40"></a></div><div class="md-flex__cell md-flex__cell--shrink"><label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label></div><div class="md-flex__cell md-flex__cell--stretch"><div class="md-flex__ellipsis md-header-nav__title" data-md-component="title"><!--<span class="md-header-nav__topic"><a href="../../..">Documentation</a></span><span class="md-header-nav__topic">RHEL</span>--></div></div><div class="md-flex__cell md-flex__cell--shrink"><label class="md-icon md-icon--search md-header-nav__button" for="__search"></label><div class="md-search" data-md-component="search" role="dialog"><label class="md-search__overlay" for="__search"></label><div class="md-search__inner" role="search"><form class="md-search__form" name="search"><input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active"> <label class="md-icon md-search__icon" for="__search"></label> <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">&#xE5CD;</button></form><div class="md-search__output"><div class="md-search__scrollwrap" data-md-scrollfix><div class="md-search-result" data-md-component="result"><div class="md-search-result__meta">Type to start searching</div><ol class="md-search-result__list"></ol></div></div></div></div></div></div></div></nav></header><div class="md-container"><main class="md-main"><div class="md-main__inner md-grid" data-md-component="container"><div class="md-sidebar md-sidebar--primary" data-md-component="navigation"><div class="md-sidebar__scrollwrap"><div class="md-sidebar__inner"><nav class="md-nav md-nav--primary" data-md-level="0"><label class="md-nav__title md-nav__title--site" for="__drawer"><a href="../../.." title="Documentation" class="md-nav__button md-logo"><img src="../../../images/logo.png" width="48" height="48"></a>Documentation</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1"><label class="md-nav__link" for="nav-1">Introduction</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-1">Introduction</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../../gettingStarted/introduction/" title="Getting Started" class="md-nav__link">Getting Started</a></li><li class="md-nav__item"><a href="../../../gettingStarted/productFeatures/" title="Product Features" class="md-nav__link">Product Features</a></li><li class="md-nav__item"><a href="../../../gettingStarted/howItWorks/" title="How it works" class="md-nav__link">How it works</a></li><li class="md-nav__item"><a href="../../../gettingStarted/cloudSecurityBestPractices/" title="Cloud Security Best Practices" class="md-nav__link">Cloud Security Best Practices</a></li><li class="md-nav__item"><a href="../../../gettingStarted/deploymentArchitecture/" title="Deployment Architecture" class="md-nav__link">Deployment Architecture</a></li><li class="md-nav__item"><a href="../../../gettingStarted/customerDataSecurity/" title="Customer Data Security" class="md-nav__link">Customer Data Security</a></li><li class="md-nav__item"><a href="../../../gettingStarted/glossary/" title="Glossary" class="md-nav__link">Glossary</a></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2"><label class="md-nav__link" for="nav-2">Try and Buy</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-2">Try and Buy</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../../tryAndBuy/freeTrial/" title="Free Trial" class="md-nav__link">Free Trial</a></li><li class="md-nav__item"><a href="../../../tryAndBuy/subscribeOnAzureMarketplace/" title="Buy on Azure Marketplace" class="md-nav__link">Buy on Azure Marketplace</a></li><li class="md-nav__item"><a href="../../../tryAndBuy/subscribe/" title="Request a License" class="md-nav__link">Request a License</a></li><li class="md-nav__item"><a href="../../../tryAndBuy/partnerCobranding/" title="Partner co-branding" class="md-nav__link">Partner co-branding</a></li><li class="md-nav__item"><a href="../../../tryAndBuy/estimatePricing/" title="Estimate Pricing" class="md-nav__link">Estimate Pricing</a></li></ul></nav></li><li class="md-nav__item md-nav__item--active md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked><label class="md-nav__link" for="nav-3">Security Policies</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-3">Security Policies</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../../gettingStarted/cloudSecurityBestPractices/" title="Cloud Security Best Practices" class="md-nav__link">Cloud Security Best Practices</a></li><li class="md-nav__item"><a href="../../awsSecurityPolcies/" title="AWS Security Policies" class="md-nav__link">AWS Security Policies</a></li><li class="md-nav__item"><a href="../../azureSecurityPolcies/" title="Azure Security Policies" class="md-nav__link">Azure Security Policies</a></li><li class="md-nav__item"><a href="../../gcp_SecurityPolcies/" title="GCP Security Policies(Preview)" class="md-nav__link">GCP Security Policies(Preview)</a></li><li class="md-nav__item"><a href="../../office365SecurityPolcies/" title="Office 365 Security Policies" class="md-nav__link">Office 365 Security Policies</a></li><li class="md-nav__item md-nav__item--active md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-6" type="checkbox" id="nav-3-6" checked><label class="md-nav__link" for="nav-3-6">OS baselines</label><nav class="md-nav" data-md-component="collapsible" data-md-level="2"><label class="md-nav__title" for="nav-3-6">OS baselines</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../centOSSecurityPolcies/" title="CentOS" class="md-nav__link">CentOS</a></li><li class="md-nav__item md-nav__item--active"><input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc"><label class="md-nav__link md-nav__link--active" for="__toc">RHEL</label><a href="./" title="RHEL" class="md-nav__link md-nav__link--active">RHEL</a><nav class="md-nav md-nav--secondary"><label class="md-nav__title" for="__toc">In this article</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="#aws" title="AWS" class="md-nav__link">AWS</a></li><li class="md-nav__item"><a href="#azure" title="Azure" class="md-nav__link">Azure</a></li></ul></nav></li><li class="md-nav__item"><a href="../ubuntuSecurityPolcies/" title="Ubuntu 18.04" class="md-nav__link">Ubuntu 18.04</a></li><li class="md-nav__item"><a href="../windows12SecurityPolcies/" title="Windows 2012 R2" class="md-nav__link">Windows 2012 R2</a></li><li class="md-nav__item"><a href="../windows16SecurityPolcies/" title="Windows 2016" class="md-nav__link">Windows 2016</a></li><li class="md-nav__item"><a href="../windows19SecurityPolcies/" title="Windows 2019" class="md-nav__link">Windows 2019</a></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-7" type="checkbox" id="nav-3-7"><label class="md-nav__link" for="nav-3-7">Kubernetes</label><nav class="md-nav" data-md-component="collapsible" data-md-level="2"><label class="md-nav__title" for="nav-3-7">Kubernetes</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../kubernetes/awsK8SSecurityPolcies/" title="AWS" class="md-nav__link">AWS</a></li><li class="md-nav__item"><a href="../../kubernetes/azureK8SSecurityPolcies/" title="Azure" class="md-nav__link">Azure</a></li></ul></nav></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4"><label class="md-nav__link" for="nav-4">Compliance Benchmarks</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-4">Compliance Benchmarks</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../../complianceBenchmarks/complianceBenchmarks/" title="Benchmarks" class="md-nav__link">Benchmarks</a></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5"><label class="md-nav__link" for="nav-5">Onboarding Guide</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-5">Onboarding Guide</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../../onboardingGuide/onboardingGuideOverview/" title="Overview" class="md-nav__link">Overview</a></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-2" type="checkbox" id="nav-5-2"><label class="md-nav__link" for="nav-5-2">Amazon Web Services</label><nav class="md-nav" data-md-component="collapsible" data-md-level="2"><label class="md-nav__title" for="nav-5-2">Amazon Web Services</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../../onboardingGuide/amazonWebServiceAccounts/" title="Onboarding steps" class="md-nav__link">Onboarding steps</a></li><li class="md-nav__item"><a href="../../../onboardingGuide/awsEnableConfigBasedDataCollection/" title="Enable AWS Config Based Data Collection (optional)" class="md-nav__link">Enable AWS Config Based Data Collection (optional)</a></li><li class="md-nav__item"><a href="../../../onboardingGuide/awsVMBaselineConfiguration/" title="OS baseline (optional)" class="md-nav__link">OS baseline (optional)</a></li><li class="md-nav__item"><a href="../../../onboardingGuide/awsVulnerabilities/" title="Vulnerability (optional)" class="md-nav__link">Vulnerability (optional)</a></li><li class="md-nav__item"><a href="../../../onboardingGuide/configureCloudneetiAgentInEKS/" title="Amazon Elastic Kubernetes Service (Amazon EKS) (optional)" class="md-nav__link">Amazon Elastic Kubernetes Service (Amazon EKS) (optional)</a></li><li class="md-nav__item"><a href="../../../onboardingGuide/awsAccountHealthStatus/" title="AWS onboarding health status" class="md-nav__link">AWS onboarding health status</a></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-3" type="checkbox" id="nav-5-3"><label class="md-nav__link" for="nav-5-3">Microsoft Azure</label><nav class="md-nav" data-md-component="collapsible" data-md-level="2"><label class="md-nav__title" for="nav-5-3">Microsoft Azure</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../../onboardingGuide/azureSubscriptions/" title="Onboarding steps" class="md-nav__link">Onboarding steps</a></li><li class="md-nav__item"><a href="../../../onboardingGuide/grantAccessToAzureSubscriptionAdditionalRoles/" title="Additional roles" class="md-nav__link">Additional roles</a></li><li class="md-nav__item"><a href="../../../onboardingGuide/grantAccessToKeyVaults/" title="Key vaults" class="md-nav__link">Key vaults</a></li><li class="md-nav__item"><a href="../../../onboardingGuide/azureAdvancedSecurityConfigurations/" title="Advanced security configurations" class="md-nav__link">Advanced security configurations</a></li><li class="md-nav__item"><a href="../../../onboardingGuide/enableASCAuditPolicies/" title="Enable ASC audit policies" class="md-nav__link">Enable ASC audit policies</a></li><li class="md-nav__item"><a href="../../../onboardingGuide/azureOSBaseline/" title="OS baseline and vulnerability" class="md-nav__link">OS baseline and vulnerability</a></li><li class="md-nav__item"><a href="../../../onboardingGuide/azureVulnerability/" title="Vulnerability" class="md-nav__link">Vulnerability</a></li><li class="md-nav__item"><a href="../../../onboardingGuide/configureCloudneetiAgentInAKS/" title="Azure Kubernetes Service (AKS)" class="md-nav__link">Azure Kubernetes Service (AKS)</a></li><li class="md-nav__item"><a href="../../../onboardingGuide/azureAccountHealthStatus/" title="Azure onboarding health status" class="md-nav__link">Azure onboarding health status</a></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-4" type="checkbox" id="nav-5-4"><label class="md-nav__link" for="nav-5-4">Google Cloud Platform (Preview)</label><nav class="md-nav" data-md-component="collapsible" data-md-level="2"><label class="md-nav__title" for="nav-5-4">Google Cloud Platform (Preview)</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../../onboardingGuide/gcpOnboardingOverview/" title="Overview" class="md-nav__link">Overview</a></li><li class="md-nav__item"><a href="../../../onboardingGuide/gcpProject/" title="GCP Project" class="md-nav__link">GCP Project</a></li><li class="md-nav__item"><a href="../../../onboardingGuide/gcpOrganization/" title="GCP Organization" class="md-nav__link">GCP Organization</a></li><li class="md-nav__item"><a href="../../../onboardingGuide/gcpAnnexure/" title="Annexure" class="md-nav__link">Annexure</a></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-5" type="checkbox" id="nav-5-5"><label class="md-nav__link" for="nav-5-5">Office 365</label><nav class="md-nav" data-md-component="collapsible" data-md-level="2"><label class="md-nav__title" for="nav-5-5">Office 365</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../../onboardingGuide/office365Subscription/" title="Onboarding steps" class="md-nav__link">Onboarding steps</a></li><li class="md-nav__item"><a href="../../../onboardingGuide/office365AccountHealthStatus/" title="Office 365 onboarding health status" class="md-nav__link">Office 365 onboarding health status</a></li><li class="md-nav__item"><a href="../../../onboardingGuide/office365AdvanceSecurityConfigurationUpgrade/" title="Upgrade advanced security configurations" class="md-nav__link">Upgrade advanced security configurations</a></li></ul></nav></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6"><label class="md-nav__link" for="nav-6">User Guide</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-6">User Guide</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../../gettingStarted/signInAndSignOut/" title="Sign In and Sign Out" class="md-nav__link">Sign In and Sign Out</a></li><li class="md-nav__item"><a href="../../../userGuide/userInterface/" title="User Interface" class="md-nav__link">User Interface</a></li><li class="md-nav__item"><a href="../../../userGuide/dashboards/" title="Dashboards" class="md-nav__link">Dashboards</a></li><li class="md-nav__item"><a href="../../../userGuide/securityPolicies/" title="Security Policies" class="md-nav__link">Security Policies</a></li><li class="md-nav__item"><a href="../../../userGuide/complianceBenchmarks/" title="Compliance Benchmarks" class="md-nav__link">Compliance Benchmarks</a></li><li class="md-nav__item"><a href="../../../userGuide/reports/" title="Reports" class="md-nav__link">Reports</a></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7"><label class="md-nav__link" for="nav-7">REST APIs</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-7">REST APIs</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../../userGuide/restAPIs/" title="Overview" class="md-nav__link">Overview</a></li><li class="md-nav__item"><a href="../../../userGuide/apiUserScenarios/" title="API User Scenarios" class="md-nav__link">API User Scenarios</a></li><li class="md-nav__item"><a href="../../../userGuide/tokenAPI/" title="Token API" class="md-nav__link">Token API</a></li><li class="md-nav__item"><a href="../../../userGuide/getLicenseAccounts/" title="License Accounts API" class="md-nav__link">License Accounts API</a></li><li class="md-nav__item"><a href="../../../userGuide/onboardCloudAccount/" title="Onboard cloud account API" class="md-nav__link">Onboard cloud account API</a></li><li class="md-nav__item"><a href="../../../userGuide/updateAPIAppAccessScope/" title="Update API app access scope API" class="md-nav__link">Update API app access scope API</a></li><li class="md-nav__item"><a href="../../../userGuide/getHealthStatus/" title="Onboarding health status API" class="md-nav__link">Onboarding health status API</a></li><li class="md-nav__item"><a href="../../../userGuide/getBenchmarkSummary/" title="Audit summary report API" class="md-nav__link">Audit summary report API</a></li><li class="md-nav__item"><a href="../../../userGuide/initiateScanAPI/" title="Initiate scan API" class="md-nav__link">Initiate scan API</a></li><li class="md-nav__item"><a href="../../../userGuide/scanStatusAPI/" title="Scan status API" class="md-nav__link">Scan status API</a></li><li class="md-nav__item"><a href="../../../userGuide/getSupportedBenchmarks/" title="Get supported benchmarks API" class="md-nav__link">Get supported benchmarks API</a></li><li class="md-nav__item"><a href="../../../userGuide/auditReportAPI/" title="Audit report API" class="md-nav__link">Audit report API</a></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8"><label class="md-nav__link" for="nav-8">Administrator Guide</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-8">Administrator Guide</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../../administratorGuide/featuresAndQuotas/" title="Features and Quotas" class="md-nav__link">Features and Quotas</a></li><li class="md-nav__item"><a href="../../../administratorGuide/manageLicenses/" title="Integrations" class="md-nav__link">Integrations</a></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-3" type="checkbox" id="nav-8-3"><label class="md-nav__link" for="nav-8-3">Incident management</label><nav class="md-nav" data-md-component="collapsible" data-md-level="2"><label class="md-nav__title" for="nav-8-3">Incident management</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../../administratorGuide/serviceNowIntegration/" title="Service Now" class="md-nav__link">Service Now</a></li><li class="md-nav__item"><a href="../../../administratorGuide/zendeskIntegration/" title="Zendesk" class="md-nav__link">Zendesk</a></li></ul></nav></li><li class="md-nav__item"><a href="../../../administratorGuide/azureASCPushIntegration/" title="ASC Push Integration" class="md-nav__link">ASC Push Integration</a></li><li class="md-nav__item"><a href="../../../administratorGuide/manageAccounts/" title="Cloud Accounts" class="md-nav__link">Cloud Accounts</a></li><li class="md-nav__item"><a href="../../../administratorGuide/manageUsers/" title="Users & Roles" class="md-nav__link">Users & Roles</a></li><li class="md-nav__item"><a href="../../../administratorGuide/privateBenchmark/" title="Private Benchmark" class="md-nav__link">Private Benchmark</a></li><li class="md-nav__item"><a href="../../../administratorGuide/securityPolicyExclusions/" title="Security Policy Configuration" class="md-nav__link">Security Policy Configuration</a></li><li class="md-nav__item"><a href="../../../administratorGuide/overrideSecurityPolicyStatus/" title="Override Security Policy Status" class="md-nav__link">Override Security Policy Status</a></li><li class="md-nav__item"><a href="../../../administratorGuide/auditLog/" title="Audit Log" class="md-nav__link">Audit Log</a></li><li class="md-nav__item"><a href="../../../administratorGuide/configureCloudneetiAPIAccess/" title="Configure Cloudneeti API Access" class="md-nav__link">Configure Cloudneeti API Access</a></li><li class="md-nav__item"><a href="../../../administratorGuide/utilizationDashboard/" title="Utilization Dashboard" class="md-nav__link">Utilization Dashboard</a></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9"><label class="md-nav__link" for="nav-9">Remediation</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-9">Remediation</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../../remediation/overview/" title="Overview" class="md-nav__link">Overview</a></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-2" type="checkbox" id="nav-9-2"><label class="md-nav__link" for="nav-9-2">Azure</label><nav class="md-nav" data-md-component="collapsible" data-md-level="2"><label class="md-nav__title" for="nav-9-2">Azure</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../../remediation/azureGuidedRemediation/" title="Guided Remediation" class="md-nav__link">Guided Remediation</a></li><li class="md-nav__item"><a href="../../../remediation/azureAutoRemediation/" title="Auto Remediation" class="md-nav__link">Auto Remediation</a></li><li class="md-nav__item"><a href="../../../remediation/azureDecommissionofRemediation/" title="Decommission of remediation" class="md-nav__link">Decommission of remediation</a></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3" type="checkbox" id="nav-9-3"><label class="md-nav__link" for="nav-9-3">AWS</label><nav class="md-nav" data-md-component="collapsible" data-md-level="2"><label class="md-nav__title" for="nav-9-3">AWS</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../../remediation/awsGuidedRemediation/" title="Guided Remediation" class="md-nav__link">Guided Remediation</a></li><li class="md-nav__item"><a href="../../../remediation/awsRemediation/" title="Auto Remediation" class="md-nav__link">Auto Remediation</a></li><li class="md-nav__item"><a href="../../../remediation/awsDecommissionofRemediation/" title="Decommission Remediation Framework" class="md-nav__link">Decommission Remediation Framework</a></li></ul></nav></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10"><label class="md-nav__link" for="nav-10">Quick wins and OS baseline hardening scripts</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-10">Quick wins and OS baseline hardening scripts</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../../remediation/overviewQuickWins/" title="Overview" class="md-nav__link">Overview</a></li><li class="md-nav__item"><a href="../../../remediation/awsQuickWins/" title="AWS Quick wins" class="md-nav__link">AWS Quick wins</a></li><li class="md-nav__item"><a href="../../../remediation/azureQuickWins/" title="Azure Quick Wins" class="md-nav__link">Azure Quick Wins</a></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-10-4" type="checkbox" id="nav-10-4"><label class="md-nav__link" for="nav-10-4">OS Hardening for Baseline Configuration</label><nav class="md-nav" data-md-component="collapsible" data-md-level="2"><label class="md-nav__title" for="nav-10-4">OS Hardening for Baseline Configuration</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../../remediation/osBaseline/centOSQuickWins/" title="CentOS Linux 7" class="md-nav__link">CentOS Linux 7</a></li><li class="md-nav__item"><a href="../../../remediation/osBaseline/rhelQuickWins/" title="RHEL Linux 7" class="md-nav__link">RHEL Linux 7</a></li><li class="md-nav__item"><a href="../../../remediation/osBaseline/win12QuickWins/" title="Windows Server 2012 R2" class="md-nav__link">Windows Server 2012 R2</a></li><li class="md-nav__item"><a href="../../../remediation/osBaseline/win16QuickWins/" title="Windows Server 2016" class="md-nav__link">Windows Server 2016</a></li><li class="md-nav__item"><a href="../../../remediation/osBaseline/win19QuickWins/" title="Windows Server 2019" class="md-nav__link">Windows Server 2019</a></li></ul></nav></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11"><label class="md-nav__link" for="nav-11">Release Notes</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-11">Release Notes</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../../releaseNotes/2020/" title="Releases in 2020" class="md-nav__link">Releases in 2020</a></li><li class="md-nav__item"><a href="../../../releaseNotes/2019/" title="Releases in 2019" class="md-nav__link">Releases in 2019</a></li></ul></nav></li></ul></nav></div></div></div><div class="md-sidebar md-sidebar--secondary" data-md-component="toc"><div class="md-sidebar__scrollwrap"><div class="md-sidebar__inner"><nav class="md-nav md-nav--secondary"><label class="md-nav__title" for="__toc">In this article</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="#aws" title="AWS" class="md-nav__link">AWS</a></li><li class="md-nav__item"><a href="#azure" title="Azure" class="md-nav__link">Azure</a></li></ul></nav></div></div></div><div class="md-content"><article class="md-content__inner md-typeset"><h1 id="red-hat-enterprise-linux-7">Red Hat Enterprise Linux 7</h1>
+<h2 id="aws">AWS</h2>
+<table>
+<thead>
+<tr>
+<th>Category Name</th>
+<th>Policy Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RHEL 7 - Access, Authentication and Authorization</td>
+<td>RHEL7 - Ensure access to the su command is restricted</td>
+</tr>
+<tr>
+<td>RHEL 7 - Access, Authentication and Authorization</td>
+<td>RHEL7 - Ensure permissions on /etc/crontab are configured</td>
+</tr>
+<tr>
+<td>RHEL 7 - Access, Authentication and Authorization</td>
+<td>RHEL7 - Ensure permissions on /etc/cron.hourly are configured</td>
+</tr>
+<tr>
+<td>RHEL 7 - Access, Authentication and Authorization</td>
+<td>RHEL7 - Ensure permissions on /etc/cron.daily are configured</td>
+</tr>
+<tr>
+<td>RHEL 7 - Access, Authentication and Authorization</td>
+<td>RHEL7 - Ensure permissions on /etc/cron.weekly are configured</td>
+</tr>
+<tr>
+<td>RHEL 7 - Access, Authentication and Authorization</td>
+<td>RHEL7 - Ensure permissions on /etc/cron.monthly are configured</td>
+</tr>
+<tr>
+<td>RHEL 7 - Access, Authentication and Authorization</td>
+<td>RHEL7 - Ensure permissions on /etc/cron.d are configured</td>
+</tr>
+<tr>
+<td>RHEL 7 - Access, Authentication and Authorization</td>
+<td>RHEL7 - Ensure at/cron is restricted to authorized users</td>
+</tr>
+<tr>
+<td>RHEL 7 - Access, Authentication and Authorization</td>
+<td>RHEL7 - Ensure permissions on /etc/ssh/sshd_config are configured</td>
+</tr>
+<tr>
+<td>RHEL 7 - Access, Authentication and Authorization</td>
+<td>RHEL7 - Ensure SSH Protocol is set to 2</td>
+</tr>
+<tr>
+<td>RHEL 7 - Access, Authentication and Authorization</td>
+<td>RHEL7 - Ensure SSH LogLevel is set to INFO</td>
+</tr>
+<tr>
+<td>RHEL 7 - Access, Authentication and Authorization</td>
+<td>RHEL7 - Ensure SSH X11 forwarding is disabled</td>
+</tr>
+<tr>
+<td>RHEL 7 - Access, Authentication and Authorization</td>
+<td>RHEL7 - Ensure SSH MaxAuthTries is set to 4 or less</td>
+</tr>
+<tr>
+<td>RHEL 7 - Access, Authentication and Authorization</td>
+<td>RHEL7 - Ensure SSH IgnoreRhosts is enabled</td>
+</tr>
+<tr>
+<td>RHEL 7 - Access, Authentication and Authorization</td>
+<td>RHEL7 - Ensure SSH HostbasedAuthentication is disabled</td>
+</tr>
+<tr>
+<td>RHEL 7 - Access, Authentication and Authorization</td>
+<td>RHEL7 - Ensure SSH root login is disabled</td>
+</tr>
+<tr>
+<td>RHEL 7 - Access, Authentication and Authorization</td>
+<td>RHEL7 - Ensure SSH PermitEmptyPasswords is disabled</td>
+</tr>
+<tr>
+<td>RHEL 7 - Access, Authentication and Authorization</td>
+<td>RHEL7 - Ensure SSH PermitUserEnvironment is disabled</td>
+</tr>
+<tr>
+<td>RHEL 7 - Access, Authentication and Authorization</td>
+<td>RHEL7 - Ensure only approved MAC algorithms are used</td>
+</tr>
+<tr>
+<td>RHEL 7 - Access, Authentication and Authorization</td>
+<td>RHEL7 - Ensure SSH Idle Timeout Interval is configured</td>
+</tr>
+<tr>
+<td>RHEL 7 - Access, Authentication and Authorization</td>
+<td>RHEL7 - Ensure SSH LoginGraceTime is set to one minute or less</td>
+</tr>
+<tr>
+<td>RHEL 7 - Access, Authentication and Authorization</td>
+<td>RHEL7 - Ensure SSH access is limited</td>
+</tr>
+<tr>
+<td>RHEL 7 - Access, Authentication and Authorization</td>
+<td>RHEL7 - Ensure SSH warning banner is configured</td>
+</tr>
+<tr>
+<td>RHEL 7 - Access, Authentication and Authorization</td>
+<td>RHEL7 - Ensure password creation requirements are configured</td>
+</tr>
+<tr>
+<td>RHEL 7 - Access, Authentication and Authorization</td>
+<td>RHEL7 - Ensure lockout for failed password attempts is configured</td>
+</tr>
+<tr>
+<td>RHEL 7 - Access, Authentication and Authorization</td>
+<td>RHEL7 - Ensure password reuse is limited</td>
+</tr>
+<tr>
+<td>RHEL 7 - Access, Authentication and Authorization</td>
+<td>RHEL7 - Ensure password hashing algorithm is SHA-512</td>
+</tr>
+<tr>
+<td>RHEL 7 - Access, Authentication and Authorization</td>
+<td>RHEL7 - Ensure system accounts are non-login</td>
+</tr>
+<tr>
+<td>RHEL 7 - Access, Authentication and Authorization</td>
+<td>RHEL7 - Ensure default group for the root account is GID 0</td>
+</tr>
+<tr>
+<td>RHEL 7 - Access, Authentication and Authorization</td>
+<td>RHEL7 - Ensure password expiration is 90 days or less</td>
+</tr>
+<tr>
+<td>RHEL 7 - Access, Authentication and Authorization</td>
+<td>RHEL7 - Ensure minimum days between password changes is 7 or more</td>
+</tr>
+<tr>
+<td>RHEL 7 - Access, Authentication and Authorization</td>
+<td>RHEL7 - Ensure password expiration warning days is 7 or more</td>
+</tr>
+<tr>
+<td>RHEL 7 - Access, Authentication and Authorization</td>
+<td>RHEL7 - Ensure inactive password lock is 30 days or less</td>
+</tr>
+<tr>
+<td>RHEL 7 - Access, Authentication and Authorization</td>
+<td>RHEL7 - Ensure all users last password change date is in the past</td>
+</tr>
+<tr>
+<td>RHEL 7 - Access, Authentication and Authorization</td>
+<td>RHEL7 - Ensure default user shell timeout is 900 seconds or less</td>
+</tr>
+<tr>
+<td>RHEL 7 - Initial Setup</td>
+<td>RHEL7 - Ensure updates, patches, and additional security software are installed</td>
+</tr>
+<tr>
+<td>RHEL 7 - Initial Setup</td>
+<td>RHEL7 - Ensure nodev option set on /tmp partition</td>
+</tr>
+<tr>
+<td>RHEL 7 - Initial Setup</td>
+<td>RHEL7 - Ensure nosuid option set on /tmp partition</td>
+</tr>
+<tr>
+<td>RHEL 7 - Initial Setup</td>
+<td>RHEL7 - Ensure noexec option set on /tmp partition</td>
+</tr>
+<tr>
+<td>RHEL 7 - Initial Setup</td>
+<td>RHEL7 - Ensure nodev option set on /var/tmp partition</td>
+</tr>
+<tr>
+<td>RHEL 7 - Initial Setup</td>
+<td>RHEL7 - Ensure nosuid option set on /var/tmp partition</td>
+</tr>
+<tr>
+<td>RHEL 7 - Initial Setup</td>
+<td>RHEL7 - Ensure noexec option set on /var/tmp partition</td>
+</tr>
+<tr>
+<td>RHEL 7 - Initial Setup</td>
+<td>RHEL7 - Ensure nodev option set on /home partition</td>
+</tr>
+<tr>
+<td>RHEL 7 - Initial Setup</td>
+<td>RHEL7 - Ensure nodev option set on /dev/shm partition</td>
+</tr>
+<tr>
+<td>RHEL 7 - Initial Setup</td>
+<td>RHEL7 - Ensure nosuid option set on /dev/shm partition</td>
+</tr>
+<tr>
+<td>RHEL 7 - Initial Setup</td>
+<td>RHEL7 - Ensure noexec option set on /dev/shm partition</td>
+</tr>
+<tr>
+<td>RHEL 7 - Initial Setup</td>
+<td>RHEL7 - Ensure sticky bit is set on all world-writable directories</td>
+</tr>
+<tr>
+<td>RHEL 7 - Initial Setup</td>
+<td>RHEL7 - Ensure mounting of cramfs filesystems is disabled</td>
+</tr>
+<tr>
+<td>RHEL 7 - Initial Setup</td>
+<td>RHEL7 - Ensure mounting of freevxfs filesystems is disabled</td>
+</tr>
+<tr>
+<td>RHEL 7 - Initial Setup</td>
+<td>RHEL7 - Ensure mounting of jffs2 filesystems is disabled</td>
+</tr>
+<tr>
+<td>RHEL 7 - Initial Setup</td>
+<td>RHEL7 - Ensure mounting of hfs filesystems is disabled</td>
+</tr>
+<tr>
+<td>RHEL 7 - Initial Setup</td>
+<td>RHEL7 - Ensure mounting of hfsplus filesystems is disabled</td>
+</tr>
+<tr>
+<td>RHEL 7 - Initial Setup</td>
+<td>RHEL7 - Ensure mounting of squashfs filesystems is disabled</td>
+</tr>
+<tr>
+<td>RHEL 7 - Initial Setup</td>
+<td>RHEL7 - Ensure mounting of udf filesystems is disabled</td>
+</tr>
+<tr>
+<td>RHEL 7 - Initial Setup</td>
+<td>RHEL7 - Ensure gpgcheck is globally activated</td>
+</tr>
+<tr>
+<td>RHEL 7 - Initial Setup</td>
+<td>RHEL7 - Ensure AIDE is installed</td>
+</tr>
+<tr>
+<td>RHEL 7 - Initial Setup</td>
+<td>RHEL7 - Ensure filesystem integrity is regularly checked</td>
+</tr>
+<tr>
+<td>RHEL 7 - Initial Setup</td>
+<td>RHEL7 - Ensure permissions on bootloader config are configured</td>
+</tr>
+<tr>
+<td>RHEL 7 - Initial Setup</td>
+<td>RHEL7 - Ensure bootloader password is set</td>
+</tr>
+<tr>
+<td>RHEL 7 - Initial Setup</td>
+<td>RHEL7 - Ensure authentication required for single user mode</td>
+</tr>
+<tr>
+<td>RHEL 7 - Initial Setup</td>
+<td>RHEL7 - Ensure core dumps are restricted</td>
+</tr>
+<tr>
+<td>RHEL 7 - Initial Setup</td>
+<td>RHEL7 - Ensure XD/NX support is enabled</td>
+</tr>
+<tr>
+<td>RHEL 7 - Initial Setup</td>
+<td>RHEL7 - Ensure address space layout randomization (ASLR) is enabled</td>
+</tr>
+<tr>
+<td>RHEL 7 - Initial Setup</td>
+<td>RHEL7 - Ensure prelink is disabled</td>
+</tr>
+<tr>
+<td>RHEL 7 - Initial Setup</td>
+<td>RHEL7 - Ensure GDM login banner is configured</td>
+</tr>
+<tr>
+<td>RHEL 7 - Initial Setup</td>
+<td>RHEL7 - Ensure message of the day is configured properly</td>
+</tr>
+<tr>
+<td>RHEL 7 - Initial Setup</td>
+<td>RHEL7 - Ensure local login warning banner is configured properly</td>
+</tr>
+<tr>
+<td>RHEL 7 - Initial Setup</td>
+<td>RHEL7 - Ensure remote login warning banner is configured properly</td>
+</tr>
+<tr>
+<td>RHEL 7 - Initial Setup</td>
+<td>RHEL7 - Ensure permissions on /etc/motd are configured</td>
+</tr>
+<tr>
+<td>RHEL 7 - Initial Setup</td>
+<td>RHEL7 - Ensure permissions on /etc/issue are configured</td>
+</tr>
+<tr>
+<td>RHEL 7 - Initial Setup</td>
+<td>RHEL7 - Ensure permissions on /etc/issue.net are configured</td>
+</tr>
+<tr>
+<td>RHEL 7 - Initial Setup</td>
+<td>RHEL7 - Ensure separate partition exists for /tmp</td>
+</tr>
+<tr>
+<td>RHEL 7 - Initial Setup</td>
+<td>RHEL7 - Ensure separate partition exists for /var</td>
+</tr>
+<tr>
+<td>RHEL 7 - Initial Setup</td>
+<td>RHEL7 - Ensure separate partition exists for /var/tmp</td>
+</tr>
+<tr>
+<td>RHEL 7 - Initial Setup</td>
+<td>RHEL7 - Ensure separate partition exists for /var/log</td>
+</tr>
+<tr>
+<td>RHEL 7 - Initial Setup</td>
+<td>RHEL7 - Ensure separate partition exists for /var/log/audit</td>
+</tr>
+<tr>
+<td>RHEL 7 - Initial Setup</td>
+<td>RHEL7 - Ensure separate partition exists for /home</td>
+</tr>
+<tr>
+<td>RHEL 7 - Initial Setup</td>
+<td>RHEL7 - Ensure mounting of FAT filesystems is disabled</td>
+</tr>
+<tr>
+<td>RHEL 7 - Initial Setup</td>
+<td>RHEL7 - Ensure SELinux is installed</td>
+</tr>
+<tr>
+<td>RHEL 7 - Initial Setup</td>
+<td>RHEL7 - Ensure SELinux is not disabled in bootloader configuration</td>
+</tr>
+<tr>
+<td>RHEL 7 - Initial Setup</td>
+<td>RHEL7 - Ensure the SELinux state is enforcing</td>
+</tr>
+<tr>
+<td>RHEL 7 - Initial Setup</td>
+<td>RHEL7 - Ensure SELinux policy is configured</td>
+</tr>
+<tr>
+<td>RHEL 7 - Initial Setup</td>
+<td>RHEL7 - Ensure SETroubleshoot is not installed</td>
+</tr>
+<tr>
+<td>RHEL 7 - Initial Setup</td>
+<td>RHEL7 - Ensure the MCS Translation Service (mcstrans) is not installed</td>
+</tr>
+<tr>
+<td>RHEL 7 - Initial Setup</td>
+<td>RHEL7 - Ensure no unconfined daemons exist</td>
+</tr>
+<tr>
+<td>RHEL 7 - Logging and Auditing</td>
+<td>RHEL7 - Ensure rsyslog or syslog-ng is installed</td>
+</tr>
+<tr>
+<td>RHEL 7 - Logging and Auditing</td>
+<td>RHEL7 - Ensure permissions on all logfiles are configured</td>
+</tr>
+<tr>
+<td>RHEL 7 - Logging and Auditing</td>
+<td>RHEL7 - Ensure rsyslog default file permissions configured</td>
+</tr>
+<tr>
+<td>RHEL 7 - Logging and Auditing</td>
+<td>RHEL7 - Ensure rsyslog is configured to send logs to a remote log host</td>
+</tr>
+<tr>
+<td>RHEL 7 - Logging and Auditing</td>
+<td>RHEL7 - Ensure syslog-ng service is enabled</td>
+</tr>
+<tr>
+<td>RHEL 7 - Logging and Auditing</td>
+<td>RHEL7 - Ensure syslog-ng default file permissions configured</td>
+</tr>
+<tr>
+<td>RHEL 7 - Logging and Auditing</td>
+<td>RHEL7 - Ensure auditing for processes that start prior to auditd is enabled</td>
+</tr>
+<tr>
+<td>RHEL 7 - Logging and Auditing</td>
+<td>RHEL7 - Ensure events that modify date and time information are collected</td>
+</tr>
+<tr>
+<td>RHEL 7 - Logging and Auditing</td>
+<td>RHEL7 - Ensure events that modify user/group information are collected</td>
+</tr>
+<tr>
+<td>RHEL 7 - Logging and Auditing</td>
+<td>RHEL7 - Ensure events that modify the system's network environment are collected</td>
+</tr>
+<tr>
+<td>RHEL 7 - Logging and Auditing</td>
+<td>RHEL7 - Ensure events that modify the system's Mandatory Access Controls are collected</td>
+</tr>
+<tr>
+<td>RHEL 7 - Logging and Auditing</td>
+<td>RHEL7 - Ensure login and logout events are collected</td>
+</tr>
+<tr>
+<td>RHEL 7 - Logging and Auditing</td>
+<td>RHEL7 - Ensure session initiation information is collected</td>
+</tr>
+<tr>
+<td>RHEL 7 - Logging and Auditing</td>
+<td>RHEL7 - Ensure discretionary access control permission modification events are collected</td>
+</tr>
+<tr>
+<td>RHEL 7 - Logging and Auditing</td>
+<td>RHEL7 - Ensure unsuccessful unauthorized file access attempts are collected</td>
+</tr>
+<tr>
+<td>RHEL 7 - Logging and Auditing</td>
+<td>RHEL7 - Ensure use of privileged commands is collected</td>
+</tr>
+<tr>
+<td>RHEL 7 - Logging and Auditing</td>
+<td>RHEL7 - Ensure successful file system mounts are collected</td>
+</tr>
+<tr>
+<td>RHEL 7 - Logging and Auditing</td>
+<td>RHEL7 - Ensure file deletion events by users are collected</td>
+</tr>
+<tr>
+<td>RHEL 7 - Logging and Auditing</td>
+<td>RHEL7 - Ensure system administrator actions (sudolog) are collected</td>
+</tr>
+<tr>
+<td>RHEL 7 - Logging and Auditing</td>
+<td>RHEL7 - Ensure the audit configuration is immutable</td>
+</tr>
+<tr>
+<td>RHEL 7 - Logging and Auditing</td>
+<td>RHEL7 - Ensure audit log storage size is configured</td>
+</tr>
+<tr>
+<td>RHEL 7 - Logging and Auditing</td>
+<td>RHEL7 - Ensure system is disabled when audit logs are full</td>
+</tr>
+<tr>
+<td>RHEL 7 - Logging and Auditing</td>
+<td>RHEL7 - Ensure audit logs are not automatically deleted</td>
+</tr>
+<tr>
+<td>RHEL 7 - Network Configuration</td>
+<td>RHEL7 - Ensure IP forwarding is disabled</td>
+</tr>
+<tr>
+<td>RHEL 7 - Network Configuration</td>
+<td>RHEL7 - Ensure packet redirect sending is disabled</td>
+</tr>
+<tr>
+<td>RHEL 7 - Network Configuration</td>
+<td>RHEL7 - Ensure source routed packets are not accepted</td>
+</tr>
+<tr>
+<td>RHEL 7 - Network Configuration</td>
+<td>RHEL7 - Ensure ICMP redirects are not accepted</td>
+</tr>
+<tr>
+<td>RHEL 7 - Network Configuration</td>
+<td>RHEL7 - Ensure secure ICMP redirects are not accepted</td>
+</tr>
+<tr>
+<td>RHEL 7 - Network Configuration</td>
+<td>RHEL7 - Ensure suspicious packets are logged</td>
+</tr>
+<tr>
+<td>RHEL 7 - Network Configuration</td>
+<td>RHEL7 - Ensure broadcast ICMP requests are ignored</td>
+</tr>
+<tr>
+<td>RHEL 7 - Network Configuration</td>
+<td>RHEL7 - Ensure bogus ICMP responses are ignored</td>
+</tr>
+<tr>
+<td>RHEL 7 - Network Configuration</td>
+<td>RHEL7 - Ensure Reverse Path Filtering is enabled</td>
+</tr>
+<tr>
+<td>RHEL 7 - Network Configuration</td>
+<td>RHEL7 - Ensure TCP SYN Cookies is enabled</td>
+</tr>
+<tr>
+<td>RHEL 7 - Network Configuration</td>
+<td>RHEL7 - Ensure IPv6 router advertisements are not accepted</td>
+</tr>
+<tr>
+<td>RHEL 7 - Network Configuration</td>
+<td>RHEL7 - Ensure IPv6 redirects are not accepted</td>
+</tr>
+<tr>
+<td>RHEL 7 - Network Configuration</td>
+<td>RHEL7 - Ensure IPv6 is disabled</td>
+</tr>
+<tr>
+<td>RHEL 7 - Network Configuration</td>
+<td>RHEL7 - Ensure TCP Wrappers is installed</td>
+</tr>
+<tr>
+<td>RHEL 7 - Network Configuration</td>
+<td>RHEL7 - Ensure /etc/hosts.allow is configured</td>
+</tr>
+<tr>
+<td>RHEL 7 - Network Configuration</td>
+<td>RHEL7 - Ensure /etc/hosts.deny is configured</td>
+</tr>
+<tr>
+<td>RHEL 7 - Network Configuration</td>
+<td>RHEL7 - Ensure permissions on /etc/hosts.allow are configured</td>
+</tr>
+<tr>
+<td>RHEL 7 - Network Configuration</td>
+<td>RHEL7 - Ensure permissions on /etc/hosts.deny are configured</td>
+</tr>
+<tr>
+<td>RHEL 7 - Network Configuration</td>
+<td>RHEL7 - Ensure DCCP is disabled</td>
+</tr>
+<tr>
+<td>RHEL 7 - Network Configuration</td>
+<td>RHEL7 - Ensure SCTP is disabled</td>
+</tr>
+<tr>
+<td>RHEL 7 - Network Configuration</td>
+<td>RHEL7 - Ensure RDS is disabled</td>
+</tr>
+<tr>
+<td>RHEL 7 - Network Configuration</td>
+<td>RHEL7 - Ensure TIPC is disabled</td>
+</tr>
+<tr>
+<td>RHEL 7 - Network Configuration</td>
+<td>RHEL7 - Ensure iptables is installed</td>
+</tr>
+<tr>
+<td>RHEL 7 - Network Configuration</td>
+<td>RHEL7 - Ensure default deny firewall policy</td>
+</tr>
+<tr>
+<td>RHEL 7 - Network Configuration</td>
+<td>RHEL7 - Ensure loopback traffic is configured</td>
+</tr>
+<tr>
+<td>RHEL 7 - Network Configuration</td>
+<td>RHEL7 - Ensure firewall rules exist for all open ports</td>
+</tr>
+<tr>
+<td>RHEL 7 - Services</td>
+<td>RHEL7 - Ensure X Window System is not installed</td>
+</tr>
+<tr>
+<td>RHEL 7 - Services</td>
+<td>RHEL7 - Ensure mail transfer agent is configured for local-only mode</td>
+</tr>
+<tr>
+<td>RHEL 7 - Services</td>
+<td>RHEL7 - Ensure time synchronization is in use</td>
+</tr>
+<tr>
+<td>RHEL 7 - Services</td>
+<td>RHEL7 - Ensure ntp is configured</td>
+</tr>
+<tr>
+<td>RHEL 7 - Services</td>
+<td>RHEL7 - Ensure chrony is configured</td>
+</tr>
+<tr>
+<td>RHEL 7 - Services</td>
+<td>RHEL7 - Ensure NIS Client is not installed</td>
+</tr>
+<tr>
+<td>RHEL 7 - Services</td>
+<td>RHEL7 - Ensure rsh client is not installed</td>
+</tr>
+<tr>
+<td>RHEL 7 - Services</td>
+<td>RHEL7 - Ensure talk client is not installed</td>
+</tr>
+<tr>
+<td>RHEL 7 - Services</td>
+<td>RHEL7 - Ensure telnet client is not installed</td>
+</tr>
+<tr>
+<td>RHEL 7 - Services</td>
+<td>RHEL7 - Ensure LDAP client is not installed</td>
+</tr>
+<tr>
+<td>RHEL 7 - System Maintenance</td>
+<td>RHEL7 - Ensure permissions on /etc/passwd are configured</td>
+</tr>
+<tr>
+<td>RHEL 7 - System Maintenance</td>
+<td>RHEL7 - Ensure permissions on /etc/shadow are configured</td>
+</tr>
+<tr>
+<td>RHEL 7 - System Maintenance</td>
+<td>RHEL7 - Ensure permissions on /etc/group are configured</td>
+</tr>
+<tr>
+<td>RHEL 7 - System Maintenance</td>
+<td>RHEL7 - Ensure permissions on /etc/gshadow are configured</td>
+</tr>
+<tr>
+<td>RHEL 7 - System Maintenance</td>
+<td>RHEL7 - Ensure permissions on /etc/passwd- are configured</td>
+</tr>
+<tr>
+<td>RHEL 7 - System Maintenance</td>
+<td>RHEL7 - Ensure permissions on /etc/shadow- are configured</td>
+</tr>
+<tr>
+<td>RHEL 7 - System Maintenance</td>
+<td>RHEL7 - Ensure permissions on /etc/group- are configured</td>
+</tr>
+<tr>
+<td>RHEL 7 - System Maintenance</td>
+<td>RHEL7 - Ensure permissions on /etc/gshadow- are configured</td>
+</tr>
+<tr>
+<td>RHEL 7 - System Maintenance</td>
+<td>RHEL7 - Ensure no world writable files exist</td>
+</tr>
+<tr>
+<td>RHEL 7 - System Maintenance</td>
+<td>RHEL7 - Ensure no unowned files or directories exist</td>
+</tr>
+<tr>
+<td>RHEL 7 - System Maintenance</td>
+<td>RHEL7 - Ensure no ungrouped files or directories exist</td>
+</tr>
+<tr>
+<td>RHEL 7 - System Maintenance</td>
+<td>RHEL7 - Ensure password fields are not empty</td>
+</tr>
+<tr>
+<td>RHEL 7 - System Maintenance</td>
+<td>RHEL7 - Ensure no legacy "+" entries exist in /etc/passwd</td>
+</tr>
+<tr>
+<td>RHEL 7 - System Maintenance</td>
+<td>RHEL7 - Ensure no legacy "+" entries exist in /etc/shadow</td>
+</tr>
+<tr>
+<td>RHEL 7 - System Maintenance</td>
+<td>RHEL7 - Ensure no legacy "+" entries exist in /etc/group</td>
+</tr>
+<tr>
+<td>RHEL 7 - System Maintenance</td>
+<td>RHEL7 - Ensure root is the only UID 0 account</td>
+</tr>
+<tr>
+<td>RHEL 7 - System Maintenance</td>
+<td>RHEL7 - Ensure root PATH Integrity</td>
+</tr>
+<tr>
+<td>RHEL 7 - System Maintenance</td>
+<td>RHEL7 - Ensure all users' home directories exist</td>
+</tr>
+<tr>
+<td>RHEL 7 - System Maintenance</td>
+<td>RHEL7 - Ensure users' home directories permissions are 750 or more restrictive</td>
+</tr>
+<tr>
+<td>RHEL 7 - System Maintenance</td>
+<td>RHEL7 - Ensure users own their home directories</td>
+</tr>
+<tr>
+<td>RHEL 7 - System Maintenance</td>
+<td>RHEL7 - Ensure users' dot files are not group or world writable</td>
+</tr>
+<tr>
+<td>RHEL 7 - System Maintenance</td>
+<td>RHEL7 - Ensure no users have .forward files</td>
+</tr>
+<tr>
+<td>RHEL 7 - System Maintenance</td>
+<td>RHEL7 - Ensure no users have .netrc files</td>
+</tr>
+<tr>
+<td>RHEL 7 - System Maintenance</td>
+<td>RHEL7 - Ensure users' .netrc Files are not group or world accessible</td>
+</tr>
+<tr>
+<td>RHEL 7 - System Maintenance</td>
+<td>RHEL7 - Ensure no users have .rhosts files</td>
+</tr>
+<tr>
+<td>RHEL 7 - System Maintenance</td>
+<td>RHEL7 - Ensure all groups in /etc/passwd exist in /etc/group</td>
+</tr>
+<tr>
+<td>RHEL 7 - System Maintenance</td>
+<td>RHEL7 - Ensure no duplicate UIDs exist</td>
+</tr>
+<tr>
+<td>RHEL 7 - System Maintenance</td>
+<td>RHEL7 - Ensure no duplicate GIDs exist</td>
+</tr>
+<tr>
+<td>RHEL 7 - System Maintenance</td>
+<td>RHEL7 - Ensure no duplicate user names exist</td>
+</tr>
+<tr>
+<td>RHEL 7 - System Maintenance</td>
+<td>RHEL7 - Ensure no duplicate group names exist</td>
+</tr>
+</tbody>
+</table>
+<h2 id="azure">Azure</h2></article></div></div></main><footer class="md-footer"><div class="md-footer-meta md-typeset"><div class="md-footer-meta__inner md-grid"><div class="md-footer-copyright"><div class="md-footer-copyright__highlight">&copy; 2020 Cloudneeti.All Rights Reserved. | <a href="https://www.cloudneeti.com/privacy-policy-2/" target="_blank"> Privacy Policy</a> | <a href="https://www.cloudneeti.com/terms-of-use/" target="_blank"> Terms of Use</a></div></div></div></div></footer>
+
+</div><script src="../../../assets/javascripts/application.d5a09f94.js"></script><script>app.initialize({version:"1.1.2",url:{base:"../../.."}})</script><script src="../../../javascripts/custom.js"></script></body></html>

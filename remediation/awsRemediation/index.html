@@ -1,0 +1,914 @@
+<!doctype html><html lang="en" class="no-js"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="x-ua-compatible" content="ie=edge"><meta name="description" content="Cloudneeti Documentation"><meta name="author" content="The Cloudneeti Team"><meta name="lang:clipboard.copy" content="Copy to clipboard"><meta name="lang:clipboard.copied" content="Copied to clipboard"><meta name="lang:search.language" content="en"><meta name="lang:search.pipeline.stopwords" content="True"><meta name="lang:search.pipeline.trimmer" content="True"><meta name="lang:search.result.none" content="No matching documents"><meta name="lang:search.result.one" content="1 matching document"><meta name="lang:search.result.other" content="# matching documents"><meta name="lang:search.tokenizer" content="[\s\-]+"><link rel="shortcut icon" href="../../assets/images/favicon.png"><meta name="generator" content="mkdocs-1.1.2, mkdocs-material-4.3.1"><title>Auto Remediation - Documentation</title><link rel="stylesheet" href="../../assets/stylesheets/application.4031d38b.css"><link rel="stylesheet" href="../../assets/stylesheets/application-palette.224b79ff.css"><meta name="theme-color" content=""><script src="../../assets/javascripts/modernizr.74668098.js"></script><link href="https://fonts.gstatic.com" rel="preconnect" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,400i,700|&display=swap"><style>body,input{font-family:"Poppins","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"","Courier New",Courier,monospace}</style><link rel="stylesheet" href="../../assets/fonts/material-icons.css"><link rel="stylesheet" href="../../stylesheets/extra.css"><script>window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-149855644-1", "docs.cloudneeti.com")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })</script><script async src="https://www.google-analytics.com/analytics.js"></script></head><body dir="ltr" data-md-color-primary="cloudneeti" data-md-color-accent="cloudneeti"><svg class="md-svg"><defs></defs></svg> <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off"> <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off"> <label class="md-overlay" data-md-component="overlay" for="__drawer"></label><a href="#auto-remediation-of-aws-resources" tabindex="1" class="md-skip">Skip to content </a><header class="md-header" data-md-component="header"><nav class="md-header-nav md-grid"><div class="md-flex"><div class="md-flex__cell md-flex__cell--shrink"><a href="../.." title="Documentation" class="md-header-nav__button md-logo md-custom-logo"><img src="../../images/logo.png" width="170" height="40"></a></div><div class="md-flex__cell md-flex__cell--shrink"><label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label></div><div class="md-flex__cell md-flex__cell--stretch"><div class="md-flex__ellipsis md-header-nav__title" data-md-component="title"><!--<span class="md-header-nav__topic"><a href="../..">Documentation</a></span><span class="md-header-nav__topic">Auto Remediation</span>--></div></div><div class="md-flex__cell md-flex__cell--shrink"><label class="md-icon md-icon--search md-header-nav__button" for="__search"></label><div class="md-search" data-md-component="search" role="dialog"><label class="md-search__overlay" for="__search"></label><div class="md-search__inner" role="search"><form class="md-search__form" name="search"><input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active"> <label class="md-icon md-search__icon" for="__search"></label> <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">&#xE5CD;</button></form><div class="md-search__output"><div class="md-search__scrollwrap" data-md-scrollfix><div class="md-search-result" data-md-component="result"><div class="md-search-result__meta">Type to start searching</div><ol class="md-search-result__list"></ol></div></div></div></div></div></div></div></nav></header><div class="md-container"><main class="md-main"><div class="md-main__inner md-grid" data-md-component="container"><div class="md-sidebar md-sidebar--primary" data-md-component="navigation"><div class="md-sidebar__scrollwrap"><div class="md-sidebar__inner"><nav class="md-nav md-nav--primary" data-md-level="0"><label class="md-nav__title md-nav__title--site" for="__drawer"><a href="../.." title="Documentation" class="md-nav__button md-logo"><img src="../../images/logo.png" width="48" height="48"></a>Documentation</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1"><label class="md-nav__link" for="nav-1">Introduction</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-1">Introduction</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../gettingStarted/introduction/" title="Getting Started" class="md-nav__link">Getting Started</a></li><li class="md-nav__item"><a href="../../gettingStarted/productFeatures/" title="Product Features" class="md-nav__link">Product Features</a></li><li class="md-nav__item"><a href="../../gettingStarted/howItWorks/" title="How it works" class="md-nav__link">How it works</a></li><li class="md-nav__item"><a href="../../gettingStarted/cloudSecurityBestPractices/" title="Cloud Security Best Practices" class="md-nav__link">Cloud Security Best Practices</a></li><li class="md-nav__item"><a href="../../gettingStarted/deploymentArchitecture/" title="Deployment Architecture" class="md-nav__link">Deployment Architecture</a></li><li class="md-nav__item"><a href="../../gettingStarted/customerDataSecurity/" title="Customer Data Security" class="md-nav__link">Customer Data Security</a></li><li class="md-nav__item"><a href="../../gettingStarted/glossary/" title="Glossary" class="md-nav__link">Glossary</a></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2"><label class="md-nav__link" for="nav-2">Try and Buy</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-2">Try and Buy</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../tryAndBuy/freeTrial/" title="Free Trial" class="md-nav__link">Free Trial</a></li><li class="md-nav__item"><a href="../../tryAndBuy/subscribeOnAzureMarketplace/" title="Buy on Azure Marketplace" class="md-nav__link">Buy on Azure Marketplace</a></li><li class="md-nav__item"><a href="../../tryAndBuy/subscribe/" title="Request a License" class="md-nav__link">Request a License</a></li><li class="md-nav__item"><a href="../../tryAndBuy/partnerCobranding/" title="Partner co-branding" class="md-nav__link">Partner co-branding</a></li><li class="md-nav__item"><a href="../../tryAndBuy/estimatePricing/" title="Estimate Pricing" class="md-nav__link">Estimate Pricing</a></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3"><label class="md-nav__link" for="nav-3">Security Policies</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-3">Security Policies</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../gettingStarted/cloudSecurityBestPractices/" title="Cloud Security Best Practices" class="md-nav__link">Cloud Security Best Practices</a></li><li class="md-nav__item"><a href="../../securityPolicies/awsSecurityPolcies/" title="AWS Security Policies" class="md-nav__link">AWS Security Policies</a></li><li class="md-nav__item"><a href="../../securityPolicies/azureSecurityPolcies/" title="Azure Security Policies" class="md-nav__link">Azure Security Policies</a></li><li class="md-nav__item"><a href="../../securityPolicies/gcp_SecurityPolcies/" title="GCP Security Policies(Preview)" class="md-nav__link">GCP Security Policies(Preview)</a></li><li class="md-nav__item"><a href="../../securityPolicies/office365SecurityPolcies/" title="Office 365 Security Policies" class="md-nav__link">Office 365 Security Policies</a></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-6" type="checkbox" id="nav-3-6"><label class="md-nav__link" for="nav-3-6">OS baselines</label><nav class="md-nav" data-md-component="collapsible" data-md-level="2"><label class="md-nav__title" for="nav-3-6">OS baselines</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../securityPolicies/osBaseline/centOSSecurityPolcies/" title="CentOS" class="md-nav__link">CentOS</a></li><li class="md-nav__item"><a href="../../securityPolicies/osBaseline/rhelSecurityPolcies/" title="RHEL" class="md-nav__link">RHEL</a></li><li class="md-nav__item"><a href="../../securityPolicies/osBaseline/ubuntuSecurityPolcies/" title="Ubuntu 18.04" class="md-nav__link">Ubuntu 18.04</a></li><li class="md-nav__item"><a href="../../securityPolicies/osBaseline/windows12SecurityPolcies/" title="Windows 2012 R2" class="md-nav__link">Windows 2012 R2</a></li><li class="md-nav__item"><a href="../../securityPolicies/osBaseline/windows16SecurityPolcies/" title="Windows 2016" class="md-nav__link">Windows 2016</a></li><li class="md-nav__item"><a href="../../securityPolicies/osBaseline/windows19SecurityPolcies/" title="Windows 2019" class="md-nav__link">Windows 2019</a></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-7" type="checkbox" id="nav-3-7"><label class="md-nav__link" for="nav-3-7">Kubernetes</label><nav class="md-nav" data-md-component="collapsible" data-md-level="2"><label class="md-nav__title" for="nav-3-7">Kubernetes</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../securityPolicies/kubernetes/awsK8SSecurityPolcies/" title="AWS" class="md-nav__link">AWS</a></li><li class="md-nav__item"><a href="../../securityPolicies/kubernetes/azureK8SSecurityPolcies/" title="Azure" class="md-nav__link">Azure</a></li></ul></nav></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4"><label class="md-nav__link" for="nav-4">Compliance Benchmarks</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-4">Compliance Benchmarks</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../complianceBenchmarks/complianceBenchmarks/" title="Benchmarks" class="md-nav__link">Benchmarks</a></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5"><label class="md-nav__link" for="nav-5">Onboarding Guide</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-5">Onboarding Guide</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../onboardingGuide/onboardingGuideOverview/" title="Overview" class="md-nav__link">Overview</a></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-2" type="checkbox" id="nav-5-2"><label class="md-nav__link" for="nav-5-2">Amazon Web Services</label><nav class="md-nav" data-md-component="collapsible" data-md-level="2"><label class="md-nav__title" for="nav-5-2">Amazon Web Services</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../onboardingGuide/amazonWebServiceAccounts/" title="Onboarding steps" class="md-nav__link">Onboarding steps</a></li><li class="md-nav__item"><a href="../../onboardingGuide/awsEnableConfigBasedDataCollection/" title="Enable AWS Config Based Data Collection (optional)" class="md-nav__link">Enable AWS Config Based Data Collection (optional)</a></li><li class="md-nav__item"><a href="../../onboardingGuide/awsVMBaselineConfiguration/" title="OS baseline (optional)" class="md-nav__link">OS baseline (optional)</a></li><li class="md-nav__item"><a href="../../onboardingGuide/awsVulnerabilities/" title="Vulnerability (optional)" class="md-nav__link">Vulnerability (optional)</a></li><li class="md-nav__item"><a href="../../onboardingGuide/configureCloudneetiAgentInEKS/" title="Amazon Elastic Kubernetes Service (Amazon EKS) (optional)" class="md-nav__link">Amazon Elastic Kubernetes Service (Amazon EKS) (optional)</a></li><li class="md-nav__item"><a href="../../onboardingGuide/awsAccountHealthStatus/" title="AWS onboarding health status" class="md-nav__link">AWS onboarding health status</a></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-3" type="checkbox" id="nav-5-3"><label class="md-nav__link" for="nav-5-3">Microsoft Azure</label><nav class="md-nav" data-md-component="collapsible" data-md-level="2"><label class="md-nav__title" for="nav-5-3">Microsoft Azure</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../onboardingGuide/azureSubscriptions/" title="Onboarding steps" class="md-nav__link">Onboarding steps</a></li><li class="md-nav__item"><a href="../../onboardingGuide/grantAccessToAzureSubscriptionAdditionalRoles/" title="Additional roles" class="md-nav__link">Additional roles</a></li><li class="md-nav__item"><a href="../../onboardingGuide/grantAccessToKeyVaults/" title="Key vaults" class="md-nav__link">Key vaults</a></li><li class="md-nav__item"><a href="../../onboardingGuide/azureAdvancedSecurityConfigurations/" title="Advanced security configurations" class="md-nav__link">Advanced security configurations</a></li><li class="md-nav__item"><a href="../../onboardingGuide/enableASCAuditPolicies/" title="Enable ASC audit policies" class="md-nav__link">Enable ASC audit policies</a></li><li class="md-nav__item"><a href="../../onboardingGuide/azureOSBaseline/" title="OS baseline and vulnerability" class="md-nav__link">OS baseline and vulnerability</a></li><li class="md-nav__item"><a href="../../onboardingGuide/azureVulnerability/" title="Vulnerability" class="md-nav__link">Vulnerability</a></li><li class="md-nav__item"><a href="../../onboardingGuide/configureCloudneetiAgentInAKS/" title="Azure Kubernetes Service (AKS)" class="md-nav__link">Azure Kubernetes Service (AKS)</a></li><li class="md-nav__item"><a href="../../onboardingGuide/azureAccountHealthStatus/" title="Azure onboarding health status" class="md-nav__link">Azure onboarding health status</a></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-4" type="checkbox" id="nav-5-4"><label class="md-nav__link" for="nav-5-4">Google Cloud Platform (Preview)</label><nav class="md-nav" data-md-component="collapsible" data-md-level="2"><label class="md-nav__title" for="nav-5-4">Google Cloud Platform (Preview)</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../onboardingGuide/gcpOnboardingOverview/" title="Overview" class="md-nav__link">Overview</a></li><li class="md-nav__item"><a href="../../onboardingGuide/gcpProject/" title="GCP Project" class="md-nav__link">GCP Project</a></li><li class="md-nav__item"><a href="../../onboardingGuide/gcpOrganization/" title="GCP Organization" class="md-nav__link">GCP Organization</a></li><li class="md-nav__item"><a href="../../onboardingGuide/gcpAnnexure/" title="Annexure" class="md-nav__link">Annexure</a></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-5" type="checkbox" id="nav-5-5"><label class="md-nav__link" for="nav-5-5">Office 365</label><nav class="md-nav" data-md-component="collapsible" data-md-level="2"><label class="md-nav__title" for="nav-5-5">Office 365</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../onboardingGuide/office365Subscription/" title="Onboarding steps" class="md-nav__link">Onboarding steps</a></li><li class="md-nav__item"><a href="../../onboardingGuide/office365AccountHealthStatus/" title="Office 365 onboarding health status" class="md-nav__link">Office 365 onboarding health status</a></li><li class="md-nav__item"><a href="../../onboardingGuide/office365AdvanceSecurityConfigurationUpgrade/" title="Upgrade advanced security configurations" class="md-nav__link">Upgrade advanced security configurations</a></li></ul></nav></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6"><label class="md-nav__link" for="nav-6">User Guide</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-6">User Guide</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../gettingStarted/signInAndSignOut/" title="Sign In and Sign Out" class="md-nav__link">Sign In and Sign Out</a></li><li class="md-nav__item"><a href="../../userGuide/userInterface/" title="User Interface" class="md-nav__link">User Interface</a></li><li class="md-nav__item"><a href="../../userGuide/dashboards/" title="Dashboards" class="md-nav__link">Dashboards</a></li><li class="md-nav__item"><a href="../../userGuide/securityPolicies/" title="Security Policies" class="md-nav__link">Security Policies</a></li><li class="md-nav__item"><a href="../../userGuide/complianceBenchmarks/" title="Compliance Benchmarks" class="md-nav__link">Compliance Benchmarks</a></li><li class="md-nav__item"><a href="../../userGuide/reports/" title="Reports" class="md-nav__link">Reports</a></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7"><label class="md-nav__link" for="nav-7">REST APIs</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-7">REST APIs</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../userGuide/restAPIs/" title="Overview" class="md-nav__link">Overview</a></li><li class="md-nav__item"><a href="../../userGuide/apiUserScenarios/" title="API User Scenarios" class="md-nav__link">API User Scenarios</a></li><li class="md-nav__item"><a href="../../userGuide/tokenAPI/" title="Token API" class="md-nav__link">Token API</a></li><li class="md-nav__item"><a href="../../userGuide/getLicenseAccounts/" title="License Accounts API" class="md-nav__link">License Accounts API</a></li><li class="md-nav__item"><a href="../../userGuide/onboardCloudAccount/" title="Onboard cloud account API" class="md-nav__link">Onboard cloud account API</a></li><li class="md-nav__item"><a href="../../userGuide/updateAPIAppAccessScope/" title="Update API app access scope API" class="md-nav__link">Update API app access scope API</a></li><li class="md-nav__item"><a href="../../userGuide/getHealthStatus/" title="Onboarding health status API" class="md-nav__link">Onboarding health status API</a></li><li class="md-nav__item"><a href="../../userGuide/getBenchmarkSummary/" title="Audit summary report API" class="md-nav__link">Audit summary report API</a></li><li class="md-nav__item"><a href="../../userGuide/initiateScanAPI/" title="Initiate scan API" class="md-nav__link">Initiate scan API</a></li><li class="md-nav__item"><a href="../../userGuide/scanStatusAPI/" title="Scan status API" class="md-nav__link">Scan status API</a></li><li class="md-nav__item"><a href="../../userGuide/getSupportedBenchmarks/" title="Get supported benchmarks API" class="md-nav__link">Get supported benchmarks API</a></li><li class="md-nav__item"><a href="../../userGuide/auditReportAPI/" title="Audit report API" class="md-nav__link">Audit report API</a></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8"><label class="md-nav__link" for="nav-8">Administrator Guide</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-8">Administrator Guide</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../administratorGuide/featuresAndQuotas/" title="Features and Quotas" class="md-nav__link">Features and Quotas</a></li><li class="md-nav__item"><a href="../../administratorGuide/manageLicenses/" title="Integrations" class="md-nav__link">Integrations</a></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-3" type="checkbox" id="nav-8-3"><label class="md-nav__link" for="nav-8-3">Incident management</label><nav class="md-nav" data-md-component="collapsible" data-md-level="2"><label class="md-nav__title" for="nav-8-3">Incident management</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../administratorGuide/serviceNowIntegration/" title="Service Now" class="md-nav__link">Service Now</a></li><li class="md-nav__item"><a href="../../administratorGuide/zendeskIntegration/" title="Zendesk" class="md-nav__link">Zendesk</a></li></ul></nav></li><li class="md-nav__item"><a href="../../administratorGuide/azureASCPushIntegration/" title="ASC Push Integration" class="md-nav__link">ASC Push Integration</a></li><li class="md-nav__item"><a href="../../administratorGuide/manageAccounts/" title="Cloud Accounts" class="md-nav__link">Cloud Accounts</a></li><li class="md-nav__item"><a href="../../administratorGuide/manageUsers/" title="Users & Roles" class="md-nav__link">Users & Roles</a></li><li class="md-nav__item"><a href="../../administratorGuide/privateBenchmark/" title="Private Benchmark" class="md-nav__link">Private Benchmark</a></li><li class="md-nav__item"><a href="../../administratorGuide/securityPolicyExclusions/" title="Security Policy Configuration" class="md-nav__link">Security Policy Configuration</a></li><li class="md-nav__item"><a href="../../administratorGuide/overrideSecurityPolicyStatus/" title="Override Security Policy Status" class="md-nav__link">Override Security Policy Status</a></li><li class="md-nav__item"><a href="../../administratorGuide/auditLog/" title="Audit Log" class="md-nav__link">Audit Log</a></li><li class="md-nav__item"><a href="../../administratorGuide/configureCloudneetiAPIAccess/" title="Configure Cloudneeti API Access" class="md-nav__link">Configure Cloudneeti API Access</a></li><li class="md-nav__item"><a href="../../administratorGuide/utilizationDashboard/" title="Utilization Dashboard" class="md-nav__link">Utilization Dashboard</a></li></ul></nav></li><li class="md-nav__item md-nav__item--active md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9" checked><label class="md-nav__link" for="nav-9">Remediation</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-9">Remediation</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../overview/" title="Overview" class="md-nav__link">Overview</a></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-2" type="checkbox" id="nav-9-2"><label class="md-nav__link" for="nav-9-2">Azure</label><nav class="md-nav" data-md-component="collapsible" data-md-level="2"><label class="md-nav__title" for="nav-9-2">Azure</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../azureGuidedRemediation/" title="Guided Remediation" class="md-nav__link">Guided Remediation</a></li><li class="md-nav__item"><a href="../azureAutoRemediation/" title="Auto Remediation" class="md-nav__link">Auto Remediation</a></li><li class="md-nav__item"><a href="../azureDecommissionofRemediation/" title="Decommission of remediation" class="md-nav__link">Decommission of remediation</a></li></ul></nav></li><li class="md-nav__item md-nav__item--active md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3" type="checkbox" id="nav-9-3" checked><label class="md-nav__link" for="nav-9-3">AWS</label><nav class="md-nav" data-md-component="collapsible" data-md-level="2"><label class="md-nav__title" for="nav-9-3">AWS</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../awsGuidedRemediation/" title="Guided Remediation" class="md-nav__link">Guided Remediation</a></li><li class="md-nav__item md-nav__item--active"><input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc"><label class="md-nav__link md-nav__link--active" for="__toc">Auto Remediation</label><a href="./" title="Auto Remediation" class="md-nav__link md-nav__link--active">Auto Remediation</a><nav class="md-nav md-nav--secondary"><label class="md-nav__title" for="__toc">In this article</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="#required-roles" title="Required Roles" class="md-nav__link">Required Roles</a></li><li class="md-nav__item"><a href="#required-permissions" title="Required Permissions" class="md-nav__link">Required Permissions</a></li><li class="md-nav__item"><a href="#workstation-readiness" title="Workstation Readiness" class="md-nav__link">Workstation Readiness</a></li><li class="md-nav__item"><a href="#step-1-provision-remediation-framework-on-same-or-different-aws-account" title="STEP 1: Provision Remediation framework on same or different AWS Account" class="md-nav__link">STEP 1: Provision Remediation framework on same or different AWS Account</a><nav class="md-nav"><ul class="md-nav__list"><li class="md-nav__item"><a href="#11-local-account-remediation" title="1.1 Local Account Remediation" class="md-nav__link">1.1 Local Account Remediation</a></li><li class="md-nav__item"><a href="#12-optional-multi-account-remediation" title="1.2 (Optional) Multi Account Remediation" class="md-nav__link">1.2 (Optional) Multi Account Remediation</a></li></ul></nav></li><li class="md-nav__item"><a href="#step-2-configure-cloud-account-for-remediation" title="STEP 2: Configure Cloud Account for remediation" class="md-nav__link">STEP 2: Configure Cloud Account for remediation</a></li><li class="md-nav__item"><a href="#step-3-configure-policy-remediation" title="STEP 3: Configure policy remediation" class="md-nav__link">STEP 3: Configure policy remediation</a></li><li class="md-nav__item"><a href="#step-4-remediate-non-compliant-resources" title="STEP 4: Remediate non-compliant resources" class="md-nav__link">STEP 4: Remediate non-compliant resources</a><nav class="md-nav"><ul class="md-nav__list"><li class="md-nav__item"><a href="#manually-triggered-for-existing-resources" title="Manually Triggered [for existing resources]" class="md-nav__link">Manually Triggered [for existing resources]</a></li></ul></nav></li><li class="md-nav__item"><a href="#step-5-verify-resource-remediation" title="STEP 5: Verify Resource Remediation" class="md-nav__link">STEP 5: Verify Resource Remediation</a></li><li class="md-nav__item"><a href="#upgrade-of-remediation-framework" title="Upgrade of Remediation framework" class="md-nav__link">Upgrade of Remediation framework</a></li><li class="md-nav__item"><a href="#cloudneeti-remediation-framework" title="Cloudneeti Remediation Framework" class="md-nav__link">Cloudneeti Remediation Framework</a><nav class="md-nav"><ul class="md-nav__list"><li class="md-nav__item"><a href="#local-account-remediation" title="Local Account Remediation" class="md-nav__link">Local Account Remediation</a></li><li class="md-nav__item"><a href="#multi-account-remediation" title="Multi Account Remediation" class="md-nav__link">Multi Account Remediation</a></li></ul></nav></li><li class="md-nav__item"><a href="#annexure" title="Annexure" class="md-nav__link">Annexure</a><nav class="md-nav"><ul class="md-nav__list"><li class="md-nav__item"><a href="#policies-enabled-for-auto-remediation" title="Policies enabled for auto-remediation" class="md-nav__link">Policies enabled for auto-remediation</a></li></ul></nav></li></ul></nav></li><li class="md-nav__item"><a href="../awsDecommissionofRemediation/" title="Decommission Remediation Framework" class="md-nav__link">Decommission Remediation Framework</a></li></ul></nav></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10"><label class="md-nav__link" for="nav-10">Quick wins and OS baseline hardening scripts</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-10">Quick wins and OS baseline hardening scripts</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../overviewQuickWins/" title="Overview" class="md-nav__link">Overview</a></li><li class="md-nav__item"><a href="../awsQuickWins/" title="AWS Quick wins" class="md-nav__link">AWS Quick wins</a></li><li class="md-nav__item"><a href="../azureQuickWins/" title="Azure Quick Wins" class="md-nav__link">Azure Quick Wins</a></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-10-4" type="checkbox" id="nav-10-4"><label class="md-nav__link" for="nav-10-4">OS Hardening for Baseline Configuration</label><nav class="md-nav" data-md-component="collapsible" data-md-level="2"><label class="md-nav__title" for="nav-10-4">OS Hardening for Baseline Configuration</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../osBaseline/centOSQuickWins/" title="CentOS Linux 7" class="md-nav__link">CentOS Linux 7</a></li><li class="md-nav__item"><a href="../osBaseline/rhelQuickWins/" title="RHEL Linux 7" class="md-nav__link">RHEL Linux 7</a></li><li class="md-nav__item"><a href="../osBaseline/win12QuickWins/" title="Windows Server 2012 R2" class="md-nav__link">Windows Server 2012 R2</a></li><li class="md-nav__item"><a href="../osBaseline/win16QuickWins/" title="Windows Server 2016" class="md-nav__link">Windows Server 2016</a></li><li class="md-nav__item"><a href="../osBaseline/win19QuickWins/" title="Windows Server 2019" class="md-nav__link">Windows Server 2019</a></li></ul></nav></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11"><label class="md-nav__link" for="nav-11">Release Notes</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-11">Release Notes</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../releaseNotes/2020/" title="Releases in 2020" class="md-nav__link">Releases in 2020</a></li><li class="md-nav__item"><a href="../../releaseNotes/2019/" title="Releases in 2019" class="md-nav__link">Releases in 2019</a></li></ul></nav></li></ul></nav></div></div></div><div class="md-sidebar md-sidebar--secondary" data-md-component="toc"><div class="md-sidebar__scrollwrap"><div class="md-sidebar__inner"><nav class="md-nav md-nav--secondary"><label class="md-nav__title" for="__toc">In this article</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="#required-roles" title="Required Roles" class="md-nav__link">Required Roles</a></li><li class="md-nav__item"><a href="#required-permissions" title="Required Permissions" class="md-nav__link">Required Permissions</a></li><li class="md-nav__item"><a href="#workstation-readiness" title="Workstation Readiness" class="md-nav__link">Workstation Readiness</a></li><li class="md-nav__item"><a href="#step-1-provision-remediation-framework-on-same-or-different-aws-account" title="STEP 1: Provision Remediation framework on same or different AWS Account" class="md-nav__link">STEP 1: Provision Remediation framework on same or different AWS Account</a><nav class="md-nav"><ul class="md-nav__list"><li class="md-nav__item"><a href="#11-local-account-remediation" title="1.1 Local Account Remediation" class="md-nav__link">1.1 Local Account Remediation</a></li><li class="md-nav__item"><a href="#12-optional-multi-account-remediation" title="1.2 (Optional) Multi Account Remediation" class="md-nav__link">1.2 (Optional) Multi Account Remediation</a></li></ul></nav></li><li class="md-nav__item"><a href="#step-2-configure-cloud-account-for-remediation" title="STEP 2: Configure Cloud Account for remediation" class="md-nav__link">STEP 2: Configure Cloud Account for remediation</a></li><li class="md-nav__item"><a href="#step-3-configure-policy-remediation" title="STEP 3: Configure policy remediation" class="md-nav__link">STEP 3: Configure policy remediation</a></li><li class="md-nav__item"><a href="#step-4-remediate-non-compliant-resources" title="STEP 4: Remediate non-compliant resources" class="md-nav__link">STEP 4: Remediate non-compliant resources</a><nav class="md-nav"><ul class="md-nav__list"><li class="md-nav__item"><a href="#manually-triggered-for-existing-resources" title="Manually Triggered [for existing resources]" class="md-nav__link">Manually Triggered [for existing resources]</a></li></ul></nav></li><li class="md-nav__item"><a href="#step-5-verify-resource-remediation" title="STEP 5: Verify Resource Remediation" class="md-nav__link">STEP 5: Verify Resource Remediation</a></li><li class="md-nav__item"><a href="#upgrade-of-remediation-framework" title="Upgrade of Remediation framework" class="md-nav__link">Upgrade of Remediation framework</a></li><li class="md-nav__item"><a href="#cloudneeti-remediation-framework" title="Cloudneeti Remediation Framework" class="md-nav__link">Cloudneeti Remediation Framework</a><nav class="md-nav"><ul class="md-nav__list"><li class="md-nav__item"><a href="#local-account-remediation" title="Local Account Remediation" class="md-nav__link">Local Account Remediation</a></li><li class="md-nav__item"><a href="#multi-account-remediation" title="Multi Account Remediation" class="md-nav__link">Multi Account Remediation</a></li></ul></nav></li><li class="md-nav__item"><a href="#annexure" title="Annexure" class="md-nav__link">Annexure</a><nav class="md-nav"><ul class="md-nav__list"><li class="md-nav__item"><a href="#policies-enabled-for-auto-remediation" title="Policies enabled for auto-remediation" class="md-nav__link">Policies enabled for auto-remediation</a></li></ul></nav></li></ul></nav></div></div></div><div class="md-content"><article class="md-content__inner md-typeset"><h1 id="auto-remediation-of-aws-resources">Auto Remediation of AWS Resources</h1>
+<p>Resources that are non-compliant to a security policy can be put into a
+compliant state through Remediation. Remediation is accomplished by instructing
+Security Policy to update the configuration of your existing resources and is
+effective for new resource deployment. This article shows the steps needed to
+understand and accomplish remediation with Cloudneeti Remediation.The following
+steps are required to onboard Microsoft Azure to the Cloudneeti application.</p>
+<p><img alt="Remediation of AWS Resources" src="../../images/cloudneetiRemediation/AWS_Remediation1.png#thumbnail_1" /></p>
+<ol>
+<li>
+<p><strong>Deploy the Cloudneeti remediation framework on AWS account</strong> includes
+    provisioning remediation framework. Cloudneeti remediation framework has
+    in-built capability to automatically remediate the non-compliant resources.
+    Once remediation policies are enabled in Cloudneeti, the new resources get
+    automatically remediated in near real time</p>
+</li>
+<li>
+<p><strong>Configure Cloud Account for remediation</strong> includes enabling Cloud Account
+    remediation and linking Cloudneeti Remediation framework deployed AWS
+    account.</p>
+</li>
+<li>
+<p><strong>Configure Policy Remediation</strong> includes configuring security policies in
+    the respective cloud account.</p>
+</li>
+<li>
+<p><strong>Initiate Remediation</strong> includes triggering remediation feature to
+    remediate resources that are non-compliant to a security policy.</p>
+</li>
+<li>
+<p><strong>Verify results</strong> includes verifying policy result post next data scan on
+    Cloudneeti.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Step</strong></th>
+<th><strong>Product</strong></th>
+<th><strong>Role</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Deploy the Cloudneeti remediation framework on AWS account</td>
+<td>AWS Console</td>
+<td>AWS Account Admin</td>
+</tr>
+<tr>
+<td>Configure Cloud Account for remediation</td>
+<td>Cloudneeti</td>
+<td>License Admin</td>
+</tr>
+<tr>
+<td>Configure Policy Remediation</td>
+<td>Cloudneeti</td>
+<td>License Admin</td>
+</tr>
+<tr>
+<td>Initiate Remediation</td>
+<td>Cloudneeti</td>
+<td>License Admin</td>
+</tr>
+<tr>
+<td>Verify results</td>
+<td>Cloudneeti</td>
+<td>License Admin</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<h2 id="required-roles">Required Roles</h2>
+<p>One or more people with the following roles are required to complete Microsoft
+Azure onboarding process.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Pre-requisite Role</strong></th>
+<th><strong>Portal to use</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>License Admin</td>
+<td>Cloudneeti application</td>
+</tr>
+<tr>
+<td>AWS Account Admin</td>
+<td>AWS Console</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>Enabling policy remediation and initializing remediation requires the logged
+    in user to be assigned the <strong>License Admin</strong> role in the Cloudneeti
+    application.</p>
+</li>
+<li>
+<p><strong>AWS Account Admin</strong> role is required for provisioning the required roles and remediation framework.</p>
+</li>
+</ul>
+<h2 id="required-permissions">Required Permissions</h2>
+<p>Cloudneeti AWS account requires the invoke lambda function permission to invoke
+the remediation actions.</p>
+<p>The same role is used by the AWS account to be remediated on remediation
+framework for auto-remediation purpose in multi account remediation.</p>
+<p>Remediation framework will require the below role and actions to perform the
+remediation action. This role will gets updated upon new remediation policy
+additions in remediation framework.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Information</strong></th>
+<th><strong>Portal to use</strong></th>
+<th><strong>Role</strong></th>
+<th><strong>Step</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cloudneeti AWS Account</td>
+<td>AWS Console</td>
+<td>CN-Remediation-Invocation-Role</td>
+<td>STEP 3</td>
+</tr>
+<tr>
+<td>Remediation Framework</td>
+<td>AWS Console</td>
+<td>CN-Auto-Remediation-Role</td>
+<td>STEP 1</td>
+</tr>
+<tr>
+<td>Remediation Framework</td>
+<td>AWS Console</td>
+<td>CN-Auto-Remediation-Invoker</td>
+<td>STEP 1</td>
+</tr>
+</tbody>
+</table>
+<h2 id="workstation-readiness">Workstation Readiness</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Activity</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Workstation:</strong> Install Bash</td>
+<td>Either a Linux workstation or Windows Subsystem for Linux can be used.</td>
+</tr>
+<tr>
+<td><strong>Workstation:</strong> Install AWS Command Line Interface</td>
+<td>To install AWS cli follow <a href="https://docs.aws.amazon.com/cli/latest/userguide/install-windows.html" target="_blank">link</a> <strong>AWS Command Line</strong> Interface (CLI) is a unified tool to manage your AWS services.</td>
+</tr>
+<tr>
+<td><strong>Workstation:</strong> Install Nodejs</td>
+<td>Download latest stable version of nodejs from <a href="https://nodejs.org/en/" target="_blank">here</a> and install on the workstation.</td>
+</tr>
+<tr>
+<td><strong>Workstation:</strong> Install serverless npm module</td>
+<td>Serverless Framework is a CLI tool to manage AWS deployments. Execute below command to install serverless module, # npm install –g serverless</td>
+</tr>
+<tr>
+<td><strong>Workstation:</strong> Install JQ for bash terminal</td>
+<td>Download latest stable version of JQ from <a href="https://stedolan.github.io/jq/" target="_blank">here</a> and install on the workstation</td>
+</tr>
+</tbody>
+</table>
+<h2 id="step-1-provision-remediation-framework-on-same-or-different-aws-account">STEP 1: Provision Remediation framework on same or different AWS Account</h2>
+<h3 id="11-local-account-remediation">1.1 Local Account Remediation</h3>
+<ol>
+<li>
+<p>Open bash terminal</p>
+</li>
+<li>
+<p>Download and Unzip latest package from <a href="https://github.com/Cloudneeti/aws-auto-remediation/releases" target="_blank">git</a></p>
+</li>
+<li>
+<p>Go to remediation framework repository</p>
+<pre><code>cd aws-auto-remediation
+</code></pre>
+</li>
+<li>
+<p>Configure AWS account where remediation framework is to be deployed</p>
+<pre><code>aws configure
+</code></pre>
+</li>
+<li>
+<p>Deploy remediation framework in AWS account which need to be remediated.</p>
+<pre><code>bash deploy-remediation-framework.sh -a &lt;AWS-acount-id&gt; -p &lt;primary-deployment-region&gt; -e &lt;Cloudneeti-environment-prefix&gt; -v 2.0 -s &lt;list of regions where auto-remediation is to be enabled&gt;
+</code></pre>
+<p>(-a) Account Id: 12-digit AWS account Id of the account where you want the remediation framework to be deployed</p>
+<p>(-p) Primary AWS Region where main framework will be deployed</p>
+<p>(-e) Environment prefix: Enter any suitable prefix for your deployment</p>
+<p>(-v) Version: Enter the remediation framework version (Would be provided by Cloudneeti)</p>
+<p>(-s) Secondary Region(s): List of Region(s) where auto-remediation is to be
+enabled it should be in programmatic format e.g. us-east-1 or you can
+provide ‘all’ for all regions deployment or ‘na’ if you do not want to
+configure auto-remediation in other regions.</p>
+</li>
+<li>
+<p>Verify the Remediation framework deployment. Run the below commands to validate remediation
+    framework deployments and necessary permissions.</p>
+<pre><code>bash verify-remediation-setup.sh -a &lt;AWS-account-id&gt; -p &lt;primary-deployment-region&gt; -e &lt;environment-prefix&gt; -s &lt;list of regions where auto-remediation is to be verified&gt;
+</code></pre>
+<p>(-a) Account Id: 12-digit AWS account Id of the account for which you want
+to verify if remediation framework is deployed or not.</p>
+<p>(-p) Primary AWS Region where main framework is be deployed</p>
+<p>(-e) Environment prefix: Enter any suitable prefix for your deployment</p>
+<p>(-s) Secondary Region(s): List of Region(s) where auto-remediation is to be
+verified it should be in programmatic format e.g. us-east-1 or you can
+provide ‘all’ for all regions verification or ‘na’ if you do not want to
+verify regions where auto-remediation is enabled or not.</p>
+</li>
+</ol>
+<h3 id="12-optional-multi-account-remediation">1.2 (Optional) Multi Account Remediation</h3>
+<ol>
+<li>
+<p>Open bash terminal</p>
+</li>
+<li>
+<p>Clone the aws-remediation framework from the git</p>
+<pre><code>git clone https://github.com/Cloudneeti/aws-auto-remediation
+</code></pre>
+</li>
+<li>
+<p>Go to remediation framework repository</p>
+<pre><code>cd aws-auto-remediation
+</code></pre>
+</li>
+<li>
+<p>Configure remediation framework</p>
+<p>a. Configure AWS account where remediation framework is to be deployed, using below command.</p>
+<pre><code>aws configure
+</code></pre>
+<p>b. Deploy remediation framework in AWS account which will be used as the remediator in multi-mode: </p>
+<p>This step is optional if framework is already provisioned using <a href=".././awsRemediation/#11-local-account-remediation">step 1.1</a></p>
+<pre><code>bash deploy-remediation-framework.sh -a &lt;AWS-account-id&gt; -p &lt;primary-deployment-region&gt; -e &lt;Cloudneeti-environment-prefix&gt; -v &lt;2.0&gt; -s &lt;list of regions where auto-remediation is to be enabled&gt;
+</code></pre>
+<p>(-a) Account Id: 12-digit AWS account Id of the account where you want the
+remediation framework to be deployed</p>
+<p>(-p) Primary AWS Region where main framework will be deployed</p>
+<p>(-e) Environment prefix: Enter any suitable prefix for your deployment</p>
+<p>(-v) Version: Enter the remediation framework version (Would be provided by
+Cloudneeti)</p>
+<p>(-s) Secondary Region(s): List of Region(s) where auto-remediation is to be
+enabled it should be in programmatic format e.g. us-east-1 or you can
+provide ‘all’ for all regions deployment or ‘na’ if you do not want to
+configure auto-remediation in other regions.</p>
+<p>c. Update the role in the account with the remediation framework so that it is aware of the new account that is/ will be added for remediation. (Make sure you have configured the account with the       remediation framework until this step using “aws configure”)</p>
+<pre><code>bash update-remediation-role.sh -r &lt;AWS-account-id&gt; -a &lt;AWS-account-id&gt;
+</code></pre>
+<p>(-r) Remediation Account Id: 12-digit AWS account Id of the account where the remediation framework is deployed</p>
+<p>(-a) New AWS Account Id: 12-digit AWS Account Id of the account which is newly added to use the remediation framework</p>
+</li>
+<li>
+<p>Configure AWS account to be remediated</p>
+<p>a.  Go to multi-mode remediation framework repository</p>
+<pre><code>cd aws-auto-remediation\multi-mode-remediation
+</code></pre>
+<p>b.  Execute below command to configure your aws account and region where remediation is to be enabled</p>
+<p><strong>Region</strong> should be same as primary region of remediation framework provisioned in <a href=".././awsRemediation/#11-local-account-remediation">step 1.1</a> or <a href=".././awsRemediation/#12-optional-multi-account-remediation">step 1.2</a></p>
+<pre><code>aws configure
+</code></pre>
+<p>c.  Deploy automatic remediation invoker resources and associated role on AWS account which is to be remediated.</p>
+<pre><code>bash configure-multi-mode-remediation.sh -a &lt;AWS-account-id&gt; -r &lt;AWS-account-id&gt; -p &lt;primary-deployment-region&gt; -e &lt;Cloudneeti-environment-prefix&gt; -v &lt;2.0&gt; -s &lt;list of regions where auto-remediation is to be enabled&gt;
+</code></pre>
+<p>(-a) Account Id: 12-digit AWS account Id of the account for which you want
+to enable the remediation</p>
+<p>(-r) Remediation Account Id: 12-digit AWS account Id of the account where
+the remediation framework is deployed.</p>
+<p>(-p) Primary AWS Region where main framework will be deployed</p>
+<p>(-e) Environment prefix: Enter any suitable prefix for your deployment</p>
+<p>(-v) Version: Enter the remediation framework version (Would be provided by
+Cloudneeti)</p>
+<p>(-s) Secondary Region(s): List of Region(s) where auto-remediation is to be
+enabled it should be in programmatic format e.g us-east-1 or you can provide
+‘all’ for all regions deployment or ‘na’ if you do not want to configure
+auto-remediation in other regions.</p>
+</li>
+<li>
+<p>Verify the Remediation framework deployment. After deployment of remediation
+    invoker resources on AWS account which is to be remediate, run the below
+    commands to validate remediation invoker resources along with necessary
+    permissions along with remediation framework.</p>
+<pre><code>bash verify-multi-mode-remediation-setup.sh -a &lt;AWS-account-id&gt; -r &lt;AWS-account-id&gt; -p &lt;primary-deployment-region&gt; -e &lt;environment-prefix&gt; -s &lt;list of regions where auto-remediation is to be verified&gt;
+</code></pre>
+<p>(-a) New AWS Account Id: 12-digit AWS Account Id of the account which is newly added to use the remediation framework. </p>
+<p>(-r) Remediation Account Id: 12-digit AWS account Id of the account where the remediation framework is deployed</p>
+<p>(-p) Primary AWS Region where main framework will be deployed</p>
+<p>(-e) Environment prefix: Enter any suitable prefix for your deployment</p>
+<p>(-s) Secondary Region(s): List of Region(s) where auto-remediation is to be
+verified it should be in programmatic format e.g. us-east-1 or you can
+provide ‘all’ for all regions verification or ‘na’ if you do not want to
+verify regions where auto-remediation is enabled or not.</p>
+</li>
+</ol>
+<h2 id="step-2-configure-cloud-account-for-remediation">STEP 2: Configure Cloud Account for remediation</h2>
+<p>Login to Cloudneeti portal with <strong>License Admin</strong> role</p>
+<ol>
+<li>
+<p>Select desired <strong>License</strong> (1) and <strong>Cloud Account</strong> (2)</p>
+</li>
+<li>
+<p>Click <strong>Configure</strong></p>
+</li>
+<li>
+<p>Select <strong>Configure Account Remediation</strong></p>
+<p><img alt="STEP 2: Configure Cloud Account for remediation " src="../../images/cloudneetiRemediation/AWS_RemediationStep2.1.png#thumbnail_1" /></p>
+</li>
+<li>
+<p><strong>Enable</strong> remediation (1)</p>
+</li>
+<li>
+<p>Enter the AWS account id (2)</p>
+<p>This can be same as AWS account or different account id where Cloudneeti remediation framework is deployed.</p>
+</li>
+<li>
+<p><strong>Save</strong> (3)</p>
+<p>This will validate Cloudneeti Remediation framework on given AWS account and enable remediation on success.</p>
+<p><img alt="STEP 2: Configure Cloud Account for remediation " src="../../images/cloudneetiRemediation/AWS_RemediationStep2.2.png#thumbnail_1" /></p>
+</li>
+</ol>
+<p><strong>Note:</strong></p>
+<p>In case of invalid remediation account id, missing remediation framework or
+roles on the provided remediation account id, Cloudneeti displays the error
+message.</p>
+<p>Configured email ids will receive an email with details and steps for fixing
+the issues, once fixed please repeat above steps to enable* <a href="#_STEP_2:_Configure">Cloud Account
+Remediation</a>.</p>
+<h2 id="step-3-configure-policy-remediation">STEP 3: Configure policy remediation</h2>
+<p>Login to Cloudneeti portal with <strong>License Admin</strong> role</p>
+<ol>
+<li>
+<p>Select desired <strong>License</strong> (1) and <strong>Cloud Account</strong> (2)</p>
+</li>
+<li>
+<p>Navigate to <strong>Configurations</strong> (3) and <strong>Security Policies</strong> (4)</p>
+</li>
+<li>
+<p>Select <strong>Account Level</strong> (5)</p>
+</li>
+<li>
+<p>Select <strong>Remediation available</strong> in filter (6)</p>
+</li>
+<li>
+<p><strong>Enable</strong> policies for remediation (7)</p>
+</li>
+<li>
+<p>Click <strong>Save</strong> (8)</p>
+<p><img alt="STEP 3: Configure policy remediation " src="../../images/cloudneetiRemediation/AWS_RemediationStep3.2.png#thumbnail_1" /></p>
+</li>
+<li>
+<p>Confirm by hitting “Yes Please” on confirmation message box.</p>
+<p><img alt="STEP 3: Configure policy remediation " src="../../images/cloudneetiRemediation/AWS_RemediationStep3.3.png#thumbnail_1" /></p>
+</li>
+</ol>
+<h2 id="step-4-remediate-non-compliant-resources">STEP 4: Remediate non-compliant resources</h2>
+<p>Cloudneeti supports two ways to remediate non-compliant resources.</p>
+<p><strong>Manually Triggered [for existing resources]</strong> - To remediate all the existing
+non-compliant resources, follow below procedure.</p>
+<p><strong>Auto Remediation [for new resources] -</strong> Cloudneeti remediation framework has
+in-built capability to automatically remediate the non-compliant resources. Once
+the remediation policies are enabled in Cloudneeti, the new resources get
+automatically remediated in near real time.</p>
+<h3 id="manually-triggered-for-existing-resources">Manually Triggered [for existing resources]</h3>
+<p>Login to Cloudneeti portal with <strong>License Admin</strong> role</p>
+<ol>
+<li>
+<p>Select desired <strong>License</strong> (1) and <strong>Cloud Account</strong> (2)</p>
+</li>
+<li>
+<p>Click <strong>Cloud Security Best Practices</strong> (3)</p>
+</li>
+<li>
+<p>Click <strong>Remediate</strong> (4)</p>
+<p><img alt="STEP 4: Remediate non-compliant resources " src="../../images/cloudneetiRemediation/AWS_RemediationStep4.1.png#thumbnail_1" /></p>
+</li>
+<li>
+<p>All remediation enabled policies will appear. If the selection checkbox is
+    disable state please check all prerequisites are met.</p>
+</li>
+<li>
+<p>Select desired <strong>policy/policies</strong> (1)</p>
+</li>
+<li>
+<p>Click <strong>Remediate Now</strong> (2)</p>
+<p><img alt="STEP 4: Remediate non-compliant resources " src="../../images/cloudneetiRemediation/AWS_RemediationStep4.2.png#thumbnail_1" /></p>
+</li>
+<li>
+<p>Remediation will change the configuration for resources to make them compliant with the policy with deploy if not exist.</p>
+<p><img alt="STEP 4: Remediate non-compliant resources " src="../../images/cloudneetiRemediation/AWS_RemediationStep4.3.png#thumbnail_1" /></p>
+</li>
+</ol>
+<h2 id="step-5-verify-resource-remediation">STEP 5: Verify Resource Remediation</h2>
+<p>On remediation of non-compliant resources using manually triggered or
+auto-remediation will not show the updated resource configuration in Cloudneeti
+immediately. Verification of latest resource configurations can be done after
+next scan in the Cloudneeti portal. To get the latest configuration perform an
+on-demand re-scan the in Cloudneeti portal using below steps,</p>
+<p>Login to Cloudneeti portal with <strong>License Admin</strong> role</p>
+<ol>
+<li>
+<p>Select desired <strong>License</strong> (1) and <strong>Cloud Account</strong> (2)</p>
+</li>
+<li>
+<p>Click <strong>Configure</strong> (3)</p>
+</li>
+<li>
+<p>Select <strong>re-scan (4)</strong></p>
+<p><img alt="STEP 5: Verify Resource Remediation" src="../../images/cloudneetiRemediation/AWS_RemediationStep5.1.png#thumbnail_1" /></p>
+</li>
+<li>
+<p>It will take a few minutes to scan and process data. On Dashboards <strong>Last Scanned On</strong> will be updated once data scan and processing done.</p>
+</li>
+<li>
+<p>Verify data on <strong>Dashboard</strong></p>
+<p><img alt="STEP 5: Verify Resource Remediation" src="../../images/cloudneetiRemediation/AWS_RemediationStep5.2.png#thumbnail_1" /></p>
+</li>
+</ol>
+<h2 id="upgrade-of-remediation-framework">Upgrade of Remediation framework</h2>
+<p>Cloudneeti periodically releases new sets of remediation policies to the customer. To use the latest remediation policies, customer needs to upgrade their AWS remediation framework. Cloudneeti will notify customers whenever new version of remediation framework gets release.
+To upgrade the remediation framework, you need to use the deployment commands as it is with the same input parameters.</p>
+<h2 id="cloudneeti-remediation-framework">Cloudneeti Remediation Framework</h2>
+<h3 id="local-account-remediation">Local Account Remediation</h3>
+<p>The remediation framework uses CloudTrail, CloudWatch event rules, the remediation lambda functions, Invoker lambda function in multiple regions, and the appropriate IAM roles.</p>
+<p><img alt="Local Account Remediation" src="../../images/cloudneetiRemediation/AWS_RemediationLocal1.png#thumbnail_1" /></p>
+<ol>
+<li>
+<p>AWS account administrator creates/updates/reconfigure resources in aws account</p>
+</li>
+<li>
+<p>CloudTrail and CloudWatch event bus collects the events occurred in AWS account and trigger appropriate event rule</p>
+</li>
+<li>
+<p>CloudWatch event rule trigger the auto-remediation invoker in near real-time in its region</p>
+</li>
+<li>
+<p>From different aws region Auto-remediation-invoker lambda calls the orchestrator which then call appropriate remediation functions present in the remediation framework</p>
+</li>
+<li>
+<p>Remediation functions setup required security configuration on the resources</p>
+</li>
+</ol>
+<h3 id="multi-account-remediation">Multi Account Remediation</h3>
+<p><img alt="Multi Account Remediation" src="../../images/cloudneetiRemediation/AWS_RemediationMulti.png#thumbnail_1" /></p>
+<h2 id="annexure">Annexure</h2>
+<h3 id="policies-enabled-for-auto-remediation">Policies enabled for auto-remediation</h3>
+<p>Remediation lambda functions are assigned with permissions listed as per policies for related AWS services.</p>
+<table>
+<thead>
+<tr>
+<th>Category_Name</th>
+<th>Policy_Title</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AWS - Identity and Access Management</td>
+<td>Ensure IAM password policy requires at least one uppercase letter</td>
+</tr>
+<tr>
+<td>AWS - Identity and Access Management</td>
+<td>Ensure IAM password policy require at least one lowercase letter</td>
+</tr>
+<tr>
+<td>AWS - Identity and Access Management</td>
+<td>Ensure IAM password policy require at least one symbol</td>
+</tr>
+<tr>
+<td>AWS - Identity and Access Management</td>
+<td>Ensure IAM password policy require at least one number</td>
+</tr>
+<tr>
+<td>AWS - Identity and Access Management</td>
+<td>Ensure IAM password policy requires minimum length of 14 or greater</td>
+</tr>
+<tr>
+<td>AWS - Identity and Access Management</td>
+<td>Ensure IAM password policy prevents password reuse</td>
+</tr>
+<tr>
+<td>AWS - Identity and Access Management</td>
+<td>Ensure IAM password policy expires passwords within 90 days or less</td>
+</tr>
+<tr>
+<td>AWS - Identity and Access Management</td>
+<td>Ensure IAM Database Authentication feature is enabled for Amazon Neptune clusters</td>
+</tr>
+<tr>
+<td>AWS - Identity and Access Management</td>
+<td>Ensure IAM Database Authentication feature is enabled for RDS PostgreSQL Instances</td>
+</tr>
+<tr>
+<td>AWS - Identity and Access Management</td>
+<td>Ensure IAM Database Authentication feature is enabled for RDS Aurora Cluster</td>
+</tr>
+<tr>
+<td>AWS - Identity and Access Management</td>
+<td>Ensure that Amazon RDS database snapshots are not accessible to all AWS accounts</td>
+</tr>
+<tr>
+<td>AWS - Identity and Access Management</td>
+<td>Ensure IAM Database Authentication feature is enabled for RDS MySQL Instances</td>
+</tr>
+<tr>
+<td>AWS - Audit and Logging</td>
+<td>Ensure CloudTrail is enabled in all regions</td>
+</tr>
+<tr>
+<td>AWS - Audit and Logging</td>
+<td>Ensure CloudTrail log file validation is enabled</td>
+</tr>
+<tr>
+<td>AWS - Audit and Logging</td>
+<td>Ensure Log Exports feature is enabled for RDS Aurora MySQL Serverless Cluster</td>
+</tr>
+<tr>
+<td>AWS - Audit and Logging</td>
+<td>Ensure Log Exports feature is enabled for RDS MySQL Instance</td>
+</tr>
+<tr>
+<td>AWS - Audit and Logging</td>
+<td>Ensure Log Exports feature is enabled for RDS Mariadb Instance</td>
+</tr>
+<tr>
+<td>AWS - Audit and Logging</td>
+<td>Ensure Log Exports feature is enabled for Aurora cluster</td>
+</tr>
+<tr>
+<td>AWS - Audit and Logging</td>
+<td>Ensure Log Exports feature is enabled for Oracle instances</td>
+</tr>
+<tr>
+<td>AWS - Audit and Logging</td>
+<td>Ensure that CloudTrail trail have logging enabled</td>
+</tr>
+<tr>
+<td>AWS - Monitoring</td>
+<td>Ensure that S3 buckets are not publicly accessible</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>Ensure Deletion Protection feature is enabled for your AWS Application load balancers to follow security best practices</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>Ensure Deletion Protection feature is enabled for your AWS Network load balancers to follow security best practices</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>Ensure Connection Draining is enabled for your AWS Classic Load Balancer</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>Ensure that public access is not given to RDS PostgreSQL Instance</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>Ensure that public access is not given to RDS MariaDB Instance</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>Ensure that public access is not given to RDS Oracle Instances</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>Ensure that public access is not given to RDS SQL Server Instances</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>Ensure that public access is not given to RDS Aurora SQL Instances</td>
+</tr>
+<tr>
+<td>AWS - Networking</td>
+<td>Ensure that public access is not given to RDS MySQL Instance</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Ensure that Server-Side Encryption is enabled for Amazon SQS queues</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Ensure Deletion Protection feature is enabled for RDS PostgreSQL Instances</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Ensure Performance Insights feature is enabled for RDS PostgreSQL Instances</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Ensure Deletion Protection feature is enabled for RDS MariaDB Instances</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Ensure Performance Insights feature is enabled for RDS MariaDB Instances</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Ensure that Deletion Protection feature is enabled for RDS Aurora Cluster</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Ensure Deletion Protection feature is enabled for RDS Oracle Instances</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Ensure Performance Insights feature is enabled for RDS Oracle Instances</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Ensure Deletion Protection feature is enabled for RDS SQL Server Instances</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Ensure Performance Insights feature is enabled for RDS SQL Server Instances</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Ensure Performance Insights feature is enabled for Aurora SQL Instances</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Ensure that Deletion Protection feature is enabled for RDS Aurora MySQL Serverless Cluster</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Ensure that Deletion Protection feature is enabled for RDS Aurora PostgreSQL Serverless Cluster</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Ensure that latest block encryption algorithms is used for RDS MySQL Instance</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Ensure to enable FIPS standards on the server side for RDS MySQL Instance</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Ensure Deletion Protection feature is enabled for RDS MySQL Instances</td>
+</tr>
+<tr>
+<td>AWS - Data Protection</td>
+<td>Ensure Performance Insights feature is enabled for RDS MySQL Instances</td>
+</tr>
+<tr>
+<td>AWS - Business Continuity</td>
+<td>Ensure S3 buckets have versioning enabled</td>
+</tr>
+<tr>
+<td>AWS - Business Continuity</td>
+<td>Ensure Amazon Auto Scaling Groups are utilizing cooldown periods</td>
+</tr>
+<tr>
+<td>AWS - Business Continuity</td>
+<td>Ensure that Termination Protection feature is enabled for AWS CloudFormation stacks</td>
+</tr>
+<tr>
+<td>AWS - Business Continuity</td>
+<td>Ensure Amazon Neptune instances have Auto Minor Version Upgrade feature enabled</td>
+</tr>
+<tr>
+<td>AWS - Business Continuity</td>
+<td>Ensure AWS Neptune clusters have a sufficient backup retention period set for compliance purposes</td>
+</tr>
+<tr>
+<td>AWS - Business Continuity</td>
+<td>Ensure Auto Minor Version Upgrade feature is Enabled for RDS PostgreSQL Instances</td>
+</tr>
+<tr>
+<td>AWS - Business Continuity</td>
+<td>Ensure backup retention policy is set for RDS PostgreSQL Instances</td>
+</tr>
+<tr>
+<td>AWS - Business Continuity</td>
+<td>Ensure Multi-AZ feature is Enabled for RDS PostgreSQL Instance</td>
+</tr>
+<tr>
+<td>AWS - Business Continuity</td>
+<td>Ensure that sufficient backup retention period is applied to RDS PostgreSQL Instances</td>
+</tr>
+<tr>
+<td>AWS - Business Continuity</td>
+<td>Ensure Auto Minor Version Upgrade feature is Enabled for RDS MariaDB Instances</td>
+</tr>
+<tr>
+<td>AWS - Business Continuity</td>
+<td>Ensure backup retention policy is set for RDS MariaDB Instances</td>
+</tr>
+<tr>
+<td>AWS - Business Continuity</td>
+<td>Ensure Multi-AZ feature is Enabled for RDS MariaDB Instance</td>
+</tr>
+<tr>
+<td>AWS - Business Continuity</td>
+<td>Ensure that sufficient backup retention period is applied to RDS MariaDB Instances</td>
+</tr>
+<tr>
+<td>AWS - Business Continuity</td>
+<td>Ensure backup retention policy is set for RDS Aurora Cluster</td>
+</tr>
+<tr>
+<td>AWS - Business Continuity</td>
+<td>Ensure that sufficient backup retention period is applied to RDS Aurora Cluster</td>
+</tr>
+<tr>
+<td>AWS - Business Continuity</td>
+<td>Ensure Auto Minor Version Upgrade feature is Enabled for RDS Oracle Instances</td>
+</tr>
+<tr>
+<td>AWS - Business Continuity</td>
+<td>Ensure backup retention policy is set for RDS Oracle Instances</td>
+</tr>
+<tr>
+<td>AWS - Business Continuity</td>
+<td>Ensure Multi-AZ feature is Enabled for RDS Oracle Instances</td>
+</tr>
+<tr>
+<td>AWS - Business Continuity</td>
+<td>Ensure that sufficient backup retention period is applied to RDS Oracle Instances</td>
+</tr>
+<tr>
+<td>AWS - Business Continuity</td>
+<td>Ensure Auto Minor Version Upgrade feature is Enabled for RDS SQL Server Instances</td>
+</tr>
+<tr>
+<td>AWS - Business Continuity</td>
+<td>Ensure backup retention policy is set for RDS SQL Server Instance</td>
+</tr>
+<tr>
+<td>AWS - Business Continuity</td>
+<td>Ensure that sufficient backup retention period is applied to RDS SQL Server Instances</td>
+</tr>
+<tr>
+<td>AWS - Business Continuity</td>
+<td>Ensure Multi-AZ feature is Enabled for RDS SQL Server Instances</td>
+</tr>
+<tr>
+<td>AWS - Business Continuity</td>
+<td>Ensure Auto Minor Version Upgrade feature is Enabled for RDS Aurora SQL Instances</td>
+</tr>
+<tr>
+<td>AWS - Business Continuity</td>
+<td>Ensure that sufficient backup retention period is applied to RDS Aurora MySQL Serverless Cluster</td>
+</tr>
+<tr>
+<td>AWS - Business Continuity</td>
+<td>Ensure that sufficient backup retention period is applied to RDS Aurora PostgreSQL Serverless Cluster</td>
+</tr>
+<tr>
+<td>AWS - Business Continuity</td>
+<td>Ensure Auto Minor Version Upgrade feature is Enabled for RDS MySQL Instances</td>
+</tr>
+<tr>
+<td>AWS - Business Continuity</td>
+<td>Ensure backup retention policy is set for RDS MySQL Instances</td>
+</tr>
+<tr>
+<td>AWS - Business Continuity</td>
+<td>Ensure that sufficient backup retention period is applied to RDS MySQL Instances</td>
+</tr>
+<tr>
+<td>AWS - Business Continuity</td>
+<td>Ensure Multi-AZ feature is Enabled for RDS MySQL Instance</td>
+</tr>
+<tr>
+<td>AWS - Key Management</td>
+<td>Ensure rotation for customer created CMKs is enabled</td>
+</tr>
+<tr>
+<td>AWS - Compute</td>
+<td>Ensure that detailed monitoring is enabled for the AWS EC2 instances that you need to monitor closely</td>
+</tr>
+<tr>
+<td>AWS - Compute</td>
+<td>Ensure Termination Protection feature is enabled for EC2 instances that are not part of ASGs</td>
+</tr>
+<tr>
+<td>AWS - Storage and Databases</td>
+<td>Ensure Amazon S3 buckets have Default Encryption feature enabled</td>
+</tr>
+<tr>
+<td>AWS - Storage and Databases</td>
+<td>Ensure that your AWS S3 buckets are not publicly exposed to the Internet</td>
+</tr>
+<tr>
+<td>AWS - Storage and Databases</td>
+<td>Ensure AWS S3 buckets do not allow public READ access</td>
+</tr>
+<tr>
+<td>AWS - Storage and Databases</td>
+<td>Ensure AWS S3 buckets do not allow public READ_ACP access</td>
+</tr>
+<tr>
+<td>AWS - Storage and Databases</td>
+<td>Ensure AWS S3 buckets do not allow public WRITE_ACP access</td>
+</tr>
+<tr>
+<td>AWS - Storage and Databases</td>
+<td>Ensure AWS S3 buckets do not allow public WRITE access</td>
+</tr>
+<tr>
+<td>AWS - Storage and Databases</td>
+<td>Ensure that Amazon S3 buckets use Transfer Acceleration feature for faster data transfers</td>
+</tr>
+<tr>
+<td>AWS - Storage and Databases</td>
+<td>Ensure S3 buckets do not allow FULL_CONTROL access to AWS authenticated users via S3 ACLs</td>
+</tr>
+<tr>
+<td>AWS - Storage and Databases</td>
+<td>Ensure S3 buckets do not allow READ access to AWS authenticated users through ACLs</td>
+</tr>
+<tr>
+<td>AWS - Storage and Databases</td>
+<td>Ensure AWS S3 buckets do not allow READ_ACP access to AWS authenticated users using ACLs</td>
+</tr>
+<tr>
+<td>AWS - Storage and Databases</td>
+<td>Ensure S3 buckets do not allow WRITE access to AWS authenticated users through S3 ACLs</td>
+</tr>
+<tr>
+<td>AWS - Storage and Databases</td>
+<td>Ensure S3 buckets do not allow WRITE_ACP access to AWS authenticated users using S3 ACLs</td>
+</tr>
+<tr>
+<td>AWS - Storage and Databases</td>
+<td>Ensure Amazon DynamoDB tables have continuous backups enabled</td>
+</tr>
+<tr>
+<td>AWS - Storage and Databases</td>
+<td>Ensure Redshift clusters are not publicly accessible to minimize security risks</td>
+</tr>
+<tr>
+<td>AWS - Storage and Databases</td>
+<td>Ensure Version Upgrade is enabled for Redshift clusters to automatically receive upgrades during the maintenance window</td>
+</tr>
+<tr>
+<td>AWS - Storage and Databases</td>
+<td>Ensure that retention period is enabled for Amazon Redshift automated snapshots</td>
+</tr>
+<tr>
+<td>AWS - Storage and Databases</td>
+<td>Ensure enhanced monitoring is enabled for your AWS Kinesis streams using shard-level metrics</td>
+</tr>
+<tr>
+<td>AWS - Storage and Databases</td>
+<td>Ensure Amazon Kinesis streams enforce Server-Side Encryption (SSE)</td>
+</tr>
+<tr>
+<td>AWS - Governance</td>
+<td>Ensure that Copy Tags to Snapshots feature is enabled for RDS PostgreSQL Instances</td>
+</tr>
+<tr>
+<td>AWS - Governance</td>
+<td>Ensure that Copy Tags to Snapshots feature is enabled for RDS MariaDB Instances</td>
+</tr>
+<tr>
+<td>AWS - Governance</td>
+<td>Ensure that Copy Tags to Snapshots feature is enabled for RDS Aurora Cluster</td>
+</tr>
+<tr>
+<td>AWS - Governance</td>
+<td>Ensure that Copy Tags to Snapshots feature is enabled for RDS Oracle Instances</td>
+</tr>
+<tr>
+<td>AWS - Governance</td>
+<td>Ensure that Copy Tags to Snapshots feature is enabled for RDS SQL Server Instances</td>
+</tr>
+<tr>
+<td>AWS - Governance</td>
+<td>Ensure that Copy Tags to Snapshots feature is enabled for RDS Aurora MySQL Serverless Cluster</td>
+</tr>
+<tr>
+<td>AWS - Governance</td>
+<td>Ensure that AutoPause feature is enabled for RDS Aurora MySQL Serverless Cluster</td>
+</tr>
+<tr>
+<td>AWS - Governance</td>
+<td>Ensure that Copy Tags to Snapshots feature is enabled for RDS Aurora PostgreSQL Serverless Cluster</td>
+</tr>
+<tr>
+<td>AWS - Governance</td>
+<td>Ensure that AutoPause feature is enabled for RDS Aurora PostgreSQL Serverless Cluster</td>
+</tr>
+<tr>
+<td>AWS - Governance</td>
+<td>Ensure that Copy Tags to Snapshots feature is enabled for RDS MySQL Instances</td>
+</tr>
+</tbody>
+</table></article></div></div></main><footer class="md-footer"><div class="md-footer-meta md-typeset"><div class="md-footer-meta__inner md-grid"><div class="md-footer-copyright"><div class="md-footer-copyright__highlight">&copy; 2020 Cloudneeti.All Rights Reserved. | <a href="https://www.cloudneeti.com/privacy-policy-2/" target="_blank"> Privacy Policy</a> | <a href="https://www.cloudneeti.com/terms-of-use/" target="_blank"> Terms of Use</a></div></div></div></div></footer>
+
+</div><script src="../../assets/javascripts/application.d5a09f94.js"></script><script>app.initialize({version:"1.1.2",url:{base:"../.."}})</script><script src="../../javascripts/custom.js"></script></body></html>
